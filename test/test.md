@@ -1,7 +1,7 @@
 ---
 html:
     offline: false
-    embed_local_images: true #遷入base64圖片
+    embed_local_images: false #遷入base64圖片
 print_background: true
 export_on_save:
   html: true
