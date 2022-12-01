@@ -1,0 +1,543 @@
+<!DOCTYPE html><html><head>
+      <title>Mermaid&#x4ECE;&#x5165;&#x95E8;&#x5230;&#x5165;&#x571F;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+      
+      
+      
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@9.1.7/dist/mermaid.min.js"></script>
+      
+      
+      
+      
+      
+      <style>
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.markdown-preview h1 {
+  padding-bottom: 0.3rem;
+  border-bottom: solid #fff;
+}
+.markdown-preview h2 {
+  font-weight: normal;
+  padding-bottom: 0.3rem;
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview h3 {
+  font-weight: bold;
+}
+.markdown-preview h4 {
+  font-style: italic;
+  font-weight: normal ;
+  font-size: 1.2em;
+}
+.markdown-preview hr {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview table {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+  text-align: center;
+  color: #f0ffff;
+}
+.markdown-preview table th {
+  text-align: center;
+  font-weight: bold;
+  color: #81b4f4;
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table td {
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table tr {
+  border: 1.5px solid #b7b7b7;
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+  left: 0.1;
+  width: 100%;
+  max-width: 914px;
+  padding: 2em;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  /* 侧栏 */
+  /* 侧栏自动编号 */
+  /* 复位计数器 */
+  /* 进行编号 */
+}
+html .md-sidebar-toc {
+  margin: 0rem 0rem 0em 0em;
+  padding: 0rem 0rem 0em 0rem;
+  z-index: 70;
+  font-size: 10em;
+  width: auto;
+  max-width: 768px;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  /*背景颜色*/
+  position: absolute;
+  z-index: 0;
+}
+html .md-sidebar-toc a {
+  color: inherit;
+}
+html .md-sidebar-toc a:hover {
+  color: inherit;
+}
+html .md-sidebar-toc li {
+  margin-left: 1rem;
+  margin-bottom: 0 !important;
+  text-align: left;
+  /*左对齐*/
+}
+html .md-sidebar-toc ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+  padding-right: 0 !important;
+}
+html .md-sidebar-toc ul li {
+  font-size: 1.1rem !important;
+  /*字号*/
+  font-weight: bold;
+  /*一级大纲*/
+}
+html .md-sidebar-toc ul li:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc ul ul {
+  padding-left: 0rem !important;
+  display: none;
+}
+html .md-sidebar-toc ul li:hover > ul,
+html .md-sidebar-toc ul li:hover > ul ul {
+  display: block;
+}
+html .md-sidebar-toc ul ul:hover {
+  color: #87ffff;
+}
+html .md-sidebar-toc ul ul li {
+  margin-bottom: 8pt !important;
+  margin-top: 8pt !important;
+  margin-left: 0rem;
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 0.2rem;
+  border-left: 2px rgba(0, 0, 0, 0) solid;
+}
+html .md-sidebar-toc ul ul li:hover {
+  font-style: normal;
+  border-left: 2px solid;
+}
+html .md-sidebar-toc ul ul ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+}
+html .md-sidebar-toc ul ul ul li {
+  margin-top: 2pt !important;
+  margin-bottom: 2pt !important;
+  margin-left: 0rem;
+  padding-left: 0.5rem;
+  border-left: 0px;
+}
+html .md-sidebar-toc ul ul ul li:hover {
+  border-left: 0px solid;
+}
+html body {
+  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+}
+html .md-sidebar-toc li {
+  counter-reset: outline-h1;
+}
+html .md-sidebar-toc ul li {
+  counter-reset: outline-h2;
+}
+html .md-sidebar-toc ul ul li {
+  counter-reset: outline-h3;
+}
+html .md-sidebar-toc ul ul ul li {
+  counter-reset: outline-h4;
+}
+html .md-sidebar-toc ul ul ul ul li {
+  counter-reset: outline-h5;
+}
+html .md-sidebar-toc ul ul li:before {
+  counter-increment: outline-h2;
+  content: counter(outline-h2) " ";
+}
+html .md-sidebar-toc ul ul ul li:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h2) "." counter(outline-h3) " ";
+}
+html .md-sidebar-toc ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+}
+html .md-sidebar-toc ul ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+}
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
+}
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
+/////三线表/////
+table{
+	border-top: 1.5pt solid;
+	border-bottom: 1.5pt solid;
+	font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+	text-align:center;                          //文字居中
+  page-break-inside:avoid;                    //禁止断页
+  width: 100%;                                //扩展表格宽度
+  overflow: auto;
+  margin-bottom: 8pt;                         //表格间距
+  border-collapse:collapse;       
+}
+
+table .katex{
+  font-size: 9pt;                             //表内公式
+}
+table td{
+	font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+	font-size:9pt;                              //表内文字
+}
+
+table thead{
+  border-bottom: 0.75pt solid black;        //三线表中间线
+}
+
+//标题行
+table th{
+	font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+	font-size:9pt;                              
+}
+*/
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <p><a href="../index.md">&#x56DE;&#x5230;&#x76EE;&#x9304;</a> <a href="../index.html">&#x2622;&#xFE0F;</a></p>
+<h1 class="mume-header" id="%E6%A6%82%E8%BF%B0">&#x6982;&#x8FF0;</h1>
+
+<ul>
+<li>&#x4EC0;&#x4E48;&#x662F;Mermaid&#xFF1F;
+<ul>
+<li>Mermaid&#x662F;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;Javascript&#x7684;&#x7ED8;&#x56FE;&#x5DE5;&#x5177;&#xFF0C;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;&#x4E8E;Markdown&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x4F7F;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5FEB;&#x6377;&#x5730;&#x901A;&#x8FC7;&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x56FE;&#x8868;&#x3002;</li>
+<li>&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/mermaid-js/mermaid%EF%BC%88%E9%9C%80%E8%A6%81%E5%B0%86%E6%A2%AF%E5%AD%90%E8%AE%BE%E7%BD%AE%E6%88%90%E5%85%A8%E5%B1%80%E6%A8%A1%E5%BC%8F%E6%89%8D%E8%83%BD%E8%AE%BF%E9%97%AE%EF%BC%89">https://github.com/mermaid-js/mermaid&#xFF08;&#x9700;&#x8981;&#x5C06;&#x68AF;&#x5B50;&#x8BBE;&#x7F6E;&#x6210;&#x5168;&#x5C40;&#x6A21;&#x5F0F;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#xFF09;</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>&#x600E;&#x4E48;&#x4F7F;&#x7528;Mermaid&#xFF1F;</p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x7279;&#x5B9A;&#x7684;Mermaid&#x6E32;&#x67D3;&#x5668;&#xFF1B;</li>
+<li>**&#x4F7F;&#x7528;&#x96C6;&#x6210;&#x4E86;Mermaid&#x6E32;&#x67D3;&#x529F;&#x80FD;&#x7684;Markdown&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x5982;<a href="https://www.typora.io/">Typora</a>&#x3002;**&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x8BED;&#x8A00;&#x9009;&#x62E9;&#x4E3A;Mermaid&#x3002;</li>
+</ul>
+<blockquote>
+<p>Typora&#x662F;&#x5B87;&#x5B99;&#x7B2C;&#x4E00;&#x7B14;&#x8BB0;&#x8F6F;&#x4EF6;&#xFF0C;&#x4E0D;&#x63A5;&#x53D7;&#x53CD;&#x9A73;</p>
+</blockquote>
+</li>
+<li>
+<p>Mermaid&#x80FD;&#x7ED8;&#x5236;&#x54EA;&#x4E9B;&#x56FE;&#xFF1F;</p>
+<ul>
+<li>&#x997C;&#x72B6;&#x56FE;&#xFF1A;&#x4F7F;&#x7528;<code>pie</code>&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x5177;&#x4F53;&#x7528;&#x6CD5;&#x540E;&#x6587;&#x5C06;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</li>
+<li>&#x6D41;&#x7A0B;&#x56FE;&#xFF1A;&#x4F7F;&#x7528;<code>graph</code>&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x5177;&#x4F53;&#x7528;&#x6CD5;&#x540E;&#x6587;&#x5C06;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</li>
+<li>&#x5E8F;&#x5217;&#x56FE;&#xFF1A;&#x4F7F;&#x7528;<code>sequenceDiagram</code>&#x5173;&#x952E;&#x5B57;</li>
+<li>&#x7518;&#x7279;&#x56FE;&#xFF1A;&#x4F7F;&#x7528;<code>gantt</code>&#x5173;&#x952E;&#x5B57;</li>
+<li>&#x7C7B;&#x56FE;&#xFF1A;&#x4F7F;&#x7528;<code>classDiagram</code>&#x5173;&#x952E;&#x5B57;</li>
+<li>&#x72B6;&#x6001;&#x56FE;&#xFF1A;&#x4F7F;&#x7528;<code>stateDiagram</code>&#x5173;&#x952E;&#x5B57;</li>
+<li>&#x7528;&#x6237;&#x65C5;&#x7A0B;&#x56FE;&#xFF1A;&#x4F7F;&#x7528;<code>journey</code>&#x5173;&#x952E;&#x5B57;</li>
+</ul>
+</li>
+<li>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;&#x6731;&#x5143;&#x748B;&#x5BB6;&#x8C31;&#x7B80;&#x56FE;&#xFF0C;&#x5706;&#x5708;&#x4EE3;&#x8868;&#x7687;&#x5E1D;</p>
+</li>
+</ul>
+<div class="mermaid">graph LR
+emperor((&#x6731;&#x516B;&#x516B;))-.&#x5B50;.-&gt;father(&#x6731;&#x4E94;&#x56DB;)-.&#x5B50;.-&gt;&#x6731;&#x56DB;&#x4E5D;-.&#x5B50;.-&gt;&#x6731;&#x767E;&#x516D;
+
+
+&#x6731;&#x96C4;&#x82F1;--&#x957F;&#x5B50;--&gt;&#x6731;&#x6807;--&#x957F;&#x5B50;--&gt;emperor
+emperor2((&#x6731;&#x5141;&#x7086;))--&#x6B21;&#x5B50;--&gt;&#x6731;&#x6807;
+&#x6731;&#x6A09;--&#x6B21;&#x5B50;--&gt;emperor
+&#x6731;&#x68E1;--&#x4E09;&#x5B50;--&gt;emperor
+emperor3((&#x6731;&#x68E3;))--&#x56DB;&#x5B50;--&gt;emperor
+emperor4((&#x6731;&#x9AD8;&#x70BD;))--&#x957F;&#x5B50;--&gt;emperor3
+</div><p>&#x4EE5;&#x4E0A;&#x662F;&#x6982;&#x8FF0;&#xFF0C;&#x4E0B;&#x9762;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x997C;&#x72B6;&#x56FE;&#x548C;&#x6D41;&#x7A0B;&#x56FE;&#x7684;&#x8BED;&#x6CD5;&#x3002;&#x5176;&#x4ED6;&#x56FE;&#x7684;&#x8BED;&#x6CD5;&#x53EF;&#x8BBF;&#x95EE;&#x4E0A;&#x6587;&#x7ED9;&#x51FA;&#x7684;&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF0C;&#x81EA;&#x884C;&#x5B66;&#x4E60;&#x3002;&#xFF08;&#x8BB0;&#x5F97;&#x6302;&#x68AF;&#x5B50;&#xFF09;</p>
+<h1 class="mume-header" id="%E9%A5%BC%E7%8A%B6%E5%9B%BE">&#x997C;&#x72B6;&#x56FE;</h1>
+
+<ul>
+<li>
+<p>&#x5728;&#x7EBF;&#x6E32;&#x67D3;&#x5668;&#xFF1A;<a href="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoicGllXG5cIkRvZ3NcIiA6IDQyLjk2XG5cIkNhdHNcIiA6IDUwLjA1XG5cIlJhdHNcIiA6IDEwLjAxIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifX0">Online FlowChart &amp; Diagrams Editor</a>&#xFF08;&#x9700;&#x8981;&#x68AF;&#x5B50;&#xFF09;</p>
+</li>
+<li>
+<p>&#x8BED;&#x6CD5;</p>
+<ul>
+<li>&#x4ECE;<code>pie</code>&#x5173;&#x952E;&#x5B57;&#x5F00;&#x59CB;&#x56FE;&#x8868;</li>
+<li>&#x7136;&#x540E;&#x4F7F;&#x7528;<code>title</code>&#x5173;&#x952E;&#x5B57;&#x53CA;&#x5176;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x503C;&#xFF0C;&#x4E3A;&#x997C;&#x56FE;&#x8D4B;&#x4E88;&#x6807;&#x9898;&#x3002;&#xFF08;&#x8FD9;&#x662F;<strong>&#x53EF;&#x9009;&#x7684;</strong>&#xFF09;</li>
+<li>&#x6570;&#x636E;&#x90E8;&#x5206;
+<ul>
+<li>&#x5728;<code>&quot; &quot;</code>&#x5185;&#x5199;&#x4E0A;&#x5206;&#x533A;&#x540D;&#x3002;</li>
+<li>&#x5206;&#x533A;&#x540D;&#x540E;&#x4F7F;&#x7528;<code>:</code>&#x4F5C;&#x4E3A;&#x5206;&#x9694;&#x7B26;</li>
+<li>&#x5206;&#x9694;&#x7B26;&#x540E;&#x5199;&#x4E0A;&#x6570;&#x503C;&#xFF0C;&#x6700;&#x591A;&#x652F;&#x6301;2&#x4F4D;&#x5C0F;&#x6570;&#x2014;&#x2014;&#x6570;&#x636E;&#x4F1A;&#x4EE5;&#x767E;&#x5206;&#x6BD4;&#x7684;&#x5F62;&#x5F0F;&#x5C55;&#x793A;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>&#x5B9E;&#x4F8B;</li>
+</ul>
+<div class="mermaid">pie
+    title &#x4E3A;&#x4EC0;&#x4E48;&#x603B;&#x662F;&#x5B85;&#x5728;&#x5BB6;&#x91CC;&#xFF1F;
+    &quot;&#x559C;&#x6B22;&#x5B85;&quot; : 15
+    &quot;&#x5929;&#x6C14;&#x592A;&#x70ED;&#x6216;&#x592A;&#x51B7;&quot; : 20
+    &quot;&#x7A77;&quot; : 500
+</div><h1 class="mume-header" id="%E6%B5%81%E7%A8%8B%E5%9B%BE">&#x6D41;&#x7A0B;&#x56FE;</h1>
+
+<ul>
+<li>&#x5728;&#x7EBF;&#x6E32;&#x67D3;&#x5668;&#xFF1A;<a href="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0hhcmRdIC0tPnxUZXh0fCBCKFJvdW5kKVxuICAgIEIgLS0-IEN7RGVjaXNpb259XG4gICAgQyAtLT58T25lfCBEW1Jlc3VsdCAxXVxuICAgIEMgLS0-fFR3b3wgRVtSZXN1bHQgMl0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ">Online FlowChart &amp; Diagrams Editor</a>&#xFF08;&#x9700;&#x8981;&#x6302;&#x68AF;&#x5B50;&#xFF09;</li>
+</ul>
+<h2 class="mume-header" id="%E5%AE%9E%E4%BE%8B">&#x5B9E;&#x4F8B;</h2>
+
+<div class="mermaid">graph LR
+    A[Start] --&gt; B{Is it?};
+    B -- Yes --&gt; C[OK];
+    C --&gt; D[Rethink];
+    D --&gt; B;
+    B -- No ----&gt; E[End];
+</div><h2 class="mume-header" id="%E6%96%B9%E5%90%91">&#x65B9;&#x5411;</h2>
+
+<p>&#x7528;&#x4E8E;&#x5F00;&#x5934;&#xFF0C;&#x58F0;&#x660E;&#x6D41;&#x7A0B;&#x56FE;&#x7684;&#x65B9;&#x5411;&#x3002;</p>
+<ul>
+<li><code>graph</code>&#x6216;<code>graph TB</code>&#x6216;<code>graph TD</code>&#xFF1A;&#x4ECE;&#x4E0A;&#x5F80;&#x4E0B;</li>
+<li><code>graph BT</code>&#xFF1A;&#x4ECE;&#x4E0B;&#x5F80;&#x4E0A;</li>
+<li><code>graph LR</code>&#xFF1A;&#x4ECE;&#x5DE6;&#x5F80;&#x53F3;</li>
+<li><code>graph RL</code>&#xFF1A;&#x4ECE;&#x53F3;&#x5F80;&#x5DE6;</li>
+</ul>
+<h2 class="mume-header" id="%E7%BB%93%E7%82%B9">&#x7ED3;&#x70B9;</h2>
+
+<ul>
+<li>&#x65E0;&#x540D;&#x5B57;&#x7684;&#x7ED3;&#x70B9;&#xFF1A;&#x76F4;&#x63A5;&#x5199;&#x5185;&#x5BB9;&#xFF0C;&#x6B64;&#x65F6;&#x7ED3;&#x70B9;&#x8FB9;&#x6846;&#x4E3A;&#x65B9;&#x5F62;&#xFF1B;&#x8282;&#x70B9;&#x5185;&#x5BB9;&#x4E0D;&#x80FD;&#x6709;&#x7A7A;&#x683C;</li>
+<li>&#x6709;&#x540D;&#x5B57;&#x7684;&#x7ED3;&#x70B9;&#xFF1A;&#x8282;&#x70B9;&#x540D;&#x540E;&#x4E66;&#x5199;&#x5185;&#x5BB9;&#xFF0C;&#x5185;&#x5BB9;&#x5DE6;&#x53F3;&#x6709;&#x7279;&#x5B9A;&#x7B26;&#x53F7;&#xFF0C;&#x7ED3;&#x70B9;&#x8FB9;&#x6846;&#x7531;&#x7B26;&#x53F7;&#x51B3;&#x5B9A;&#xFF1B;&#x8282;&#x70B9;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x6709;&#x7A7A;&#x683C;</li>
+</ul>
+<blockquote>
+<p>&#x4E0B;&#x9762;&#x7684;&#x5B9E;&#x4F8B;&#x4E2D;&#xFF0C;&#x6CA1;&#x6709;&#x4E3A;graph&#x6307;&#x5B9A;&#x65B9;&#x5411;&#xFF0C;&#x56E0;&#x6B64;&#x9ED8;&#x8BA4;&#x662F;&#x4ECE;&#x4E0A;&#x5F80;&#x4E0B;&#x7684;&#x3002;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x5404;&#x4E2A;&#x7ED3;&#x70B9;&#x4E4B;&#x524D;&#x6CA1;&#x6709;&#x7BAD;&#x5934;&#xFF0C;&#x6240;&#x4EE5;&#x4ED6;&#x4EEC;&#x90FD;&#x5904;&#x4E8E;&#x540C;&#x4E00;&#x6392;&#x3002;</p>
+</blockquote>
+<div class="mermaid">graph
+    &#x9ED8;&#x8BA4;&#x65B9;&#x5F62;
+    id1[&#x65B9;&#x5F62;]
+    id2(&#x5706;&#x8FB9;&#x77E9;&#x5F62;)
+    id3([&#x4F53;&#x80B2;&#x573A;&#x5F62;])
+    id4[[&#x5B50;&#x7A0B;&#x5E8F;&#x5F62;]]
+    id5[(&#x5706;&#x67F1;&#x5F62;)]
+    id6((&#x5706;&#x5F62;))
+</div><div class="mermaid">graph
+	id1{&#x83F1;&#x5F62;}
+	id2{{&#x516D;&#x89D2;&#x5F62;}}
+	id3[/&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;/]
+	id4[\&#x53CD;&#x5411;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;\]
+	id5[/&#x68AF;&#x5F62;\]
+	id6[\&#x53CD;&#x5411;&#x68AF;&#x5F62;/]
+</div><h2 class="mume-header" id="%E8%BF%9E%E7%BA%BF%E6%A0%B7%E5%BC%8F">&#x8FDE;&#x7EBF;&#x6837;&#x5F0F;</h2>
+
+<ul>
+<li>&#x5B9E;&#x7EBF;&#x7BAD;&#x5934;&#xFF1A;&#x5206;&#x4E3A;&#x65E0;&#x6587;&#x672C;&#x7BAD;&#x5934;&#x548C;&#x6709;&#x6587;&#x672C;&#x7BAD;&#x5934;&#xFF0C;&#x6709;&#x6587;&#x672C;&#x7BAD;&#x5934;&#x6709;2&#x79CD;&#x4E66;&#x5199;&#x683C;&#x5F0F;</li>
+</ul>
+<div class="mermaid">graph LR
+a--&gt;b--&#x6587;&#x672C;1--&gt;c--&gt;|&#x6587;&#x672C;2|d
+</div><ul>
+<li>&#x7C97;&#x5B9E;&#x7EBF;&#x7BAD;&#x5934;&#xFF1A;&#x5206;&#x4E3A;&#x65E0;&#x6587;&#x672C;&#x7BAD;&#x5934;&#x548C;&#x6709;&#x6587;&#x672C;&#x7BAD;&#x5934;</li>
+</ul>
+<div class="mermaid">graph LR
+a==&gt;b==&#x6587;&#x672C;==&gt;c
+</div><ul>
+<li>&#x865A;&#x7EBF;&#x7BAD;&#x5934;&#xFF1A;&#x5206;&#x4E3A;&#x65E0;&#x6587;&#x672C;&#x7BAD;&#x5934;&#x548C;&#x6709;&#x6587;&#x672C;&#x7BAD;&#x5934;</li>
+</ul>
+<div class="mermaid">graph LR
+a-.-&gt;b-.&#x6587;&#x672C;.-&gt;c
+</div><ul>
+<li>&#x65E0;&#x7BAD;&#x5934;&#x7EBF;&#xFF1A;&#x5373;&#x4EE5;&#x4E0A;&#x4E09;&#x79CD;&#x8FDE;&#x7EBF;&#x53BB;&#x6389;&#x7BAD;&#x5934;&#x540E;&#x7684;&#x5F62;&#x5F0F;</li>
+</ul>
+<div class="mermaid">graph LR
+a---b
+b--&#x6587;&#x672C;1---c
+c---|&#x6587;&#x672C;2|d
+d===e
+e==&#x6587;&#x672C;3===f
+f-.-g
+g-.&#x6587;&#x672C;.-h
+</div><ul>
+<li>&#x5176;&#x4ED6;&#x8FDE;&#x7EBF;&#xFF1A;&#x9700;&#x8981;&#x5C06;<code>graph</code>&#x5173;&#x952E;&#x5B57;&#x6539;&#x4E3A;<code>flowchart</code>&#xFF0C;&#x9664;&#x4E86;&#x65B0;&#x589E;&#x52A0;&#x7684;&#x8FDE;&#x7EBF;&#x5F62;&#x5F0F;&#x5916;&#xFF0C;&#x4E0A;&#x9762;&#x4E09;&#x79CD;&#x7EBF;&#x7684;&#x6E32;&#x67D3;&#x6548;&#x679C;&#x4E5F;&#x4F1A;&#x4E0D;&#x540C;</li>
+</ul>
+<div class="mermaid">flowchart LR
+    A o--o B
+    B &lt;--&gt; C
+    C x--x D
+    
+    &#x65E7;&#x8FDE;&#x7EBF; --&#x6587;&#x672C;--&gt; &#x4E5F;&#x4F1A;&#x4E0D;&#x540C;
+</div><ul>
+<li>&#x5EF6;&#x957F;&#x8FDE;&#x7EBF;&#xFF1A;&#x589E;&#x52A0;&#x76F8;&#x5E94;&#x5B57;&#x7B26;&#x5373;&#x53EF;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x4E2D;&#x7684;B&#x5230;E&#xFF0C;&#x8FDE;&#x7EBF;&#x4E2D;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;<code>-</code>&#x3002;&#x5B57;&#x7B26;&#x53EF;&#x591A;&#x6B21;&#x6DFB;&#x52A0;&#x3002;</li>
+</ul>
+<div class="mermaid">graph LR
+    A[Start] --&gt; B{Is it?};
+    B --&gt;|Yes| C[OK];
+    C --&gt; D[Rethink];
+    D --&gt; B;
+    B ---&gt;|No| E[End];
+</div><h2 class="mume-header" id="%E8%BF%9E%E7%BA%BF%E5%BD%A2%E5%BC%8F">&#x8FDE;&#x7EBF;&#x5F62;&#x5F0F;</h2>
+
+<ul>
+<li>&#x76F4;&#x94FE;</li>
+</ul>
+<div class="mermaid">graph LR
+   D[Rethink1&lt;br/&gt;Rethink2] -- text --&gt; B -- text2 --&gt; C
+</div><ul>
+<li>&#x591A;&#x91CD;&#x94FE;&#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>&amp;</code>&#x5B57;&#x7B26;&#xFF0C;&#x6216;&#x5355;&#x4E2A;&#x63CF;&#x8FF0;</li>
+</ul>
+<div class="mermaid">graph 
+   a --&gt; b &amp; c--&gt; d
+   
+   A &amp; B--&gt; C &amp; D
+   
+    X --&gt; M
+    X --&gt; N
+    Y --&gt; M
+    Y --&gt; N
+</div><h2 class="mume-header" id="%E5%85%B6%E4%BB%96">&#x5176;&#x4ED6;</h2>
+
+<ul>
+<li>&#x5B50;&#x56FE;&#xFF1A;&#x9700;&#x8981;&#x5C06;<code>graph</code>&#x5173;&#x952E;&#x5B57;&#x6539;&#x4E3A;<code>flowchart</code>&#xFF0C;&#x5728;&#x4EE3;&#x7801;&#x6BB5;&#x7684;&#x5F00;&#x59CB;&#x52A0;&#x5165;<code>subgraph</code>&#xFF0C;&#x5C3E;&#x90E8;&#x52A0;&#x5165;<code>end</code></li>
+</ul>
+<div class="mermaid">flowchart TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+    one --&gt; two
+    three --&gt; two
+    two --&gt; c2
+</div><ul>
+<li>&#x6CE8;&#x91CA;&#xFF1A;&#x5728;&#x884C;&#x9996;&#x52A0;&#x5165;<code>%%</code>&#x5373;&#x53EF;&#x3002;</li>
+</ul>
+<div class="mermaid">graph LR
+%%&#x8FD9;&#x662F;&#x4E00;&#x6761;&#x6CE8;&#x91CA;&#xFF0C;&#x5728;&#x6E32;&#x67D3;&#x56FE;&#x4E2D;&#x4E0D;&#x53EF;&#x89C1;
+    A[Hard edge] --&gt;|Link text| B(Round edge)
+    B --&gt; C{Decision}
+    C --&gt;|One| D[Result one]
+    C --&gt;|Two| E[Result two]
+</div><br><br>
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#%E6%A6%82%E8%BF%B0">&#x6982;&#x8FF0;</a></li>
+<li><a href="#%E9%A5%BC%E7%8A%B6%E5%9B%BE">&#x997C;&#x72B6;&#x56FE;</a></li>
+<li><a href="#%E6%B5%81%E7%A8%8B%E5%9B%BE">&#x6D41;&#x7A0B;&#x56FE;</a>
+<ul>
+<li><a href="#%E5%AE%9E%E4%BE%8B">&#x5B9E;&#x4F8B;</a></li>
+<li><a href="#%E6%96%B9%E5%90%91">&#x65B9;&#x5411;</a></li>
+<li><a href="#%E7%BB%93%E7%82%B9">&#x7ED3;&#x70B9;</a></li>
+<li><a href="#%E8%BF%9E%E7%BA%BF%E6%A0%B7%E5%BC%8F">&#x8FDE;&#x7EBF;&#x6837;&#x5F0F;</a></li>
+<li><a href="#%E8%BF%9E%E7%BA%BF%E5%BD%A2%E5%BC%8F">&#x8FDE;&#x7EBF;&#x5F62;&#x5F0F;</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96">&#x5176;&#x4ED6;</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+MERMAID_CONFIG = {
+  startOnLoad: false,
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false
+  window['MERMAID_CONFIG'].theme = "dark"
+}
+mermaid.initialize(window['MERMAID_CONFIG'] || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.getElementsByClassName('mermaid'))
+}
+</script>
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

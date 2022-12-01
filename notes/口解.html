@@ -1,0 +1,2870 @@
+<!DOCTYPE html><html><head>
+      <title>&#x53E3;&#x89E3;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+      
+      
+      
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@9.1.7/dist/mermaid.min.js"></script>
+      
+      
+      
+      
+      
+      <style>
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAfIAAsAAAAADDAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kosY21hcAAAAYAAAADTAAACjtP6ytBnbHlmAAACVAAAAxgAAAQ4zRtvlGhlYWQAAAVsAAAALwAAADYRwZsnaGhlYQAABZwAAAAcAAAAJAeKAzxobXR4AAAFuAAAABIAAAA8OGQAAGxvY2EAAAXMAAAAIAAAACAG5AfwbWF4cAAABewAAAAfAAAAIAEfAERuYW1lAAAGDAAAAVcAAAKFkAhoC3Bvc3QAAAdkAAAAYgAAAK2vz7wkeJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkPsQ4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVLy4xKzzX4chhrmK4QpQmBEkBwAZygyweJzFkr0NwjAQhZ+TEP6CRUfHBEwRUWaQTICyQbpMwRCskA5RUIONxG0RnnNpKAIV4qzPku/8c353ACYAYrIjCWCuMAh2ptf0/hiL3p/gyPUWa3osqlt0L1zu9r71z8dGrJRykFoauXQd932Lj5vhG+MjxGeYI8MKETObMpslf5EyP8tg+vHun5r539PvlvXzaVhRFVQDTPEWKVQR90KhnnC5Ek67vUKN4VuFasM/ldARj43CCkCsEjpJSoVVgRyU0GVSK6wUpFFCx8lFgX0BiXpRPQB4nE2TTWjcRhTH3xttpDhxN7uxPlp3u/FK7moRPixafRijNosxSw/LUsIwNcaEHPZggo/FmEKMCKWU4kNOOftQSlhE8alnH0Ix9BqWnHooPRrTQ0+mnu2bXTu2pPdGM9LM/6c3fwECTM4gBBMYQNqxzLrZAjqYSlqu2TAHZQA0/DQJH6FtzqGDnvbt4Ggwvzw/nL8EfH8kW0fsuRqhgWXZnY7M1picaUL7Du5BHeDzMIl83dAt016wH1qmvtSMo5R6YRJHTR//FXsff/nj/tc/5K9P5d+nP22+fFK5u7v3K39SW3y+OtDKO3L85vD09PD9z5X17a2N1g4tqk01RlqX7gyoEmnsWQtVr4rtZMmukEaFBZxzefkCn11cyKMLZgshRwgTYNoLNXCBz2ja7HvZG7hDpPSNfoo5vs0knK/9hb+rNpu+8kHPgk/Ao4kK3tWtTpSEtvkA9c+wE6UaUdwieNkaHg55tBEtRiEPw1s0+FtrtTcc9two2lhMknV7PZF/cs6+uUFTmpTGbEx7sQCPSLOttHS3GRltqp7SNzVSKzl6aWnZT/CX5k6/v9N3Hh8fHBwffJVjhrC6OgH5dkIt/tPsq+d/PD5Qz7G7efzq1THFjdZVPe/N6ulQ3JnDWSE5junsFsVIiFwL/htf1S5gJ3BfOcUxfHKLnzqpFpyfZ9cX+/5WB6a+Y0pHpzkNrYNVDwMsikK+y7WuLCRg/oFHkA8VT3rDg5ZnU6ktzzINymV0m74Xd5pfIGXyFeVEQSShkzqG7TBBa2OxVRKitLXv7h3uuftXnXq7lz2tZ/WnWa9dx9dCjDhHzmuVQATlmljr9dZErUydSo2Hbi/b1vXtrOeGCk2/8s3ZlO8+ueJT8BVlw5pGw2oYccdSiHHqx0RlabHqdNR9jAETl6PreJcPBnnfpTLnOQ8C3OV8AmQGzouV1iZdeb5SSIoVc8W8/kcDtksUH5FrU6/aqBqNWcMEzxG4DAQ14qRQhi9mWU0rzepKezbjfgCwQKxVYq5ajRgpRqy45CqwkJydcEkbTkvRz8P5/2ZpDTN4nGNgZGBgAOKb6v+/xvPbfGXgZmEAgeuB2kkI+v8bFgbmKiCXg4EJJAoAPyAKhQB4nGNgZGBg1vmvwxDDwgACQJKRARXwAwAzZQHQeJxjYQCCFAYGFgbSMQAcWACdAAAAAAAAAAwALgBgAIQAmADSAQgBIgE8AVABoAHeAfwCHHicY2BkYGDgZ7BgYGMAASYg5gJCBob/YD4DAA/hAWQAeJxlkbtuwkAURMc88gApQomUJoq0TdIQzEOpUDokKCNR0BuzBiO/tF6QSJcPyHflE9Klyyekz2CuG8cr7547M3d9JQO4xjccnJ57vid2cMHqxDWc40G4Tv1JuEF+Fm6ijRfhM+oz4Ra6eBVu4wZvvMFpXLIa40PYQQefwjVc4Uu4Tv1HuEH+FW7i1mkKn6Hj3Am3sHC6wm08Ou8tpSZGe1av1PKggjSxPd8zJtSGTuinyVGa6/Uu8kxZludCmzxMEzV0B6U004k25W35fj2yNlCBSWM1paujKFWZSbfat+7G2mzc7weiu34aczzFNYGBhgfLfcV6iQP3ACkSaj349AxXSN9IT0j16JepOb01doiKbNWt1ovippz6sVYYwsXgX2rGVFIkq7Pl2PNrI6qW6eOshj0xaSq9mpNEZIWs8LZUfOouNkVXxp/d5woqebeYIf4D2J1ywQB4nG3LOw6AIBAE0B384B+PAkgEa+QwNnYmHt+EpXSal5lkSBBnoP8oCFSo0aCFRIceA0ZMmLFAYSW88rmvtMUjG3RiQ9HvpfusM6zWNmtc5H/iPewha50tOt5PS/QBx2IeSwAA") format("woff");
+}
+
+.admonition {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 1.2rem;
+  border-left: .4rem solid rgba(68, 138, 255, .8);
+  border-radius: .2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  overflow: auto;
+}
+
+.admonition>p {
+  margin-top: .8rem;
+}
+
+.admonition>.admonition-title {
+  margin: 0 -1.2rem;
+  padding: .8rem 1.2rem .8rem 3.6rem;
+  border-bottom: 1px solid rgba(68, 138, 255, .2);
+  background-color: rgba(68, 138, 255, .1);
+  font-weight: 700;
+}
+
+.admonition>.admonition-title:before {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.5rem;
+  color: rgba(68, 138, 255, .8);
+  content: "\E3C9";
+}
+
+.admonition>.admonition-title:before {
+  font-family: Material Icons;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  text-transform: none;
+  white-space: nowrap;
+  speak: none;
+  word-wrap: normal;
+  direction: ltr;
+}
+
+.admonition.summary,
+.admonition.abstract,
+.admonition.tldr {
+  border-left-color: rgba(0, 176, 255, .8);
+}
+
+.admonition.summary>.admonition-title,
+.admonition.abstract>.admonition-title,
+.admonition.tldr>.admonition-title {
+  background-color: rgba(0, 176, 255, .1);
+  border-bottom-color: rgba(0, 176, 255, .2);
+}
+
+.admonition.summary>.admonition-title:before,
+.admonition.abstract>.admonition-title:before,
+.admonition.tldr>.admonition-title:before {
+  color: rgba(0, 176, 255, 1);
+  ;
+  content: "\E8D2";
+}
+
+.admonition.hint,
+.admonition.tip {
+  border-left-color: rgba(0, 191, 165, .8);
+}
+
+.admonition.hint>.admonition-title,
+.admonition.tip>.admonition-title {
+  background-color: rgba(0, 191, 165, .1);
+  border-bottom-color: rgba(0, 191, 165, .2);
+}
+
+.admonition.hint>.admonition-title:before,
+.admonition.tip>.admonition-title:before {
+  color: rgba(0, 191, 165, 1);
+  content: "\E80E";
+}
+
+.admonition.info,
+.admonition.todo {
+  border-left-color: rgba(0, 184, 212, .8);
+}
+
+.admonition.info>.admonition-title,
+.admonition.todo>.admonition-title {
+  background-color: rgba(0, 184, 212, .1);
+  border-bottom-color: rgba(0, 184, 212, .2);
+}
+
+.admonition.info>.admonition-title:before,
+.admonition.todo>.admonition-title:before {
+  color: rgba(0, 184, 212, 1);
+  ;
+  content: "\E88E";
+}
+
+.admonition.success,
+.admonition.check,
+.admonition.done {
+  border-left-color: rgba(0, 200, 83, .8);
+}
+
+.admonition.success>.admonition-title,
+.admonition.check>.admonition-title,
+.admonition.done>.admonition-title {
+  background-color: rgba(0, 200, 83, .1);
+  border-bottom-color: rgba(0, 200, 83, .2);
+}
+
+.admonition.success>.admonition-title:before,
+.admonition.check>.admonition-title:before,
+.admonition.done>.admonition-title:before {
+  color: rgba(0, 200, 83, 1);
+  ;
+  content: "\E876";
+}
+
+.admonition.question,
+.admonition.help,
+.admonition.faq {
+  border-left-color: rgba(100, 221, 23, .8);
+}
+
+.admonition.question>.admonition-title,
+.admonition.help>.admonition-title,
+.admonition.faq>.admonition-title {
+  background-color: rgba(100, 221, 23, .1);
+  border-bottom-color: rgba(100, 221, 23, .2);
+}
+
+.admonition.question>.admonition-title:before,
+.admonition.help>.admonition-title:before,
+.admonition.faq>.admonition-title:before {
+  color: rgba(100, 221, 23, 1);
+  ;
+  content: "\E887";
+}
+
+.admonition.warning,
+.admonition.attention,
+.admonition.caution {
+  border-left-color: rgba(255, 145, 0, .8);
+}
+
+.admonition.warning>.admonition-title,
+.admonition.attention>.admonition-title,
+.admonition.caution>.admonition-title {
+  background-color: rgba(255, 145, 0, .1);
+  border-bottom-color: rgba(255, 145, 0, .2);
+}
+
+.admonition.attention>.admonition-title:before {
+  color: rgba(255, 145, 0, 1);
+  content: "\E417";
+}
+
+.admonition.warning>.admonition-title:before,
+.admonition.caution>.admonition-title:before {
+  color: rgba(255, 145, 0, 1);
+  content: "\E002";
+}
+
+.admonition.failure,
+.admonition.fail,
+.admonition.missing {
+  border-left-color: rgba(255, 82, 82, .8);
+}
+
+.admonition.failure>.admonition-title,
+.admonition.fail>.admonition-title,
+.admonition.missing>.admonition-title {
+  background-color: rgba(255, 82, 82, .1);
+  border-bottom-color: rgba(255, 82, 82, .2);
+}
+
+.admonition.failure>.admonition-title:before,
+.admonition.fail>.admonition-title:before,
+.admonition.missing>.admonition-title:before {
+  color: rgba(255, 82, 82, 1);
+  ;
+  content: "\E14C";
+}
+
+.admonition.danger,
+.admonition.error,
+.admonition.bug {
+  border-left-color: rgba(255, 23, 68, .8);
+}
+
+.admonition.danger>.admonition-title,
+.admonition.error>.admonition-title,
+.admonition.bug>.admonition-title {
+  background-color: rgba(255, 23, 68, .1);
+  border-bottom-color: rgba(255, 23, 68, .2);
+}
+
+.admonition.danger>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E3E7";
+}
+
+.admonition.error>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E14C";
+}
+
+.admonition.bug>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E868";
+}
+
+.admonition.example,
+.admonition.snippet {
+  border-left-color: rgba(0, 184, 212, .8);
+}
+
+.admonition.example>.admonition-title,
+.admonition.snippet>.admonition-title {
+  background-color: rgba(0, 184, 212, .1);
+  border-bottom-color: rgba(0, 184, 212, .2);
+}
+
+.admonition.example>.admonition-title:before,
+.admonition.snippet>.admonition-title:before {
+  color: rgba(0, 184, 212, 1);
+  ;
+  content: "\E242";
+}
+
+.admonition.quote,
+.admonition.cite {
+  border-left-color: rgba(158, 158, 158, .8);
+}
+
+.admonition.quote>.admonition-title,
+.admonition.cite>.admonition-title {
+  background-color: rgba(158, 158, 158, .1);
+  border-bottom-color: rgba(158, 158, 158, .2);
+}
+
+.admonition.quote>.admonition-title:before,
+.admonition.cite>.admonition-title:before {
+  color: rgba(158, 158, 158, 1);
+  ;
+  content: "\E244";
+}
+
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.markdown-preview h1 {
+  padding-bottom: 0.3rem;
+  border-bottom: solid #fff;
+}
+.markdown-preview h2 {
+  font-weight: normal;
+  padding-bottom: 0.3rem;
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview h3 {
+  font-weight: bold;
+}
+.markdown-preview h4 {
+  font-style: italic;
+  font-weight: normal ;
+  font-size: 1.2em;
+}
+.markdown-preview hr {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview table {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+  text-align: center;
+  color: #f0ffff;
+}
+.markdown-preview table th {
+  text-align: center;
+  font-weight: bold;
+  color: #81b4f4;
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table td {
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table tr {
+  border: 1.5px solid #b7b7b7;
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+  left: 0.1;
+  width: 100%;
+  max-width: 914px;
+  padding: 2em;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  /* 侧栏 */
+  /* 侧栏自动编号 */
+  /* 复位计数器 */
+  /* 进行编号 */
+}
+html .md-sidebar-toc {
+  margin: 0rem 0rem 0em 0em;
+  padding: 0rem 0rem 0em 0rem;
+  z-index: 70;
+  font-size: 10em;
+  width: auto;
+  max-width: 768px;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  /*背景颜色*/
+  position: absolute;
+  z-index: 0;
+}
+html .md-sidebar-toc a {
+  color: inherit;
+}
+html .md-sidebar-toc a:hover {
+  color: inherit;
+}
+html .md-sidebar-toc li {
+  margin-left: 1rem;
+  margin-bottom: 0 !important;
+  text-align: left;
+  /*左对齐*/
+}
+html .md-sidebar-toc ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+  padding-right: 0 !important;
+}
+html .md-sidebar-toc ul li {
+  font-size: 1.1rem !important;
+  /*字号*/
+  font-weight: bold;
+  /*一级大纲*/
+}
+html .md-sidebar-toc ul li:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc ul ul {
+  padding-left: 0rem !important;
+  display: none;
+}
+html .md-sidebar-toc ul li:hover > ul,
+html .md-sidebar-toc ul li:hover > ul ul {
+  display: block;
+}
+html .md-sidebar-toc ul ul:hover {
+  color: #87ffff;
+}
+html .md-sidebar-toc ul ul li {
+  margin-bottom: 8pt !important;
+  margin-top: 8pt !important;
+  margin-left: 0rem;
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 0.2rem;
+  border-left: 2px rgba(0, 0, 0, 0) solid;
+}
+html .md-sidebar-toc ul ul li:hover {
+  font-style: normal;
+  border-left: 2px solid;
+}
+html .md-sidebar-toc ul ul ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+}
+html .md-sidebar-toc ul ul ul li {
+  margin-top: 2pt !important;
+  margin-bottom: 2pt !important;
+  margin-left: 0rem;
+  padding-left: 0.5rem;
+  border-left: 0px;
+}
+html .md-sidebar-toc ul ul ul li:hover {
+  border-left: 0px solid;
+}
+html body {
+  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+}
+html .md-sidebar-toc li {
+  counter-reset: outline-h1;
+}
+html .md-sidebar-toc ul li {
+  counter-reset: outline-h2;
+}
+html .md-sidebar-toc ul ul li {
+  counter-reset: outline-h3;
+}
+html .md-sidebar-toc ul ul ul li {
+  counter-reset: outline-h4;
+}
+html .md-sidebar-toc ul ul ul ul li {
+  counter-reset: outline-h5;
+}
+html .md-sidebar-toc ul ul li:before {
+  counter-increment: outline-h2;
+  content: counter(outline-h2) " ";
+}
+html .md-sidebar-toc ul ul ul li:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h2) "." counter(outline-h3) " ";
+}
+html .md-sidebar-toc ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+}
+html .md-sidebar-toc ul ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+}
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
+}
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
+/////三线表/////
+table{
+	border-top: 1.5pt solid;
+	border-bottom: 1.5pt solid;
+	font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+	text-align:center;                          //文字居中
+  page-break-inside:avoid;                    //禁止断页
+  width: 100%;                                //扩展表格宽度
+  overflow: auto;
+  margin-bottom: 8pt;                         //表格间距
+  border-collapse:collapse;       
+}
+
+table .katex{
+  font-size: 9pt;                             //表内公式
+}
+table td{
+	font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+	font-size:9pt;                              //表内文字
+}
+
+table thead{
+  border-bottom: 0.75pt solid black;        //三线表中间线
+}
+
+//标题行
+table th{
+	font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+	font-size:9pt;                              
+}
+*/
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <p><a href="../index.md">&#x56DE;&#x5230;&#x76EE;&#x9304;</a> <a href="../index.html">&#x2622;&#xFE0F;</a></p>
+<h1 class="mume-header" id="triangle">Triangle</h1>
+
+<p><img src="paste_src/2022-11-04-16-38-25.png" alt></p>
+<h1 class="mume-header" id="artery">Artery</h1>
+
+<p><img src="paste_src/2022-10-03-00-51-13.png" alt></p>
+<h2 class="mume-header" id="subclavian-a">Subclavian a.</h2>
+
+<p><img src="paste_src/2022-10-01-16-45-44.png" alt></p>
+<div class="mermaid">flowchart LR
+subgraph first
+v &amp; it &amp; tt
+end
+subgraph second
+c
+end
+subgraph third
+d
+end
+
+
+s[Subclavian a.]
+
+s===&gt;ax[axillary a.]
+s--&gt;v[Vertebral a.]
+v--foramen&lt;br&gt;magnum--&gt;b[Basilar a.]
+s--&gt;it[Internal thoracic a.]
+s--&gt;tt[Thyrocervical trunk]
+s--&gt;c[costal cervical trunk]
+c--&gt;dc[Deep cervical a.]
+c--&gt;hi[Highest intercostal]
+s--70%--&gt;d[Dorsal scapular a.]
+</div><div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Scalene m.</strong><br>
+ant.,mid. scalene insertion at rib 1<br>
+post. scalene insertion at rib 2</p>
+</div>
+<h2 class="mume-header" id="thyrocervical-trunk">Thyrocervical trunk</h2>
+
+<div class="mermaid">graph TB;
+a(thyrocervical trunk)--&gt;b(TCA);
+b--30%--&gt;d(dorsal scapular a.);
+a--&gt;c(inf. thyroid a.);
+a--&gt;e(suprascapular a.);
+a--&gt;f(ascending cervical a.);
+</div><h2 class="mume-header" id="axillary-a">Axillary a.</h2>
+
+<p><img src="paste_src/2022-10-03-00-51-42.png" alt></p>
+<h2 class="mume-header" id="common-carotid">Common carotid</h2>
+
+<ul>
+<li>carotid sheath</li>
+<li>&#x9838;&#x90E8;&#x7121;&#x5206;&#x652F;</li>
+</ul>
+<h2 class="mume-header" id="internal-carotid-a">Internal carotid a.</h2>
+
+<ul>
+<li>&#x9032;&#x5165;carotid canal &#x524D;&#x7121;&#x5206;&#x652F;</li>
+<li>CN X &#x4F34;&#x884C;</li>
+<li>Carotid canal&#x5165;&#x9871;</li>
+</ul>
+<h2 class="mume-header" id="external-carotid">External carotid</h2>
+
+<p><img src="paste_src/2022-10-03-20-55-41.png" alt></p>
+<div class="mermaid">graph LR
+e[External carotid]
+e--&gt;st[Sup.thyroid a.]
+e--digastric&#x4E0B;--&gt;l[Lingual a.]--&gt;&#x820C;
+e--digastric&#x4E0A;--&gt;f[Facial a.]
+e--&#x6CBF;&#x8457;digastric&#x6DF1;&#x5C64;--&gt;o[Occipital a.]
+e--&gt;a[Post. auricular a.]
+e--&gt;m[Maxillary a.]
+e--&gt;sp[Superficial temporal a.]--&#x5206;&#x652F;--&gt;tf[Transverse facial a.]
+sp[Superficial temporal a.]--&#x5206;&#x652F;--&gt;mt[Mid. temporal a.]
+</div><dl>
+<dt>lingual a.</dt>
+<dd>hyoglossus m. &#x6DF1;&#x5C64;&#xFF0C;digastric&#x4E0B;</dd>
+</dl>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>&#x7531;&#x6DF1;&#x800C;&#x6DFA;<br>
+lingual a.<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> hyoglossus m.<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> lingual v.&amp;n.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>&#x820C;&#x982D;&#x611F;&#x89BA; lingual n.<br>
+&#x820C;&#x982D;&#x904B;&#x52D5; CN XII</p>
+</div>
+<dl>
+<dt>Superficial temporal a.</dt>
+<dd>&#x5F9E;&#x8033;&#x524D;&#x4E0A;&#x7A7F;&#x51FA;</dd>
+</dl>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><a href="#second-part">Deep temporal a.</a></p>
+</div>
+<h2 class="mume-header" id="facial-a">Facial a.</h2>
+
+<blockquote>
+<p>digastric&#x4E0A;</p>
+</blockquote>
+<div class="mermaid">graph LR
+1[facial a.]
+
+1--&gt;2[sup. labial a.]
+1--&gt;3[inf. labial a.]
+1--&gt;4[angular a.]
+4--supraobrital &lt;br&gt; foramen--&gt;11[supraorbital, supratrochlear a.]
+10[facial a.]==submandibular&lt;br&gt;gland &#x4E0A;==&gt;1
+10--&gt;a[ascending palatine a.]
+10--&gt;t[tonsillar b.]
+</div><p><img src="paste_src/2022-10-02-20-33-05.png" alt></p>
+<h2 class="mume-header" id="maxillary-a">Maxillary a.</h2>
+
+<ul>
+<li>Mandibular part</li>
+<li>Pterygoid part</li>
+<li>Pterygopalatine part</li>
+</ul>
+<p><img src="paste_src/2022-10-05-21-01-06.png" alt></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Maxillary a.&#x901A;&#x904E;pterygoid muscle&#x6DFA;&#x5C64;&#xFF0C;&#x7A7F;&#x5165;<a href="#pterygopalatine-fossa">pterygopalatine fossa</a></p>
+</div>
+<h3 class="mume-header" id="first-part">First part</h3>
+
+<div class="mermaid">flowchart LR
+subgraph Brain
+mm[Middle meningeal a.]
+am[Accessory meningeal a.]
+end
+subgraph Mandibular
+ia[Inf. alveolar]
+end
+subgraph TMJ
+at[Ant. tympanic a.]
+ds[Deep auricular a.]
+end
+
+at &amp; ds--&gt;T[TMJ]
+am--foramen&lt;br&gt;ovale--&gt;5[CN V]
+mm--foramen&lt;br&gt;spinosum--&gt;bm[&#x8166;&#x819C;]
+ia--mental&lt;br&gt;foramen--&gt;Mental
+ia--&gt;m[Mylohyoid a.]
+at--tympanic&lt;br&gt;cavity--&gt;tm[ tympanic&lt;br&gt;membrane ]
+</div><dl>
+<dt>Ant. tympanic a.</dt>
+<dd>&#x9032;&#x5165; <a href="#ear">tympanic cavity</a>&#xFF0C;&#x4F9B;&#x61C9; tympanic membrane</dd>
+<dt>Middle meningeal</dt>
+<dd>&#x88AB;<a href="#posterior-division">Auriculotemporal n.</a> &#x74B0;&#x7E5E;</dd>
+</dl>
+<h3 class="mume-header" id="second-part">Second part</h3>
+
+<p>&#x7686;&#x6709;(<a href="#anterior-division">CN V<sub>3</sub></a>)&#x4F34;&#x884C;&#xFF0C;&#x9664;&#x4E86;Buccal n.&#x70BA;sensory&#xFF0C;&#x5176;&#x70BA;motor</p>
+<ul>
+<li>Ant./post. deep temporal a.</li>
+<li>Buccal a.</li>
+<li>Masseteric a.</li>
+<li>Pterygoid a.</li>
+</ul>
+<h3 class="mume-header" id="third-part">Third part</h3>
+
+<p>&#x7686;&#x6709;sensory &#x4F34;&#x884C;&#xFF0C;&#x7A7F;&#x5165;<a href="#pterygopalatine-fossa">pterygopalatine fossa</a></p>
+<div class="mermaid">flowchart  LR
+psan[Post. sup. alveolar n.]
+io[Infraorbital a.]
+dp[Descending palatine a.]
+v[Vidian a.]
+ph[Pharyngeal a.]
+sp[Sphenopalatine a.]
+psa[Post. sup. alveolar a.]
+
+subgraph a[&#x7A7F;&#x904E; pterygomaxillary fissure]
+io &amp; sp &amp; v &amp; ph &amp; dp &amp; psan
+end
+iof([infraorbital&lt;br&gt;fissure])
+sf([sphenopalatine&lt;br&gt;foramen])
+p([pterygoid&lt;br&gt;canal])
+pc([Palatine&lt;br&gt;canal])
+phc([pharyngeal&lt;br&gt;canal])
+pf([pterygomaxillary&lt;br&gt;fissure])
+
+v--&gt;p
+dp--&gt;pc
+pc--&gt;|&#x5F80;&#x524D;|gp[Greater&lt;br&gt;palatine a.]--&gt;hpl[Hard &lt;br&gt;palate]
+pc--&gt;|&#x5F80;&#x5F8C;|lp[Lesser&lt;br&gt;palatine a.]--&gt;spl[Soft &lt;br&gt;plate]
+sp--&gt;sf--&gt;n[Nose]
+psan--&gt;pf--&gt;mt
+io--&gt;iof--&gt;ee[Lacrimal g.]
+iof--&gt;sa[ant./mid. sup.&lt;br&gt;alveolar a.]
+ph--&gt;phc
+psa---&gt;mt[maxillary&lt;br&gt;tuberosity]
+
+</div><dl>
+<dt>Sphenopalatine a.</dt>
+<dd>&#x6700;&#x7D42;&#x5206;&#x652F;&#xFF0C;&#x9032;&#x5165; <a href="#sphenopalatine-foramen">Sphenopalatine foramen</a>&#xFF0C;&#x652F;&#x914D;&#x9F3B;&#x7AC7;</dd>
+<dt>Vidian a.</dt>
+<dd><a href="#gland">Vidian n.</a></dd>
+<dt>maxillary tuberosity</dt>
+<dd>on <a href="#alveolar-bone">alveolar bone</a></dd>
+</dl>
+<p><img src="paste_src/2022-10-08-17-32-36.png" alt></p>
+<h2 class="mume-header" id="scm%E8%A1%80%E6%B6%B2">SCM&#x8840;&#x6DB2;</h2>
+
+<p><strong>&#x4E0A;1/3</strong></p>
+<ul>
+<li><a href="#external-carotid">Occipital a.</a></li>
+</ul>
+<p><strong>&#x4E2D;1/3</strong></p>
+<ul>
+<li>Sup. thyroid a.</li>
+<li>Ext. carotid a.</li>
+</ul>
+<p><strong>&#x4E0B;1/3</strong></p>
+<ul>
+<li><a href="#thyrocervical-trunk">suprascapular a.</a> (&gt;80%)</li>
+</ul>
+<h1 class="mume-header" id="vein">Vein</h1>
+
+<p><img src="paste_src/2022-10-03-19-32-10.png" alt><br>
+<img src="paste_src/2022-10-03-19-32-29.png" alt></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>subclavian vein &#x5728;ant. scalene m. &#x4E0A;&#x65B9;</p>
+</div>
+<div class="mermaid">graph TB
+
+scl[Subclavian v.]
+ej[EJV]
+sc[Suprascapular v.]
+aj[Ant. jugular v.]
+rm[Retromandibular v.]
+cb[communicating br.]
+bm[Submental v.]
+c[common facial v.]
+f[Facial v.]
+sc--&gt;ej
+bm---aj
+aj--&gt;ej
+cb--&gt;aj
+rm===&gt;ej
+rm--&gt;c
+f--&gt;c
+TCV--&gt;ej
+ej==&gt;scl
+sp[Superficial temporal v.]--&gt;rm
+m[Maxillary v.]--&gt;rm
+c--&gt;cb
+
+cb---bm
+mt[Mid. temporal v.]--&gt;sp
+</div><h1 class="mume-header" id="nerve">Nerve</h1>
+
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>&#x611F;&#x89BA;&#x795E;&#x7D93; 1, 2, 8<br>
+&#x904B;&#x52D5;&#x795E;&#x7D93; 3, 4, 6, 11, 12<br>
+&#x526F;&#x4EA4;&#x611F; 3, 7, 9, 10</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>CN</th>
+<th>foramen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>cribriform plate</td>
+</tr>
+<tr>
+<td>II</td>
+<td>optic canal</td>
+</tr>
+<tr>
+<td>III, IV, V<sub>1</sub>, VI</td>
+<td>sup orbital fissure</td>
+</tr>
+<tr>
+<td>V<sub>2</sub></td>
+<td>foramen rotundum</td>
+</tr>
+<tr>
+<td>V<sub>3</sub></td>
+<td>foramen ovale</td>
+</tr>
+<tr>
+<td>VII, VIII</td>
+<td>Internal coustic meatus</td>
+</tr>
+<tr>
+<td>IX, X, XI</td>
+<td>jugular foramen</td>
+</tr>
+<tr>
+<td>XII</td>
+<td>Hypoglossal canal</td>
+</tr>
+</tbody>
+</table>
+<p><img src="paste_src/2022-12-01-09-42-46.png" alt></p>
+<h2 class="mume-header" id="cn-iii-iv-vi">CN III, IV, VI</h2>
+
+<blockquote>
+<p><a href="#%E7%9C%BC%E7%9C%B6">&#x773C;&#x7736;</a></p>
+</blockquote>
+<p><img src="paste_src/2022-12-01-10-37-06.png" alt></p>
+<h3 class="mume-header" id="cn-iii">CN III</h3>
+
+<ul>
+<li>Superior br.
+<ul>
+<li><strong>Motor</strong></li>
+<li>sup. rectus m.</li>
+<li>levator palpebrae superioris m.</li>
+<li><strong>Sympathetic</strong></li>
+<li>sup. tarsal m.</li>
+</ul>
+</li>
+<li>Inferior br.
+<ul>
+<li><strong>Motor</strong></li>
+<li>inf. rectus m.</li>
+<li>med. rectus m.</li>
+<li>inf. oblique m.</li>
+<li><strong>Parasympathetic</strong></li>
+<li>ciliary ganglion
+<ul>
+<li>sphincter pupillae m.(&#x77B3;&#x5B54;&#x62EC;&#x7D04;&#x808C;)</li>
+<li>ciliary m.(&#x6C34;&#x6676;&#x9AD4;&#x66F2;&#x5EA6;)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title"> injure</p>
+<p><img src="paste_src/2022-12-01-10-33-11.png" alt></p>
+</div>
+<h3 class="mume-header" id="cn-iv">CN IV</h3>
+
+<p><strong>Motor</strong></p>
+<ul>
+<li>Sup. oblique m.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title"> injure</p>
+<p>&#x8907;&#x8996;</p>
+</div>
+<h3 class="mume-header" id="cn-vi">CN VI</h3>
+
+<ul>
+<li>Lateral rectus m.</li>
+</ul>
+<h2 class="mume-header" id="cn-v1">CN V1</h2>
+
+<p><img src="paste_src/2022-12-01-10-49-34.png" alt></p>
+<ul>
+<li>Lacrimal n.
+<ul>
+<li><a href="#gland">lacrimal g.</a></li>
+</ul>
+</li>
+<li>Nasociliary n.
+<ul>
+<li>&#x9032;&#x5165;Ethmoid sinus</li>
+</ul>
+</li>
+<li>Frontal n.
+<ul>
+<li>Supratrochlear n.</li>
+<li>Supraorbital n.</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="cn-v2">CN V2</h2>
+
+<p><img src="paste_src/2022-10-08-18-17-19.png" alt></p>
+<div class="mermaid">flowchart LR
+
+2[CN V2]-- oramen&lt;br&gt;rotundum --&gt;pf([Pterygopalatine&lt;br&gt;Fossa])
+pf--&gt;psa[PSA]
+pf--&gt;i[Infraorbital n.] &amp; z[Zygomatic n.]
+pf--&gt;gl[Pterygopalatine&lt;br&gt; ganglion]
+</div><h3 class="mume-header" id="post-sup-alveolar-n">Post. sup. alveolar n.</h3>
+
+<p>&#x7A7F;&#x904E; <a href="#pterygopalatine-fossa">pterygomaxillary fissure</a>&#xFF0C;&#x652F;&#x914D;&#x4E0A;&#x984E;&#x81FC;&#x9F52;(molars)&#xFF0C;&#x9664;&#x4E86;&#x7B2C;&#x4E00;&#x5927;&#x81FC;&#x9F52;(mid. sup alveolar n.)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><a href="#third-part">PSA a.</a><br>
+<a href="#alveolar-bone">Alveolar bone</a></p>
+</div>
+<h3 class="mume-header" id="zygomatic-n">Zygomatic n.</h3>
+
+<p>join lacrimal n.</p>
+<h3 class="mume-header" id="infraorbital-n">Infraorbital n.</h3>
+
+<p>&#x5206;&#x652F;Ant./Mid sup. alveolar n.&#xFF0C;&#x8207;<a href="#third-part">&#x52D5;&#x8108;</a>&#x4F34;&#x884C;</p>
+<h3 class="mume-header" id="pterygopalatine-ganglion">Pterygopalatine ganglion</h3>
+
+<p>&#x4F4D;&#x65BC;<a href="#pterygopalatine-fossa">pterygopalatine fossa</a></p>
+<div class="mermaid">flowchart LR
+pg[Pterygopalatine&lt;br&gt;ganglion]
+
+subgraph a[&#x904E;Sphenopalatine foramen]
+nn[Nasopalatine n.]
+psn[Post. sup. nasal n.]
+end
+
+subgraph v[&#x904E;Palatine canal]
+gp[Greater palatine n.]
+lp[Lesser palatine n.]
+end
+
+subgraph g[&#x904E;Pharyngeal canal]
+ph[Pharyngeal n.]
+end
+
+pg--&gt;nn--&gt;spt[&#x9F3B;&#x4E2D;&#x8188;]--&gt;if[Incisive&lt;br&gt;canal]
+pg--&gt;psn--&gt;con[&#x9F3B;&#x7532;]
+pg--&gt;gp &amp; lp &amp; ph
+lp--&gt;s[Soft&lt;br&gt;palate]
+gp--&gt;h[hard&lt;br&gt;plate]
+pg--&gt;pp[post. ganglionic&lt;br&gt;Paresympathetic fiber]--&gt;l[Lacrimal g.]
+click if &quot;#alveolar-bone&quot;
+</div><p><img src="paste_src/2022-10-09-18-48-12.png" alt></p>
+<h2 class="mume-header" id="cn-v3">CN V3</h2>
+
+<h3 class="mume-header" id="meningeal-br">Meningeal br.</h3>
+
+<p>&#x9032;&#x5165; foramen spinosum</p>
+<h3 class="mume-header" id="anterior-division">Anterior division</h3>
+
+<p><a href="#second-part">&#x652F;&#x914D;&#x5480;&#x56BC;&#x808C;</a></p>
+<ul>
+<li>Masseteric n.</li>
+<li>Anterior and posterior deep temporal n.</li>
+<li>Medial pterygoid n.</li>
+<li>Lateral pterygoid n.</li>
+<li>Buccal n.(<strong>Sensory</strong>)</li>
+</ul>
+<h3 class="mume-header" id="posterior-division">Posterior division</h3>
+
+<ul>
+<li>Auriculotemporal n.
+<ul>
+<li>&#x593E; <a href="#first-part">mid. meningeal a.</a></li>
+</ul>
+</li>
+<li>Lingual n.
+<ul>
+<li><a href="#chorda-tympanic-n">Chorda tympanic</a> &#x532F;&#x5165;</li>
+</ul>
+</li>
+<li>Inf. alveolar n.
+<ul>
+<li>&#x9032;&#x5165;<a href="#mandible">Mandibular foramen</a></li>
+</ul>
+</li>
+<li>Mylohyoid n. (Motor)</li>
+</ul>
+<p><img src="%5Cpaste_src%5CIMG_1854.JPG" alt></p>
+<h2 class="mume-header" id="cn-vii">CN VII</h2>
+
+<p>&#x652F;&#x914D;&#x8868;&#x60C5;&#x808C;</p>
+<div class="mermaid">flowchart LR
+0[CN VII &#x9871;&#x5167;]
+1((Inter&lt;br&gt;acoustic&lt;br&gt;meatus))
+c((Stylomastoid&lt;br&gt;foramen))
+pab[posterior auricular branch]
+
+0==&gt;1
+c--&gt;pab
+1==&gt;c
+1--&gt;ct[Chorda tympanic]--Petrotympanic fissure--&gt;l[Lingual n.]
+1--&gt;gp[Great petrosal n.]--&gt;v[vidian n.]
+c--&gt;d[Temporal br.]
+c--&gt;e[Zygomatic br.]
+c--&gt;f[Buccal br.]
+c--&gt;g[Mandibular]
+c--&gt;cc[Cervical]
+click l &quot;#posterior-division&quot;
+click c &quot;#temporal-bone&quot;
+</div><img src="https://i.imgur.com/KffJWrA.jpg" alt width="80%">
+<img src="paste_src/2022-10-06-03-24-00.png" alt width="80%">
+<h3 class="mume-header" id="parotid-plexus">Parotid plexus</h3>
+
+<p><img src="paste_src/2022-10-27-01-02-10.png" alt></p>
+<h3 class="mume-header" id="chorda-tympanic-n">Chorda Tympanic n.</h3>
+
+<p>&#x652F;&#x914D;&#x524D;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{2}{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>&#x5473;&#x89BA;, Submandibular, Sublingual <a href="#gland">gland</a><br>
+<img src="paste_src/2022-10-05-19-50-47.png" alt width="80%"></p>
+<h3 class="mume-header" id="great-petrosal-and-vidian">Great petrosal and Vidian</h3>
+
+<img src="paste_src/2022-10-12-21-29-56.png" alt width="80%">
+<div class="admonition warning">
+<p class="admonition-title"><a href="#lesser-petrosal-n">Lesser petrosal n.</a></p>
+</div>
+<h2 class="mume-header" id="cn-ix">CN IX</h2>
+
+<p><img src="paste_src/2022-10-22-22-10-58.png" alt><br>
+&#x5206;&#x9694;ECA,ICA</p>
+<h3 class="mume-header" id="lesser-petrosal-n">Lesser petrosal n.</h3>
+
+<p>&#x652F;&#x914D;<a href="#gland">Parotid g.</a>&#x7684;&#x526F;&#x4EA4;&#x611F;&#x7BC0;&#x524D;&#x795E;&#x7D93;<br>
+<img src="paste_src/2022-10-07-19-44-11.png" alt></p>
+<div class="admonition warning">
+<p class="admonition-title"> <a href="#great-petrosal-and-vidian">Greater petrosal n.</a></p>
+</div>
+<h2 class="mume-header" id="cn-x">CN X</h2>
+
+<ul>
+<li>common carotid a. &#x5916;&#x5074;&#xFF0C;&#x84CB;&#x5728; thyrocervical trunk &#x4E0A;</li>
+<li>Superior thyroid n. &#x652F;&#x914D;laryngeal</li>
+<li>recurrent laryngeal n.&#x6CBF; tracheoesophageal groove &#x6500;&#x5347;(&#x5C31;&#x662F;&#x98DF;&#x9053;&#x548C;&#x6C23;&#x7BA1;&#x4E2D;&#x9593;)&#xFF0C;&#x63A5;&#x89F8; medial thyroid gland&#xFF0C;&#x5411;&#x5167;&#x947D;&#x5230; inf. constrictor&#xFF0C;&#x9032;&#x5165; larynx&#xFF0C;&#x540C;&#x6642;&#x652F;&#x914D;&#x611F;&#x89BA;&#x8207;&#x904B;&#x52D5;</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title"> recurrent laryngeal n.</p>
+<ul>
+<li>left: arch of aorta</li>
+<li>right: Subclavian a.</li>
+</ul>
+</div>
+<h2 class="mume-header" id="cn-xi">CN XI</h2>
+
+<p>&#x5411;&#x5F8C;&#x652F;&#x914D;SCM Trapezius</p>
+<h2 class="mume-header" id="cn-xii">CN XII</h2>
+
+<p>&#x8DE8;&#x904E;ECA&#x6240;&#x6709;&#x5206;&#x652F;&#xFF0C;&#x9664;&#x4E86;Occipital a.</p>
+<h2 class="mume-header" id="cervical-plexuses">Cervical plexuses</h2>
+
+<p><img src="https://i.imgur.com/pXU9GME.png" alt></p>
+<p><img src="paste_src/2022-10-02-15-47-22.png" alt></p>
+<div class="mermaid">graph TB
+a[&#x6DF7;&#x5408;]
+b([&#x904B;&#x52D5;])
+c{{&#x611F;&#x89BA;}}
+</div><div class="mermaid">graph LR
+ansa([ansa cervicalis]);
+phrenic([phrenic n.]);
+tcn{{T. cervical n.}};
+ga{{great auricular n.}};
+sc{{supraclavicular n.}};
+lo{{lesser occipital n.}};
+c1--&gt;ansa;
+c2--&gt;ansa;
+c3--&gt;ansa
+ansa--&#x5411;&#x4E0A;&#x7E5E;--&gt;12[CN XII]
+c2 &amp; c3--&gt;cutaneous--&gt;tcn &amp; ga &amp; lo
+c3 &amp; c4--&gt;sc--&gt;p[&#x7A7F;&#x51FA;platysma]
+c3--&gt;phrenic
+c4--&gt;phrenic
+c5--&gt;phrenic
+phrenic--ant. scalene m. &#x4E0A;&#x65B9;--&gt;diaphragm[&#x6A6B;&#x8188;]
+</div><div class="admonition info">
+<p class="admonition-title"> cervical sinus</p>
+<p>CN X &#x901A;&#x904E;&#xFF0C;&#x964D;&#x5FC3;&#x8DF3;</p>
+</div>
+<h2 class="mume-header" id="sup-cervical-ganglion">Sup. cervical ganglion</h2>
+
+<p>&#x652F;&#x914D;carotid plexus, pharyngeal plexus</p>
+<h1 class="mume-header" id="gland">Gland</h1>
+
+<div class="mermaid">flowchart TB
+subgraph 7[CN VII]
+ct[Chorda tympanic n.]
+gp[Great petrosal n.]
+v[Vidian n.]
+
+end
+subgraph 9[CN IX]
+tp[tympanic&lt;br&gt;plexus]
+lp[Lesser petrosal n.]
+end
+
+
+subgraph 52[CN V2]
+z
+end
+subgraph 53[CN V3]
+a[Auriculotemporal n. ]
+l[Lingual n.]
+
+end
+
+subgraph 51[CN V1]
+lc
+end
+
+oga([Optic ganglion])
+mga([Submandibular&lt;br&gt;ganglion])
+
+tp--&gt;lp--foramen&lt;br&gt;ovale--&gt;oga--&gt;a---&gt;p[(Parotid g.)]
+ct---&gt;l--&gt;mga--&gt;lg[(Sublingual g.)] &amp; mg[(Submandibular g.)]
+gp--&gt;v--&gt;pga([Pterygopalatine&lt;br&gt;ganglion])--&gt;z[Zygomatic n.]--&gt;lc[Lacrimal n.]--&gt;ag[(Lacrimal g.)]
+
+click pga &quot;#pterygopalatine-ganglion&quot;
+click a &quot;#posterior-division&quot;
+click l &quot;#posterior-division&quot;
+click lp &quot;#lesser-petrosal-n&quot;
+click ct &quot;#chorda-tympanic-n&quot;
+click z &quot;#cn-v2&quot;
+click lc &quot;#cn-v1&quot;
+</div><img src="paste_src/2022-11-07-20-22-25.png" alt width="100%">
+<img src="paste_src/2022-10-05-20-25-27.png" alt width="100%">
+<h2 class="mume-header" id="parotid-g">Parotid g.</h2>
+
+<p><img src="paste_src/2022-11-01-20-56-34.png" alt><br>
+<img src="paste_src/2022-11-01-21-01-10.png" alt></p>
+<h1 class="mume-header" id="muscle-of-mastication">Muscle of Mastication</h1>
+
+<p>&#x90FD;&#x662F;<a href="#cn-v3">CN V<sub>3</sub></a>&#x652F;&#x914D;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+
+<th style="text-align:center" colspan="2">Masseter</th>
+<th style="text-align:center">Temporalis</th>
+
+<th style="text-align:center" colspan="2">Medial pterygoid</th>
+
+<th style="text-align:center" colspan="2">Lateral pterygoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">Superficial</td>
+<td style="text-align:center">Deep</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">Superficial</td>
+<td style="text-align:center">Deep</td>
+<td style="text-align:center">Upper</td>
+<td style="text-align:center">Lower</td>
+</tr>
+<tr>
+<td style="text-align:center">Origin</td>
+
+<td style="text-align:center" colspan="2">zygomatic arch</td>
+<td style="text-align:center">inferior temporal line<br>temporal fascia</td>
+<td style="text-align:center">Maxillary tuberosity<br>Pyramidal process of the palatine</td>
+<td style="text-align:center">Medial surface of<br>lateral pterygoid plate</td>
+<td style="text-align:center">Greater wing</td>
+<td style="text-align:center">Lateral surface of<br>lateral pterygoid plate</td>
+</tr>
+<tr>
+<td style="text-align:center">Insertion</td>
+<td style="text-align:center">Angle<br>inferior and lateral ramus</td>
+<td style="text-align:center">Superolateral ramus<br>Coronoid process</td>
+<td style="text-align:center">Coronoid process<br>anterior border of ramus</td>
+
+<td style="text-align:center" colspan="2">Medial ramus<br>angle</td>
+<td style="text-align:center">Articular disc<br>capsule of the TMJ</td>
+<td style="text-align:center">Pterygoid fovea</td>
+</tr>
+<tr>
+<td style="text-align:center">Actions</td>
+
+<td style="text-align:center" colspan="2">Elevates<br>Protrudes</td>
+<td style="text-align:center">Elevates<br>Retrudes</td>
+
+<td style="text-align:center" colspan="2">Elevates<br>Protrudes</td>
+
+<td style="text-align:center" colspan="2">Depresses<br>Protrudes</td>
+</tr>
+</tbody>
+</table>
+<h1 class="mume-header" id="osteology">Osteology</h1>
+
+<h2 class="mume-header" id="%E5%88%86%E9%A1%9E">&#x5206;&#x985E;</h2>
+
+<table>
+<tbody><tr>
+<th>&#x9871;&#x9AA8;(8)</th><th>&#x984F;&#x9762;&#x9AA8;(14)</th>
+</tr>
+<tr>
+<td>
+<ul>
+<li>Occipital</li>
+<li>Ethmoid</li>
+<li>Frontal</li>
+<li>Temporal</li>
+<li>Parietal</li>
+<li>Sphenoid</li>
+</ul>
+</td>
+<td align="left">
+<ul>
+<li>vomer</li>
+<li>Mandible</li>
+<li>inf. nasal conchae</li>
+<li>nasal</li>
+<li>Maxilla</li>
+<li>Zygoma</li>
+<li>Lacrimal</li>
+<li>Palatine</li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+<div class="admonition info">
+<p class="admonition-title"> &#x518D;&#x751F;&#x4E09;&#x8981;&#x4EF6;</p>
+<ul>
+<li>Cell</li>
+<li>Scaffold</li>
+<li>Growth factors</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title"> &#x4E00;&#x4E9B;&#x55AE;&#x5B57;</p>
+<dl>
+<dt>notch</dt>
+<dd>&#x58D3;&#x8DE1;</dd>
+<dt>eminence</dt>
+<dd>&#x6700;&#x51F8;&#x9EDE;</dd>
+</dl>
+</div>
+<h2 class="mume-header" id="%E9%AA%A8%E9%A0%AD">&#x9AA8;&#x982D;</h2>
+
+<h3 class="mume-header" id="frontal-bone">Frontal bone</h3>
+
+<ol>
+<li>Frontal sinus</li>
+<li>Supraorbital notch/foramen</li>
+<li>Glabella(&#x7709;&#x9593;)</li>
+<li>Lacrimal fossa</li>
+</ol>
+<details>
+<summary>&#x76F8;&#x9130;&#x9AA8;</summary>
+<p>Pr, S, L, N, E, Z, Mx</p>
+</details>
+<p><img src="paste_src/2022-10-12-20-12-43.png" alt></p>
+<h3 class="mume-header" id="parietal-bone">Parietal bone</h3>
+
+<ol>
+<li>Sagittal suture</li>
+<li>Lambdoidal suture</li>
+</ol>
+<details>
+<summary>&#x76F8;&#x9130;&#x9AA8;</summary>
+<p>F, O, T, S, Pr&#x2019;</p>
+</details>
+<h3 class="mume-header" id="ethmoid-bone">Ethmoid bone</h3>
+
+<ol>
+<li>Cribriform plate
+<ul>
+<li>Olfactory n. (CN I)</li>
+</ul>
+</li>
+<li>superior and middle Nasal concha</li>
+</ol>
+<h3 class="mume-header" id="inferior-nasal-concha">inferior Nasal concha</h3>
+
+<p><img src="paste_src/2022-10-20-01-59-09.png" alt></p>
+<h3 class="mume-header" id="sphenoid-bone">Sphenoid bone</h3>
+
+<ol>
+<li>
+<p>pterygoid hamulus</p>
+</li>
+<li>
+<p>Foramen rotundum</p>
+<ul>
+<li><a href="#foramen-rotundum">CN V<sub>2</sub></a></li>
+</ul>
+</li>
+<li>
+<p>Foramen ovale</p>
+<ul>
+<li><a href="#first-part">CN V<sub>3</sub></a></li>
+</ul>
+</li>
+<li>
+<p>Foramen spinosum</p>
+<ul>
+<li><a href="#first-part">Mid. meningeal a.</a></li>
+</ul>
+</li>
+<li>
+<p>Pterygoid canal</p>
+<ul>
+<li>vidian <a href="#third-part">a.</a>/<a href="#cn-vii">n.</a></li>
+</ul>
+</li>
+<li>
+<p>Foramen lacerum (&#x7834;&#x88C2;&#x5B54;)</p>
+</li>
+<li>
+<p>Optic canal</p>
+<ul>
+<li>CN II</li>
+<li>Ophthalmic a.</li>
+</ul>
+</li>
+<li>
+<p>Sup. orbital fissure</p>
+<ul>
+<li>Ophthalmic n.(<a href="#cn-v1">CN V<sub>1</sub></a>)/ v.</li>
+<li>CN III, IV, VI</li>
+</ul>
+</li>
+</ol>
+<details>
+<summary>&#x76F8;&#x9130;&#x9AA8;</summary>
+<p>F, O, T, E, Pr, V, Z, Pl, Mx<br>
+<img src="paste_src/2022-10-12-20-32-01.png" alt></p>
+</details>
+<blockquote>
+<p>&#x4E0A;&#x8996;&#x5716;<br>
+<img src="paste_src/2022-10-12-20-27-38.png" alt><br>
+<img src="paste_src/2022-11-24-00-28-29.png" alt></p>
+</blockquote>
+<blockquote>
+<p>&#x524D;&#x8996;&#x5716;<br>
+<img src="paste_src/2022-11-04-16-00-49.png" alt></p>
+</blockquote>
+<blockquote>
+<p>&#x5F8C;&#x8996;&#x5716;<br>
+<img src="paste_src/2022-11-24-00-29-18.png" alt></p>
+</blockquote>
+<h3 class="mume-header" id="temporal-bone">Temporal bone</h3>
+
+<ol>
+<li>Carotid canal
+<ul>
+<li><a href="#internal-carotid-a">ICA</a></li>
+</ul>
+</li>
+<li>Ext. acoustic meatus</li>
+<li>Int. acoustic meatus
+<ul>
+<li>CN <a href="#cn-vii">VII</a>, VIII</li>
+</ul>
+</li>
+<li>Jugular foramen
+<ul>
+<li>int. jugular v.</li>
+<li>CN <a href="#cn-ix">IX</a>, X, XI</li>
+</ul>
+</li>
+<li>Stylomastoid foramen
+<ul>
+<li><a href="#cn-vii">parotid plexus</a></li>
+</ul>
+</li>
+<li><a href="#sphenoid-bone">Foramen lacerum</a></li>
+<li>Petrotympanic fissure
+<ul>
+<li><a href="#cn-vii">chorda tympanic</a></li>
+</ul>
+</li>
+<li>Zygomatic process</li>
+<li>articular eminence</li>
+</ol>
+<details>
+<summary>&#x76F8;&#x9130;&#x9AA8;</summary>
+<p>Pr, O, S, M</p>
+</details>
+<p><img src="paste_src/2022-11-04-15-51-04.png" alt><br>
+<img src="paste_src/2022-10-24-22-27-13.png" alt><br>
+<img src="paste_src/2022-10-12-22-18-39.png" alt width="50%"></p>
+<p><img src="paste_src/2022-11-04-15-51-58.png" alt></p>
+<h3 class="mume-header" id="occipital-bone">Occipital bone</h3>
+
+<ol>
+<li>Hypoglossal canal
+<ul>
+<li>CN XII</li>
+</ul>
+</li>
+<li>Foramen magnum
+<ul>
+<li>Spinal cord</li>
+<li>Vertebral a.</li>
+<li>CN XI</li>
+</ul>
+</li>
+<li><a href="#temporal-bone">Jugular foramen</a></li>
+<li><a href="#sphenoid-bone">Foramen lacerum</a><details>
+</details></li>
+</ol>
+<summary>&#x76F8;&#x9130;&#x9AA8;</summary>
+<p>Pr, T, S, C1</p>
+
+<h3 class="mume-header" id="ethmoid-bone-1">Ethmoid bone</h3>
+
+<p><img src="paste_src/2022-10-12-22-48-29.png" alt></p>
+<h3 class="mume-header" id="vomer">Vomer</h3>
+
+<p><img src="paste_src/2022-10-12-22-51-27.png" alt></p>
+<h3 class="mume-header" id="maxillary-bone">Maxillary bone</h3>
+
+<ol>
+<li>four process
+<ul>
+<li>frontal</li>
+<li>zygomatic</li>
+<li>palatine</li>
+<li>alveolar</li>
+</ul>
+</li>
+<li>Infraorbital fissure
+<ul>
+<li>Infraorbital <a href="#infraorbital-n">n.</a>/ <a href="#third-part">a.</a><details>
+</details></li>
+</ul>
+</li>
+</ol>
+<summary>&#x76F8;&#x9130;&#x9AA8;</summary>
+<p>F, Z, N, L, V, E, Pl, S, INC</p>
+
+<div class="admonition info">
+<p class="admonition-title"> &#x9AA8;&#x6298;</p>
+<p><img src="paste_src/2022-11-05-14-35-56.png" alt></p>
+</div>
+<h3 class="mume-header" id="alveolar-bone">Alveolar bone</h3>
+
+<ol>
+<li>Palatine process</li>
+<li>Alveolar process</li>
+<li>Maxillary tuberosity (&#x667A;&#x9F52;&#x5F8C;)
+<ul>
+<li>PSA foramen (<a href="#third-part">a.</a>/ <a href="#post-sup-alveolar-n">n.</a>)</li>
+</ul>
+</li>
+<li>Incisive canal
+<ul>
+<li>nasopalatine <a href="#pterygopalatine-ganglion">n.</a> and vessel</li>
+</ul>
+</li>
+</ol>
+<p><img src="paste_src/2022-10-19-17-53-32.png" alt></p>
+<h3 class="mume-header" id="palatine-bone">Palatine bone</h3>
+
+<ol>
+<li>Greater palatine foramen</li>
+<li>Lesser palatine foramen</li>
+<li><a href="#pterygopalatine-ganglion">Greater/ lesser palatine n.</a></li>
+</ol>
+<h3 class="mume-header" id="lacrimal-bone">Lacrimal bone</h3>
+
+<div class="admonition info">
+<p class="admonition-title"> &#x6DDA;&#x56CA;&#xFF08;lacrimal sac&#xFF09;</p>
+<p>&#x76F8;&#x9130; lacrimal bone, maxillary bone</p>
+</div>
+<details>
+<summary>&#x76F8;&#x9130;&#x9AA8;</summary>
+<p>F, Mx, E, INC</p>
+</details>
+<h3 class="mume-header" id="mandible">Mandible</h3>
+
+<ol>
+<li>Symphysis &amp; Parasymphysis <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Body  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Ramus<br>
+<img src="paste_src/2022-10-20-02-43-23.png" alt></li>
+<li>Condylar process</li>
+<li>Coronoid process</li>
+<li>Mandibular foramen
+<ul>
+<li><a href="#posterior-division">Sup. alveolar n.</a></li>
+<li>&#x54AC;&#x5408;&#x9762;&#x4E0A; 1cm</li>
+</ul>
+</li>
+<li>Mental foramen</li>
+<li>Lingula (&#x5C0F;&#x820C;)</li>
+<li>Mental spine (&#x9826;&#x68D8;)</li>
+<li>Sublingual g. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Mylohyoid line <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Submandibular g.</li>
+<li>Oblique line
+<ul>
+<li>7,8&#x5916;</li>
+</ul>
+</li>
+<li>Antegonial notch<br>
+facial a./v.&#x7D93;&#x904E;<br>
+<img src="paste_src/2022-11-04-15-26-08.png" alt></li>
+</ol>
+<p><img src="paste_src/2022-10-20-02-34-40.png" alt></p>
+<h4 class="mume-header" id="%E8%82%8C%E8%82%89%E6%8E%A5%E9%BB%9E">&#x808C;&#x8089;&#x63A5;&#x9EDE;</h4>
+
+<p><img src="paste_src/2022-10-22-00-41-59.png" alt><br>
+<img src="paste_src/2022-10-22-00-42-29.png" alt></p>
+<h3 class="mume-header" id="hyoid-bone">Hyoid bone</h3>
+
+<p><img src="paste_src/2022-10-20-02-52-11.png" alt></p>
+<h2 class="mume-header" id="%E7%9C%BC%E7%9C%B6">&#x773C;&#x7736;</h2>
+
+<p><img src="paste_src/2022-10-12-16-16-56.png" alt><br>
+<img src="paste_src/2022-10-12-23-01-27.png" alt></p>
+<h2 class="mume-header" id="%E8%85%A6%E6%B4%9E%E5%80%91">&#x8166;&#x6D1E;&#x5011;</h2>
+
+<p><img src="paste_src/2022-10-12-20-57-51.png" alt><br>
+<img src="paste_src/2022-10-12-22-45-07.png" alt><br>
+<img src="paste_src/2022-10-12-22-45-14.png" alt></p>
+<h2 class="mume-header" id="buttress">Buttress</h2>
+
+<p>&#x50B3;&#x5C0E;&#x529B;&#x91CF;<br>
+<img src="paste_src/2022-10-11-10-33-08.png" alt width="100%"></p>
+<img src="paste_src/2022-10-11-10-32-43.png" alt width="100%">
+<h2 class="mume-header" id="sutures">Sutures</h2>
+
+<ul>
+<li>Coronal</li>
+<li>Sagittal</li>
+<li>Lambdoidal(&#x4EBA;&#x5B57;)</li>
+<li>Squamosal(&#x9C57;)</li>
+<li>Temporozygomatic</li>
+<li>Median palatine</li>
+<li>Transverse palatine</li>
+</ul>
+<p><img src="paste_src/2022-10-12-19-53-03.png" alt><br>
+<img src="paste_src/2022-10-12-19-53-55.png" alt></p>
+<h1 class="mume-header" id="lymphatic-system">Lymphatic  system</h1>
+
+<details>
+<summary>&#x7E3D;&#x5716;</summary>
+<img src="paste_src/2022-11-04-17-27-15.png" alt width="100%">
+<img src="paste_src/2022-11-04-17-39-47.png" alt width="100%">
+<img src="paste_src/2022-10-26-17-20-46.png" alt width="100%">
+</details>
+<h2 class="mume-header" id="nodes">Nodes</h2>
+
+<img src="paste_src/2022-11-05-02-00-22.png" alt width="100%">
+<img src="paste_src/2022-11-05-02-22-43.png" alt width="50%">
+<div class="mermaid">flowchart LR
+aa([Ant. auricular])
+pa([Post. auricular])
+p([parotid])
+o([Occipital])
+idc([Inf. deep cervical])
+sc([Superficial cervical])
+sm([Submandibular node])
+smt([Submental])
+rp([Retropharyngeal])
+
+subgraph sdc[Sup. deep cervical]
+jd([Jugulodigastric])
+jo([Jugulo-omohyoid])
+
+end
+
+sc--&gt;sdc
+aa--&gt; p
+pa--&gt;sdc
+sm--&gt;sdc
+sdc--&gt;idc
+o --&gt;idc
+rp--&gt;jd
+smt--&gt;jo
+p--&gt;jd
+</div><div class="admonition info">
+<p class="admonition-title"> Lingual Lymphatic nodes</p>
+<img src="paste_src/2022-11-05-01-31-52.png" alt width="100%">
+</div>
+<div class="admonition tip">
+<p class="admonition-title"> &#x75C5;&#x7076;</p>
+<p><img src="paste_src/2022-11-05-02-11-21.png" alt></p>
+</div>
+<h2 class="mume-header" id="groups">Groups</h2>
+
+<p><img src="paste_src/2022-11-04-17-28-41.png" alt><br>
+<img src="paste_src/2022-11-04-16-38-00.png" alt width="100%"></p>
+<dl>
+<dt>Level I</dt>
+<dd>the submental group (Ia), and the<br>
+submandibular group (Ib).</dd>
+<dt>Level II</dt>
+<dd>the upper jugular lymph nodes</dd>
+</dl>
+<ul>
+<li>level IIa &#x2013; CN XI &#x524D;</li>
+<li>level IIb &#x2013; CN XI &#x5F8C;</li>
+</ul>
+<dl>
+<dt>Level III</dt>
+<dd>the middle jugular lymph nodes</dd>
+<dt>Level IV</dt>
+<dd>the lower jugular lymph nodes</dd>
+<dt>Level V</dt>
+<dd>all lymph nodes contained within the posterior triangle</dd>
+<dt>Level VI</dt>
+<dd>lymph nodes of the anterior (central) neck compartment</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>&#x6E05;&#x9664; I, II, III</p>
+</div>
+<h2 class="mume-header" id="nasal-cavity">Nasal cavity</h2>
+
+<div class="mermaid">flowchart LR
+sm([Submandibular])
+rp([Retropharyngeal])
+
+
+subgraph Nasal
+nasal[&#x9F3B;&#x8154;]
+f &amp; e &amp; m
+sp[Sphenoid Sinus]
+end
+nasal--&#x524D;1/3--&gt;sm
+nasal--&#x5F8C;2/3--&gt;rp
+f[Frontal Sinus]--&gt;sm
+e[Ethmoid Sinus]--Ant./Mid. --&gt;sm
+e--Post. --&gt;rp
+m[Maxillary Sinus]--&gt;sm
+sp--&gt;rp
+</div><h2 class="mume-header" id="oral-cavity">Oral cavity</h2>
+
+<div class="mermaid">flowchart LR
+sdc([Sup. deep cervical])
+sm([Submandibular node])
+smt([Submental])
+rp([Retropharyngeal])
+rp--&gt;sdc
+
+
+
+subgraph Oral
+gums
+hp[Hard palate]
+sp[Soft plate]
+Tonsil[Palatine tonsil]
+Floor
+end
+gums--&gt;sm
+hp--Ant. --&gt;sm
+hp--Post. --&gt;sdc
+sp--&gt;rp &amp; sdc
+Floor---&gt;sdc
+Floor--Ant. --&gt;smt
+Floor--Post. --&gt;sm
+Tonsil--&gt;sdc
+</div><h2 class="mume-header" id="tongue">Tongue</h2>
+
+<div class="mermaid">flowchart LR
+jo([Jugulo-omohyoid])
+smt([Submental])
+sm([Submandibular node])
+
+sdc([Sup. deep cervical])
+
+
+Apical--&gt;jo &amp; smt
+Central--&gt;sdc &amp; smt &amp; sm
+Marginal--&gt;smt &amp; sdc
+Basal --&gt;sdc
+</div><h2 class="mume-header" id="tonsil">Tonsil</h2>
+
+<div class="mermaid">flowchart LR
+rp([Retropharyngeal])
+jd([Jugulodigastric])
+idc([Inf. deep cervical])
+
+pa[Palatine tonsil]
+ph[Pharyngeal tonsil]
+lp[Laryngeal pharynx]
+o[Oropharynx tonsil]
+ue[Upper esophagus]
+pa &amp; o --&gt;jd
+ph--&gt;rp
+lp &amp; ue --&gt;idc
+</div><h2 class="mume-header" id="face">Face</h2>
+
+<ol>
+<li>Maxillary</li>
+<li>Buccinator</li>
+<li>Supramadibular</li>
+</ol>
+<img src="paste_src/2022-11-05-01-27-44.png" alt width="80%">
+<h2 class="mume-header" id="larynx">Larynx</h2>
+
+<p>&#x7528;vocal fold &#x5206;&#xFF0C;&#x4E0A;,&#x4E0B;&#x5206;&#x5225;&#x5230;SDC, IDC<br>
+<img src="paste_src/2022-11-05-01-48-35.png" alt width="80%"></p>
+<h2 class="mume-header" id="thyroid">Thyroid</h2>
+
+<p>&#x8DDF;&#x8457;Sup./ Inf. thyroid a.&#x8D70;&#xFF0C;&#x5206;&#x5225;&#x5230;SDC, IDC<br>
+<img src="paste_src/2022-11-05-01-46-09.png" alt width="80%"></p>
+<h1 class="mume-header" id="nose-cavity">Nose cavity</h1>
+
+<img src="paste_src/2022-10-09-22-16-06.png" alt width="100%">
+<img src="paste_src/2022-10-09-22-16-30.png" alt width="100%">
+<img src="paste_src/2022-11-23-22-10-08.png" alt width="100%">
+<div class="admonition info">
+<p class="admonition-title"> Hypophyseal  fossa</p>
+<p>&#x8166;&#x4E0B;&#x5782;&#x9AD4;&#x5728;&#x9019;</p>
+</div>
+<h2 class="mume-header" id="nerve-1">Nerve</h2>
+
+<ul>
+<li><a href="#pterygopalatine-ganglion">Nasopalatine n.</a>
+<ul>
+<li>&#x8D70;&#x5728;&#x9F3B;&#x7532;</li>
+</ul>
+</li>
+<li><a href="#pterygopalatine-ganglion">Sphenopalatine n.</a>
+<ul>
+<li>&#x8D70;&#x5728;&#x9F3B;&#x4E2D;&#x8188;</li>
+</ul>
+</li>
+</ul>
+<p><img src="paste_src/2022-11-23-22-03-42.png" alt><br>
+<img src="paste_src/2022-11-07-20-09-19.png" alt></p>
+<h2 class="mume-header" id="nasal-septum-%E9%BC%BB%E4%B8%AD%E8%86%88">Nasal septum (&#x9F3B;&#x4E2D;&#x8188;)</h2>
+
+<ul>
+<li>nasal sepal cartilage</li>
+<li>perpendicular plate of ethmoid</li>
+<li>vomer</li>
+</ul>
+<p><img src="paste_src/2022-10-20-01-54-42.png" alt></p>
+<h1 class="mume-header" id="paranasal-sinuses">Paranasal sinuses</h1>
+
+<p>&#x9F3B;&#x65C1;&#x7AC7;&#xFF0C;&#x6FD5;&#x6F64;&#x547C;&#x5438;&#x7684;&#x7A7A;&#x6C23;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Artery/ Nerve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Frontal</td>
+<td style="text-align:center">Ophthalmic br./ division</td>
+</tr>
+<tr>
+<td style="text-align:center">Maxillary</td>
+<td style="text-align:center">Maxillary br./ division</td>
+</tr>
+<tr>
+<td style="text-align:center">Ethmoid</td>
+<td style="text-align:center" rowspan="2">Ophthalmic br.<br>Maxillary br.</td>
+</tr>
+<tr>
+<td style="text-align:center">Sphenoid</td>
+
+</tr>
+</tbody>
+</table>
+<img src="paste_src/2022-10-12-16-31-14.png" alt width="100%">
+<img src="paste_src/2022-11-23-22-10-08.png" alt width="100%">
+<img src="paste_src/2022-11-05-15-51-18.png" alt width="100%">
+<div class="mermaid">flowchart LR
+sr[Sphenoethmoidal&lt;br&gt; recess]
+s[Sup. meatus]
+m[Mid. meatus]
+i[Inf. meatus]
+ss[Sphenoid s.]---&gt;sr
+pse[Post.ethmoid s.]---&gt;s
+aes[Ant. ethmoid s.]---&gt;m
+mse[Mid. ethmoid s.]---&gt;m
+ms[Maxillary s.]---&gt;m
+fs[Frontal s.]--&gt;ei[ethmoidal infundibulum]--&gt;m
+
+</div><h2 class="mume-header" id="frontal-sinus">Frontal sinus</h2>
+
+<p>&#x795E;&#x7D93;&#x7686;<a href="#cn-v1">CN V<sub>1</sub></a></p>
+<ul>
+<li>Anterior ethmoid a.</li>
+<li>Supraorbital a./n.</li>
+<li>Supratrochlear (&#x6ED1;&#x8ECA;&#x4E0A;) a./n.</li>
+</ul>
+<h2 class="mume-header" id="maxillary-sinus">Maxillary sinus</h2>
+
+<p>&#x4F86;&#x81EA;<a href="#third-part">Maxillary a. 3rd Part</a>, <a href="#cn-v2">Maxillary division</a></p>
+<ul>
+<li>Ant./mid. sup. alveolar a./n.</li>
+<li>Post. sup. alveolar a./n.</li>
+</ul>
+<h2 class="mume-header" id="ethmoid-sinus">Ethmoid sinus</h2>
+
+<p><img src="paste_src/2022-11-23-22-19-14.png" alt></p>
+<div class="admonition info">
+<p class="admonition-title"> ethmoid bulla</p>
+<p>Mid. ethmoid sinus &#x958B;&#x53E3;<br>
+<img src="paste_src/2022-10-09-22-43-50.png" alt></p>
+</div>
+<ul>
+<li>Ant. ethmoid a./n.</li>
+<li>Post. ethmoid a./n.</li>
+<li>Post. lateral nasal <a href="#third-part">a.</a>/<a href="#cn-v2">n.</a></li>
+</ul>
+<h2 class="mume-header" id="sphenoid-sinus">Sphenoid sinus</h2>
+
+<ul>
+<li>Post. ethmoid a./<a href="#cn-v1">n.</a></li>
+<li>Post. lateral nasal <a href="#third-part">a.</a>/<a href="#cn-v2">n.</a></li>
+</ul>
+<img src="paste_src/2022-10-09-23-10-05.png" alt width="100%">
+<h1 class="mume-header" id="ear">Ear</h1>
+
+<p><img src="paste_src/!%5B%5D(paste_src/2022-10-07-16-19-51.png).png" alt></p>
+<h1 class="mume-header" id="infratemporal-fossa">Infratemporal fossa</h1>
+
+<img src="paste_src/2022-10-07-16-11-25.png" alt width="100%">
+<h2 class="mume-header" id="%E8%A1%80%E7%AE%A1">&#x8840;&#x7BA1;</h2>
+
+<p><a href="#maxillary-a">Maxillary a.</a></p>
+<h2 class="mume-header" id="nerve-2">Nerve</h2>
+
+<p><img src="paste_src/2022-10-07-17-26-06.png" alt></p>
+<ul>
+<li><a href="#cn-v3">CN V<sub>3</sub></a></li>
+<li><a href="#cn-v2">CN V<sub>2</sub></a></li>
+<li><a href="#chorda-tympanic-n">Chorda tympanic</a></li>
+<li><a href="#lesser-petrosal-n">Lesser petrosal n.</a></li>
+</ul>
+<h1 class="mume-header" id="pterygopalatine-fossa">Pterygopalatine Fossa</h1>
+
+<img src="paste_src/2022-10-08-15-50-08.png" alt width="100%">
+<img src="paste_src/2022-10-08-15-51-27.png" alt width="100%">
+<img src="paste_src/2022-10-08-15-53-57.png" alt width="100%">
+<h2 class="mume-header" id="font-color5f5pterygomaxillary-fissurefont"><font color="#5f5">Pterygomaxillary fissure</font></h2>
+
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> <em><strong>Infratemporal fossa</strong></em></p>
+<ul>
+<li><a href="#post-sup-alveolar-n">PSA n.</a></li>
+<li><a href="#third-part">Maxillary a.</a></li>
+<li>Variable network of veins into the pterygoid plexus</li>
+</ul>
+<h2 class="mume-header" id="font-coloree7sphenopalatine-foramenfont"><font color="#ee7">Sphenopalatine foramen</font></h2>
+
+<p><em><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Nasal cavity</strong></em></p>
+<ul>
+<li><a href="#pterygopalatine-ganglion">Nasopalatine n.</a></li>
+<li><a href="#pterygopalatine-ganglion">Post. sup. nasal n.</a></li>
+<li>Sphenopalatine vessels</li>
+</ul>
+<h2 class="mume-header" id="font-color7bfinferior-orbital-fissurefont"><font color="#7bf">Inferior Orbital fissure</font></h2>
+
+<p><em><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Orbit</strong></em></p>
+<ul>
+<li>Infraorbital n. (<a href="#cn-v2">CNV<sub>2</sub></a>)</li>
+<li>Zygomatic n. (<a href="#cn-v2">CNV<sub>2</sub></a>)</li>
+<li>Infraorbital vessels</li>
+<li>Inferior ophthalmic v.</li>
+</ul>
+<h2 class="mume-header" id="font-colore7epalatine-canalfont"><font color="#e7e">Palatine canal</font></h2>
+
+<p><em><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span>Hard &amp; soft palate (Oral cavity)</strong></em></p>
+<ul>
+<li><a href="#pterygopalatine-ganglion">Greater palatine n.</a> and vessels</li>
+<li><a href="#pterygopalatine-ganglion">Lesser palatine n.</a>  and vessels</li>
+</ul>
+<h2 class="mume-header" id="font-colorf55foramen-rotundumfont"><font color="#f55">Foramen Rotundum</font></h2>
+
+<p><em><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Middle cranial fossa</strong></em></p>
+<ul>
+<li><a href="#cn-v2">CN V<sub>2</sub></a>&#x51FA;&#x9871;</li>
+</ul>
+<h2 class="mume-header" id="font-colorf55pterygoid-canalfont"><font color="#f55">Pterygoid canal</font></h2>
+
+<p><em><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Foramen lacerum (&#x7834;&#x88C2;&#x5B54;)</strong></em></p>
+<ul>
+<li><a href="#gland">Vidian n.</a></li>
+<li><a href="#third-part">Vidian a.</a></li>
+</ul>
+<h2 class="mume-header" id="font-colorf55pharyngeal-canalfont"><font color="#f55">Pharyngeal canal</font></h2>
+
+<p><em><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Nasopharynx</strong></em></p>
+<ul>
+<li><a href="#pterygopalatine-ganglion">Pharyngeal n.</a></li>
+<li><a href="#pterygopalatine-ganglion">Pharyngeal vessels</a></li>
+</ul>
+<h2 class="mume-header" id="pterygopalatine-ganglionpterygopalatine-ganglion"><a href="#pterygopalatine-ganglion">Pterygopalatine ganglion</a></h2>
+
+<ul>
+<li>Greater/lesser palatine n.</li>
+<li>Nasopalatine n.</li>
+<li>Post. sup. nasal n.</li>
+<li>Pharyngeal n.</li>
+</ul>
+<h1 class="mume-header" id="temporal-fossa">Temporal fossa</h1>
+
+<p><img src="paste_src/2022-10-09-19-36-02.png" alt></p>
+<h2 class="mume-header" id="artery-1">Artery</h2>
+
+<ul>
+<li><a href="#external-carotid">Superficial temporal a.</a></li>
+<li><a href="#external-carotid">Middle temporal a.</a></li>
+<li><a href="#second-part">Anterior &amp; Posterior deep temporal a.</a></li>
+</ul>
+<h2 class="mume-header" id="vein-1">Vein</h2>
+
+<ul>
+<li>Superficial temporal:
+<ul>
+<li>Anterior to the Superficial temporal a.</li>
+<li>Joins the maxillary v. to form the</li>
+</ul>
+</li>
+<li>retromandibular v.</li>
+<li>Middle temporal:
+<ul>
+<li>Arises deep within the temporalis m. and fascia</li>
+<li>Joins the superficial temporal v. immediately before it passes inferior to the root of the zygomatic arch</li>
+</ul>
+</li>
+<li>Anterior &amp; Posterior deep temporal:
+<ul>
+<li>Drain into the pterygoid plexus of veins</li>
+<li>Also communicate with the middle temporal v.</li>
+</ul>
+</li>
+<li>Maxillary: *
+<ul>
+<li>A short branch formed by a confluence of the pterygoid plexus of veins</li>
+<li>Joins the superficial temporal v. to form the retromandibular v.</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="nerve-3">Nerve</h2>
+
+<ul>
+<li><a href="#cn-v3">CN V<sub>3</sub></a>
+<ul>
+<li><a href="#posterior-division">Auriculotemporal n.</a></li>
+<li><a href="#anterior-division">Ant. &amp; Post. deep temporal n.</a></li>
+</ul>
+</li>
+<li>Temporal br. (<a href="#cn-vii">CN VII</a>)</li>
+</ul>
+<h1 class="mume-header" id="alveolar-process">Alveolar process</h1>
+
+<p><img src="paste_src/2022-10-22-00-17-11.png" alt></p>
+<ul>
+<li>Alveolus of maxillary central incisor</li>
+<li>Interdental septum</li>
+<li>Interradicular septa</li>
+<li>Alveolar eminence<br>
+<img src="paste_src/2022-10-22-00-33-42.png" alt></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title"> Dehiscence &amp; Fenestration</p>
+<p><img src="paste_src/2022-10-22-01-01-55.png" alt></p>
+</div>
+<h2 class="mume-header" id="sharpeys-fiber">Sharpey&#x2019;s fiber</h2>
+
+<p>&#x7259;&#x9F52;&#x8207;&#x9F52;&#x69FD;&#x4E4B;&#x9593;&#xFF0C;&#x5305;&#x542B;&#x7E31;&#x5411; principal fiber(Sharpey&#x2019;s fiber) &#x9023;&#x63A5;&#x7259;&#x9F52;&#x8207;&#x9F52;&#x69FD;&#x9AA8;</p>
+<p><img src="paste_src/2022-11-04-16-55-14.png" alt></p>
+<h2 class="mume-header" id="%E5%8D%80%E5%88%86process">&#x5340;&#x5206;process</h2>
+
+<h3 class="mume-header" id="%E4%B8%8A%E9%96%80%E9%BD%92">&#x4E0A;&#x9580;&#x9F52;</h3>
+
+<ul>
+<li>&#x5074;&#x9580;&#x7259;&#x6839;&#x8F03;&#x9760;&#x8FD1;&#x9F3B;&#x8154;&#x5E95;<br>
+<img src="paste_src/2022-10-22-01-11-31.png" alt></li>
+</ul>
+<h3 class="mume-header" id="%E4%B8%8A%E7%8A%AC%E9%BD%92">&#x4E0A;&#x72AC;&#x9F52;</h3>
+
+<ul>
+<li>&#x5507;&#x5074;&#x9F52;&#x69FD;&#x8584;</li>
+<li>&#x984E;&#x677F;&#x6BD4;&#x5C0F;&#x81FC;&#x9F52;&#x539A;</li>
+</ul>
+<img src="paste_src/2022-10-22-01-37-46.png" alt width="50%">
+<h3 class="mume-header" id="%E4%B8%8A%E8%87%BC%E9%BD%92">&#x4E0A;&#x81FC;&#x9F52;</h3>
+
+<ul>
+<li><a href="#maxillary-sinus">Maxillary sinus</a>&#x4E0B;</li>
+<li>&#x5927;&#x81FC;&#x9F52;&#x7259;&#x6839;&#x5206;&#x5167;&#x5916;</li>
+</ul>
+<img src="paste_src/2022-10-22-01-34-59.png" alt width="50%">
+<h3 class="mume-header" id="%E4%B8%8B%E9%96%80-%E7%8A%AC%E9%BD%92">&#x4E0B;&#x9580;&#x3001;&#x72AC;&#x9F52;</h3>
+
+<ul>
+<li>alveolar process &#x8584;</li>
+</ul>
+<p><img src="paste_src/2022-10-22-01-25-18.png" alt></p>
+<h3 class="mume-header" id="%E4%B8%8B%E8%87%BC%E9%BD%92">&#x4E0B;&#x81FC;&#x9F52;</h3>
+
+<ul>
+<li>alveolar process &#x539A;</li>
+<li>5 &#x5728; mental fossa&#x4E0A;&#x65B9;</li>
+<li>6, 7, 8&#x6709; <a href="#mandible">Oblique line</a></li>
+<li>6, 7 &#x591A;&#x7259;&#x6839;&#x4E00;&#x524D;&#x4E00;&#x5F8C;&#xFF0C;distal &#x53EF;&#x80FD;&#x591A;&#x500B;</li>
+<li>8 &#x5728;Submandibular fossa &#x4E0A;</li>
+</ul>
+<p><img src="paste_src/2022-10-22-01-33-14.png" alt><br>
+<img src="paste_src/2022-10-22-01-33-33.png" alt><br>
+<img src="paste_src/2022-10-22-01-33-48.png" alt></p>
+<h2 class="mume-header" id="%E5%8D%80%E5%88%86%E4%B8%8A%E4%B8%8B%E9%A1%8E">&#x5340;&#x5206;&#x4E0A;&#x4E0B;&#x984E;</h2>
+
+<ol>
+<li>&#x4E0B;&#x984E;Cortical plate &#x539A;&#xFF0C;&#x8D8A;&#x5F8C;&#x9762;&#x8D8A;&#x539A;</li>
+<li>&#x4E0B;&#x9837;&#x7BA1;</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>cortical plate: &#x76AE;&#x8CEA;&#x9AA8;&#xFF0C;X-ray &#x4E0B;&#x767D;&#x8272;</li>
+<li>Sponge bone: X-ray &#x4E0B;&#x9ED1;&#x8272;</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>&#x4E0A;&#x984E;&#x53EF;&#x6D78;&#x6F64;&#x9EBB;&#x9189;&#xFF0C;&#x56E0;&#x70BA;cortical plate&#x8584;</p>
+</div>
+<h1 class="mume-header" id="oral-cavity-1">Oral cavity</h1>
+
+<p><img src="paste_src/2022-11-30-22-46-40.png" alt></p>
+<h1 class="mume-header" id="%E8%88%8C%E9%A0%AD">&#x820C;&#x982D;</h1>
+
+<p><img src="paste_src/2022-11-30-22-44-48.png" alt></p>
+<h2 class="mume-header" id="structure">Structure</h2>
+
+<ul>
+<li>Terminal sulcus(terminalis)&#x5206;&#x524D;&#x5F8C;</li>
+</ul>
+<h2 class="mume-header" id="nerve-4">Nerve</h2>
+
+<ul>
+<li>&#x904B;&#x52D5;&#xFF1A;CN XII</li>
+<li>&#x5F8C;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> taste/ general sense
+<ul>
+<li><a href="#cn-ix">Glossopharyngeal n.</a></li>
+</ul>
+</li>
+<li>&#x524D;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{2}{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>
+<ul>
+<li>Taste: <a href="#chorda-tympanic-n">Chorda tympanic</a></li>
+<li>General sense: <a href="#posterior-division">Lingual n</a></li>
+</ul>
+</li>
+</ul>
+<p><img src="paste_src/2022-11-05-15-05-55.png" alt></p>
+<h1 class="mume-header" id="%E4%B8%8A%E9%A1%8E">&#x4E0A;&#x984E;</h1>
+
+<p><img src="paste_src/2022-11-24-00-34-37.png" alt></p>
+<ul>
+<li>Incisive foramen
+<ul>
+<li><a href="#pterygopalatine-ganglion">Nasopalatine n. </a></li>
+<li><a href="#third-part">Sphenopalatine a.</a></li>
+</ul>
+</li>
+<li>Greater/ Lesser palatine <a href="#pterygopalatine-ganglion">n.</a>/<a href="#third-part">a.</a></li>
+</ul>
+<h1 class="mume-header" id="pharynx">Pharynx</h1>
+
+<h2 class="mume-header" id="structure-1">Structure</h2>
+
+<p><img src="paste_src/2022-11-23-22-31-55.png" alt><br>
+<img src="paste_src/2022-11-23-22-40-34.png" alt></p>
+<h3 class="mume-header" id="nasopharynx"><strong>Nasopharynx</strong></h3>
+
+<ul>
+<li>Opening of Pharyngotympanic tube (auditory tube, Eustachian tube)
+<ul>
+<li>&#x524D;:Salpingopalatine fold</li>
+<li>&#x5F8C;:Torus tubarius <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Salpingopharyngeal fold</li>
+</ul>
+</li>
+<li>Pharyngeal tonsil</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title"> Pharyngotympanic tube</p>
+<p><img src="paste_src/2022-11-24-00-03-31.png" alt></p>
+<ul>
+<li>&#x901A;&#x904E; Temporal bone</li>
+<li>&#x5F8C;2/3&#x662F;&#x8EDF;&#x9AA8;</li>
+</ul>
+</div>
+<hr>
+<h3 class="mume-header" id="oropharynx"><strong>Oropharynx</strong></h3>
+
+<p>&#x7531;&#x5916;&#x800C;&#x5167;</p>
+<ul>
+<li>Palatoglossal fold(arch)</li>
+<li>Palatine tonsil</li>
+<li>Palatopharyngeal fold(arch)
+<ul>
+<li>&#x5206;&#x9694;&#x53E3;&#x8154;&#x8207;&#x53E3;&#x54BD;(fauces)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="mume-header" id="laryngopharynx"><strong>Laryngopharynx</strong></h3>
+
+<ul>
+<li>Epiglottis</li>
+<li>Choana &#x5F8C;&#x9F3B;&#x5B54;</li>
+<li>Piriform recess
+<ul>
+<li>(medial) larynx;</li>
+<li>(lateral) thyroid cartilage</li>
+<li>(posterior) Inf. pharyngeal constrictor m.</li>
+</ul>
+</li>
+</ul>
+<p><img src="paste_src/2022-11-23-22-32-53.png" alt></p>
+<h2 class="mume-header" id="muscle">Muscle</h2>
+
+<h3 class="mume-header" id="%E5%A4%96%E9%83%A8">&#x5916;&#x90E8;</h3>
+
+<ul>
+<li>
+<p>pharyngeal constrictor</p>
+<ul>
+<li>CN X &#x63A7;&#x5236;</li>
+<li>&#x74B0;&#x72C0;&#x808C;&#x8089;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>&#x5916;</th>
+<th>&#x5167;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sup</td>
+<td>Pterygomandibular raphe</td>
+<td rowspan="3">pharyngeal raphe</td>
+</tr>
+<tr>
+<td>Mid</td>
+<td>Hyoid bone &#x7684; greater horn,<br>Sup. pharyngeal constrictor</td>
+
+</tr>
+<tr>
+<td>Inf</td>
+<td>Thyroid cartilage &#x7684; oblique line,<br>Cricoid cartilage</td>
+
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Stylopharyngeus</p>
+<ul>
+<li>&#x7A7F;&#x5165;Sup. Mid. pharyngeal constrictor&#x4E4B;&#x9593;</li>
+<li>CN IX &#x652F;&#x914D;<br>
+<img src="paste_src/2022-11-23-22-29-25.png" alt width="60%"></li>
+</ul>
+</li>
+</ul>
+<p><img src="paste_src/2022-11-23-22-28-38.png" alt></p>
+<h3 class="mume-header" id="%E5%85%A7%E9%83%A8">&#x5167;&#x90E8;</h3>
+
+<p><img src="paste_src/2022-11-23-23-14-25.png" alt><br>
+<strong>Vagus &#x652F;&#x914D;</strong></p>
+<ul>
+<li>Palatoglossus m
+<ul>
+<li>palatoglossal fold &#x4E0B;</li>
+<li>Palatine aponeurosis <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> lateral side of tongue</li>
+</ul>
+</li>
+<li>Palatopharyngeus m
+<ul>
+<li>palatopharyngeus fold&#x4E0B;</li>
+<li>Hard palate and palatine aponeurosis <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Thyroid cartilage and pharyngeal wall</li>
+<li><a href="#structure">salpingopharyngeus m.</a>&#x6703;&#x5408;</li>
+</ul>
+</li>
+<li>salpingopharyngeus m.
+<ul>
+<li>salpingopharyngeal fold&#x4E0B;</li>
+<li>Cartilage of pharyngotympanic tube <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> thyroid cartilage and pharyngeal wall</li>
+</ul>
+</li>
+<li>Levator veli palatine m.
+<ul>
+<li>From <a href="#sphenoid-bone">Scaphoid fossa</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>V<sub>3</sub>&#x652F;&#x914D;</strong></p>
+<ul>
+<li>Tensor veli palatini m.
+<ul>
+<li>&#x589E;&#x52A0;&#x8EDF;&#x984E;&#x5F37;&#x5EA6;</li>
+<li>&#x7E5E;&#x904E; <a href="#sphenoid-bone">pterygoid process</a></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>&#x85CD;&#x5708;: Pharyngotympanic tube<br>
+&#x7DA0;: Tensor veli palatini m.<br>
+<img src="paste_src/2022-11-24-00-16-03.png" alt></p>
+</blockquote>
+<h2 class="mume-header" id="nerve-5">Nerve</h2>
+
+<ul>
+<li>CN IX</li>
+<li>CN X
+<ul>
+<li>Sup, laryngeal n.</li>
+</ul>
+</li>
+<li>Pharyngeal plexus
+<ul>
+<li>IX + X</li>
+</ul>
+</li>
+<li>CN XI, XII</li>
+</ul>
+<p><img src="paste_src/2022-11-23-22-31-31.png" alt></p>
+<h1 class="mume-header" id="larynx-1">Larynx</h1>
+
+<img src="paste_src/2022-12-01-01-31-25.png" alt width="100%">
+<img src="paste_src/2022-10-26-23-22-04.png" alt width="100%">
+<h2 class="mume-header" id="muscle-1">Muscle</h2>
+
+<ul>
+<li>
+<p>Cricothyroid m.<br>
+<img src="paste_src/2022-12-01-01-33-37.png" alt></p>
+</li>
+<li>
+<p>Intrinsic m.</p>
+<ul>
+<li>Vocal fold abduction</li>
+</ul>
+</li>
+<li>
+<p>Arytenoid m.</p>
+<ul>
+<li>Transverse fiber / Oblique fiber</li>
+<li>Vocal fold adduction</li>
+</ul>
+</li>
+<li>
+<p>Lateral cricoarytenoid m.</p>
+<ul>
+<li>Vocal fold adduction</li>
+</ul>
+</li>
+<li>
+<p>Thyroarytenoid m.</p>
+<ul>
+<li>Arytenoid cartilage &#x5F80;&#x524D;</li>
+</ul>
+</li>
+</ul>
+<p><img src="paste_src/2022-12-01-01-46-43.png" alt><br>
+<img src="paste_src/2022-12-01-01-49-48.png" alt width="100%"></p>
+<h2 class="mume-header" id="nerve-6">Nerve</h2>
+
+<ul>
+<li>Sup. laryngeal n.
+<ul>
+<li>Internal br.(Internal laryngeal n.)</li>
+<li>External br.</li>
+</ul>
+</li>
+<li>Recurrent laryngeal n.
+<ul>
+<li>&#x904E;Cricothyroid joint&#x6539;&#x53EB;Inf. laryngeal n.</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/2022-12-01-01-36-30.png" alt width="100%">
+<img src="paste_src/2022-12-01-02-02-53.png" alt width="100%">
+<div class="admonition info">
+<p class="admonition-title"> &#x5047;&#x8072;&#x5E36;:Vestibular Fold</p>
+<p><img src="paste_src/2022-12-01-01-58-10.png" alt></p>
+</div>
+<h1 class="mume-header" id="tmj">TMJ</h1>
+
+<h2 class="mume-header" id="supply">Supply</h2>
+
+<p><strong>artery</strong></p>
+<ul>
+<li>
+<p>Anterior:</p>
+<ul>
+<li>Masseteric a.</li>
+</ul>
+</li>
+<li>
+<p>Posterior:</p>
+<ul>
+<li>Sup. temporal a. (TMJ br. )</li>
+<li>Ant. tympanic a.</li>
+<li>Deep auricular a.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Vein</strong></p>
+<ul>
+<li>Superficial Temporal</li>
+<li>Maxillary</li>
+<li>Pterygoid plexus</li>
+</ul>
+<p><strong>Nerve</strong></p>
+<ul>
+<li>Auriculotemporal(Sensor)</li>
+<li>Masseteric br. of the mandibular n. (Sensor)</li>
+<li>Post. deep temporal nerve</li>
+</ul>
+<h2 class="mume-header" id="join-capsule">Join capsule</h2>
+
+<p>Articular eminence &#x5230; articular fossa</p>
+<p><img src="paste_src/2022-11-01-10-31-41.png" alt></p>
+<h2 class="mume-header" id="joint-disk">Joint disk</h2>
+
+<ul>
+<li>
+<p>&#x5206;&#x6210; Ant. band(2mm), Central intermediate zone(1mm),<br>
+Post. band(3mm)</p>
+</li>
+<li>
+<p>Dense fiber CT&#xFF0C;&#x7121;&#x795E;&#x7D93;&#x8840;&#x7BA1;</p>
+</li>
+<li>
+<p>Lower division &#x9023;&#x5230; condylar neck &#x7684; lat.,med. poles</p>
+</li>
+<li>
+<p>Upper division &#x9023;&#x5230; Temporal bone &#x7684; postglenoid process</p>
+</li>
+</ul>
+<p><img src="paste_src/2022-11-01-10-35-23.png" alt></p>
+<div class="admonition info">
+<p class="admonition-title"> collateral ligament</p>
+<img src="paste_src/2022-11-01-10-59-28.png" alt width="100%">
+</div>
+<h2 class="mume-header" id="retrodiskal-tissues">retrodiskal tissues</h2>
+
+<p>&#x6709;&#x795E;&#x7D93;&#x8840;&#x7BA1;&#xFF0C;&#x5206;&#x79D8; Synovial fluid &#x5230; Synovial cavity</p>
+<ol>
+<li>Superior retrodiskal lamina:elastic fibers,&#x63A5;&#x5230; tympanic plate,&#x9650;&#x5236;&#x5E73;&#x884C;&#x79FB;&#x52D5;</li>
+<li>Inferior retrodiskal lamina:Collagen fibers,&#x5C07; disc &#x63A5;&#x5230; condyle,&#x9650;&#x5236;&#x65CB;&#x8F49;&#x79FB;&#x52D5;</li>
+</ol>
+<p><img src="paste_src/2022-11-06-18-24-36.png" alt></p>
+<h2 class="mume-header" id="ligament">Ligament</h2>
+
+<ul>
+<li>Temporomandibular ligaments
+<ul>
+<li>Inner horizontal protion<br>
+&#x9650;&#x5236;&#x5411;&#x5F8C;</li>
+<li>Outer horizontal protion<br>
+&#x9650;&#x5236;&#x65CB;&#x8F49;&#x3001;&#x5E73;&#x79FB;</li>
+</ul>
+</li>
+<li>Stylomandibular ligaments</li>
+<li>Sphenomandibular ligaments</li>
+</ul>
+<img src="paste_src/2022-11-01-10-50-36.png" alt width="38%">
+<img src="paste_src/2022-11-01-10-48-56.png" alt width="55%">
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Stylomandibular ligament &#x5206;&#x9694; parotid ,submandibular g.</p>
+</div>
+<h2 class="mume-header" id="jaw-movement">JAW movement</h2>
+
+<ul>
+<li>&#x65CB;&#x8F49;: &#x4E0B;&#x984E;&#x96E2;&#x4E0A;&#x9580;&#x7259;2.5cm</li>
+<li>&#x5E73;&#x79FB;: disc-condyle complex &#x6CBF; articular eminence &#x6ED1;&#x52D5;,&#x53EF;&#x518D;&#x5F80;&#x524D;&#x5F35;&#x958B;&#x7D04; 1.5 &#x516C;&#x5206;</li>
+</ul>
+<p><img src="paste_src/2022-11-01-11-19-40.png" alt></p>
+<h2 class="mume-header" id="movement">movement</h2>
+
+<p><img src="paste_src/2022-11-01-21-18-20.png" alt></p>
+<h1 class="mume-header" id="fasciae">Fasciae</h1>
+
+<p><img src="paste_src/2022-11-15-10-41-54.png" alt></p>
+<h2 class="mume-header" id="superficial-fascia">Superficial fascia</h2>
+
+<ul>
+<li>&#x8868;&#x60C5;&#x808C;</li>
+<li>Platysma</li>
+</ul>
+<h2 class="mume-header" id="deep-fascia">Deep fascia</h2>
+
+<h3 class="mume-header" id="head">Head</h3>
+
+<ul>
+<li>Temporal fascia
+<ul>
+<li>Temporal arch&#x4EE5;&#x4E0A;</li>
+</ul>
+</li>
+<li>Masseteric-parotid fascia
+<ul>
+<li>Temporal arch&#x4EE5;&#x4E0A;</li>
+<li><mark>&#x9023;&#x5230;investing fascia</mark></li>
+</ul>
+</li>
+<li>Buccopharyngeal fascial
+<ul>
+<li><mark>&#x9023;&#x5230;investing fascia</mark></li>
+</ul>
+</li>
+<li>Pterygoid fascia
+<ul>
+<li>Pterygoid m. &#x5916;</li>
+</ul>
+</li>
+</ul>
+<p><img src="paste_src/2022-11-15-10-32-06.png" alt></p>
+<h3 class="mume-header" id="neck">Neck</h3>
+
+<ul>
+<li>
+<p>Investing fascia</p>
+<ul>
+<li>&#x6700;&#x5916;&#x5C64;</li>
+</ul>
+</li>
+<li>
+<p>Carotid fascia</p>
+</li>
+<li>
+<p>Visceral fascia</p>
+<ul>
+<li>&#x98DF;&#x9053;&#x547C;&#x5438;&#x9053;</li>
+</ul>
+</li>
+<li>
+<p>Vertebral facial</p>
+</li>
+</ul>
+<img src="paste_src/2022-11-15-10-30-30.png" alt width="49%">
+<img src="paste_src/2022-11-15-10-30-50.png" alt width="49%">
+<h1 class="mume-header" id="space">Space</h1>
+
+<p><img src="paste_src/2022-11-26-17-41-21.png" alt><br>
+<img src="paste_src/2022-11-27-00-31-04.png" alt><br>
+<img src="paste_src/2022-11-27-01-02-17.png" alt></p>
+<div class="mermaid">flowchart TB 
+v[Vestibular&lt;br&gt; space]
+c[Canine&lt;br&gt; space]
+b[Buccal&lt;br&gt;space]
+p[Pterygomandibular&lt;br&gt;space]
+pd[Parotid&lt;br&gt;space]
+pp[Parapharyngeal&lt;br&gt;space]
+sm[Submandibular&lt;br&gt;space]
+ms[Masticator&lt;br&gt;space]
+smt[Submental&lt;br&gt;space]
+click v &quot;#vestibular-space&quot;
+click c &quot;#canine-space-maxilla&quot;
+click b &quot;#buccal-space&quot;
+click p &quot;#pterygomandibular-space&quot;
+click pd &quot;#parotid-space&quot;
+
+c---b
+b---p
+pd---pp
+ms---sm
+ms---pp
+sm---smt
+</div><h2 class="mume-header" id="vestibular-space">Vestibular space</h2>
+
+<ul>
+<li>of Maxilla</li>
+<li>of Mandible</li>
+</ul>
+<p><img src="paste_src/2022-11-15-10-48-25.png" alt></p>
+<h2 class="mume-header" id="canine-space-maxilla">Canine space (Maxilla)</h2>
+
+<ul>
+<li>Nasolabial sulcus</li>
+</ul>
+<p><img src="paste_src/2022-11-15-10-53-11.png" alt></p>
+<h2 class="mume-header" id="buccal-space">Buccal space</h2>
+
+<ul>
+<li>Buccal fat pad</li>
+<li>Parotid duct</li>
+<li>Facial a.</li>
+</ul>
+<p><img src="paste_src/2022-11-15-10-54-19.png" alt><br>
+<img src="paste_src/2022-11-26-17-55-14.png" alt></p>
+<h2 class="mume-header" id="parotid-space">Parotid space</h2>
+
+<ul>
+<li>Parotid g.</li>
+<li>Facial n.</li>
+<li>ECA</li>
+<li>Retromandibular v.</li>
+</ul>
+<h2 class="mume-header" id="masticator-space">Masticator space</h2>
+
+<p><img src="paste_src/2022-11-15-11-03-23.png" alt></p>
+<h3 class="mume-header" id="temporal-space">Temporal space</h3>
+
+<p>Temporalis m.&#x5206;&#x9694;</p>
+<ul>
+<li>Superficial temporal space</li>
+<li>Deep temporal space</li>
+</ul>
+<h3 class="mume-header" id="infratemporal-space">Infratemporal space</h3>
+
+<p>Zygomatic arch &#x4EE5;&#x4E0B;</p>
+<ul>
+<li>&#x5916;&#x5074;
+<ul>
+<li>Temporalis</li>
+</ul>
+</li>
+<li>&#x5167;&#x5074;
+<ul>
+<li>Pterygoid plate</li>
+</ul>
+</li>
+<li>Maxillary a.</li>
+</ul>
+<h3 class="mume-header" id="pterygomandibular-space">Pterygomandibular space</h3>
+
+<p>Med. pterygoid m.&#x5916;</p>
+<ul>
+<li>Inf. alveolar a./ v./ n.</li>
+<li>Lingual n.</li>
+</ul>
+<h3 class="mume-header" id="submassetric-space">Submassetric space</h3>
+
+<p><img src="paste_src/2022-11-27-00-27-08.png" alt></p>
+<h2 class="mume-header" id="submental-submandibular-space">Submental &amp; Submandibular space</h2>
+
+<p><strong>Submental</strong></p>
+<ul>
+<li>Digastric, Hyoid bone, Mandibular symphysis &#x70BA;&#x754C;</li>
+<li>Superficial cervical fascia&#x70BA;&#x5E95;&#xFF0C;Mylohyoid m. &#x70BA;&#x9802;</li>
+</ul>
+<p><img src="paste_src/2022-11-27-00-54-05.png" alt></p>
+<h2 class="mume-header" id="sublingual-space">Sublingual space</h2>
+
+<ul>
+<li>Lingual n./a.</li>
+<li>Hypoglossal n.</li>
+</ul>
+<p><img src="paste_src/2022-11-27-00-57-01.png" alt></p>
+<h2 class="mume-header" id="cervical-spaces">Cervical spaces</h2>
+
+<p><img src="paste_src/2022-11-27-01-04-59.png" alt><br>
+<img src="paste_src/2022-11-27-01-07-15.png" alt></p>
+<h3 class="mume-header" id="previsceral-space">Previsceral space</h3>
+
+<h3 class="mume-header" id="parapharyngeal-space">Parapharyngeal space</h3>
+
+<ul>
+<li>&#x9871;&#x5E95;&#x5230;&#x820C;&#x9AA8;</li>
+<li>&#x5012;&#x9310;&#x578B;</li>
+<li><a href="#cn-ix">Glossopharyngeal n.</a></li>
+<li><a href="#cn-xii">Hypoglossal n.</a></li>
+<li><a href="#nodes">Deep cervical lymphatic node</a></li>
+</ul>
+<h3 class="mume-header" id="retropharyngeal-space">Retropharyngeal space</h3>
+
+<ul>
+<li>Dangerous space</li>
+<li>Sup. pharyngeal constrictor m.&#x5F8C;</li>
+</ul>
+<h3 class="mume-header" id="perivertebral-paravertebral-space">Perivertebral   &amp; Paravertebral space</h3>
+
+<br><br>
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#triangle">Triangle</a></li>
+<li><a href="#artery">Artery</a>
+<ul>
+<li><a href="#subclavian-a">Subclavian a.</a></li>
+<li><a href="#thyrocervical-trunk">Thyrocervical trunk</a></li>
+<li><a href="#axillary-a">Axillary a.</a></li>
+<li><a href="#common-carotid">Common carotid</a></li>
+<li><a href="#internal-carotid-a">Internal carotid a.</a></li>
+<li><a href="#external-carotid">External carotid</a></li>
+<li><a href="#facial-a">Facial a.</a></li>
+<li><a href="#maxillary-a">Maxillary a.</a>
+<ul>
+<li><a href="#first-part">First part</a></li>
+<li><a href="#second-part">Second part</a></li>
+<li><a href="#third-part">Third part</a></li>
+</ul>
+</li>
+<li><a href="#scm%E8%A1%80%E6%B6%B2">SCM&#x8840;&#x6DB2;</a></li>
+</ul>
+</li>
+<li><a href="#vein">Vein</a></li>
+<li><a href="#nerve">Nerve</a>
+<ul>
+<li><a href="#cn-iii-iv-vi">CN III, IV, VI</a>
+<ul>
+<li><a href="#cn-iii">CN III</a></li>
+<li><a href="#cn-iv">CN IV</a></li>
+<li><a href="#cn-vi">CN VI</a></li>
+</ul>
+</li>
+<li><a href="#cn-v1">CN V1</a></li>
+<li><a href="#cn-v2">CN V2</a>
+<ul>
+<li><a href="#post-sup-alveolar-n">Post. sup. alveolar n.</a></li>
+<li><a href="#zygomatic-n">Zygomatic n.</a></li>
+<li><a href="#infraorbital-n">Infraorbital n.</a></li>
+<li><a href="#pterygopalatine-ganglion">Pterygopalatine ganglion</a></li>
+</ul>
+</li>
+<li><a href="#cn-v3">CN V3</a>
+<ul>
+<li><a href="#meningeal-br">Meningeal br.</a></li>
+<li><a href="#anterior-division">Anterior division</a></li>
+<li><a href="#posterior-division">Posterior division</a></li>
+</ul>
+</li>
+<li><a href="#cn-vii">CN VII</a>
+<ul>
+<li><a href="#parotid-plexus">Parotid plexus</a></li>
+<li><a href="#chorda-tympanic-n">Chorda Tympanic n.</a></li>
+<li><a href="#great-petrosal-and-vidian">Great petrosal and Vidian</a></li>
+</ul>
+</li>
+<li><a href="#cn-ix">CN IX</a>
+<ul>
+<li><a href="#lesser-petrosal-n">Lesser petrosal n.</a></li>
+</ul>
+</li>
+<li><a href="#cn-x">CN X</a></li>
+<li><a href="#cn-xi">CN XI</a></li>
+<li><a href="#cn-xii">CN XII</a></li>
+<li><a href="#cervical-plexuses">Cervical plexuses</a></li>
+<li><a href="#sup-cervical-ganglion">Sup. cervical ganglion</a></li>
+</ul>
+</li>
+<li><a href="#gland">Gland</a>
+<ul>
+<li><a href="#parotid-g">Parotid g.</a></li>
+</ul>
+</li>
+<li><a href="#muscle-of-mastication">Muscle of Mastication</a></li>
+<li><a href="#osteology">Osteology</a>
+<ul>
+<li><a href="#%E5%88%86%E9%A1%9E">&#x5206;&#x985E;</a></li>
+<li><a href="#%E9%AA%A8%E9%A0%AD">&#x9AA8;&#x982D;</a>
+<ul>
+<li><a href="#frontal-bone">Frontal bone</a></li>
+<li><a href="#parietal-bone">Parietal bone</a></li>
+<li><a href="#ethmoid-bone">Ethmoid bone</a></li>
+<li><a href="#inferior-nasal-concha">inferior Nasal concha</a></li>
+<li><a href="#sphenoid-bone">Sphenoid bone</a></li>
+<li><a href="#temporal-bone">Temporal bone</a></li>
+<li><a href="#occipital-bone">Occipital bone</a></li>
+<li><a href="#ethmoid-bone-1">Ethmoid bone</a></li>
+<li><a href="#vomer">Vomer</a></li>
+<li><a href="#maxillary-bone">Maxillary bone</a></li>
+<li><a href="#alveolar-bone">Alveolar bone</a></li>
+<li><a href="#palatine-bone">Palatine bone</a></li>
+<li><a href="#lacrimal-bone">Lacrimal bone</a></li>
+<li><a href="#mandible">Mandible</a></li>
+<li><a href="#hyoid-bone">Hyoid bone</a></li>
+</ul>
+</li>
+<li><a href="#%E7%9C%BC%E7%9C%B6">&#x773C;&#x7736;</a></li>
+<li><a href="#%E8%85%A6%E6%B4%9E%E5%80%91">&#x8166;&#x6D1E;&#x5011;</a></li>
+<li><a href="#buttress">Buttress</a></li>
+<li><a href="#sutures">Sutures</a></li>
+</ul>
+</li>
+<li><a href="#lymphatic-system">Lymphatic  system</a>
+<ul>
+<li><a href="#nodes">Nodes</a></li>
+<li><a href="#groups">Groups</a></li>
+<li><a href="#nasal-cavity">Nasal cavity</a></li>
+<li><a href="#oral-cavity">Oral cavity</a></li>
+<li><a href="#tongue">Tongue</a></li>
+<li><a href="#tonsil">Tonsil</a></li>
+<li><a href="#face">Face</a></li>
+<li><a href="#larynx">Larynx</a></li>
+<li><a href="#thyroid">Thyroid</a></li>
+</ul>
+</li>
+<li><a href="#nose-cavity">Nose cavity</a>
+<ul>
+<li><a href="#nerve-1">Nerve</a></li>
+<li><a href="#nasal-septum-%E9%BC%BB%E4%B8%AD%E8%86%88">Nasal septum (&#x9F3B;&#x4E2D;&#x8188;)</a></li>
+</ul>
+</li>
+<li><a href="#paranasal-sinuses">Paranasal sinuses</a>
+<ul>
+<li><a href="#frontal-sinus">Frontal sinus</a></li>
+<li><a href="#maxillary-sinus">Maxillary sinus</a></li>
+<li><a href="#ethmoid-sinus">Ethmoid sinus</a></li>
+<li><a href="#sphenoid-sinus">Sphenoid sinus</a></li>
+</ul>
+</li>
+<li><a href="#ear">Ear</a></li>
+<li><a href="#infratemporal-fossa">Infratemporal fossa</a>
+<ul>
+<li><a href="#%E8%A1%80%E7%AE%A1">&#x8840;&#x7BA1;</a></li>
+<li><a href="#nerve-2">Nerve</a></li>
+</ul>
+</li>
+<li><a href="#pterygopalatine-fossa">Pterygopalatine Fossa</a>
+<ul>
+<li><a href="#font-color5f5pterygomaxillary-fissurefont">Pterygomaxillary fissure</a></li>
+<li><a href="#font-coloree7sphenopalatine-foramenfont">Sphenopalatine foramen</a></li>
+<li><a href="#font-color7bfinferior-orbital-fissurefont">Inferior Orbital fissure</a></li>
+<li><a href="#font-colore7epalatine-canalfont">Palatine canal</a></li>
+<li><a href="#font-colorf55foramen-rotundumfont">Foramen Rotundum</a></li>
+<li><a href="#font-colorf55pterygoid-canalfont">Pterygoid canal</a></li>
+<li><a href="#font-colorf55pharyngeal-canalfont">Pharyngeal canal</a></li>
+<li><a href="#pterygopalatine-ganglionpterygopalatine-ganglion">Pterygopalatine ganglion</a></li>
+</ul>
+</li>
+<li><a href="#temporal-fossa">Temporal fossa</a>
+<ul>
+<li><a href="#artery-1">Artery</a></li>
+<li><a href="#vein-1">Vein</a></li>
+<li><a href="#nerve-3">Nerve</a></li>
+</ul>
+</li>
+<li><a href="#alveolar-process">Alveolar process</a>
+<ul>
+<li><a href="#sharpeys-fiber">Sharpey&#x2019;s fiber</a></li>
+<li><a href="#%E5%8D%80%E5%88%86process">&#x5340;&#x5206;process</a>
+<ul>
+<li><a href="#%E4%B8%8A%E9%96%80%E9%BD%92">&#x4E0A;&#x9580;&#x9F52;</a></li>
+<li><a href="#%E4%B8%8A%E7%8A%AC%E9%BD%92">&#x4E0A;&#x72AC;&#x9F52;</a></li>
+<li><a href="#%E4%B8%8A%E8%87%BC%E9%BD%92">&#x4E0A;&#x81FC;&#x9F52;</a></li>
+<li><a href="#%E4%B8%8B%E9%96%80-%E7%8A%AC%E9%BD%92">&#x4E0B;&#x9580;&#x3001;&#x72AC;&#x9F52;</a></li>
+<li><a href="#%E4%B8%8B%E8%87%BC%E9%BD%92">&#x4E0B;&#x81FC;&#x9F52;</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8D%80%E5%88%86%E4%B8%8A%E4%B8%8B%E9%A1%8E">&#x5340;&#x5206;&#x4E0A;&#x4E0B;&#x984E;</a></li>
+</ul>
+</li>
+<li><a href="#oral-cavity-1">Oral cavity</a></li>
+<li><a href="#%E8%88%8C%E9%A0%AD">&#x820C;&#x982D;</a>
+<ul>
+<li><a href="#structure">Structure</a></li>
+<li><a href="#nerve-4">Nerve</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%8A%E9%A1%8E">&#x4E0A;&#x984E;</a></li>
+<li><a href="#pharynx">Pharynx</a>
+<ul>
+<li><a href="#structure-1">Structure</a>
+<ul>
+<li><a href="#nasopharynx"><strong>Nasopharynx</strong></a></li>
+<li><a href="#oropharynx"><strong>Oropharynx</strong></a></li>
+<li><a href="#laryngopharynx"><strong>Laryngopharynx</strong></a></li>
+</ul>
+</li>
+<li><a href="#muscle">Muscle</a>
+<ul>
+<li><a href="#%E5%A4%96%E9%83%A8">&#x5916;&#x90E8;</a></li>
+<li><a href="#%E5%85%A7%E9%83%A8">&#x5167;&#x90E8;</a></li>
+</ul>
+</li>
+<li><a href="#nerve-5">Nerve</a></li>
+</ul>
+</li>
+<li><a href="#larynx-1">Larynx</a>
+<ul>
+<li><a href="#muscle-1">Muscle</a></li>
+<li><a href="#nerve-6">Nerve</a></li>
+</ul>
+</li>
+<li><a href="#tmj">TMJ</a>
+<ul>
+<li><a href="#supply">Supply</a></li>
+<li><a href="#join-capsule">Join capsule</a></li>
+<li><a href="#joint-disk">Joint disk</a></li>
+<li><a href="#retrodiskal-tissues">retrodiskal tissues</a></li>
+<li><a href="#ligament">Ligament</a></li>
+<li><a href="#jaw-movement">JAW movement</a></li>
+<li><a href="#movement">movement</a></li>
+</ul>
+</li>
+<li><a href="#fasciae">Fasciae</a>
+<ul>
+<li><a href="#superficial-fascia">Superficial fascia</a></li>
+<li><a href="#deep-fascia">Deep fascia</a>
+<ul>
+<li><a href="#head">Head</a></li>
+<li><a href="#neck">Neck</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#space">Space</a>
+<ul>
+<li><a href="#vestibular-space">Vestibular space</a></li>
+<li><a href="#canine-space-maxilla">Canine space (Maxilla)</a></li>
+<li><a href="#buccal-space">Buccal space</a></li>
+<li><a href="#parotid-space">Parotid space</a></li>
+<li><a href="#masticator-space">Masticator space</a>
+<ul>
+<li><a href="#temporal-space">Temporal space</a></li>
+<li><a href="#infratemporal-space">Infratemporal space</a></li>
+<li><a href="#pterygomandibular-space">Pterygomandibular space</a></li>
+<li><a href="#submassetric-space">Submassetric space</a></li>
+</ul>
+</li>
+<li><a href="#submental-submandibular-space">Submental &amp; Submandibular space</a></li>
+<li><a href="#sublingual-space">Sublingual space</a></li>
+<li><a href="#cervical-spaces">Cervical spaces</a>
+<ul>
+<li><a href="#previsceral-space">Previsceral space</a></li>
+<li><a href="#parapharyngeal-space">Parapharyngeal space</a></li>
+<li><a href="#retropharyngeal-space">Retropharyngeal space</a></li>
+<li><a href="#perivertebral-paravertebral-space">Perivertebral   &amp; Paravertebral space</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+MERMAID_CONFIG = {
+  startOnLoad: false,
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false
+  window['MERMAID_CONFIG'].theme = "dark"
+}
+mermaid.initialize(window['MERMAID_CONFIG'] || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.getElementsByClassName('mermaid'))
+}
+</script>
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

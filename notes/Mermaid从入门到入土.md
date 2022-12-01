@@ -1,3 +1,12 @@
+---
+html:
+    offline: false
+    embed_local_images: false #遷入base64圖片
+print_background: true
+export_on_save:
+  html: true
+---
+[回到目錄](../index.md)
 # 概述
 
 * 什么是Mermaid？
