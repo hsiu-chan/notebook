@@ -875,7 +875,17 @@ mt[Mid. temporal v.]--&gt;sp
 </li>
 <li>Nasociliary n.
 <ul>
+<li>Ant./ Post. ethmoid n.
+<ul>
 <li>&#x9032;&#x5165;Ethmoid sinus</li>
+</ul>
+</li>
+<li>Infratrochlear n.</li>
+<li>Long ciliary n.
+<ul>
+<li>&#x77B3;&#x5B54;&#x64F4;&#x5F35;</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Frontal n.
@@ -890,10 +900,22 @@ mt[Mid. temporal v.]--&gt;sp
 <p><img src="paste_src/2022-10-08-18-17-19.png" alt></p>
 <div class="mermaid">flowchart LR
 
-2[CN V2]-- oramen&lt;br&gt;rotundum --&gt;pf([Pterygopalatine&lt;br&gt;Fossa])
-pf--&gt;psa[PSA]
-pf--&gt;i[Infraorbital n.] &amp; z[Zygomatic n.]
-pf--&gt;gl[Pterygopalatine&lt;br&gt; ganglion]
+subgraph iof[Inferior Orbital fissure]
+MSA
+ASA
+i[Infraorbital n.]--&gt; MSA &amp; ASA
+end
+
+subgraph pf[Pterygopalatine&lt;br&gt;Fossa]
+z[Zygomatic n.]
+gl[Pterygopalatine&lt;br&gt; ganglion]
+PSA
+22[CN V2]--&gt;z &amp; gl &amp; PSA
+end
+
+z--&gt;zf[Zygomaticofacial] &amp; zt[Zygomaticotemporal]
+2[CN V2]---&gt;|foramen&lt;br&gt;rotundum|22---&gt;i
+
 </div><h3 class="mume-header" id="post-sup-alveolar-n">Post. sup. alveolar n.</h3>
 
 <p>&#x7A7F;&#x904E; <a href="#pterygopalatine-fossa">pterygomaxillary fissure</a>&#xFF0C;&#x652F;&#x914D;&#x4E0A;&#x984E;&#x81FC;&#x9F52;(molars)&#xFF0C;&#x9664;&#x4E86;&#x7B2C;&#x4E00;&#x5927;&#x81FC;&#x9F52;(mid. sup alveolar n.)</p>
@@ -902,9 +924,6 @@ pf--&gt;gl[Pterygopalatine&lt;br&gt; ganglion]
 <p><a href="#third-part">PSA a.</a><br>
 <a href="#alveolar-bone">Alveolar bone</a></p>
 </div>
-<h3 class="mume-header" id="zygomatic-n">Zygomatic n.</h3>
-
-<p>join lacrimal n.</p>
 <h3 class="mume-header" id="infraorbital-n">Infraorbital n.</h3>
 
 <p>&#x5206;&#x652F;Ant./Mid sup. alveolar n.&#xFF0C;&#x8207;<a href="#third-part">&#x52D5;&#x8108;</a>&#x4F34;&#x884C;</p>
@@ -971,7 +990,7 @@ click if &quot;#alveolar-bone&quot;
 </li>
 <li>Mylohyoid n. (Motor)</li>
 </ul>
-<p><img src="%5Cpaste_src%5CIMG_1854.JPG" alt></p>
+<p><img src="paste_src/IMG_1854.JPG" alt></p>
 <h2 class="mume-header" id="cn-vii">CN VII</h2>
 
 <p>&#x652F;&#x914D;&#x8868;&#x60C5;&#x808C;</p>
@@ -2596,7 +2615,6 @@ sm---smt
 <li><a href="#cn-v2">CN V2</a>
 <ul>
 <li><a href="#post-sup-alveolar-n">Post. sup. alveolar n.</a></li>
-<li><a href="#zygomatic-n">Zygomatic n.</a></li>
 <li><a href="#infraorbital-n">Infraorbital n.</a></li>
 <li><a href="#pterygopalatine-ganglion">Pterygopalatine ganglion</a></li>
 </ul>
