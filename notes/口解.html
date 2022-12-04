@@ -995,9 +995,13 @@ click if &quot;#alveolar-bone&quot;
 
 <ul>
 <li>
-<p>Parotid plexus</p>
+<p>Parotid plexus(&#x652F;&#x914D;&#x8868;&#x60C5;&#x808C;)</p>
 <ul>
-<li>&#x652F;&#x914D;&#x8868;&#x60C5;&#x808C;</li>
+<li>Temporal br.</li>
+<li>Zygomatic br.</li>
+<li>Buccal br.</li>
+<li>Marginal mandibular br.</li>
+<li>Cervical br.</li>
 </ul>
 </li>
 <li>
@@ -1029,24 +1033,16 @@ pab[Post. auricular branch]
 nd[N. to digastric m.]
 ns[N. to stylohyoid m.]
 
-subgraph ff[&#x652F;&#x914D;&#x8868;&#x60C5;&#x808C;]
-d[Temporal]
-e[Zygomatic]
-f[Buccal]
-g[Mandibular]
-cc[Cervical]
-end
+
 
 0==&gt;|Inter&lt;br&gt;acoustic&lt;br&gt;meatus|1
 c--&gt;pab
 fc==&gt;c
 fc--&gt;ct[Chorda tympanic]--Petrotympanic fissure--&gt;l[Lingual n.]
 1--&gt;gp[Great petrosal n.]--&gt;v[vidian n.]
-c--&gt;d
-c--&gt;e
-c--&gt;f
-c--&gt;g
-c--&gt;cc &amp; nd &amp; ns
+c--&gt;ff[Parotid plexus]
+
+c--&gt;nd &amp; ns
 1--&gt;fc[Facial canal]
 click l &quot;#posterior-division&quot;
 click c &quot;#temporal-bone&quot;
@@ -1064,19 +1060,60 @@ click c &quot;#temporal-bone&quot;
 <div class="admonition info">
 <p class="admonition-title"> Great petrosal and Vidian</p>
 <img src="paste_src/2022-10-12-21-29-56.png" alt width="80%">
-<p><mark><a href="#lesser-petrosal-n">Lesser petrosal n.</a></mark></p>
+<p><a href="#lesser-petrosal-n">Lesser petrosal n.</a></p>
 </div>
+<h2 class="mume-header" id="cn-viii">CN VIII</h2>
+
+<ul>
+<li>Vestibular n. (&#x5E73;&#x8861;)</li>
+<li>Cochlear n. (&#x807D;&#x529B;)</li>
+</ul>
+<img src="paste_src/2022-12-04-22-25-43.png" alt width="100%">
 <h2 class="mume-header" id="cn-ix">CN IX</h2>
 
-<p><img src="paste_src/2022-10-22-22-10-58.png" alt><br>
-&#x5206;&#x9694;ECA,ICA</p>
-<h3 class="mume-header" id="lesser-petrosal-n">Lesser petrosal n.</h3>
+<h3 class="mume-header" id="motor">Motor</h3>
 
-<p>&#x652F;&#x914D;<a href="#gland">Parotid g.</a>&#x7684;&#x526F;&#x4EA4;&#x611F;&#x7BC0;&#x524D;&#x795E;&#x7D93;<br>
-<img src="paste_src/2022-10-07-19-44-11.png" alt></p>
-<div class="admonition warning">
-<p class="admonition-title"> <a href="#great-petrosal-and-vidian">Greater petrosal n.</a></p>
-</div>
+<ul>
+<li><a href="#%E5%A4%96%E9%83%A8">Stylopharyngeus m.</a></li>
+<li>Lesser petrosal n.(<strong>Parasymphysis</strong>)
+<ul>
+<li>&#x652F;&#x914D;<a href="#gland">Parotid g.</a>&#x7684;&#x526F;&#x4EA4;&#x611F;&#x7BC0;&#x524D;&#x795E;&#x7D93;</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="sensor">Sensor</h3>
+
+<ul>
+<li>Tympanic n.
+<ul>
+<li>&#x4E2D;&#x8033;&#x3001;&#x9F13;&#x819C;&#x5167;&#x9762;&#x3001;&#x8033;&#x54BD;&#x7BA1;(Eustachian)</li>
+</ul>
+</li>
+<li>Sinus n.</li>
+</ul>
+<p><strong>Terminal</strong></p>
+<ul>
+<li>Pharyngeal br.(with CN X)
+<ul>
+<li>Mucosa of oropharynx</li>
+</ul>
+</li>
+<li>Tonsillar br.
+<ul>
+<li>Palatine tonsil</li>
+</ul>
+</li>
+<li>Lingual br.
+<ul>
+<li>&#x820C;&#x982D;&#x5F8C;1/3&#x5473;&#x89BA;&#x3001;&#x4E00;&#x822C;&#x611F;&#x89BA;</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>&#x5206;&#x9694;ECA,ICA<br>
+<img src="paste_src/2022-10-22-22-10-58.png" alt></p>
+</blockquote>
+<p><img src="paste_src/2022-12-04-22-45-47.png" alt></p>
 <h2 class="mume-header" id="cn-x">CN X</h2>
 
 <ul>
@@ -1091,7 +1128,9 @@ click c &quot;#temporal-bone&quot;
 <li>right: Subclavian a.</li>
 </ul>
 </div>
-<h2 class="mume-header" id="cn-xi">CN XI</h2>
+<div class="mermaid">flowchart TD 
+10[CN X]--&gt;|&#x8166;&#x5167;|a[Auricular br.]
+</div><h2 class="mume-header" id="cn-xi">CN XI</h2>
 
 <p>&#x5411;&#x5F8C;&#x652F;&#x914D;SCM Trapezius</p>
 <h2 class="mume-header" id="cn-xii">CN XII</h2>
@@ -1173,7 +1212,7 @@ pga----&gt;mug[(Mucous g.)]
 click pga &quot;#pterygopalatine-ganglion&quot;
 click a &quot;#posterior-division&quot;
 click l &quot;#posterior-division&quot;
-click lp &quot;#lesser-petrosal-n&quot;
+click lp &quot;#cn-ix&quot;
 click ct &quot;#chorda-tympanic-n&quot;
 click z &quot;#cn-v2&quot;
 click lc &quot;#cn-v1&quot;
@@ -1879,7 +1918,7 @@ fs[Frontal s.]--&gt;ei[ethmoidal infundibulum]--&gt;m
 <li><a href="#cn-v3">CN V<sub>3</sub></a></li>
 <li><a href="#cn-v2">CN V<sub>2</sub></a></li>
 <li><a href="#chorda-tympanic-n">Chorda tympanic</a></li>
-<li><a href="#lesser-petrosal-n">Lesser petrosal n.</a></li>
+<li><a href="#cn-ix">Lesser petrosal n.</a></li>
 </ul>
 <h1 class="mume-header" id="pterygopalatine-fossa">Pterygopalatine Fossa</h1>
 
@@ -2098,7 +2137,8 @@ fs[Frontal s.]--&gt;ei[ethmoidal infundibulum]--&gt;m
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/2022-11-05-15-05-55.png" alt></p>
+<img src="paste_src/2022-12-04-22-59-01.png" alt width="100%">
+<img src="paste_src/2022-11-05-15-05-55.png" alt width="100%">
 <h1 class="mume-header" id="%E4%B8%8A%E9%A1%8E">&#x4E0A;&#x984E;</h1>
 
 <p><img src="paste_src/2022-11-24-00-34-37.png" alt></p>
@@ -2672,9 +2712,11 @@ sm---smt
 </ul>
 </li>
 <li><a href="#cn-vii">CN VII</a></li>
+<li><a href="#cn-viii">CN VIII</a></li>
 <li><a href="#cn-ix">CN IX</a>
 <ul>
-<li><a href="#lesser-petrosal-n">Lesser petrosal n.</a></li>
+<li><a href="#motor">Motor</a></li>
+<li><a href="#sensor">Sensor</a></li>
 </ul>
 </li>
 <li><a href="#cn-x">CN X</a></li>
