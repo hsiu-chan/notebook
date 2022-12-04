@@ -1,0 +1,22 @@
+{
+    "markdown.styles": [
+        ".vscode/style.css"
+    ],
+    "markdown-pdf.styles":[
+        ".vscode/style.css",
+    ],
+    "markdown.enableExperimentalExtensionApi": true,
+    "pasteImage.insertPattern": "![](${imageFilePath})",
+    "pasteImage.showFilePathConfirmInputBox": true,
+    "pasteImage.path": "${currentFileDir}/paste_src",
+    "cSpell.words": [
+        "epimysium",
+        "hyoglossus",
+        "perimysium",
+        "pterygopalatine",
+        "Salpingopharyngeal",
+        "temporalis",
+        "Temporozygomatic"
+    ],
+    "local-history.daysLimit": 30 // 清除本地歷史記錄的天數。 （0：不清除）
+}
