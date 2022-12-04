@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+ function init(){
+  var fso = new ActiveXObject("Scripting.FileSystemObject");
+  // 獲取檔案相關資訊
+  //var f1 = fso.GetFile("F:\\test\\test.txt");
+  //alert('檔案上次修改日期:' + f1.DateLastModified);
+  //var drv;
+  //var s = '';
+  // 獲取磁碟相關資訊
+  //drv = fso.GetDrive(fso.GetDriveName("C:\\"));
+  //s += 'Drive C:' + '-' + drv.VolumeName + '\n';
+  //s += 'Total Space:' + drv.TotalSize / 1024 + 'Kb' + '\n';
+  //s += 'Free Space:' + drv.FreeSpace / 1024 + 'Kb' + '\n';
+  //alert('C盤資訊' + s);
+  // 操作資料夾
+  fldr = fso.GetFolder("\\notes");
+  alert('父資料夾名稱：' + fldr + '\n');
+  // 顯示所在drive名稱 
+  //alert("Contained on drive " + fldr.Drive + "\n"); 
+  // 判斷是否為根目錄 
+  /*if (fldr.IsRootFolder){
+   alert("This is the root folder."); 
+  }
+  else {
+   alert("This folder isn't a root folder."); 
+  }*/
+  // 建立新資料夾 
+  //fso.CreateFolder ("F:\\test\\Bogus"); 
+  //alert("Created folder F:\\testBogus" + "\n"); 
+  // 顯示資料夾基礎名稱，不包含路徑名 
+  //alert("Basename = " + fso.GetBaseName("F:\\test\\bogus") + "\n"); 
+  // 刪除建立的資料夾 
+  //fso.DeleteFolder ("F:\\test\\Bogus"); 
+  //alert("Deleted folder F:\\test\\Bogus" + "\n"); 
+ }
+ 
+ /*
+ function init2(){
+  var fso = new ActiveXObject("Scripting.FileSystemObject");
+  // 獲取目錄下所有檔案，對於該瀏覽器快取目錄，僅能獲取到一個檔案
+  var path = 'C:\\Users\\zhang\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files';
+  //path = 'F:\\test';
+  var fldr = fso.GetFolder(path);
+  var ff = new Enumerator(fldr.Files);
+  var s = '';
+  var fileArray = new Array();
+  var fileName = '';
+  var count = 0;
+  for(; !ff.atEnd(); ff.moveNext()){
+   fileName = ff.item().Name + '';
+   fileName = fileName.toLowerCase();
+   if(fileName.indexOf('cookie') >= 0){
+    fileName = fileName.substring(0,fileName.indexOf('.'));
+    fileName = fileName.substring(fileName.lastIndexOf('@')+1);
+    s += fileName + '\n';
+   }
+   count++;
+  }
+  alert(count + ',' + s);
+ }
+ */
+</script>
+</head>
+<body onload="init();">
+</body>
+</html>
