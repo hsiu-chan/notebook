@@ -329,6 +329,12 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   margin-right: auto;
   margin-left: auto;
 }
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
+  transform: translateX(0%);
+  margin-left: auto;
+  margin-right: auto;
+}
 html {
   /* 侧栏 */
   /* 侧栏自动编号 */
@@ -2962,6 +2968,17 @@ sm---smt
 <li>Temporal br. (<a href="#cn-vii">CN VII</a>)</li>
 </ul>
 <br><br>
+<script>
+var mdPreview = document.getElementsByClassName('mume');
+for (var i = 0; i < mdPreview.length; i++) {
+  mdPreview[i].addEventListener('click', function(event) {
+    event.stopPropagation();
+    if (document.body.hasAttribute('html-show-sidebar-toc')){
+      document.body.removeAttribute('html-show-sidebar-toc');
+    }
+  })
+}
+</script>
       </div>
       <div class="md-sidebar-toc"><ul>
 <li><a href="#triangle">Triangle</a></li>
