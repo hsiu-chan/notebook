@@ -337,7 +337,6 @@ html .md-sidebar-toc {
   margin: 0rem 0rem 0em 0em;
   padding: 0rem 0rem 0em 0rem;
   z-index: 70;
-  font-size: 10em;
   width: auto;
   max-width: 768px;
   margin-bottom: 1em;
@@ -348,6 +347,7 @@ html .md-sidebar-toc {
 }
 html .md-sidebar-toc a {
   color: inherit;
+  font-size: 0.7rem !important;
 }
 html .md-sidebar-toc a:hover {
   color: inherit;
@@ -364,7 +364,7 @@ html .md-sidebar-toc ul {
   padding-right: 0 !important;
 }
 html .md-sidebar-toc ul li {
-  font-size: 1.1rem !important;
+  font-size: 0.8rem !important;
   /*字号*/
   font-weight: bold;
   /*一级大纲*/
@@ -386,7 +386,7 @@ html .md-sidebar-toc ul ul:hover {
 }
 html .md-sidebar-toc ul ul li {
   margin-bottom: 8pt !important;
-  margin-top: 8pt !important;
+  margin-top: 3pt !important;
   margin-left: 0rem;
   font-size: 0.8rem !important;
   /*字号*/
@@ -434,18 +434,22 @@ html .md-sidebar-toc ul ul ul ul li {
 html .md-sidebar-toc ul ul li:before {
   counter-increment: outline-h2;
   content: counter(outline-h2) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul li:before {
   counter-increment: outline-h3;
   content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
 }
 .dcl {
   /* block 水平置中的方法 */
@@ -726,6 +730,19 @@ psa---&gt;mt[maxillary&lt;br&gt;tuberosity]
 <ul>
 <li><a href="#thyrocervical-trunk">suprascapular a.</a> (&gt;80%)</li>
 </ul>
+<h1 class="mume-header" id="cerebral-arterial-circle">Cerebral arterial circle</h1>
+
+<p><img src="paste_src/2022-12-14-14-45-24.png" alt></p>
+<h2 class="mume-header" id="ophthalmic-a">Ophthalmic a.</h2>
+
+<ul>
+<li>Dorsal nasal a.</li>
+<li>Supratrochlear a.</li>
+<li>Supraorbital a.</li>
+<li>Ciliary a.</li>
+<li>Lacrimal a.</li>
+</ul>
+<p><img src="paste_src/2022-12-14-14-48-02.png" alt></p>
 <h1 class="mume-header" id="vein">Vein</h1>
 
 <p><img src="paste_src/2022-10-03-19-32-10.png" alt><br>
@@ -1475,7 +1492,7 @@ click lc &quot;#cn-v1&quot;
 <p>Optic canal</p>
 <ul>
 <li>CN II</li>
-<li>Ophthalmic a.</li>
+<li><a href="#ophthalmic-a">Ophthalmic a.</a></li>
 </ul>
 </li>
 <li>
@@ -1874,14 +1891,42 @@ lp &amp; ue --&gt;idc
 <li>Alar</li>
 </ul>
 <p><img src="paste_src/2022-12-14-14-19-50.png" alt></p>
-<h2 class="mume-header" id="nasal-septum-%E9%BC%BB%E4%B8%AD%E8%86%88">Nasal septum (&#x9F3B;&#x4E2D;&#x8188;)</h2>
+<h2 class="mume-header" id="artery-1">Artery</h2>
+
+<p><strong><a href="#ophthalmic-a">Ophthalmic a.</a></strong></p>
+<ul>
+<li>Dorsal nasal a.</li>
+<li>External nasal a.</li>
+</ul>
+<p><strong><a href="#third-part">Infraorbital a.</a></strong></p>
+<ul>
+<li>Nasal br.</li>
+</ul>
+<p><strong><a href="#facial-a">Superior labial a</a></strong></p>
+<ul>
+<li>Septal a.</li>
+<li>Alar a.</li>
+</ul>
+<p><img src="paste_src/2022-12-14-15-00-04.png" alt></p>
+<h2 class="mume-header" id="nerve-1">Nerve</h2>
 
 <ul>
-<li>nasal sepal cartilage</li>
-<li>perpendicular plate of ethmoid</li>
-<li>vomer</li>
+<li><a href="#cn-v1">Ant. ethmoid n.</a>
+<ul>
+<li>Int./ Ext. nasal n.
+<ul>
+<li>&#x9F3B;&#x5167;/ &#x5916;&#x611F;&#x89BA;</li>
 </ul>
-<p><img src="paste_src/2022-10-20-01-54-42.png" alt></p>
+</li>
+</ul>
+</li>
+<li><a href="#cn-v1">Nasociliary br.</a></li>
+<li><a href="#cn-v2">Infraorbital n.</a>
+<ul>
+<li>Nasal br.</li>
+</ul>
+</li>
+</ul>
 <h1 class="mume-header" id="nose-cavity">Nose cavity</h1>
 
 <img src="paste_src/2022-10-09-22-16-06.png" alt width="100%">
@@ -1891,7 +1936,7 @@ lp &amp; ue --&gt;idc
 <p class="admonition-title"> Hypophyseal  fossa</p>
 <p>&#x8166;&#x4E0B;&#x5782;&#x9AD4;&#x5728;&#x9019;</p>
 </div>
-<h2 class="mume-header" id="nerve-1">Nerve</h2>
+<h2 class="mume-header" id="nerve-2">Nerve</h2>
 
 <ul>
 <li><a href="#pterygopalatine-ganglion">Nasopalatine n.</a>
@@ -1907,6 +1952,14 @@ lp &amp; ue --&gt;idc
 </ul>
 <p><img src="paste_src/2022-11-23-22-03-42.png" alt><br>
 <img src="paste_src/2022-11-07-20-09-19.png" alt></p>
+<h2 class="mume-header" id="nasal-septum-%E9%BC%BB%E4%B8%AD%E8%86%88">Nasal septum (&#x9F3B;&#x4E2D;&#x8188;)</h2>
+
+<ul>
+<li>nasal sepal cartilage</li>
+<li>perpendicular plate of ethmoid</li>
+<li>vomer</li>
+</ul>
+<p><img src="paste_src/2022-10-20-01-54-42.png" alt></p>
 <h1 class="mume-header" id="paranasal-sinuses">Paranasal sinuses</h1>
 
 <p>&#x9F3B;&#x65C1;&#x7AC7;&#xFF0C;&#x6FD5;&#x6F64;&#x547C;&#x5438;&#x7684;&#x7A7A;&#x6C23;</p>
@@ -2105,7 +2158,7 @@ fs[Frontal s.]--&gt;ei[ethmoidal infundibulum]--&gt;m
 <li>Vertical</li>
 </ul>
 <p><img src="paste_src/2022-12-05-00-31-53.png" alt></p>
-<h2 class="mume-header" id="nerve-2">Nerve</h2>
+<h2 class="mume-header" id="nerve-3">Nerve</h2>
 
 <ul>
 <li>&#x904B;&#x52D5;&#xFF1A;CN XII</li>
@@ -2290,7 +2343,7 @@ fs[Frontal s.]--&gt;ei[ethmoidal infundibulum]--&gt;m
 &#x7DA0;: Tensor veli palatini m.<br>
 <img src="paste_src/2022-11-24-00-16-03.png" alt></p>
 </blockquote>
-<h2 class="mume-header" id="nerve-3">Nerve</h2>
+<h2 class="mume-header" id="nerve-4">Nerve</h2>
 
 <ul>
 <li>CN IX</li>
@@ -2657,7 +2710,7 @@ sm---smt
 <h2 class="mume-header" id="%E8%A1%80%E7%AE%A1">&#x8840;&#x7BA1;</h2>
 
 <p><a href="#maxillary-a">Maxillary a.</a></p>
-<h2 class="mume-header" id="nerve-4">Nerve</h2>
+<h2 class="mume-header" id="nerve-5">Nerve</h2>
 
 <p><img src="paste_src/2022-10-07-17-26-06.png" alt></p>
 <ul>
@@ -2734,7 +2787,7 @@ sm---smt
 <h1 class="mume-header" id="temporal-fossa">Temporal fossa</h1>
 
 <p><img src="paste_src/2022-10-09-19-36-02.png" alt></p>
-<h2 class="mume-header" id="artery-1">Artery</h2>
+<h2 class="mume-header" id="artery-2">Artery</h2>
 
 <ul>
 <li><a href="#external-carotid">Superficial temporal a.</a></li>
@@ -2770,7 +2823,7 @@ sm---smt
 </ul>
 </li>
 </ul>
-<h2 class="mume-header" id="nerve-5">Nerve</h2>
+<h2 class="mume-header" id="nerve-6">Nerve</h2>
 
 <ul>
 <li><a href="#cn-v3">CN V<sub>3</sub></a>
@@ -2802,6 +2855,11 @@ sm---smt
 </ul>
 </li>
 <li><a href="#scm%E8%A1%80%E6%B6%B2">SCM&#x8840;&#x6DB2;</a></li>
+</ul>
+</li>
+<li><a href="#cerebral-arterial-circle">Cerebral arterial circle</a>
+<ul>
+<li><a href="#ophthalmic-a">Ophthalmic a.</a></li>
 </ul>
 </li>
 <li><a href="#vein">Vein</a></li>
@@ -2903,12 +2961,14 @@ sm---smt
 </li>
 <li><a href="#nose">Nose</a>
 <ul>
-<li><a href="#nasal-septum-%E9%BC%BB%E4%B8%AD%E8%86%88">Nasal septum (&#x9F3B;&#x4E2D;&#x8188;)</a></li>
+<li><a href="#artery-1">Artery</a></li>
+<li><a href="#nerve-1">Nerve</a></li>
 </ul>
 </li>
 <li><a href="#nose-cavity">Nose cavity</a>
 <ul>
-<li><a href="#nerve-1">Nerve</a></li>
+<li><a href="#nerve-2">Nerve</a></li>
+<li><a href="#nasal-septum-%E9%BC%BB%E4%B8%AD%E8%86%88">Nasal septum (&#x9F3B;&#x4E2D;&#x8188;)</a></li>
 </ul>
 </li>
 <li><a href="#paranasal-sinuses">Paranasal sinuses</a>
@@ -2945,7 +3005,7 @@ sm---smt
 <li><a href="#intrinsic-muscles">Intrinsic muscles</a></li>
 </ul>
 </li>
-<li><a href="#nerve-2">Nerve</a></li>
+<li><a href="#nerve-3">Nerve</a></li>
 </ul>
 </li>
 <li><a href="#%E4%B8%8A%E9%A1%8E">&#x4E0A;&#x984E;</a></li>
@@ -2964,7 +3024,7 @@ sm---smt
 <li><a href="#%E5%85%A7%E9%83%A8">&#x5167;&#x90E8;</a></li>
 </ul>
 </li>
-<li><a href="#nerve-3">Nerve</a></li>
+<li><a href="#nerve-4">Nerve</a></li>
 </ul>
 </li>
 <li><a href="#larynx-1">Larynx</a>
@@ -3027,7 +3087,7 @@ sm---smt
 <li><a href="#infratemporal-fossa">Infratemporal fossa</a>
 <ul>
 <li><a href="#%E8%A1%80%E7%AE%A1">&#x8840;&#x7BA1;</a></li>
-<li><a href="#nerve-4">Nerve</a></li>
+<li><a href="#nerve-5">Nerve</a></li>
 </ul>
 </li>
 <li><a href="#pterygopalatine-fossa">Pterygopalatine Fossa</a>
@@ -3044,9 +3104,9 @@ sm---smt
 </li>
 <li><a href="#temporal-fossa">Temporal fossa</a>
 <ul>
-<li><a href="#artery-1">Artery</a></li>
+<li><a href="#artery-2">Artery</a></li>
 <li><a href="#vein-1">Vein</a></li>
-<li><a href="#nerve-5">Nerve</a></li>
+<li><a href="#nerve-6">Nerve</a></li>
 </ul>
 </li>
 </ul>
