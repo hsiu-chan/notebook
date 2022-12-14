@@ -1,0 +1,21 @@
+{
+    "markdown.styles": [
+        ".vscode/style.css"
+    ],
+    "markdown-pdf.styles":[
+        ".vscode/style.css",
+    ],
+    "markdown.enableExperimentalExtensionApi": true,
+    "pasteImage.insertPattern": "![](${imageFilePath})",
+    "pasteImage.showFilePathConfirmInputBox": true,
+    "pasteImage.path": "${currentFileDir}/paste_src",
+    "cSpell.words": [
+        "epimysium",
+        "hyoglossus",
+        "perimysium",
+        "pterygopalatine",
+        "Salpingopharyngeal",
+        "temporalis",
+        "Temporozygomatic"
+    ]
+}
