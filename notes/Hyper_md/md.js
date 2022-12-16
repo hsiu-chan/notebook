@@ -27,7 +27,7 @@ window.onload=function(){
 
 var share_bt = document.createElement("btn");
 share_bt.innerHTML = "<i class=\"fa fa-share-alt fa-18\"></i>";
-share_bt.style = "top:8px;left:40px;";
+share_bt.style = "top:8px;right:8px;";
 share_bt.addEventListener('click', function() {
   const value = decodeURI(url.hostname+url.pathname);
   const el = document.createElement('textarea');
