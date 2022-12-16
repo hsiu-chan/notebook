@@ -2,7 +2,8 @@
 var getUrlString = location.href;//取得網址
 var url = new URL(getUrlString);
 if (url.searchParams.get('id')=='3i'){
-  var home = document.createElement("btn");
+  var home = document.createElement("div");
+  home.setAttribute('class', "btn");
   home.innerHTML = "<i class=\"fa-solid fa-angles-left\"></i>";
   home.style = "top:8px;left:8px;";
   home.setAttribute('herf', "../index.html");
@@ -25,7 +26,8 @@ window.onload=function(){
   head.appendChild(script);//将script标签添加到head的子节点下
 }
 
-var share_bt = document.createElement("btn");
+var share_bt = document.createElement("div");
+share_bt.setAttribute('class', "btn");
 share_bt.innerHTML = "<i class=\"fa fa-share-alt fa-18\"></i>";
 share_bt.style = "top:8px;right:8px;";
 share_bt.addEventListener('click', function() {
