@@ -319,13 +319,29 @@
 .markdown-preview table tr {
   border: 1.5px solid #b7b7b7;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
-  left: 0.1;
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
   width: 100%;
   max-width: 914px;
-  padding: 2em;
-  margin: 0;
   box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 32px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
 }
 html {
   /* 侧栏 */
@@ -337,7 +353,6 @@ html .md-sidebar-toc {
   margin: 0rem 0rem 0em 0em;
   padding: 0rem 0rem 0em 0rem;
   z-index: 70;
-  font-size: 10em;
   width: auto;
   max-width: 768px;
   margin-bottom: 1em;
@@ -348,6 +363,7 @@ html .md-sidebar-toc {
 }
 html .md-sidebar-toc a {
   color: inherit;
+  font-size: 0.7rem !important;
 }
 html .md-sidebar-toc a:hover {
   color: inherit;
@@ -364,7 +380,7 @@ html .md-sidebar-toc ul {
   padding-right: 0 !important;
 }
 html .md-sidebar-toc ul li {
-  font-size: 1.1rem !important;
+  font-size: 0.8rem !important;
   /*字号*/
   font-weight: bold;
   /*一级大纲*/
@@ -386,7 +402,7 @@ html .md-sidebar-toc ul ul:hover {
 }
 html .md-sidebar-toc ul ul li {
   margin-bottom: 8pt !important;
-  margin-top: 8pt !important;
+  margin-top: 3pt !important;
   margin-left: 0rem;
   font-size: 0.8rem !important;
   /*字号*/
@@ -434,18 +450,22 @@ html .md-sidebar-toc ul ul ul ul li {
 html .md-sidebar-toc ul ul li:before {
   counter-increment: outline-h2;
   content: counter(outline-h2) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul li:before {
   counter-increment: outline-h3;
   content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
 }
 .dcl {
   /* block 水平置中的方法 */
@@ -514,10 +534,10 @@ table th{
 
 <h3 class="mume-header" id="thoracic-vertebrae">thoracic vertebrae</h3>
 
-<p><img src="../paste_src/2022-10-31-00-00-45.png" alt></p>
+<p><img src="paste_src/2022-10-31-00-00-45.png" alt></p>
 <h3 class="mume-header" id="lumbar-vertebrae">Lumbar vertebrae</h3>
 
-<p><img src="../paste_src/2022-10-31-00-05-11.png" alt></p>
+<p><img src="paste_src/2022-10-31-00-05-11.png" alt></p>
 <h2 class="mume-header" id="sternum">Sternum</h2>
 
 <ul>
@@ -527,7 +547,7 @@ table th{
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> xiphoid process</li>
 </ul>
 <details>
-<img src="../paste_src/2022-10-29-16-06-41.png" alt width="100%">
+<img src="paste_src/2022-10-29-16-06-41.png" alt width="100%">
 </details>
 <h2 class="mume-header" id="clavicle">Clavicle</h2>
 
@@ -537,7 +557,7 @@ table th{
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> coronoid tubercle</li>
 </ul>
 <details>
-<img src="../paste_src/2022-10-29-15-08-08.png" alt width="100%">
+<img src="paste_src/2022-10-29-15-08-08.png" alt width="100%">
 </details>
 <h2 class="mume-header" id="ribs">Ribs</h2>
 
@@ -556,8 +576,8 @@ table th{
 </ul>
 </div>
 <details>
-<img src="../paste_src/2022-10-29-14-53-12.png" alt width="100%">
-<p><img src="../paste_src/2022-10-29-15-03-50.png" alt></p>
+<img src="paste_src/2022-10-29-14-53-12.png" alt width="100%">
+<p><img src="paste_src/2022-10-29-15-03-50.png" alt></p>
 </details>
 <h2 class="mume-header" id="scapula">Scapula</h2>
 
@@ -566,13 +586,13 @@ table th{
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Acromion</li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Suprascapular notch</li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Glenoid process<br>
-<img src="../paste_src/2022-10-31-20-09-58.png" alt></li>
+<img src="paste_src/2022-10-31-20-09-58.png" alt></li>
 </ul>
 <h2 class="mume-header" id="pelvis">Pelvis</h2>
 
 <div class="admonition info">
 <p class="admonition-title"> &#x6027;&#x5225;&#x5DEE;&#x7570;</p>
-<p><img src="../paste_src/2022-11-03-10-41-33.png" alt></p>
+<p><img src="paste_src/2022-11-03-10-41-33.png" alt></p>
 </div>
 <h3 class="mume-header" id="ilium">Ilium</h3>
 
@@ -593,9 +613,9 @@ table th{
 <ul>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Ischial spine</li>
 </ul>
-<p><img src="../paste_src/2022-11-03-11-05-07.png" alt><br>
-<img src="../paste_src/2022-10-29-15-20-54.png" alt><br>
-<img src="../paste_src/2022-11-03-11-10-35.png" alt></p>
+<p><img src="paste_src/2022-11-03-11-05-07.png" alt><br>
+<img src="paste_src/2022-10-29-15-20-54.png" alt><br>
+<img src="paste_src/2022-11-03-11-10-35.png" alt></p>
 <h2 class="mume-header" id="upper-limbs">Upper limbs</h2>
 
 <h3 class="mume-header" id="humeral">Humeral</h3>
@@ -617,7 +637,7 @@ table th{
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Lat. epicondyle of humerus</li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Olecranon fossa</li>
 </ul>
-<p><img src="../paste_src/2022-11-02-18-22-53.png" alt></p>
+<p><img src="paste_src/2022-11-02-18-22-53.png" alt></p>
 <h3 class="mume-header" id="ulna">Ulna</h3>
 
 <p>&#x5206;&#x8FA8;&#x5DE6;&#x53F3;&#x770B;radial notch</p>
@@ -634,7 +654,7 @@ table th{
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> ulnar notch</li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> styloid process</li>
 </ul>
-<p><img src="../paste_src/2022-11-02-18-51-40.png" alt></p>
+<p><img src="paste_src/2022-11-02-18-51-40.png" alt></p>
 <h3 class="mume-header" id="carpi">carpi</h3>
 
 <ul>
@@ -668,7 +688,7 @@ table th{
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Gluteal tuberosity</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-11-03-10-33-07.png" alt></p>
+<p><img src="paste_src/2022-11-03-10-33-07.png" alt></p>
 </details>
 <h3 class="mume-header" id="patella">Patella</h3>
 
@@ -681,7 +701,7 @@ table th{
 
 <h1 class="mume-header" id="axilla">Axilla</h1>
 
-<p><img src="../paste_src/2022-10-16-20-41-49.png" alt></p>
+<p><img src="paste_src/2022-10-16-20-41-49.png" alt></p>
 <h2 class="mume-header" id="axillary-a">Axillary a.</h2>
 
 <ul>
@@ -724,7 +744,7 @@ pc[Post. humeral circumflex a.]
 sc[Subscapular a.]
 end
 </div><details>
-<p><img src="../paste_src/2022-10-16-18-59-06.png" alt></p>
+<p><img src="paste_src/2022-10-16-18-59-06.png" alt></p>
 </details>
 <h2 class="mume-header" id="brachial-plexus">Brachial plexus</h2>
 
@@ -758,7 +778,7 @@ end
 <ul>
 <li>Cords &#x5728; Pectoralis minor&#x4E0B;</li>
 <li>M&#x578B;<br>
-<img src="../paste_src/2022-10-16-19-28-24.png" alt></li>
+<img src="paste_src/2022-10-16-19-28-24.png" alt></li>
 <li>Post. cord &#x8D70;&#x5728; Subscapular m. &#x5F8C;&#x9762;</li>
 </ul>
 </div>
@@ -791,14 +811,14 @@ Med. ===&gt;m &amp; u
 Med. --&gt;mpn[Med. pectoral n.]
 Lat. --&gt;lpn[Lat. pectoral n.]
 Post. --&gt; sn1[Upper&lt;br&gt;subscapular n.] &amp; td[Thoracodorsal n.] &amp; sn2[Lower&lt;br&gt;subscapular n.]
-</div><p><img src="../paste_src/2022-10-16-20-04-36.png" alt></p>
+</div><p><img src="paste_src/2022-10-16-20-04-36.png" alt></p>
 <details>
-<p><img src="../paste_src/2022-10-16-19-53-46.png" alt><br>
-<img src="../paste_src/2022-11-03-00-00-05.png" alt></p>
+<p><img src="paste_src/2022-10-16-19-53-46.png" alt><br>
+<img src="paste_src/2022-11-03-00-00-05.png" alt></p>
 </details>
 <h1 class="mume-header" id="arm">Arm</h1>
 
-<p><img src="../paste_src/2022-10-16-20-27-53.png" alt></p>
+<p><img src="paste_src/2022-10-16-20-27-53.png" alt></p>
 <h2 class="mume-header" id="muscle">Muscle</h2>
 
 <ul>
@@ -841,17 +861,17 @@ Post. --&gt; sn1[Upper&lt;br&gt;subscapular n.] &amp; td[Thoracodorsal n.] &amp;
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Inf. ulnar collateral<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Ant. ulnar recurrent</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-16-20-38-32.png" alt></p>
+<p><img src="paste_src/2022-10-16-20-38-32.png" alt></p>
 </details>
 <div class="admonition info">
 <p class="admonition-title"> Cubital fossa</p>
-<p><img src="../paste_src/2022-10-22-19-28-05.png" alt><br>
+<p><img src="paste_src/2022-10-22-19-28-05.png" alt><br>
 <mark>Medial epicondyle of humerus</mark></p>
 </div>
 <h1 class="mume-header" id="forearm">Forearm</h1>
 
-<img src="../paste_src/2022-10-22-19-36-58.png" alt width="80%">
-<img src="../paste_src/2022-10-31-20-18-22.png" alt width="80%">
+<img src="paste_src/2022-10-22-19-36-58.png" alt width="80%">
+<img src="paste_src/2022-10-31-20-18-22.png" alt width="80%">
 <h2 class="mume-header" id="muscle-1">Muscle</h2>
 
 <p>&#x7B2C;&#x4E00;&#x5C64;&#x7531;&#x5167;&#x800C;&#x5916;</p>
@@ -907,7 +927,7 @@ Post. --&gt; sn1[Upper&lt;br&gt;subscapular n.] &amp; td[Thoracodorsal n.] &amp;
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Cephalic v.</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-31-21-00-43.png" alt></p>
+<p><img src="paste_src/2022-10-31-21-00-43.png" alt></p>
 </details>
 <h2 class="mume-header" id="carpi-1">Carpi</h2>
 
@@ -931,13 +951,13 @@ Post. --&gt; sn1[Upper&lt;br&gt;subscapular n.] &amp; td[Thoracodorsal n.] &amp;
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Tendon fo flexor carpi ulnaris</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-31-21-25-20.png" alt></p>
+<p><img src="paste_src/2022-10-31-21-25-20.png" alt></p>
 </details>
 <h1 class="mume-header" id="palm">Palm</h1>
 
-<img src="../paste_src/2022-10-22-21-02-23.png" alt width="48%">
-<img src="../paste_src/2022-10-31-21-26-30.png" alt width="50%">
-<img src="../paste_src/2022-10-22-21-20-57.png" alt width="80%">
+<img src="paste_src/2022-10-22-21-02-23.png" alt width="48%">
+<img src="paste_src/2022-10-31-21-26-30.png" alt width="50%">
+<img src="paste_src/2022-10-22-21-20-57.png" alt width="80%">
 <h2 class="mume-header" id="thenar">Thenar</h2>
 
 <ul>
@@ -963,7 +983,7 @@ Post. --&gt; sn1[Upper&lt;br&gt;subscapular n.] &amp; td[Thoracodorsal n.] &amp;
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Palmar aponeurosis</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-31-21-18-37.png" alt></p>
+<p><img src="paste_src/2022-10-31-21-18-37.png" alt></p>
 </details>
 <hr>
 <ul>
@@ -1000,12 +1020,12 @@ Post. --&gt; sn1[Upper&lt;br&gt;subscapular n.] &amp; td[Thoracodorsal n.] &amp;
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Dorsal interosseous muscles</li>
 </ul>
 <details>
-<img src="../paste_src/2022-10-22-21-22-01.png" alt width="50%">
-<img src="../paste_src/2022-10-31-21-28-48.png" alt width="46%">
+<img src="paste_src/2022-10-22-21-22-01.png" alt width="50%">
+<img src="paste_src/2022-10-31-21-28-48.png" alt width="46%">
 </details>
 <h1 class="mume-header" id="%E8%83%B8%E6%B7%BA%E5%B1%A4">&#x80F8;&#x6DFA;&#x5C64;</h1>
 
-<img src="../paste_src/2022-11-02-18-57-10.png" alt width="50%">
+<img src="paste_src/2022-11-02-18-57-10.png" alt width="50%">
 <ul>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Pectoralis major/ minor</li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Serratus anterior m.</li>
@@ -1023,7 +1043,7 @@ Post. --&gt; sn1[Upper&lt;br&gt;subscapular n.] &amp; td[Thoracodorsal n.] &amp;
 </ul>
 <h1 class="mume-header" id="ant-thoracic-wall">Ant. thoracic wall</h1>
 
-<p><img src="../paste_src/2022-10-15-12-13-42.png" alt></p>
+<p><img src="paste_src/2022-10-15-12-13-42.png" alt></p>
 <h2 class="mume-header" id="vessels">Vessels</h2>
 
 <ul>
@@ -1045,7 +1065,7 @@ cm--&gt;m[Musculophrenic a.]--&gt;7[rib 7-9]
 cm--&gt;se[Sup.&lt;br&gt;epigastric a.]--&gt;r[rectus abdominis]
 ic--&gt;p[pericardiacophrenic a.]-- &#x4F34;&#x884C;---&gt;pn[Phrenic n.]
 </div><details>
-<p><img src="../paste_src/2022-10-15-12-23-00.png" alt></p>
+<p><img src="paste_src/2022-10-15-12-23-00.png" alt></p>
 </details>
 <h2 class="mume-header" id="nerve-1">Nerve</h2>
 
@@ -1058,8 +1078,8 @@ ic--&gt;p[pericardiacophrenic a.]-- &#x4F34;&#x884C;---&gt;pn[Phrenic n.]
 </li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-15-12-55-48.png" alt><br>
-<img src="../paste_src/2022-11-03-10-55-05.png" alt></p>
+<p><img src="paste_src/2022-10-15-12-55-48.png" alt><br>
+<img src="paste_src/2022-11-03-10-55-05.png" alt></p>
 <blockquote>
 <p>ICBN indicates intercostobrachial nerve<br>
 LTN, long thoracic nerve<br>
@@ -1081,12 +1101,12 @@ MPN, medial pectoral nerve.</p>
 <p>&#x808B;&#x9AA8;&#x4E2D;&#x6BB5;&#x624D;&#x6709;Innermost</p>
 </div>
 <details>
-<p><img src="../paste_src/2022-10-15-12-45-56.png" alt></p>
+<p><img src="paste_src/2022-10-15-12-45-56.png" alt></p>
 </details>
 <h1 class="mume-header" id="thoracic-cavity">Thoracic cavity</h1>
 
-<p><img src="../paste_src/2022-10-15-14-11-05.png" alt><br>
-<img src="../paste_src/2022-10-15-15-11-08.png" alt></p>
+<p><img src="paste_src/2022-10-15-14-11-05.png" alt><br>
+<img src="paste_src/2022-10-15-15-11-08.png" alt></p>
 <h2 class="mume-header" id="structure">Structure</h2>
 
 <ul>
@@ -1111,12 +1131,12 @@ MPN, medial pectoral nerve.</p>
 <li>costodiaphrag-matic recess</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-15-15-07-48.png" alt></p>
-<div class="admonition info">
-<p class="admonition-title"> costodiaphrag-matic recess</p>
-<p><img src="../paste_src/2022-10-15-14-13-45.png" alt></p>
-</div></details>
-
+<p><img src="paste_src/2022-10-15-15-07-48.png" alt></p>
+</details>
+<p>info{costodiaphrag-matic recess}<br>
+<img src="paste_src/2022-10-15-14-13-45.png" alt><br>
+:::<br>
+:::</p>
 <h2 class="mume-header" id="ct">CT</h2>
 
 <ul>
@@ -1144,8 +1164,8 @@ MPN, medial pectoral nerve.</p>
 </li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-15-14-37-02.png" alt><br>
-<img src="../paste_src/2022-10-15-14-43-11.png" alt></p>
+<p><img src="paste_src/2022-10-15-14-37-02.png" alt><br>
+<img src="paste_src/2022-10-15-14-43-11.png" alt></p>
 </details>
 <h2 class="mume-header" id="vessels-1">Vessels</h2>
 
@@ -1174,9 +1194,9 @@ MPN, medial pectoral nerve.</p>
 </ul>
 <h1 class="mume-header" id="posterior-mediastinum">Posterior Mediastinum</h1>
 
-<img src="../paste_src/2022-11-01-00-16-14.png" alt width="59%">
-<img src="../paste_src/2022-11-01-00-51-49.png" alt width="40%">
-<p><img src="../paste_src/2022-11-01-02-06-44.png" alt></p>
+<img src="paste_src/2022-11-01-00-16-14.png" alt width="59%">
+<img src="paste_src/2022-11-01-00-51-49.png" alt width="40%">
+<p><img src="paste_src/2022-11-01-02-06-44.png" alt></p>
 <h2 class="mume-header" id="nerve-3">Nerve</h2>
 
 <ul>
@@ -1207,8 +1227,8 @@ MPN, medial pectoral nerve.</p>
 </ul>
 <div class="admonition info">
 <p class="admonition-title"> Azygos system</p>
-<img src="../paste_src/2022-11-01-00-24-48.png" alt width="39%">
-<img src="../paste_src/2022-11-01-01-40-53.png" alt width="59%">
+<img src="paste_src/2022-11-01-00-24-48.png" alt width="39%">
+<img src="paste_src/2022-11-01-01-40-53.png" alt width="59%">
 </div>
 <h2 class="mume-header" id="others">Others</h2>
 
@@ -1243,7 +1263,7 @@ MPN, medial pectoral nerve.</p>
 </li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-11-01-01-05-13.png" alt></p>
+<p><img src="paste_src/2022-11-01-01-05-13.png" alt></p>
 </details>
 <h2 class="mume-header" id="%E4%B8%8B%E8%A1%A8%E9%9D%A2">&#x4E0B;&#x8868;&#x9762;</h2>
 
@@ -1273,13 +1293,13 @@ MPN, medial pectoral nerve.</p>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Inf phrenic a.</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-11-01-01-07-59.png" alt></p>
+<p><img src="paste_src/2022-11-01-01-07-59.png" alt></p>
 </details>
 <h1 class="mume-header" id="%E4%B8%8B%E8%82%A2">&#x4E0B;&#x80A2;</h1>
 
 <h1 class="mume-header" id="abdominal">Abdominal</h1>
 
-<p><img src="../paste_src/2022-10-19-17-00-38.png" alt></p>
+<p><img src="paste_src/2022-10-19-17-00-38.png" alt></p>
 <h2 class="mume-header" id="muscles">Muscles</h2>
 
 <ul>
@@ -1310,7 +1330,7 @@ MPN, medial pectoral nerve.</p>
 </ul>
 <div class="admonition info">
 <p class="admonition-title"> tendinous intersection</p>
-<p><img src="../paste_src/2022-10-19-16-33-17.png" alt></p>
+<p><img src="paste_src/2022-10-19-16-33-17.png" alt></p>
 </div>
 <h2 class="mume-header" id="vessels-4">Vessels</h2>
 
@@ -1321,7 +1341,7 @@ MPN, medial pectoral nerve.</p>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> inf. epigastric a. &amp; v.</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-19-16-38-02.png" alt></p>
+<p><img src="paste_src/2022-10-19-16-38-02.png" alt></p>
 </details>
 <h3 class="mume-header" id="abdominal-aorta">Abdominal aorta</h3>
 
@@ -1329,7 +1349,7 @@ MPN, medial pectoral nerve.</p>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Celiac trunk</li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Sup. mesenteric a.</li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Inf. mesenteric a.<br>
-<img src="../paste_src/2022-11-03-02-00-32.png" alt></li>
+<img src="paste_src/2022-11-03-02-00-32.png" alt></li>
 </ul>
 <h2 class="mume-header" id="nerve-4">Nerve</h2>
 
@@ -1340,8 +1360,8 @@ MPN, medial pectoral nerve.</p>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> ilioinguinal n. (L1)</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-11-02-22-56-13.png" alt><br>
-<img src="../paste_src/2022-11-03-11-27-46.png" alt></p>
+<p><img src="paste_src/2022-11-02-22-56-13.png" alt><br>
+<img src="paste_src/2022-11-03-11-27-46.png" alt></p>
 </details>
 <h1 class="mume-header" id="urogenital-triangle">Urogenital triangle</h1>
 
@@ -1361,7 +1381,7 @@ MPN, medial pectoral nerve.</p>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Deep dorsal v./a./n. of penis</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-31-21-42-43.png" alt></p>
+<p><img src="paste_src/2022-10-31-21-42-43.png" alt></p>
 </details>
 <h2 class="mume-header" id="%E5%A5%B3%E6%80%A7">&#x5973;&#x6027;</h2>
 
@@ -1370,10 +1390,10 @@ MPN, medial pectoral nerve.</p>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Deep branch of perineal n./ a.</li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Superficial branch of perineal n./ a.</li>
 </ul>
-<p><img src="../paste_src/2022-10-31-21-40-44.png" alt></p>
+<p><img src="paste_src/2022-10-31-21-40-44.png" alt></p>
 <h1 class="mume-header" id="thigh">Thigh</h1>
 
-<p><img src="../paste_src/2022-10-17-00-41-54.png" alt></p>
+<p><img src="paste_src/2022-10-17-00-41-54.png" alt></p>
 <h2 class="mume-header" id="ct-1">CT</h2>
 
 <ul>
@@ -1426,7 +1446,7 @@ MPN, medial pectoral nerve.</p>
 <p>Anterior body of pubis&#x662F;gracilis, longus, brevis&#x7684;Origin</p>
 </div>
 <details>
-<p><img src="../paste_src/2022-10-17-00-06-12.png" alt></p>
+<p><img src="paste_src/2022-10-17-00-06-12.png" alt></p>
 </details>
 <h2 class="mume-header" id="vessels-5">Vessels</h2>
 
@@ -1445,7 +1465,7 @@ MPN, medial pectoral nerve.</p>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Great saphenous v.</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-15-16-09-55.png" alt></p>
+<p><img src="paste_src/2022-10-15-16-09-55.png" alt></p>
 </details>
 <h2 class="mume-header" id="nerve-5">Nerve</h2>
 
@@ -1475,11 +1495,11 @@ MPN, medial pectoral nerve.</p>
 <p>Obturator nerve&#x7684; Ant./Post.&#x88AB;brevis&#x5206;&#x958B;</p>
 </div>
 <details>
-<p><img src="../paste_src/2022-10-17-00-38-43.png" alt></p>
+<p><img src="paste_src/2022-10-17-00-38-43.png" alt></p>
 </details>
 <h1 class="mume-header" id="limb">Limb</h1>
 
-<p><img src="../paste_src/2022-10-15-21-40-35.png" alt></p>
+<p><img src="paste_src/2022-10-15-21-40-35.png" alt></p>
 <h2 class="mume-header" id="ct-2">CT</h2>
 
 <ul>
@@ -1490,7 +1510,7 @@ MPN, medial pectoral nerve.</p>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> inferior fibular retinaculum</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-15-23-49-32.png" alt></p>
+<p><img src="paste_src/2022-10-15-23-49-32.png" alt></p>
 </details>
 <h2 class="mume-header" id="vessels-6">Vessels</h2>
 
@@ -1514,7 +1534,7 @@ at--&gt;atr[Ant. tibial&lt;br&gt;recurrent a.]--&gt;k[Knee]
 at--&gt;m[Malleolar a.]
 at--&gt;d[Dosalis pedis]
 </div><details>
-<p><img src="../paste_src/2022-10-15-22-06-59.png" alt></p>
+<p><img src="paste_src/2022-10-15-22-06-59.png" alt></p>
 </details>
 <h2 class="mume-header" id="nerve-6">Nerve</h2>
 
@@ -1549,7 +1569,7 @@ sf--&gt;mc[medial dorsal cutaneous br.]
 sf--&gt;ic[intermediate dorsal cutaneous br.]
 cf--&gt;df[Deep fibular n.]
 </div><details>
-<p><img src="../paste_src/2022-10-15-21-16-23.png" alt></p>
+<p><img src="paste_src/2022-10-15-21-16-23.png" alt></p>
 </details>
 <h2 class="mume-header" id="muscle-4">Muscle</h2>
 
@@ -1562,9 +1582,9 @@ cf--&gt;df[Deep fibular n.]
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Tibialis ant. m.</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-15-21-23-08.png" alt><br>
-<img src="../paste_src/2022-10-15-22-26-47.png" alt><br>
-<img src="../paste_src/2022-10-15-22-27-31.png" alt></p>
+<p><img src="paste_src/2022-10-15-21-23-08.png" alt><br>
+<img src="paste_src/2022-10-15-22-26-47.png" alt><br>
+<img src="paste_src/2022-10-15-22-27-31.png" alt></p>
 </details>
 <h1 class="mume-header" id="dorsum">Dorsum</h1>
 
@@ -1577,7 +1597,7 @@ cf--&gt;df[Deep fibular n.]
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Superficial Fibular n.</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-22-18-59-22.png" alt></p>
+<p><img src="paste_src/2022-10-22-18-59-22.png" alt></p>
 </details>
 <h2 class="mume-header" id="%E6%B7%B1%E5%B1%A4">&#x6DF1;&#x5C64;</h2>
 
@@ -1591,7 +1611,7 @@ cf--&gt;df[Deep fibular n.]
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Fibularis tertius tendons</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-16-00-50-06.png" alt></p>
+<p><img src="paste_src/2022-10-16-00-50-06.png" alt></p>
 </details>
 <h2 class="mume-header" id="artery-nerve-1">Artery/ Nerve</h2>
 
@@ -1617,9 +1637,20 @@ cf--&gt;df[Deep fibular n.]
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> extensor hallucis brevis</li>
 </ul>
 <details>
-<p><img src="../paste_src/2022-10-16-00-57-28.png" alt></p>
+<p><img src="paste_src/2022-10-16-00-57-28.png" alt></p>
 </details>
-<br><br></div>
+<br><br>
+<script>
+var mdPreview = document.getElementsByClassName('mume');
+for (var i = 0; i < mdPreview.length; i++) {
+  mdPreview[i].addEventListener('click', function(event) {
+    event.stopPropagation();
+    if (document.body.hasAttribute('html-show-sidebar-toc')){
+      document.body.removeAttribute('html-show-sidebar-toc');
+    }
+  })
+}
+</script></div>
       </div>
       <div class="md-sidebar-toc"><ul>
 <li><a href="#%E9%AA%A8%E5%AD%B8">&#x9AA8;&#x5B78;</a>

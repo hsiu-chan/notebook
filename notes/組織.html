@@ -319,13 +319,29 @@
 .markdown-preview table tr {
   border: 1.5px solid #b7b7b7;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
-  left: 0.1;
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
   width: 100%;
   max-width: 914px;
-  padding: 2em;
-  margin: 0;
   box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 32px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
 }
 html {
   /* 侧栏 */
@@ -337,7 +353,6 @@ html .md-sidebar-toc {
   margin: 0rem 0rem 0em 0em;
   padding: 0rem 0rem 0em 0rem;
   z-index: 70;
-  font-size: 10em;
   width: auto;
   max-width: 768px;
   margin-bottom: 1em;
@@ -348,6 +363,7 @@ html .md-sidebar-toc {
 }
 html .md-sidebar-toc a {
   color: inherit;
+  font-size: 0.7rem !important;
 }
 html .md-sidebar-toc a:hover {
   color: inherit;
@@ -364,7 +380,7 @@ html .md-sidebar-toc ul {
   padding-right: 0 !important;
 }
 html .md-sidebar-toc ul li {
-  font-size: 1.1rem !important;
+  font-size: 0.8rem !important;
   /*字号*/
   font-weight: bold;
   /*一级大纲*/
@@ -386,7 +402,7 @@ html .md-sidebar-toc ul ul:hover {
 }
 html .md-sidebar-toc ul ul li {
   margin-bottom: 8pt !important;
-  margin-top: 8pt !important;
+  margin-top: 3pt !important;
   margin-left: 0rem;
   font-size: 0.8rem !important;
   /*字号*/
@@ -434,18 +450,22 @@ html .md-sidebar-toc ul ul ul ul li {
 html .md-sidebar-toc ul ul li:before {
   counter-increment: outline-h2;
   content: counter(outline-h2) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul li:before {
   counter-increment: outline-h3;
   content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
 }
 .dcl {
   /* block 水平置中的方法 */
@@ -2040,7 +2060,104 @@ M:mucosa (Intraepithelial gland )<br>
 <h3 class="mume-header" id="littre-gland">Littre gland</h3>
 
 <p><img src="paste_src/2022-12-14-12-34-16.png" alt></p>
+<h1 class="mume-header" id="%E7%94%9F%E6%AE%96%E7%B3%BB%E7%B5%B1">&#x751F;&#x6B96;&#x7CFB;&#x7D71;</h1>
+
+<h2 class="mume-header" id="testes">Testes</h2>
+
+<p><img src="paste_src/2022-12-16-15-53-00.png" alt><br>
+<img src="paste_src/2022-12-16-16-07-01.png" alt></p>
+<ul>
+<li>&#x7D04;250 &#x500B;&#x5C0F;&#x8449;</li>
+<li>TA: Dense irregular</li>
+</ul>
+<h3 class="mume-header" id="seminiferous-tubules">Seminiferous tubules</h3>
+
+<p><img src="paste_src/2022-12-16-16-09-13.png" alt></p>
+<ul>
+<li>Tunica (lamina) propria
+<ul>
+<li>Myoid cell
+<ul>
+<li>&#x6536;&#x7E2E;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Wave of the seminiferous tubule
+<ul>
+<li>&#x5206;&#x5340;&#x6210;&#x719F;</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="sertoli-cell-st">Sertoli cell (St)</h4>
+
+<ul>
+<li>&#x652F;&#x6301;&#x7D30;&#x80DE;</li>
+<li>&#x9577;&#x6838;&#xFF0C;&#x6DE1;&#x67D3;</li>
+<li>&#x6838;&#x4EC1;&#x660E;&#x986F;(Karyosome)</li>
+<li>&#x8840;&#x776A;&#x969C;&#x58C1;(blood-testis barrier)&#xFF0C;&#x963B;&#x64CB;&#x514D;&#x75AB;</li>
+</ul>
+<p><img src="paste_src/2022-12-16-16-25-24.png" alt></p>
+<h4 class="mume-header" id="spermatogenic-cell">Spermatogenic cell</h4>
+
+<p>&#x7D30;&#x80DE;&#x8CEA;&#x6703;&#x4E00;&#x76F4;&#x9ECF;&#x5728;&#x4E00;&#x8D77;</p>
+<ul>
+<li>Spermatogonia (SA, SB)
+<ul>
+<li>&#x8CBC;&#x5728; basal lamina</li>
+</ul>
+</li>
+<li>Primary spermatocyte (S1)
+<ul>
+<li>&#x82B1;&#x6838;&#xFF0C;&#x6700;&#x5927;</li>
+</ul>
+</li>
+<li>Spermatid (S3)
+<ul>
+<li>early</li>
+<li>late</li>
+</ul>
+</li>
+<li>Spermatozoa (S4)</li>
+</ul>
+<img src="paste_src/2022-12-16-16-32-35.png" alt width="100%">
+<img src="paste_src/2022-12-16-16-43-49.png" alt width="70%">
+<img src="paste_src/2022-12-16-16-51-06.png" alt width="29%">
+<h3 class="mume-header" id="interstitium">Interstitium</h3>
+
+<h4 class="mume-header" id="leydig-cell">Leydig cell</h4>
+
+<ul>
+<li>&#x6838;&#x5927;&#x6DE1;&#x67D3;&#xFF0C;&#x6838;&#x4EC1;&#x660E;&#x986F;</li>
+<li>&#x6578;&#x9846;&#x805A;&#x96C6;</li>
+</ul>
+<p><img src="paste_src/2022-12-16-17-09-58.png" alt></p>
+<h3 class="mume-header" id="intratesticular-ductus">Intratesticular Ductus</h3>
+
+<h4 class="mume-header" id="rectus-tubule-rightarrow-rete-testis">Rectus tubule <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Rete testis</h4>
+
+<ul>
+<li>&#x67F1;&#x72C0; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> &#x7ACB;&#x65B9; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> &#x6241;&#x5E73;<br>
+<img src="paste_src/2022-12-16-17-18-29.png" alt></li>
+</ul>
+<h4 class="mume-header" id="efferent-ductule">Efferent Ductule</h4>
+
+<ul>
+<li>&#x9AD8;&#x77EE;&#x7D30;&#x80DE;&#x51FA;&#x982D;&#xFF0C;&#x7BA1;&#x58C1;&#x6CE2;&#x6D6A;</li>
+</ul>
+<p><img src="paste_src/2022-12-16-17-21-10.png" alt></p>
 <br><br>
+<script>
+var mdPreview = document.getElementsByClassName('mume');
+for (var i = 0; i < mdPreview.length; i++) {
+  mdPreview[i].addEventListener('click', function(event) {
+    event.stopPropagation();
+    if (document.body.hasAttribute('html-show-sidebar-toc')){
+      document.body.removeAttribute('html-show-sidebar-toc');
+    }
+  })
+}
+</script>
       </div>
       <div class="md-sidebar-toc"><ul>
 <li><a href="#%E7%B5%84%E7%B9%94">&#x7D44;&#x7E54;</a></li>
@@ -2312,6 +2429,31 @@ M:mucosa (Intraepithelial gland )<br>
 <ul>
 <li><a href="#intraepithelial-gland">Intraepithelial gland</a></li>
 <li><a href="#littre-gland">Littre gland</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%94%9F%E6%AE%96%E7%B3%BB%E7%B5%B1">&#x751F;&#x6B96;&#x7CFB;&#x7D71;</a>
+<ul>
+<li><a href="#testes">Testes</a>
+<ul>
+<li><a href="#seminiferous-tubules">Seminiferous tubules</a>
+<ul>
+<li><a href="#sertoli-cell-st">Sertoli cell (St)</a></li>
+<li><a href="#spermatogenic-cell">Spermatogenic cell</a></li>
+</ul>
+</li>
+<li><a href="#interstitium">Interstitium</a>
+<ul>
+<li><a href="#leydig-cell">Leydig cell</a></li>
+</ul>
+</li>
+<li><a href="#intratesticular-ductus">Intratesticular Ductus</a>
+<ul>
+<li><a href="#rectus-tubule-rightarrow-rete-testis">Rectus tubule <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Rete testis</a></li>
+<li><a href="#efferent-ductule">Efferent Ductule</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

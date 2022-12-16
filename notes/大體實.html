@@ -62,13 +62,29 @@
 .markdown-preview table tr {
   border: 1.5px solid #b7b7b7;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
-  left: 0.1;
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
   width: 100%;
   max-width: 914px;
-  padding: 2em;
-  margin: 0;
   box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 32px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
 }
 html {
   /* 侧栏 */
@@ -80,7 +96,6 @@ html .md-sidebar-toc {
   margin: 0rem 0rem 0em 0em;
   padding: 0rem 0rem 0em 0rem;
   z-index: 70;
-  font-size: 10em;
   width: auto;
   max-width: 768px;
   margin-bottom: 1em;
@@ -91,6 +106,7 @@ html .md-sidebar-toc {
 }
 html .md-sidebar-toc a {
   color: inherit;
+  font-size: 0.7rem !important;
 }
 html .md-sidebar-toc a:hover {
   color: inherit;
@@ -107,7 +123,7 @@ html .md-sidebar-toc ul {
   padding-right: 0 !important;
 }
 html .md-sidebar-toc ul li {
-  font-size: 1.1rem !important;
+  font-size: 0.8rem !important;
   /*字号*/
   font-weight: bold;
   /*一级大纲*/
@@ -129,7 +145,7 @@ html .md-sidebar-toc ul ul:hover {
 }
 html .md-sidebar-toc ul ul li {
   margin-bottom: 8pt !important;
-  margin-top: 8pt !important;
+  margin-top: 3pt !important;
   margin-left: 0rem;
   font-size: 0.8rem !important;
   /*字号*/
@@ -177,18 +193,22 @@ html .md-sidebar-toc ul ul ul ul li {
 html .md-sidebar-toc ul ul li:before {
   counter-increment: outline-h2;
   content: counter(outline-h2) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul li:before {
   counter-increment: outline-h3;
   content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
 }
 html .md-sidebar-toc ul ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
 }
 .dcl {
   /* block 水平置中的方法 */
@@ -326,6 +346,17 @@ table th{
     .c {color: #f0f;}
 </style>
 <br><br>
+<script>
+var mdPreview = document.getElementsByClassName('mume');
+for (var i = 0; i < mdPreview.length; i++) {
+  mdPreview[i].addEventListener('click', function(event) {
+    event.stopPropagation();
+    if (document.body.hasAttribute('html-show-sidebar-toc')){
+      document.body.removeAttribute('html-show-sidebar-toc');
+    }
+  })
+}
+</script>
       </div>
       <div class="md-sidebar-toc"><ul>
 <li><a href="#%E5%A4%A7%E9%AB%94%E5%AF%A6">&#x5927;&#x9AD4;&#x5BE6;</a>
