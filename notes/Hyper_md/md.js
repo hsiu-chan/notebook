@@ -2,10 +2,13 @@
 var getUrlString = location.href;//取得網址
 var url = new URL(getUrlString);
 if (url.searchParams.get('id')=='3i'){
-  var home = document.createElement("a");
+  var home = document.createElement("btn");
   home.innerHTML = "<i class=\"fa-solid fa-angles-left\"></i>";
-  home.style = "top:8px;left:8px;position:fixed;z-index: 99;font-size: 24px;cursor: pointer;color: inherit;text-align: center;width: 32px;cursor: pointer;opacity: .4;word-wrap: break-word;";
-  home.href="../index.html"
+  home.style = "top:8px;left:8px;";
+  home.setAttribute('herf', "../index.html");
+  home.addEventListener('click', function() {
+    location.href='../index.html';
+  });
   document.body.appendChild(home);
 }
 
@@ -21,6 +24,21 @@ window.onload=function(){
   script.setAttribute('crossorigin', 'anonymous');
   head.appendChild(script);//将script标签添加到head的子节点下
 }
+
+var share_bt = document.createElement("btn");
+share_bt.innerHTML = "<i class=\"fa fa-share-alt fa-18\"></i>";
+share_bt.style = "top:8px;left:40px;";
+share_bt.addEventListener('click', function() {
+  const value = decodeURI(url.hostname+url.pathname);
+  const el = document.createElement('textarea');
+  el.value = value;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+});
+document.body.appendChild(share_bt);
+
 
 var mdPreview = document.getElementsByClassName('mume');
 for (var i = 0; i < mdPreview.length; i++) {

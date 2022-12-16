@@ -255,3 +255,17 @@ footer {
       font-size:9pt;                              
   }
   */
+btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+btn:active {
+  opacity: 0.8;
+}
