@@ -319,15 +319,16 @@
 .markdown-preview table tr {
   border: 1.5px solid #b7b7b7;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
   max-width: 914px;
-  padding: 1em;
-  margin: 0;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
 }
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
   position: fixed;
@@ -341,12 +342,6 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   box-sizing: border-box;
   overflow: auto;
   background-color: inherit;
-}
-html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
-  left: 0;
-  transform: translateX(0%);
-  margin-left: auto;
-  margin-right: auto;
 }
 html {
   /* 侧栏 */
