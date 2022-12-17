@@ -22,3 +22,20 @@ document.getElementById('my_test').addEventListener('change', function(event) {	
 	}
   idxs.textContent=result;
 });
+
+var Main_LeftListLiSelector = $(".md-sidebar-toc li");
+$(Main_LeftListLiSelector).on('click', function() {
+$(Main_LeftListLiSelector).removeClass('active');
+$(this).addClass('active');
+});
+
+
+var mdPreview = document.getElementsByClassName('mume');
+for (var i = 0; i < mdPreview.length; i++) {
+  mdPreview[i].addEventListener('click', function(event) {
+    event.stopPropagation();
+    if (document.body.hasAttribute('html-show-sidebar-toc')){
+      document.body.removeAttribute('html-show-sidebar-toc');
+    }
+  })
+}

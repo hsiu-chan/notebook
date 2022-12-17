@@ -42,16 +42,16 @@ html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{li
 /*costumer*/
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
 .markdown-preview {
   width: 100%;
   position: absolute;
   z-index: 0;
 }
-
-.markdown-preview .title{
+.markdown-preview .title {
   align-items: center;
 }
-.markdown-preview .title h1{
+.markdown-preview .title h1 {
   border-bottom: 0;
   text-align: center;
   font-size: 2.75em;
@@ -122,6 +122,10 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html {
   /* 侧栏 */
+  /*.md-sidebar-toc ul li:hover > ul,
+    .md-sidebar-toc ul li:hover > ul ul{
+      display: block;
+    }*/
   /* 侧栏自动编号 */
   /* 复位计数器 */
   /* 进行编号 */
@@ -169,8 +173,13 @@ html .md-sidebar-toc ul ul {
   padding-left: 0rem !important;
   display: none;
 }
-html .md-sidebar-toc ul li:hover > ul,
-html .md-sidebar-toc ul li:hover > ul ul {
+html .md-sidebar-toc .active {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc .active ul,
+html .md-sidebar-toc .active ul ul,
+html .md-sidebar-toc .active li {
   display: block;
 }
 html .md-sidebar-toc ul ul:hover {
@@ -298,3 +307,17 @@ footer {
       font-size:9pt;                              
   }
   */
+.btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+.btn:active {
+  opacity: 0.8;
+}

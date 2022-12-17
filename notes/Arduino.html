@@ -20,7 +20,9 @@
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="arduino">Arduino</h1>
+      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+      <script src="Hyper_md/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="Hyper_md/md.css"><h1 class="mume-header" id="arduino">Arduino</h1>
 
 <h2 class="mume-header" id="pinmodename-definition">pinMode(name, definition)</h2>
 
@@ -151,6 +153,14 @@ const GFXfont Tiny3x3a2pt7b PROGMEM = {(uint8_t *)Tiny3x3a2pt7bBitmaps,
 <p>&#x8D77;&#x9EDE;&#x958B;&#x59CB;&#x5230;&#x4E0B;&#x4E00;&#x500B;&#x5B57;&#x8D77;&#x9EDE;&#x524D;&#x5C55;&#x958B;&#x6210;&#x4E8C;&#x9032;&#x5236;&#x586B;&#x5165;W*H&#x683C;&#x5B50;&#x88E1;</p>
 <br><br>
 <script type="text/javascript" src="Hyper_md/md.js"></script>
+<script> 
+var Main_LeftListLiSelector = $(".md-sidebar-toc li");
+
+$(Main_LeftListLiSelector).on('click', function() {
+  $(Main_LeftListLiSelector).removeClass('active');
+  $(this).addClass('active');
+});
+</script>
       </div>
       <div class="md-sidebar-toc"><ul>
 <li><a href="#arduino">Arduino</a>

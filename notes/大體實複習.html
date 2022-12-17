@@ -277,7 +277,9 @@
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <div><h1 class="mume-header" id="%E9%AA%A8%E5%AD%B8">&#x9AA8;&#x5B78;</h1>
+      <div><script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+      <script src="Hyper_md/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="Hyper_md/md.css"><h1 class="mume-header" id="%E9%AA%A8%E5%AD%B8">&#x9AA8;&#x5B78;</h1>
 
 <h2 class="mume-header" id="%E8%84%8A%E6%A4%8E">&#x810A;&#x690E;</h2>
 
@@ -1389,7 +1391,15 @@ cf--&gt;df[Deep fibular n.]
 <p><img src="paste_src/2022-10-16-00-57-28.png" alt></p>
 </details>
 <br><br>
-<script type="text/javascript" src="Hyper_md/md.js"></script></div>
+<script type="text/javascript" src="Hyper_md/md.js"></script>
+<script> 
+var Main_LeftListLiSelector = $(".md-sidebar-toc li");
+
+$(Main_LeftListLiSelector).on('click', function() {
+  $(Main_LeftListLiSelector).removeClass('active');
+  $(this).addClass('active');
+});
+</script></div>
       </div>
       <div class="md-sidebar-toc"><ul>
 <li><a href="#%E9%AA%A8%E5%AD%B8">&#x9AA8;&#x5B78;</a>
