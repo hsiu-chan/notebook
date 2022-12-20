@@ -20,7 +20,9 @@
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <p><a href="../index.md">&#x56DE;&#x5230;&#x76EE;&#x9304;</a> <a href="../index.html">&#x2622;&#xFE0F;</a></p>
+      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+      <script src="Hyper_md/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="Hyper_md/md.css"><p><a href="../index.md">&#x56DE;&#x5230;&#x76EE;&#x9304;</a> <a href="../index.html">&#x2622;&#xFE0F;</a></p>
 <h1 class="mume-header" id="%E6%A6%82%E8%BF%B0">&#x6982;&#x8FF0;</h1>
 
 <ul>
@@ -239,6 +241,14 @@ g-.&#x6587;&#x672C;.-h
     C --&gt;|Two| E[Result two]
 </div><br><br>
 <script type="text/javascript" src="Hyper_md/md.js"></script>
+<script> 
+var Main_LeftListLiSelector = $(".md-sidebar-toc li");
+
+$(Main_LeftListLiSelector).on('click', function() {
+  $(Main_LeftListLiSelector).removeClass('active');
+  $(this).addClass('active');
+});
+</script>
       </div>
       <div class="md-sidebar-toc"><ul>
 <li><a href="#%E6%A6%82%E8%BF%B0">&#x6982;&#x8FF0;</a></li>

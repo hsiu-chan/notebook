@@ -277,7 +277,9 @@
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="triangle">Triangle</h1>
+      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+      <script src="Hyper_md/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="Hyper_md/md.css"><h1 class="mume-header" id="triangle">Triangle</h1>
 
 <p><img src="paste_src/2022-11-04-16-38-25.png" alt></p>
 <h1 class="mume-header" id="artery">Artery</h1>
@@ -2776,6 +2778,14 @@ sm---smt
 </ul>
 <br><br>
 <script type="text/javascript" src="Hyper_md/md.js"></script>
+<script> 
+var Main_LeftListLiSelector = $(".md-sidebar-toc li");
+
+$(Main_LeftListLiSelector).on('click', function() {
+  $(Main_LeftListLiSelector).removeClass('active');
+  $(this).addClass('active');
+});
+</script>
       </div>
       <div class="md-sidebar-toc"><ul>
 <li><a href="#triangle">Triangle</a></li>

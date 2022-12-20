@@ -79,6 +79,10 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html {
   /* 侧栏 */
+  /*.md-sidebar-toc ul li:hover > ul,
+    .md-sidebar-toc ul li:hover > ul ul{
+      display: block;
+    }*/
   /* 侧栏自动编号 */
   /* 复位计数器 */
   /* 进行编号 */
@@ -126,8 +130,13 @@ html .md-sidebar-toc ul ul {
   padding-left: 0rem !important;
   display: none;
 }
-html .md-sidebar-toc ul li:hover > ul,
-html .md-sidebar-toc ul li:hover > ul ul {
+html .md-sidebar-toc .active {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc .active ul,
+html .md-sidebar-toc .active ul ul,
+html .md-sidebar-toc .active li {
   display: block;
 }
 html .md-sidebar-toc ul ul:hover {

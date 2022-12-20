@@ -178,10 +178,17 @@
       padding-left: 0rem !important;
       display: none;
     }
-    .md-sidebar-toc ul li:hover > ul,
+    .md-sidebar-toc .active{
+      color:rgb(135, 255, 255);
+      font-style: italic;
+      ul, ul ul, li{
+      display: block;
+      }
+    }
+    /*.md-sidebar-toc ul li:hover > ul,
     .md-sidebar-toc ul li:hover > ul ul{
       display: block;
-    }
+    }*/
     .md-sidebar-toc ul ul:hover {
       //background-color: rgb(115, 115, 115);
       color:rgb(135, 255, 255);
