@@ -36,8 +36,15 @@ window.onload=function(){
 $(Main_LeftListLiSelector).on('click', function() {
 $(Main_LeftListLiSelector).removeClass('active');
 $(this).addClass('active');
-});`
+});`//收闔目錄
   head.appendChild(script);
+
+  //tocs=document.querySelectorAll('.md-sidebar-toc ul ul')
+  //for (var i=0; i<tocs.length; i++){
+    //tocs[i].style='display:none'
+  //}
+
+
 }
 
 var share_bt = document.createElement("div");
@@ -55,12 +62,6 @@ share_bt.addEventListener('click', function() {
 });
 document.body.appendChild(share_bt);
 
-var Main_LeftListLiSelector = $(".md-sidebar-toc li");
-
-$(Main_LeftListLiSelector).on('click', function() {
-  $(Main_LeftListLiSelector).removeClass('active');
-  $(this).addClass('active');
-});
 
 
 
