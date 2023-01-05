@@ -272,6 +272,286 @@
   content: "\E244";
 }
 
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.markdown-preview .title {
+  align-items: center;
+}
+.markdown-preview .title h1 {
+  border-bottom: 0;
+  text-align: center;
+  font-size: 2.75em;
+}
+.markdown-preview h1 {
+  padding-bottom: 0.3rem;
+  border-bottom: solid #fff;
+}
+.markdown-preview h2 {
+  font-weight: normal;
+  padding-bottom: 0.3rem;
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview h3 {
+  font-weight: bold;
+}
+.markdown-preview h4 {
+  font-style: italic;
+  font-weight: normal ;
+  font-size: 1.2em;
+}
+.markdown-preview hr {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview table {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+  text-align: center;
+  color: #f0ffff;
+}
+.markdown-preview table th {
+  text-align: center;
+  font-weight: bold;
+  color: #81b4f4;
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table td {
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table tr {
+  border: 1.5px solid #b7b7b7;
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
+  width: 100%;
+  max-width: 914px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 32px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
+}
+html {
+  /* 侧栏 */
+  /*.md-sidebar-toc ul li:hover > ul,
+    .md-sidebar-toc ul li:hover > ul ul{
+      display: block;
+    }*/
+  /* 侧栏自动编号 */
+  /* 复位计数器 */
+  /* 进行编号 */
+}
+html .md-sidebar-toc {
+  margin: 0rem 0rem 0em 0em;
+  padding: 0rem 0rem 0em 0rem;
+  width: auto;
+  max-width: 768px;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  /*背景颜色*/
+  position: absolute;
+  z-index: 70;
+}
+html .md-sidebar-toc a {
+  color: inherit;
+  font-size: 0.7rem !important;
+}
+html .md-sidebar-toc a:hover {
+  color: inherit;
+}
+html .md-sidebar-toc li {
+  margin-left: 1rem;
+  margin-bottom: 0 !important;
+  text-align: left;
+  /*左对齐*/
+}
+html .md-sidebar-toc ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+  padding-right: 0 !important;
+}
+html .md-sidebar-toc ul li {
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-weight: bold;
+  /*一级大纲*/
+}
+html .md-sidebar-toc ul li:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc ul ul {
+  padding-left: 0rem !important;
+  display: none;
+}
+html .md-sidebar-toc .active {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc .active ul,
+html .md-sidebar-toc .active ul ul,
+html .md-sidebar-toc .active li {
+  display: block;
+}
+html .md-sidebar-toc ul ul:hover {
+  color: #87ffff;
+}
+html .md-sidebar-toc ul ul li {
+  margin-bottom: 8pt !important;
+  margin-top: 3pt !important;
+  margin-left: 0rem;
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 0.2rem;
+  border-left: 2px rgba(0, 0, 0, 0) solid;
+}
+html .md-sidebar-toc ul ul li:hover {
+  font-style: normal;
+  border-left: 2px solid;
+}
+html .md-sidebar-toc ul ul ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+}
+html .md-sidebar-toc ul ul ul li {
+  margin-top: 2pt !important;
+  margin-bottom: 2pt !important;
+  margin-left: 0rem;
+  padding-left: 0.5rem;
+  border-left: 0px;
+}
+html .md-sidebar-toc ul ul ul li:hover {
+  border-left: 0px solid;
+}
+html body {
+  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+}
+html .md-sidebar-toc li {
+  counter-reset: outline-h1;
+}
+html .md-sidebar-toc ul li {
+  counter-reset: outline-h2;
+}
+html .md-sidebar-toc ul ul li {
+  counter-reset: outline-h3;
+}
+html .md-sidebar-toc ul ul ul li {
+  counter-reset: outline-h4;
+}
+html .md-sidebar-toc ul ul ul ul li {
+  counter-reset: outline-h5;
+}
+html .md-sidebar-toc ul ul li:before {
+  counter-increment: outline-h2;
+  content: counter(outline-h2) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul li:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
+}
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
+}
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
+.btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+.btn:active {
+  opacity: 0.8;
+}
 
       </style>
     </head>
@@ -887,7 +1167,7 @@ T tubule<br>
 <p><img src="paste_src/2022-10-14-18-16-21.png" alt><br>
 <img src="paste_src/2022-11-09-22-19-38.png" alt></p>
 <div class="admonition info">
-<p class="admonition-title"> Purkinje fibers</p>
+<p class="admonition-title">Purkinje fibers</p>
 <ul>
 <li>Myocardium &#x7684;Actin, Myosin&#x7E96;&#x7DAD;&#x88AB;&#x795E;&#x7D93;&#x7E96;&#x7DAD;(Myofilament)&#x53D6;&#x4EE3;</li>
 <li>&#x6BD4;&#x5FC3;&#x808C;&#x7D30;&#x80DE;&#x5927;</li>
@@ -1058,7 +1338,7 @@ T tubule<br>
 <p>&#x7279;&#x6B8A;&#x67D3;&#x8272;&#x5F48;&#x6027;&#x7E96;&#x7DAD;<br>
 <img src="paste_src/2022-10-14-23-19-53.png" alt></p>
 <div class="admonition info">
-<p class="admonition-title"> &#x5F48;&#x6027;&#x52D5;&#x8108;&#x5167;&#x76AE;</p>
+<p class="admonition-title">&#x5F48;&#x6027;&#x52D5;&#x8108;&#x5167;&#x76AE;</p>
 <p><img src="paste_src/2022-10-14-22-19-43.png" alt></p>
 </div>
 <h4 class="mume-header" id="muscular-arteries">Muscular arteries</h4>
@@ -1214,7 +1494,7 @@ MnZ: Mantle zone(T cell)<br>
 </li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title"> Blood-thymus barrier</p>
+<p class="admonition-title">Blood-thymus barrier</p>
 <p><img src="paste_src/2022-10-22-16-30-06.png" alt></p>
 </div>
 <h4 class="mume-header" id="medulla">Medulla</h4>
@@ -1224,7 +1504,7 @@ MnZ: Mantle zone(T cell)<br>
 <li>epithelium reticular cell</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title"> Hassall&#x2019;s corpuscles</p>
+<p class="admonition-title">Hassall&#x2019;s corpuscles</p>
 <p>&#x570D;&#x6210;&#x540C;&#x5FC3;&#x5713;&#x7684;reticular cell<br>
 <img src="paste_src/2022-10-22-18-50-40.png" alt></p>
 </div>
@@ -1247,7 +1527,7 @@ MnZ: Mantle zone(T cell)<br>
 </ul>
 <p><img src="paste_src/2022-10-22-17-19-11.png" alt></p>
 <div class="admonition info">
-<p class="admonition-title"> Central artery</p>
+<p class="admonition-title">Central artery</p>
 <p><img src="paste_src/2022-10-22-18-44-54.png" alt></p>
 </div>
 <h2 class="mume-header" id="lymphocyte">Lymphocyte</h2>
@@ -1484,7 +1764,7 @@ MnZ: Mantle zone(T cell)<br>
 <img src="paste_src/2022-11-08-14-37-23.png" alt width="100%">
 <p><img src="paste_src/2022-11-08-14-44-26.png" alt></p>
 <div class="admonition info">
-<p class="admonition-title"> Optic disk</p>
+<p class="admonition-title">Optic disk</p>
 <p><img src="paste_src/2022-11-08-15-01-46.png" alt></p>
 </div>
 <h2 class="mume-header" id="tarsal-plate">Tarsal plate</h2>
@@ -1617,7 +1897,7 @@ MnZ: Mantle zone(T cell)<br>
 <img src="paste_src/2022-11-20-19-47-43.png" alt width="49%">
 <img src="paste_src/2022-11-20-19-52-01.png" alt width="49%">
 <div class="admonition info">
-<p class="admonition-title"> Cell of Epidermis</p>
+<p class="admonition-title">Cell of Epidermis</p>
 <ol>
 <li>Keratinocytes (&#x89D2;&#x8CEA;&#x5316;)</li>
 <li><a href="#melanocytes">Melanocytes</a> (&#x9ED1;&#x8272;&#x7D20;)</li>
@@ -1698,6 +1978,39 @@ MnZ: Mantle zone(T cell)<br>
 <li>&#x8072;&#x9580;&#x4E0B;&#xFF1A;Pseudostratified ciliated columnar epithelium</li>
 </ul>
 <img src="paste_src/2022-11-27-15-36-48.png" alt width="40%">
+<div class="admonition info">
+<p class="admonition-title">&#x8EDF;&#x9AA8;&#x985E;&#x578B;</p>
+<table>
+<thead>
+<tr>
+<th>Cartilage</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Epiglottic</td>
+<td>elastic</td>
+</tr>
+<tr>
+<td>Thyroid</td>
+<td>hyaline</td>
+</tr>
+<tr>
+<td>Arytenoid</td>
+<td>elastic,&#xA0;<br>hyaline</td>
+</tr>
+<tr>
+<td>Cricoid</td>
+<td>hyaline</td>
+</tr>
+<tr>
+<td>C-shape</td>
+<td>hyaline</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h2 class="mume-header" id="trachea">Trachea</h2>
 
 <img src="paste_src/2022-11-27-15-40-24.png" alt width="50%">
@@ -1791,7 +2104,7 @@ L lymphatics<br>
 </li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title"> Serous semilunar</p>
+<p class="admonition-title">Serous semilunar</p>
 <p><img src="paste_src/2022-12-26-02-59-53.png" alt></p>
 </div>
 <ul>
@@ -1856,13 +2169,18 @@ L lymphatics<br>
 <ul>
 <li>Cementum</li>
 <li>Periodontal ligament/ Sharpey fibers (collagen fibers )</li>
-<li>Alveolar bone with the associated gingiva<br>
-<img src="paste_src/2022-12-26-23-57-50.png" alt><br>
-<img src="paste_src/2022-12-27-00-01-06.png" alt></li>
+<li>Alveolar bone with the associated gingiva</li>
 </ul>
+<img src="paste_src/2022-12-26-23-57-50.png" alt width="40%">
+<img src="paste_src/2022-12-27-00-01-06.png" alt width="55%">
 <h2 class="mume-header" id="lab-2">Lab</h2>
 
 <img src="paste_src/2022-12-27-00-19-44.png" alt width="100%">
+<img src="paste_src/2022-12-27-01-23-14.png" alt width="100%">
+<img src="paste_src/2022-12-27-01-26-22.png" alt width="100%">
+<img src="paste_src/2022-12-27-01-28-44.png" alt width="100%">
+<img src="paste_src/2022-12-27-01-29-11.png" alt width="100%">
+<img src="paste_src/2022-12-27-01-30-26.png" alt width="100%">
 <h1 class="mume-header" id="%E6%B3%8C%E5%B0%BF%E7%B3%BB%E7%B5%B1">&#x6CCC;&#x5C3F;&#x7CFB;&#x7D71;</h1>
 
 <h2 class="mume-header" id="renal">Renal</h2>
@@ -2097,7 +2415,7 @@ M:mucosa (Intraepithelial gland )<br>
 <h2 class="mume-header" id="lab-3">Lab</h2>
 
 <div class="admonition warning">
-<p class="admonition-title"> &#x8003;&#x8A66;&#x8981;&#x5BEB;&#x5206;&#x5C64;</p>
+<p class="admonition-title">&#x8003;&#x8A66;&#x8981;&#x5BEB;&#x5206;&#x5C64;</p>
 <ul>
 <li>Adventitia</li>
 <li>Outer longitudinal</li>
@@ -2255,9 +2573,22 @@ Theca internal (TI)
 <h2 class="mume-header" id="uterus">Uterus</h2>
 
 <ul>
-<li>Endometrium</li>
+<li>Epithelium
+<ul>
+<li>Ciliated columnar epithelium</li>
+<li>&#x51F9;&#x9677;&#x5F62;&#x6210; Endometrium gland</li>
+</ul>
+</li>
+<li>Endometrium
+<ul>
+<li>Functional layer</li>
+<li>Basal layer</li>
+</ul>
+</li>
 <li>Myometrium</li>
 </ul>
+<img src="paste_src/2022-12-27-01-10-47.png" alt width="49%">
+<img src="paste_src/2022-12-27-01-20-09.png" alt width="50%">
 <br><br>
 <script type="text/javascript" src="Hyper_md/md.js"></script>
 <script> 
