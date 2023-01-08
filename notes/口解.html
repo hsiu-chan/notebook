@@ -272,6 +272,286 @@
   content: "\E244";
 }
 
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.markdown-preview .title {
+  align-items: center;
+}
+.markdown-preview .title h1 {
+  border-bottom: 0;
+  text-align: center;
+  font-size: 2.75em;
+}
+.markdown-preview h1 {
+  padding-bottom: 0.3rem;
+  border-bottom: solid #fff;
+}
+.markdown-preview h2 {
+  font-weight: normal;
+  padding-bottom: 0.3rem;
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview h3 {
+  font-weight: bold;
+}
+.markdown-preview h4 {
+  font-style: italic;
+  font-weight: normal ;
+  font-size: 1.2em;
+}
+.markdown-preview hr {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview table {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+  text-align: center;
+  color: #f0ffff;
+}
+.markdown-preview table th {
+  text-align: center;
+  font-weight: bold;
+  color: #81b4f4;
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table td {
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table tr {
+  border: 1.5px solid #b7b7b7;
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
+  width: 100%;
+  max-width: 914px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 32px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
+}
+html {
+  /* 侧栏 */
+  /*.md-sidebar-toc ul li:hover > ul,
+  .md-sidebar-toc ul li:hover > ul ul{
+    display: block;
+  }*/
+  /* 侧栏自动编号 */
+  /* 复位计数器 */
+  /* 进行编号 */
+}
+html .md-sidebar-toc {
+  margin: 0rem 0rem 0em 0em;
+  padding: 0rem 0rem 0em 0rem;
+  width: auto;
+  max-width: 768px;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  /*背景颜色*/
+  position: absolute;
+  z-index: 70;
+}
+html .md-sidebar-toc a {
+  color: inherit;
+  font-size: 0.7rem !important;
+}
+html .md-sidebar-toc a:hover {
+  color: inherit;
+}
+html .md-sidebar-toc li {
+  margin-left: 1rem;
+  margin-bottom: 0 !important;
+  text-align: left;
+  /*左对齐*/
+}
+html .md-sidebar-toc ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+  padding-right: 0 !important;
+}
+html .md-sidebar-toc ul li {
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-weight: bold;
+  /*一级大纲*/
+}
+html .md-sidebar-toc ul li:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc ul ul {
+  padding-left: 0rem !important;
+  display: none;
+}
+html .md-sidebar-toc .active {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc .active ul,
+html .md-sidebar-toc .active ul ul,
+html .md-sidebar-toc .active li {
+  display: block;
+}
+html .md-sidebar-toc ul ul:hover {
+  color: #87ffff;
+}
+html .md-sidebar-toc ul ul li {
+  margin-bottom: 8pt !important;
+  margin-top: 3pt !important;
+  margin-left: 0rem;
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 0.2rem;
+  border-left: 2px rgba(0, 0, 0, 0) solid;
+}
+html .md-sidebar-toc ul ul li:hover {
+  font-style: normal;
+  border-left: 2px solid;
+}
+html .md-sidebar-toc ul ul ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+}
+html .md-sidebar-toc ul ul ul li {
+  margin-top: 2pt !important;
+  margin-bottom: 2pt !important;
+  margin-left: 0rem;
+  padding-left: 0.5rem;
+  border-left: 0px;
+}
+html .md-sidebar-toc ul ul ul li:hover {
+  border-left: 0px solid;
+}
+html body {
+  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+}
+html .md-sidebar-toc li {
+  counter-reset: outline-h1;
+}
+html .md-sidebar-toc ul li {
+  counter-reset: outline-h2;
+}
+html .md-sidebar-toc ul ul li {
+  counter-reset: outline-h3;
+}
+html .md-sidebar-toc ul ul ul li {
+  counter-reset: outline-h4;
+}
+html .md-sidebar-toc ul ul ul ul li {
+  counter-reset: outline-h5;
+}
+html .md-sidebar-toc ul ul li:before {
+  counter-increment: outline-h2;
+  content: counter(outline-h2) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul li:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
+}
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
+}
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
+/////三线表/////
+table{
+    border-top: 1.5pt solid;
+    border-bottom: 1.5pt solid;
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+    text-align:center;                          //文字居中
+  page-break-inside:avoid;                    //禁止断页
+  width: 100%;                                //扩展表格宽度
+  overflow: auto;
+  margin-bottom: 8pt;                         //表格间距
+  border-collapse:collapse;       
+}
+
+table .katex{
+  font-size: 9pt;                             //表内公式
+}
+table td{
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+    font-size:9pt;                              //表内文字
+}
+
+table thead{
+  border-bottom: 0.75pt solid black;        //三线表中间线
+}
+
+//标题行
+table th{
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+    font-size:9pt;                              
+}
+*/
+.btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+.btn:active {
+  opacity: 0.8;
+}
 
       </style>
     </head>
@@ -635,7 +915,7 @@ mt[Mid. temporal v.]--&gt;sp
 </li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title"> injure</p>
+<p class="admonition-title">injure</p>
 <p><img src="paste_src/2022-12-01-10-33-11.png" alt></p>
 </div>
 <h3 class="mume-header" id="cn-iv">CN IV</h3>
@@ -645,7 +925,7 @@ mt[Mid. temporal v.]--&gt;sp
 <li>Sup. oblique m.</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title"> injure</p>
+<p class="admonition-title">injure</p>
 <p>&#x8907;&#x8996;</p>
 </div>
 <h3 class="mume-header" id="cn-vi">CN VI</h3>
@@ -857,16 +1137,16 @@ click c &quot;#temporal-bone&quot;
 </div><img src="paste_src/2022-12-04-21-36-17.png" alt width="80%">
 <img src="paste_src/2022-10-06-03-24-00.png" alt width="80%">
 <div class="admonition info">
-<p class="admonition-title"> Parotid plexus</p>
+<p class="admonition-title">Parotid plexus</p>
 <p><img src="paste_src/2022-10-27-01-02-10.png" alt><br>
 <img src="https://i.imgur.com/KffJWrA.jpg" alt width="80%"></p>
 </div>
 <div class="admonition info">
-<p class="admonition-title"> Chorda tympanic</p>
+<p class="admonition-title">Chorda tympanic</p>
 <img src="paste_src/2022-10-05-19-50-47.png" alt width="80%">
 </div>
 <div class="admonition info">
-<p class="admonition-title"> Great petrosal and Vidian</p>
+<p class="admonition-title">Great petrosal and Vidian</p>
 <img src="paste_src/2022-10-12-21-29-56.png" alt width="80%">
 <p><a href="#lesser-petrosal-n">Lesser petrosal n.</a></p>
 </div>
@@ -931,7 +1211,7 @@ click c &quot;#temporal-bone&quot;
 <li>recurrent laryngeal n.&#x6CBF; tracheoesophageal groove &#x6500;&#x5347;(&#x5C31;&#x662F;&#x98DF;&#x9053;&#x548C;&#x6C23;&#x7BA1;&#x4E2D;&#x9593;)&#xFF0C;&#x63A5;&#x89F8; medial thyroid gland&#xFF0C;&#x5411;&#x5167;&#x947D;&#x5230; inf. constrictor&#xFF0C;&#x9032;&#x5165; larynx&#xFF0C;&#x540C;&#x6642;&#x652F;&#x914D;&#x611F;&#x89BA;&#x8207;&#x904B;&#x52D5;</li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title"> recurrent laryngeal n.</p>
+<p class="admonition-title">recurrent laryngeal n.</p>
 <ul>
 <li>left: arch of aorta</li>
 <li>right: Subclavian a.</li>
@@ -1189,7 +1469,7 @@ click lc &quot;#cn-v1&quot;
 </tr>
 </tbody></table>
 <div class="admonition info">
-<p class="admonition-title"> &#x518D;&#x751F;&#x4E09;&#x8981;&#x4EF6;</p>
+<p class="admonition-title">&#x518D;&#x751F;&#x4E09;&#x8981;&#x4EF6;</p>
 <ul>
 <li>Cell</li>
 <li>Scaffold</li>
@@ -1197,7 +1477,7 @@ click lc &quot;#cn-v1&quot;
 </ul>
 </div>
 <div class="admonition info">
-<p class="admonition-title"> &#x4E00;&#x4E9B;&#x55AE;&#x5B57;</p>
+<p class="admonition-title">&#x4E00;&#x4E9B;&#x55AE;&#x5B57;</p>
 <dl>
 <dt>notch</dt>
 <dd>&#x58D3;&#x8DE1;</dd>
@@ -1401,7 +1681,7 @@ click lc &quot;#cn-v1&quot;
 <p>F, Z, N, L, V, E, Pl, S, INC</p>
 
 <div class="admonition info">
-<p class="admonition-title"> &#x9AA8;&#x6298;</p>
+<p class="admonition-title">&#x9AA8;&#x6298;</p>
 <p><img src="paste_src/2022-11-05-14-35-56.png" alt></p>
 </div>
 <h3 class="mume-header" id="alveolar-bone">Alveolar bone</h3>
@@ -1431,7 +1711,7 @@ click lc &quot;#cn-v1&quot;
 <h3 class="mume-header" id="lacrimal-bone">Lacrimal bone</h3>
 
 <div class="admonition info">
-<p class="admonition-title"> &#x6DDA;&#x56CA;&#xFF08;lacrimal sac&#xFF09;</p>
+<p class="admonition-title">&#x6DDA;&#x56CA;&#xFF08;lacrimal sac&#xFF09;</p>
 <p>&#x76F8;&#x9130; lacrimal bone, maxillary bone</p>
 </div>
 <details>
@@ -1538,11 +1818,11 @@ rp--&gt;jd
 smt--&gt;jo
 p--&gt;jd
 </div><div class="admonition info">
-<p class="admonition-title"> Lingual Lymphatic nodes</p>
+<p class="admonition-title">Lingual Lymphatic nodes</p>
 <img src="paste_src/2022-11-05-01-31-52.png" alt width="100%">
 </div>
 <div class="admonition tip">
-<p class="admonition-title"> &#x75C5;&#x7076;</p>
+<p class="admonition-title">&#x75C5;&#x7076;</p>
 <p><img src="paste_src/2022-11-05-02-11-21.png" alt></p>
 </div>
 <h2 class="mume-header" id="groups">Groups</h2>
@@ -1721,7 +2001,7 @@ lp &amp; ue --&gt;idc
 <img src="paste_src/2022-10-09-22-16-30.png" alt width="100%">
 <img src="paste_src/2022-11-23-22-10-08.png" alt width="100%">
 <div class="admonition info">
-<p class="admonition-title"> Hypophyseal  fossa</p>
+<p class="admonition-title">Hypophyseal  fossa</p>
 <p>&#x8166;&#x4E0B;&#x5782;&#x9AD4;&#x5728;&#x9019;</p>
 </div>
 <h2 class="mume-header" id="nasal-septum-%E9%BC%BB%E4%B8%AD%E8%86%88">Nasal septum (&#x9F3B;&#x4E2D;&#x8188;)</h2>
@@ -1858,7 +2138,7 @@ fs[Frontal s.]--&gt;ei[ethmoidal infundibulum]--&gt;m
 
 <p><img src="paste_src/2022-11-23-22-19-14.png" alt></p>
 <div class="admonition info">
-<p class="admonition-title"> ethmoid bulla</p>
+<p class="admonition-title">ethmoid bulla</p>
 <p>Mid. ethmoid sinus &#x958B;&#x53E3;<br>
 <img src="paste_src/2022-10-09-22-43-50.png" alt></p>
 </div>
@@ -1933,7 +2213,7 @@ Post. band(3mm)</p>
 </ul>
 <p><img src="paste_src/2022-11-01-10-35-23.png" alt></p>
 <div class="admonition info">
-<p class="admonition-title"> collateral ligament</p>
+<p class="admonition-title">collateral ligament</p>
 <img src="paste_src/2022-11-01-10-59-28.png" alt width="100%">
 </div>
 <h2 class="mume-header" id="retrodiskal-tissues">retrodiskal tissues</h2>
@@ -1985,7 +2265,7 @@ Post. band(3mm)</p>
 <img src="paste_src/2022-10-22-00-33-42.png" alt></li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title"> Dehiscence &amp; Fenestration</p>
+<p class="admonition-title">Dehiscence &amp; Fenestration</p>
 <p><img src="paste_src/2022-10-22-01-01-55.png" alt></p>
 </div>
 <h2 class="mume-header" id="sharpeys-fiber">Sharpey&#x2019;s fiber</h2>
@@ -2111,7 +2391,7 @@ Post. band(3mm)</p>
 </li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title"> Hyoglossus m. &#x5916;&#x5074;</p>
+<p class="admonition-title">Hyoglossus m. &#x5916;&#x5074;</p>
 <ul>
 <li>Lingual n.</li>
 <li>Hypoglossal n.</li>
@@ -2275,7 +2555,7 @@ Post. band(3mm)</p>
 <li>Pharyngeal tonsil</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title"> Pharyngotympanic tube</p>
+<p class="admonition-title">Pharyngotympanic tube</p>
 <p><img src="paste_src/2022-11-24-00-03-31.png" alt></p>
 <ul>
 <li>&#x901A;&#x904E; Temporal bone</li>
@@ -2562,7 +2842,7 @@ Post. band(3mm)</p>
 <img src="paste_src/2022-12-22-01-11-28.png" alt width="57%">
 <img src="paste_src/2022-12-01-01-49-48.png" alt width="100%">
 <div class="admonition info">
-<p class="admonition-title"> &#x5047;&#x8072;&#x5E36;:Vestibular Fold</p>
+<p class="admonition-title">&#x5047;&#x8072;&#x5E36;:Vestibular Fold</p>
 <p><img src="paste_src/2022-12-01-01-58-10.png" alt></p>
 </div>
 <h2 class="mume-header" id="artery-5">Artery</h2>
