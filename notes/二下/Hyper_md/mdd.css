@@ -1,0 +1,280 @@
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.markdown-preview .title {
+  align-items: center;
+}
+.markdown-preview .title h1 {
+  border-bottom: 0;
+  text-align: center;
+  font-size: 2.75em;
+}
+.markdown-preview h1 {
+  padding-bottom: 0.3rem;
+  border-bottom: solid #fff;
+}
+.markdown-preview h2 {
+  font-weight: normal;
+  padding-bottom: 0.3rem;
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview h3 {
+  font-weight: bold;
+}
+.markdown-preview h4 {
+  font-style: italic;
+  font-weight: normal ;
+  font-size: 1.2em;
+}
+.markdown-preview hr {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview table {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+  text-align: center;
+  color: #f0ffff;
+}
+.markdown-preview table th {
+  text-align: center;
+  font-weight: bold;
+  color: #81b4f4;
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table td {
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table tr {
+  border: 1.5px solid #b7b7b7;
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
+  width: 100%;
+  max-width: 914px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 32px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
+}
+html {
+  /* 侧栏 */
+  /*.md-sidebar-toc ul li:hover > ul,
+    .md-sidebar-toc ul li:hover > ul ul{
+      display: block;
+    }*/
+  /* 侧栏自动编号 */
+  /* 复位计数器 */
+  /* 进行编号 */
+}
+html .md-sidebar-toc {
+  margin: 0rem 0rem 0em 0em;
+  padding: 0rem 0rem 0em 0rem;
+  width: auto;
+  max-width: 768px;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  /*背景颜色*/
+  position: absolute;
+  z-index: 70;
+}
+html .md-sidebar-toc a {
+  color: inherit;
+  font-size: 0.7rem !important;
+}
+html .md-sidebar-toc a:hover {
+  color: inherit;
+}
+html .md-sidebar-toc li {
+  margin-left: 1rem;
+  margin-bottom: 0 !important;
+  text-align: left;
+  /*左对齐*/
+}
+html .md-sidebar-toc ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+  padding-right: 0 !important;
+}
+html .md-sidebar-toc ul li {
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-weight: bold;
+  /*一级大纲*/
+}
+html .md-sidebar-toc ul li:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc ul ul {
+  padding-left: 0rem !important;
+  display: none;
+}
+html .md-sidebar-toc .active {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc .active ul,
+html .md-sidebar-toc .active ul ul,
+html .md-sidebar-toc .active li {
+  display: block;
+}
+html .md-sidebar-toc ul ul:hover {
+  color: #87ffff;
+}
+html .md-sidebar-toc ul ul li {
+  margin-bottom: 8pt !important;
+  margin-top: 3pt !important;
+  margin-left: 0rem;
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 0.2rem;
+  border-left: 2px rgba(0, 0, 0, 0) solid;
+}
+html .md-sidebar-toc ul ul li:hover {
+  font-style: normal;
+  border-left: 2px solid;
+}
+html .md-sidebar-toc ul ul ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+}
+html .md-sidebar-toc ul ul ul li {
+  margin-top: 2pt !important;
+  margin-bottom: 2pt !important;
+  margin-left: 0rem;
+  padding-left: 0.5rem;
+  border-left: 0px;
+}
+html .md-sidebar-toc ul ul ul li:hover {
+  border-left: 0px solid;
+}
+html body {
+  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+}
+html .md-sidebar-toc li {
+  counter-reset: outline-h1;
+}
+html .md-sidebar-toc ul li {
+  counter-reset: outline-h2;
+}
+html .md-sidebar-toc ul ul li {
+  counter-reset: outline-h3;
+}
+html .md-sidebar-toc ul ul ul li {
+  counter-reset: outline-h4;
+}
+html .md-sidebar-toc ul ul ul ul li {
+  counter-reset: outline-h5;
+}
+html .md-sidebar-toc ul ul li:before {
+  counter-increment: outline-h2;
+  content: counter(outline-h2) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul li:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
+}
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
+}
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
+.btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+.btn:active {
+  opacity: 0.8;
+}
