@@ -55,11 +55,11 @@ $.get(notes_url,
 
     $.each(dir, function (index, dir) {
       if(dir.type=='dir'){
-        var num=0;
         var lines=$('<ul>');
         console.log(dir.name);
         //遍歷檔案
         $.get(notes_url+'/'+dir.name,function(data){
+          let num=0;
           $.each(data,function(index,ele){
             let file_name=ele.name.split('.');
             if (file_name[1]=='html'){
@@ -69,22 +69,24 @@ $.get(notes_url,
               let line=$('<a>',{href:`${ele.path}?id=3i`,text:file_name[0] });
               $(lines).append($('<li>').append(line))
             }
-
           })
+          console.log(dir.name+'num'+num);
+          if (num>0){
+            $('#main').append($('<h2></h2>',{text: dir.name}));
+            $('#main').append(lines);
+            
+  
+          }
+
+
         },'json')
-        console.log(num);
 
 
         //console.log(lines[0]=="<ul></ul>");
         //console.log(lines[0]);
 
 
-        if (true){
-          $('#main').append($('<h2></h2>',{text: dir.name}));
-          $('#main').append(lines);
-          
-
-        }
+        
 
 
 
