@@ -43,15 +43,55 @@ document.getElementById('my_test').addEventListener('change', function(event) {	
 });
 
 
-const folder_path ='./notes';
-let result=[];
 
-var xhr = new XMLHttpRequest();
-xhr.open("GET", folder_path);
-xhr.send();
-console.log('xhr'+xhr.status);
-/*xmlhttp.send();
-if (xmlhttp.status==200) {
-  result = xmlhttp.responseText;
-}
-return result;*/
+const notes_url ='https://api.github.com/repos/hsiu-chan/notebook/contents/notes';
+
+
+
+
+$.get(notes_url,   
+  function(dir){
+  //let num=0;
+
+    $.each(dir, function (index, dir) {
+      if(dir.type=='dir'){
+        var num=0;
+        var lines=$('<ul>');
+        console.log(dir.name);
+        //遍歷檔案
+        $.get(notes_url+'/'+dir.name,function(data){
+          $.each(data,function(index,ele){
+            let file_name=ele.name.split('.');
+            if (file_name[1]=='html'){
+              num+=1;
+              console.log(file_name);
+
+              let line=$('<a>',{href:`${ele.path}?id=3i`,text:file_name[0] });
+              $(lines).append($('<li>').append(line))
+            }
+
+          })
+        },'json')
+        console.log(num);
+
+
+        //console.log(lines[0]=="<ul></ul>");
+        //console.log(lines[0]);
+
+
+        if (true){
+          $('#main').append($('<h2></h2>',{text: dir.name}));
+          $('#main').append(lines);
+          
+
+        }
+
+
+
+
+      }
+
+  });
+}, 'json');
+
+console.log($(".h2").length);
