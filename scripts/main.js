@@ -1,3 +1,4 @@
+
 /////側邊目錄收合////////////
 var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
 
@@ -18,6 +19,7 @@ for (var i = 0; i < mdPreview.length; i++) {
       document.body.removeAttribute('html-show-sidebar-toc');
     }
   })
+
 }
 ////////子目錄展開
 
@@ -29,10 +31,8 @@ $(this).addClass('active');
 
 
 
-
+/*
 var idxs= document.getElementById('tt')
-
-
 document.getElementById('my_test').addEventListener('change', function(event) {	//my_test 為觸發運作的按鈕
 	let files = event.target.files;	//選取之目標目錄內的檔案清單
 	let result=''	//(透過id)取得要放置圖片的標籤位置
@@ -41,7 +41,7 @@ document.getElementById('my_test').addEventListener('change', function(event) {	
 	}
   idxs.textContent=result;
 });
-
+*/
 
 
 const notes_url ='https://api.github.com/repos/hsiu-chan/notebook/contents/notes';
@@ -72,7 +72,7 @@ $.get(notes_url,
           })
           console.log(dir.name+'num'+num);
           if (num>0){
-            $('#main').append($('<h2></h2>',{text: dir.name}));
+            $('#main').append($('<h1></h1>',{text: dir.name}));
             $('#main').append(lines);
             
   
@@ -82,18 +82,7 @@ $.get(notes_url,
         },'json')
 
 
-        //console.log(lines[0]=="<ul></ul>");
-        //console.log(lines[0]);
-
-
-        
-
-
-
-
       }
 
   });
 }, 'json');
-
-console.log($(".h2").length);

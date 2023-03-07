@@ -6,9 +6,9 @@ if (url.searchParams.get('id')=='3i'){
   home.setAttribute('class', "btn");
   home.innerHTML = "<i class=\"fa-solid fa-angles-left\"></i>";
   home.style = "top:8px;left:8px;";
-  home.setAttribute('herf', "../index.html");
+  home.setAttribute('herf', "../../index.html");
   home.addEventListener('click', function() {
-    location.href='../index.html';
+    location.href='../../index.html';
   });
   document.body.appendChild(home);
 }
