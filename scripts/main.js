@@ -1,3 +1,46 @@
+///////爬取目錄/////////////
+const notes_url ='https://api.github.com/repos/hsiu-chan/notebook/contents/notes';
+$.get(notes_url,   
+  function(dir){
+  //let num=0;
+    let dir_id=0;
+
+    $.each(dir, function (index, dir) {
+      if(dir.type=='dir'){
+        var lines=$('<ul>');
+        console.log(dir.name);
+        //遍歷檔案
+        $.get(notes_url+'/'+dir.name,function(data){
+          let num=0;
+          $.each(data,function(index,ele){
+            let file_name=ele.name.split('.');
+            if (file_name[1]=='html'){
+              num+=1;
+              console.log(file_name);
+
+              let line=$('<a>',{href:`${ele.path}?id=3i`,text:file_name[0] });
+              $(lines).append($('<li>').append(line))
+            }
+          })
+          console.log(dir.name+'num'+num);
+          if (num>0){
+            $('#main').append($('<h1></h1>',{text: dir.name, id:`dir_id_${dir_id}`}));
+            $('#sidebar-toc').append(
+              $('<li>').append(
+                $('<a>',{text:dir.name, href:`#dir_id_${dir_id}`}))
+            )
+            $('#main').append(lines);
+            dir_id=dir_id+1;
+          }
+
+
+        },'json')
+
+
+      }
+
+  });
+}, 'json');
 
 /////側邊目錄收合////////////
 var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
@@ -42,47 +85,3 @@ document.getElementById('my_test').addEventListener('change', function(event) {	
   idxs.textContent=result;
 });
 */
-
-
-const notes_url ='https://api.github.com/repos/hsiu-chan/notebook/contents/notes';
-
-
-
-
-$.get(notes_url,   
-  function(dir){
-  //let num=0;
-
-    $.each(dir, function (index, dir) {
-      if(dir.type=='dir'){
-        var lines=$('<ul>');
-        console.log(dir.name);
-        //遍歷檔案
-        $.get(notes_url+'/'+dir.name,function(data){
-          let num=0;
-          $.each(data,function(index,ele){
-            let file_name=ele.name.split('.');
-            if (file_name[1]=='html'){
-              num+=1;
-              console.log(file_name);
-
-              let line=$('<a>',{href:`${ele.path}?id=3i`,text:file_name[0] });
-              $(lines).append($('<li>').append(line))
-            }
-          })
-          console.log(dir.name+'num'+num);
-          if (num>0){
-            $('#main').append($('<h1></h1>',{text: dir.name}));
-            $('#main').append(lines);
-            
-  
-          }
-
-
-        },'json')
-
-
-      }
-
-  });
-}, 'json');
