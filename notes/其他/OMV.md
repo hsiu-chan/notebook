@@ -106,9 +106,12 @@ systemctl enable zerotier-one.service
 
 # Wake on lan
 
+PC MAC 3C-9C-0F-7F-3D-D9
 
+```bash
+wakeonlan 3C:9C:0F:7F:3D:D9
 
-
+```
 
 # Portainer
 ## jellyfin
