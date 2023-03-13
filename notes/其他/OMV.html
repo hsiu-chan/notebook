@@ -1,0 +1,634 @@
+<!DOCTYPE html><html><head>
+      <title>OMV</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.markdown-preview .title {
+  align-items: center;
+}
+.markdown-preview .title h1 {
+  border-bottom: 0;
+  text-align: center;
+  font-size: 2.75em;
+}
+.markdown-preview h1 {
+  padding-bottom: 0.3rem;
+  border-bottom: solid #fff;
+}
+.markdown-preview h2 {
+  font-weight: normal;
+  padding-bottom: 0.3rem;
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview h3 {
+  font-weight: bold;
+}
+.markdown-preview h4 {
+  font-style: italic;
+  font-weight: normal ;
+  font-size: 1.2em;
+}
+.markdown-preview hr {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview table {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+  text-align: center;
+  color: #f0ffff;
+}
+.markdown-preview table th {
+  text-align: center;
+  font-weight: bold;
+  color: #81b4f4;
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table td {
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table tr {
+  border: 1.5px solid #b7b7b7;
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
+  width: 100%;
+  max-width: 914px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 32px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
+}
+html {
+  /* 侧栏 */
+  /*.md-sidebar-toc ul li:hover > ul,
+  .md-sidebar-toc ul li:hover > ul ul{
+    display: block;
+  }*/
+  /* 侧栏自动编号 */
+  /* 复位计数器 */
+  /* 进行编号 */
+}
+html .md-sidebar-toc {
+  margin: 0rem 0rem 0em 0em;
+  padding: 0rem 0rem 0em 0rem;
+  width: auto;
+  max-width: 768px;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  /*背景颜色*/
+  position: absolute;
+  z-index: 70;
+}
+html .md-sidebar-toc a {
+  color: inherit;
+  font-size: 0.7rem !important;
+}
+html .md-sidebar-toc a:hover {
+  color: inherit;
+}
+html .md-sidebar-toc li {
+  margin-left: 1rem;
+  margin-bottom: 0 !important;
+  text-align: left;
+  /*左对齐*/
+}
+html .md-sidebar-toc ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+  padding-right: 0 !important;
+}
+html .md-sidebar-toc ul li {
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-weight: bold;
+  /*一级大纲*/
+}
+html .md-sidebar-toc ul li:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc ul ul {
+  padding-left: 0rem !important;
+  display: none;
+}
+html .md-sidebar-toc .active {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc .active ul,
+html .md-sidebar-toc .active ul ul,
+html .md-sidebar-toc .active li {
+  display: block;
+}
+html .md-sidebar-toc ul ul:hover {
+  color: #87ffff;
+}
+html .md-sidebar-toc ul ul li {
+  margin-bottom: 8pt !important;
+  margin-top: 3pt !important;
+  margin-left: 0rem;
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 0.2rem;
+  border-left: 2px rgba(0, 0, 0, 0) solid;
+}
+html .md-sidebar-toc ul ul li:hover {
+  font-style: normal;
+  border-left: 2px solid;
+}
+html .md-sidebar-toc ul ul ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+}
+html .md-sidebar-toc ul ul ul li {
+  margin-top: 2pt !important;
+  margin-bottom: 2pt !important;
+  margin-left: 0rem;
+  padding-left: 0.5rem;
+  border-left: 0px;
+}
+html .md-sidebar-toc ul ul ul li:hover {
+  border-left: 0px solid;
+}
+html body {
+  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+}
+html .md-sidebar-toc li {
+  counter-reset: outline-h1;
+}
+html .md-sidebar-toc ul li {
+  counter-reset: outline-h2;
+}
+html .md-sidebar-toc ul ul li {
+  counter-reset: outline-h3;
+}
+html .md-sidebar-toc ul ul ul li {
+  counter-reset: outline-h4;
+}
+html .md-sidebar-toc ul ul ul ul li {
+  counter-reset: outline-h5;
+}
+html .md-sidebar-toc ul ul li:before {
+  counter-increment: outline-h2;
+  content: counter(outline-h2) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul li:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
+}
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
+}
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
+/////三线表/////
+table{
+    border-top: 1.5pt solid;
+    border-bottom: 1.5pt solid;
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+    text-align:center;                          //文字居中
+  page-break-inside:avoid;                    //禁止断页
+  width: 100%;                                //扩展表格宽度
+  overflow: auto;
+  margin-bottom: 8pt;                         //表格间距
+  border-collapse:collapse;       
+}
+
+table .katex{
+  font-size: 9pt;                             //表内公式
+}
+table td{
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+    font-size:9pt;                              //表内文字
+}
+
+table thead{
+  border-bottom: 0.75pt solid black;        //三线表中间线
+}
+
+//标题行
+table th{
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+    font-size:9pt;                              
+}
+*/
+.btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+.btn:active {
+  opacity: 0.8;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+      <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="pve">PVE</h1>
+
+<h1 class="mume-header" id="vi%E6%96%87%E5%AD%97%E7%B7%A8%E8%AD%AF%E5%99%A8">vi&#x6587;&#x5B57;&#x7DE8;&#x8B6F;&#x5668;</h1>
+
+<p><a href="https://"></a><a href="http://std.sssh.tp.edu.tw/lesson/linux/vi/vi.htm">http://std.sssh.tp.edu.tw/lesson/linux/vi/vi.htm</a></p>
+<h1 class="mume-header" id="%E7%B6%B2%E5%8D%A1">&#x7DB2;&#x5361;</h1>
+
+<p>&#x67E5;&#x770B;&#x7DB2;&#x5361;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">ip</span> -c a
+</pre><p>&#x958B;&#x555F;&#x7DB2;&#x5361;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">ip</span> <span class="token function">link</span> <span class="token builtin class-name">set</span> dev &#x7DB2;&#x5361;&#x540D;&#x7A31; up
+</pre><p>&#x4FEE;&#x6539;&#x7DB2;&#x5361;&#x8A2D;&#x5B9A;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">vi</span> /etc/network/interfaces
+</pre><h1 class="mume-header" id="iommu%E8%99%9B%E6%93%AC%E5%8C%96%E5%88%86%E7%B5%84">iommu&#x865B;&#x64EC;&#x5316;&#x5206;&#x7D44;</h1>
+
+<blockquote>
+<p><a href="https://"></a><a href="https://zhuanlan.zhihu.com/p/438793914?utm_id=0">https://zhuanlan.zhihu.com/p/438793914?utm_id=0</a></p>
+</blockquote>
+<p>&#x958B;&#x555F;iommu</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">vi</span> /etc/default/grub
+   
+<span class="token assign-left variable">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="token operator">=</span><span class="token string">&quot;quiet amd_iommu=on pcie_acs_override=downstream,multifunction video=vesafb:off video=efifb:off&quot;</span>
+    
+<span class="token function">update-grub</span>
+</pre><p>&#x4FEE;&#x6539;&#x5206;&#x7D44;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">vi</span> /etc/modules
+</pre><p>&#x4FEE;&#x6539;&#x70BA;</p>
+<pre data-role="codeBlock" data-info class="language-"><code>vfio
+vfio_iommu_type1
+vfio_pci
+vfio_virqfd
+</code></pre><p>&#x91CD;&#x555F;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">reboot</span>
+</pre><p>&#x5217;&#x51FA;&#x5206;&#x7D44;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token builtin class-name">shopt</span> -s nullglob
+<span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">g</span> <span class="token keyword keyword-in">in</span> <span class="token variable"><span class="token variable">`</span><span class="token function">find</span> /sys/kernel/iommu_groups/* -maxdepth <span class="token number">0</span> -type d <span class="token operator">|</span> <span class="token function">sort</span> -V<span class="token variable">`</span></span><span class="token punctuation">;</span> <span class="token keyword keyword-do">do</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;IOMMU Group <span class="token variable">${g<span class="token operator">##</span>*<span class="token operator">/</span>}</span>:&quot;</span>
+    <span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">d</span> <span class="token keyword keyword-in">in</span> <span class="token variable">$g</span>/devices/*<span class="token punctuation">;</span> <span class="token keyword keyword-do">do</span>
+        <span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\t">\t</span><span class="token variable"><span class="token variable">$(</span>lspci -nns $<span class="token punctuation">{</span>d<span class="token comment">##*/}</span><span class="token variable">)</span></span>&quot;</span>
+    <span class="token keyword keyword-done">done</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-done">done</span><span class="token punctuation">;</span>
+</pre><p>&#x67E5;&#x770B;pci<br>
+lspci</p>
+<h1 class="mume-header" id="%E7%A1%AC%E7%A2%9F%E7%9B%B4%E9%80%9A">&#x786C;&#x789F;&#x76F4;&#x901A;</h1>
+
+<p>&#x67E5;&#x770B;&#x786C;&#x789F;id</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">ls</span> -l /dev/disk/by-id
+</pre><p>&#x76F4;&#x901A;</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">qm <span class="token builtin class-name">set</span> &#x865B;&#x64EC;&#x6A5F;&#x7DE8;&#x865F; -sata? /dev/disk/by-id/&#x786C;&#x789F;id
+qm <span class="token builtin class-name">set</span> <span class="token number">100</span> -sata0 /dev/disk/by-id/ata-WDC_WD40EZAZ-00SF3B0_WD-WX42D817C5Z9
+qm <span class="token builtin class-name">set</span> <span class="token number">100</span> -sata1 /dev/disk/by-id/ata-ST4000NE001-2MA101_WS21YA8D
+</pre><h1 class="mume-header" id="omv">OMV</h1>
+
+<h2 class="mume-header" id="%E5%AE%89%E8%A3%9Dextra">&#x5B89;&#x88DD;EXTRA</h2>
+
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">wget</span> -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install <span class="token operator">|</span> <span class="token function">bash</span>
+</pre><h2 class="mume-header" id="%E5%AE%89%E8%A3%9D%E5%B8%B8%E7%94%A8%E5%A5%97%E4%BB%B6">&#x5B89;&#x88DD;&#x5E38;&#x7528;&#x5957;&#x4EF6;</h2>
+
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">apt</span> <span class="token function">install</span> <span class="token function">curl</span>
+</pre><h2 class="mume-header" id="zpool">zpool</h2>
+
+<pre data-role="codeBlock" data-info="bash" class="language-bash">zpool <span class="token function">import</span> -f
+</pre><h2 class="mume-header" id="zerotier">zerotier</h2>
+
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">curl</span> -s https://install.zerotier.com <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">bash</span>
+</pre><pre data-role="codeBlock" data-info="bash+" class="language-bash+"><code>zerotier-cli join 1c33c1ced02882a6
+</code></pre><p>&#x958B;&#x6A5F;&#x81EA;&#x555F;</p>
+<pre data-role="codeBlock" data-info="bash+" class="language-bash+"><code>systemctl start zerotier-one.service
+systemctl enable zerotier-one.service
+</code></pre><h1 class="mume-header" id="wake-on-lan">Wake on lan</h1>
+
+<h1 class="mume-header" id="portainer">Portainer</h1>
+
+<h2 class="mume-header" id="jellyfin">jellyfin</h2>
+
+<p>&#x53D6;&#x5F97;id</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">id</span> admin
+</pre><p>stacks</p>
+<pre data-role="codeBlock" data-info="jsonld=" class="language-jsonld="><code>---
+version: &quot;2.1&quot;
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=998
+      - PGID=100
+      - TZ=Asia/Taipei
+      #- JELLYFIN_PublishedServerUrl=192.168.0.5 #optional
+    volumes:
+      - /pool/AppData/jellyfin/config:/config
+      - /pool/AppData/jellyfin/cache:/cache
+      - /pool/media/TV:/data/TV
+      - /pool/media/movies:/data/movies
+    ports:
+      - 8096:8096
+      - 8920:8920 #optional
+      - 7359:7359/udp #optional
+      - 1900:1900/udp #optional
+    devices:
+      - /dev/dri:/dev/dri #optional
+    restart: always
+</code></pre><h2 class="mume-header" id="photoprism">photoprism</h2>
+
+<pre data-role="codeBlock" data-info="jsonld=" class="language-jsonld="><code>version: &apos;3.5&apos;
+
+# Example Docker Compose config file for PhotoPrism (Linux / AMD64)
+#
+# Note:
+# - Running PhotoPrism on a server with less than 4 GB of swap space or setting a memory/swap limit can cause unexpected
+#   restarts (&quot;crashes&quot;), for example, when the indexer temporarily needs more memory to process large files.
+# - If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
+#   HTTPS reverse proxy such as Traefik or Caddy. Your files and passwords will otherwise be transmitted
+#   in clear text and can be intercepted by anyone, including your provider, hackers, and governments:
+#   https://docs.photoprism.app/getting-started/proxies/traefik/
+#
+# Documentation : https://docs.photoprism.app/getting-started/docker-compose/
+# Docker Hub URL: https://hub.docker.com/r/photoprism/photoprism/
+#
+# DOCKER COMPOSE COMMAND REFERENCE
+# see https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface
+# --------------------------------------------------------------------------
+# Start    | docker-compose up -d
+# Stop     | docker-compose stop
+# Update   | docker-compose pull
+# Logs     | docker-compose logs --tail=25 -f
+# Terminal | docker-compose exec photoprism bash
+# Help     | docker-compose exec photoprism photoprism help
+# Config   | docker-compose exec photoprism photoprism config
+# Reset    | docker-compose exec photoprism photoprism reset
+# Backup   | docker-compose exec photoprism photoprism backup -a -i
+# Restore  | docker-compose exec photoprism photoprism restore -a -i
+# Index    | docker-compose exec photoprism photoprism index
+# Reindex  | docker-compose exec photoprism photoprism index -f
+# Import   | docker-compose exec photoprism photoprism import
+#
+# To search originals for faces without a complete rescan:
+# docker-compose exec photoprism photoprism faces index
+#
+# All commands may have to be prefixed with &quot;sudo&quot; when not running as root.
+# This will point the home directory shortcut ~ to /root in volume mounts.
+
+services:
+  photoprism:
+    ## Use photoprism/photoprism:preview for testing preview builds:
+    image: photoprism/photoprism:latest
+    depends_on:
+      - mariadb
+    ## Don&apos;t enable automatic restarts until PhotoPrism has been properly configured and tested!
+    ## If the service gets stuck in a restart loop, this points to a memory, filesystem, network, or database issue:
+    ## https://docs.photoprism.app/getting-started/troubleshooting/#fatal-server-errors
+    # restart: unless-stopped
+    security_opt:
+      - seccomp:unconfined
+      - apparmor:unconfined
+    ports:
+      - &quot;2342:2342&quot; # HTTP port (host:container)
+    environment:
+      PHOTOPRISM_ADMIN_PASSWORD: &quot;hsiu112358&quot;          # INITIAL PASSWORD FOR &quot;admin&quot; USER, MINIMUM 8 CHARACTERS
+      PHOTOPRISM_AUTH_MODE: &quot;hsiu112358&quot;               # authentication mode (public, password)
+      PHOTOPRISM_SITE_URL: &quot;http://localhost:2342/&quot;  # public server URL incl http:// or https:// and /path, :port is optional
+      PHOTOPRISM_ORIGINALS_LIMIT: 5000               # file size limit for originals in MB (increase for high-res video)
+      PHOTOPRISM_HTTP_COMPRESSION: &quot;gzip&quot;            # improves transfer speed and bandwidth utilization (none or gzip)
+      PHOTOPRISM_LOG_LEVEL: &quot;info&quot;                   # log level: trace, debug, info, warning, error, fatal, or panic
+      PHOTOPRISM_READONLY: &quot;false&quot;                   # do not modify originals directory (reduced functionality)
+      PHOTOPRISM_EXPERIMENTAL: &quot;false&quot;               # enables experimental features
+      PHOTOPRISM_DISABLE_CHOWN: &quot;false&quot;              # disables updating storage permissions via chmod and chown on startup
+      PHOTOPRISM_DISABLE_WEBDAV: &quot;false&quot;             # disables built-in WebDAV server
+      PHOTOPRISM_DISABLE_SETTINGS: &quot;false&quot;           # disables settings UI and API
+      PHOTOPRISM_DISABLE_TENSORFLOW: &quot;false&quot;         # disables all features depending on TensorFlow
+      PHOTOPRISM_DISABLE_FACES: &quot;false&quot;              # disables face detection and recognition (requires TensorFlow)
+      PHOTOPRISM_DISABLE_CLASSIFICATION: &quot;false&quot;     # disables image classification (requires TensorFlow)
+      PHOTOPRISM_DISABLE_RAW: &quot;false&quot;                # disables indexing and conversion of RAW files
+      PHOTOPRISM_RAW_PRESETS: &quot;false&quot;                # enables applying user presets when converting RAW files (reduces performance)
+      PHOTOPRISM_JPEG_QUALITY: 85                    # a higher value increases the quality and file size of JPEG images and thumbnails (25-100)
+      PHOTOPRISM_DETECT_NSFW: &quot;false&quot;                # automatically flags photos as private that MAY be offensive (requires TensorFlow)
+      PHOTOPRISM_UPLOAD_NSFW: &quot;true&quot;                 # allows uploads that MAY be offensive (no effect without TensorFlow)
+      # PHOTOPRISM_DATABASE_DRIVER: &quot;sqlite&quot;         # SQLite is an embedded database that doesn&apos;t require a server
+      PHOTOPRISM_DATABASE_DRIVER: &quot;mysql&quot;            # use MariaDB 10.5+ or MySQL 8+ instead of SQLite for improved performance
+      PHOTOPRISM_DATABASE_SERVER: &quot;mariadb:3306&quot;     # MariaDB or MySQL database server (hostname:port)
+      PHOTOPRISM_DATABASE_NAME: &quot;photopool&quot;         # MariaDB or MySQL database schema name
+      PHOTOPRISM_DATABASE_USER: &quot;photopool&quot;         # MariaDB or MySQL database user name
+      PHOTOPRISM_DATABASE_PASSWORD: &quot;hsiu112358&quot;       # MariaDB or MySQL database user password
+      PHOTOPRISM_SITE_CAPTION: &quot;AI-Powered Photos App&quot;
+      PHOTOPRISM_SITE_DESCRIPTION: &quot;&quot;                # meta site description
+      PHOTOPRISM_SITE_AUTHOR: &quot;&quot;                     # meta site author
+      ## Run/install on first startup (options: update gpu tensorflow davfs clitools clean):
+      # PHOTOPRISM_INIT: &quot;gpu tensorflow&quot;
+      ## Hardware Video Transcoding (for sponsors only due to high maintenance and support costs):
+      # PHOTOPRISM_FFMPEG_ENCODER: &quot;software&quot;        # FFmpeg encoder (&quot;software&quot;, &quot;intel&quot;, &quot;nvidia&quot;, &quot;apple&quot;, &quot;raspberry&quot;)
+      # PHOTOPRISM_FFMPEG_BITRATE: &quot;32&quot;              # FFmpeg encoding bitrate limit in Mbit/s (default: 50)
+      ## Run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, and 900-1200):
+      PHOTOPRISM_UID: 998
+      PHOTOPRISM_GID: 100
+      # PHOTOPRISM_UMASK: 0000
+    ## Start as non-root user before initialization (supported: 0, 33, 50-99, 500-600, and 900-1200):
+    # user: &quot;1000:1000&quot;
+    ## Share hardware devices with FFmpeg and TensorFlow (optional):
+    devices:
+      - &quot;/dev/dri:/dev/dri&quot;                         # Intel QSV
+    #  - &quot;/dev/nvidia0:/dev/nvidia0&quot;                 # Nvidia CUDA
+    #  - &quot;/dev/nvidiactl:/dev/nvidiactl&quot;
+    #  - &quot;/dev/nvidia-modeset:/dev/nvidia-modeset&quot;
+    #  - &quot;/dev/nvidia-nvswitchctl:/dev/nvidia-nvswitchctl&quot;
+    #  - &quot;/dev/nvidia-uvm:/dev/nvidia-uvm&quot;
+    #  - &quot;/dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools&quot;
+    #  - &quot;/dev/video11:/dev/video11&quot;                 # Video4Linux Video Encode Device (h264_v4l2m2m)
+    working_dir: &quot;/photoprism&quot; # do not change or remove
+    ## Storage Folders: &quot;~&quot; is a shortcut for your home directory, &quot;.&quot; for the current directory
+    volumes:
+      # &quot;/host/folder:/photoprism/folder&quot;                # Example
+      - &quot;/pool/photo:/photoprism/originals&quot;               # Original media files (DO NOT REMOVE)
+      # - &quot;/example/family:/photoprism/originals/family&quot; # *Additional* media folders can be mounted like this
+      - &quot;/pool/PhotoImport:/photoprism/import&quot;                  # *Optional* base folder from which files can be imported to originals
+      - &quot;/pool/AppData/photoprism:/photoprism/storage&quot;                  # *Writable* storage folder for cache, database, and sidecar files (DO NOT REMOVE)
+
+  ## Database Server (recommended)
+  ## see https://docs.photoprism.app/getting-started/faq/#should-i-use-sqlite-mariadb-or-mysql
+  mariadb:
+    ## If MariaDB gets stuck in a restart loop, this points to a memory or filesystem issue:
+    ## https://docs.photoprism.app/getting-started/troubleshooting/#fatal-server-errors
+    restart: always
+    image: mariadb:10.8
+    security_opt: # see https://github.com/MariaDB/mariadb-docker/issues/434#issuecomment-1136151239
+      - seccomp:unconfined
+      - apparmor:unconfined
+    command: mysqld --innodb-buffer-pool-size=512M --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120
+    ## Never store database files on an unreliable device such as a USB flash drive, an SD card, or a shared network folder:
+    volumes:
+      - &quot;./database:/var/lib/mysql&quot; # DO NOT REMOVE
+    environment:
+      MARIADB_AUTO_UPGRADE: &quot;1&quot;
+      MARIADB_INITDB_SKIP_TZINFO: &quot;1&quot;
+      MARIADB_DATABASE: &quot;photopool&quot;
+      MARIADB_USER: &quot;photopool&quot;
+      MARIADB_PASSWORD: &quot;hsiu112358&quot;
+      MARIADB_ROOT_PASSWORD: &quot;hsiu112358&quot;
+
+  ## Watchtower upgrades services automatically (optional)
+  ## see https://docs.photoprism.app/getting-started/updates/#watchtower
+  #
+  # watchtower:
+  #   restart: unless-stopped
+  #   image: containrrr/watchtower
+  #   environment:
+  #     WATCHTOWER_CLEANUP: &quot;true&quot;
+  #     WATCHTOWER_POLL_INTERVAL: 7200 # checks for updates every two hours
+  #   volumes:
+  #     - &quot;/var/run/docker.sock:/var/run/docker.sock&quot;
+  #     - &quot;~/.docker/config.json:/config.json&quot; # optional, for authentication if you have a Docker Hub account
+</code></pre><h1 class="mume-header" id="resilio-sync">resilio-sync</h1>
+
+<blockquote>
+<p>P2P&#x6A94;&#x6848;&#x540C;&#x6B65;</p>
+</blockquote>
+<pre data-role="codeBlock" data-info="jsonld=" class="language-jsonld="><code>---
+version: &quot;2.1&quot;
+services:
+  resilio-sync:
+    image: lscr.io/linuxserver/resilio-sync:latest
+    container_name: resilio-sync
+    environment:
+      - TZ=Asia/Taipei
+    volumes:
+      - /pool/AppData/resilio_sync/config:/config
+      - /pool/AppData/resilio_sync/downloads:/downloads
+      - /srv/dev-disk-by-uuid-299e144b-1976-43e8-95ed-c905ce01040b/transport:/sync
+    ports:
+      - 8888:8888
+      - 55555:55555
+    restart: unless-stopped
+</code></pre><br><br>
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+<script> 
+var Main_LeftListLiSelector = $(".md-sidebar-toc li");
+
+$(Main_LeftListLiSelector).on('click', function() {
+  $(Main_LeftListLiSelector).removeClass('active');
+  $(this).addClass('active');
+});
+</script>
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#pve">PVE</a></li>
+<li><a href="#vi%E6%96%87%E5%AD%97%E7%B7%A8%E8%AD%AF%E5%99%A8">vi&#x6587;&#x5B57;&#x7DE8;&#x8B6F;&#x5668;</a></li>
+<li><a href="#%E7%B6%B2%E5%8D%A1">&#x7DB2;&#x5361;</a></li>
+<li><a href="#iommu%E8%99%9B%E6%93%AC%E5%8C%96%E5%88%86%E7%B5%84">iommu&#x865B;&#x64EC;&#x5316;&#x5206;&#x7D44;</a></li>
+<li><a href="#%E7%A1%AC%E7%A2%9F%E7%9B%B4%E9%80%9A">&#x786C;&#x789F;&#x76F4;&#x901A;</a></li>
+<li><a href="#omv">OMV</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%9Dextra">&#x5B89;&#x88DD;EXTRA</a></li>
+<li><a href="#%E5%AE%89%E8%A3%9D%E5%B8%B8%E7%94%A8%E5%A5%97%E4%BB%B6">&#x5B89;&#x88DD;&#x5E38;&#x7528;&#x5957;&#x4EF6;</a></li>
+<li><a href="#zpool">zpool</a></li>
+<li><a href="#zerotier">zerotier</a></li>
+</ul>
+</li>
+<li><a href="#wake-on-lan">Wake on lan</a></li>
+<li><a href="#portainer">Portainer</a>
+<ul>
+<li><a href="#jellyfin">jellyfin</a></li>
+<li><a href="#photoprism">photoprism</a></li>
+</ul>
+</li>
+<li><a href="#resilio-sync">resilio-sync</a></li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
