@@ -15,7 +15,7 @@ export_on_save:
 
 ## What is Tinea Capitis?
 
-A fungal infection of the **Head**.Happens to children of school age;and more often on girls than on boys.
+A fungal infection of the **Head**. Happens to children of school age;and more often on girls than on boys.
 
 
 <!-- #region -->
@@ -27,7 +27,11 @@ A fungal infection of the scalp.Happens to children of school age;and more often
 
 
 ## Symptoms?
-![](paste_src/2023-05-08-16-45-50.png =100)
+### Spot on the scalp
+![](paste_src/2023-05-09-15-25-17.png =100)
+![](paste_src/2023-05-09-15-30-44.png =100)
+### itch 
+![](paste_src/2023-05-09-15-22-33.png =100)
 
 ## How does Tinea Capitis spread?
 The disease can be transmitted by **humans** or **animals**. 
@@ -51,3 +55,5 @@ with tinea capitis. (such as combs, hats, or clothing).
 3. Playing with wild animals.
 :::
 <!-- #endregion --> 
+
+## How to prevent Tinea Capitis
