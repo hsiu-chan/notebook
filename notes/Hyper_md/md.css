@@ -278,8 +278,8 @@ footer {
 .btn:active {
   opacity: 0.8;
 }
-
-.fbox{
-  display: flex; 
+.fbox {
+  display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
