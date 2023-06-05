@@ -36,6 +36,12 @@
 		"body": [
 			"${CURRENT_YEAR}.${CURRENT_MONTH}.${CURRENT_DATE}"
 		],
+	},
+	"web":{
+		"prefix": "web",
+		"body": [
+			"@web https://"
+		],
 	}
 
 }

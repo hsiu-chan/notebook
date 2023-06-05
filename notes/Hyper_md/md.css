@@ -27,7 +27,7 @@
 }
 .markdown-preview h4 {
   font-style: italic;
-  font-weight: normal ;
+  font-weight: normal;
   font-size: 1.2em;
 }
 .markdown-preview hr {
@@ -282,4 +282,16 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.fbox img {
+  position: relative;
+  left: 0;
+  transform: translate(0, 0);
+}
+html body img {
+  max-width: 600px;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
