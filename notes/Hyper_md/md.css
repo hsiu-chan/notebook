@@ -289,9 +289,11 @@ footer {
   transform: translate(0, 0);
 }
 html body img {
-  max-width: 600px;
+  max-width: min(600px, 100%);
   top: 0.3rem;
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
+  display: block;
+  padding: 0.3rem;
 }
