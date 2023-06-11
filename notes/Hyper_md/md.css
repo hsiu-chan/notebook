@@ -287,6 +287,8 @@ footer {
   position: relative;
   left: 0;
   transform: translate(0, 0);
+  padding: 0;
+  display: flex;
 }
 html body img {
   max-width: min(600px, 100%);
