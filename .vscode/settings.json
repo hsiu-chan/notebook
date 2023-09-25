@@ -9,6 +9,7 @@
     "pasteImage.insertPattern": "![](${imageFilePath} =100)",
     "pasteImage.showFilePathConfirmInputBox": true,
     "pasteImage.path": "${currentFileDir}/paste_src",
+    
     "cSpell.words": [
         "epimysium",
         "hyoglossus",

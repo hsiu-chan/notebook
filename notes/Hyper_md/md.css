@@ -279,20 +279,19 @@ footer {
   opacity: 0.8;
 }
 .fbox {
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap;
 }
 .fbox img {
   position: relative;
   left: 0;
   transform: translate(0, 0);
   padding: 0;
-  display: flex;
 }
 html body img {
   max-width: min(600px, 100%);
-  width: 100%;
+  width: 80%;
   top: 0.3rem;
   position: relative;
   left: 50%;
