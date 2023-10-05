@@ -1,0 +1,1264 @@
+<!DOCTYPE html><html><head>
+      <title>&#x5FAE;&#x514D;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("data:application/x-font-woff;charset=utf-8;base64,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") format("woff");
+}
+
+.admonition {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 1.2rem;
+  border-left: .4rem solid rgba(68, 138, 255, .8);
+  border-radius: .2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  overflow: auto;
+}
+
+.admonition>p {
+  margin-top: .8rem;
+}
+
+.admonition>.admonition-title {
+  margin: 0 -1.2rem;
+  padding: .8rem 1.2rem .8rem 3.6rem;
+  border-bottom: 1px solid rgba(68, 138, 255, .2);
+  background-color: rgba(68, 138, 255, .1);
+  font-weight: 700;
+}
+
+.admonition>.admonition-title:before {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.5rem;
+  color: rgba(68, 138, 255, .8);
+  content: "\E3C9";
+}
+
+.admonition>.admonition-title:before {
+  font-family: Material Icons;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  text-transform: none;
+  white-space: nowrap;
+  speak: none;
+  word-wrap: normal;
+  direction: ltr;
+}
+
+.admonition.summary,
+.admonition.abstract,
+.admonition.tldr {
+  border-left-color: rgba(0, 176, 255, .8);
+}
+
+.admonition.summary>.admonition-title,
+.admonition.abstract>.admonition-title,
+.admonition.tldr>.admonition-title {
+  background-color: rgba(0, 176, 255, .1);
+  border-bottom-color: rgba(0, 176, 255, .2);
+}
+
+.admonition.summary>.admonition-title:before,
+.admonition.abstract>.admonition-title:before,
+.admonition.tldr>.admonition-title:before {
+  color: rgba(0, 176, 255, 1);
+  ;
+  content: "\E8D2";
+}
+
+.admonition.hint,
+.admonition.tip {
+  border-left-color: rgba(0, 191, 165, .8);
+}
+
+.admonition.hint>.admonition-title,
+.admonition.tip>.admonition-title {
+  background-color: rgba(0, 191, 165, .1);
+  border-bottom-color: rgba(0, 191, 165, .2);
+}
+
+.admonition.hint>.admonition-title:before,
+.admonition.tip>.admonition-title:before {
+  color: rgba(0, 191, 165, 1);
+  content: "\E80E";
+}
+
+.admonition.info,
+.admonition.todo {
+  border-left-color: rgba(0, 184, 212, .8);
+}
+
+.admonition.info>.admonition-title,
+.admonition.todo>.admonition-title {
+  background-color: rgba(0, 184, 212, .1);
+  border-bottom-color: rgba(0, 184, 212, .2);
+}
+
+.admonition.info>.admonition-title:before,
+.admonition.todo>.admonition-title:before {
+  color: rgba(0, 184, 212, 1);
+  ;
+  content: "\E88E";
+}
+
+.admonition.success,
+.admonition.check,
+.admonition.done {
+  border-left-color: rgba(0, 200, 83, .8);
+}
+
+.admonition.success>.admonition-title,
+.admonition.check>.admonition-title,
+.admonition.done>.admonition-title {
+  background-color: rgba(0, 200, 83, .1);
+  border-bottom-color: rgba(0, 200, 83, .2);
+}
+
+.admonition.success>.admonition-title:before,
+.admonition.check>.admonition-title:before,
+.admonition.done>.admonition-title:before {
+  color: rgba(0, 200, 83, 1);
+  ;
+  content: "\E876";
+}
+
+.admonition.question,
+.admonition.help,
+.admonition.faq {
+  border-left-color: rgba(100, 221, 23, .8);
+}
+
+.admonition.question>.admonition-title,
+.admonition.help>.admonition-title,
+.admonition.faq>.admonition-title {
+  background-color: rgba(100, 221, 23, .1);
+  border-bottom-color: rgba(100, 221, 23, .2);
+}
+
+.admonition.question>.admonition-title:before,
+.admonition.help>.admonition-title:before,
+.admonition.faq>.admonition-title:before {
+  color: rgba(100, 221, 23, 1);
+  ;
+  content: "\E887";
+}
+
+.admonition.warning,
+.admonition.attention,
+.admonition.caution {
+  border-left-color: rgba(255, 145, 0, .8);
+}
+
+.admonition.warning>.admonition-title,
+.admonition.attention>.admonition-title,
+.admonition.caution>.admonition-title {
+  background-color: rgba(255, 145, 0, .1);
+  border-bottom-color: rgba(255, 145, 0, .2);
+}
+
+.admonition.attention>.admonition-title:before {
+  color: rgba(255, 145, 0, 1);
+  content: "\E417";
+}
+
+.admonition.warning>.admonition-title:before,
+.admonition.caution>.admonition-title:before {
+  color: rgba(255, 145, 0, 1);
+  content: "\E002";
+}
+
+.admonition.failure,
+.admonition.fail,
+.admonition.missing {
+  border-left-color: rgba(255, 82, 82, .8);
+}
+
+.admonition.failure>.admonition-title,
+.admonition.fail>.admonition-title,
+.admonition.missing>.admonition-title {
+  background-color: rgba(255, 82, 82, .1);
+  border-bottom-color: rgba(255, 82, 82, .2);
+}
+
+.admonition.failure>.admonition-title:before,
+.admonition.fail>.admonition-title:before,
+.admonition.missing>.admonition-title:before {
+  color: rgba(255, 82, 82, 1);
+  ;
+  content: "\E14C";
+}
+
+.admonition.danger,
+.admonition.error,
+.admonition.bug {
+  border-left-color: rgba(255, 23, 68, .8);
+}
+
+.admonition.danger>.admonition-title,
+.admonition.error>.admonition-title,
+.admonition.bug>.admonition-title {
+  background-color: rgba(255, 23, 68, .1);
+  border-bottom-color: rgba(255, 23, 68, .2);
+}
+
+.admonition.danger>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E3E7";
+}
+
+.admonition.error>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E14C";
+}
+
+.admonition.bug>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E868";
+}
+
+.admonition.example,
+.admonition.snippet {
+  border-left-color: rgba(0, 184, 212, .8);
+}
+
+.admonition.example>.admonition-title,
+.admonition.snippet>.admonition-title {
+  background-color: rgba(0, 184, 212, .1);
+  border-bottom-color: rgba(0, 184, 212, .2);
+}
+
+.admonition.example>.admonition-title:before,
+.admonition.snippet>.admonition-title:before {
+  color: rgba(0, 184, 212, 1);
+  ;
+  content: "\E242";
+}
+
+.admonition.quote,
+.admonition.cite {
+  border-left-color: rgba(158, 158, 158, .8);
+}
+
+.admonition.quote>.admonition-title,
+.admonition.cite>.admonition-title {
+  background-color: rgba(158, 158, 158, .1);
+  border-bottom-color: rgba(158, 158, 158, .2);
+}
+
+.admonition.quote>.admonition-title:before,
+.admonition.cite>.admonition-title:before {
+  color: rgba(158, 158, 158, 1);
+  ;
+  content: "\E244";
+}
+
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.markdown-preview .title {
+  align-items: center;
+}
+.markdown-preview .title h1 {
+  border-bottom: 0;
+  text-align: center;
+  font-size: 2.75em;
+}
+.markdown-preview h1 {
+  padding-bottom: 0.3rem;
+  border-bottom: solid #fff;
+}
+.markdown-preview h2 {
+  font-weight: normal;
+  padding-bottom: 0.3rem;
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview h3 {
+  font-weight: bold;
+}
+.markdown-preview h4 {
+  font-style: italic;
+  font-weight: normal ;
+  font-size: 1.2em;
+}
+.markdown-preview hr {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview table {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+  text-align: center;
+  color: #f0ffff;
+}
+.markdown-preview table th {
+  text-align: center;
+  font-weight: bold;
+  color: #81b4f4;
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table td {
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table tr {
+  border: 1.5px solid #b7b7b7;
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
+  width: 100%;
+  max-width: 914px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 32px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
+}
+html {
+  /* 侧栏 */
+  /*.md-sidebar-toc ul li:hover > ul,
+  .md-sidebar-toc ul li:hover > ul ul{
+    display: block;
+  }*/
+  /* 侧栏自动编号 */
+  /* 复位计数器 */
+  /* 进行编号 */
+}
+html .md-sidebar-toc {
+  margin: 0rem 0rem 0em 0em;
+  padding: 0rem 0rem 0em 0rem;
+  width: auto;
+  max-width: 768px;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  /*背景颜色*/
+  position: absolute;
+  z-index: 70;
+}
+html .md-sidebar-toc a {
+  color: inherit;
+  font-size: 0.7rem !important;
+}
+html .md-sidebar-toc a:hover {
+  color: inherit;
+}
+html .md-sidebar-toc li {
+  margin-left: 1rem;
+  margin-bottom: 0 !important;
+  text-align: left;
+  /*左对齐*/
+}
+html .md-sidebar-toc ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+  padding-right: 0 !important;
+}
+html .md-sidebar-toc ul li {
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-weight: bold;
+  /*一级大纲*/
+}
+html .md-sidebar-toc ul li:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc ul ul {
+  padding-left: 0rem !important;
+  display: none;
+}
+html .md-sidebar-toc .active {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc .active ul,
+html .md-sidebar-toc .active ul ul,
+html .md-sidebar-toc .active li {
+  display: block;
+}
+html .md-sidebar-toc ul ul:hover {
+  color: #87ffff;
+}
+html .md-sidebar-toc ul ul li {
+  margin-bottom: 8pt !important;
+  margin-top: 3pt !important;
+  margin-left: 0rem;
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 0.2rem;
+  border-left: 2px rgba(0, 0, 0, 0) solid;
+}
+html .md-sidebar-toc ul ul li:hover {
+  font-style: normal;
+  border-left: 2px solid;
+}
+html .md-sidebar-toc ul ul ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+}
+html .md-sidebar-toc ul ul ul li {
+  margin-top: 2pt !important;
+  margin-bottom: 2pt !important;
+  margin-left: 0rem;
+  padding-left: 0.5rem;
+  border-left: 0px;
+}
+html .md-sidebar-toc ul ul ul li:hover {
+  border-left: 0px solid;
+}
+html body {
+  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+}
+html .md-sidebar-toc li {
+  counter-reset: outline-h1;
+}
+html .md-sidebar-toc ul li {
+  counter-reset: outline-h2;
+}
+html .md-sidebar-toc ul ul li {
+  counter-reset: outline-h3;
+}
+html .md-sidebar-toc ul ul ul li {
+  counter-reset: outline-h4;
+}
+html .md-sidebar-toc ul ul ul ul li {
+  counter-reset: outline-h5;
+}
+html .md-sidebar-toc ul ul li:before {
+  counter-increment: outline-h2;
+  content: counter(outline-h2) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul li:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
+}
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
+}
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
+/////三线表/////
+table{
+    border-top: 1.5pt solid;
+    border-bottom: 1.5pt solid;
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+    text-align:center;                          //文字居中
+  page-break-inside:avoid;                    //禁止断页
+  width: 100%;                                //扩展表格宽度
+  overflow: auto;
+  margin-bottom: 8pt;                         //表格间距
+  border-collapse:collapse;       
+}
+
+table .katex{
+  font-size: 9pt;                             //表内公式
+}
+table td{
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+    font-size:9pt;                              //表内文字
+}
+
+table thead{
+  border-bottom: 0.75pt solid black;        //三线表中间线
+}
+
+//标题行
+table th{
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+    font-size:9pt;                              
+}
+*/
+.btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+.btn:active {
+  opacity: 0.8;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+      <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="intro">Intro</h1>
+
+<ul>
+<li>&#x751F;&#x79D1;&#x4E0D;&#x8003;&#xFF0C;&#x6C92;&#x6559;&#x4E0D;&#x8003;</li>
+<li>&#x3B2;-lactamases destroy<br>
+antibiotics such as penicillin<br>
+<img src="paste_src/image.png" alt></li>
+<li>Lipopolysaccharide (LPS)
+<ul>
+<li>Lipid A &#x81F4;&#x75C5;</li>
+<li>Core &#x542B;2-keto-3-<br>
+deoxy-octanoate(KDO)<br>
+<img src="paste_src/image-1.png" alt></li>
+</ul>
+</li>
+<li>protoplasts<br>
+<img src="paste_src/image-2.png" alt></li>
+<li>mycolic acids(acid-fast):&#x8B93;&#x7D30;&#x83CC;&#x4E0D;&#x88AB; Gram-stained</li>
+</ul>
+<h2 class="mume-header" id="%E9%87%8D%E7%B5%84">&#x91CD;&#x7D44;</h2>
+
+<h3 class="mume-header" id="homologous-recombination-%E5%90%8C%E6%BA%90-and-non-homologous-recombination">Homologous recombination (&#x540C;&#x6E90;) and Non-homologous recombination:</h3>
+
+<ul>
+<li>&#x5E7E;&#x4E4E;&#x76F8;&#x540C;&#x5E8F;&#x5217;</li>
+<li>non- &#x9700;&#x8981;&#x9175;&#x7D20;<br>
+<img src="paste_src/image-3.png" alt></li>
+</ul>
+<h3 class="mume-header" id="site-specific-recombination">Site-specific recombination</h3>
+
+<ul>
+<li>ex. &#x566C;&#x83CC;&#x9AD4;</li>
+<li>&#x9700;&#x8981;&#x7279;&#x5B9A;&#x5E8F;&#x5217;&#x3001;&#x9175;&#x7D20;</li>
+</ul>
+<p><img src="paste_src/image-4.png" alt></p>
+<h2 class="mume-header" id="mutation">Mutation</h2>
+
+<ul>
+<li>Intercalating agents (Chemical agents)
+<ul>
+<li>&#x6539;&#x8B8A;DNA&#x9E7C;&#x57FA;&#x5C0D;&#x4E4B;&#x9593;&#x8DDD;&#x96E2;&#xFF0C;&#x5C0E;&#x81F4;&#x914D;&#x5C0D;&#x932F;&#x8AA4;</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="gene-exchange">Gene exchange</h2>
+
+<h3 class="mume-header" id="transformation">Transformation</h3>
+
+<ul>
+<li>&#x53EF;&#x4EE5;&#x7528;&#x5316;&#x5B78;&#x65B9;&#x6CD5;&#x4FC3;&#x9032;DNA&#x901A;&#x900F;</li>
+</ul>
+<h3 class="mume-header" id="conjugation">Conjugation</h3>
+
+<ul>
+<li>Sex pilus &#x91E3;&#x9B5A;&#x6536;&#x7DDA;<br>
+<img src="paste_src/image-5.png" alt></li>
+</ul>
+<h3 class="mume-header" id="conjugation-1">Conjugation</h3>
+
+<ul>
+<li>Generalized or Specialize
+<ul>
+<li><a href="#site-specific-recombination">Site-specific recombination</a>&#x5C08;&#x4E00;&#x6027;</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%E6%A0%BC%E8%98%AD%E6%B0%8F%E6%9F%93%E8%89%B2">&#x683C;&#x862D;&#x6C0F;&#x67D3;&#x8272;</h3>
+
+<div class="dcl">
+<section>
+<p><strong>Positive</strong></p>
+<ul>
+<li>&#x55AE;&#x5C64;&#x819C;</li>
+<li>Teichoic acid</li>
+</ul>
+<p><strong>Negative</strong></p>
+<ul>
+<li>&#x96D9;&#x5C64;&#x819C;</li>
+<li>Lipopolysaccharide (LPS)</li>
+<li>Peptidoglycan</li>
+</ul>
+</section>
+<section>
+<p><img src="paste_src/image-53.png" alt></p>
+</section></div>
+<h1 class="mume-header" id="%E6%B6%88%E6%AF%92">&#x6D88;&#x6BD2;</h1>
+
+<dl>
+<dt>Antisepsis</dt>
+<dd>for &#x6D3B;&#x9AD4;&#xFF0C;&#x5316;&#x5B78;</dd>
+<dt>Sterilization</dt>
+<dd>&#x71D2;&#x6BC0;&#xFF01;</dd>
+<dt>Disinfection</dt>
+<dd>&#x5269;&#x4E0B; Spore</dd>
+</dl>
+<p><img src="paste_src/image-51.png" alt></p>
+<div class="admonition info">
+<p class="admonition-title">spore</p>
+<p>&#x53EA;&#x6709;</p>
+<dl>
+<dt>Bacillus</dt>
+<dd>&#x597D;&#x6C27;&#x683C;&#x862D;&#x6C0F;&#x967D;&#x6027;&#x687F;&#x83CC;</dd>
+<dt>Clostridium</dt>
+<dd>&#x53AD;&#x6C27;&#x683C;&#x862D;&#x6C0F;&#x967D;&#x6027;&#x687F;&#x83CC;</dd>
+</dl>
+</div>
+<h2 class="mume-header" id="antisepsis">Antisepsis</h2>
+
+<ol>
+<li>Alcohols
+<ul>
+<li>non-enveloped viruses(&#x6C92;&#x5916;&#x5957;&#x819C;)&#x4E0D;&#x80FD;&#x6BBA;</li>
+<li>Spore, some fungi &#x4E0D;&#x80FD;&#x6BBA;</li>
+</ul>
+</li>
+<li>Chlorhexidine (CHX)
+<ul>
+<li><mark>&#x5FB7;&#x6069;&#x5948;&#x6F31;&#x53E3;&#x6C34;&#x80FD;&#x6BBA; SARS-CoV-2</mark></li>
+</ul>
+</li>
+<li>Triclosan
+<ul>
+<li>&#x9AD8;&#x9732;&#x6F54;&#x7528;&#x9019;&#x500B;</li>
+<li>&#x4F46;&#x662F;&#x597D;&#x50CF;&#x6703;&#x81F4;&#x764C;</li>
+</ul>
+</li>
+</ol>
+<h2 class="mume-header" id="disinfection-and-sterilization">Disinfection and Sterilization</h2>
+
+<ol>
+<li>Oxidizing
+<ul>
+<li>3-6% Disinfection</li>
+<li>10-25% Sterilization</li>
+</ul>
+</li>
+<li>Chlorine compounds
+<ul>
+<li>&#x8521;&#x884D;&#x660E;&#x4E7E;&#x676F;</li>
+</ul>
+</li>
+<li>Aldehydes
+<ul>
+<li>&#x86CB;&#x767D;&#x8CEA;&#x8EDF;&#x5316;</li>
+</ul>
+</li>
+<li>Radiation
+<ul>
+<li>&#x75DB;&#x6241;DNA (TT Dimer)</li>
+</ul>
+</li>
+<li>&#x6297;&#x751F;&#x7D20;
+<ul>
+<li>Protosil (Sulfanilamide)</li>
+<li>Penicillin</li>
+</ul>
+</li>
+</ol>
+<h2 class="mume-header" id="%E6%8A%97%E7%94%9F%E7%B4%A0">&#x6297;&#x751F;&#x7D20;</h2>
+
+<p><img src="paste_src/image-52.png" alt></p>
+<h3 class="mume-header" id="peptidoglycan-cell-membrane">peptidoglycan &amp; Cell membrane</h3>
+
+<h4 class="mume-header" id="%CE%B2-lactam"><em>&#x3B2;-lactam</em></h4>
+
+<ul>
+<li><mark>Penicillin (PCN)</mark></li>
+<li>Cephalosporin</li>
+<li>Carbapenems: Imipenem, Meropenem, Ertapenem</li>
+<li>Monobactam: Aztreonam</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">&#x6A5F;&#x5236;</p>
+<p>Peptidoglycan &#x5F62;&#x6210;&#x6642; Lys Ala &#x7D50;&#x5408;&#xFF0C;Penicillin &#x985E;&#x4F3C;Ala&#xFF0C;&#x5361;&#x4F4F; Penicillin binding protein<br>
+<img src="paste_src/image-54.png" alt></p>
+</div>
+<h4 class="mume-header" id="glycopeptides">Glycopeptides</h4>
+
+<ul>
+<li><mark>Vancomycin(&#x842C;&#x53E4;&#x9709;&#x7D20;)</mark>
+<ul>
+<li>&#x5206;&#x5B50;&#x8D85;&#x5927;&#xFF0C;&#x5C0D;&#x9670;&#x6027;&#x7121;&#x6548;</li>
+</ul>
+</li>
+<li>Teicoplanin</li>
+</ul>
+<h4 class="mume-header" id="polypeptides">Polypeptides</h4>
+
+<ul>
+<li>Bacitracin
+<ul>
+<li>&#x814E;&#x6BD2;&#x6027;&#x592A;&#x5F37;</li>
+</ul>
+</li>
+<li>polymycin</li>
+</ul>
+<hr>
+<h4 class="mume-header" id="lipopeptide">Lipopeptide</h4>
+
+<ul>
+<li><mark>Daptomycin</mark>
+<ul>
+<li>&#x4EFF;&#x9593;&#x6700;&#x5F8C;&#x7DDA;</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="polypeptides-1">Polypeptides</h4>
+
+<ul>
+<li>Polymycin</li>
+</ul>
+<h3 class="mume-header" id="%E6%8A%91%E5%88%B6%E8%9B%8B%E7%99%BD%E8%B3%AA%E5%BD%A2%E6%88%90">&#x6291;&#x5236;&#x86CB;&#x767D;&#x8CEA;&#x5F62;&#x6210;</h3>
+
+<h4 class="mume-header" id="50s-ribosome">50S ribosome</h4>
+
+<ul>
+<li>Macrolide (&#x5DE8;&#x74B0;): Erythromycin, Azithromycin</li>
+<li>Lincosamide(&#x6797;&#x53EF;&#x80FA;): Clindamycin</li>
+<li>Oxazolidinones (&#x5641;&#x5511;&#x70F7;&#x916E;): Linezolid</li>
+<li>Chloramphenical</li>
+</ul>
+<h4 class="mume-header" id="30s-ribosome">30S ribosome</h4>
+
+<ul>
+<li>Aminoglycoside: Gentamicin, Tobramycin, Amikacin</li>
+<li>Tetracycline: Tetracycline(&#x56DB;&#x74B0;&#x9EF4;&#x7D20;), Doxycycline, Minocycline</li>
+<li>Glycylcyclines</li>
+</ul>
+<h3 class="mume-header" id="%E6%8A%91%E5%88%B6%E6%A0%B8%E9%85%B8%E8%A4%87%E8%A3%BD">&#x6291;&#x5236;&#x6838;&#x9178;&#x8907;&#x88FD;</h3>
+
+<ul>
+<li><mark>Quinolones</mark>
+<ul>
+<li>&#x6291;&#x5236;&#x89E3;&#x8701;(gyrase)</li>
+</ul>
+</li>
+<li>Fluoroquinolone: Ciprofloxacin, Levofloxacin,</li>
+<li>Moxifloxacin</li>
+<li>Metronidazole
+<ul>
+<li>&#x5C08;&#x6241;&#x53AD;&#x6C27;&#x83CC;</li>
+</ul>
+</li>
+<li>Rifampin
+<ul>
+<li>Mycobacterium tuberculosis&#xFF08;&#x7D50;&#x6838;&#x7B98;&#xFF09;&#x6709;&#x6548;</li>
+<li>&#x6A58;&#x5C3F;</li>
+</ul>
+</li>
+</ul>
+<p><img src="paste_src/image-55.png" alt></p>
+<h3 class="mume-header" id="%E6%8A%91%E5%88%B6%E4%BB%A3%E8%AC%9D">&#x6291;&#x5236;&#x4EE3;&#x8B1D;</h3>
+
+<h4 class="mume-header" id="folic-acid-%E5%90%88%E6%88%90">Folic acid &#x5408;&#x6210;</h4>
+
+<ul>
+<li>
+<p>Sulfanilamide</p>
+<ul>
+<li>&#x985E;&#x4F3C;PABA<br>
+<img src="paste_src/image-57.png" alt="Alt text" style="width:50%"></li>
+</ul>
+</li>
+<li>
+<p>Trimethoprim</p>
+</li>
+</ul>
+<p><img src="paste_src/image-56.png" alt></p>
+<h1 class="mume-header" id="%E8%87%B4%E7%97%85">&#x81F4;&#x75C5;</h1>
+
+<h2 class="mume-header" id="%E9%BB%8F%E7%B4%B0%E8%83%9E">&#x9ECF;&#x7D30;&#x80DE;</h2>
+
+<p>gram&#x2019;s negative: Pili, Fimbriae<br>
+<img src="paste_src/image-58.png" alt><br>
+<img src="paste_src/image-59.png" alt></p>
+<h2 class="mume-header" id="endotoxin">Endotoxin</h2>
+
+<p>A.K.A Lipopolysaccharide (LPS)</p>
+<h2 class="mume-header" id="a-b-exotoxin">A-B exotoxin</h2>
+
+<ul>
+<li>B for bounding, A for action</li>
+</ul>
+<p>&#x90FD;&#x8981;&#x80CC;&#x3002;&#x3002;&#x3002;<br>
+<img src="paste_src/image-60.png" alt></p>
+<h2 class="mume-header" id="%E9%80%83%E9%81%BF%E5%85%8D%E7%96%AB">&#x9003;&#x907F;&#x514D;&#x75AB;</h2>
+
+<ul>
+<li>Bacterial Capsules
+<ul>
+<li>&#x83A2;&#x819C;&#xFF0C;&#x8FA8;&#x8B58;&#x4E0D;&#x80FD;<br>
+<img src="paste_src/image-62.png" alt></li>
+</ul>
+</li>
+<li>Intracellular replication
+<ul>
+<li>&#x8EB2;&#x9032;&#x7D30;&#x80DE;<br>
+<img src="paste_src/image-61.png" alt></li>
+</ul>
+</li>
+<li>&#x3B2;-lactamase &#x76F4;&#x63A5;&#x5206;&#x89E3;&#x6297;&#x751F;&#x7D20;</li>
+</ul>
+<h1 class="mume-header" id="%E7%B4%B0%E8%8F%8C">&#x7D30;&#x83CC;</h1>
+
+<h2 class="mume-header" id="bacillus-anthracis-%E7%82%AD%E7%96%BD%E6%A1%BF%E8%8F%8C">Bacillus anthracis (&#x70AD;&#x75BD;&#x687F;&#x83CC;)</h2>
+
+<ul>
+<li>Spore &#x8EB2;&#x9032;Macrophage &#xFF0C;&#x74B0;&#x904A;&#x4E16;&#x754C;</li>
+<li>Capsule: poly-D-glutamic acid</li>
+<li>3 proteins
+<ol>
+<li>Protective Antigen(PA83): <em>B toxin</em></li>
+<li>Edema factor : &#x6C34;&#x816B;&#xFF0C; <em>A toxin</em></li>
+<li>Lethal factor :&#x81F4;&#x547D;&#xFF0C;&#x6BBA;&#x7D30;&#x80DE;&#xFF0C;<em>A toxin</em></li>
+</ol>
+</li>
+<li>2 exotoxin
+<ul>
+<li>Edema toxin = PA63+EF</li>
+<li>Lethal toxin = PA63+LF</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>20&#x4E0D;&#x898B;&#x4E86;</p>
+</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><img src="paste_src/image-63.png" alt></p>
+<ul>
+<li>EF &#x2192; cAMP
+<ul>
+<li>cAMP &#x5728;&#x8178;&#x9053;&#x5C0E;&#x81F4;&#x8179;&#x7009;<br>
+<img src="paste_src/image-64.png" alt></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 class="mume-header" id="bacillus-cereus-%E4%BB%99%E4%BA%BA%E6%8E%8C%E6%A1%BF%E8%8F%8C-%E8%A0%9F%E6%A1%BF%E8%8F%8C">Bacillus cereus (&#x4ED9;&#x4EBA;&#x638C;&#x687F;&#x83CC;&#x3001;&#x881F;&#x687F;&#x83CC;)</h2>
+
+<ul>
+<li>&#x98DF;&#x7269;&#x4E2D;&#x6BD2;
+<ul>
+<li>Emetic form: &#x7C73;&#xFF0C;&#x5614;&#x5410;</li>
+<li>Diarrheal form: &#x5176;&#x4ED6;&#xFF0C;cAMP</li>
+</ul>
+</li>
+<li>&#x5927;&#x591A;&#x7121; Capsule</li>
+</ul>
+<h2 class="mume-header" id="listeria-monocytogene-%E6%9D%8E%E6%96%AF%E7%89%B9%E8%8F%8C">Listeria <em>monocytogene</em> (&#x674E;&#x65AF;&#x7279;&#x83CC;)</h2>
+
+<ul>
+<li>&#x51B0;&#x7BB1;&#x5B58;&#x6D3B;&#x53EF;&#x80FD;</li>
+<li>&#x8D85;&#x6703;&#x8EB2;&#xFF0C;&#x53EF;&#x4EE5;&#x7A7F;&#x904E;&#x80CE;&#x76E4;&#xFF0C;&#x751F;&#x98DF;<i class="fa-solid fa-triangle-exclamation"></i></li>
+</ul>
+<p><img src="paste_src/image-95.png" alt></p>
+<h2 class="mume-header" id="cotynebacterium-diphtheria-%E7%99%BD%E5%96%89%E6%A3%92%E7%8B%80%E6%A1%BF%E8%8F%8C">Cotynebacterium diphtheria (&#x767D;&#x5589;&#x68D2;&#x72C0;&#x687F;&#x83CC;)</h2>
+
+<ul>
+<li>&#x552F;&#x4E00;&#x5BBF;&#x4E3B;</li>
+<li>&#x88AB;&#x3B2; &#x566C;&#x83CC;&#x9AD4;&#x611F;&#x67D3;&#x624D;&#x6709;&#x6BD2;</li>
+<li>AB toxin</li>
+<li>&#x6291;&#x5236;&#x86CB;&#x767D;&#x5408;&#x6210;</li>
+</ul>
+<h2 class="mume-header" id="enterobacteriaceae-%E8%85%B8%E6%A1%BF%E8%8F%8C%E7%A7%91">Enterobacteriaceae (&#x8178;&#x687F;&#x83CC;&#x79D1;)</h2>
+
+<ul>
+<li>Capsule</li>
+<li>LPS &#x9577;&#x4E00;&#x6839; O antigen, Lipid A&#x90FD;&#x662F;&#x6297;&#x539F;<br>
+<img src="paste_src/image-65.png" alt="Alt text" style="width:30%"></li>
+</ul>
+<p><img src="paste_src/image-66.png" alt></p>
+<h3 class="mume-header" id="escherichia-coli-%E5%A4%A7%E8%85%B8%E6%A1%BF%E8%8F%8C">Escherichia coli (&#x5927;&#x8178;&#x687F;&#x83CC;)</h3>
+
+<ol>
+<li>Uropathogenic E. coli (UPEC)
+<ul>
+<li>&#x6CCC;&#x5C3F;&#x9053;&#x611F;&#x67D3;</li>
+</ul>
+</li>
+<li>Enterotoxigenic E. coli (ETEC)
+<ul>
+<li>LT enterotoxin
+<ul>
+<li>cAMP &#x62C9;&#x809A;&#x5B50;</li>
+</ul>
+</li>
+<li>ST enterotoxin
+<ul>
+<li>cGMP &#x62C9;&#x809A;&#x5B50;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Enterohemorrhagic E. coli (EHEC) / Shiga toxin producing E. coli (STEC)
+<ul>
+<li>O<sub>157</sub></li>
+<li>&#x4F4E;&#x71D2;&#xFF0C;&#x8840;&#x4FBF;</li>
+<li>Hemolytic-uremic syndrome(HUS)
+<ul>
+<li>&#x5C0E;&#x81F4;&#x814E;&#x8870;&#x7AED;</li>
+</ul>
+</li>
+<li><strong>(O<sub>157</sub>)</strong></li>
+</ul>
+</li>
+<li>Enteropathogenic E. coli (EPEC)
+<ul>
+<li>&#x6C92;&#x6709;&#x5916;&#x6BD2;&#x7D20;&#xFF0C;&#x9ECF;&#x8457;&#x5C0E;&#x81F4;&#x62C9;&#x809A;&#x5B50;&#xFF0C;&#x721B;</li>
+<li>Intimin receptor &#x7D30;&#x80DE;&#x5206;&#x6CCC;&#x7684;<br>
+<img src="paste_src/image-68.png" alt></li>
+</ul>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Shiga toxin</p>
+<p><img src="paste_src/image-67.png" alt></p>
+</div>
+<h3 class="mume-header" id="salmonella-%E6%B2%99%E9%96%80%E6%B0%8F%E8%8F%8C">Salmonella (&#x6C99;&#x9580;&#x6C0F;&#x83CC;)</h3>
+
+<ul>
+<li>
+<p>O (somatic) ; Vi (capsular); H (flagellar)</p>
+</li>
+<li>
+<p>Capsule &#x80FD;&#x505A;&#x75AB;&#x82D7; 16S rRNA typing</p>
+</li>
+</ul>
+<p><strong>More than 2500 unique serotypes</strong></p>
+<ul>
+<li><em>Salmonella enterica</em> (serotype XXX)</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ol>
+<li><em>Salmonella enterica</em> serotype Typhi<br>
+&#x2192; S. Typhi (&#x50B7;&#x5BD2;)</li>
+<li><em>Salmonella enterica</em> serotype Typhimurine<br>
+&#x2192; S. Typhimurine (&#x611F;&#x67D3;&#x96DE;&#x5375;&#x5DE2;)</li>
+</ol>
+</div>
+<h4 class="mume-header" id="typhoid-fever-%E5%82%B7%E5%AF%92">Typhoid Fever (&#x50B7;&#x5BD2;)</h4>
+
+<ul>
+<li>&#x552F;&#x4E00;&#x5BBF;&#x4E3B;</li>
+<li>Macrophage &#x5168;&#x8EAB;&#x8DD1;
+<ul>
+<li>&#x5148;&#x9032;&#x5FAA;&#x74B0;&#xFF0C;&#x518D;&#x53BB;&#x81BD;&#x56CA;</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="shigella-%E8%B5%A4%E7%97%A2">Shigella (&#x8D64;&#x75E2;)</h3>
+
+<ul>
+<li>&#x552F;&#x4E00;&#x5BBF;&#x4E3B;&#xFF0C;&#x9AD8;&#x50B3;&#x67D3;&#x6027;&#xFF0C;10&#x96BB;</li>
+<li>&#x53E3;&#x7CDE;&#x50B3;&#x67D3;</li>
+<li>Shiga toxin</li>
+</ul>
+<h3 class="mume-header" id="yersinia-%E8%80%B6%E6%B0%8F%E6%A1%BF%E8%8F%8C">Yersinia (&#x8036;&#x6C0F;&#x687F;&#x83CC;)</h3>
+
+<h4 class="mume-header" id="yersinia-pestis-%E9%BC%A0%E7%96%AB%E6%A1%BF%E8%8F%8C">Yersinia pestis (&#x9F20;&#x75AB;&#x687F;&#x83CC;)</h4>
+
+<ul>
+<li>Plaque (&#x9F20;&#x75AB;)</li>
+<li>10<sup>4</sup>&#x96BB;</li>
+<li>&#x8DF3;&#x86A4;&#x3001;&#x4EBA;&#x50B3;&#x4EBA;&#xFF08;&#x80BA;&#x90E8;&#x5F62;&#xFF0C;100%&#x6B7B;&#x4EA1;&#xFF09;</li>
+</ul>
+<h4 class="mume-header" id="yersinia-enterocolitica-%E5%B0%8F%E8%85%B8%E7%B5%90%E8%85%B8%E7%82%8E%E8%80%B6%E6%B0%8F%E6%A1%BF%E8%8F%8C">Yersinia enterocolitica (&#x5C0F;&#x8178;&#x7D50;&#x8178;&#x708E;&#x8036;&#x6C0F;&#x687F;&#x83CC;)</h4>
+
+<ul>
+<li>&#x62C9;&#x809A;&#x5B50;</li>
+<li>4&#xB0;C&#x5B58;&#x6D3B;</li>
+</ul>
+<h3 class="mume-header" id="proteus-mirabilis-%E5%A5%87%E7%95%B0%E8%AE%8A%E5%BD%A2%E6%A1%BF%E8%8F%8C">Proteus mirabilis (&#x5947;&#x7570;&#x8B8A;&#x5F62;&#x687F;&#x83CC;)</h3>
+
+<ul>
+<li>&#x4E82;&#x8DD1;&#xFF0C;Swarming</li>
+<li>Urease (+)&#xFF0C;&#x7522;&#x751F;&#x80FA;&#xFF0C;&#x5728;&#x8180;&#x80F1;<br>
+<img src="paste_src/image-69.png" alt></li>
+</ul>
+<h2 class="mume-header" id="%E5%BD%8E%E6%A1%BF%E8%8F%8C">&#x5F4E;&#x687F;&#x83CC;</h2>
+
+<h3 class="mume-header" id="vibrio-%E5%BC%A7%E8%8F%8C">Vibrio (&#x5F27;&#x83CC;)</h3>
+
+<ul>
+<li>Gram&#x2019;s negative</li>
+</ul>
+<h4 class="mume-header" id="v-cholera-%E9%9C%8D%E4%BA%82%E5%BC%A7%E8%8F%8C">V. cholera (&#x970D;&#x4E82;&#x5F27;&#x83CC;)</h4>
+
+<ul>
+<li>&#x767D;&#x8272;&#x638F;&#x7C73;&#x6C34;&#x4FBF;&#xFF0C;&#x62C9;&#x5230;&#x81BD;&#x6C41;&#x4F86;&#x4E0D;&#x53CA;&#x4E0A;&#x8272;</li>
+<li>O<sub>1</sub>, O<sub>139</sub></li>
+<li>10<sup>7</sup> &#x96BB;</li>
+<li>&#x5E36;&#x6709;Cholera toxin &#x624D;&#x81F4;&#x75C5;&#xFF0C;cAMP</li>
+</ul>
+<h4 class="mume-header" id="v-parahaemolyticus">V. parahaemolyticus</h4>
+
+<ul>
+<li>&#x751F;&#x9B5A;&#x7247;</li>
+<li>Kanagawa hemolysin
+<ul>
+<li>&#x3B2;-hemolysis on &#x4EBA;O&#x578B;&#x8840;&#x6216;&#x5154;&#x8840;</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="v-vulnificus-%E5%89%B5%E5%82%B7%E5%BC%A7%E8%8F%8C%E6%B5%B7%E6%B4%8B%E5%BC%A7%E8%8F%8C">V. vulnificus (&#x5275;&#x50B7;&#x5F27;&#x83CC;/&#x6D77;&#x6D0B;&#x5F27;&#x83CC;)</h4>
+
+<ul>
+<li>&#x809D;&#x786C;&#x5316;&#x3001;&#x809D;&#x764C;&#x611F;&#x67D3;&#x5371;&#x96AA;</li>
+</ul>
+<h3 class="mume-header" id="campylobacter">Campylobacter</h3>
+
+<ul>
+<li>Microaerophilic (5% O<sub>2</sub>)</li>
+<li>&#x53EA;&#x5403;portein</li>
+</ul>
+<h4 class="mume-header" id="c-jejuni-%E7%A9%BA%E8%85%B8%E5%BD%8E%E6%9B%B2%E6%A1%BF%E8%8F%8C">C. jejuni (&#x7A7A;&#x8178;&#x5F4E;&#x66F2;&#x687F;&#x83CC;)</h4>
+
+<ul>
+<li>&#x5403;&#x672A;&#x719F;&#x7684;&#x96DE;&#x9D28;&#x725B;&#x7F8A;&#x8089;</li>
+<li>Guillain-Barre syndrome (&#x5DF4;&#x5229;&#x6C0F;&#x75C7;&#x5019;&#x7FA4;)
+<ul>
+<li>&#x6253;&#x75AB;&#x82D7;&#x7522;&#x751F;&#x7684;&#x6297;&#x9AD4;&#x53BB;&#x653B;&#x64CA;&#x9AD3;&#x9798;&#xFF0C;&#x81EA;&#x9AD4;&#x514D;&#x75AB;&#x75BE;&#x75C5;</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/image-70.png" alt="Alt text" style="width:50%">
+<h3 class="mume-header" id="helicobacter">Helicobacter</h3>
+
+<ul>
+<li>&#x552F;&#x4E00;&#x5BBF;&#x4E3B;&#xFF0C;&#x7B77;&#x5B50;&#x50B3;&#x67D3;</li>
+<li>&#x80C3;&#x98DF;&#x9053;&#x9006;&#x6D41;</li>
+</ul>
+<h4 class="mume-header" id="h-pylori-%E5%B9%BD%E9%96%80%E8%9E%BA%E6%97%8B%E6%A1%BF%E8%8F%8C">H. pylori (&#x5E7D;&#x9580;&#x87BA;&#x65CB;&#x687F;&#x83CC;)</h4>
+
+<img src="paste_src/image-71.png" alt="Alt text" style="width:50%">
+<h2 class="mume-header" id="pseudomonas-aeruginosa-%E7%B6%A0%E8%86%BF%E6%A1%BF%E8%8F%8C">Pseudomonas aeruginosa (&#x7DA0;&#x81BF;&#x687F;&#x83CC;)</h2>
+
+<ul>
+<li>Gram&#x2019;s negative</li>
+<li>&#x6C34;&#x88CF;&#xFF0C;&#x96A8;&#x4FBF;&#x9577;</li>
+<li>&#x4FB5;&#x72AF;&#x50B7;&#x53E3;&#xFF0C;&#x7DA0;&#xFF0C;&#x9999;</li>
+<li>&#x9AD8;&#x6297;&#x85E5;</li>
+</ul>
+<h2 class="mume-header" id="neisseria">Neisseria</h2>
+
+<ul>
+<li>Gram&#x2019;s negative&#xFF0C;&#x7403;&#x83CC;</li>
+</ul>
+<img src="paste_src/image-74.png" alt="Alt text" style="width:50%">
+<h3 class="mume-header" id="n-gonorrhoeae-%E6%B7%8B%E7%97%85%E9%9B%99%E7%90%83%E8%8F%8Cgonococcus">N. gonorrhoeae (&#x6DCB;&#x75C5;&#x96D9;&#x7403;&#x83CC;,gonococcus)</h3>
+
+<ul>
+<li>&#x552F;&#x4E00;&#x5BBF;&#x4E3B;</li>
+<li>&#x5B50;&#x5BAE;&#x9838;&#x611F;&#x67D3;
+<ul>
+<li><strong>Fitz-Hugh-Cutis syndrome</strong>: burning with urination, vaginal discharge,vaginal bleeding) &#x2192; pelvic inflammation &#x2192; peritonitis, perihepatitis</li>
+</ul>
+</li>
+<li>No Vaccine
+<ul>
+<li>Capsule &#x4E0D;&#x4E00;&#x5B9A;</li>
+<li>&#x8868;&#x9762;&#x6297;&#x539F;&#x4E82;&#x8B8A;</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="n-meningitidis-%E8%85%A6%E8%86%9C%E7%82%8E%E9%9B%99%E7%90%83%E8%8F%8C">N. meningitidis (&#x8166;&#x819C;&#x708E;&#x96D9;&#x7403;&#x83CC;)</h3>
+
+<ul>
+<li>Meningococcus</li>
+<li>Capsule</li>
+<li>Endotoxin (lipooligasaccharide; LOS)
+<ul>
+<li>O&#x5F88;&#x77ED;</li>
+</ul>
+</li>
+<li>&#x552F;&#x4E00;&#x5BBF;&#x4E3B;</li>
+<li>Waterhouse&#x2013;Friderichsen syndrome (&#x731B;&#x7206;&#x6027;&#x8166;&#x819C;&#x708E;&#x96D9;&#x7403;&#x83CC;&#x83CC;&#x8840;&#x75C7;)
+<ul>
+<li>&#x622A;&#x80A2;<br>
+<img src="paste_src/image-75.png" alt="Alt text" style="width:40%"></li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="%E6%95%B4%E7%90%86">&#x6574;&#x7406;</h2>
+
+<p><img src="paste_src/image-73.png" alt><br>
+<img src="paste_src/image-72.png" alt><br>
+<img src="paste_src/image-76.png" alt></p>
+<h1 class="mume-header" id="%E5%85%8D%E7%96%AB%E5%AD%B8">&#x514D;&#x75AB;&#x5B78;</h1>
+
+<br><br>
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+<script> 
+var Main_LeftListLiSelector = $(".md-sidebar-toc li");
+
+$(Main_LeftListLiSelector).on('click', function() {
+  $(Main_LeftListLiSelector).removeClass('active');
+  $(this).addClass('active');
+});
+</script>
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#intro">Intro</a>
+<ul>
+<li><a href="#%E9%87%8D%E7%B5%84">&#x91CD;&#x7D44;</a>
+<ul>
+<li><a href="#homologous-recombination-%E5%90%8C%E6%BA%90-and-non-homologous-recombination">Homologous recombination (&#x540C;&#x6E90;) and Non-homologous recombination:</a></li>
+<li><a href="#site-specific-recombination">Site-specific recombination</a></li>
+</ul>
+</li>
+<li><a href="#mutation">Mutation</a></li>
+<li><a href="#gene-exchange">Gene exchange</a>
+<ul>
+<li><a href="#transformation">Transformation</a></li>
+<li><a href="#conjugation">Conjugation</a></li>
+<li><a href="#conjugation-1">Conjugation</a></li>
+<li><a href="#%E6%A0%BC%E8%98%AD%E6%B0%8F%E6%9F%93%E8%89%B2">&#x683C;&#x862D;&#x6C0F;&#x67D3;&#x8272;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%B6%88%E6%AF%92">&#x6D88;&#x6BD2;</a>
+<ul>
+<li><a href="#antisepsis">Antisepsis</a></li>
+<li><a href="#disinfection-and-sterilization">Disinfection and Sterilization</a></li>
+<li><a href="#%E6%8A%97%E7%94%9F%E7%B4%A0">&#x6297;&#x751F;&#x7D20;</a>
+<ul>
+<li><a href="#peptidoglycan-cell-membrane">peptidoglycan &amp; Cell membrane</a></li>
+<li><a href="#%E6%8A%91%E5%88%B6%E8%9B%8B%E7%99%BD%E8%B3%AA%E5%BD%A2%E6%88%90">&#x6291;&#x5236;&#x86CB;&#x767D;&#x8CEA;&#x5F62;&#x6210;</a></li>
+<li><a href="#%E6%8A%91%E5%88%B6%E6%A0%B8%E9%85%B8%E8%A4%87%E8%A3%BD">&#x6291;&#x5236;&#x6838;&#x9178;&#x8907;&#x88FD;</a></li>
+<li><a href="#%E6%8A%91%E5%88%B6%E4%BB%A3%E8%AC%9D">&#x6291;&#x5236;&#x4EE3;&#x8B1D;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E8%87%B4%E7%97%85">&#x81F4;&#x75C5;</a>
+<ul>
+<li><a href="#%E9%BB%8F%E7%B4%B0%E8%83%9E">&#x9ECF;&#x7D30;&#x80DE;</a></li>
+<li><a href="#endotoxin">Endotoxin</a></li>
+<li><a href="#a-b-exotoxin">A-B exotoxin</a></li>
+<li><a href="#%E9%80%83%E9%81%BF%E5%85%8D%E7%96%AB">&#x9003;&#x907F;&#x514D;&#x75AB;</a></li>
+</ul>
+</li>
+<li><a href="#%E7%B4%B0%E8%8F%8C">&#x7D30;&#x83CC;</a>
+<ul>
+<li><a href="#bacillus-anthracis-%E7%82%AD%E7%96%BD%E6%A1%BF%E8%8F%8C">Bacillus anthracis (&#x70AD;&#x75BD;&#x687F;&#x83CC;)</a></li>
+<li><a href="#bacillus-cereus-%E4%BB%99%E4%BA%BA%E6%8E%8C%E6%A1%BF%E8%8F%8C-%E8%A0%9F%E6%A1%BF%E8%8F%8C">Bacillus cereus (&#x4ED9;&#x4EBA;&#x638C;&#x687F;&#x83CC;&#x3001;&#x881F;&#x687F;&#x83CC;)</a></li>
+<li><a href="#listeria-monocytogene-%E6%9D%8E%E6%96%AF%E7%89%B9%E8%8F%8C">Listeria <em>monocytogene</em> (&#x674E;&#x65AF;&#x7279;&#x83CC;)</a></li>
+<li><a href="#cotynebacterium-diphtheria-%E7%99%BD%E5%96%89%E6%A3%92%E7%8B%80%E6%A1%BF%E8%8F%8C">Cotynebacterium diphtheria (&#x767D;&#x5589;&#x68D2;&#x72C0;&#x687F;&#x83CC;)</a></li>
+<li><a href="#enterobacteriaceae-%E8%85%B8%E6%A1%BF%E8%8F%8C%E7%A7%91">Enterobacteriaceae (&#x8178;&#x687F;&#x83CC;&#x79D1;)</a>
+<ul>
+<li><a href="#escherichia-coli-%E5%A4%A7%E8%85%B8%E6%A1%BF%E8%8F%8C">Escherichia coli (&#x5927;&#x8178;&#x687F;&#x83CC;)</a></li>
+<li><a href="#salmonella-%E6%B2%99%E9%96%80%E6%B0%8F%E8%8F%8C">Salmonella (&#x6C99;&#x9580;&#x6C0F;&#x83CC;)</a></li>
+<li><a href="#shigella-%E8%B5%A4%E7%97%A2">Shigella (&#x8D64;&#x75E2;)</a></li>
+<li><a href="#yersinia-%E8%80%B6%E6%B0%8F%E6%A1%BF%E8%8F%8C">Yersinia (&#x8036;&#x6C0F;&#x687F;&#x83CC;)</a></li>
+<li><a href="#proteus-mirabilis-%E5%A5%87%E7%95%B0%E8%AE%8A%E5%BD%A2%E6%A1%BF%E8%8F%8C">Proteus mirabilis (&#x5947;&#x7570;&#x8B8A;&#x5F62;&#x687F;&#x83CC;)</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BD%8E%E6%A1%BF%E8%8F%8C">&#x5F4E;&#x687F;&#x83CC;</a>
+<ul>
+<li><a href="#vibrio-%E5%BC%A7%E8%8F%8C">Vibrio (&#x5F27;&#x83CC;)</a></li>
+<li><a href="#campylobacter">Campylobacter</a></li>
+<li><a href="#helicobacter">Helicobacter</a></li>
+</ul>
+</li>
+<li><a href="#pseudomonas-aeruginosa-%E7%B6%A0%E8%86%BF%E6%A1%BF%E8%8F%8C">Pseudomonas aeruginosa (&#x7DA0;&#x81BF;&#x687F;&#x83CC;)</a></li>
+<li><a href="#neisseria">Neisseria</a>
+<ul>
+<li><a href="#n-gonorrhoeae-%E6%B7%8B%E7%97%85%E9%9B%99%E7%90%83%E8%8F%8Cgonococcus">N. gonorrhoeae (&#x6DCB;&#x75C5;&#x96D9;&#x7403;&#x83CC;,gonococcus)</a></li>
+<li><a href="#n-meningitidis-%E8%85%A6%E8%86%9C%E7%82%8E%E9%9B%99%E7%90%83%E8%8F%8C">N. meningitidis (&#x8166;&#x819C;&#x708E;&#x96D9;&#x7403;&#x83CC;)</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B4%E7%90%86">&#x6574;&#x7406;</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%8D%E7%96%AB%E5%AD%B8">&#x514D;&#x75AB;&#x5B78;</a></li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

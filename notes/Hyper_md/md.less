@@ -420,16 +420,15 @@ footer {
 
 ////flex box///////
 .fbox {
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   img{
     position: relative;
     left: 0;
     transform: translate(0, 0);
     padding: 0;
-    display:flex;
-
 
   }
   
@@ -438,7 +437,7 @@ footer {
 html body img {
   
   max-width: min(600px,100%);
-  width: 100%;
+  width: 80%;
 
   top: 0.3rem;
   position: relative;

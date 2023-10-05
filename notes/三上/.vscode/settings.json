@@ -6,19 +6,16 @@
         ".vscode/style.css",
     ],
     "markdown.enableExperimentalExtensionApi": true,
-    "pasteImage.insertPattern": "![](${imageFilePath} =100)",
+    "pasteImage.insertPattern": "![](${imageFilePath})",
     "pasteImage.showFilePathConfirmInputBox": true,
     "pasteImage.path": "${currentFileDir}/paste_src",
-    
     "cSpell.words": [
         "epimysium",
         "hyoglossus",
         "perimysium",
-        "pseudostratified",
         "pterygopalatine",
         "Salpingopharyngeal",
         "temporalis",
         "Temporozygomatic"
-    ],
-    "local-history.daysLimit": 30 // 清除本地歷史記錄的天數。 （0：不清除）
+    ]
 }
