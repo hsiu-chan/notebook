@@ -315,3 +315,8 @@ services:
       - 55555:55555
     restart: unless-stopped
 ```
+
+# WireGuard
+@web https://blog.restkhz.com/post/try-wireguard-easy
+
+@web https://developerinsider.co/how-to-set-up-wireguard-client-on-debian/
