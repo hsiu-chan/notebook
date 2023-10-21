@@ -422,13 +422,18 @@ footer {
 .fbox {
   display: inline-flex;
   flex-direction: row;
-  justify-content: space-around;
-  //flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   img{
     position: relative;
     left: 0;
     transform: translate(0, 0);
     padding: 0;
+    background-color: white;
 
   }
   
@@ -445,4 +450,5 @@ html body img {
   transform: translate(-50%, 0);
   display: block;
   padding: 0.3rem;
+  background-color: white;
 }
