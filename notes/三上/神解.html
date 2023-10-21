@@ -7,7 +7,7 @@
       
       
       
-      
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@9.1.7/dist/mermaid.min.js"></script>
       
       
       
@@ -768,6 +768,26 @@ fiber &#x50B3;&#x8F38;&#xFF0C;&#x50B3;&#x905E;&#x5FEB;</li>
 <img src="paste_src/%E7%A5%9E%E8%A7%A3-19.png" alt="Alt text" style="width:70%;background-color: white;"></li>
 </ul>
 <img src="paste_src/%E7%A5%9E%E8%A7%A3-27.png" alt="Alt text" style="width:70%;background-color: white;">
+<h2 class="mume-header" id="anterior">Anterior</h2>
+
+<ul>
+<li>&#x908A;&#x7DE3;&#x7CFB;&#x7D71;&#x76F8;&#x95DC;</li>
+</ul>
+<div class="dcl">
+<section>
+<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-28.png" alt></p>
+<dl>
+<dt>MTT</dt>
+<dd>mammillothalamic tract</dd>
+</dl>
+</section>
+<section>
+<div class="mermaid">graph TB
+m[Mammillary bodies]--&gt;|MTT|A--&gt;c[cingulate gyrus]
+
+c--&gt;p[Parahippocampus]--&gt;h[Hippocampus]--&gt;|Fornix|m
+
+</div></section></div>
 <h2 class="mume-header" id="epithalamus%E4%B8%8A%E4%B8%98%E8%85%A6-%E4%B8%8A%E8%A6%96%E4%B8%98">Epithalamus(&#x4E0A;&#x4E18;&#x8166;&#x3001;&#x4E0A;&#x8996;&#x4E18;)</h2>
 
 <ul>
@@ -904,6 +924,7 @@ $(Main_LeftListLiSelector).on('click', function() {
 <li><a href="#%E9%96%93%E8%85%A6">&#x9593;&#x8166;</a>
 <ul>
 <li><a href="#dorsal-thalamus%E4%B8%98%E8%85%A6">(Dorsal) thalamus(&#x4E18;&#x8166;)</a></li>
+<li><a href="#anterior">Anterior</a></li>
 <li><a href="#epithalamus%E4%B8%8A%E4%B8%98%E8%85%A6-%E4%B8%8A%E8%A6%96%E4%B8%98">Epithalamus(&#x4E0A;&#x4E18;&#x8166;&#x3001;&#x4E0A;&#x8996;&#x4E18;)</a></li>
 <li><a href="#ventral-thalamus">Ventral thalamus</a></li>
 <li><a href="#hypothalamus%E4%B8%8B%E4%B8%98%E8%85%A6-%E4%B8%8B%E8%A6%96%E4%B8%98">Hypothalamus(&#x4E0B;&#x4E18;&#x8166;&#x3001;&#x4E0B;&#x8996;&#x4E18;)</a></li>
@@ -919,7 +940,40 @@ $(Main_LeftListLiSelector).on('click', function() {
       <a id="sidebar-toc-btn">&#x2261;</a>
     
     
-    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+MERMAID_CONFIG = {
+  startOnLoad: false,
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false
+  window['MERMAID_CONFIG'].theme = "dark"
+}
+mermaid.initialize(window['MERMAID_CONFIG'] || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.getElementsByClassName('mermaid'))
+}
+</script>
     
     
     
