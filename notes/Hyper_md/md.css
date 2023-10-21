@@ -278,6 +278,11 @@ footer {
 .btn:active {
   opacity: 0.8;
 }
+@media screen and (max-width: 600px) {
+  img {
+    width: 100% !important;
+  }
+}
 .fbox {
   display: inline-flex;
   flex-direction: row;
@@ -305,4 +310,6 @@ html body img {
   display: block;
   padding: 0.3rem;
   background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
