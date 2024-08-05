@@ -22,3 +22,34 @@ export_on_save:
   - Prepare 的目的為 保留最多的 Dentin ，並保護 pulp
 
 ![](paste_src/2024-03-15-08-35-05.png =100)
+
+
+# Resin 
+
+HA(hydroxyapatite；Ca5(PO4)3(OH))
+: Enamel、Dentin主成分
+
+/
+# Bonding 
+
+
+etching &rarr; primer &rarr; Adhesion
+
+
+## primer 
+
+- 形成 Hybrid layer 
+
+Hybrid layer
+: 樹脂與牙本質上膠原蛋白和HA共同形成的結構層
+
+HEMA 
+: 高親水 co-solvent
+
+## Adhesion (Adhesive resin)
+
+- 提高疏水性
+- 提高聚合效率: silane 
+- 增加film thickness
+
+## 
