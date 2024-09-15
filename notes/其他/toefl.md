@@ -304,3 +304,115 @@ I tend to have the notion that excessive amounts of the information on the Inter
 Innocent Internet shoppers may ==fall victims to online scams== as ==con artist== increasingly use the Internat to commit crimes such as catfishing, identity theft, or even cred ==card fraud.==
 
 Internet users should be wary of / be aware of/ be ==vigilant== of/ be cautious of online information which may be harmful to children, adolescents, and adults alike.
+
+
+
+# 8/22 
+
+
+## vocabulary-r
+
+- accord 
+  - Our society accords great importance to the family
+- current status/ situation of the application
+- evolve
+  - evolve from/ be inspired by 
+- attic: 閣樓
+- instigate: cause something bad 教唆
+  - instigating the unrest
+  - They were accused of instigating racial violence
+- Porcelain: 瓷器
+- dynasty
+- utilitarian: 實用的
+- motif: a design of pattern
+- embrace the old custom 
+- side hustle 
+- settled: 穩定的
+- prosperous
+- adornment
+- obscure sth: make it hard to see or heard 
+  - The view was obscured by frog 
+- secular/ worldly 
+  - secular music
+- imperil 
+- 
+
+## vocabulary-w 
+
+- Sponsor/ subsidize/ fund/ allocate more funding/ budgets 
+- rebate: 退稅
+- subsidize EV industry and consumer reaps a long-tern benefit
+- infrastructure
+- paparazzo 
+
+
+
+## Public transportation 
+
+- enhance the infrastructure
+- expand to remote areas
+- 
+
+I understand Paul's concern over those living in rural areas, but I believe he miss another critical point.
+
+As climate is really at its critical point, I am convinced that governments should ==take measures in== tackling this ==urgent crisis== by enhancing and expanding public transport net work ==by means of== constructing bike lanes and encouraging citizens to take buses, ==trams==, and subways. Since the main goal is to reduce carbon dioxide emissions ==substantially==, the more people making good use of public transportation the more beneficial to the environment.
+
+Even though subsidizing electric vehicles may be one of the strategic solution, the use of ==tax revenue cannot be optimized== if only a small number od citizens could be benefited. From the perspective of the economy, this budget, instead, should be allocated to converting public buses to electric vehicle and railway and expanding bus services and trams to remote areas, which in tern allows more daily commuters to take public transports thus effectively curbing/halting reducing/ mitigating the greenhouse gas emissions from ==transportation sector==. If governments only opt to fund private electric vehicles rather than public transport, the chances are that this approach may require substantial ==government expenditures== or subsides and lower-income families may not even afford a private vehicle.
+
+
+## Celebrity deserve their high salaries?
+
+It's true that  acclaimed/ well-known sport players and distinguished singers, actors and actresses make fortune through outstanding performance, Even through some critic do not ==deem== them worthy of such rewards, I believe that they deserve the salaries paid to them due to their efforts and excellent performances yet they also lose their privacy. It is generally admitted that famous people ate often deprived of their right to privacy since people seem to like ==prying into== other people;s affairs, especially when these people are celebrities. Sometimes they need to ==disguise== themselves with hats and sunglasses if they want to go out with friends in public because they often followed/hassled/bothered by paparazzi and photographed. These private photos are then upload to the Internet, and though out curiosity get satisfied, these celebrities sometimes have to suffer very serious trauma. Therefor, millions of dollars is justifiable way to compensate them for their loss of privacy. In conclusion, since these people work ==relentlessly== to achieve such high status, and despite their efforts in enriching our lives, their privacy still suffer. Therefore, I maintain that they be paid high salaries.
+
+# 8/24
+
+- fire 
+  - vegetation was burned 
+  - blackened tree
+  - animals killed 
+  - visitor gone
+
+- not permanently destroyed, YS has shown sign of recovery 
+  - Burned vegetation  actually help a forest
+    - soil recharge/ add nutrients into the soil 
+    - regain sun light 
+    - loss may tree but more sunlight penetrate to forest
+  - Many small creatures coming back
+    - rabbits
+  - Tourist numbers are starting to increase 
+    - the decline is caused by economic crisis 
+    - not only decline 
+    - crisis passed, tourist back
+
+
+
+## vocabulary
+
+- be enraged/ be furious/ be infuriated
+- wreak: destroy 
+- be known for/ notable for/ celebrated for 
+- drove/ group
+  - coming in droves 
+- feast on/ eat a lot/ devour the new vegetation
+- dwell in 
+- spotted in the park
+- stance: viewpoint
+- spring up/ germinate and grow/ grow spouts
+  - bean sprout: 豆芽菜
+
+
+## asset 
+
+The reading passage describes the reason why Yellowstone National Park has bean permanently ruined by the fire of 1998, but the professor counters by suggesting several reasons as to why the park is recovering.
+
+In opposition to the author of reading passage, who believe the fire has greatly and permanently damaged Yellowstone National Park, the professor is convinced that the park is beginning to heal itself while also attracting more tourists.
+
+The reading first mentions the extreme problems caused to/wreaked havoc on the forests, rivers, and streams in the park, and the author believes that the park *cannot not recover from all of this damage/ cannot recover to its ==pristine condition==*. However, the professor states that the burned material actually nourished the soil and increase the amounts of sunlight will help new vegetation to ==grow and thrive.==
+
+In response to the reading passage's assertion that the animals that perished by the fire have not been replaced, the professor claims that the new species of animals are now moving into the park to eat the growing vegetation. She than cites the example of rabbits which were rare in the park in the past, but they are now coming in large number to dwell in the park.
+
+Finally, the reading passage describes how tourism to the park greatly declined in a large number after the fire. The professor agrees with that claim but blames the decline on the poor economic situation in the country in the late 1980s and early 1990s. She than declare that more and more tourists are staring to return to the park nowadays.
+
+In conclusion, while the author of reading passage believes that the park will never return to the way it used to be, the professor is convinced of Yellowstone's recovery.
+
+
