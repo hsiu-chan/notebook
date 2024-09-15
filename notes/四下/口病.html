@@ -1,0 +1,1281 @@
+<!DOCTYPE html><html><head>
+      <title>&#x53E3;&#x75C5;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+      
+      
+      
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@9.1.7/dist/mermaid.min.js"></script>
+      
+      
+      
+      
+      
+      <style>
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("data:application/x-font-woff;charset=utf-8;base64,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") format("woff");
+}
+
+.admonition {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 1.2rem;
+  border-left: .4rem solid rgba(68, 138, 255, .8);
+  border-radius: .2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  overflow: auto;
+}
+
+.admonition>p {
+  margin-top: .8rem;
+}
+
+.admonition>.admonition-title {
+  margin: 0 -1.2rem;
+  padding: .8rem 1.2rem .8rem 3.6rem;
+  border-bottom: 1px solid rgba(68, 138, 255, .2);
+  background-color: rgba(68, 138, 255, .1);
+  font-weight: 700;
+}
+
+.admonition>.admonition-title:before {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.5rem;
+  color: rgba(68, 138, 255, .8);
+  content: "\E3C9";
+}
+
+.admonition>.admonition-title:before {
+  font-family: Material Icons;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  text-transform: none;
+  white-space: nowrap;
+  speak: none;
+  word-wrap: normal;
+  direction: ltr;
+}
+
+.admonition.summary,
+.admonition.abstract,
+.admonition.tldr {
+  border-left-color: rgba(0, 176, 255, .8);
+}
+
+.admonition.summary>.admonition-title,
+.admonition.abstract>.admonition-title,
+.admonition.tldr>.admonition-title {
+  background-color: rgba(0, 176, 255, .1);
+  border-bottom-color: rgba(0, 176, 255, .2);
+}
+
+.admonition.summary>.admonition-title:before,
+.admonition.abstract>.admonition-title:before,
+.admonition.tldr>.admonition-title:before {
+  color: rgba(0, 176, 255, 1);
+  ;
+  content: "\E8D2";
+}
+
+.admonition.hint,
+.admonition.tip {
+  border-left-color: rgba(0, 191, 165, .8);
+}
+
+.admonition.hint>.admonition-title,
+.admonition.tip>.admonition-title {
+  background-color: rgba(0, 191, 165, .1);
+  border-bottom-color: rgba(0, 191, 165, .2);
+}
+
+.admonition.hint>.admonition-title:before,
+.admonition.tip>.admonition-title:before {
+  color: rgba(0, 191, 165, 1);
+  content: "\E80E";
+}
+
+.admonition.info,
+.admonition.todo {
+  border-left-color: rgba(0, 184, 212, .8);
+}
+
+.admonition.info>.admonition-title,
+.admonition.todo>.admonition-title {
+  background-color: rgba(0, 184, 212, .1);
+  border-bottom-color: rgba(0, 184, 212, .2);
+}
+
+.admonition.info>.admonition-title:before,
+.admonition.todo>.admonition-title:before {
+  color: rgba(0, 184, 212, 1);
+  ;
+  content: "\E88E";
+}
+
+.admonition.success,
+.admonition.check,
+.admonition.done {
+  border-left-color: rgba(0, 200, 83, .8);
+}
+
+.admonition.success>.admonition-title,
+.admonition.check>.admonition-title,
+.admonition.done>.admonition-title {
+  background-color: rgba(0, 200, 83, .1);
+  border-bottom-color: rgba(0, 200, 83, .2);
+}
+
+.admonition.success>.admonition-title:before,
+.admonition.check>.admonition-title:before,
+.admonition.done>.admonition-title:before {
+  color: rgba(0, 200, 83, 1);
+  ;
+  content: "\E876";
+}
+
+.admonition.question,
+.admonition.help,
+.admonition.faq {
+  border-left-color: rgba(100, 221, 23, .8);
+}
+
+.admonition.question>.admonition-title,
+.admonition.help>.admonition-title,
+.admonition.faq>.admonition-title {
+  background-color: rgba(100, 221, 23, .1);
+  border-bottom-color: rgba(100, 221, 23, .2);
+}
+
+.admonition.question>.admonition-title:before,
+.admonition.help>.admonition-title:before,
+.admonition.faq>.admonition-title:before {
+  color: rgba(100, 221, 23, 1);
+  ;
+  content: "\E887";
+}
+
+.admonition.warning,
+.admonition.attention,
+.admonition.caution {
+  border-left-color: rgba(255, 145, 0, .8);
+}
+
+.admonition.warning>.admonition-title,
+.admonition.attention>.admonition-title,
+.admonition.caution>.admonition-title {
+  background-color: rgba(255, 145, 0, .1);
+  border-bottom-color: rgba(255, 145, 0, .2);
+}
+
+.admonition.attention>.admonition-title:before {
+  color: rgba(255, 145, 0, 1);
+  content: "\E417";
+}
+
+.admonition.warning>.admonition-title:before,
+.admonition.caution>.admonition-title:before {
+  color: rgba(255, 145, 0, 1);
+  content: "\E002";
+}
+
+.admonition.failure,
+.admonition.fail,
+.admonition.missing {
+  border-left-color: rgba(255, 82, 82, .8);
+}
+
+.admonition.failure>.admonition-title,
+.admonition.fail>.admonition-title,
+.admonition.missing>.admonition-title {
+  background-color: rgba(255, 82, 82, .1);
+  border-bottom-color: rgba(255, 82, 82, .2);
+}
+
+.admonition.failure>.admonition-title:before,
+.admonition.fail>.admonition-title:before,
+.admonition.missing>.admonition-title:before {
+  color: rgba(255, 82, 82, 1);
+  ;
+  content: "\E14C";
+}
+
+.admonition.danger,
+.admonition.error,
+.admonition.bug {
+  border-left-color: rgba(255, 23, 68, .8);
+}
+
+.admonition.danger>.admonition-title,
+.admonition.error>.admonition-title,
+.admonition.bug>.admonition-title {
+  background-color: rgba(255, 23, 68, .1);
+  border-bottom-color: rgba(255, 23, 68, .2);
+}
+
+.admonition.danger>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E3E7";
+}
+
+.admonition.error>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E14C";
+}
+
+.admonition.bug>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E868";
+}
+
+.admonition.example,
+.admonition.snippet {
+  border-left-color: rgba(0, 184, 212, .8);
+}
+
+.admonition.example>.admonition-title,
+.admonition.snippet>.admonition-title {
+  background-color: rgba(0, 184, 212, .1);
+  border-bottom-color: rgba(0, 184, 212, .2);
+}
+
+.admonition.example>.admonition-title:before,
+.admonition.snippet>.admonition-title:before {
+  color: rgba(0, 184, 212, 1);
+  ;
+  content: "\E242";
+}
+
+.admonition.quote,
+.admonition.cite {
+  border-left-color: rgba(158, 158, 158, .8);
+}
+
+.admonition.quote>.admonition-title,
+.admonition.cite>.admonition-title {
+  background-color: rgba(158, 158, 158, .1);
+  border-bottom-color: rgba(158, 158, 158, .2);
+}
+
+.admonition.quote>.admonition-title:before,
+.admonition.cite>.admonition-title:before {
+  color: rgba(158, 158, 158, 1);
+  ;
+  content: "\E244";
+}
+
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.markdown-preview .title {
+  align-items: center;
+}
+.markdown-preview .title h1 {
+  border-bottom: 0;
+  text-align: center;
+  font-size: 2.75em;
+}
+.markdown-preview h1 {
+  padding-bottom: 0.3rem;
+  border-bottom: solid #fff;
+}
+.markdown-preview h2 {
+  font-weight: normal;
+  padding-bottom: 0.3rem;
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview h3 {
+  font-weight: bold;
+}
+.markdown-preview h4 {
+  font-style: italic;
+  font-weight: normal ;
+  font-size: 1.2em;
+}
+.markdown-preview hr {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview table {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+  text-align: center;
+  color: #f0ffff;
+}
+.markdown-preview table th {
+  text-align: center;
+  font-weight: bold;
+  color: #81b4f4;
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table td {
+  border: 1.5px solid #b7b7b7;
+}
+.markdown-preview table tr {
+  border: 1.5px solid #b7b7b7;
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
+  width: 100%;
+  max-width: 914px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 32px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
+}
+html {
+  /* 侧栏 */
+  /*.md-sidebar-toc ul li:hover > ul,
+  .md-sidebar-toc ul li:hover > ul ul{
+    display: block;
+  }*/
+  /* 侧栏自动编号 */
+  /* 复位计数器 */
+  /* 进行编号 */
+}
+html .md-sidebar-toc {
+  margin: 0rem 0rem 0em 0em;
+  padding: 0rem 0rem 0em 0rem;
+  width: auto;
+  max-width: 768px;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  /*背景颜色*/
+  position: absolute;
+  z-index: 70;
+}
+html .md-sidebar-toc a {
+  color: inherit;
+  font-size: 0.7rem !important;
+}
+html .md-sidebar-toc a:hover {
+  color: inherit;
+}
+html .md-sidebar-toc li {
+  margin-left: 1rem;
+  margin-bottom: 0 !important;
+  text-align: left;
+  /*左对齐*/
+}
+html .md-sidebar-toc ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+  padding-right: 0 !important;
+}
+html .md-sidebar-toc ul li {
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-weight: bold;
+  /*一级大纲*/
+}
+html .md-sidebar-toc ul li:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc ul ul {
+  padding-left: 0rem !important;
+  display: none;
+}
+html .md-sidebar-toc .active {
+  color: #87ffff;
+  font-style: italic;
+}
+html .md-sidebar-toc .active ul,
+html .md-sidebar-toc .active ul ul,
+html .md-sidebar-toc .active li {
+  display: block;
+}
+html .md-sidebar-toc ul ul:hover {
+  color: #87ffff;
+}
+html .md-sidebar-toc ul ul li {
+  margin-bottom: 8pt !important;
+  margin-top: 3pt !important;
+  margin-left: 0rem;
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 0.2rem;
+  border-left: 2px rgba(0, 0, 0, 0) solid;
+}
+html .md-sidebar-toc ul ul li:hover {
+  font-style: normal;
+  border-left: 2px solid;
+}
+html .md-sidebar-toc ul ul ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+}
+html .md-sidebar-toc ul ul ul li {
+  margin-top: 2pt !important;
+  margin-bottom: 2pt !important;
+  margin-left: 0rem;
+  padding-left: 0.5rem;
+  border-left: 0px;
+}
+html .md-sidebar-toc ul ul ul li:hover {
+  border-left: 0px solid;
+}
+html body {
+  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+}
+html .md-sidebar-toc li {
+  counter-reset: outline-h1;
+}
+html .md-sidebar-toc ul li {
+  counter-reset: outline-h2;
+}
+html .md-sidebar-toc ul ul li {
+  counter-reset: outline-h3;
+}
+html .md-sidebar-toc ul ul ul li {
+  counter-reset: outline-h4;
+}
+html .md-sidebar-toc ul ul ul ul li {
+  counter-reset: outline-h5;
+}
+html .md-sidebar-toc ul ul li:before {
+  counter-increment: outline-h2;
+  content: counter(outline-h2) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul li:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
+}
+html .md-sidebar-toc ul ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
+}
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
+}
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
+/////三线表/////
+table{
+    border-top: 1.5pt solid;
+    border-bottom: 1.5pt solid;
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+    text-align:center;                          //文字居中
+  page-break-inside:avoid;                    //禁止断页
+  width: 100%;                                //扩展表格宽度
+  overflow: auto;
+  margin-bottom: 8pt;                         //表格间距
+  border-collapse:collapse;       
+}
+
+table .katex{
+  font-size: 9pt;                             //表内公式
+}
+table td{
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+    font-size:9pt;                              //表内文字
+}
+
+table thead{
+  border-bottom: 0.75pt solid black;        //三线表中间线
+}
+
+//标题行
+table th{
+    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+    font-size:9pt;                              
+}
+*/
+.btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+.btn:active {
+  opacity: 0.8;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+      <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="cyst">cyst</h1>
+
+<h2 class="mume-header" id="%E5%88%86%E9%A1%9E">&#x5206;&#x985E;</h2>
+
+<div class="mermaid">graph LR 
+
+o[&quot;&#x9F52;&#x6E90;&#x6027; (Odontogenic)&quot;]--&gt;d[&quot;&#x767C;&#x80B2;&#x578B;(Developmental)&quot;] &amp; f[&quot;&#x767C;&#x708E;&#x578B;(inflamed)&quot;]
+n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
+
+</div><h2 class="mume-header" id="%E7%99%BC%E8%82%B2%E5%9E%8B">&#x767C;&#x80B2;&#x578B;</h2>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>&#x539F;&#x56E0;</th>
+<th>&#x597D;&#x767C;</th>
+<th>&#x5E74;&#x9F61;</th>
+<th>&#x7279;&#x5FB5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dentigerous cyst</td>
+<td>follicle &#x5206;&#x96E2;</td>
+<td>38,48</td>
+<td>10 - 30y</td>
+<td>&#x963B;&#x751F;&#x9F52;,&#x7259;&#x6839;&#x5438;&#x6536; <br>&#x3C6; = 3-4mm</td>
+</tr>
+<tr>
+<td>Eruption cyst</td>
+<td>Dentigerous &#x840C;&#x767C;</td>
+<td>12a, 12b, 34a, ?6</td>
+<td>10y &#x2193;</td>
+<td>&#x85CD;&#x8272;&#x6216;&#x7D2B;&#x68D5;&#x8272; <img src="paste_src/%E5%8F%A3%E7%97%85.png" alt></td>
+</tr>
+<tr>
+<td rowspan="5">Odontogenic Keratocyst cyst (OKC)</td>
+<td rowspan="5">dental lamina rest</td>
+<td rowspan="5">&#x4E0B;&#x984E;&#x9AA8;&#x5F8C;&#x7AEF;&#xFF0C;&#x4E0B;&#x9F52;&#x69FD;&#x7BA1;&#x4E0A;&#x65B9;</td>
+<td rowspan="5">10-40y</td>
+<td>&#x7D44;&#x751F;&#x9F52;(40%)</td>
+</tr>
+<tr>
+
+
+
+
+<td>PCNA (proliferating cell nuclear antigen),<br> Ki-67, <br> Gorlin Syndrome</td>
+</tr>
+<tr>
+
+
+
+
+<td>Radiolucent&#x3001;<br> MD&#x65B9;&#x5411;&#x4E0B;&#x984E;&#x9AA8;&#x5438;&#x6536;&#xFF0C;&#x4F46;&#x7259;&#x6839;&#x5B8C;&#x6574;&#x3002; <img src="paste_src/%E5%8F%A3%E7%97%85-2.png" alt></td>
+</tr>
+<tr>
+
+
+
+
+<td>&#x526F;&#x89D2;&#x5316;(&#x6709;&#x6838;)&#x3001;Basal cell &#x70BA; palisaded(&#x67F5;&#x72C0;)</td>
+</tr>
+<tr>
+
+
+
+
+<td>&#x9AD8;&#x5FA9;&#x767C; (30%)</td>
+</tr>
+<tr>
+<td><p style="color:blue">Orthokeratinized Odontogenic cyst(OOC)</p></td>
+<td>-</td>
+<td>&#x4E0B;&#x984E;&#x5F8C;&#x7259;</td>
+<td>&#x5E74;&#x8F15;&#x4EBA;</td>
+<td>&#x963B;&#x751F;&#x9F52; (66%)&#x3001; <br> granule layer &#x660E;&#x986F; &#x3001;<br> &#x751F;&#x9577;&#x6162;</td>
+</tr>
+<tr>
+<td>Gingival Cyst of the newborn</td>
+<td rowspan="6">dental lamina rest</td>
+<td>&#x65B0;&#x751F;&#x5152;&#x4E0A;&#x984E;&#x7259;&#x9F66; <img src="paste_src/%E5%8F%A3%E7%97%85-4.png" alt></td>
+<td>-</td>
+<td>&#x7BA1;&#x8154;&#x5167;&#x542B;&#x6709;&#x89D2;&#x8CEA;&#x788E;&#x5C51;(keratinaceous debris) <img src="paste_src/%E5%8F%A3%E7%97%85-5.png" alt></td>
+</tr>
+<tr>
+<td rowspan="3">Gingival Cyst of the adult</td>
+
+<td rowspan="3">&#x4E0B;&#x984E;premolar&#x3001;canine facial &#x7259;&#x9F66;</td>
+<td rowspan="3">40-60y</td>
+<td>&#x85CD;&#x8272;(bluish)&#x3001;&#x85CD;&#x7070;&#x8272;(blue-gray) <img src="paste_src/%E5%8F%A3%E7%97%85-6.png" alt></td>
+</tr>
+<tr>
+
+
+
+
+<td>focal plaques</td>
+</tr>
+<tr>
+
+
+
+
+<td rowspan="2">focal plaques<img src="paste_src/%E5%8F%A3%E7%97%85-7.png" alt></td>
+</tr>
+<tr>
+<td rowspan="2">Lateral Periodontal (LPC)</td>
+
+<td rowspan="2">&#x4E0B;&#x984E; premolar&#x3001;canine&#x3001;lateral incisor lateral root &#x8868;&#x9762;</td>
+<td rowspan="2">40-70y</td>
+
+</tr>
+<tr>
+
+
+
+
+<td>&#x985E;&#x4F3C; OKC&#xFF0C;&#x4F46;&#x63A8;&#x958B;&#x7259;&#x9F52; <img src="paste_src/&#x53E3;&#x75C5;-8.png" alt="alt text" style="width:50%;background-color: white;"></td>
+</tr>
+<tr>
+<td>Botryoid Odontogenic Cyst</td>
+<td colspan="4">&#x591A;&#x56CA; LPC</td>
+
+
+
+</tr>
+<tr>
+<td rowspan="3">Calcifying Odontogenic Cyst <br> ( Gorlin Cyst)</td>
+<td rowspan="3">-</td>
+<td rowspan="3">&#x524D;&#x7259;(65%)</td>
+<td rowspan="3">20-40y<br> &#x82E5;&#x6709; odontoma&#xFF0C;17y &#x767C;&#x75C5;</td>
+<td>&#x672A;&#x840C;&#x767C;&#x7684;&#x7259;&#x9F52;(33%)&#x3001; &#x963B;&#x751F;&#x9F52;(66%)</td>
+</tr>
+<tr>
+
+
+
+
+<td>basal cell reverse polarity <img src="paste_src/%E5%8F%A3%E7%97%85-9.png" alt></td>
+</tr>
+<tr>
+
+
+
+
+<td>ghost cells (&#x55DC;&#x9178;&#x7121;&#x6838;) <img src="paste_src/%E5%8F%A3%E7%97%85-10.png" alt></td>
+</tr>
+<tr>
+<td>Peripheral Calcifying Odontogenic Cyst</td>
+<td>COC &#x9577;&#x51FA;&#x4F86;</td>
+<td>-</td>
+<td>60-80y</td>
+<td>.<img src="paste_src/%E5%8F%A3%E7%97%85-11.png" alt></td>
+</tr>
+<tr>
+<td rowspan="3">Glandular Odontogenic Cyst</td>
+<td rowspan="3">-</td>
+<td rowspan="3">&#x4E0B;&#x984E;</td>
+<td rowspan="3">46-51y</td>
+<td>&#x8DE8;&#x4E2D;&#x7DDA;&#x3001;&#x7121; MAML2</td>
+</tr>
+<tr>
+
+
+
+
+<td>&#x5FA9;&#x767C;&#x3001;&#x4FB5;&#x72AF;&#x6027;&#xFF0C;&#x5403; cortical bone <img src="paste_src/%E5%8F%A3%E7%97%85-12.png" alt></td>
+</tr>
+<tr>
+
+
+
+
+<td>&#x676F;&#x72C0;&#x7D30;&#x80DE;&#x3001;cilia</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Gorlin syndrome</p>
+<ul>
+<li>SUFU &#x4E5F;&#x53EF;&#x80FD;&#x9020;&#x6210;<br>
+<img src="paste_src/%E5%8F%A3%E7%97%85-3.png" alt></li>
+</ul>
+</div>
+<p><img src="paste_src/%E5%8F%A3%E7%97%85-13.png" alt></p>
+<h2 class="mume-header" id="%E7%99%BC%E7%82%8E%E5%9E%8B">&#x767C;&#x708E;&#x578B;</h2>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>&#x539F;&#x56E0;</th>
+<th>&#x597D;&#x767C;</th>
+<th>&#x5E74;&#x9F61;</th>
+<th>&#x7279;&#x5FB5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Periapical(radicular) cysts</td>
+<td>&#x86C0;&#x7259;&#x3001;endo</td>
+<td>-</td>
+<td>-</td>
+<td>true/ periapical cyst <br> &#x5713;&#x5F62;&#x7684;&#x5149;&#x901A;&#x6027;&#x5305;&#x570D;&#x7259;&#x5C16;</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="%E7%8E%BB%E7%89%87%E7%89%B9%E5%BE%B5">&#x73BB;&#x7247;&#x7279;&#x5FB5;</h2>
+
+<ul>
+<li>Developmental cyst
+<ul>
+<li>epithelial lining &#x8207;&#x7D50;&#x7DE0;&#x7D44;&#x7E54;&#x4EA4;&#x754C;&#x8655;&#x5E73;&#x6574;</li>
+</ul>
+</li>
+<li>&#x975E;&#x767C;&#x708E;&#x578B;(noninflamed)
+<ul>
+<li>&#x7D50;&#x7DE0;&#x7D44;&#x7E54;&#x9B06;&#x6563;</li>
+<li>&#x7CD6;&#x80FA;&#x805A;&#x91A3;&#x57FA;&#x8CEA;(glycosaminoglycan ground substance)&#x3002;</li>
+</ul>
+</li>
+<li>&#x767C;&#x708E;&#x578B;(inflamed)
+<ul>
+<li>&#x7DB2;&#x5D74;(rete ridges)</li>
+<li>Rushton bodies<br>
+<img src="paste_src/%E5%8F%A3%E7%97%85-14.png" alt></li>
+</ul>
+</li>
+<li>true cyst
+<ul>
+<li>&#x5169;&#x5230;&#x56DB;&#x5C64;&#x7684;&#x6241;&#x5E73;&#x975E;&#x89D2;&#x5316;&#x4E0A;&#x76AE;</li>
+</ul>
+</li>
+</ul>
+<h1 class="mume-header" id="anomalies">Anomalies</h1>
+
+<ul>
+<li>&#x75C7;&#x5019;&#x7FA4;&#x76F8;&#x95DC;
+<ul>
+<li>PITX-2</li>
+<li>SHH</li>
+<li>PAX-9</li>
+</ul>
+</li>
+</ul>
+<dl>
+<dt>Neonatal ring</dt>
+<dd>&#x80CE;&#x5152;&#x671F;&#x8207;&#x51FA;&#x751F;&#x5F8C;&#x671F;&#x7259;&#x9F52;&#x767C;&#x80B2;&#x4E2D;&#x7684;&#x4EA4;&#x754C;</dd>
+</dl>
+<h2 class="mume-header" id="%E7%99%BC%E8%82%B2%E5%9E%8B-1">&#x767C;&#x80B2;&#x578B;</h2>
+
+<table>
+<thead>
+<tr>
+<th>&#x8B8A;&#x7570;&#x540D;&#x7A31;</th>
+<th colspan="2">&#x597D;&#x767C;&#x4F4D;&#x7F6E;</th>
+
+<th>&#x597D;&#x767C;&#x65CF;&#x7FA4;</th>
+<th>&#x6210;&#x56E0;</th>
+<th>&#x75C7;&#x72C0;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2">Turner hypoplasia</td>
+<td rowspan="2">Crown &amp; Root</td>
+<td rowspan="2"><ul><li><strong>Trauma</strong> : &#x4E0A;&#x984E;&#x6B63;&#x4E2D;&#x9580;&#x7259;, Facial (Avulsion, intrusive luxation)</li><li> <strong>Caries</strong>: &#x5C0F;&#x81FC;&#x9F52;</li></ul></td>
+<td rowspan="2"><ul> <li><strong>Crown</strong>: 1.5-3y</li><li><strong>Root</strong>: 4-5y</li></ul></td>
+<td rowspan="2">&#x767C;&#x708E; (&#x4E73;&#x7259; Caries, trauma) &#x5F71;&#x97FF;&#x6046;&#x7259;&#x767C;&#x80B2;</td>
+<td colspan="2">&#x5C40;&#x90E8;&#x6216;&#x6574;&#x500B;&#x7259;&#x51A0;&#x767D;&#x3001;&#x9EC3;&#x6216;&#x68D5;&#x8272;&#x767C;&#x80B2;&#x4E0D;&#x5168; <img src="paste_src/a.png" alt></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">&#x7121;&#x660E;&#x986F;&#x908A;&#x754C;</td>
+
+</tr>
+<tr>
+<td rowspan="3">Molar-Incisor Hypomineralization (MIH)</td>
+<td rowspan="3">Crown</td>
+<td rowspan="3">&#x55AE;&#x6216;&#x591A;&#x500B;&#x6046;&#x7259;&#x4E0B;&#x984E; 1<sup>st</sup>Molar (&#x53EF;&#x80FD;&#x5F71;&#x97FF; Incisor)</td>
+<td rowspan="3">-</td>
+<td rowspan="3"><strong>&#x4E73;&#x7259;</strong>: &#x7522;&#x524D;&#x6BCD;&#x9AD4;&#x75BE;&#x75C5;&#x3001;&#x85E5;&#x7269;&#x3001;&#x65E9;&#x7522; <br> <strong>&#x6046;&#x7259;</strong>: &#x5E7C;&#x5152;&#x671F;&#x75BE;&#x75C5;(fever, asthma, pneumonia)</td>
+<td>&#x5C40;&#x90E8;&#x767D;&#x3001;&#x9EC3;&#x6216;&#x68D5;&#x8272;&#x767C;&#x80B2;&#x4E0D;&#x5168;&#xFF0C;&#x53EF;&#x80FD;&#x591A;&#x5B54;&#x51F9;&#x9677;<br><img src="paste_src/a-1.png" alt></td>
+<td rowspan="3">CPPACP: &#x91CD;&#x65B0;&#x9223;&#x5316;&#xFF0C;&#x964D;&#x654F;</td>
+</tr>
+<tr>
+
+
+
+
+
+<td>&#x6709;&#x660E;&#x986F;&#x908A;&#x754C;</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td>&#x75DB; (27.4%)</td>
+
+</tr>
+<tr>
+<td rowspan="4">Molar Root-Incisor Malformation (MRIM, MIM)</td>
+<td rowspan="4">Crown &amp; Root</td>
+<td rowspan="4">&#x55AE;&#x500B;&#x6046;&#x7259;&#x4E0B;&#x984E; 1<sup>st</sup>Molar (&#x53EF;&#x80FD;&#x5F71;&#x97FF; Incisor)</td>
+<td rowspan="4">3y (1<sup>st</sup> Molar root)</td>
+<td rowspan="4">&#x975E;&#x907A;&#x50B3;&#xFF0C;&#x53EF;&#x80FD;&#x548C;&#x795E;&#x7D93;&#x75BE;&#x75C5;( seizures, meningitis)&#x76F8;&#x95DC;</td>
+<td colspan="2">&#x77ED;&#x7A84;&#x5C16;&#x7259;&#x6839;&#xFF0C;&#x7259;&#x51A0;&#x76F8;&#x5C0D;&#x6B63;&#x5E38;</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">Chamber &#x8B8A;&#x77EE;&#xFF0C;&#x7570;&#x4F4D;&#x7926;&#x5316;(ectopic mineralized ) <img src="paste_src/a-4.png" alt></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">&#x5E38;&#x898B;&#x75BC;&#x75DB;</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">1<sup>st</sup> Molar &#x62D4;&#x9664;</td>
+
+</tr>
+<tr>
+<td rowspan="5">Hypoplasia Caused by Antineoplastic Therapy</td>
+<td rowspan="5">Root &amp; Crown</td>
+<td rowspan="5">-</td>
+<td rowspan="5">12y&#x2193; (Common) <br> 5y&#x2193; (Extensive)</td>
+<td rowspan="5">&#x653E;&#x5C04;&#x7DDA;(4gy: &#x7578;&#x5F62;&#xFF0C;30gy: &#x767C;&#x80B2;&#x505C;&#x6B62;)&#x3001;&#x5316;&#x7642;</td>
+<td colspan="2">&#x5C0F;&#x7259;&#x75C7; (microdontia, 3y&#x2193; &#x66B4;&#x9732;)</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">&#x767C;&#x80B2;&#x4E0D;&#x5168; (hypodontia)</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">V-shaped hypoplastic roots</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">enamel hypoplasia</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">&#x4E0B;&#x984E;&#x5782;&#x76F4;&#x767C;&#x80B2;&#x6E1B;&#x5C11;</td>
+
+</tr>
+<tr>
+<td rowspan="2">Dental Fluorosis</td>
+<td rowspan="2">Crown</td>
+<td rowspan="2">&#x5169;&#x5074;&#x540C;&#x6642;&#xFF0C;&#x5C0D;&#x7A31;&#x6027;</td>
+<td rowspan="2">&#x4E0A;&#x984E; Incisor &#x5728; 3y &#x767C;&#x80B2;&#x5B8C;&#x6210;&#xFF0C;&#x9700;&#x91CD;&#x9EDE;&#x76E3;&#x6E2C;</td>
+<td rowspan="2">&#x6C1F;&#x7D50;&#x5408; Amelogenin</td>
+<td colspan="2">&#x743A;&#x746F;&#x8CEA;&#x767D;&#x8272;&#x5340;&#x57DF;(white, chalky areas)&#xFF0C;&#x7121;&#x5149;&#x6FA4;&#xFF0C;&#x4E0D;&#x900F;&#x660E;</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">&#x53EF;&#x80FD;&#x6709;&#x9EC3;&#x8272;&#x81F3;&#x6DF1;&#x68D5;&#x8272;&#x5340;&#x57DF;(mottled enamel)</td>
+
+</tr>
+<tr>
+<td rowspan="3">Syphilitic Hypoplasia (Congenital syphilis)</td>
+<td rowspan="3">Crown</td>
+<td rowspan="3">ALL</td>
+<td rowspan="3">-</td>
+<td rowspan="3">&#x5148;&#x5929;&#x6885;&#x6BD2;</td>
+<td colspan="2"><strong>Screwdriver-shaped incisors</strong>: Incisor &#x5207;&#x7AEF;&#x6536;&#x7E2E;&#xFF0C;&#x4E2D;&#x9593; 1/3 &#x6700;&#x5BEC; (&#x5FC5;&#x8981;)</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">Incisor &#x5207;&#x7AEF;&#x4E2D;&#x9593;&#x767C;&#x80B2;&#x4E0D;&#x5168;&#x5207;&#x8DE1; (central hypoplastic notch)</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">&#x6851;&#x6939;&#x81FC;&#x9F52;(mulberry molars)</td>
+
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="%E7%99%BC%E8%82%B2%E5%BE%8C">&#x767C;&#x80B2;&#x5F8C;</h2>
+
+<table>
+<thead>
+<tr>
+<th>&#x8B8A;&#x7570;&#x540D;&#x7A31;</th>
+<th colspan="2">&#x597D;&#x767C;&#x4F4D;&#x7F6E;</th>
+
+<th>&#x597D;&#x767C;&#x65CF;&#x7FA4;</th>
+<th>&#x6210;&#x56E0;</th>
+<th>&#x75C7;&#x72C0;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attrition</td>
+<td rowspan="10">Crown</td>
+<td>Occlusal, incisor edge</td>
+<td>-</td>
+<td>&#x78E8;&#x7259;, Deep bite, Cross bite</td>
+<td colspan="2">&#x654F;&#x611F;&#x3002;&#x96D6;&#x7136;&#x6703; Pulp exposure &#x4F46; reparative secondary dentin &#x586B;&#x5145; pulp chamber&#xFF0C;&#x8F03;&#x5C11;&#x75BC;&#x75DB;</td>
+
+</tr>
+<tr>
+<td rowspan="3">Abrasion</td>
+
+<td>&#x975E;&#x6163;&#x7528;&#x624B;&#x9830;&#x5074;&#x9F52;&#x9838;</td>
+<td rowspan="3">-</td>
+<td>&#x5237;&#x7259;</td>
+<td colspan="2">&#x9F52;&#x9838;&#x6C34;&#x5E73; notch</td>
+
+</tr>
+<tr>
+
+
+<td>&#x9130;&#x63A5;&#x9762;</td>
+
+<td>&#x7259;&#x7C64;&#x3001;&#x7259;&#x7DDA;</td>
+<td colspan="2">&#x9130;&#x63A5;&#x9762;&#x534A;&#x6708;&#x5F62;</td>
+
+</tr>
+<tr>
+
+
+<td>&#x72AC;&#x9F52;&#x3001;&#x5C0F;&#x81FC;&#x9F52;</td>
+
+<td>&#x54AC;&#x87BA;&#x7D72;&#x3001;&#x83F8;&#x6597;</td>
+<td colspan="2">O, V &#x578B;&#x7F3A;&#x53E3;</td>
+
+</tr>
+<tr>
+<td rowspan="4">Erosion</td>
+
+<td rowspan="4"><strong>&#x553E;&#x6DB2;&#x8F03;&#x5C11;&#x8655;:</strong> &#x4E0A;&#x984E;&#x524D;&#x7259;, &#x4E0B;&#x984E;&#x5F8C;&#x7259; Occlusal&amp; Facial</td>
+<td rowspan="3"><strong>&#x553E;&#x6DB2;&#x817A;&#x529F;&#x80FD;&#x8870;&#x9000;</strong>: salivary gland aplasia, &#x812B;&#x6C34;(dehydration) , &#x653E;&#x5C04;&#x6CBB;&#x7642;, Sj&#xF6;gren syndrome, DM, &#x795E;&#x7D93;&#x6027;&#x8CAA;&#x98DF;&#x75C7;(bulimia nervosa)</td>
+<td rowspan="4">&#x9178;&#x6027;&#x4FB5;&#x8755;</td>
+<td colspan="2">Dentin exposure&#xFF0C;&#x5468;&#x570D; Enamel &#x767D;&#x5708;&#x9AD8;&#x8D77; (&#x4FB5;&#x8755;&#x6297;&#x6027;&#x5DEE;&#x7570;)</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">&#x4E0A;&#x984E;&#x9580;&#x7259;&#x9F52;&#x9838;&#x6E6F;&#x9F52;&#x72C0;&#x51F9;&#x9677;</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td rowspan="2" colspan="2">&#x91D1;&#x5C6C;&#x88DC;&#x7DB4;&#x7269;&#x908A;&#x7DE3;&#x66B4;&#x9732;</td>
+
+</tr>
+<tr>
+
+
+
+<td><strong>&#x80C3;&#x9178;</strong>: perimolysis</td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2">Abfraction</td>
+
+<td rowspan="2">&#x5F8C;&#x7259;Facial, &#x55AE;&#x9846;&#x9F52;&#x9838;1/3</td>
+<td rowspan="2">-</td>
+<td rowspan="2">&#x54AC;&#x5408;&#x529B;</td>
+<td colspan="2">V &#x5F62;&#x5C16;&#x92B3;&#x7F3A;&#x53E3;&#xFF0C;&#x53EF;&#x80FD;&#x5EF6;&#x4F38;&#x5230;&#x7259;&#x9F66;&#x4E0B;&#x3002; <img src="paste_src/a-9.png" alt></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">Tertiary dentin &#x4FEE;&#x5FA9;&#xFF0C;&#x8F03;&#x5C11;&#x75BC;&#x75DB;</td>
+
+</tr>
+<tr>
+<td rowspan="2">Internal Resorption</td>
+<td rowspan="9">Root</td>
+<td rowspan="2" colspan="2">&#x5C11;&#x898B;</td>
+
+<td><strong>&#x767C;&#x708E;&#x5438;&#x6536;:</strong> &#x8089;&#x82BD;&#x7D44;&#x7E54;&#x53D6;&#x4EE3; Dentin</td>
+<td rowspan="2" colspan="2">&#x7121;&#x75C7;&#x72C0;&#xFF0C;&#x767C;&#x708E;&#x5247;&#x75BC;&#x75DB;&#x3002; <br> Pulp &#x7D05;&#x8272;&#x900F;&#x51FA;&#x3002; <br> <img src="paste_src/a-7.png" alt>  X-ray &#x4E0B; balloon-like dilation of the canal&#x3002; <img src="paste_src/a-8.png" alt></td>
+
+</tr>
+<tr>
+
+
+
+
+<td><strong>&#x66FF;&#x4EE3;&#x6216;&#x5316;&#x751F;&#x5438;&#x6536; (replacement or metaplastic resorption )</strong>: Bone, cementum &#x53D6;&#x4EE3; Dentin</td>
+
+
+</tr>
+<tr>
+<td rowspan="8">External Resorption</td>
+
+<td rowspan="3" colspan="2">&#x5E38;&#x898B;</td>
+
+<td rowspan="3">&#x767C;&#x708E;</td>
+<td colspan="2">Root &#x8B8A;&#x77ED;&#xFF0C;&#x6839;&#x5C16;&#x4E0D;&#x898F;&#x5247;&#x3002;&#x59A5;&#x5584;&#x6CBB;&#x7642;&#x5247;&#x4E00;&#x5E74;&#x5167;&#x75CA;&#x7652;&#x3002; <img src="paste_src/a-6.png" alt></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">PDL, &#x6839;&#x5C16;&#x5468;&#x570D; lamina dura &#x6D88;&#x5931;&#x6216;&#x6A21;&#x7CCA;</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">&#x59A5;&#x5584;&#x6CBB;&#x7642;&#x5247;&#x4E00;&#x5E74;&#x5167;&#x75CA;&#x7652;</td>
+
+</tr>
+<tr>
+
+
+<td>&#x4E0A;&#x984E;&#x9580;&#x7259; (&#x79FB;&#x52D5;&#x8DDD;&#x96E2;&#x9577;)</td>
+<td colspan="2">&#x77EF;&#x6B63;</td>
+
+<td colspan="2">&#x6839;&#x5C16;&#x5713;&#x5F62;&#x3002; <img src="paste_src/a-5.png" alt></td>
+
+</tr>
+<tr>
+
+
+<td colspan="2">-</td>
+
+<td><strong>&#x5176;&#x4ED6;&#x5916;&#x90E8;&#x58D3;&#x529B;:</strong> &#x963B;&#x751F;&#x9F52;&#x3001;&#x816B;&#x7624;&#x3001;Cysts</td>
+<td colspan="2">&#x6839;&#x64DA;&#x53D7;&#x529B;&#x4F4D;&#x7F6E;&#x3001;&#x5F62;&#x72C0;</td>
+
+</tr>
+<tr>
+
+
+<td colspan="2">-</td>
+
+<td>&#x56B4;&#x91CD; luxation, avulsion &#x5C0E;&#x81F4; PDL &#x6B7B;&#x4EA1;</td>
+<td colspan="2">&#x7259;&#x9F52;&#x8996;&#x70BA;&#x7570;&#x7269;&#xFF0C;&#x5916;&#x5438;&#x6536;&#x4E26;&#x9AA8;&#x53D6;&#x4EE3;</td>
+
+</tr>
+<tr>
+
+
+<td>&#x9F52;&#x9838; cementum</td>
+<td>Invasive cervical resorption (&#x4E09;&#x9846;&#x7259;&#x4EE5;&#x4E0A; &#x2192; multiple idiopathic cervical root resorption )</td>
+<td>-</td>
+<td colspan="2">&#x6CBF;&#x8457;&#x9F52;&#x9838;&#x4E00;&#x5708;&#x5438;&#x6536;&#xFF0C;&#x4E0D;&#x592A;&#x5F71;&#x97FF; pulp</td>
+
+</tr>
+<tr>
+
+<td colspan="6">&#x907A;&#x50B3; (&#x5982; IL-1B allele) &#x53EF;&#x80FD;&#x5C0E;&#x81F4;&#x5916;&#x5438;&#x6536;&#x3002;&#x672A;&#x840C;&#x767C;&#x7259;&#x51A0;&#x53EF;&#x80FD;&#x767C;&#x751F;&#x5916;&#x5438;&#x6536;</td>
+
+
+
+
+
+</tr>
+</tbody>
+</table>
+<br><br>
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+<script> 
+var Main_LeftListLiSelector = $(".md-sidebar-toc li");
+
+$(Main_LeftListLiSelector).on('click', function() {
+  $(Main_LeftListLiSelector).removeClass('active');
+  $(this).addClass('active');
+});
+</script>
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#cyst">cyst</a>
+<ul>
+<li><a href="#%E5%88%86%E9%A1%9E">&#x5206;&#x985E;</a></li>
+<li><a href="#%E7%99%BC%E8%82%B2%E5%9E%8B">&#x767C;&#x80B2;&#x578B;</a></li>
+<li><a href="#%E7%99%BC%E7%82%8E%E5%9E%8B">&#x767C;&#x708E;&#x578B;</a></li>
+<li><a href="#%E7%8E%BB%E7%89%87%E7%89%B9%E5%BE%B5">&#x73BB;&#x7247;&#x7279;&#x5FB5;</a></li>
+</ul>
+</li>
+<li><a href="#anomalies">Anomalies</a>
+<ul>
+<li><a href="#%E7%99%BC%E8%82%B2%E5%9E%8B-1">&#x767C;&#x80B2;&#x578B;</a></li>
+<li><a href="#%E7%99%BC%E8%82%B2%E5%BE%8C">&#x767C;&#x80B2;&#x5F8C;</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+MERMAID_CONFIG = {
+  startOnLoad: false,
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false
+  window['MERMAID_CONFIG'].theme = "dark"
+}
+mermaid.initialize(window['MERMAID_CONFIG'] || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.getElementsByClassName('mermaid'))
+}
+</script>
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

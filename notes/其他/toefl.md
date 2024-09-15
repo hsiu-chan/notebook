@@ -1,14 +1,19 @@
 ---
 toc:
-    depth_from: 1
-    depth_to: 3
+  depth_from: 1
+  depth_to: 3
 html:
-    offline: false
-    embed_local_images: false
-    print_background: true
+  offline: false
+  embed_local_images: false #嵌入base64圖片
+print_background: true
 export_on_save:
-    html: true
+  html: true
 ---
+
+
+
+
+<!-- markdownlint-enable MD025 -->
 
 # Writing
 
@@ -237,6 +242,7 @@ Topic: The raise of factory
    4. laws support the private property 
 
 
+---
 
 1. strong iron and steal as raw material trains and shop
 2. no so wide, factories built nearby the resource, coal mins and rivers, the improve of transportation wasn't that important.
@@ -416,3 +422,107 @@ Finally, the reading passage describes how tourism to the park greatly declined 
 In conclusion, while the author of reading passage believes that the park will never return to the way it used to be, the professor is convinced of Yellowstone's recovery.
 
 
+# 8/29
+
+indicate treasure? no 
+
+:::left
+1. translation error 
+
+2. so vast 
+   - no world possessions 
+   - practice asceticism
+
+3. few location no treasure
+:::right 
+
+1. combination of hebrew and egyptian number 
+
+2. under egyptian numeral system 
+   - amount of treasure will be reliable/ believable
+   - near egypt &rarr; influence i these area
+3. Treasure had be found and taken away 
+   - most have be dug up
+
+
+
+:::
+
+
+
+
+
+
+## vocabulary
+
+- colloquial language: speak 
+- articulate: eloquent
+- obey/ conform to/ comply with 
+- terrestrial planet
+- jovian planet
+- decipher: decode
+- mystery buffs/ enthusiast
+- rampant
+- asceticism
+- fascinate / captivate  mesmerized
+- supposedly/ purportedly/ allegedly
+- ascetic/ austere
+- possessions/ belongings/ property
+- hoax: scam
+- correspond to: equal to
+- carted away 
+- fictitious story 
+- legitimate
+- intentionally
+- on purpose
+- adopt
+
+
+
+## asset 
+
+While the author of the reading passage states that the Dead Sea Scrolls tells a fictitious story about buried treasures, the professor is convinced that the treasure mentioned in the scrolls were real/ legitimate/ authentic
+
+First, it is mentioned in the reading that the translation of the scrolls posed a problem since they contain many translation errors. The professor explain this by saying that the mistakes were done intentionally/ on purpose so that only a few people would actually be able to know the treasure's locations. 
+
+Second, the reading is skeptical of the existence of the treasures because not only are the sums described very huge, but the scrolls also came from the Qumran faction, a group who owned few possessions. However, the professor explains the if an Egyptian numeral system is adopted instead of/ as opposed to a Hebrew one, the treasure become smaller and more reasonable.
+
+Finally, the reading reveals that some people ==deciphered== the locations of a few treasures, but they found nothing  when they tried digging them up. The professor argue that the treasure's locations were in Egypt, and these sites were already dug up. She is convinced that the treasure were taken away long years ago and are ether in museums or personal collectors'.
+
+Both the reading and the lecture describe the secrets of the Copper Scrolls, but they come to different conclusions as to their legitimacy. 
+
+
+
+# 9/5 
+
+- impede/ hinder/ hamper 
+- analogous
+- juvenile
+- hatch from the egg
+- conifer: 針葉樹
+- unequivocal: clear
+- excretion: solid waste
+
+- benefit the society as a whole 
+- deprive humans of job opportunity
+- inequality
+- myriad world issue
+- in a responsible way
+- leisure time
+- apprehensive about 
+
+## Writing
+
+- better than humans at many jobs and enhance accuracy
+  - automatically harvest crops
+- reduce risks
+  - self driving mobiles
+- conduct and execute dangerous missions by using unmanned drones
+
+The ==inexorable==/unstoppable progress in the aspect of artificial intelligence applications never ceases to ==amaze mankind==. Through some people are concerned about the possible negatives/drawbacks of over-reliance on ==automation==, I believe that ultimate computerization can actually bring many benefit to our life. One of the main benefits that intelligent technology can bring to our life is to increase accuracy in some jobs in  certain jobs. Machines are clearly able to accomplish many task better than humans can, especially in areas that require high levels to accuracy or calculations using large amounts of data. For example, in medical science,  robotic arms are being developed that can carry out surgical procedures with greater precision than human doctor, whereas in agricultural practices, robots are used to replace human pickers to help farmers harvest crops. All these labor-saving devices not only have high percentage of accuracy but also enhance productivity.
+
+
+- people would lose skills and purpose of life 
+- computer may take over -- making decisions that harm us 
+
+Despite tremendous benefits brought by artificial intelligence to uor life, I do share the concern of people whole believe that artificial intelligence may harm us if we are not careful. In thee short term, it's likely that we will see a rise of unemployment as worker on various industries are replaced by machines or software programs. For example, self-driving vehicles are expected to cause redundancies  in driving jobs, such as truck drivers, taxi drivers, and bus drivers. In medium term, if intelligent technologies gradually take jobs away from humans, we may find that people 

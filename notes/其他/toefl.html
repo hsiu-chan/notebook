@@ -14,246 +14,7 @@
       
       
       <style>
-      /**
- * prism.js Github theme based on GitHub's theme.
- * @author Sam Clarke
- */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #333;
-  background: none;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.4;
-
-  -moz-tab-size: 8;
-  -o-tab-size: 8;
-  tab-size: 8;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-  padding: .8em;
-  overflow: auto;
-  /* border: 1px solid #ddd; */
-  border-radius: 3px;
-  /* background: #fff; */
-  background: #f5f5f5;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  white-space: normal;
-  background: #f5f5f5;
-}
-
-.token.comment,
-.token.blockquote {
-  color: #969896;
-}
-
-.token.cdata {
-  color: #183691;
-}
-
-.token.doctype,
-.token.punctuation,
-.token.variable,
-.token.macro.property {
-  color: #333;
-}
-
-.token.operator,
-.token.important,
-.token.keyword,
-.token.rule,
-.token.builtin {
-  color: #a71d5d;
-}
-
-.token.string,
-.token.url,
-.token.regex,
-.token.attr-value {
-  color: #183691;
-}
-
-.token.property,
-.token.number,
-.token.boolean,
-.token.entity,
-.token.atrule,
-.token.constant,
-.token.symbol,
-.token.command,
-.token.code {
-  color: #0086b3;
-}
-
-.token.tag,
-.token.selector,
-.token.prolog {
-  color: #63a35c;
-}
-
-.token.function,
-.token.namespace,
-.token.pseudo-element,
-.token.class,
-.token.class-name,
-.token.pseudo-class,
-.token.id,
-.token.url-reference .token.variable,
-.token.attr-name {
-  color: #795da3;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-.token.title,
-.token.title .token.punctuation {
-  font-weight: bold;
-  color: #1d3e81;
-}
-
-.token.list {
-  color: #ed6a43;
-}
-
-.token.inserted {
-  background-color: #eaffea;
-  color: #55a532;
-}
-
-.token.deleted {
-  background-color: #ffecec;
-  color: #bd2c00;
-}
-
-.token.bold {
-  font-weight: bold;
-}
-
-.token.italic {
-  font-style: italic;
-}
-
-
-/* JSON */
-.language-json .token.property {
-  color: #183691;
-}
-
-.language-markup .token.tag .token.punctuation {
-  color: #333;
-}
-
-/* CSS */
-code.language-css,
-.language-css .token.function {
-  color: #0086b3;
-}
-
-/* YAML */
-.language-yaml .token.atrule {
-  color: #63a35c;
-}
-
-code.language-yaml {
-  color: #183691;
-}
-
-/* Ruby */
-.language-ruby .token.function {
-  color: #333;
-}
-
-/* Markdown */
-.language-markdown .token.url {
-  color: #795da3;
-}
-
-/* Makefile */
-.language-makefile .token.symbol {
-  color: #795da3;
-}
-
-.language-makefile .token.variable {
-  color: #183691;
-}
-
-.language-makefile .token.builtin {
-  color: #0086b3;
-}
-
-/* Bash */
-.language-bash .token.keyword {
-  color: #0086b3;
-}
-
-/* highlight */
-pre[data-line] {
-  position: relative;
-  padding: 1em 0 1em 3em;
-}
-pre[data-line] .line-highlight-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  display: block;
-  width: 100%;
-}
-
-pre[data-line] .line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  background: hsla(24, 20%, 50%,.08);
-  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
-}
-
-pre[data-line] .line-highlight:before, 
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-start);
-  position: absolute;
-  top: .4em;
-  left: .6em;
-  min-width: 1em;
-  padding: 0 .5em;
-  background-color: hsla(24, 20%, 50%,.4);
-  color: hsl(24, 20%, 95%);
-  font: bold 65%/1.5 sans-serif;
-  text-align: center;
-  vertical-align: .3em;
-  border-radius: 999px;
-  text-shadow: none;
-  box-shadow: 0 1px white;
-}
-
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-end);
-  top: auto;
-  bottom: .4em;
-}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 .markdown-preview {
@@ -805,6 +566,371 @@ Without grand passion for these unpaid jobs, they may easily discouraged/<mark>d
 <p>The next point brought by the reading is that the Dutch destroyed the dodos&#x2019; natural habitats. However, the professor first claim that deforestation did not cover the entire island nor did it kill other bird species. He then declare that dodo did not nest in trees, so their disappearance should not have bothered/ threatened/ endangered the dodo.</p>
 <p>Finally, in contrast to reading&#x2019;s argument that disease brought by the Dutch might have killed the dodo. The professor says that the population of dodo may already have been declining. He than blame the extinction of dodo on massive cyclones that destroyed their nests and eggs.</p>
 <p>All in all, although the reading passage brings up several reasons to blame humans for the dodo&#x2019;s extinction, the professor provides refutations and his own theory about the dodo&#x2019;s extinction.</p>
+<h1 class="mume-header" id="815">8/15</h1>
+
+<p>Topic: The raise of factory</p>
+<ol>
+<li>steam engine
+<ol>
+<li>pump out water in deep coal mines</li>
+<li>require a centralized inner place to store them</li>
+</ol>
+</li>
+<li>internal combustion engine
+<ol>
+<li>The utilization of the steam engine expanded to transportation such as railway and ship</li>
+</ol>
+</li>
+<li>property right
+<ol>
+<li>previous Subsistence farming</li>
+<li>cheap labors</li>
+<li>acquired land to exploit resource and build factory.</li>
+<li>laws support the private property</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>strong iron and steal as raw material trains and shop</li>
+<li>no so wide, factories built nearby the resource, coal mins and rivers, the improve of transportation wasn&#x2019;t that important.
+<ol>
+<li>decade brfore railway</li>
+</ol>
+</li>
+<li>large labor pool and property rights was the case of the English only not the other
+<ol>
+<li>Russia military weapon and gun powder, Factory owned by <mark>aristocrats</mark>
+<ol>
+<li>to exact the standard</li>
+</ol>
+</li>
+<li>manufacturing arms</li>
+</ol>
+</li>
+</ol>
+<h2 class="mume-header" id="vocabulary-4">vocabulary</h2>
+
+<ul>
+<li>Subsistence farming</li>
+<li>hedge and fence</li>
+<li>iron foundry</li>
+<li>integral</li>
+<li>aristocrats/ a member of nobility</li>
+<li>key contributor</li>
+</ul>
+<h2 class="mume-header" id="sentence">sentence</h2>
+
+<p>Iron industry is prior to steam engine</p>
+<h2 class="mume-header" id="asset-2">Asset</h2>
+
+<p>The reading passage&#x2019;s author believes that there were several reasons why the rise of factories occurred in the England, yet the professor in the lecture disagree that these were the main reasons why factory became that successful.</p>
+<p>The first reason the reading ascribes to the rise of factories is the steam engine. Since steam engine could do the work of several man, they had to be placed in central locations, which lead to the raise of factories. Meanwhile, the professor believes it was not the steam engine but the iron and steal used to make the engines that were the real important factor, especially since they could also make railways, ships, factories.</p>
+<p>While the reading passage&#x2019;s author believes the invention of railroads and steamship enabled raw materials and finish products to be transport rapidly worldwide, the professor point out that the railroads were invented decades after factory and sailing ships were still be used in twentieth century.</p>
+<p>Finally, the reading notes that property right landless people to work in factories, and enable landowners further to develope factory. However, the professor claims that it was really the standardized production of weapons for which factories are first built and used, that lead to the rise of factories.</p>
+<p>The reading passage&#x2019;s author and professor clearly disagree on the reason why the raise of the factory occurred.</p>
+<h1 class="mume-header" id="816">8/16</h1>
+
+<h2 class="mume-header" id="vocabulary-5">vocabulary</h2>
+
+<ul>
+<li>assess/ evaluate</li>
+</ul>
+<h2 class="mume-header" id="asset-3">Asset</h2>
+
+<p>When it comes to the right approach to teaching evaluation, I believe that student feedback is the most convincing information as they <mark>speak volume of</mark> effective teaching upon students. In a traditional class setting, teachers always require to <mark>impart</mark> their knowledge to student  in the sense that is comprehensive and <mark>enticing</mark>/engaging/educational. These educator should adjust their <mark>pedagogical approaches/teaching methods</mark> to <mark>cater the needs</mark> of students from various learning background. Tor example, they should know how to transform a complex historical event to a real-life event that student can easily comprehend and absorb because an experienced history teacher <mark>knowing the essence of</mark> the past events is capable of reflecting/mirroring this lesson to any <mark>relevant/pertinent present-day international affairs.</mark> I understand Lincoln&#x2019;s and Reagan&#x2019;s concerns over teaching evaluation, but I believe teaching that are merely base on the test results or <mark>guidance</mark> from senior teachers can lead to <mark>rigidity and repetition</mark> in teaching method.</p>
+<p>Students&#x2019; perspective should also be consider in teacher evaluation since they can provide valuable insight to teaching effectiveness, classroom dynamic, and learning environment.</p>
+<p>Relying solely on students&#x2019; score is not advisable. Evan through test score can roughly inform teacher of student&#x2019;s learning.</p>
+<h2 class="mume-header" id="some-people-say-that-the-internat-provides-people-with-a-lot-of-valuable-information-other-think-access-to-so-much-information-creates-problems">Some people say that the internat provides people with a lot of valuable information. Other think access to so much information creates problems</h2>
+
+<h3 class="mume-header" id="postive">postive</h3>
+
+<p>From my opinion, the Internet is one of the most convenient tools with which you can easily find valuable information.<br>
+It is the truth that the Internet has revolutionized the way we obtain information while some critics blame these massive amount of information for causing negative impact on users, I personally consider the <mark>proliferation</mark> of Internet information is rather beneficial to the general public.</p>
+<ul>
+<li>Acquire updated information immediately.</li>
+<li>Most of the information is <mark>free of charge</mark>. --ensure equality in society</li>
+<li>Allow user to obtain feedback from all over the world.</li>
+<li>promote global unity</li>
+</ul>
+<h3 class="mume-header" id="negative">Negative</h3>
+
+<p>I tend to have the notion that excessive amounts of the information on the Internet can cause problems as many people cannot <mark>discern the authenticity</mark> of Internet information they read online, they <mark>have the tendency to</mark> be misled by an error judgement. It is undeniable that digital media has <mark>a powerful effect on our perception</mark> and it creates a filter bubble that shapes the information we consume. This affect our ability to understand the perspectives of other people. In the case of deep fakes as much of the information on the Internet is misleading or just wrong, the authenticity of some news may sometimes be unbeknown to the readers. With so much rampant information websites, it could be difficult for Internet surfers to find accurate and quality information.</p>
+<p>Innocent Internet shoppers may <mark>fall victims to online scams</mark> as <mark>con artist</mark> increasingly use the Internat to commit crimes such as catfishing, identity theft, or even cred <mark>card fraud.</mark></p>
+<p>Internet users should be wary of / be aware of/ be <mark>vigilant</mark> of/ be cautious of online information which may be harmful to children, adolescents, and adults alike.</p>
+<h1 class="mume-header" id="822">8/22</h1>
+
+<h2 class="mume-header" id="vocabulary-r">vocabulary-r</h2>
+
+<ul>
+<li>accord
+<ul>
+<li>Our society accords great importance to the family</li>
+</ul>
+</li>
+<li>current status/ situation of the application</li>
+<li>evolve
+<ul>
+<li>evolve from/ be inspired by</li>
+</ul>
+</li>
+<li>attic: &#x95A3;&#x6A13;</li>
+<li>instigate: cause something bad &#x6559;&#x5506;
+<ul>
+<li>instigating the unrest</li>
+<li>They were accused of instigating racial violence</li>
+</ul>
+</li>
+<li>Porcelain: &#x74F7;&#x5668;</li>
+<li>dynasty</li>
+<li>utilitarian: &#x5BE6;&#x7528;&#x7684;</li>
+<li>motif: a design of pattern</li>
+<li>embrace the old custom</li>
+<li>side hustle</li>
+<li>settled: &#x7A69;&#x5B9A;&#x7684;</li>
+<li>prosperous</li>
+<li>adornment</li>
+<li>obscure sth: make it hard to see or heard
+<ul>
+<li>The view was obscured by frog</li>
+</ul>
+</li>
+<li>secular/ worldly
+<ul>
+<li>secular music</li>
+</ul>
+</li>
+<li>imperil</li>
+<li></li>
+</ul>
+<h2 class="mume-header" id="vocabulary-w">vocabulary-w</h2>
+
+<ul>
+<li>Sponsor/ subsidize/ fund/ allocate more funding/ budgets</li>
+<li>rebate: &#x9000;&#x7A05;</li>
+<li>subsidize EV industry and consumer reaps a long-tern benefit</li>
+<li>infrastructure</li>
+<li>paparazzo</li>
+</ul>
+<h2 class="mume-header" id="public-transportation">Public transportation</h2>
+
+<ul>
+<li>enhance the infrastructure</li>
+<li>expand to remote areas</li>
+<li></li>
+</ul>
+<p>I understand Paul&#x2019;s concern over those living in rural areas, but I believe he miss another critical point.</p>
+<p>As climate is really at its critical point, I am convinced that governments should <mark>take measures in</mark> tackling this <mark>urgent crisis</mark> by enhancing and expanding public transport net work <mark>by means of</mark> constructing bike lanes and encouraging citizens to take buses, <mark>trams</mark>, and subways. Since the main goal is to reduce carbon dioxide emissions <mark>substantially</mark>, the more people making good use of public transportation the more beneficial to the environment.</p>
+<p>Even though subsidizing electric vehicles may be one of the strategic solution, the use of <mark>tax revenue cannot be optimized</mark> if only a small number od citizens could be benefited. From the perspective of the economy, this budget, instead, should be allocated to converting public buses to electric vehicle and railway and expanding bus services and trams to remote areas, which in tern allows more daily commuters to take public transports thus effectively curbing/halting reducing/ mitigating the greenhouse gas emissions from <mark>transportation sector</mark>. If governments only opt to fund private electric vehicles rather than public transport, the chances are that this approach may require substantial <mark>government expenditures</mark> or subsides and lower-income families may not even afford a private vehicle.</p>
+<h2 class="mume-header" id="celebrity-deserve-their-high-salaries">Celebrity deserve their high salaries?</h2>
+
+<p>It&#x2019;s true that  acclaimed/ well-known sport players and distinguished singers, actors and actresses make fortune through outstanding performance, Even through some critic do not <mark>deem</mark> them worthy of such rewards, I believe that they deserve the salaries paid to them due to their efforts and excellent performances yet they also lose their privacy. It is generally admitted that famous people ate often deprived of their right to privacy since people seem to like <mark>prying into</mark> other people;s affairs, especially when these people are celebrities. Sometimes they need to <mark>disguise</mark> themselves with hats and sunglasses if they want to go out with friends in public because they often followed/hassled/bothered by paparazzi and photographed. These private photos are then upload to the Internet, and though out curiosity get satisfied, these celebrities sometimes have to suffer very serious trauma. Therefor, millions of dollars is justifiable way to compensate them for their loss of privacy. In conclusion, since these people work <mark>relentlessly</mark> to achieve such high status, and despite their efforts in enriching our lives, their privacy still suffer. Therefore, I maintain that they be paid high salaries.</p>
+<h1 class="mume-header" id="824">8/24</h1>
+
+<ul>
+<li>
+<p>fire</p>
+<ul>
+<li>vegetation was burned</li>
+<li>blackened tree</li>
+<li>animals killed</li>
+<li>visitor gone</li>
+</ul>
+</li>
+<li>
+<p>not permanently destroyed, YS has shown sign of recovery</p>
+<ul>
+<li>Burned vegetation  actually help a forest
+<ul>
+<li>soil recharge/ add nutrients into the soil</li>
+<li>regain sun light</li>
+<li>loss may tree but more sunlight penetrate to forest</li>
+</ul>
+</li>
+<li>Many small creatures coming back
+<ul>
+<li>rabbits</li>
+</ul>
+</li>
+<li>Tourist numbers are starting to increase
+<ul>
+<li>the decline is caused by economic crisis</li>
+<li>not only decline</li>
+<li>crisis passed, tourist back</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="vocabulary-6">vocabulary</h2>
+
+<ul>
+<li>be enraged/ be furious/ be infuriated</li>
+<li>wreak: destroy</li>
+<li>be known for/ notable for/ celebrated for</li>
+<li>drove/ group
+<ul>
+<li>coming in droves</li>
+</ul>
+</li>
+<li>feast on/ eat a lot/ devour the new vegetation</li>
+<li>dwell in</li>
+<li>spotted in the park</li>
+<li>stance: viewpoint</li>
+<li>spring up/ germinate and grow/ grow spouts
+<ul>
+<li>bean sprout: &#x8C46;&#x82BD;&#x83DC;</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="asset-4">asset</h2>
+
+<p>The reading passage describes the reason why Yellowstone National Park has bean permanently ruined by the fire of 1998, but the professor counters by suggesting several reasons as to why the park is recovering.</p>
+<p>In opposition to the author of reading passage, who believe the fire has greatly and permanently damaged Yellowstone National Park, the professor is convinced that the park is beginning to heal itself while also attracting more tourists.</p>
+<p>The reading first mentions the extreme problems caused to/wreaked havoc on the forests, rivers, and streams in the park, and the author believes that the park <em>cannot not recover from all of this damage/ cannot recover to its <mark>pristine condition</mark></em>. However, the professor states that the burned material actually nourished the soil and increase the amounts of sunlight will help new vegetation to <mark>grow and thrive.</mark></p>
+<p>In response to the reading passage&#x2019;s assertion that the animals that perished by the fire have not been replaced, the professor claims that the new species of animals are now moving into the park to eat the growing vegetation. She than cites the example of rabbits which were rare in the park in the past, but they are now coming in large number to dwell in the park.</p>
+<p>Finally, the reading passage describes how tourism to the park greatly declined in a large number after the fire. The professor agrees with that claim but blames the decline on the poor economic situation in the country in the late 1980s and early 1990s. She than declare that more and more tourists are staring to return to the park nowadays.</p>
+<p>In conclusion, while the author of reading passage believes that the park will never return to the way it used to be, the professor is convinced of Yellowstone&#x2019;s recovery.</p>
+<h1 class="mume-header" id="829">8/29</h1>
+
+<p>indicate treasure? no</p>
+<div class="dcl">
+<section>
+<ol>
+<li>
+<p>translation error</p>
+</li>
+<li>
+<p>so vast</p>
+<ul>
+<li>no world possessions</li>
+<li>practice asceticism</li>
+</ul>
+</li>
+<li>
+<p>few location no treasure</p>
+</li>
+</ol>
+</section>
+<section>
+<ol>
+<li>
+<p>combination of hebrew and egyptian number</p>
+</li>
+<li>
+<p>under egyptian numeral system</p>
+<ul>
+<li>amount of treasure will be reliable/ believable</li>
+<li>near egypt &#x2192; influence i these area</li>
+</ul>
+</li>
+<li>
+<p>Treasure had be found and taken away</p>
+<ul>
+<li>most have be dug up</li>
+</ul>
+</li>
+</ol>
+</section></div>
+<h2 class="mume-header" id="vocabulary-7">vocabulary</h2>
+
+<ul>
+<li>colloquial language: speak</li>
+<li>articulate: eloquent</li>
+<li>obey/ conform to/ comply with</li>
+<li>terrestrial planet</li>
+<li>jovian planet</li>
+<li>decipher: decode</li>
+<li>mystery buffs/ enthusiast</li>
+<li>rampant</li>
+<li>asceticism</li>
+<li>fascinate / captivate  mesmerized</li>
+<li>supposedly/ purportedly/ allegedly</li>
+<li>ascetic/ austere</li>
+<li>possessions/ belongings/ property</li>
+<li>hoax: scam</li>
+<li>correspond to: equal to</li>
+<li>carted away</li>
+<li>fictitious story</li>
+<li>legitimate</li>
+<li>intentionally</li>
+<li>on purpose</li>
+<li>adopt</li>
+</ul>
+<h2 class="mume-header" id="asset-5">asset</h2>
+
+<p>While the author of the reading passage states that the Dead Sea Scrolls tells a fictitious story about buried treasures, the professor is convinced that the treasure mentioned in the scrolls were real/ legitimate/ authentic</p>
+<p>First, it is mentioned in the reading that the translation of the scrolls posed a problem since they contain many translation errors. The professor explain this by saying that the mistakes were done intentionally/ on purpose so that only a few people would actually be able to know the treasure&#x2019;s locations.</p>
+<p>Second, the reading is skeptical of the existence of the treasures because not only are the sums described very huge, but the scrolls also came from the Qumran faction, a group who owned few possessions. However, the professor explains the if an Egyptian numeral system is adopted instead of/ as opposed to a Hebrew one, the treasure become smaller and more reasonable.</p>
+<p>Finally, the reading reveals that some people <mark>deciphered</mark> the locations of a few treasures, but they found nothing  when they tried digging them up. The professor argue that the treasure&#x2019;s locations were in Egypt, and these sites were already dug up. She is convinced that the treasure were taken away long years ago and are ether in museums or personal collectors&#x2019;.</p>
+<p>Both the reading and the lecture describe the secrets of the Copper Scrolls, but they come to different conclusions as to their legitimacy.</p>
+<h1 class="mume-header" id="95">9/5</h1>
+
+<ul>
+<li>
+<p>impede/ hinder/ hamper</p>
+</li>
+<li>
+<p>analogous</p>
+</li>
+<li>
+<p>juvenile</p>
+</li>
+<li>
+<p>hatch from the egg</p>
+</li>
+<li>
+<p>conifer: &#x91DD;&#x8449;&#x6A39;</p>
+</li>
+<li>
+<p>unequivocal: clear</p>
+</li>
+<li>
+<p>excretion: solid waste</p>
+</li>
+<li>
+<p>benefit the society as a whole</p>
+</li>
+<li>
+<p>deprive humans of job opportunity</p>
+</li>
+<li>
+<p>inequality</p>
+</li>
+<li>
+<p>myriad world issue</p>
+</li>
+<li>
+<p>in a responsible way</p>
+</li>
+<li>
+<p>leisure time</p>
+</li>
+<li>
+<p>apprehensive about</p>
+</li>
+</ul>
+<h2 class="mume-header" id="writing-1">Writing</h2>
+
+<ul>
+<li>better than humans at many jobs and enhance accuracy
+<ul>
+<li>automatically harvest crops</li>
+</ul>
+</li>
+<li>reduce risks
+<ul>
+<li>self driving mobiles</li>
+</ul>
+</li>
+<li>conduct and execute dangerous missions by using unmanned drones</li>
+</ul>
+<p>The <mark>inexorable</mark>/unstoppable progress in the aspect of artificial intelligence applications never ceases to <mark>amaze mankind</mark>. Through some people are concerned about the possible negatives/drawbacks of over-reliance on <mark>automation</mark>, I believe that ultimate computerization can actually bring many benefit to our life. One of the main benefits that intelligent technology can bring to our life is to increase accuracy in some jobs in  certain jobs. Machines are clearly able to accomplish many task better than humans can, especially in areas that require high levels to accuracy or calculations using large amounts of data. For example, in medical science,  robotic arms are being developed that can carry out surgical procedures with greater precision than human doctor, whereas in agricultural practices, robots are used to replace human pickers to help farmers harvest crops. All these labor-saving devices not only have high percentage of accuracy but also enhance productivity.</p>
+<ul>
+<li>people would lose skills and purpose of life</li>
+<li>computer may take over &#x2013; making decisions that harm us</li>
+</ul>
+<p>Despite tremendous benefits brought by artificial intelligence to uor life, I do share the concern of people whole believe that artificial intelligence may harm us if we are not careful. In thee short term, it&#x2019;s likely that we will see a rise of unemployment as worker on various industries are replaced by machines or software programs. For example, self-driving vehicles are expected to cause redundancies  in driving jobs, such as truck drivers, taxi drivers, and bus drivers. In medium term, if intelligent technologies gradually take jobs away from humans, we may find that people</p>
 <br><br>
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
 <script> 
@@ -853,6 +979,50 @@ $(Main_LeftListLiSelector).on('click', function() {
 <li><a href="#vocabulary-3">vocabulary</a></li>
 <li><a href="#notes">notes</a></li>
 <li><a href="#asset-1">Asset</a></li>
+</ul>
+</li>
+<li><a href="#815">8/15</a>
+<ul>
+<li><a href="#vocabulary-4">vocabulary</a></li>
+<li><a href="#sentence">sentence</a></li>
+<li><a href="#asset-2">Asset</a></li>
+</ul>
+</li>
+<li><a href="#816">8/16</a>
+<ul>
+<li><a href="#vocabulary-5">vocabulary</a></li>
+<li><a href="#asset-3">Asset</a></li>
+<li><a href="#some-people-say-that-the-internat-provides-people-with-a-lot-of-valuable-information-other-think-access-to-so-much-information-creates-problems">Some people say that the internat provides people with a lot of valuable information. Other think access to so much information creates problems</a>
+<ul>
+<li><a href="#postive">postive</a></li>
+<li><a href="#negative">Negative</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#822">8/22</a>
+<ul>
+<li><a href="#vocabulary-r">vocabulary-r</a></li>
+<li><a href="#vocabulary-w">vocabulary-w</a></li>
+<li><a href="#public-transportation">Public transportation</a></li>
+<li><a href="#celebrity-deserve-their-high-salaries">Celebrity deserve their high salaries?</a></li>
+</ul>
+</li>
+<li><a href="#824">8/24</a>
+<ul>
+<li><a href="#vocabulary-6">vocabulary</a></li>
+<li><a href="#asset-4">asset</a></li>
+</ul>
+</li>
+<li><a href="#829">8/29</a>
+<ul>
+<li><a href="#vocabulary-7">vocabulary</a></li>
+<li><a href="#asset-5">asset</a></li>
+</ul>
+</li>
+<li><a href="#95">9/5</a>
+<ul>
+<li><a href="#writing-1">Writing</a></li>
 </ul>
 </li>
 </ul>
