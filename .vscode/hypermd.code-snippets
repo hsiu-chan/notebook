@@ -43,12 +43,92 @@
 			"@web https://"
 		],
 	},
+	":::note":{
+		"prefix": "note:",
+		"body": [
+			":::note {${1}}",
+		"${2}",
+		":::",
+		"${3}"
+		]
+	},
+	"fbox":{
+		"prefix": ["fbox","flex"],
+		"body": [
+			":::fbox ",
+		"${2}",
+		":::",
+		"${3}"
+		]
+	},
+	"summary":{
+		"prefix": ["spoiler","summary"],
+		"body": [
+			":::spoiler {${1}}",
+		"${2}",
+		":::",
+		"${3}"
+		]
+	},
+	"info":{
+		"prefix": ["info"],
+		"body": [
+			":::info {${1}}",
+		"${2}",
+		":::",
+		"${3}"
+		]
+	},
+	"warning":{
+		"prefix": ["warning"],
+		"body": [
+			":::warning {${1}}",
+		"${2}",
+		":::",
+		"${3}"
+		]
+	},
+
+	"df":{
+		"prefix": ["df",],
+		"body": [
+			"${1}",
+			": ${2}",
+			"${3}"
+		]
+	},
+
+	"2cl":{
+		"prefix": [":2","2cl","lr"],
+		"body": [
+			":::left",
+			"${1}",
+			":::right",
+			"${2}",
+			":::",
+			"${3}"
+		]
+	},
 	"CSS inside \\style[] in Markdown": {
         "prefix": "\\style",
         "body": [
             "\\style[${1|color,background-color,font-size,margin,padding|}: $2;]{$3}"
         ],
         "description": "Insert CSS suggestions inside \\style[] in Markdown"
+    },
+	"Markdown to one line HTML": {
+        "prefix": "\\oneline",
+        "body": [
+            "\\oneline{$1}"
+        ],
+        "description": "Markdown to one line HTML"
+    },
+	"Collapse area": {
+        "prefix": "\\collapse",
+        "body": [
+            "\\collapse[$1]{$2}"
+        ],
+        "description": "Collapse area"
     }
 
 }

@@ -33,12 +33,7 @@ export_on_save:
 2. f 
 3. &rarr;
 ![alt text](paste_src/test-1.png =20)
-}|\oneline{
-1. f 
-2. f 
-3. &rarr;
-![alt text](paste_src/test-1.png =20)
-}|
+}|\collapse[]{dd}|
 
 
 - f 
@@ -48,3 +43,5 @@ export_on_save:
 $$
 \frac{1}{2}
 $$
+
+}
