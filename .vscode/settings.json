@@ -20,5 +20,8 @@
         "temporalis",
         "Temporozygomatic"
     ],
+    /*"emmet.includeLanguages": {
+      "markdown": "html"
+    },*/
     "local-history.daysLimit": 30 // 清除本地歷史記錄的天數。 （0：不清除）
 }

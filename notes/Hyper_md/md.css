@@ -209,6 +209,16 @@ html .md-sidebar-toc ul ul ul ul ul li:before {
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
   font-size: 0.7em;
 }
+html tbody tr td span ol,
+html thead tr td span ol,
+html tbody tr td span ul,
+html thead tr td span ul {
+  padding-left: 0;
+  list-style-position: inside;
+  /* 控制項目符號的位置 */
+  text-align: left;
+  /* 文字對齊方式 */
+}
 .dcl {
   /* block 水平置中的方法 */
   margin: 0 auto;

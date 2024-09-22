@@ -42,6 +42,13 @@
 		"body": [
 			"@web https://"
 		],
-	}
+	},
+	"CSS inside \\style[] in Markdown": {
+        "prefix": "\\style",
+        "body": [
+            "\\style[${1|color,background-color,font-size,margin,padding|}: $2;]{$3}"
+        ],
+        "description": "Insert CSS suggestions inside \\style[] in Markdown"
+    }
 
 }

@@ -10,6 +10,41 @@ export_on_save:
     html: true
 ---
 
+
+# hi
+
+
+
+==k==
+
+
+|a|-|-|
+|-|-|-|
+|\oneline{
+1. f 
+2. f 
+3. &rarr;
+
+
+
+![alt text](paste_src/test-1.png =20)
+}|\oneline{
+1. f 
+2. f 
+3. &rarr;
+![alt text](paste_src/test-1.png =20)
+}|\oneline{
+1. f 
+2. f 
+3. &rarr;
+![alt text](paste_src/test-1.png =20)
+}|
+
+
+- f 
+- fd
+
+
 $$
 \frac{1}{2}
 $$
