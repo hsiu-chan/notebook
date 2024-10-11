@@ -10,6 +10,7 @@
 @primary-color: hsl(220, 13%, 18%); // 定義主顏色變量
 @line-color: #8b8b8b;
 @hover-color: rgb(135, 255, 255);
+@mobile-max-width: 450px;
 
 
 
@@ -62,6 +63,24 @@
 //////////////table//////////////////
 
 
+
+
+.table-scroll-wrapper {
+  // 手機螢幕下的表格滾動設定
+  @media screen and (max-width: @mobile-max-width) {
+    overflow-x: auto;  // 讓表格橫向滾動
+    -webkit-overflow-scrolling: touch;  // 優化手機滾動體驗
+
+    // 隱藏滾動條
+    &::-webkit-scrollbar {
+      display: none;  // 隱藏滾動條（Webkit瀏覽器）
+    }
+    -ms-overflow-style: none;  // 隱藏滾動條（IE 和 Edge）
+    scrollbar-width: none;  // 隱藏滾動條（Firefox）
+  }
+}
+
+
 .markdown-preview table {
   width: 100%;  // 強制表格寬度不超過容器
   table-layout: fixed;  // 固定表格布局，根據寬度自動分配單元格
@@ -69,6 +88,11 @@
   color: #f0ffff;
   border-collapse: collapse;  // 合併邊框
   display: table;
+
+  @media screen and (max-width:@mobile-max-width){
+    
+    table-layout:auto;     
+  }
 
   thead {
     position: sticky;
@@ -158,7 +182,7 @@ html body {
   ////image////
   img {
 
-    max-width: min(600px, 100%);
+    max-width:100%;
     width: 80%;
 
     top: 0.3rem;
@@ -172,6 +196,11 @@ html body {
     margin-bottom: 0.3rem;
 
   }
+
+  /* Modal (background for enlarged image) */
+
+
+
 
 
 
@@ -495,4 +524,58 @@ html body {
 
   }
 
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  word-wrap: break-word;
+}
+
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+/* Zoom in effect */
+@keyframes zoomIn {
+  
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+  color: #bbb;
 }

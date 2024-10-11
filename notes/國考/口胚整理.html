@@ -7,7 +7,7 @@
       
       
       
-      
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@9.1.7/dist/mermaid.min.js"></script>
       
       
       
@@ -44,31 +44,64 @@
 }
 .markdown-preview h4 {
   font-style: italic;
-  font-weight: normal ;
+  font-weight: normal;
   font-size: 1.2em;
 }
 .markdown-preview hr {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
+@media screen and (max-width: 450px) {
+  .table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .table-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
 .markdown-preview table {
-  display: block;
-  max-width: 100%;
-  overflow: auto;
+  width: 100%;
+  table-layout: fixed;
   text-align: center;
   color: #f0ffff;
+  border-collapse: collapse;
+  display: table;
+}
+@media screen and (max-width: 450px) {
+  .markdown-preview table {
+    table-layout: auto;
+  }
+}
+.markdown-preview table thead {
+  position: sticky;
+  background-color: hsl(220, 13%, 8%);
+  top: 0;
+  z-index: 999;
 }
 .markdown-preview table th {
   text-align: center;
   font-weight: bold;
   color: #81b4f4;
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table td {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table tr {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td ol,
+.markdown-preview table th ol,
+.markdown-preview table td ul,
+.markdown-preview table th ul {
+  padding-left: 0;
+  list-style-position: inside;
+  /* 控制項目符號的位置 */
+  text-align: left;
+  /* 文字對齊方式 */
 }
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
@@ -94,72 +127,114 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   overflow: auto;
   background-color: inherit;
 }
-html {
+html body {
+  background-color: hsl(220, 13%, 18%);
   /* 侧栏 */
-  /*.md-sidebar-toc ul li:hover > ul,
-  .md-sidebar-toc ul li:hover > ul ul{
-    display: block;
-  }*/
   /* 侧栏自动编号 */
   /* 复位计数器 */
   /* 进行编号 */
+  /*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
 }
-html .md-sidebar-toc {
+html body img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+html body .md-sidebar-toc {
   margin: 0rem 0rem 0em 0em;
   padding: 0rem 0rem 0em 0rem;
   width: auto;
   max-width: 768px;
   margin-bottom: 1em;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(186, 55, 55, 0.1);
   /*背景颜色*/
   position: absolute;
   z-index: 70;
 }
-html .md-sidebar-toc a {
+html body .md-sidebar-toc a {
   color: inherit;
   font-size: 0.7rem !important;
 }
-html .md-sidebar-toc a:hover {
+html body .md-sidebar-toc a:hover {
   color: inherit;
 }
-html .md-sidebar-toc li {
+html body .md-sidebar-toc li {
   margin-left: 1rem;
   margin-bottom: 0 !important;
   text-align: left;
   /*左对齐*/
 }
-html .md-sidebar-toc ul {
+html body .md-sidebar-toc ul {
   padding-left: 0rem;
   margin-left: 0rem;
   padding-right: 0 !important;
 }
-html .md-sidebar-toc ul li {
+html body .md-sidebar-toc ul li {
   font-size: 0.8rem !important;
   /*字号*/
   font-weight: bold;
   /*一级大纲*/
 }
-html .md-sidebar-toc ul li:hover {
+html body .md-sidebar-toc ul li:hover {
   color: #87ffff;
   font-style: italic;
 }
-html .md-sidebar-toc ul ul {
+html body .md-sidebar-toc ul ul {
   padding-left: 0rem !important;
   display: none;
 }
-html .md-sidebar-toc .active {
+html body .md-sidebar-toc .active {
   color: #87ffff;
   font-style: italic;
 }
-html .md-sidebar-toc .active ul,
-html .md-sidebar-toc .active ul ul,
-html .md-sidebar-toc .active li {
+html body .md-sidebar-toc .active ul,
+html body .md-sidebar-toc .active ul ul,
+html body .md-sidebar-toc .active li {
   display: block;
 }
-html .md-sidebar-toc ul ul:hover {
+html body .md-sidebar-toc ul ul:hover {
   color: #87ffff;
 }
-html .md-sidebar-toc ul ul li {
+html body .md-sidebar-toc ul ul li {
   margin-bottom: 8pt !important;
   margin-top: 3pt !important;
   margin-left: 0rem;
@@ -170,118 +245,86 @@ html .md-sidebar-toc ul ul li {
   padding-left: 0.2rem;
   border-left: 2px rgba(0, 0, 0, 0) solid;
 }
-html .md-sidebar-toc ul ul li:hover {
+html body .md-sidebar-toc ul ul li:hover {
   font-style: normal;
   border-left: 2px solid;
 }
-html .md-sidebar-toc ul ul ul {
+html body .md-sidebar-toc ul ul ul {
   padding-left: 0rem;
   margin-left: 0rem;
 }
-html .md-sidebar-toc ul ul ul li {
+html body .md-sidebar-toc ul ul ul li {
   margin-top: 2pt !important;
   margin-bottom: 2pt !important;
   margin-left: 0rem;
   padding-left: 0.5rem;
   border-left: 0px;
 }
-html .md-sidebar-toc ul ul ul li:hover {
+html body .md-sidebar-toc ul ul ul li:hover {
   border-left: 0px solid;
 }
-html body {
+html body body {
   counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
 }
-html .md-sidebar-toc li {
+html body .md-sidebar-toc li {
   counter-reset: outline-h1;
 }
-html .md-sidebar-toc ul li {
+html body .md-sidebar-toc ul li {
   counter-reset: outline-h2;
 }
-html .md-sidebar-toc ul ul li {
+html body .md-sidebar-toc ul ul li {
   counter-reset: outline-h3;
 }
-html .md-sidebar-toc ul ul ul li {
+html body .md-sidebar-toc ul ul ul li {
   counter-reset: outline-h4;
 }
-html .md-sidebar-toc ul ul ul ul li {
+html body .md-sidebar-toc ul ul ul ul li {
   counter-reset: outline-h5;
 }
-html .md-sidebar-toc ul ul li:before {
+html body .md-sidebar-toc ul ul li:before {
   counter-increment: outline-h2;
   content: counter(outline-h2) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul li:before {
   counter-increment: outline-h3;
   content: counter(outline-h2) "." counter(outline-h3) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
   font-size: 0.7em;
 }
-.dcl {
+html body .dcl {
   /* block 水平置中的方法 */
   margin: 0 auto;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
   margin-right: -1%;
 }
-header,
-section,
-aside,
-.in,
-footer {
+html body header,
+html body section,
+html body aside,
+html body .in,
+html body footer {
   margin: 0 1% 0.3em 0;
 }
-section {
+html body section {
   float: left;
   width: 49%;
 }
-footer {
+html body footer {
   margin-bottom: 0;
   /* 不准其他元素出現在其左右 */
   clear: both;
 }
-/*
-/////三线表/////
-table{
-    border-top: 1.5pt solid;
-    border-bottom: 1.5pt solid;
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    text-align:center;                          //文字居中
-  page-break-inside:avoid;                    //禁止断页
-  width: 100%;                                //扩展表格宽度
-  overflow: auto;
-  margin-bottom: 8pt;                         //表格间距
-  border-collapse:collapse;       
-}
-
-table .katex{
-  font-size: 9pt;                             //表内公式
-}
-table td{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              //表内文字
-}
-
-table thead{
-  border-bottom: 0.75pt solid black;        //三线表中间线
-}
-
-//标题行
-table th{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              
-}
-*/
-.btn {
+html body .btn {
   position: fixed;
   z-index: 99;
   font-size: 24px;
@@ -292,11 +335,30 @@ table th{
   opacity: 0.4;
   word-wrap: break-word;
 }
-.btn:active {
+html body .btn:active {
   opacity: 0.8;
 }
-html body img {
-  padding: 0%;
+@media screen and (max-width: 400px) {
+  html body img {
+    width: 100% !important;
+  }
+}
+html body .fbox {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html body .fbox img {
+  position: relative;
+  left: 0;
+  transform: translate(0, 0);
+  padding: 0;
+  background-color: white;
 }
 
       </style>
@@ -305,8 +367,143 @@ html body img {
       <div class="mume markdown-preview  ">
       <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
       <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="pathway">Pathway</h1>
+<link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="%E9%A0%AD%E6%80%8E%E9%BA%BC%E9%95%B7">&#x982D;&#x600E;&#x9EBC;&#x9577;</h1>
 
+<div class="mermaid">graph TD 
+O[&#x53E3;&#x8154;]
+
+NC[Neural crest]--&gt;e[ectomesenchyme]
+
+S[somitomere]--&gt;MS[&#x808C;&#x8089;]
+
+nt[Neural tube]--&gt;N[&#x795E;&#x7D93;]
+
+H[&#x982D;&#x6298;]--&gt;OO[&#x539F;&#x53E3;]--&gt; O
+
+
+
+
+
+e--&gt;all[CT, Bone, PDL, Dentin, Cementum]
+
+e--&gt;ct[CT]
+
+
+
+subgraph &#x4E2D;&#x80DA;&#x5C64;
+  e 
+  S 
+  nt
+end
+
+subgraph &#x5916;&#x80DA;&#x5C64;
+  NC 
+  H
+  OO
+end
+
+
+subgraph pharyngeal arch 
+  ct
+  MS 
+  N 
+end
+
+
+fe[&#x524D;&#x8178;]---&gt;O
+fe--&gt;pp[&quot;&#x54BD;&#x56CA;(pharyngeal pouch)&quot;]
+
+
+
+</div><p><img src="paste_src/%E5%8F%A3%E8%83%9A%E6%95%B4%E7%90%86-1.png" alt></p>
+<p><img src="paste_src/%E5%8F%A3%E8%83%9A%E6%95%B4%E7%90%86-2.png" alt></p>
+<h2 class="mume-header" id="%E5%92%BD%E5%BC%93">&#x54BD;&#x5F13;</h2>
+
+<p><img src="paste_src/%E5%8F%A3%E8%83%9A%E6%95%B4%E7%90%86-3.png" alt></p>
+<h2 class="mume-header" id="%E9%95%B7%E8%87%89%E4%BA%86">&#x9577;&#x81C9;&#x4E86;</h2>
+
+<ul>
+<li>
+<p>24d</p>
+<ul>
+<li>&#x4E0A;&#x4E0B;&#x984E;&#x5206;&#x958B;</li>
+</ul>
+</li>
+<li>
+<p>24-28d</p>
+<ul>
+<li>Med. nasal process <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> &#x4E0A;&#x984E;&#x9580;&#x7259;</li>
+</ul>
+</li>
+<li>
+<p>26d</p>
+<ul>
+<li>Frontal prominence<br>
+<img src="paste_src/2023-03-13-14-54-20.png" alt></li>
+</ul>
+</li>
+<li>
+<p>27d</p>
+<ul>
+<li>Frontonasal process</li>
+<li>Odontogenic epi. &#x958B;&#x59CB;</li>
+</ul>
+</li>
+<li>
+<p>27-29d</p>
+<ul>
+<li>&#x8840;&#x7BA1;<br>
+<img src="paste_src/%E5%8F%A3%E8%83%9A%E6%95%B4%E7%90%86-4.png" alt></li>
+</ul>
+</li>
+<li>
+<p>4w</p>
+<ul>
+<li>&#x820C;&#x982D;&#x958B;&#x59CB;&#x767C;&#x80B2;</li>
+</ul>
+</li>
+<li>
+<p>w5-w6</p>
+<ul>
+<li>&#x521D;&#x7D1A;&#x4E0A;&#x984E;&#x7684;&#x5F62;&#x6210;
+<ul>
+<li>&#x5167;&#x9F3B;&#x7A81; &#x2192; &#x4E0A;&#x9837;&#x9593;&#x7D50;(intermaxillary segment)</li>
+<li>&#x5507;&#x90E8;(&#x4E0A;&#x5507;&#x4EBA;&#x4E2D;)&#x3001;&#x4E0A;&#x9837;&#x9AA8;&#x90E8;(&#x9644; 4 &#x9846;&#x9580;&#x9F52;)&#x3001;&#x984E;&#x90E8; (&#x5F62;&#x6210;&#x4E09;&#x89D2;&#x5F62;&#x539F;&#x984E;)</li>
+</ul>
+</li>
+<li>Odontogenic epi.&#x9023;&#x8D77;&#x4F86;(37-38d)</li>
+</ul>
+</li>
+<li>
+<p>7-9w</p>
+<ul>
+<li>&#x820C;&#x982D;&#x4E0B;&#x964D;</li>
+<li>secondary palate &#x958B;&#x59CB;&#x9577;&#xFF0C;&#x524D;&#x5F80;&#x5F8C;&#x805A;&#x5408;(-3m)</li>
+<li>&#x9577;&#x4E0B;&#x984E;</li>
+</ul>
+</li>
+<li>
+<p>9w</p>
+<ul>
+<li>&#x62AC;&#x982D;(upper facial complex has lifted away from the thorax)</li>
+</ul>
+</li>
+<li>
+<p>8-12w</p>
+<ul>
+<li>condylar cartilage</li>
+</ul>
+</li>
+<li>
+<p>16w</p>
+<ul>
+<li>Maxillary sinus &#x958B;&#x59CB;&#x767C;&#x80B2;</li>
+</ul>
+</li>
+</ul>
+<h1 class="mume-header" id="pathway">Pathway</h1>
+
+<p>&#x3B2;-catenin &#x5728;&#x80CC;&#x5074;&#x805A;&#x96C6;</p>
 <h2 class="mume-header" id="wnt">WNT</h2>
 
 <ul>
@@ -328,7 +525,7 @@ html body img {
 <p><img src="paste_src/%E5%8F%A3%E8%83%9A.png" alt></p>
 <hr>
 <ul>
-<li>&#x524D;&#x5F8C;&#x5206;&#x5316;&#xFF0C;&#x982D;&#x9838;&#x90E8;&#x767C;&#x80B2;&#x6700;&#x4E0A;&#x6E38;</li>
+<li>&#x982D;&#x5C3E;&#x5206;&#x5316;&#xFF0C;&#x5C3E;&#x90E8;&#x6FC3;&#x5EA6;&#x9AD8;&#xFF0C;&#x982D;&#x9838;&#x90E8;&#x767C;&#x80B2;&#x6700;&#x4E0A;&#x6E38;</li>
 <li>&#x4FC3;&#x9032;&#x9223;&#x5316;</li>
 <li>&#x4FC3;&#x9032;&#x9AA8;&#x751F;&#x6210;<br>
 <img src="paste_src/2023-06-02-16-37-05.png" alt></li>
@@ -336,7 +533,12 @@ html body img {
 </ul>
 <h2 class="mume-header" id="bmps">BMPs</h2>
 
-<p>bone morphogenetic proteins&#xFF0C;&#x8179;&#x80CC;&#x8EF8;&#xFF0C;&#x523A;&#x6FC0;&#x8868;&#x76AE;&#xFF0C;&#x8179;&#x90E8;&#x8868;&#x73FE;&#x3002;<img src="paste_src/2023-03-04-00-28-53.png" alt style="width:80%;background-color: white;padding:0"></p>
+<ul>
+<li>&#x8179;&#x80CC;&#x8EF8;&#xFF0C;&#x8179;&#x5074;&#x8868;&#x73FE;</li>
+<li>&#x523A;&#x6FC0;&#x8868;&#x76AE;<br>
+bone morphogenetic proteins&#xFF0C;&#x3002;</li>
+</ul>
+<img src="paste_src/2023-03-04-00-28-53.png" alt style="width:80%;background-color: white;padding:0">
 <h2 class="mume-header" id="shh">SHH</h2>
 
 <p>(Sonic hedgehog) &#x5DE6;&#x53F3;&#x5206;&#x5316;&#xFF0C;&#x6C7A;&#x5B9A;&#x56DB;&#x80A2;&#x4EE5;&#x53CA;&#x8166;&#x810A;&#x9AD3;&#x6B63;&#x4E2D;&#x7DDA;&#x7684;&#x5F62;&#x6210;</p>
@@ -360,6 +562,14 @@ html body img {
 <p><img src="paste_src/%E5%8F%A3%E8%83%9A-2.png" alt></p>
 <h1 class="mume-header" id="%E5%9F%BA%E5%9B%A0%E5%80%91%E6%95%B4%E7%90%86">&#x57FA;&#x56E0;&#x5011;&#x6574;&#x7406;</h1>
 
+<ul>
+<li>&#x7D44;&#x7E54;&#x7684;&#x767C;&#x80B2;
+<ul>
+<li>Otx2&#x3001;Msx&#x3001;Dlx&#x3001;Barx: 1st, 2nd somitomere</li>
+<li>HOX: 3rd somitomere &#x5F8C;</li>
+</ul>
+</li>
+</ul>
 <h2 class="mume-header" id="%E7%89%99%E9%BD%92%E5%9E%8B-field-model">&#x7259;&#x9F52;&#x578B; Field model</h2>
 
 <ul>
@@ -378,7 +588,7 @@ html body img {
 </li>
 <li>Amelotin</li>
 </ul>
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -408,7 +618,7 @@ html body img {
 <td>AMTN(4q13.3), ODAM(4q13.3), SCPPPQ1</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 class="mume-header" id="dentin-protein">Dentin protein</h2>
 
 <ul>
@@ -433,6 +643,12 @@ $(Main_LeftListLiSelector).on('click', function() {
 </script>
       </div>
       <div class="md-sidebar-toc"><ul>
+<li><a href="#%E9%A0%AD%E6%80%8E%E9%BA%BC%E9%95%B7">&#x982D;&#x600E;&#x9EBC;&#x9577;</a>
+<ul>
+<li><a href="#%E5%92%BD%E5%BC%93">&#x54BD;&#x5F13;</a></li>
+<li><a href="#%E9%95%B7%E8%87%89%E4%BA%86">&#x9577;&#x81C9;&#x4E86;</a></li>
+</ul>
+</li>
 <li><a href="#pathway">Pathway</a>
 <ul>
 <li><a href="#wnt">WNT</a></li>
@@ -456,7 +672,40 @@ $(Main_LeftListLiSelector).on('click', function() {
       <a id="sidebar-toc-btn">&#x2261;</a>
     
     
-    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+MERMAID_CONFIG = {
+  startOnLoad: false,
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false
+  window['MERMAID_CONFIG'].theme = "dark"
+}
+mermaid.initialize(window['MERMAID_CONFIG'] || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.getElementsByClassName('mermaid'))
+}
+</script>
     
     
     

@@ -301,31 +301,64 @@
 }
 .markdown-preview h4 {
   font-style: italic;
-  font-weight: normal ;
+  font-weight: normal;
   font-size: 1.2em;
 }
 .markdown-preview hr {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
+@media screen and (max-width: 450px) {
+  .table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .table-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
 .markdown-preview table {
-  display: block;
-  max-width: 100%;
-  overflow: auto;
+  width: 100%;
+  table-layout: fixed;
   text-align: center;
   color: #f0ffff;
+  border-collapse: collapse;
+  display: table;
+}
+@media screen and (max-width: 450px) {
+  .markdown-preview table {
+    table-layout: auto;
+  }
+}
+.markdown-preview table thead {
+  position: sticky;
+  background-color: hsl(220, 13%, 8%);
+  top: 0;
+  z-index: 999;
 }
 .markdown-preview table th {
   text-align: center;
   font-weight: bold;
   color: #81b4f4;
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table td {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table tr {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td ol,
+.markdown-preview table th ol,
+.markdown-preview table td ul,
+.markdown-preview table th ul {
+  padding-left: 0;
+  list-style-position: inside;
+  /* 控制項目符號的位置 */
+  text-align: left;
+  /* 文字對齊方式 */
 }
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
@@ -351,72 +384,114 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   overflow: auto;
   background-color: inherit;
 }
-html {
+html body {
+  background-color: hsl(220, 13%, 18%);
   /* 侧栏 */
-  /*.md-sidebar-toc ul li:hover > ul,
-  .md-sidebar-toc ul li:hover > ul ul{
-    display: block;
-  }*/
   /* 侧栏自动编号 */
   /* 复位计数器 */
   /* 进行编号 */
+  /*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
 }
-html .md-sidebar-toc {
+html body img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+html body .md-sidebar-toc {
   margin: 0rem 0rem 0em 0em;
   padding: 0rem 0rem 0em 0rem;
   width: auto;
   max-width: 768px;
   margin-bottom: 1em;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(186, 55, 55, 0.1);
   /*背景颜色*/
   position: absolute;
   z-index: 70;
 }
-html .md-sidebar-toc a {
+html body .md-sidebar-toc a {
   color: inherit;
   font-size: 0.7rem !important;
 }
-html .md-sidebar-toc a:hover {
+html body .md-sidebar-toc a:hover {
   color: inherit;
 }
-html .md-sidebar-toc li {
+html body .md-sidebar-toc li {
   margin-left: 1rem;
   margin-bottom: 0 !important;
   text-align: left;
   /*左对齐*/
 }
-html .md-sidebar-toc ul {
+html body .md-sidebar-toc ul {
   padding-left: 0rem;
   margin-left: 0rem;
   padding-right: 0 !important;
 }
-html .md-sidebar-toc ul li {
+html body .md-sidebar-toc ul li {
   font-size: 0.8rem !important;
   /*字号*/
   font-weight: bold;
   /*一级大纲*/
 }
-html .md-sidebar-toc ul li:hover {
+html body .md-sidebar-toc ul li:hover {
   color: #87ffff;
   font-style: italic;
 }
-html .md-sidebar-toc ul ul {
+html body .md-sidebar-toc ul ul {
   padding-left: 0rem !important;
   display: none;
 }
-html .md-sidebar-toc .active {
+html body .md-sidebar-toc .active {
   color: #87ffff;
   font-style: italic;
 }
-html .md-sidebar-toc .active ul,
-html .md-sidebar-toc .active ul ul,
-html .md-sidebar-toc .active li {
+html body .md-sidebar-toc .active ul,
+html body .md-sidebar-toc .active ul ul,
+html body .md-sidebar-toc .active li {
   display: block;
 }
-html .md-sidebar-toc ul ul:hover {
+html body .md-sidebar-toc ul ul:hover {
   color: #87ffff;
 }
-html .md-sidebar-toc ul ul li {
+html body .md-sidebar-toc ul ul li {
   margin-bottom: 8pt !important;
   margin-top: 3pt !important;
   margin-left: 0rem;
@@ -427,128 +502,86 @@ html .md-sidebar-toc ul ul li {
   padding-left: 0.2rem;
   border-left: 2px rgba(0, 0, 0, 0) solid;
 }
-html .md-sidebar-toc ul ul li:hover {
+html body .md-sidebar-toc ul ul li:hover {
   font-style: normal;
   border-left: 2px solid;
 }
-html .md-sidebar-toc ul ul ul {
+html body .md-sidebar-toc ul ul ul {
   padding-left: 0rem;
   margin-left: 0rem;
 }
-html .md-sidebar-toc ul ul ul li {
+html body .md-sidebar-toc ul ul ul li {
   margin-top: 2pt !important;
   margin-bottom: 2pt !important;
   margin-left: 0rem;
   padding-left: 0.5rem;
   border-left: 0px;
 }
-html .md-sidebar-toc ul ul ul li:hover {
+html body .md-sidebar-toc ul ul ul li:hover {
   border-left: 0px solid;
 }
-html body {
+html body body {
   counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
 }
-html .md-sidebar-toc li {
+html body .md-sidebar-toc li {
   counter-reset: outline-h1;
 }
-html .md-sidebar-toc ul li {
+html body .md-sidebar-toc ul li {
   counter-reset: outline-h2;
 }
-html .md-sidebar-toc ul ul li {
+html body .md-sidebar-toc ul ul li {
   counter-reset: outline-h3;
 }
-html .md-sidebar-toc ul ul ul li {
+html body .md-sidebar-toc ul ul ul li {
   counter-reset: outline-h4;
 }
-html .md-sidebar-toc ul ul ul ul li {
+html body .md-sidebar-toc ul ul ul ul li {
   counter-reset: outline-h5;
 }
-html .md-sidebar-toc ul ul li:before {
+html body .md-sidebar-toc ul ul li:before {
   counter-increment: outline-h2;
   content: counter(outline-h2) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul li:before {
   counter-increment: outline-h3;
   content: counter(outline-h2) "." counter(outline-h3) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
   font-size: 0.7em;
 }
-html tbody tr td span ol,
-html thead tr td span ol,
-html tbody tr td span ul,
-html thead tr td span ul {
-  padding-left: 0;
-  list-style-position: inside;
-  /* 控制項目符號的位置 */
-  text-align: left;
-  /* 文字對齊方式 */
-}
-.dcl {
+html body .dcl {
   /* block 水平置中的方法 */
   margin: 0 auto;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
   margin-right: -1%;
 }
-header,
-section,
-aside,
-.in,
-footer {
+html body header,
+html body section,
+html body aside,
+html body .in,
+html body footer {
   margin: 0 1% 0.3em 0;
 }
-section {
+html body section {
   float: left;
   width: 49%;
 }
-footer {
+html body footer {
   margin-bottom: 0;
   /* 不准其他元素出現在其左右 */
   clear: both;
 }
-/*
-/////三线表/////
-table{
-    border-top: 1.5pt solid;
-    border-bottom: 1.5pt solid;
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    text-align:center;                          //文字居中
-  page-break-inside:avoid;                    //禁止断页
-  width: 100%;                                //扩展表格宽度
-  overflow: auto;
-  margin-bottom: 8pt;                         //表格间距
-  border-collapse:collapse;       
-}
-
-table .katex{
-  font-size: 9pt;                             //表内公式
-}
-table td{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              //表内文字
-}
-
-table thead{
-  border-bottom: 0.75pt solid black;        //三线表中间线
-}
-
-//标题行
-table th{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              
-}
-*/
-.btn {
+html body .btn {
   position: fixed;
   z-index: 99;
   font-size: 24px;
@@ -559,11 +592,30 @@ table th{
   opacity: 0.4;
   word-wrap: break-word;
 }
-.btn:active {
+html body .btn:active {
   opacity: 0.8;
 }
-html body img {
-  padding: 0%;
+@media screen and (max-width: 400px) {
+  html body img {
+    width: 100% !important;
+  }
+}
+html body .fbox {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html body .fbox img {
+  position: relative;
+  left: 0;
+  transform: translate(0, 0);
+  padding: 0;
+  background-color: white;
 }
 
       </style>
@@ -581,9 +633,7 @@ html body img {
 o[&quot;&#x9F52;&#x6E90;&#x6027; (Odontogenic)&quot;]--&gt;d[&quot;&#x767C;&#x80B2;&#x578B;(Developmental)&quot;] &amp; f[&quot;&#x767C;&#x708E;&#x578B;(inflamed)&quot;]
 n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
-</div><h2 class="mume-header" id="odontogenic">Odontogenic</h2>
-
-<h3 class="mume-header" id="%E7%8E%BB%E7%89%87%E7%89%B9%E5%BE%B5">&#x73BB;&#x7247;&#x7279;&#x5FB5;</h3>
+</div><h2 class="mume-header" id="%E7%8E%BB%E7%89%87%E7%89%B9%E5%BE%B5">&#x73BB;&#x7247;&#x7279;&#x5FB5;</h2>
 
 <ul>
 <li>Developmental cyst
@@ -601,17 +651,17 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <ul>
 <li>&#x7DB2;&#x5D74;(rete ridges)</li>
 <li>cholesterol clefts<br>
-<img src="paste_src/%E5%8F%A3%E7%97%85-16.png" alt></li>
+<img src="paste_src/&#x53E3;&#x75C5;-16.png" alt="alt text" style=";background-color: white;padding:0"></li>
 <li>&#x9F52;&#x6E90; &#x2192; Rushton bodies</li>
 </ul>
 </li>
 </ul>
 <div class="dcl">
 <section>
-<p><img src="paste_src/%E5%8F%A3%E7%97%85-14.png" alt></p>
+<img src="paste_src/&#x53E3;&#x75C5;-14.png" alt="alt text" style=";background-color: white;padding:0">
 </section>
 <section>
-<p><img src="paste_src/%E5%8F%A3%E7%97%85-15.png" alt></p>
+<img src="paste_src/&#x53E3;&#x75C5;-15.png" alt="alt text" style=";background-color: white;padding:0">
 </section></div>
 <ul>
 <li>true cyst
@@ -620,6 +670,8 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 </ul>
 </li>
 </ul>
+<h2 class="mume-header" id="odontogenic">Odontogenic</h2>
+
 <h3 class="mume-header" id="%E7%99%8C%E5%8C%96">&#x764C;&#x5316;</h3>
 
 <ul>
@@ -632,7 +684,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 </ul>
 <h3 class="mume-header" id="%E7%99%BC%E8%82%B2%E5%9E%8B">&#x767C;&#x80B2;&#x578B;</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th></th>
@@ -644,18 +696,18 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 </thead>
 <tbody>
 <tr>
-<td>Dentigerous cyst</td>
+<td>Dentigerous cyst (DC)</td>
 <td>follicle &#x5206;&#x96E2;</td>
 <td>38,48</td>
 <td>10 - 30y</td>
 <td>&#x963B;&#x751F;&#x9F52;,&#x7259;&#x6839;&#x5438;&#x6536; <br>&#x3C6; = 3-4mm</td>
 </tr>
 <tr>
-<td>Eruption cyst</td>
+<td>Eruption cyst (EC)</td>
 <td>Dentigerous &#x840C;&#x767C;</td>
 <td>12a, 12b, 34a, ?6</td>
 <td>10y &#x2193;</td>
-<td>&#x85CD;&#x8272;&#x6216;&#x7D2B;&#x68D5;&#x8272; <img src="paste_src/%E5%8F%A3%E7%97%85.png" alt></td>
+<td>&#x85CD;&#x8272;&#x6216;&#x7D2B;&#x68D5;&#x8272; <img src="paste_src/&#x53E3;&#x75C5;.png" alt="alt text" style=";background-color: white;padding:0"></td>
 </tr>
 <tr>
 <td rowspan="5">Odontogenic Keratocyst cyst (OKC)</td>
@@ -676,14 +728,14 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 
 
-<td>Radiolucent&#x3001;<br> MD&#x65B9;&#x5411;&#x4E0B;&#x984E;&#x9AA8;&#x5438;&#x6536;&#xFF0C;&#x4F46;&#x7259;&#x6839;&#x5B8C;&#x6574;&#x3002; <img src="paste_src/%E5%8F%A3%E7%97%85-2.png" alt></td>
+<td>Radiolucent&#x3001;<br> MD&#x65B9;&#x5411;&#x4E0B;&#x984E;&#x9AA8;&#x5438;&#x6536;&#xFF0C;&#x4F46;&#x7259;&#x6839;&#x5B8C;&#x6574;&#x3002; <img src="paste_src/&#x53E3;&#x75C5;-2.png" alt="alt text" style=";background-color: white;padding:0"></td>
 </tr>
 <tr>
 
 
 
 
-<td>&#x526F;&#x89D2;&#x5316;(&#x6709;&#x6838;)&#x3001;Basal cell &#x70BA; palisaded(&#x67F5;&#x72C0;)</td>
+<td>4-8 &#x5C64;&#x3001;&#x526F;&#x89D2;&#x5316;(&#x6709;&#x6838;)&#x3001;Basal cell &#x70BA; palisaded(&#x67F5;&#x72C0;)</td>
 </tr>
 <tr>
 
@@ -693,7 +745,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td>&#x9AD8;&#x5FA9;&#x767C; (30%)</td>
 </tr>
 <tr>
-<td><p style="color:blue">Orthokeratinized Odontogenic cyst(OOC)</p></td>
+<td><p style="color:DeepSkyBlue">Orthokeratinized Odontogenic cyst (OOC)</p></td>
 <td>-</td>
 <td>&#x4E0B;&#x984E;&#x5F8C;&#x7259;</td>
 <td>&#x5E74;&#x8F15;&#x4EBA;</td>
@@ -702,16 +754,16 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <tr>
 <td>Gingival Cyst of the newborn</td>
 <td rowspan="6">dental lamina rest</td>
-<td>&#x65B0;&#x751F;&#x5152;&#x4E0A;&#x984E;&#x7259;&#x9F66; <img src="paste_src/%E5%8F%A3%E7%97%85-4.png" alt></td>
+<td>&#x65B0;&#x751F;&#x5152;&#x4E0A;&#x984E;&#x7259;&#x9F66; <img src="paste_src/&#x53E3;&#x75C5;-4.png" alt="alt text" style=";background-color: white;padding:0"></td>
 <td>-</td>
-<td>&#x7BA1;&#x8154;&#x5167;&#x542B;&#x6709;&#x89D2;&#x8CEA;&#x788E;&#x5C51;(keratinaceous debris) <img src="paste_src/%E5%8F%A3%E7%97%85-5.png" alt></td>
+<td>&#x7BA1;&#x8154;&#x5167;&#x542B;&#x6709;&#x89D2;&#x8CEA;&#x788E;&#x5C51;(keratinaceous debris) <img src="paste_src/&#x53E3;&#x75C5;-5.png" alt="alt text" style=";background-color: white;padding:0"></td>
 </tr>
 <tr>
 <td rowspan="3">Gingival Cyst of the adult (LPC &#x9577;&#x51FA;&#x4F86;)</td>
 
 <td rowspan="3">&#x4E0B;&#x984E;premolar&#x3001;canine facial &#x7259;&#x9F66;</td>
 <td rowspan="3">40-60y</td>
-<td>&#x85CD;&#x8272;(bluish)&#x3001;&#x85CD;&#x7070;&#x8272;(blue-gray) <img src="paste_src/%E5%8F%A3%E7%97%85-6.png" alt></td>
+<td>&#x85CD;&#x8272;(bluish)&#x3001;&#x85CD;&#x7070;&#x8272;(DeepSkyBlue-gray) <img src="paste_src/&#x53E3;&#x75C5;-6.png" alt="alt text" style=";background-color: white;padding:0"></td>
 </tr>
 <tr>
 
@@ -725,7 +777,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 
 
-<td rowspan="2">focal plaques<img src="paste_src/%E5%8F%A3%E7%97%85-7.png" alt></td>
+<td rowspan="2">focal plaques<img src="paste_src/&#x53E3;&#x75C5;-7.png" alt="alt text" style=";background-color: white;padding:0"></td>
 </tr>
 <tr>
 <td rowspan="2">Lateral Periodontal (LPC)</td>
@@ -742,17 +794,17 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td>&#x985E;&#x4F3C; OKC&#xFF0C;&#x4F46;&#x63A8;&#x958B;&#x7259;&#x9F52; <img src="paste_src/&#x53E3;&#x75C5;-8.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
 </tr>
 <tr>
-<td>Botryoid Odontogenic Cyst</td>
+<td>Botryoid Odontogenic Cyst (BOC)</td>
 <td colspan="4">&#x591A;&#x56CA; LPC</td>
 
 
 
 </tr>
 <tr>
-<td rowspan="3">Calcifying Odontogenic Cyst <br> ( Gorlin Cyst)</td>
-<td rowspan="3">-</td>
-<td rowspan="3">&#x524D;&#x7259;(65%) <img src="paste_src/%E5%8F%A3%E7%97%85-19.png" alt></td>
-<td rowspan="3">20-40y<br> &#x82E5;&#x6709; odontoma&#xFF0C;17y &#x767C;&#x75C5;</td>
+<td rowspan="4">Calcifying Odontogenic Cyst <br> ( Gorlin Cyst, COC)</td>
+<td rowspan="4">-</td>
+<td rowspan="4">&#x524D;&#x7259;(65%) <img src="paste_src/&#x53E3;&#x75C5;-19.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td rowspan="4">20-40y<br> &#x82E5;&#x6709; odontoma&#xFF0C;17y &#x767C;&#x75C5;</td>
 <td>&#x672A;&#x840C;&#x767C;&#x7684;&#x7259;&#x9F52;(33%)&#x3001; &#x963B;&#x751F;&#x9F52;(66%)</td>
 </tr>
 <tr>
@@ -760,24 +812,31 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 
 
-<td>basal cell reverse polarity <img src="paste_src/%E5%8F%A3%E7%97%85-9.png" alt></td>
+<td>basal cell reverse polarity <img src="paste_src/&#x53E3;&#x75C5;-9.png" alt="alt text" style=";background-color: white;padding:0"></td>
 </tr>
 <tr>
 
 
 
 
-<td>ghost cells (&#x55DC;&#x9178;&#x7121;&#x6838;) <img src="paste_src/%E5%8F%A3%E7%97%85-10.png" alt></td>
+<td>ghost cells (&#x55DC;&#x9178;&#x7121;&#x6838;) <img src="paste_src/&#x53E3;&#x75C5;-10.png" alt="alt text" style=";background-color: white;padding:0"></td>
+</tr>
+<tr>
+
+
+
+
+<td>&#x3B2; catenine +</td>
 </tr>
 <tr>
 <td>Peripheral Calcifying Odontogenic Cyst</td>
 <td>COC &#x9577;&#x51FA;&#x4F86;</td>
 <td>-</td>
 <td>60-80y</td>
-<td>.<img src="paste_src/%E5%8F%A3%E7%97%85-11.png" alt></td>
+<td>.<img src="paste_src/&#x53E3;&#x75C5;-11.png" alt="alt text" style=";background-color: white;padding:0"></td>
 </tr>
 <tr>
-<td rowspan="3">Glandular Odontogenic Cyst</td>
+<td rowspan="3">Glandular Odontogenic Cyst (GOC)</td>
 <td rowspan="3">-</td>
 <td rowspan="3">&#x4E0B;&#x984E;&#x524D;&#x7259;</td>
 <td rowspan="3">46-51y</td>
@@ -788,7 +847,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 
 
-<td>&#x5FA9;&#x767C;&#x3001;&#x4FB5;&#x72AF;&#x6027;&#xFF0C;&#x5403; cortical bone <img src="paste_src/%E5%8F%A3%E7%97%85-12.png" alt></td>
+<td>&#x5FA9;&#x767C;&#x3001;&#x4FB5;&#x72AF;&#x6027;&#xFF0C;&#x5403; cortical bone <img src="paste_src/&#x53E3;&#x75C5;-12.png" alt="alt text" style=";background-color: white;padding:0"></td>
 </tr>
 <tr>
 
@@ -798,18 +857,19 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td>&#x676F;&#x72C0;&#x7D30;&#x80DE;, cilia, focal plaques</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <div class="admonition note">
 <p class="admonition-title">Gorlin syndrome</p>
 <ul>
 <li>SUFU &#x4E5F;&#x53EF;&#x80FD;&#x9020;&#x6210;<br>
-<img src="paste_src/%E5%8F%A3%E7%97%85-3.png" alt></li>
+<img src="paste_src/&#x53E3;&#x75C5;-3.png" alt="alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </div>
-<p><img src="paste_src/%E5%8F%A3%E7%97%85-13.png" alt></p>
+<img src="paste_src/&#x53E3;&#x75C5;-13.png" alt="alt text" style=";background-color: white;padding:0">
+<p><mark>MAL2 &#x8B93; MEC &#x9810;&#x5F8C;&#x597D;</mark></p>
 <h3 class="mume-header" id="%E7%99%BC%E7%82%8E%E5%9E%8B">&#x767C;&#x708E;&#x578B;</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th></th>
@@ -832,41 +892,26 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 
 
-<td>&#x7259;&#x6839;&#x5438;&#x6536;, 2cm &#x2191; &#x6839;&#x7BA1;&#x6CBB;&#x7642;&#x7121;&#x6548;  <img src="paste_src/%E5%8F%A3%E7%97%85-25.png" alt></td>
+<td>&#x7259;&#x6839;&#x5438;&#x6536;, 2cm &#x2191; &#x6839;&#x7BA1;&#x6CBB;&#x7642;&#x7121;&#x6548;  <img src="paste_src/&#x53E3;&#x75C5;-25.png" alt="alt text" style=";background-color: white;padding:0"></td>
 </tr>
 <tr>
 <td>Buccal Bifurcation Cyst</td>
 <td>36, 46 Buccal (&#x5169;&#x5074; 1/3)</td>
 <td>5-13y</td>
 <td>-</td>
-<td>&#x816B;&#x8139;&#xFF0C;&#x63A8;&#x7259;&#x6839; <img src="paste_src/%E5%8F%A3%E7%97%85-24.png" alt></td>
+<td>&#x816B;&#x8139;&#xFF0C;&#x63A8;&#x7259;&#x6839; <img src="paste_src/&#x53E3;&#x75C5;-24.png" alt="alt text" style=";background-color: white;padding:0"></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <dl>
 <dt>Rest of Malassez</dt>
 <dd>Hertwig&#x2019;s epithelial &#x6B98;&#x7559;</dd>
 <dt>Rushton bodies</dt>
 <dd>&#x9F52;&#x6E90;&#x7CFB;&#x4E0A;&#x76AE;</dd>
 </dl>
-<h3 class="mume-header" id="%E6%95%B4%E7%90%86">&#x6574;&#x7406;</h3>
-
-<p><img src="paste_src/%E5%8F%A3%E7%97%85-17.png" alt></p>
-<blockquote>
-<ul>
-<li>COC &#x5728;&#x524D;&#x5340;</li>
-</ul>
-</blockquote>
-<p><img src="paste_src/%E5%8F%A3%E7%97%85-18.png" alt></p>
-<blockquote>
-<ul>
-<li>BOC = &#x591A;&#x56CA; LPC &#x2192; &#x5728; premolar</li>
-<li>Slaodontogenic Cyst (GOC) &#x5728;&#x524D;&#x7259;&#x8DE8;&#x4E2D;&#x7DDA;</li>
-</ul>
-</blockquote>
 <h2 class="mume-header" id="non-odontogenic">Non- Odontogenic</h2>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th></th>
@@ -882,7 +927,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td>Epstin&#x2019;s pearl &#x2192; &#x878D;&#x5408;&#x7DDA;&#x7684;&#x4E0A;&#x76AE;</td>
 <td>&#x4E2D;&#x816D;&#x88C2;(&#x524D;)&#x3001;&#x591A;&#x767C;&#x6027;</td>
 <td rowspan="2">-</td>
-<td rowspan="2"><details><summary>&#x767D;&#x8272;&#x6216;&#x9EC3;&#x767D;&#x8272;, &#x89D2;&#x5316;, &#x4E0D;&#x9700;&#x6CBB;&#x7642;</summary> <img src="paste_src/%E5%8F%A3%E7%97%85-20.png" alt></details></td>
+<td rowspan="2"><details><summary>&#x767D;&#x8272;&#x6216;&#x9EC3;&#x767D;&#x8272;, &#x89D2;&#x5316;, &#x4E0D;&#x9700;&#x6CBB;&#x7642;</summary> <img src="paste_src/&#x53E3;&#x75C5;-20.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
 <tr>
 
@@ -893,7 +938,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 </tr>
 <tr>
 <td rowspan="3"><p style="color:red">Nasolabial Cyst </p></td>
-<td rowspan="3"><details><summary>&#x878D;&#x5408;&#x7DDA;</summary><img src="paste_src/%E5%8F%A3%E7%97%85-21.png" alt></details></td>
+<td rowspan="3"><details><summary>&#x878D;&#x5408;&#x7DDA;</summary><img src="paste_src/&#x53E3;&#x75C5;-21.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 <td rowspan="3">&#x4E0A;&#x5507;&#x4E2D;&#x7DDA;&#x65C1;(&#x5916;&#x5074;)&#xFF0C;&#x8EDF;&#x7D44;&#x7E54;&#x5167;</td>
 <td rowspan="3">40-50y</td>
 <td>&#x4E0D;&#x75DB;</td>
@@ -903,28 +948,28 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 
 
-<td><details><summary>&#x7E96;&#x6BDB;&#x4E0A;&#x76AE;, goblet cells, &#x9644;&#x8FD1;&#x6709;&#x808C;&#x8089;</summary><img src="paste_src/%E5%8F%A3%E7%97%85-22.png" alt></details></td>
+<td><details><summary>&#x7E96;&#x6BDB;&#x4E0A;&#x76AE;, goblet cells, &#x9644;&#x8FD1;&#x6709;&#x808C;&#x8089;</summary><img src="paste_src/&#x53E3;&#x75C5;-22.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
 <tr>
 
 
 
 
-<td><details><summary>facial depression</summary> <img src="paste_src/%E5%8F%A3%E7%97%85-23.png" alt></details></td>
+<td><details><summary>facial depression</summary> <img src="paste_src/&#x53E3;&#x75C5;-23.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
 <tr>
-<td rowspan="3"><p style="color:blue">Nasopalatine duct cyst </p></td>
+<td rowspan="3"><p style="color:DeepSkyBlue">Nasopalatine duct cyst </p></td>
 <td rowspan="3">Nasopalatine duct &#x4E0A;&#x76AE;&#x7684;&#x6B98;&#x7559;</td>
 <td rowspan="3">&#x984E;&#x90E8;&#x524D;</td>
 <td rowspan="4"><mark>40-60y</mark></td>
-<td><details><summary>&#x85CD;</summary><img src="paste_src/%E5%8F%A3%E7%97%85-27.png" alt></details></td>
+<td><details><summary>&#x85CD;</summary><img src="paste_src/&#x53E3;&#x75C5;-27.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
 <tr>
 
 
 
 
-<td><details><summary>&#x7259;&#x6839;&#x5438;&#x6536;</summary><img src="paste_src/%E5%8F%A3%E7%97%85-29.png" alt></details></td>
+<td><details><summary>&#x7259;&#x6839;&#x5438;&#x6536;</summary><img src="paste_src/&#x53E3;&#x75C5;-29.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
 <tr>
 
@@ -934,9 +979,9 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td>&#x591A;&#x7A2E;&#x4E0A;&#x76AE;, cilia, goblet cell, &#x795E;&#x7D93;&#x548C;&#x8840;&#x7BA1;&#x53EF;&#x898B;</td>
 </tr>
 <tr>
-<td><p style="color:blue">Incisive canal cyst </p></td>
+<td><p style="color:DeepSkyBlue">Incisive canal cyst </p></td>
 <td>NDC &#x7279;&#x4F8B;</td>
-<td><details><summary>Incisive papilla &#x5167;</summary><img src="paste_src/%E5%8F%A3%E7%97%85-28.png" alt></details></td>
+<td><details><summary>Incisive papilla &#x5167;</summary><img src="paste_src/&#x53E3;&#x75C5;-28.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 
 <td>&#x3C6; &lt; 6mm</td>
 </tr>
@@ -952,14 +997,14 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 
 
-<td><details><summary>&#x7121;&#x795E;&#x7D93;&#x3001;&#x8840;&#x7BA1;&#x3001;cilia&#x3001;goblet cell</summary> <img src="paste_src/%E5%8F%A3%E7%97%85-30.png" alt></details></td>
+<td><details><summary>&#x7121;&#x795E;&#x7D93;&#x3001;&#x8840;&#x7BA1;&#x3001;cilia&#x3001;goblet cell</summary> <img src="paste_src/&#x53E3;&#x75C5;-30.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
 <tr>
-<td rowspan="4"><p style="color:blue">Epidermoid Cyst (Infundibular cyst)  </p></td>
+<td rowspan="4"><p style="color:DeepSkyBlue">Epidermoid Cyst (Infundibular cyst)  </p></td>
 <td rowspan="2">trauma</td>
 <td rowspan="2">-</td>
 <td rowspan="3">&#x9752;&#x6625;&#x671F;&#x5F8C;</td>
-<td><details><summary>&#x51F9;&#x9677;</summary> <img src="paste_src/%E5%8F%A3%E7%97%85-31.png" alt></details></td>
+<td><details><summary>&#x51F9;&#x9677;</summary> <img src="paste_src/&#x53E3;&#x75C5;-31.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
 <tr>
 
@@ -1008,7 +1053,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 
 
-<td><details><summary>cholesterol clefts(90%), &#x6DE1;&#x67D3;,  &#x7121; granular layer</summary><img src="paste_src/%E5%8F%A3%E7%97%85-32.png" alt></details></td>
+<td><details><summary>cholesterol clefts(90%), &#x6DE1;&#x67D3;,  &#x7121; granular layer</summary><img src="paste_src/&#x53E3;&#x75C5;-32.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
 <tr>
 
@@ -1029,28 +1074,991 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 
 
-<td><details><summary>&#x6B63;&#x89D2;&#x5316;&#x4E0A;&#x76AE;, Cyst Wall &#x6709;&#x76AE;&#x819A;&#x9644;&#x5C6C;&#x7269;</summary><img src="paste_src/%E5%8F%A3%E7%97%85-33.png" alt></details></td>
+<td><details><summary>&#x6B63;&#x89D2;&#x5316;&#x4E0A;&#x76AE;, Cyst Wall &#x6709;&#x76AE;&#x819A;&#x9644;&#x5C6C;&#x7269;(&#x76AE;&#x8102;&#x817A;&#x7D30;&#x80DE;&#x6838;&#x5C45;&#x4E2D;)</summary><img src="paste_src/&#x53E3;&#x75C5;-33.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
 <tr>
 <td>Thyroglossal Duct Cyst <br> &#x7532;&#x72C0;&#x820C;&#x7BA1;&#x56CA;&#x816B;</td>
 <td>&#x7532;&#x72C0;&#x817A;&#x6B98;&#x7559;</td>
 <td>&#x8116;&#x5B50;&#x4E2D;&#x7DDA;&#x4E0A;&#x3001;&#x820C;&#x9AA8;&#x4E0B;(75%)</td>
 <td>20y &#x2193; (40%)</td>
-<td><details><summary>Cyst wall &#x4E0A;&#x6709; Thyroid follicle </summary><img src="paste_src/%E5%8F%A3%E7%97%85-34.png" alt></details></td>
+<td><details><summary>Cyst wall &#x4E0A;&#x6709; Thyroid follicle </summary><img src="paste_src/&#x53E3;&#x75C5;-34.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
 <tr>
 <td>Branchial Cleft Cyst <br> (cervical lymphoepithelial cyst&#xFF0C;&#x9C13;&#x88C2;&#x56CA;)</td>
 <td>branchial arches &#x6B98;&#x7559; (2<sup>nd</sup>&#xFF0C;95%)</td>
-<td><details><summary>SCM &#x524D;/&#x4E0B;</summary><img src="paste_src/%E5%8F%A3%E7%97%85-36.png" alt></details></td>
+<td><details><summary>SCM &#x524D;/&#x4E0B;</summary><img src="paste_src/&#x53E3;&#x75C5;-36.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 <td>10 - 40y</td>
 <td>&#x8907;&#x5C64;&#x9C57;&#x72C0;&#x3001;&#x6DCB;&#x5DF4;&#x3001;&#x767C;&#x4E2D;&#x5FC3;(germinal center)&#x3002;</td>
 </tr>
+<tr>
+<td rowspan="2">Oral Lymphoepithelial Cyst</td>
+<td rowspan="2">&#x4E0A;&#x76AE;&#x5167;&#x9677;(invagination)&#x6DCB;&#x5DF4; &#x2192; keratin debris</td>
+<td>Waldeyer ring, &#x53E3;&#x5E95;, &#x820C;&#x8179;, &#x8EDF;&#x984E;</td>
+<td rowspan="2">&#x5E74;&#x8F15;&#x4EBA;</td>
+<td><details><summary>&#x3C6;&lt;1cm &#x7684;&#x9ECF;&#x819C;&#x4E0B;&#x9EC3;&#x767D;&#x8272;&#x816B;&#x584A;</summary><img src="paste_src/&#x53E3;&#x75C5;-37.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
+</tr>
+<tr>
+
+
+<td>&#x55AE;&#x767C;&#x2192;&#x767C;&#x80B2; <br> &#x591A;&#x767C;&#x2192;HIV</td>
+
+<td><details><summary>&#x4E0D;&#x542B;rete ridges, &#x89D2;&#x5316;&#x4E0D;&#x5168;&#x4E26;&#x812B;&#x843D;&#x586B;&#x6EFF;&#x7A7A;&#x8154;, &#x6DCB;&#x5DF4;&#x7D44;&#x7E54;&#x5305;&#x570D; </summary><img src="paste_src/&#x53E3;&#x75C5;-38.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
+</tr>
 </tbody>
-</table>
+</table></div>
 <dl>
 <dt>Gardner syndrome</dt>
 <dd>APC&#x57FA;&#x56E0;&#x7A81;&#x8B8A;&#xFF0C;&#x3B2; catenin &#x5206;&#x89E3;&#x4E0D;&#x6389; &#x2192; &#x4E0A;&#x76AE;&#x589E;&#x751F; <a href="..\%E5%9C%8B%E8%80%83\%E5%8F%A3%E8%83%9A%E6%95%B4%E7%90%86.html#wnt">Wnt &#x76F8;&#x95DC;</a></dd>
 </dl>
+<div class="admonition info">
+<p class="admonition-title">&#x9B4F;&#x6C0F;&#x74B0;(Waldeyer ring)</p>
+<ul>
+<li>&#x984E;&#x6241;&#x6843;(palatine tonsils)</li>
+<li>&#x820C;&#x6241;&#x6843;(lingual tonsils)</li>
+<li>&#x54BD;&#x90E8;&#x817A;&#x6A23;&#x9AD4;(pharyngeal adenoids)</li>
+</ul>
+</div>
+<h2 class="mume-header" id="pseudocyst">Pseudocyst</h2>
+
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th></th>
+<th>&#x539F;&#x56E0;</th>
+<th>&#x597D;&#x767C;</th>
+<th>&#x5E74;&#x9F61;</th>
+<th>&#x7279;&#x5FB5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2">Mucocele</td>
+<td rowspan="2">&#x553E;&#x817A;&#x5C0E;&#x7BA1;&#x7834;&#x88C2;&#xFF0C;&#x9ECF;&#x6DB2;&#x7051;&#x5165;&#x5468;&#x906D;&#x7684;&#x8EDF;&#x7D44;&#x7E54;&#x9593;&#x9699;</td>
+<td rowspan="2">&#x4E0B;&#x5507;&#x4E2D;&#x7DDA;&#x65C1;(&#x6613;&#x54AC;&#x5230;)</td>
+<td rowspan="2">&#x5E38;&#x898B;</td>
+<td>&#x900F;&#x660E;&#x85CD;&#x8272;, &#x6CE2;&#x52D5;&#x611F;(fluctuant), &#x9AD8;&#x5FA9;&#x767C; <img src="paste_src/&#x53E3;&#x75C5;-39.png" alt="alt text" style=";background-color: white;padding:0"></td>
+</tr>
+<tr>
+
+
+
+
+<td>&#x767C;&#x708E;&#xFF0C;granulation tissue &#x5305;&#x570D;&#x9ECF;&#x6DB2; <img src="paste_src/&#x53E3;&#x75C5;-40.png" alt="alt text" style=";background-color: white;padding:0"></td>
+</tr>
+<tr>
+<td>Ranula &#x86E4;&#x87C6;&#x816B;</td>
+<td>&#x53E3;&#x5E95;&#x3001;&#x548C;&#x820C;&#x4E0B;&#x817A;&#x6709;&#x95DC;&#x7684; Mucocele</td>
+<td colspan="3">-</td>
+
+
+</tr>
+<tr>
+<td><p style="color: DeepSkyBlue;"> Stafne Defect (Stafne Bone Cyst &#xFF0C;&#x9AA8;&#x5167;&#x56CA;&#x816B;)</p></td>
+<td>&#x553E;&#x6DB2;&#x817A;&#x64E0;&#x58D3; cortical bone &#x2192; x-ray &#x900F;&#x5149;</td>
+<td>&#x5F8C;&#x5074; mandibular canal</td>
+<td>&#x4E2D;&#x5E74;</td>
+<td>&#x5927;&#x5C0F;&#x56FA;&#x5B9A;&#xFF0C;&#x908A;&#x754C;&#x660E;&#x986F; <img src="paste_src/&#x53E3;&#x75C5;-42.png" alt="alt text" style=";background-color: white;padding:0"></td>
+</tr>
+<tr>
+<td rowspan="3">Simple Bone Cyst<br> &#x55AE;&#x7D14;&#x6027;&#x9AA8;&#x56CA;&#x816B;</td>
+<td rowspan="3">&#x7A7A;(<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>)&#x6216;&#x6DB2;&#x9AD4;&#x9AA8;&#x8154;</td>
+<td rowspan="3">&#x80B1;&#x9AA8;&#x3001; &#x80A1;&#x9AA8;&#x8FD1;&#x7AEF;&#x3001; &#x4E0B;&#x984E;&#x5F8C;&#x7259;&#x3001; &#x4E0B;&#x984E;&#x806F;&#x5408;&#x5340;</td>
+<td rowspan="3">&#x5E74;&#x8F15;&#x4EBA;</td>
+<td>&#x5C11;&#x75BC;&#x75DB;&#x3001;&#x76AE;&#x819A;&#x611F;&#x89BA;&#x7570;&#x5E38;</td>
+</tr>
+<tr>
+
+
+
+
+<td>&#x4E0D;&#x9808;&#x7A4D;&#x6975;&#x6CBB;&#x7642;&#xFF0C;&#x5FA9;&#x767C;&#x7387;&#x4F4E; <br> (&#x4F8B;&#x5916;: cementoosseous dysplasia)</td>
+</tr>
+<tr>
+
+
+
+
+<td>&#x4FB5;&#x72AF;&#x7259;&#x6839;&#x4E4B;&#x9593;&#x5340;&#x57DF;&#xFF0C;&#x4E0D;&#x5F71;&#x97FF;&#x9130;&#x7259;&#xFF0C;&#x8FD1;&#x9060;&#x5FC3;&#x64F4;&#x5F35; <img src="paste_src/&#x53E3;&#x75C5;-43.png" alt="alt text" style=";background-color: white;padding:0"></td>
+</tr>
+<tr>
+<td rowspan="2">Aneurysmal Bone Cyst <br> &#x52D5;&#x8108;&#x7624;&#x6027;&#x9AA8;&#x56CA;&#x816B;</td>
+<td rowspan="2"><mark>&#x5927;&#x5C0F;&#x4E0D;&#x7B49;</mark>&#x9AA8;&#x5167;&#x5806;&#x7A4D;&#x88AB;&#x7E96;&#x7DAD;&#x7D50;&#x7DE0;&#x7D44;&#x7E54;&#x548C;&#x6D3B;&#x6027;&#x9AA8;&#x5305;&#x570D;&#xFF0C;&#x4E26;&#x5145;&#x6EFF;&#x8840;&#x6DB2;</td>
+<td rowspan="2">&#x9577;&#x9AA8;&#x6216;&#x810A;&#x690E;&#x9AA8;&#x3001; &#x4E0B;&#x984E;(2%)&#x5F8C;&#x7259;</td>
+<td rowspan="2">30y &#x2193;</td>
+<td>&#x9AA8;&#x982D;&#x816B;&#x5F97;&#x5FEB;&#xFF0C;&#x53EF;&#x80FD;&#x591A;&#x623F;&#xFF0C;&#x908A;&#x754C;&#x4E0D;&#x4E00;&#x5B9A;&#x5B8C;&#x6574; <img src="paste_src/&#x53E3;&#x75C5;-44.png" alt="alt text" style=";background-color: white;padding:0"></td>
+</tr>
+<tr>
+
+
+
+
+<td>Granulation tissue: &#x5DE8;&#x566C;&#x7D30;&#x80DE;&#x8755;&#x9AA8; <img src="paste_src/&#x53E3;&#x75C5;-45.png" alt="alt text" style=";background-color: white;padding:0"></td>
+</tr>
+</tbody>
+</table></div>
+<h1 class="mume-header" id="epithelial-tumors">Epithelial tumors</h1>
+
+<h2 class="mume-header" id="hpv">HPV</h2>
+
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>lesion</th>
+<th>type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>focal epithelial hyperplasia</td>
+<td>13&#x3001;32</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>Low-risk</th>
+<th>High-risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x826F;</td>
+<td>&#x60E1;</td>
+</tr>
+<tr>
+<td>episomal form</td>
+<td>integrated form</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>E6 &#x2192; p53, E7 &#x2192; RB</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">episomal v.s. integrated form</p>
+<img src="paste_src/&#x53E3;&#x75C5;-46.png" alt="alt text" style=";background-color: white;padding:0">
+</div>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>&#x8B8A;&#x7570;&#x540D;&#x7A31;</th>
+<th>&#x98A8;&#x96AA;/ &#x539F;&#x56E0;</th>
+<th>&#x4F4D;&#x7F6E;</th>
+<th colspan="4">&#x75C7;&#x72C0;&#x3001;&#x7279;&#x5FB5;</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">papilloma <br>(6, 11)</td>
+<td rowspan="3">30~50y</td>
+<td rowspan="3">&#x8EDF;&#x984E;&#x3001;&#x53E3;&#x8154;&#x5E38;&#x898B;</td>
+<td colspan="4">&#x55AE;&#x767C;&#x3001;&#x4F4E;&#x50B3;&#x67D3;</td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4">pedunculated, sessile(&#x5C11;) <img src="paste_src/&#x53E3;&#x75C5;-47.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4">stratified squamous epi. &#x5305;&#x7D50;&#x7DE0;&#x7D44;&#x7E54; <br> hyperparakeratosis (&#x6709;&#x6838;&#x3001;&#x9846;&#x7C92;&#x5C64;&#x7F3A;&#x5931;) <img src="paste_src/&#x53E3;&#x75C5;-50.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="3">Verruca vulgaris <br>&#x5C0B;&#x5E38;&#x75A3; <br>(2, 4)</td>
+<td rowspan="3">-</td>
+<td rowspan="3">&#x76AE;&#x819A;&#x3001;&#x53E3;&#x8154;(&#x5C11;&#x898B;&#x3001;&#x63A5;&#x89F8;&#x3001;&#x81EA;&#x50B3;&#x67D3;)</td>
+<td colspan="4">&#x5927;&#x591A;&#x662F;sessile(&#x7121;&#x6897;)</td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4"><ul> <li>hyperparakeratosis &#x4F46; granular layer &#x660E;&#x986F; &#x2192; coarse keratohyalin granules</li> <li>&#x201C;cupping&#x201D; effect: rete ridges &#x5F80; lesion &#x4E2D;&#x5FC3; </li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-51.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4">&#x5C0F;&#x5B69;&#x8EAB;&#x4E0A;&#x6709;&#x6A5F;&#x6703;&#x81EA;&#x884C;&#x75CA;&#x7652;&#xFF0C;&#x6CBB;&#x7642;&#x9700;&#x8981; basal layer &#x6E05;&#x4E7E;&#x6DE8;</td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2">Condyloma acuminatum <br> &#x5C16;&#x92B3;&#x6FD5;&#x75A3;</td>
+<td rowspan="2">-</td>
+<td rowspan="2"><ul> <li>&#x53E3;&#x5167;: 6, 11</li> <li>&#x809B;&#x9580;: 16, 18</li> </ul></td>
+<td colspan="4">&#x591A;&#x9846;&#x3001;&#x754C;&#x7DDA;&#x6E05;&#x695A;&#x3001;&#x7121;&#x75DB;&#x3001;&#x5152;&#x7AE5;&#x6709;&#x6A5F;&#x6703;&#x81EA;&#x6108;</td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4">&#x5EE3;&#x5E95;&#x3001;papillary &#x7A81;&#x8D77;&#x4E0D;&#x660E;&#x986F;&#x3001;Koilocytes (&#x7A7A;&#x4EAE;&#x3001;&#x8461;&#x8404;&#x4E7E;&#x6838;) <img src="paste_src/&#x53E3;&#x75C5;-52.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="3"><p style="color: red;"> Multifocal epithelial hyperplasia (Heck&#x2019;s disease&#xFF0C;<br> 13, 32)</p></td>
+<td rowspan="3">&#x4F4E;&#x793E;&#x7D93;&#x3001;HIV</td>
+<td rowspan="3">&#x5507;&#x3001;&#x9830;&#x3001;&#x820C;</td>
+<td colspan="4">&#x5C0F;&#x3001;&#x8EDF;&#x3001;&#x591A;&#x3001;&#x7121;&#x75DB;</td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="2"><strong>Papillomatous variant</strong> <ul> <li>&#x820C;&#x3001;attached gingiva</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-53.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+<td colspan="2"><strong>Papulonodular</strong> <ul> <li>&#x5E38;&#x898B; </li> <li>&#x6241;&#x5E73;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-54.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+<td colspan="4"><ul> <li>acanthosis: spinous layer (&#x68D8;&#x72C0;&#x5C64;) &#x589E;&#x751F;</li> <li>rete ridge &#x5BEC;&#x6241;&#xFF0C;&#x6DF1;&#x5EA6;&#x5DEE;&#x4E0D;&#x591A;</li> <li>Connective tissue &#x767C;&#x708E;&#x7D30;&#x80DE;&#x6D78;&#x6F64;</li> <li>Koliofcyte</li> <li>mitosoid cells (spinous cell &#x4E4B;&#x9593;&#xFF0C;&#x5F77;&#x5F7F;&#x5728;&#x5206;&#x88C2;)</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-71.png" alt="alt text" style=";background-color: white;padding:0"><img src="paste_src/&#x53E3;&#x75C5;-56.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2">Verruciform xanthoma (&#x975E; HPV)</td>
+<td rowspan="2">Leasion &#x65C1;&#xFF0C;&#x7570;&#x5E38;&#x514D;&#x75AB;&#x53CD;&#x61C9;</td>
+<td rowspan="2">&#x53E3;&#x8154; &gt; &#x76AE;&#x819A; &gt; &#x6027;&#x5668;</td>
+<td colspan="4">&#x6CB9;&#x8102;&#x6490;&#x8D77; epi. &#x5F62;&#x6210; Verruciform&#x3002;&#x975E; Metabolic  <img src="paste_src/&#x53E3;&#x75C5;-57.png" alt="alt text" style="width:50%;background-color: white;padding:0"><img src="paste_src/&#x53E3;&#x75C5;-58.png" alt="alt text" style="width:30%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4"><ul> <li>parakeratin plugging: parakeratin layer &#x589E;&#x539A; &#x2192; &#x7D30;&#x83CC;&#x767C;&#x708E;</li> <li>&#x7D50;&#x7DE0;&#x7D44;&#x7E54;&#x7A7A;&#x4EAE; (foamy histocytes)</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-59.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
+<dl>
+<dt>xanthoma</dt>
+<dd>&#x5403;&#x4E86;&#x6CB9;&#x8102;&#x7684; Macrophage &#x7D30;&#x80DE;&#xFF0C;CD63+, CD68+, CD163+ IHC8+&#xFF0C;diastase-PAS&#x67D3;&#x8272;+</dd>
+</dl>
+<div class="admonition info">
+<p class="admonition-title">diastase-PAS</p>
+<ul>
+<li>diastase: &#x6FB1;&#x7C89;&#x9176;</li>
+<li>PAS: Periodic Acid-Schiff stain</li>
+<li>&#x904E;&#x7898;&#x9178;&#x6C27;&#x5316; OH &#x6210; =O&#xFF0C;Schiff &#x67D3;</li>
+</ul>
+</div>
+<h2 class="mume-header" id="melanotic-lesions">Melanotic lesions</h2>
+
+<h3 class="mume-header" id="%E8%89%B2%E7%B4%A0%E5%A2%9E%E5%8A%A0">&#x8272;&#x7D20;&#x589E;&#x52A0;</h3>
+
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>&#x540D;&#x7A31;</th>
+<th>&#x55AE;&#x767C;?</th>
+<th colspan="2">&#x98A8;&#x96AA;/&#x4F4D;&#x7F6E;</th>
+
+<th colspan="2">&#x7279;&#x5FB5;</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3"><p style="color: red;">Oral melanotic Macules</p></td>
+<td rowspan="3">&#x55AE;</td>
+<td rowspan="3" colspan="2">&#x4E0B;&#x5507;&#x6731;&#x7D05;&#x5340;(vermilion zone, 33%), Buccal mucosa, gingiva, palate</td>
+
+<td colspan="2">&#x8868;&#x9762;&#x5E73;&#x5766;&#x3001;&#x68D5;&#x9ED1;&#x8272;&#x3001;&#x908A;&#x754C;&#x6E05;&#x695A;&#x3001;&#x3C6;&lt;5mm <img src="paste_src/&#x53E3;&#x75C5;-62.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="2">&#x4E0D;&#x9808;&#x6CBB;&#x7642;&#xFF0C;&#x4F46;&#x4E0D;&#x6613;&#x548C; Oral melanoma &#x5206;&#x8FA8; &#x2192; &#x71D2;&#x6BC0;!</td>
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="2"><strong>&#x9ED1;&#x8272;&#x7D20;&#x5931;&#x7981;(melanin incontinence):</strong> <br> basal cell &#x53EF;&#x80FD;&#x7834;&#x640D; &#x2192; macrophage &#x65BC; CT &#x541E;&#x566C; &#x2192; <mark>melanophage</mark> <img src="paste_src/&#x53E3;&#x75C5;-63.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+<td>Physiologic Pigmentation (&#x751F;&#x7406;&#x6027;)</td>
+<td rowspan="5">&#x591A;</td>
+<td colspan="2">&#x9ED1;&#x4EBA;</td>
+
+<td colspan="2">-</td>
+
+</tr>
+<tr>
+<td>Chronic irritation (&#x6162;&#x6027;&#x523A;&#x6FC0;)</td>
+
+<td colspan="4"><ul> <li>&#x5E38;&#x54AC;&#x5230;&#x7684;&#x9830;&#x5074;</li> <li>&#x985E;&#x5929;&#x76B0;&#x7621;(pemphigoid)</li> <li>Smoker&#x2019;s melanosis</li> <li>&#x591A;&#x6C2F;&#x806F;&#x82EF;(PCB)&#x6C59;&#x67D3;</li> </ul></td>
+
+
+
+</tr>
+<tr>
+<td>Syndromes or Diseases Associated</td>
+
+<td colspan="4"><ol> <li>Peutz-Jeghers syndrome</li> <li>Addison&#x2019;s disease</li> <li>Neurofibromatosis</li> <li>McCune-Albright syndrome</li> </ol></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2">Drug-induced</td>
+
+<td rowspan="2" colspan="2"><mark>&#x594E;&#x5BE7;(chloroquine)</mark>, palate</td>
+
+<td colspan="2">&#x5DE6;&#x53F3;&#x6C92;&#x6709;&#x5B8C;&#x5168;&#x5C0D;&#x7A31; <img src="paste_src/&#x53E3;&#x75C5;-69.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="2">melanin&#x5806;&#x7A4D;&#xFF0C;&#x78BA;&#x8A3A;&#x76F4;&#x63A5; Bleaching</td>
+
+</tr>
+</tbody>
+</table></div>
+<div class="admonition info">
+<p class="admonition-title"> &#x4E00;&#x4E9B;&#x540D;&#x8A5E;</p>
+<img src="paste_src/&#x53E3;&#x75C5;-60.png" alt="alt text" style=";background-color: white;padding:0">
+</div>
+<h4 class="mume-header" id="peutz-jeghers-syndrome">Peutz-Jeghers syndrome</h4>
+
+<ul>
+<li>&#x9AD4;&#x67D3;&#x8272;&#x9AD4;&#x986F;&#x6027;</li>
+<li>STK11/LKB1</li>
+<li>peri-oral&#x8DDF;oral cavity&#x6703;&#x51FA;&#x73FE;&#x5F88;&#x591A;pigment</li>
+<li>&#x60E1;&#x5316;&#x8178;&#x9053;&#x764C;&#x75C7;intestinal cancer 15&#x88AB; &#x2192; &#x9810;&#x9632;&#x6027;&#x5207;&#x8178;&#x5B50;</li>
+</ul>
+<div class="dcl">
+<section>
+<img src="paste_src/&#x53E3;&#x75C5;-64.png " alt="alt text" style=";background-color: white;padding:0">
+</section>
+<section>
+<img src="paste_src/&#x53E3;&#x75C5;-65.png" alt="alt text" style=";background-color: white;padding:0">
+</section></div>
+<img src="paste_src/&#x53E3;&#x75C5;-66.png" alt="alt text" style=";background-color: white;padding:0">
+<h4 class="mume-header" id="addisons-disease">Addison&#x2019;s disease</h4>
+
+<ul>
+<li>&#x814E;&#x4E0A;&#x817A; &#x2193; &#x2192; cortisol &#x2193; &#x2192; ACTH&#x2191; &#x2192; &#x3B1;-MSH &#x2192; malannin</li>
+<li>&#x9762;&#x8272;&#x9EEF;&#x6DE1;</li>
+<li>&#x5230;&#x8655;&#x90FD;&#x9ED1;&#x8272;&#x7D20;&#x6C89;&#x6FB1;</li>
+</ul>
+<img src="paste_src/&#x53E3;&#x75C5;-67.png" alt="alt text" style=";background-color: white;padding:0">
+<h4 class="mume-header" id="neurofibromatosis">Neurofibromatosis</h4>
+
+<ul>
+<li>cafe-au-lait spots disease (&#x5496;&#x5561;&#x725B;&#x5976;&#x6591;)</li>
+<li>neurofibroma (&#x795E;&#x7D93;&#x7E96;&#x7DAD;&#x7624;)</li>
+</ul>
+<h4 class="mume-header" id="mccune-albright-syndrome-albrights-syndrome">McCune-Albright syndrome (Albright&#x2019;s syndrome)</h4>
+
+<ul>
+<li>&#x5496;&#x5561;&#x725B;&#x5976;&#x6591;</li>
+<li>&#x907A;&#x50B3;&#x6027;&#x75BE;&#x75C5;</li>
+<li>&#x591A;&#x9AA8;&#x6027;&#x7E96;&#x7DAD;&#x767C;&#x80B2;&#x4E0D;&#x826F;(Polyostotic Fibrous Dysplasia)</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">&#x5496;&#x5561;&#x725B;&#x5976;&#x6591;</p>
+<img src="paste_src/&#x53E3;&#x75C5;-68.png" alt="alt text" style=";background-color: white;padding:0">
+</div>
+<h3 class="mume-header" id="naevus">Naevus</h3>
+
+<ul>
+<li>Naevus cell &#x7121; Dendrites</li>
+<li>&#x4F4D;&#x7F6E;:
+<ul>
+<li>&#x5148;&#x5929;: &#x56DB;&#x80A2;&#xFF0C;&#x53E3;&#x5167;&#x5C11;&#x898B;<br>
+<img src="paste_src/&#x53E3;&#x75C5;-73.png" alt="alt text" style="width:40%;background-color: white;padding:0"></li>
+<li>&#x5F8C;&#x5929;: <mark>NRAS(&#x5927; lesion&#xFF0C;6%)</mark>, BRAF(&#x5C0F; lesion&#xFF0C;80%) mutation (3.~5.&#x662F;&#x4E00;&#x500B;&#x6F38;&#x9032;&#x7684;&#x904E;&#x7A0B;)<br>
+<img src="paste_src/&#x53E3;&#x75C5;-70.png" alt="alt text" style=";background-color: white;padding:0"></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="p-stylecolorred-intraoral-melanocytic-nevusp"><p style="color:red ;">Intraoral melanocytic Nevus</p></h4>
+
+<ul>
+<li>&#x5F8C;&#x5929;&#xFF0C;&#x53E3;&#x5167;&#xFF0C;&#x6700;&#x5E38;&#x898B;</li>
+<li>&#x4F4D;&#x7F6E;: Palate,mucobuccal fold, orgingiva</li>
+<li>BRAF</li>
+<li>35y</li>
+</ul>
+<h4 class="mume-header" id="p-stylecolorred-blue-nevusp"><p style="color:red ;">Blue nevus</p></h4>
+
+<ul>
+<li>&#x5F8C;&#x5929;&#xFF0C;&#x53E3;&#x5167;&#xFF0C;&#x6B21;&#x5E38;&#x898B;</li>
+<li>&#x4F4D;&#x7F6E;: Palate</li>
+<li>GNAQ mutation</li>
+</ul>
+<h4 class="mume-header" id="%E7%B5%84%E7%B9%94">&#x7D44;&#x7E54;</h4>
+
+<ul>
+<li>Cell &#x5206;&#x4E09;&#x985E;&#xFF1A;
+<ul>
+<li>A: Epithelioid (&#x5728; epi)</li>
+<li>B: Lymphocyte-like</li>
+<li>Spindle-shaped<br>
+<img src="paste_src/&#x53E3;&#x75C5;-72.png" alt="alt text" style=";background-color: white;padding:0"></li>
+</ul>
+</li>
+<li>Compound (&#x5728; epi., dermis &#x4E4B;&#x9593;) &#x6216; Intradermal
+<ul>
+<li>&#x53EA;&#x6709; Junctional &#x6703;&#x5448;&#x73FE; Tear-like Nest</li>
+</ul>
+</li>
+<li>Indian-file pattern: &#x947D;&#x9032; Dermis &#x6392;&#x6210;&#x4E00;&#x6392;<br>
+<img src="paste_src/&#x53E3;&#x75C5;-74.png" alt="alt text" style=";background-color: white;padding:0"></li>
+<li>&#x6DF1;&#x5C64;&#x53EF;&#x80FD;&#x570D;&#x76AE;&#x819A;&#x9644;&#x5C6C;&#x7269;&#x3001;&#x795E;&#x7D93;</li>
+</ul>
+<h3 class="mume-header" id="melanoma-%E6%83%A1">Melanoma (&#x60E1;)</h3>
+
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5F9E; Melano cell, Naevus &#x8F49;&#x904E;&#x4F86;&#xFF0C;&#x591A;&#x8B8A;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x6C92;&#x6709; Pigmentation<br>
+&#x67D3;&#x8272;: S100, HBM-45</p>
+</blockquote>
+<ul>
+<li>ABCDE
+<ul>
+<li>Asymmetry</li>
+<li>Border irregularity</li>
+<li>Colot veruegation</li>
+<li>Diameter &gt;6mm</li>
+<li>Evolving</li>
+</ul>
+</li>
+<li>Horizontal phase(Radial) &#x2192; Vertical phase (Invasive)</li>
+<li>&#x57FA;&#x56E0;
+<ul>
+<li>Mucosa: Kit (CD117) <p style="color: red;">&#x58DE;&#x900F;&#x4E86;&#xFF0C;&#x76F4;&#x63A5; T3</p></li>
+<li>Skin: BRAF, NRAs</li>
+</ul>
+</li>
+</ul>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">&#x985E;&#x578B;</th>
+
+<th colspan="3">&#x7279;&#x5FB5;</th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Superficial Spreading (Pagetoid) -</td>
+
+<td colspan="3">&#x9023;&#x7E8C; ridge &#x90FD;&#x6709; nest <img src="paste_src/&#x53E3;&#x75C5;-75.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+<td colspan="2">Nodular -</td>
+
+<td colspan="3">&#x7121; Radial phase&#xFF0C;&#x76F4;&#x63A5;&#x5F80;&#x4E0B;&#x4FB5;&#x72AF;</td>
+
+
+</tr>
+<tr>
+<td colspan="2">Lentigo maligna</td>
+
+<td colspan="3">&#x4E2D;&#x81C9;&#xFF0C;&#x53EA;&#x6709; Radial &#x967D;&#x5149;&#x66DD;&#x66EC; (Lamina propia &#x6C92;&#x5565;&#x7D30;&#x80DE;&#xFF0C;&#x55DC;&#x9E7C;) <img src="paste_src/&#x53E3;&#x75C5;-76.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+<td colspan="2">Lentigo maligna -</td>
+
+<td colspan="3">Lentigo malign &#x4FB5;&#x72AF;</td>
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Acral Lentiginous -</td>
+
+<td colspan="3">&#x5728;&#x6307;&#x7532;&#x4E0B;&#x9762; (&#x7121;&#x6BDB;)</td>
+
+
+</tr>
+<tr>
+
+
+<td colspan="3"><ul> <li>&#x4E0A;&#x76AE;&#x589E;&#x751F;&#xFF0C;rete ridge &#x8B8A;&#x9577;</li> <li>Junctional nest</li> </ul></td>
+
+
+</tr>
+</tbody>
+</table></div>
+<dl>
+<dt>Acral</dt>
+<dd>&#x80A2;&#x7AEF;</dd>
+</dl>
+<h2 class="mume-header" id="oral-potentially-malignant-disorders-opmd">Oral potentially malignant disorders (OPMD)</h2>
+
+<blockquote>
+<p>&#x7159;&#x3001;&#x9152;&#x3001;&#x6AB3;&#x6994;</p>
+</blockquote>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>&#x540D;&#x7A31;</th>
+<th colspan="2">&#x539F;&#x56E0;</th>
+
+<th colspan="2">&#x7279;&#x5FB5;</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oral submucous fiberosis</td>
+<td colspan="2">Arecoline (&#x6AB3;&#x6994;&#x9E7C;)</td>
+
+<td colspan="2"><ul> <li>&#x2192; SCC </li> <li>hyperkeratosis &#x6216; parakeratosis&#xFF0C;&#x4E0A;&#x76AE;&#x8B8A;&#x8584;&#x3002;</li> <li>Collagen fiber &#x6700;&#x6DF1;&#x4FB5;&#x72AF;&#x808C;&#x8089;&#x5C64;</li> <li>&#x7121;&#x6CD5;&#x5FA9;&#x539F;</li> </ul></td>
+
+</tr>
+<tr>
+<td rowspan="2">Leukoplakia, Erythroplakia</td>
+<td rowspan="2" colspan="2">&#x7D05;&#x6591;&#x8F03;&#x56B4;&#x91CD;&#xFF0C;&#x4E0D;&#x7522;&#x751F;&#x89D2;&#x8CEA; <img src="paste_src/&#x53E3;&#x75C5;-78.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+<td colspan="2"><ul> <li>&#x767D;&#x8272;&#x7684;&#x591A;&#x70BA; hyperkeratosis &#x2192; &#x7528;&#x6392;&#x9664;&#x6CD5;&#x8A3A;&#x65B7;</li> <li>verrucous &#x9AD8;&#x98A8;&#x96AA;</li> <li>&#x5973;&#x6027; maligant transformation rate &#x9AD8;</li> </ul></td>
+
+</tr>
+<tr>
+
+
+
+<td colspan="2">.<img src="paste_src/&#x53E3;&#x75C5;-77.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+<td rowspan="2"><p style="color: red;"> Poliferative verrucous leukoplakia (pbl) </p></td>
+<td rowspan="2" colspan="2">&#xFF1F;</td>
+
+<td colspan="2"><ul> <li>&#x5973;&#xFF0C;gingiva/alveolar gingiva&#xFF0C;66.8y</li> <li>&#x83F8;&#x9152;&#x6AB3;&#x6994;&#x7121;&#x95DC;</li> <li>&#x4E0D;&#x5207;&#x6389;&#x9AD8;&#x6A5F;&#x7387;&#x764C;&#x5316;</li> <li>&#x591A;&#x767C;&#x6027;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-84.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+<td colspan="2"><ul> <li>Sharp &#x5206;&#x5316;&#x6539;&#x8B8A;</li> <li>bulbous rete ridge &#x2192; &#x5EF6;&#x9577;</li> <li>exophytic, endophytic growth, cyst &#x5145;&#x6EFF; keratin</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-86.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;-87.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+</tbody>
+</table></div>
+<h3 class="mume-header" id="oral-epithelial-dysplasia">Oral epithelial dysplasia</h3>
+
+<ul>
+<li>&#x786C;&#x984E;&#x8F03;&#x5C11;&#x767C;&#x751F;&#x3002;</li>
+<li>&#x5206;&#x70BA;&#x4E09;&#x500B;&#x7A0B;&#x5EA6;</li>
+</ul>
+<h4 class="mume-header" id="mild">Mild</h4>
+
+<ul>
+<li>&#x5F71;&#x97FF;&#x5230;&#x4E0B;&#x4E09;&#x5206;&#x4E4B;&#x4E00;</li>
+<li>Basal cell &#x589E;&#x751F;</li>
+<li>Rete ridge &#x8B8A;&#x5BEC;</li>
+<li>&#x5E95;&#x5C64; keratin (&#x7D05;&#x67D3;)</li>
+<li>&#x53EF;&#x80FD;&#x767C;&#x708E;</li>
+</ul>
+<img src="paste_src/&#x53E3;&#x75C5;-80.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<h4 class="mume-header" id="moderate">Moderate</h4>
+
+<ul>
+<li>&#x5230;&#x4E2D;&#x4E09;&#x5206;&#x4E4B;&#x4E00;<br>
+<img src="paste_src/&#x53E3;&#x75C5;-81.png" alt="alt text" style="width:50%;background-color: white;padding:0"></li>
+</ul>
+<h4 class="mume-header" id="sever">Sever</h4>
+
+<img src="paste_src/&#x53E3;&#x75C5;-82.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x75C5;-83.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x75C5;-79.png" alt="alt text" style=";background-color: white;padding:0">
+<h2 class="mume-header" id="%E6%95%B4%E7%90%86">&#x6574;&#x7406;</h2>
+
+<h3 class="mume-header" id="verruciform-xanthoma-%E7%9B%B8%E9%97%9C%E7%96%BE%E7%97%85">Verruciform xanthoma &#x76F8;&#x95DC;&#x75BE;&#x75C5;</h3>
+
+<blockquote>
+<p>&#x8207;&#x76AE;&#x819A;&#x3001;&#x9ECF;&#x819C;&#x7834;&#x58DE;&#x76F8;&#x95DC;&#x7684;Immune disease&#x3001;precancerous disease</p>
+</blockquote>
+<ul>
+<li>&#x6241;&#x5E73;&#x82D4;&#x766C;(lichen planus)</li>
+<li>&#x75B1;&#x7621;(pemphigus vulgaris)</li>
+<li>&#x7D05;&#x6591;&#x6027;&#x72FC;&#x7621;(lupus erythematosus)</li>
+<li>&#x79FB;&#x690D;&#x76F8;&#x95DC;&#x75BE;&#x75C5;(graft-versus-host disease(gvhd))</li>
+<li>&#x5927;&#x76B0;&#x6027;&#x8868;&#x76AE;&#x9B06;&#x61C8;(epidermolysis bullosa&#x4FD7;&#x7A31;&#x6CE1;&#x6CE1;&#x9F8D;&#x75C7;)</li>
+<li>&#x4E0A;&#x76AE;&#x75C5;&#x8B8A;(epithelial dysplasia)</li>
+<li>&#x9C57;&#x72C0;&#x7D30;&#x80DE;&#x764C;(squamous cell carcinoma)</li>
+<li>&#x75A3;&#x72C0;&#x89D2;&#x5316;&#x4E0D;&#x826F;&#x7624;(warty dyskeratoma)&#x3002;</li>
+</ul>
+<h1 class="mume-header" id="%E9%BD%92%E6%BA%90%E6%80%A7%E8%85%AB%E7%98%A4-odontogenic-tumor">&#x9F52;&#x6E90;&#x6027;&#x816B;&#x7624; Odontogenic Tumor</h1>
+
+<blockquote>
+<ul>
+<li>&#x4E0A;&#x76AE;&#x7D44;&#x7E54;&#x60E1;&#x6027;&#x75C5;&#x8B8A;: carcinoma</li>
+<li>&#x9593;&#x8449;&#x7D44;&#x7E54;&#x60E1;&#x6027;&#x75C5;&#x8B8A;: sarcoma</li>
+</ul>
+</blockquote>
+<ol>
+<li>&#x4E0A;&#x76AE;&#x6027;&#x4F86;&#x6E90;(tumors of odontogenic epithelium)
+<ol>
+<li>Ameloblastoma</li>
+<li>Clear cell odontogenic carcinoma</li>
+<li>Adenomatoid odontogenic tumor</li>
+<li>Calcifying odontogenic tumor</li>
+<li>Squamous odontogenic tumor</li>
+</ol>
+</li>
+<li>&#x6DF7;&#x548C;&#x6027;&#x4F86;&#x6E90;(mixed odontogenic tumors)&#x4F86;&#x81EA;&#x4E0A;&#x76AE;+&#x5916;&#x80DA;&#x5C64;&#x9593;&#x8449;
+<ol>
+<li>Ameloblastic fibroma</li>
+<li>Ameloblastic fibro-odontoma</li>
+<li>Ameloblastic fibrosarcoma</li>
+<li>Odontoma</li>
+<li>Primordial odontogenic tumor</li>
+</ol>
+</li>
+<li>&#x5916;&#x80DA;&#x5C64;&#x9593;&#x8449;&#x4F86;&#x6E90;(tumors of odontogenic ectomesenchyme)
+<ol>
+<li>Odontogenic fibroma</li>
+<li>Granular cell odontogenic tumor</li>
+<li>Odontogenic myxoma</li>
+<li>Cementoblastoma</li>
+</ol>
+</li>
+</ol>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2"></th>
+
+<th>&#x539F;&#x56E0;</th>
+<th>&#x4F4D;&#x7F6E;</th>
+<th>&#x5E74;&#x9F61;</th>
+<th colspan="2">&#x7279;&#x5FB5;</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="9">Ameloblastoma</td>
+<td rowspan="3">&#x591A;&#x56CA;&#x816B;&#x578B; (coventional solid or multicystic intraosseous)</td>
+<td rowspan="9"><ul> <li>&#x7259;&#x9F52;&#x767C;&#x80B2;&#x904E;&#x7A0B;&#x4E0A;&#x76AE;(&#x5178;&#x578B;&#x826F;&#x6027;)&#x5728;&#x932F;&#x7684;&#x4F4D;&#x7F6E;</li> <li>BRAF mutation</li> </ul></td>
+<td rowspan="2">&#x4E0B;&#x984E; (80-85%)</td>
+<td rowspan="3">-</td>
+<td colspan="2"><ul> <li>&#x6700;&#x5E38;&#x898B;(80%)&#xFF0C;&#x9577;&#x5F97;&#x6162;&#xFF0C;&#x901A;&#x5E38;&#x6703;&#x5230;&#x4E86;&#x816B;&#x7624;&#x5F88;&#x5927;&#x6642;&#x624D;&#x4F86;&#x5C31;&#x8A3A;&#x3002;</li> <li>&#x9830;&#x820C;&#x64F4;&#x5F35;</li> <li>&#x7259;&#x6839;&#x5438;&#x6536;</li> <li>&#x5C40;&#x90E8;&#x4FB5;&#x72AF;&#xFF0C;&#x5C11;&#x8F49;&#x79FB;&#xFF0C;&#x9810;&#x5F8C;&#x597D;</li> </ul></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2"><details><summary>follicular pattern</summary><img src="paste_src/&#x53E3;&#x75C5;-89.png" alt="alt text" style=";background-color: white;padding:0"></details> <details><summary>plexiform pattern</summary> stellate reticulum &#x64E0;&#x6241; <img src="paste_src/&#x53E3;&#x75C5;-90.png" alt="alt text" style=";background-color: white;padding:0"> </details> <details><summary>basal cell pattern (&#x5C11;)</summary>stellate reticulum &#x4E0D;&#x660E;&#x986F; <img src="paste_src/&#x53E3;&#x75C5;-91.png" alt="alt text" style=";background-color: white;padding:0"></details> <details><summary>acanthomatous pattern</summary><img src="paste_src/&#x53E3;&#x75C5;-92.png" alt="alt text" style=";background-color: white;padding:0"></details> <details><summary>granular cell pattern</summary><img src="paste_src/&#x53E3;&#x75C5;-93.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
+
+</tr>
+<tr>
+
+
+
+<td>anterior maxilla</td>
+
+<td colspan="2"><details><summary>desmoplastic pattern</summary>fibrous stroma &#x2192; TGF-&#x3B2; &#x2192; collagen fiber &#x2192; &#x5927;&#x91CF;&#x81A0;&#x539F;&#x86CB;&#x767D;&#x57FA;&#x8CEA;(dense collagenized stroma)&#x5806;&#x7A4D; &#x2192; radiopaque, odontogenic epithelium &#x5448;&#x73FE;&#x5C0F;&#x5CF6;&#x72C0;(small islands)&#x6216;&#x662F;&#x7D22;&#x72C0;(cord) <img src="paste_src/&#x53E3;&#x75C5;-94.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
+
+</tr>
+<tr>
+
+<td rowspan="4">&#x55AE;&#x4E00;&#x56CA;&#x816B;&#x578B;(unicystic)</td>
+
+<td rowspan="4">&#x4E0B;&#x984E;&#x5F8C;</td>
+<td rowspan="4">~23y</td>
+<td colspan="2">&#x5E38;&#x570D;&#x7E5E;&#x672A;&#x840C;&#x767C;&#x7684;&#x7259;&#x9F52;&#xFF0C;&#x7279;&#x5225;&#x662F;&#x7B2C;&#x4E09;&#x5927;&#x81FC;&#x9F52; <img src="paste_src/&#x53E3;&#x75C5;-95.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2"><strong>luminal ameloblastoma</strong> <img src="paste_src/&#x53E3;&#x75C5;-96.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2"><strong>intraluminal ameloblastoma</strong> <br> &#x591A;&#x70BA; plexiform type <br> <img src="paste_src/&#x53E3;&#x75C5;-97.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2"><strong>mural ameloblastoma</strong> <img src="paste_src/&#x53E3;&#x75C5;-98.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+<td rowspan="2">&#x9AA8;&#x5916;&#x56CA;&#x816B;&#x578B;(peripheral/ extraosseous)</td>
+
+<td rowspan="2">&#x4E0B;&#x984E;&#x5F8C;&#x3001;&#x8EDF;&#x7D44;&#x7E54;<sup>&#x9650;</sup></td>
+<td rowspan="2">52y</td>
+<td colspan="2">plexiform &#x6216;&#x662F; follicular pattern <img src="paste_src/&#x53E3;&#x75C5;-99.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">&#x5C40;&#x90E8;&#x5207;&#x9664;&#xFF0C; 15-20% &#x5FA9;&#x767C;</td>
+
+</tr>
+<tr>
+<td colspan="2">Ameloblastic Carcinoma</td>
+
+<td>-</td>
+<td>&#x4E0B;&#x984E;&#x5F8C;&#x5074;</td>
+<td>50-60y</td>
+<td colspan="2"><strong>&#x653E;&#x5C04;&#x7DDA;</strong> <br> &#x4E0D;&#x898F;&#x5247;&#xFF0C;&#x908A;&#x754C;&#x4E0D;&#x6E05;&#x695A;&#x3002;</td>
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Calcifying epithelial odontogenic tumor (CEOT)</td>
+
+<td rowspan="2">-</td>
+<td rowspan="2">&#x4E0B;&#x984E;</td>
+<td rowspan="2">30-50y</td>
+<td colspan="2"><ul> <li>&#x985E;&#x4F3C; Ameloblastoma&#xFF0C;&#x53EF;&#x80FD;&#x55AE;&#x591A;&#x56CA;</li> <li>&#x9223;&#x5316;&#xFF0C;&#x9577;&#x5F97;&#x6162;&#xFF0C;&#x4F4E;&#x4FB5;&#x7565;&#xFF0C;&#x908A;&#x754C;&#x6E05;&#x695A;</li> <li>&#x963B;&#x751F;&#x9F52; </li> <li>&#x5FA9;&#x767C;&#x7387;&#x7D04; 15%</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-102.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2"><ul> <li>intercellular bridge </li> <li>&#x55DC;&#x9178; amyloid-like substance &#x2192; <mark>Congo red</mark></li> <li>&#x591A;&#x6838;&#x7D30;&#x80DE;(&#x2192;)</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-103.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;-104.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+<td rowspan="4" colspan="2"><p style="color: red;">Adenomatoid odontogenic tumor (AOT)</p></td>
+
+<td rowspan="4">-</td>
+<td rowspan="4">&#x4E0A;&#x984E;&#x3001;&#x524D;&#x7259;&#x3001;&#x72AC;&#x9F52;&#x3001;&#x9830;&#x5074;</td>
+<td rowspan="4">-</td>
+<td colspan="2"><strong>Tumor of two-third</strong> <ol> <li>10~19y</li> <li>Female</li> <li>&#x4E0A;&#x984E;&#x3001;&#x524D;&#x7259;&#x3001;&#x72AC;&#x9F52;</li> <li>&#x672A;&#x840C;&#x767C;&#x7259;&#x51A0;</li> </ol></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">&#x7121;&#x75DB;&#x5C0F;&#x75C5;&#x7076;(&#x3C6;&lt;3cm)&#xFF0C;&#x8B8A;&#x5927;&#x6642;<mark>&#x9AA8;&#x81A8;&#x8139;</mark></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">radiolucency &#x8DE8;&#x904E; CEJ&#xFF0C;&#x53EF;&#x80FD;&#x6709;&#x9223;&#x5316; <img src="paste_src/&#x53E3;&#x75C5;-100.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2"><ul> <li>fibrous capsule &#x539A; &#x2192; &#x5207;&#x5F97;&#x4E7E;&#x6DE8;</li> <li>&#x4E0A;&#x76AE;&#x87BA;&#x65CB;(whorled mass)&#x3001;&#x73AB;&#x7470;(rosettelike)&#x5718;&#x584A;</li> <li>Ductlike </li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-101.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+<td colspan="2">Squamous odontogenic tumor</td>
+
+<td>-</td>
+<td>&#x4E0A;&#x984E;&#x524D;&#xFF0C;&#x4E0B;&#x984E;&#x5F8C;</td>
+<td>-</td>
+<td colspan="2"><ul> <li>&#x53EF;&#x80FD;&#x9020;&#x6210;&#x7259;&#x6839;&#x9B06;&#x52D5;&#xFF0C;&#x4E00;&#x822C;&#x7121;&#x75C7;&#x72C0;</li> <li>&quot;&#x6B63;&#x5E38;&quot;&#x9C57;&#x72C0;&#x4E0A;&#x76AE;&#x5C0F;&#x5CF6;&#x88AB;Fiber&#x5305;&#x570D;</li> <li>&#x4E0A;&#x76AE;&#x5C0F;&#x5CF6;&#x5167;&#x53EF;&#x80FD;&#x6703;&#x51FA;&#x73FE;&#x4E00;&#x4E9B; microcyst</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-105.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+<td colspan="2">Ameloblastic fibroma</td>
+
+<td>-</td>
+<td>&#x4E0B;&#x984E;&#x81FC;&#x9F52;&#x5340;</td>
+<td>20y &#x2193;</td>
+<td colspan="2"><ul> <li>&#x901A;&#x5E38;&#x7121;&#x75C7;&#x72C0;</li> <li>&#x963B;&#x751F;&#x9F52;(75%)</li> <li>fiber &#x2192; &#x908A;&#x754C;&#x6E05;&#x695A;</li> <li>odontogenic epithelium &#x6392;&#x5217;&#x6210;&#x5169;&#x5C64;&#x7D30;&#x80DE; long, narrow cords</li> <li>CT &#x5145;&#x6EFF; fibroblast</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-106.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2"><p style="color: DeepSkyBlue;"> Ameloblastic fibrosarcoma</p></td>
+
+<td rowspan="2">Ameloblastic fibroma &#x60E1;&#x5316;</td>
+<td rowspan="2">&#x4E0B;&#x984E;(80%)</td>
+<td rowspan="4">27.5y (1.5:1)</td>
+<td colspan="2"><ul> <li>&#x4FB5;&#x72AF;&#x5FEB;&#xFF0C;<mark>&#x6703;&#x75DB;</mark></li> <li>&#x9AA8;&#x982D;&#x7834;&#x58DE; &#x2192; &#x7259;&#x9F52;&#x9B06;&#x52D5;</li> <li>&#x5411;&#x5916;&#x4FB5;&#x72AF; &#x2192; &#x7C98;&#x819C;&#x6F70;&#x990A;</li> </ul></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2"><ul> <li>&#x53EA;&#x6709; CT &#x60E1;&#x6027; </li> </ul> -</td>
+
+</tr>
+<tr>
+<td rowspan="2">Odontoma</td>
+<td>compound</td>
+<td rowspan="2">&#x6700;&#x5E38;&#x898B;</td>
+<td>&#x4E0A;&#x984E;&#x524D;&#x7259;</td>
+
+<td colspan="2"><ul> <li>&#x69CB;&#x9020;&#x9806;&#x5E8F;&#x6392;&#x5217;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-107.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;-109.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+<td>complex</td>
+
+<td>&#x5F8C;&#x7259;</td>
+
+<td colspan="2"><ul> <li>dentin &#x548C; enamel matrix &#x6DF7;&#x5728;&#x4E00;&#x8D77;</li> <li>&#x6709;&#x6642;&#x53EF;&#x898B;&#x55DC;&#x9178; Ghost cell</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-108.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;-110.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+<td colspan="2">Ameloblastic fibro-odontoma</td>
+
+<td>Ameloblastic fibroma + Odontoma</td>
+<td>&#x4E0B;&#x984E;&#x5F8C;</td>
+<td>10y</td>
+<td colspan="2"><ul> <li>&#x591A;&#x70BA;&#x55AE;&#x623F;&#xFF0C;&#x5206;&#x754C;&#x660E;&#x986F;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-111.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Primordial Odontogenic Tumor <sup>&#x65B0;</sup></td>
+
+<td rowspan="2">-</td>
+<td rowspan="2">&#x4E0B;&#x984E;&#x5F8C;&#x7259;(3^rd &#x5927;&#x81FC;&#x9F52;, &#x4E73;&#x81FC;&#x9F52;)</td>
+<td rowspan="2">10y-20y</td>
+<td colspan="2"><ul> <li>&#x826F;&#x6027;&#xFF0C;&#x5206;&#x754C;&#x597D;&#xFF0C;&#x5805;&#x786C;&#xFF0C;&#x7121;&#x75DB; </li> <li>&#x5305;&#x4F4F;&#x7259;&#x51A0;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-112.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">&#x2013;</td>
+
+</tr>
+<tr>
+<td rowspan="4">Odontogenic fibroma</td>
+<td rowspan="2">central type<sup>&#x7F55;</sup> (&#x9AA8;&#x5167;)</td>
+<td rowspan="2">-</td>
+<td rowspan="2">&#x4E0A;&#x984E;&#x70BA;&#x7B2C;&#x4E00;&#x5927;&#x81FC;&#x9F52;&#x4EE5;&#x524D;&#x3001;&#x4E0B;&#x984E;&#x70BA;&#x7B2C;&#x4E00;&#x5927;&#x81FC;&#x9F52;&#x4EE5;&#x5F8C;</td>
+<td rowspan="2">&#x672A;&#x840C;&#x767C;&#x7684;&#x7259;&#x9F52;(5%)</td>
+<td colspan="2"><ul> <li>&#x591A;&#x623F;: &#x5927;&#xFF0C;&#x9AA8;&#x982D;&#x81A8;&#x5927;</li> <li>&#x55AE;&#x623F;: &#x5C0F;</li> <li>&#x64E0;&#x7259;&#x6839;&#xFF0C;&#x9F52;&#x52D5;&#x6416;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-113.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2">Simple, WHO <img src="paste_src/&#x53E3;&#x75C5;-114.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+<td rowspan="2">peripheral type (&#x8EDF;&#x7D44;&#x7E54;)</td>
+<td rowspan="2">-</td>
+<td rowspan="2">&#x4E0B;&#x984E;&#x7259;&#x9F66; facial</td>
+<td rowspan="2">10-40y</td>
+<td colspan="2">&#x53C8;&#x7A31; Odontogenic epithelial harmatoma, Peripheral fibroameloblastic dentinoma</td>
+
+</tr>
+<tr>
+
+
+
+
+
+<td colspan="2"><ul> <li>&#x7121;&#x75DB;</li> <li>&#x7DFB;&#x5BC6;&#x7684; collagen</li> <li>&#x539A;&#x7684; epithelium</li> <li>WHO type &#x985E;&#x4F3C;</li> <li>&#x67D0;&#x4E9B;&#x5340;&#x57DF;&#x985E;&#x4F3C; giant cell granuloma</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-115.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+<td colspan="2">Odontogenic myxoma <br> &#x9F52;&#x6E90;&#x6027;&#x9ECF;&#x6DB2;&#x7624;</td>
+
+<td>-</td>
+<td>&#x984E;&#x9AA8;<sup>&#x9650;</sup>(&#x4E0B;&#x984E;&#x7A0D;&#x9AD8;)</td>
+<td>25-30y</td>
+<td colspan="2"><ul> <li>&#x7121;&#x75DB;&#x816B;&#x8139;&#xFF0C;&#x751F;&#x9577;&#x6162;</li> <li>&#x63A8;&#x958B;&#x7259;&#x6839;&#xFF0C;&#x7259;&#x6839;&#x5438;&#x6536;</li> <li>&#x55AE;&#x6216;&#x591A;&#x623F;&#xFF0C;&#x591A;&#x623F;&#x5206;&#x6210; soap bubble, <mark>stepladder</mark></li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-117.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+</tbody>
+</table></div>
 <h1 class="mume-header" id="anomalies">Anomalies</h1>
 
 <ul>
@@ -1068,7 +2076,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 </dl>
 <h2 class="mume-header" id="%E7%99%BC%E8%82%B2%E5%9E%8B-1">&#x767C;&#x80B2;&#x578B;</h2>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x8B8A;&#x7570;&#x540D;&#x7A31;</th>
@@ -1087,7 +2095,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td rowspan="2"><ul><li><strong>Trauma</strong> : &#x4E0A;&#x984E;&#x6B63;&#x4E2D;&#x9580;&#x7259;, Facial (Avulsion, intrusive luxation)</li><li> <strong>Caries</strong>: &#x5C0F;&#x81FC;&#x9F52;</li></ul></td>
 <td rowspan="2"><ul> <li><strong>Crown</strong>: 1.5-3y</li><li><strong>Root</strong>: 4-5y</li></ul></td>
 <td rowspan="2">&#x767C;&#x708E; (&#x4E73;&#x7259; Caries, trauma) &#x5F71;&#x97FF;&#x6046;&#x7259;&#x767C;&#x80B2;</td>
-<td colspan="2">&#x5C40;&#x90E8;&#x6216;&#x6574;&#x500B;&#x7259;&#x51A0;&#x767D;&#x3001;&#x9EC3;&#x6216;&#x68D5;&#x8272;&#x767C;&#x80B2;&#x4E0D;&#x5168; <img src="paste_src/a.png" alt></td>
+<td colspan="2">&#x5C40;&#x90E8;&#x6216;&#x6574;&#x500B;&#x7259;&#x51A0;&#x767D;&#x3001;&#x9EC3;&#x6216;&#x68D5;&#x8272;&#x767C;&#x80B2;&#x4E0D;&#x5168; <img src="paste_src/a.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 </tr>
 <tr>
@@ -1105,7 +2113,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td rowspan="3">&#x55AE;&#x6216;&#x591A;&#x500B;&#x6046;&#x7259;&#x4E0B;&#x984E; 1<sup>st</sup>Molar (&#x53EF;&#x80FD;&#x5F71;&#x97FF; Incisor)</td>
 <td rowspan="3">-</td>
 <td rowspan="3"><strong>&#x4E73;&#x7259;</strong>: &#x7522;&#x524D;&#x6BCD;&#x9AD4;&#x75BE;&#x75C5;&#x3001;&#x85E5;&#x7269;&#x3001;&#x65E9;&#x7522; <br> <strong>&#x6046;&#x7259;</strong>: &#x5E7C;&#x5152;&#x671F;&#x75BE;&#x75C5;(fever, asthma, pneumonia)</td>
-<td>&#x5C40;&#x90E8;&#x767D;&#x3001;&#x9EC3;&#x6216;&#x68D5;&#x8272;&#x767C;&#x80B2;&#x4E0D;&#x5168;&#xFF0C;&#x53EF;&#x80FD;&#x591A;&#x5B54;&#x51F9;&#x9677;<br><img src="paste_src/a-1.png" alt></td>
+<td>&#x5C40;&#x90E8;&#x767D;&#x3001;&#x9EC3;&#x6216;&#x68D5;&#x8272;&#x767C;&#x80B2;&#x4E0D;&#x5168;&#xFF0C;&#x53EF;&#x80FD;&#x591A;&#x5B54;&#x51F9;&#x9677;<br><img src="paste_src/a-1.png" alt="alt text" style=";background-color: white;padding:0"></td>
 <td rowspan="3">CPPACP: &#x91CD;&#x65B0;&#x9223;&#x5316;&#xFF0C;&#x964D;&#x654F;</td>
 </tr>
 <tr>
@@ -1141,7 +2149,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 
 
-<td colspan="2">Chamber &#x8B8A;&#x77EE;&#xFF0C;&#x7570;&#x4F4D;&#x7926;&#x5316;(ectopic mineralized ) <img src="paste_src/a-4.png" alt></td>
+<td colspan="2">Chamber &#x8B8A;&#x77EE;&#xFF0C;&#x7570;&#x4F4D;&#x7926;&#x5316;(ectopic mineralized ) <img src="paste_src/a-4.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 </tr>
 <tr>
@@ -1253,10 +2261,10 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 class="mume-header" id="%E7%99%BC%E8%82%B2%E5%BE%8C">&#x767C;&#x80B2;&#x5F8C;</h2>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x8B8A;&#x7570;&#x540D;&#x7A31;</th>
@@ -1347,7 +2355,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td rowspan="2">&#x5F8C;&#x7259;Facial, &#x55AE;&#x9846;&#x9F52;&#x9838;1/3</td>
 <td rowspan="2">-</td>
 <td rowspan="2">&#x54AC;&#x5408;&#x529B;</td>
-<td colspan="2">V &#x5F62;&#x5C16;&#x92B3;&#x7F3A;&#x53E3;&#xFF0C;&#x53EF;&#x80FD;&#x5EF6;&#x4F38;&#x5230;&#x7259;&#x9F66;&#x4E0B;&#x3002; <img src="paste_src/a-9.png" alt></td>
+<td colspan="2">V &#x5F62;&#x5C16;&#x92B3;&#x7F3A;&#x53E3;&#xFF0C;&#x53EF;&#x80FD;&#x5EF6;&#x4F38;&#x5230;&#x7259;&#x9F66;&#x4E0B;&#x3002; <img src="paste_src/a-9.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 </tr>
 <tr>
@@ -1365,7 +2373,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td rowspan="2" colspan="2">&#x5C11;&#x898B;</td>
 
 <td><strong>&#x767C;&#x708E;&#x5438;&#x6536;:</strong> &#x8089;&#x82BD;&#x7D44;&#x7E54;&#x53D6;&#x4EE3; Dentin</td>
-<td rowspan="2" colspan="2">&#x7121;&#x75C7;&#x72C0;&#xFF0C;&#x767C;&#x708E;&#x5247;&#x75BC;&#x75DB;&#x3002; <br> Pulp &#x7D05;&#x8272;&#x900F;&#x51FA;&#x3002; <br> <img src="paste_src/a-7.png" alt>  X-ray &#x4E0B; balloon-like dilation of the canal&#x3002; <img src="paste_src/a-8.png" alt></td>
+<td rowspan="2" colspan="2">&#x7121;&#x75C7;&#x72C0;&#xFF0C;&#x767C;&#x708E;&#x5247;&#x75BC;&#x75DB;&#x3002; <br> Pulp &#x7D05;&#x8272;&#x900F;&#x51FA;&#x3002; <br> <img src="paste_src/a-7.png" alt="alt text" style=";background-color: white;padding:0">  X-ray &#x4E0B; balloon-like dilation of the canal&#x3002; <img src="paste_src/a-8.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 </tr>
 <tr>
@@ -1383,7 +2391,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td rowspan="3" colspan="2">&#x5E38;&#x898B;</td>
 
 <td rowspan="3">&#x767C;&#x708E;</td>
-<td colspan="2">Root &#x8B8A;&#x77ED;&#xFF0C;&#x6839;&#x5C16;&#x4E0D;&#x898F;&#x5247;&#x3002;&#x59A5;&#x5584;&#x6CBB;&#x7642;&#x5247;&#x4E00;&#x5E74;&#x5167;&#x75CA;&#x7652;&#x3002; <img src="paste_src/a-6.png" alt></td>
+<td colspan="2">Root &#x8B8A;&#x77ED;&#xFF0C;&#x6839;&#x5C16;&#x4E0D;&#x898F;&#x5247;&#x3002;&#x59A5;&#x5584;&#x6CBB;&#x7642;&#x5247;&#x4E00;&#x5E74;&#x5167;&#x75CA;&#x7652;&#x3002; <img src="paste_src/a-6.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 </tr>
 <tr>
@@ -1410,7 +2418,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td>&#x4E0A;&#x984E;&#x9580;&#x7259; (&#x79FB;&#x52D5;&#x8DDD;&#x96E2;&#x9577;)</td>
 <td colspan="2">&#x77EF;&#x6B63;</td>
 
-<td colspan="2">&#x6839;&#x5C16;&#x5713;&#x5F62;&#x3002; <img src="paste_src/a-5.png" alt></td>
+<td colspan="2">&#x6839;&#x5C16;&#x5713;&#x5F62;&#x3002; <img src="paste_src/a-5.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 </tr>
 <tr>
@@ -1450,8 +2458,105 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 
 </tr>
 </tbody>
-</table>
+</table></div>
+<h1 class="mume-header" id="%E6%95%B4%E7%90%86-1">&#x6574;&#x7406;</h1>
+
+<h2 class="mume-header" id="%E6%95%B4%E7%90%86-2">&#x6574;&#x7406;</h2>
+
+<img src="paste_src/&#x53E3;&#x75C5;-17.png" alt="alt text" style=";background-color: white;padding:0">
+<blockquote>
+<ul>
+<li>COC &#x5728;&#x524D;&#x5340;</li>
+</ul>
+</blockquote>
+<img src="paste_src/&#x53E3;&#x75C5;-18.png" alt="alt text" style=";background-color: white;padding:0">
+&gt; - BOC = &#x591A;&#x56CA; LPC &#x2192; &#x5728; premolar
+&gt; - Slaodontogenic Cyst (GOC) &#x5728;&#x524D;&#x7259;&#x8DE8;&#x4E2D;&#x7DDA;
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>&#x7537;&#x6027;&#x8F03;&#x591A;</th>
+<th>&#x5973;&#x6027;&#x8F03;&#x591A;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OOC <br>odontogenic carcinoma<br>NDC <br> EC<br>Stafne Defect <br> Simple Bone Cyst &#x9577;&#x9AA8;&#x578B;</td>
+<td>Nasolabial Cyst <br> Gardner syndrome <br>Pilar cysts</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>&#x5FC5;&#x5B9A;&#x4F34;&#x96A8;&#x963B;&#x751F;&#x7259;</th>
+<th>&#x53EF;&#x80FD;&#x4F34;&#x96A8;&#x963B;&#x751F;&#x7259;</th>
+<th>&#x4E00;&#x5B9A;&#x4E0D;&#x4F34;&#x96A8;&#x963B;&#x751F;&#x7259;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC</td>
+<td>OKC(40%) <br> OOC (66%) <br> COC(33%&#x6A5F;&#x7387;) <br> Adenomatoid odontogenic tumor (66%) <br> Ameloblastic fibroma (75%)</td>
+<td>LPC</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>&#x7259;&#x6839;&#x5438;&#x6536;</th>
+<th>&#x7259;&#x6839;&#x4E0D;&#x592A;&#x5438;&#x6536;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC  <br> RC <br>  Ameloblastoma &#x591A;&#x623F;&#x578B; <br> Ameloblastic Carcinoma <br>  Squamous odontogenic tumor <br> Odontogenic fibroma  <br>  Odontogenic myxoma</td>
+<td>OKC <br> LPC</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>&#x6B63;&#x89D2;&#x5316;&#x4E0A;&#x76AE;</th>
+<th>&#x4E0D;&#x5B8C;&#x5168;&#x89D2;&#x5316;&#x4E0A;&#x76AE;</th>
+<th>&#x975E;&#x89D2;&#x5316;&#x4E0A;&#x76AE;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OOC <br> EC  <br> Dermoid cyst</td>
+<td>OKC <br> Oral Lymphoepithelial Cyst</td>
+<td>DC  <br> LPC  <br> GOC</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>&#x55AE;&#x623F; Unilocular</th>
+<th>&#x591A;&#x623F; Multilocular</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OOC <br> COC <br> Simple Bone Cyst</td>
+<td>GOC <br> Ameloblastoma</td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="mume-header" id="%E5%9F%BA%E5%9B%A0">&#x57FA;&#x56E0;</h2>
+
+<h3 class="mume-header" id="braf">BRAF</h3>
+
+<ul>
+<li><a href="#p-stylecolorred-intraoral-melanocytic-nevusp">Intraoral melanocytic Nevus</a></li>
+<li>Skin Melanoma</li>
+</ul>
+<img src="paste_src/&#x53E3;&#x75C5;-88.png" alt="alt text" style=";background-color: white;padding:0">
 <br><br>
+
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
 <script> 
 var Main_LeftListLiSelector = $(".md-sidebar-toc li");
@@ -1466,22 +2571,55 @@ $(Main_LeftListLiSelector).on('click', function() {
 <li><a href="#cyst">cyst</a>
 <ul>
 <li><a href="#%E5%88%86%E9%A1%9E">&#x5206;&#x985E;</a></li>
+<li><a href="#%E7%8E%BB%E7%89%87%E7%89%B9%E5%BE%B5">&#x73BB;&#x7247;&#x7279;&#x5FB5;</a></li>
 <li><a href="#odontogenic">Odontogenic</a>
 <ul>
-<li><a href="#%E7%8E%BB%E7%89%87%E7%89%B9%E5%BE%B5">&#x73BB;&#x7247;&#x7279;&#x5FB5;</a></li>
 <li><a href="#%E7%99%8C%E5%8C%96">&#x764C;&#x5316;</a></li>
 <li><a href="#%E7%99%BC%E8%82%B2%E5%9E%8B">&#x767C;&#x80B2;&#x578B;</a></li>
 <li><a href="#%E7%99%BC%E7%82%8E%E5%9E%8B">&#x767C;&#x708E;&#x578B;</a></li>
-<li><a href="#%E6%95%B4%E7%90%86">&#x6574;&#x7406;</a></li>
 </ul>
 </li>
 <li><a href="#non-odontogenic">Non- Odontogenic</a></li>
+<li><a href="#pseudocyst">Pseudocyst</a></li>
 </ul>
 </li>
+<li><a href="#epithelial-tumors">Epithelial tumors</a>
+<ul>
+<li><a href="#hpv">HPV</a></li>
+<li><a href="#melanotic-lesions">Melanotic lesions</a>
+<ul>
+<li><a href="#%E8%89%B2%E7%B4%A0%E5%A2%9E%E5%8A%A0">&#x8272;&#x7D20;&#x589E;&#x52A0;</a></li>
+<li><a href="#naevus">Naevus</a></li>
+<li><a href="#melanoma-%E6%83%A1">Melanoma (&#x60E1;)</a></li>
+</ul>
+</li>
+<li><a href="#oral-potentially-malignant-disorders-opmd">Oral potentially malignant disorders (OPMD)</a>
+<ul>
+<li><a href="#oral-epithelial-dysplasia">Oral epithelial dysplasia</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B4%E7%90%86">&#x6574;&#x7406;</a>
+<ul>
+<li><a href="#verruciform-xanthoma-%E7%9B%B8%E9%97%9C%E7%96%BE%E7%97%85">Verruciform xanthoma &#x76F8;&#x95DC;&#x75BE;&#x75C5;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E9%BD%92%E6%BA%90%E6%80%A7%E8%85%AB%E7%98%A4-odontogenic-tumor">&#x9F52;&#x6E90;&#x6027;&#x816B;&#x7624; Odontogenic Tumor</a></li>
 <li><a href="#anomalies">Anomalies</a>
 <ul>
 <li><a href="#%E7%99%BC%E8%82%B2%E5%9E%8B-1">&#x767C;&#x80B2;&#x578B;</a></li>
 <li><a href="#%E7%99%BC%E8%82%B2%E5%BE%8C">&#x767C;&#x80B2;&#x5F8C;</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B4%E7%90%86-1">&#x6574;&#x7406;</a>
+<ul>
+<li><a href="#%E6%95%B4%E7%90%86-2">&#x6574;&#x7406;</a></li>
+<li><a href="#%E5%9F%BA%E5%9B%A0">&#x57FA;&#x56E0;</a>
+<ul>
+<li><a href="#braf">BRAF</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

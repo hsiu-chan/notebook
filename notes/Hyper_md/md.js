@@ -13,6 +13,35 @@ if (url.searchParams.get('id')=='3i'){
   document.body.appendChild(home);
 }
 
+
+//分享按鈕
+var share_bt = document.createElement("div");
+share_bt.setAttribute('class', "btn");
+share_bt.innerHTML = "<i class=\"fa fa-share-alt fa-18\"></i>";
+share_bt.style = "top:8px;right:8px;";
+share_bt.addEventListener('click', function() {
+  const value = decodeURI(url.hostname+url.pathname);
+  const el = document.createElement('textarea');
+  el.value = value;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+});
+document.body.appendChild(share_bt);
+
+//預覽介面
+
+var imageModal= document.createElement("div");
+imageModal.setAttribute('id', "imageModal");
+imageModal.setAttribute('class', "modal");
+imageModal.innerHTML ="<span class=\"close\">&times;</span><img class=\"modal-content\" id=\"enlargedImage\">";
+document.body.appendChild(imageModal);
+
+
+
+
+
 /*window.onload=function(){
   var head=document.getElementsByTagName('head')[0]; //获取到head元素
   var link=document.createElement('link');//创建link元素节点，也就是link标签
@@ -47,20 +76,6 @@ $(this).addClass('active');
 
 }
 
-var share_bt = document.createElement("div");
-share_bt.setAttribute('class', "btn");
-share_bt.innerHTML = "<i class=\"fa fa-share-alt fa-18\"></i>";
-share_bt.style = "top:8px;right:8px;";
-share_bt.addEventListener('click', function() {
-  const value = decodeURI(url.hostname+url.pathname);
-  const el = document.createElement('textarea');
-  el.value = value;
-  document.body.appendChild(el);
-  el.select();
-  document.execCommand('copy');
-  document.body.removeChild(el);
-});
-document.body.appendChild(share_bt);
 
 
 
@@ -74,4 +89,33 @@ for (var i = 0; i < mdPreview.length; i++) {
       document.body.removeAttribute('html-show-sidebar-toc');
     }
   })
+}
+
+
+// Get the modal
+var modal = document.getElementById('imageModal');
+
+// Get the image in the modal
+var modalImg = document.getElementById('enlargedImage');
+
+// Get all images and loop through them to add click event
+var images = document.querySelectorAll('img');
+images.forEach(img => {
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+});
+
+// Get the close button (X) and add click event to close the modal
+var closeBtn = document.querySelector('.close');
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Close modal when clicking anywhere outside the image
+modal.onclick = function(event) {
+    if (event.target !== modalImg) {
+        modal.style.display = "none";
+    }
 }

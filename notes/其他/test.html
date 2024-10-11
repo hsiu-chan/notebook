@@ -44,31 +44,64 @@
 }
 .markdown-preview h4 {
   font-style: italic;
-  font-weight: normal ;
+  font-weight: normal;
   font-size: 1.2em;
 }
 .markdown-preview hr {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
+@media screen and (max-width: 450px) {
+  .table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .table-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
 .markdown-preview table {
-  display: block;
-  max-width: 100%;
-  overflow: auto;
+  width: 100%;
+  table-layout: fixed;
   text-align: center;
   color: #f0ffff;
+  border-collapse: collapse;
+  display: table;
+}
+@media screen and (max-width: 450px) {
+  .markdown-preview table {
+    table-layout: auto;
+  }
+}
+.markdown-preview table thead {
+  position: sticky;
+  background-color: hsl(220, 13%, 8%);
+  top: 0;
+  z-index: 999;
 }
 .markdown-preview table th {
   text-align: center;
   font-weight: bold;
   color: #81b4f4;
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table td {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table tr {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td ol,
+.markdown-preview table th ol,
+.markdown-preview table td ul,
+.markdown-preview table th ul {
+  padding-left: 0;
+  list-style-position: inside;
+  /* 控制項目符號的位置 */
+  text-align: left;
+  /* 文字對齊方式 */
 }
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
@@ -94,72 +127,114 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   overflow: auto;
   background-color: inherit;
 }
-html {
+html body {
+  background-color: hsl(220, 13%, 18%);
   /* 侧栏 */
-  /*.md-sidebar-toc ul li:hover > ul,
-  .md-sidebar-toc ul li:hover > ul ul{
-    display: block;
-  }*/
   /* 侧栏自动编号 */
   /* 复位计数器 */
   /* 进行编号 */
+  /*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
 }
-html .md-sidebar-toc {
+html body img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+html body .md-sidebar-toc {
   margin: 0rem 0rem 0em 0em;
   padding: 0rem 0rem 0em 0rem;
   width: auto;
   max-width: 768px;
   margin-bottom: 1em;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(186, 55, 55, 0.1);
   /*背景颜色*/
   position: absolute;
   z-index: 70;
 }
-html .md-sidebar-toc a {
+html body .md-sidebar-toc a {
   color: inherit;
   font-size: 0.7rem !important;
 }
-html .md-sidebar-toc a:hover {
+html body .md-sidebar-toc a:hover {
   color: inherit;
 }
-html .md-sidebar-toc li {
+html body .md-sidebar-toc li {
   margin-left: 1rem;
   margin-bottom: 0 !important;
   text-align: left;
   /*左对齐*/
 }
-html .md-sidebar-toc ul {
+html body .md-sidebar-toc ul {
   padding-left: 0rem;
   margin-left: 0rem;
   padding-right: 0 !important;
 }
-html .md-sidebar-toc ul li {
+html body .md-sidebar-toc ul li {
   font-size: 0.8rem !important;
   /*字号*/
   font-weight: bold;
   /*一级大纲*/
 }
-html .md-sidebar-toc ul li:hover {
+html body .md-sidebar-toc ul li:hover {
   color: #87ffff;
   font-style: italic;
 }
-html .md-sidebar-toc ul ul {
+html body .md-sidebar-toc ul ul {
   padding-left: 0rem !important;
   display: none;
 }
-html .md-sidebar-toc .active {
+html body .md-sidebar-toc .active {
   color: #87ffff;
   font-style: italic;
 }
-html .md-sidebar-toc .active ul,
-html .md-sidebar-toc .active ul ul,
-html .md-sidebar-toc .active li {
+html body .md-sidebar-toc .active ul,
+html body .md-sidebar-toc .active ul ul,
+html body .md-sidebar-toc .active li {
   display: block;
 }
-html .md-sidebar-toc ul ul:hover {
+html body .md-sidebar-toc ul ul:hover {
   color: #87ffff;
 }
-html .md-sidebar-toc ul ul li {
+html body .md-sidebar-toc ul ul li {
   margin-bottom: 8pt !important;
   margin-top: 3pt !important;
   margin-left: 0rem;
@@ -170,128 +245,86 @@ html .md-sidebar-toc ul ul li {
   padding-left: 0.2rem;
   border-left: 2px rgba(0, 0, 0, 0) solid;
 }
-html .md-sidebar-toc ul ul li:hover {
+html body .md-sidebar-toc ul ul li:hover {
   font-style: normal;
   border-left: 2px solid;
 }
-html .md-sidebar-toc ul ul ul {
+html body .md-sidebar-toc ul ul ul {
   padding-left: 0rem;
   margin-left: 0rem;
 }
-html .md-sidebar-toc ul ul ul li {
+html body .md-sidebar-toc ul ul ul li {
   margin-top: 2pt !important;
   margin-bottom: 2pt !important;
   margin-left: 0rem;
   padding-left: 0.5rem;
   border-left: 0px;
 }
-html .md-sidebar-toc ul ul ul li:hover {
+html body .md-sidebar-toc ul ul ul li:hover {
   border-left: 0px solid;
 }
-html body {
+html body body {
   counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
 }
-html .md-sidebar-toc li {
+html body .md-sidebar-toc li {
   counter-reset: outline-h1;
 }
-html .md-sidebar-toc ul li {
+html body .md-sidebar-toc ul li {
   counter-reset: outline-h2;
 }
-html .md-sidebar-toc ul ul li {
+html body .md-sidebar-toc ul ul li {
   counter-reset: outline-h3;
 }
-html .md-sidebar-toc ul ul ul li {
+html body .md-sidebar-toc ul ul ul li {
   counter-reset: outline-h4;
 }
-html .md-sidebar-toc ul ul ul ul li {
+html body .md-sidebar-toc ul ul ul ul li {
   counter-reset: outline-h5;
 }
-html .md-sidebar-toc ul ul li:before {
+html body .md-sidebar-toc ul ul li:before {
   counter-increment: outline-h2;
   content: counter(outline-h2) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul li:before {
   counter-increment: outline-h3;
   content: counter(outline-h2) "." counter(outline-h3) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
   font-size: 0.7em;
 }
-html tbody tr td span ol,
-html thead tr td span ol,
-html tbody tr td span ul,
-html thead tr td span ul {
-  padding-left: 0;
-  list-style-position: inside;
-  /* 控制項目符號的位置 */
-  text-align: left;
-  /* 文字對齊方式 */
-}
-.dcl {
+html body .dcl {
   /* block 水平置中的方法 */
   margin: 0 auto;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
   margin-right: -1%;
 }
-header,
-section,
-aside,
-.in,
-footer {
+html body header,
+html body section,
+html body aside,
+html body .in,
+html body footer {
   margin: 0 1% 0.3em 0;
 }
-section {
+html body section {
   float: left;
   width: 49%;
 }
-footer {
+html body footer {
   margin-bottom: 0;
   /* 不准其他元素出現在其左右 */
   clear: both;
 }
-/*
-/////三线表/////
-table{
-    border-top: 1.5pt solid;
-    border-bottom: 1.5pt solid;
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    text-align:center;                          //文字居中
-  page-break-inside:avoid;                    //禁止断页
-  width: 100%;                                //扩展表格宽度
-  overflow: auto;
-  margin-bottom: 8pt;                         //表格间距
-  border-collapse:collapse;       
-}
-
-table .katex{
-  font-size: 9pt;                             //表内公式
-}
-table td{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              //表内文字
-}
-
-table thead{
-  border-bottom: 0.75pt solid black;        //三线表中间线
-}
-
-//标题行
-table th{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              
-}
-*/
-.btn {
+html body .btn {
   position: fixed;
   z-index: 99;
   font-size: 24px;
@@ -302,11 +335,30 @@ table th{
   opacity: 0.4;
   word-wrap: break-word;
 }
-.btn:active {
+html body .btn:active {
   opacity: 0.8;
 }
-html body img {
-  padding: 0%;
+@media screen and (max-width: 400px) {
+  html body img {
+    width: 100% !important;
+  }
+}
+html body .fbox {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html body .fbox img {
+  position: relative;
+  left: 0;
+  transform: translate(0, 0);
+  padding: 0;
+  background-color: white;
 }
 
       </style>
@@ -318,28 +370,41 @@ html body img {
 <link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="hi">hi</h1>
 
 <p><mark>k</mark></p>
-<table>
+<p>c</p>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>a</th>
-<th>-</th>
+<th>l</th>
 <th>-</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span><ol> <li>f </li> <li>f </li> <li>&#x2192;</li> </ol> <img src="paste_src/test-1.png" alt="alt text" style="width:20%;background-color: white;padding:0"></span></td>
-<td><span><ol> <li>f </li> <li>f </li> <li>&#x2192;</li> </ol> <img src="paste_src/test-1.png" alt="alt text" style="width:20%;background-color: white;padding:0"></span></td>
-<td><details><summary></summary>dd</details></td>
+<td><ol> <li>fwegfwerfergw4edfaerg</li> <li>f </li> <li>&#x2192;</li> </ol> <img src="paste_src/test-1.png" alt="alt text" style="width:20%;background-color: white;padding:0"></td>
+<td><ol> <li>f </li> <li>f fstfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaerg</li> <li>&#x2192;</li> </ol> <img src="paste_src/test-1.png" alt="alt text" style="width:20%;background-color: white;padding:0"></td>
+<td><details><summary>fwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfa oerg</summary>dd</details></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <ul>
 <li>f</li>
 <li>fd</li>
 </ul>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<p>}</p>
+<div id="f"></div>
+--&gt;
+<h2 class="mume-header" id="fwerf">fwerf</h2>
+
+<details><summary>g</summary><img src="paste_src/test-1.png" alt="alt text" style="width:50%;background-color: white;padding:0"></details>
+<details><summary>g</summary><img src="paste_src/test-1.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<details><summary>g</summary><img src="paste_src/test-1.png" alt="alt text" style="width:50%;background-color: white;padding:0"></details>
+</details>
+<iframe src="https://la.wikipedia.org/wiki/Lamina_propria" style="width:100%;height:124px" frameborder="no">
+</iframe>
+<h2 class="mume-header" id="evwerg">evwerg</h2>
+
+<p>fwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaerg</p>
 <br><br>
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
 <script> 
@@ -352,7 +417,12 @@ $(Main_LeftListLiSelector).on('click', function() {
 </script>
       </div>
       <div class="md-sidebar-toc"><ul>
-<li><a href="#hi">hi</a></li>
+<li><a href="#hi">hi</a>
+<ul>
+<li><a href="#fwerf">fwerf</a></li>
+<li><a href="#evwerg">evwerg</a></li>
+</ul>
+</li>
 </ul>
 </div>
       <a id="sidebar-toc-btn">&#x2261;</a>
