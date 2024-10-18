@@ -230,3 +230,7 @@ a-->|00|b
 https://shd101wyy.github.io/markdown-preview-enhanced/#/ 
 
 @web https://shd101wyy.github.io/markdown-preview-enhanced/#/
+
+## 危險，容易有 bug 的毒瘤: 內嵌可執行代碼
+
+@web https://shd101wyy.github.io/markdown-preview-enhanced/#/code-chunk?id=showcases-outdated
