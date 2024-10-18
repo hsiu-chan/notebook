@@ -11,15 +11,79 @@ export_on_save:
 ---
 
 
-# hi
 
 
 
-==k==
 
 
 
-c
+
+
+# basic 
+
+- **bold**
+- *Italic*
+- ***f8***
+- ```hello```
+  - 不要放在一行開頭
+- ~~Delete~~
+- {++dd++}
+- H~2~O, e^i^
+- ==Hightlight==
+- //Italic quote//
+- 註解[^tag] 
+[^tag]: 真的沒用
+- line: ```ddc```
+- HTML 符號
+  - &alpha;&beta;&gamma; 
+![alt text](paste_src/test-3.png)
+  - &rarr;&deg;&check;&cross;
+- :fa-car::smile::bus:
+  - [emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md )
+- [ ] CHECK
+- [x] CROSS
+
+
+
+ 
+
+
+---
+
+> quote 
+
+Words
+: Definition
+
+
+
+
+
+
+```python 
+import numpy as np
+```
+
+
+
+
+
+## latex 
+
+$$
+\sum^{1}_{x=2}\frac{1}{2}
+$$
+
+
+
+## Table
+
+
+
+
+
+
+
 |a|l|-|
 |-|-|-|
 |\oneline{
@@ -37,48 +101,125 @@ c
 
 
 
+|a|a|
+|-|-|
+|a|\oneline{
+- dc 
+- df 
+- d
+\collapse[]{hi}
+}| 
 
-- f 
-- fd
+
+>gfgw
 
 
+## 手搓插件 
+
+\style[background:red ; color: yellow]{ hi}
+
+\collapse[詳細]{資料}
+
+
+
+# 花招
+
+## alert 
+
+:::note {note}
+notes
+:::
+
+
+:::warning {Warning}
+!!
+:::
+
+
+:::info {info}
+i
+:::
+
+
+
+:::danger
+{qq}
+danger
+ff
+:::
+
+
+
+:::example
 $$
-\frac{1}{2}
+-\frac{1}{12}=1+2+3+4...
 $$
+:::
+
+:::question
+:::
+
+:::success
+:::
+:::failure
+:::
 
 
-<div id="f"></div>
--->
-
-
-## fwerf
-
-\collapse[g]{![alt text](paste_src/test-1.png =50)}
 
 
 
-\oneline{
-\collapse[g]{![alt text](paste_src/test-1.png =50)}
-\collapse[g]{![alt text](paste_src/test-1.png =50)}
 
 
-}
 
+## 兩欄 
+:::left
+- left 
+- left 
+- left 
+- left 
+- left 
+:::right
+1. right 
+1. right 
+1. right 
+1. right 
+1. right 
+:::
+
+
+
+
+ ```lr```
+![alt text](paste_src/test-2.png)
+
+
+## Iframe
 
 @web https://la.wikipedia.org/wiki/Lamina_propria
 
 
-
-## evwerg
-
-
-fwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaergfwegfwerfergw4edfaerg
+## Mermaid 
 
 
-\oneline{
-1. q a
-2. fe 
-  - f  
-  3. d 
-wef 
-}
+```mermaid
+graph TD 
+a[hi] 
+b[fg] 
+a-->|00|b
+
+```
+
+
+
+```tikz
+\draw[gray, thick] (-1,2) -- (2,-4);
+\draw[gray, thick] (-1,-1) -- (2,2);
+\draw[red, thick] (1,-1) -- (2,2);
+\filldraw[black] (0,0) circle (2pt) node[anchor=west]{Intersection point};
+```
+
+
+# 官方文檔 
+https://shd101wyy.github.io/markdown-preview-enhanced/#/ 
+
+@web https://shd101wyy.github.io/markdown-preview-enhanced/#/

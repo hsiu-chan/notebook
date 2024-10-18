@@ -47,24 +47,6 @@ nilj
 kpo
 :::
 
-:::danger
-{qq}
-danger
-ff
-:::
-
-:::question
-:::
-
-:::example
-$$
--\frac{1}{12}=1+2+3+4...
-$$
-:::
-:::success
-:::
-:::failure
-:::
 :::spoiler
 sa
 
