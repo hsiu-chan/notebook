@@ -120,7 +120,7 @@ $$
 
 \collapse[詳細]{資料}
 
-
+![alt text](paste_src/test-4.png =20)![alt text](paste_src/test-4.png =50)
 
 # 花招
 
