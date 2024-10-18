@@ -122,6 +122,12 @@ $$
 
 ![alt text](paste_src/test-4.png =20)![alt text](paste_src/test-4.png =50)
 
+:::fbox 
+![alt text](paste_src/test-4.png =20)
+![alt text](paste_src/test-4.png =50)
+:::
+
+
 # 花招
 
 ## alert 
