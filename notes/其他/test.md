@@ -114,12 +114,13 @@ $$
 >gfgw
 
 
-## 手搓插件 
+# 手搓插件 
 
 \style[background:red ; color: yellow]{ hi}
 
 \collapse[詳細]{資料}
 
+## 圖片大小
 ![alt text](paste_src/test-4.png =20)![alt text](paste_src/test-4.png =50)
 
 :::fbox 
