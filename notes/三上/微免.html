@@ -301,31 +301,64 @@
 }
 .markdown-preview h4 {
   font-style: italic;
-  font-weight: normal ;
+  font-weight: normal;
   font-size: 1.2em;
 }
 .markdown-preview hr {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
+@media screen and (max-width: 450px) {
+  .table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .table-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
 .markdown-preview table {
-  display: block;
-  max-width: 100%;
-  overflow: auto;
+  width: 100%;
+  table-layout: fixed;
   text-align: center;
   color: #f0ffff;
+  border-collapse: collapse;
+  display: table;
+}
+@media screen and (max-width: 450px) {
+  .markdown-preview table {
+    table-layout: auto;
+  }
+}
+.markdown-preview table thead {
+  position: sticky;
+  background-color: hsl(220, 13%, 8%);
+  top: 0;
+  z-index: 999;
 }
 .markdown-preview table th {
   text-align: center;
   font-weight: bold;
   color: #81b4f4;
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table td {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table tr {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td ol,
+.markdown-preview table th ol,
+.markdown-preview table td ul,
+.markdown-preview table th ul {
+  padding-left: 0;
+  list-style-position: inside;
+  /* 控制項目符號的位置 */
+  text-align: left;
+  /* 文字對齊方式 */
 }
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
@@ -351,72 +384,114 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   overflow: auto;
   background-color: inherit;
 }
-html {
+html body {
+  background-color: hsl(220, 13%, 18%);
   /* 侧栏 */
-  /*.md-sidebar-toc ul li:hover > ul,
-  .md-sidebar-toc ul li:hover > ul ul{
-    display: block;
-  }*/
   /* 侧栏自动编号 */
   /* 复位计数器 */
   /* 进行编号 */
+  /*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
 }
-html .md-sidebar-toc {
+html body img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+html body .md-sidebar-toc {
   margin: 0rem 0rem 0em 0em;
   padding: 0rem 0rem 0em 0rem;
   width: auto;
   max-width: 768px;
   margin-bottom: 1em;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(186, 55, 55, 0.1);
   /*背景颜色*/
   position: absolute;
   z-index: 70;
 }
-html .md-sidebar-toc a {
+html body .md-sidebar-toc a {
   color: inherit;
   font-size: 0.7rem !important;
 }
-html .md-sidebar-toc a:hover {
+html body .md-sidebar-toc a:hover {
   color: inherit;
 }
-html .md-sidebar-toc li {
+html body .md-sidebar-toc li {
   margin-left: 1rem;
   margin-bottom: 0 !important;
   text-align: left;
   /*左对齐*/
 }
-html .md-sidebar-toc ul {
+html body .md-sidebar-toc ul {
   padding-left: 0rem;
   margin-left: 0rem;
   padding-right: 0 !important;
 }
-html .md-sidebar-toc ul li {
+html body .md-sidebar-toc ul li {
   font-size: 0.8rem !important;
   /*字号*/
   font-weight: bold;
   /*一级大纲*/
 }
-html .md-sidebar-toc ul li:hover {
+html body .md-sidebar-toc ul li:hover {
   color: #87ffff;
   font-style: italic;
 }
-html .md-sidebar-toc ul ul {
+html body .md-sidebar-toc ul ul {
   padding-left: 0rem !important;
   display: none;
 }
-html .md-sidebar-toc .active {
+html body .md-sidebar-toc .active {
   color: #87ffff;
   font-style: italic;
 }
-html .md-sidebar-toc .active ul,
-html .md-sidebar-toc .active ul ul,
-html .md-sidebar-toc .active li {
+html body .md-sidebar-toc .active ul,
+html body .md-sidebar-toc .active ul ul,
+html body .md-sidebar-toc .active li {
   display: block;
 }
-html .md-sidebar-toc ul ul:hover {
+html body .md-sidebar-toc ul ul:hover {
   color: #87ffff;
 }
-html .md-sidebar-toc ul ul li {
+html body .md-sidebar-toc ul ul li {
   margin-bottom: 8pt !important;
   margin-top: 3pt !important;
   margin-left: 0rem;
@@ -427,118 +502,86 @@ html .md-sidebar-toc ul ul li {
   padding-left: 0.2rem;
   border-left: 2px rgba(0, 0, 0, 0) solid;
 }
-html .md-sidebar-toc ul ul li:hover {
+html body .md-sidebar-toc ul ul li:hover {
   font-style: normal;
   border-left: 2px solid;
 }
-html .md-sidebar-toc ul ul ul {
+html body .md-sidebar-toc ul ul ul {
   padding-left: 0rem;
   margin-left: 0rem;
 }
-html .md-sidebar-toc ul ul ul li {
+html body .md-sidebar-toc ul ul ul li {
   margin-top: 2pt !important;
   margin-bottom: 2pt !important;
   margin-left: 0rem;
   padding-left: 0.5rem;
   border-left: 0px;
 }
-html .md-sidebar-toc ul ul ul li:hover {
+html body .md-sidebar-toc ul ul ul li:hover {
   border-left: 0px solid;
 }
-html body {
+html body body {
   counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
 }
-html .md-sidebar-toc li {
+html body .md-sidebar-toc li {
   counter-reset: outline-h1;
 }
-html .md-sidebar-toc ul li {
+html body .md-sidebar-toc ul li {
   counter-reset: outline-h2;
 }
-html .md-sidebar-toc ul ul li {
+html body .md-sidebar-toc ul ul li {
   counter-reset: outline-h3;
 }
-html .md-sidebar-toc ul ul ul li {
+html body .md-sidebar-toc ul ul ul li {
   counter-reset: outline-h4;
 }
-html .md-sidebar-toc ul ul ul ul li {
+html body .md-sidebar-toc ul ul ul ul li {
   counter-reset: outline-h5;
 }
-html .md-sidebar-toc ul ul li:before {
+html body .md-sidebar-toc ul ul li:before {
   counter-increment: outline-h2;
   content: counter(outline-h2) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul li:before {
   counter-increment: outline-h3;
   content: counter(outline-h2) "." counter(outline-h3) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
   font-size: 0.7em;
 }
-html .md-sidebar-toc ul ul ul ul ul li:before {
+html body .md-sidebar-toc ul ul ul ul ul li:before {
   counter-increment: outline-h4;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
   font-size: 0.7em;
 }
-.dcl {
+html body .dcl {
   /* block 水平置中的方法 */
   margin: 0 auto;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
   margin-right: -1%;
 }
-header,
-section,
-aside,
-.in,
-footer {
+html body header,
+html body section,
+html body aside,
+html body .in,
+html body footer {
   margin: 0 1% 0.3em 0;
 }
-section {
+html body section {
   float: left;
   width: 49%;
 }
-footer {
+html body footer {
   margin-bottom: 0;
   /* 不准其他元素出現在其左右 */
   clear: both;
 }
-/*
-/////三线表/////
-table{
-    border-top: 1.5pt solid;
-    border-bottom: 1.5pt solid;
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    text-align:center;                          //文字居中
-  page-break-inside:avoid;                    //禁止断页
-  width: 100%;                                //扩展表格宽度
-  overflow: auto;
-  margin-bottom: 8pt;                         //表格间距
-  border-collapse:collapse;       
-}
-
-table .katex{
-  font-size: 9pt;                             //表内公式
-}
-table td{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              //表内文字
-}
-
-table thead{
-  border-bottom: 0.75pt solid black;        //三线表中间线
-}
-
-//标题行
-table th{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              
-}
-*/
-.btn {
+html body .btn {
   position: fixed;
   z-index: 99;
   font-size: 24px;
@@ -549,8 +592,30 @@ table th{
   opacity: 0.4;
   word-wrap: break-word;
 }
-.btn:active {
+html body .btn:active {
   opacity: 0.8;
+}
+@media screen and (max-width: 400px) {
+  html body img {
+    width: 100% !important;
+  }
+}
+html body .fbox {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html body .fbox img {
+  position: relative;
+  left: 0;
+  transform: translate(0, 0);
+  padding: 0;
+  background-color: white;
 }
 
       </style>
@@ -565,17 +630,17 @@ table th{
 <li>&#x751F;&#x79D1;&#x4E0D;&#x8003;&#xFF0C;&#x6C92;&#x6559;&#x4E0D;&#x8003;</li>
 <li>&#x3B2;-lactamases destroy<br>
 antibiotics such as penicillin<br>
-<img src="paste_src/image.png" alt></li>
+<img src="paste_src/image.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 <li>Lipopolysaccharide (LPS)
 <ul>
 <li>Lipid A &#x81F4;&#x75C5;</li>
 <li>Core &#x542B;2-keto-3-<br>
 deoxy-octanoate(KDO)<br>
-<img src="paste_src/image-1.png" alt></li>
+<img src="paste_src/image-1.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>protoplasts<br>
-<img src="paste_src/image-2.png" alt></li>
+<img src="paste_src/image-2.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 <li>mycolic acids(acid-fast):&#x8B93;&#x7D30;&#x83CC;&#x4E0D;&#x88AB; Gram-stained</li>
 </ul>
 <h2 class="mume-header" id="%E9%87%8D%E7%B5%84">&#x91CD;&#x7D44;</h2>
@@ -585,7 +650,7 @@ deoxy-octanoate(KDO)<br>
 <ul>
 <li>&#x5E7E;&#x4E4E;&#x76F8;&#x540C;&#x5E8F;&#x5217;</li>
 <li>non- &#x9700;&#x8981;&#x9175;&#x7D20;<br>
-<img src="paste_src/image-3.png" alt></li>
+<img src="paste_src/image-3.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 <h3 class="mume-header" id="site-specific-recombination">Site-specific recombination</h3>
 
@@ -593,7 +658,7 @@ deoxy-octanoate(KDO)<br>
 <li>ex. &#x566C;&#x83CC;&#x9AD4;</li>
 <li>&#x9700;&#x8981;&#x7279;&#x5B9A;&#x5E8F;&#x5217;&#x3001;&#x9175;&#x7D20;</li>
 </ul>
-<p><img src="paste_src/image-4.png" alt></p>
+<img src="paste_src/image-4.png" alt="Alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="mutation">Mutation</h2>
 
 <ul>
@@ -614,7 +679,7 @@ deoxy-octanoate(KDO)<br>
 
 <ul>
 <li>Sex pilus &#x91E3;&#x9B5A;&#x6536;&#x7DDA;<br>
-<img src="paste_src/image-5.png" alt></li>
+<img src="paste_src/image-5.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 <h3 class="mume-header" id="conjugation-1">Conjugation</h3>
 
@@ -647,7 +712,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </section>
 <section>
-<p><img src="paste_src/image-53.png" alt></p>
+<img src="paste_src/image-53.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
 <h1 class="mume-header" id="%E6%B6%88%E6%AF%92">&#x6D88;&#x6BD2;</h1>
 
@@ -659,7 +724,7 @@ deoxy-octanoate(KDO)<br>
 <dt>Disinfection</dt>
 <dd>&#x5269;&#x4E0B; Spore</dd>
 </dl>
-<p><img src="paste_src/image-51.png" alt></p>
+<img src="paste_src/image-51.png" alt="Alt text" style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">spore</p>
 <p>&#x53EA;&#x6709;</p>
@@ -727,8 +792,8 @@ deoxy-octanoate(KDO)<br>
 <h2 class="mume-header" id="%E9%BB%8F%E7%B4%B0%E8%83%9E">&#x9ECF;&#x7D30;&#x80DE;</h2>
 
 <p>gram&#x2019;s negative: Pili, Fimbriae<br>
-<img src="paste_src/image-58.png" alt><br>
-<img src="paste_src/image-59.png" alt></p>
+<img src="paste_src/image-58.png" alt="Alt text" style=";background-color: white;padding:0"><br>
+<img src="paste_src/image-59.png" alt="Alt text" style=";background-color: white;padding:0"></p>
 <h2 class="mume-header" id="endotoxin">Endotoxin</h2>
 
 <p>A.K.A Lipopolysaccharide (LPS)</p>
@@ -742,20 +807,20 @@ deoxy-octanoate(KDO)<br>
 <li>B for bounding, A for action</li>
 </ul>
 <p>&#x90FD;&#x8981;&#x80CC;&#x3002;&#x3002;&#x3002;<br>
-<img src="paste_src/image-60.png" alt></p>
+<img src="paste_src/image-60.png" alt="Alt text" style=";background-color: white;padding:0"></p>
 <h2 class="mume-header" id="%E9%80%83%E9%81%BF%E5%85%8D%E7%96%AB">&#x9003;&#x907F;&#x514D;&#x75AB;</h2>
 
 <ul>
 <li>Bacterial Capsules
 <ul>
 <li>&#x83A2;&#x819C;&#xFF0C;&#x8FA8;&#x8B58;&#x4E0D;&#x80FD;<br>
-<img src="paste_src/image-62.png" alt></li>
+<img src="paste_src/image-62.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>Intracellular replication
 <ul>
 <li>&#x8EB2;&#x9032;&#x7D30;&#x80DE;<br>
-<img src="paste_src/image-61.png" alt></li>
+<img src="paste_src/image-61.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>&#x3B2;-lactamase &#x76F4;&#x63A5;&#x5206;&#x89E3;&#x6297;&#x751F;&#x7D20;</li>
@@ -787,15 +852,10 @@ deoxy-octanoate(KDO)<br>
 </blockquote>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><img src="paste_src/image-63.png" alt></p>
-<ul>
-<li>EF &#x2192; cAMP
-<ul>
-<li>cAMP &#x5728;&#x8178;&#x9053;&#x5C0E;&#x81F4;&#x8179;&#x7009;<br>
-<img src="paste_src/image-64.png" alt></li>
-</ul>
-</li>
-</ul>
+<img src="paste_src/image-63.png" alt="Alt text" style=";background-color: white;padding:0">
+- EF &#x2192; cAMP
+  - cAMP &#x5728;&#x8178;&#x9053;&#x5C0E;&#x81F4;&#x8179;&#x7009;
+<img src="paste_src/image-64.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
 <h2 class="mume-header" id="bacillus-cereus-%E4%BB%99%E4%BA%BA%E6%8E%8C%E6%A1%BF%E8%8F%8C-%E8%A0%9F%E6%A1%BF%E8%8F%8C-g">Bacillus cereus (&#x4ED9;&#x4EBA;&#x638C;&#x687F;&#x83CC;&#x3001;&#x881F;&#x687F;&#x83CC;, G+)</h2>
 
@@ -814,7 +874,7 @@ deoxy-octanoate(KDO)<br>
 <li>&#x51B0;&#x7BB1;&#x5B58;&#x6D3B;&#x53EF;&#x80FD;</li>
 <li>&#x8D85;&#x6703;&#x8EB2;&#xFF0C;&#x53EF;&#x4EE5;&#x7A7F;&#x904E;&#x80CE;&#x76E4;&#xFF0C;&#x751F;&#x98DF;<i class="fa-solid fa-triangle-exclamation"></i></li>
 </ul>
-<p><img src="paste_src/image-95.png" alt></p>
+<img src="paste_src/image-95.png" alt="Alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="cotynebacterium-diphtheria-%E7%99%BD%E5%96%89%E6%A3%92%E7%8B%80%E6%A1%BF%E8%8F%8C-g">Cotynebacterium diphtheria (&#x767D;&#x5589;&#x68D2;&#x72C0;&#x687F;&#x83CC;, G+)</h2>
 
 <ul>
@@ -838,8 +898,8 @@ deoxy-octanoate(KDO)<br>
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/image-65.png" alt="Alt text" style="width:30%;background-color: white;">
-<img src="paste_src/image-66.png" alt="Alt text" style="width:69%;background-color: white;">
+<img src="paste_src/image-65.png" alt="Alt text" style="width:30%;background-color: white;padding:0">
+<img src="paste_src/image-66.png" alt="Alt text" style="width:69%;background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="escherichia-coli-%E5%A4%A7%E8%85%B8%E6%A1%BF%E8%8F%8C">Escherichia coli (&#x5927;&#x8178;&#x687F;&#x83CC;)</h3>
 
@@ -916,11 +976,11 @@ deoxy-octanoate(KDO)<br>
 <dt>BFP</dt>
 <dd>plasmid-encoded bundle-forming pili</dd>
 </dl>
-<p><img src="paste_src/image-68.png" alt></p>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-108.png" alt></p>
+<img src="paste_src/image-68.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/&#x5FAE;&#x514D;-108.png" alt="alt text" style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">Shiga toxin</p>
-<p><img src="paste_src/image-67.png" alt></p>
+<img src="paste_src/image-67.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="salmonella-%E6%B2%99%E9%96%80%E6%B0%8F%E8%8F%8C">Salmonella (&#x6C99;&#x9580;&#x6C0F;&#x83CC;)</h3>
 
@@ -1003,7 +1063,7 @@ deoxy-octanoate(KDO)<br>
 <ul>
 <li>&#x4E82;&#x8DD1;&#xFF0C;Swarming</li>
 <li>Urease (+)&#xFF0C;&#x7522;&#x751F;&#x80FA;&#xFF0C;&#x5728;&#x8180;&#x80F1;<br>
-<img src="paste_src/image-69.png" alt></li>
+<img src="paste_src/image-69.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 <h3 class="mume-header" id="pseudomonas-aeruginosa-%E7%B6%A0%E8%86%BF%E6%A1%BF%E8%8F%8C">Pseudomonas aeruginosa (&#x7DA0;&#x81BF;&#x687F;&#x83CC;)</h3>
 
@@ -1060,7 +1120,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<img src="paste_src/image-70.png" alt="Alt text" style="width:50%;background-color: white;">
+<img src="paste_src/image-70.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 <h3 class="mume-header" id="helicobacter">Helicobacter</h3>
 
 <ul>
@@ -1069,13 +1129,13 @@ deoxy-octanoate(KDO)<br>
 </ul>
 <h4 class="mume-header" id="h-pylori-%E5%B9%BD%E9%96%80%E8%9E%BA%E6%97%8B%E6%A1%BF%E8%8F%8C">H. pylori (&#x5E7D;&#x9580;&#x87BA;&#x65CB;&#x687F;&#x83CC;)</h4>
 
-<img src="paste_src/image-71.png" alt="Alt text" style="width:50%;background-color: white;">
+<img src="paste_src/image-71.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 <h2 class="mume-header" id="neisseria">Neisseria</h2>
 
 <ul>
 <li>Gram&#x2019;s negative&#xFF0C;&#x7403;&#x83CC;</li>
 </ul>
-<img src="paste_src/image-74.png" alt="Alt text" style="width:50%;background-color: white;">
+<img src="paste_src/image-74.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 <h3 class="mume-header" id="n-gonorrhoeae-%E6%B7%8B%E7%97%85%E9%9B%99%E7%90%83%E8%8F%8Cgonococcus">N. gonorrhoeae (&#x6DCB;&#x75C5;&#x96D9;&#x7403;&#x83CC;,gonococcus)</h3>
 
 <ul>
@@ -1143,7 +1203,7 @@ deoxy-octanoate(KDO)<br>
 </li>
 <li>
 <p>&#x622A;&#x80A2;<br>
-<img src="paste_src/image-75.png" alt="Alt text" style="width:40%;background-color: white;"></p>
+<img src="paste_src/image-75.png" alt="Alt text" style="width:40%;background-color: white;padding:0"></p>
 </li>
 </ul>
 <h2 class="mume-header" id="staphylococcus-%E8%91%A1%E8%90%84%E7%90%83%E8%8F%8Cg">Staphylococcus (&#x8461;&#x8404;&#x7403;&#x83CC;&#xFF0C;G+)</h2>
@@ -1155,7 +1215,7 @@ deoxy-octanoate(KDO)<br>
 <li>&#x9AD8;&#x9E7D;&#x751F;&#x5B58;</li>
 <li>Hyaluronidase</li>
 <li>DNase<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-43.png" alt></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-43.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 <h3 class="mume-header" id="%E6%AF%92%E7%B4%A0">&#x6BD2;&#x7D20;</h3>
 
@@ -1163,7 +1223,7 @@ deoxy-octanoate(KDO)<br>
 <li>Portein A:&#x6291;&#x5236; IgG</li>
 <li>Cytotoxin: &#x7834;&#x58DE;&#x819C;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-44.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-44.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="s-aureus-%E9%87%91%E9%BB%83%E8%89%B2%E8%91%A1%E8%90%84%E7%90%83%E8%8F%8C">S. aureus (&#x91D1;&#x9EC3;&#x8272;&#x8461;&#x8404;&#x7403;&#x83CC;)</h3>
 
 <ul>
@@ -1212,7 +1272,7 @@ deoxy-octanoate(KDO)<br>
 <li>&#x3B2;-lactam &#x6291;&#x5236; PBP2A &#x5408;&#x6210;&#x7D30;&#x80DE;&#x58C1;</li>
 <li>MRSA &#x7522;&#x751F;&#x53D7;&#x9AD4;&#x7D50;&#x5408; &#x3B2;-lactam</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-45.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-45.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="coagulase-negative-staphylococcus-cons">Coagulase-negative staphylococcus (CoNS)</h3>
 
@@ -1246,7 +1306,7 @@ deoxy-octanoate(KDO)<br>
 <ul>
 <li>&#x7528; emm gene &#x5206;&#x985E;</li>
 <li>&#x6291;&#x5236; C3b<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-46.png" alt></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-46.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>M-like proteins
@@ -1347,7 +1407,7 @@ deoxy-octanoate(KDO)<br>
 <li>&#x591A;&#x91CD;&#x593E;&#x819C;
 <ul>
 <li>&#x505A;&#x75AB;&#x82D7;(PPV23, PCV13)<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-47.png" alt></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-47.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>IgA protease</li>
@@ -1417,7 +1477,7 @@ deoxy-octanoate(KDO)<br>
 <li>Lipoarabinomannan(LAM)
 <ul>
 <li>&#x985E;&#x4F3C; O antigen<br>
-<img src="paste_src/2023-12-06-13-39-19.png" alt style="width:100%;background-color: white;"></li>
+<img src="paste_src/2023-12-06-13-39-19.png" alt style="width:100%;background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -1473,7 +1533,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 <li>Ethambutol (EMB)<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-48.png" alt></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-48.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>
@@ -1589,7 +1649,7 @@ deoxy-octanoate(KDO)<br>
 <li>&#x53AD;&#x6C27;</li>
 <li>Endogenous infection (&#x81EA;&#x7522;&#x81EA;&#x92B7;)</li>
 <li>&#x201D;&#x81FC;&#x9F52;&#x201C;&#x83CC;&#x843D;<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-49.png" alt="Alt text" style="width:30%;background-color: white;"></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-49.png" alt="Alt text" style="width:30%;background-color: white;padding:0"></li>
 </ul>
 <h2 class="mume-header" id="cutibacterium%E7%97%A4%E7%98%A1%E4%B8%99%E9%85%B8%E6%A1%BF%E8%8F%8Cproprionibacteriumg">Cutibacterium(&#x75E4;&#x7621;&#x4E19;&#x9178;&#x687F;&#x83CC;&#xFF0C;Proprionibacterium&#xFF0C;G+)</h2>
 
@@ -1693,7 +1753,7 @@ deoxy-octanoate(KDO)<br>
 <ul>
 <li>A: S<sub>1</sub></li>
 <li>B: S<sub>2</sub>-S<sub>5</sub><br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-50.png" alt="Alt text" style="width:50%;background-color: white;"></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-50.png" alt="Alt text" style="width:50%;background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -1812,7 +1872,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-51.png" alt="Alt text" style="width:50%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-51.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 <h3 class="mume-header" id="c-tetani-%E7%A0%B4%E5%82%B7%E9%A2%A8">C. tetani (&#x7834;&#x50B7;&#x98A8;)</h3>
 
 <ul>
@@ -1834,8 +1894,8 @@ deoxy-octanoate(KDO)<br>
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-52.png" alt="Alt text" style="width:35%;background-color: white;">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-53.png" alt="Alt text" style="width:60%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-52.png" alt="Alt text" style="width:35%;background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-53.png" alt="Alt text" style="width:60%;background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="c-botulinum-%E8%82%89%E6%AF%92%E6%A2%AD%E5%AD%A2%E6%A1%BF%E8%8F%8C">C. botulinum (&#x8089;&#x6BD2;&#x68AD;&#x5B62;&#x687F;&#x83CC;)</h3>
 
@@ -1862,8 +1922,8 @@ deoxy-octanoate(KDO)<br>
 </li>
 <li>&#x91A3;&#x8102;&#x8207;&#x8102;&#x86CB;&#x767D;&#x5916;&#x819C;&#xFF0C;&#x7121; LPS</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-55.png" alt></p>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-56.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-55.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-56.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="treponema-pallidum-%E6%A2%85%E6%AF%92%E8%9E%BA%E6%97%8B%E9%AB%94">Treponema pallidum (&#x6885;&#x6BD2;&#x87BA;&#x65CB;&#x9AD4;)</h3>
 
 <ul>
@@ -1891,7 +1951,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-57.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-57.png" alt="Alt text" style=";background-color: white;padding:0">
 <ul>
 <li>Relapsing fever
 <ul>
@@ -1927,7 +1987,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-58.png" alt="Alt text" style="width:50%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-58.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">L form Bacteria</p>
 <ul>
@@ -1946,7 +2006,7 @@ deoxy-octanoate(KDO)<br>
 <ul>
 <li>&#x975E;&#x5178;&#x6C92;&#x6FC3;&#x75F0;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-59.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-59.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="ureaplasma-urealyticum-%E6%BA%B6%E5%B0%BF%E5%B0%BF%E6%BC%BF%E8%8F%8C">Ureaplasma urealyticum (&#x6EB6;&#x5C3F;&#x5C3F;&#x6F3F;&#x83CC;)</h3>
 
@@ -2015,11 +2075,9 @@ deoxy-octanoate(KDO)<br>
 <ul>
 <li>&#x7D55;&#x5C0D;&#x5BC4;&#x751F;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-60.png" alt></p>
-<ul>
-<li>&#x6591;&#x75B9;&#x50B7;&#x5BD2;</li>
-</ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-61.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-60.png" alt="Alt text" style=";background-color: white;padding:0">
+- &#x6591;&#x75B9;&#x50B7;&#x5BD2;
+<img src="paste_src/%E5%BE%AE%E5%85%8D-61.png" alt="Alt text" style=";background-color: white;padding:0">
 <ul>
 <li><a href="#%E6%8A%97%E7%94%9F%E7%B4%A0">&#x6CBB;&#x7642;</a>
 <ul>
@@ -2062,9 +2120,9 @@ deoxy-octanoate(KDO)<br>
 </ul>
 <h2 class="mume-header" id="%E6%95%B4%E7%90%86">&#x6574;&#x7406;</h2>
 
-<p><img src="paste_src/image-73.png" alt><br>
-<img src="paste_src/image-76.png" alt></p>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-41.png" alt></p>
+<img src="paste_src/image-73.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/image-76.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-41.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="%E5%94%AF%E4%B8%80%E5%AE%BF%E4%B8%BB">&#x552F;&#x4E00;&#x5BBF;&#x4E3B;</h3>
 
 <ul>
@@ -2121,10 +2179,10 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-54.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-54.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="ab-toxin">AB toxin</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x6BD2;&#x7D20;</th>
@@ -2179,10 +2237,10 @@ deoxy-octanoate(KDO)<br>
 <td><a href="#c-tetani-%E7%A0%B4%E5%82%B7%E9%A2%A8">Clostridium tetani</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="superantigen">superantigen</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x6BD2;&#x7D20;</th>
@@ -2207,10 +2265,10 @@ deoxy-octanoate(KDO)<br>
 
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="enterotoxins">Enterotoxins</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x6BD2;&#x7D20;</th>
@@ -2240,10 +2298,10 @@ deoxy-octanoate(KDO)<br>
 <td><a href="#c-difficile">Clostridium difficile</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="protease">Protease</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x6BD2;&#x7D20;</th>
@@ -2278,10 +2336,10 @@ deoxy-octanoate(KDO)<br>
 <td><a href="#h-influenzae">Haemohilus influenzae</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="gpc">GPC</h3>
 
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-42.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-42.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="intracellular-pathogen">Intracellular pathogen</h3>
 
 <ul>
@@ -2292,7 +2350,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 <h3 class="mume-header" id="%E8%9F%B2%E8%9F%B2">&#x87F2;&#x87F2;</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x75C5;&#x539F;</th>
@@ -2347,7 +2405,7 @@ deoxy-octanoate(KDO)<br>
 <td>&#x7ACB;&#x514B;&#x6B21;&#x9AD4;&#x75D8;(rickettsialpox)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="%E7%96%BE%E7%97%85">&#x75BE;&#x75C5;</h3>
 
 <h4 class="mume-header" id="%E8%82%BA">&#x80BA;?</h4>
@@ -2397,7 +2455,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 <h4 class="mume-header" id="meningitis">meningitis</h4>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>Age Group</th>
@@ -2422,7 +2480,7 @@ deoxy-octanoate(KDO)<br>
 <td><a href="#s-pneumoniae">Streptococcus pneumoniae</a>,<br> <a href="#n-meningitidis-%E8%85%A6%E8%86%9C%E7%82%8E%E9%9B%99%E7%90%83%E8%8F%8C">Neisseria meningitidis</a>,<br> Listeria monocytogenes</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h4 class="mume-header" id="%E4%B8%AD%E8%80%B3%E7%82%8E%E8%88%87%E9%BC%BB%E7%AB%87%E7%82%8E">&#x4E2D;&#x8033;&#x708E;&#x8207;&#x9F3B;&#x7AC7;&#x708E;</h4>
 
 <ul>
@@ -2445,7 +2503,7 @@ deoxy-octanoate(KDO)<br>
 <li>Bacteroides fragilis: &#x83CC;&#x8840;&#x75C7;&#x6700;&#x5E38;&#x898B;&#x7684;&#x53AD;&#x6C27;&#x83CC;&#x75C5;&#x539F;</li>
 <li><mark>Candidasis albicans</mark></li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-111.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-111.png" alt="alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="%E8%85%8E">&#x814E;</h4>
 
 <ul>
@@ -2463,7 +2521,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 <h4 class="mume-header" id="%E9%A3%9F%E7%89%A9%E4%B8%AD%E6%AF%92">&#x98DF;&#x7269;&#x4E2D;&#x6BD2;</h4>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x83CC;&#x7A2E;</th>
@@ -2512,7 +2570,7 @@ deoxy-octanoate(KDO)<br>
 <td>&#x7261;&#x8823;</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="%E7%96%AB%E8%8B%97">&#x75AB;&#x82D7;</h3>
 
 <ul>
@@ -2556,7 +2614,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 <h2 class="mume-header" id="%E6%8A%97%E7%94%9F%E7%B4%A0">&#x6297;&#x751F;&#x7D20;</h2>
 
-<p><img src="paste_src/image-52.png" alt></p>
+<img src="paste_src/image-52.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="peptidoglycan-cell-membrane">peptidoglycan &amp; Cell membrane</h3>
 
 <h4 class="mume-header" id="%CE%B2-lactam"><em>&#x3B2;-lactam</em></h4>
@@ -2570,8 +2628,8 @@ deoxy-octanoate(KDO)<br>
 <div class="admonition info">
 <p class="admonition-title">&#x6A5F;&#x5236;</p>
 <p>Peptidoglycan &#x5F62;&#x6210;&#x6642; Lys Ala &#x7D50;&#x5408;&#xFF0C;Penicillin &#x985E;&#x4F3C;Ala&#xFF0C;&#x5361;&#x4F4F; Penicillin binding protein (PBPs)<br>
-<img src="paste_src/image-54.png" alt><br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-29.png" alt="Alt text" style="width:50%;background-color: white;"></p>
+<img src="paste_src/image-54.png" alt="Alt text" style=";background-color: white;padding:0"><br>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-29.png" alt="Alt text" style="width:50%;background-color: white;padding:0"></p>
 </div>
 <h4 class="mume-header" id="glycopeptides">Glycopeptides</h4>
 
@@ -2648,7 +2706,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/image-55.png" alt></p>
+<img src="paste_src/image-55.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="%E6%8A%91%E5%88%B6%E4%BB%A3%E8%AC%9D">&#x6291;&#x5236;&#x4EE3;&#x8B1D;</h3>
 
 <h4 class="mume-header" id="folic-acid-%E5%90%88%E6%88%90">Folic acid &#x5408;&#x6210;</h4>
@@ -2657,15 +2715,15 @@ deoxy-octanoate(KDO)<br>
 <li>Sulfanilamide
 <ul>
 <li>&#x985E;&#x4F3C;PABA<br>
-<img src="paste_src/image-57.png" alt="Alt text" style="width:50%;background-color: white;"></li>
+<img src="paste_src/image-57.png" alt="Alt text" style="width:50%;background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>Trimethoprim</li>
 </ul>
-<p><img src="paste_src/image-56.png" alt></p>
+<img src="paste_src/image-56.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="%E6%95%B4%E7%90%86%E8%A1%A8">&#x6574;&#x7406;&#x8868;</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x985E;&#x5225;</th>
@@ -2844,7 +2902,7 @@ deoxy-octanoate(KDO)<br>
 <td>&#x6291;&#x5236;DNA gyrase (&#x4E00;&#x7A2E;&#x89E3;&#x65CB;&#x9176;&#xFF09;</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h1 class="mume-header" id="%E7%9C%9F%E8%8F%8C">&#x771F;&#x83CC;</h1>
 
 <ul>
@@ -2869,24 +2927,24 @@ deoxy-octanoate(KDO)<br>
 <li>&#x50CF;&#x7D30;&#x83CC;</li>
 <li>Pseudohyphae</li>
 </ul>
-<p><img src="paste_src/image-99.png" alt></p>
-<h3 class="mume-header" id="hyphae">Hyphae</h3>
+<img src="paste_src/image-99.png" alt="Alt text" style=";background-color: white;padding:0" class="mume-header" id="hyphae">
+###  Hyphae 
 
 <ul>
 <li>Sepate hypha</li>
 <li>Coenocytic hypha</li>
 </ul>
-<p><img src="paste_src/image-100.png" alt></p>
+<img src="paste_src/image-100.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="dimorphic">Dimorphic</h3>
 
-<p><img src="paste_src/image-102.png" alt></p>
+<img src="paste_src/image-102.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="%E8%8F%8C%E7%B5%B2">&#x83CC;&#x7D72;</h3>
 
 <ul>
 <li>Vegetative hyphae (&#x71DF;&#x990A;&#x83CC;&#x7D72;)</li>
 <li>Aerial hyphae (&#x7A7A;&#x4E2D;&#x83CC;&#x7D72;)</li>
 </ul>
-<p><img src="paste_src/image-101.png" alt></p>
+<img src="paste_src/image-101.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="spore">Spore</h3>
 
 <ul>
@@ -2901,14 +2959,14 @@ deoxy-octanoate(KDO)<br>
 <p>Asexual spores</p>
 <ul>
 <li>Sporangiospores (&#x5B62;&#x5B50;&#x56CA;&#x5B62;&#x5B50;)<br>
-<img src="paste_src/image-107.png" alt></li>
+<img src="paste_src/image-107.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 <li>Blastospore (&#x82BD;&#x751F;&#x5B62;&#x5B50;)</li>
 <li>Chlamydospore (&#x539A;&#x819C;&#x5B62;&#x5B50;)<br>
-<img src="paste_src/image-105.png" alt></li>
+<img src="paste_src/image-105.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 <li>Conidia (&#x5206;&#x751F;&#x5B62;&#x5B50;)</li>
 <li>Arthrospore (&#x5206;&#x7BC0;&#x5B62;&#x5B50;)</li>
 <li>Phialospore (&#x74F6;&#x5B62;&#x5B50;)<br>
-<img src="paste_src/image-104.png" alt></li>
+<img src="paste_src/image-104.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -2922,14 +2980,14 @@ deoxy-octanoate(KDO)<br>
 <li>Hyphae &#x9023;&#x63A5;&#x4E16;&#x4EE3;</li>
 <li>Ascus(n+n)&#x2192; Karyogamy(2n)&#x2192; Ascospore(n)</li>
 </ul>
-<p><img src="paste_src/image-103.png" alt></p>
+<img src="paste_src/image-103.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="basidiomycota-%E6%93%94%E5%AD%90%E8%8F%8C%E9%96%80">Basidiomycota (&#x64D4;&#x5B50;&#x83CC;&#x9580;)</h3>
 
 <ul>
 <li>Basidium(n+n &#x2192; 2n) &#x2192; basidiospore(n,&#x6709;&#x6027;)</li>
 <li>&#x6C92;&#x7121;&#x6027;&#x80DE;&#x5B50;</li>
 </ul>
-<p><img src="paste_src/image-108.png" alt></p>
+<img src="paste_src/image-108.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="mucormycetes-%E6%8E%A5%E5%90%88%E8%8F%8C-zygomycetes">Mucormycetes (&#x63A5;&#x5408;&#x83CC;, Zygomycetes)</h3>
 
 <ul>
@@ -2940,7 +2998,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/image-109.png" alt></p>
+<img src="paste_src/image-109.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="microspora-%E5%BE%AE%E5%AD%A2%E5%AD%90%E9%96%80">Microspora (&#x5FAE;&#x5B62;&#x5B50;&#x9580;)</h3>
 
 <ul>
@@ -2952,10 +3010,10 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/image-110.png" alt></p>
+<img src="paste_src/image-110.png" alt="Alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E8%A3%BD%E8%97%A5">&#x88FD;&#x85E5;</h2>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th colspan="2">&#x6297;&#x771F;&#x83CC;&#x85E5;&#x7269;</th>
@@ -3020,7 +3078,7 @@ deoxy-octanoate(KDO)<br>
 
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="cell-membrane">Cell membrane</h3>
 
 <h4 class="mume-header" id="allylamines">Allylamines</h4>
@@ -3028,13 +3086,13 @@ deoxy-octanoate(KDO)<br>
 <ul>
 <li>&#x6291;&#x5236; ergosterol &#x5408;&#x6210;</li>
 </ul>
-<p><img src="paste_src/image-111.png" alt></p>
+<img src="paste_src/image-111.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="azoles">Azoles</h4>
 
 <ul>
 <li>&#x6291;&#x5236; ergosterol &#x5408;&#x6210;</li>
 </ul>
-<p><img src="paste_src/image-112.png" alt></p>
+<img src="paste_src/image-112.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="polyenes">Polyenes</h4>
 
 <ul>
@@ -3064,10 +3122,10 @@ deoxy-octanoate(KDO)<br>
 <li>cystine &#x985E;&#x4F3C;&#x7269;</li>
 <li>Amphotericin B &#x5354;&#x540C;</li>
 </ul>
-<p><img src="paste_src/image-113.png" alt></p>
+<img src="paste_src/image-113.png" alt="Alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E6%84%9F%E6%9F%93">&#x611F;&#x67D3;</h2>
 
-<p><img src="paste_src/image-114.png" alt></p>
+<img src="paste_src/image-114.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="athletes-foot-%E9%A6%99%E6%B8%AF%E8%85%B3">Athlete&#x2019;s foot (&#x9999;&#x6E2F;&#x8173;)</h3>
 
 <ul>
@@ -3077,14 +3135,14 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/image-115.png" alt></p>
+<img src="paste_src/image-115.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="histoplasmosis">Histoplasmosis</h3>
 
 <ul>
 <li>Grow inside the phagocytes<br>
-<img src="paste_src/image-116.png" alt></li>
+<img src="paste_src/image-116.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
-<p><img src="paste_src/image-117.png" alt></p>
+<img src="paste_src/image-117.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="%E5%BF%B5%E7%8F%A0%E8%8F%8Ccandidasis">&#x5FF5;&#x73E0;&#x83CC;(Candidasis)</h3>
 
 <ul>
@@ -3136,7 +3194,7 @@ deoxy-octanoate(KDO)<br>
 </li>
 <li>Vulvovaginal candidiasis (&#x5916;&#x9670;&#x9670;&#x9053;&#x5FF5;&#x73E0;&#x83CC;&#x75C5;)</li>
 </ul>
-<p><img src="paste_src/image-118.png" alt></p>
+<img src="paste_src/image-118.png" alt="Alt text" style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">&#x5634;</p>
 <ul>
@@ -3147,7 +3205,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/image-119.png" alt></p>
+<img src="paste_src/image-119.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="cryptococcosis">Cryptococcosis</h3>
 
@@ -3166,7 +3224,7 @@ deoxy-octanoate(KDO)<br>
 <ul>
 <li>&#x7121; ergosterol</li>
 </ul>
-<p><img src="paste_src/image-120.png" alt></p>
+<img src="paste_src/image-120.png" alt="Alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E6%95%B4%E7%90%86-1">&#x6574;&#x7406;</h2>
 
 <h3 class="mume-header" id="%E8%87%B4%E7%97%85%E6%A9%9F%E8%BD%89">&#x81F4;&#x75C5;&#x6A5F;&#x8F49;</h3>
@@ -3207,7 +3265,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 <h2 class="mume-header" id="%E7%B5%90%E6%A7%8B">&#x7D50;&#x69CB;</h2>
 
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-62.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-62.png" alt="Alt text" style=";background-color: white;padding:0">
 <ul>
 <li>Covering
 <ul>
@@ -3242,8 +3300,8 @@ deoxy-octanoate(KDO)<br>
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-63.png" alt="Alt text" style="width:50%;background-color: white;">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-64.png" alt="Alt text" style="width:50%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-63.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-64.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 </div>
 <dl>
 <dt>Capsomeres</dt>
@@ -3282,14 +3340,14 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 <li>&#x4FC3;&#x9032; keratin (&#x89D2;&#x86CB;&#x767D;) &#x7522;&#x751F; &#x2192; epithelial spikes (papillomatosis)<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-66.png" alt="Alt text" style="width:80%;background-color: white;"></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-66.png" alt="Alt text" style="width:80%;background-color: white;padding:0"></li>
 <li>&#x6AA2;&#x6E2C;
 <ul>
 <li>Pap smear &#x5B50;&#x5BAE;&#x62B9;&#x7247;</li>
 <li>&#x5DF4;&#x6F58;&#x5C3C;&#x514B;&#x6C0F;&#x67D3;&#x8272;&#x6CD5;( Papanicolaou stain )
 <ul>
 <li>koilocytotic (&#x4E00;&#x5708;&#x900F;&#x660E;)<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-67.png" alt="Alt text" style="width:80%;background-color: white;"></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-67.png" alt="Alt text" style="width:80%;background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -3331,7 +3389,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-68.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-68.png" alt="Alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="parvovirus">Parvovirus</h2>
 
 <ul>
@@ -3513,7 +3571,7 @@ deoxy-octanoate(KDO)<br>
 <li>&#x5177;&#x6709;&#x66F4;&#x55DC;&#x9E7C;(&#x6DF1;&#x67D3;)&#x4E14;&#x7A7A;&#x6CE1;&#x72C0;&#x7684;&#x7D30;&#x80DE;&#x8CEA;</li>
 <li>&#x7D30;&#x80DE;&#x6838;&#x5448;&#x73FE;&#x814E;&#x5F62;&#x6216;&#x8449;&#x5F62;</li>
 <li>&#x908A;&#x7DE3;&#x56E0;&#x5468;&#x570D;&#x7D05;&#x8840;&#x7403;&#x4F5C;&#x7528;&#x800C;&#x6210;&#x92F8;&#x9F52;&#x72C0;<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-70.png" alt="Alt text" style="width:50%;background-color: white;"></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-70.png" alt="Alt text" style="width:50%;background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -3535,7 +3593,7 @@ deoxy-octanoate(KDO)<br>
 <li>Owl&#x2019;s-Eye inclusion body
 <ul>
 <li>&#x901A;&#x5E38;&#x662F;&#x75C5;&#x6BD2;&#x8907;&#x88FD;&#x3001;&#x7E41;&#x6B96;&#x7684;&#x5730;&#x65B9;<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-71.png" alt="Alt text" style="width:60%;background-color: white;"></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-71.png" alt="Alt text" style="width:60%;background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -3577,8 +3635,8 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-69.png" alt></p>
-<table>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-69.png" alt="Alt text" style=";background-color: white;padding:0">
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x4E9E;&#x79D1;</th>
@@ -3628,7 +3686,7 @@ deoxy-octanoate(KDO)<br>
 <td>Kaposi&#x2019;s sarcoma (primarily in AIDS patient)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 class="mume-header" id="poxviruses-%E7%97%98%E7%97%85%E6%AF%92">Poxviruses (&#x75D8;&#x75C5;&#x6BD2;)</h2>
 
 <ul>
@@ -3733,7 +3791,7 @@ deoxy-octanoate(KDO)<br>
 <p>HFMD: EV71, CAV A16</p>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-72.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-72.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="poliovirus-%E5%B0%8F%E5%85%92%E9%BA%BB%E7%97%B9">Poliovirus (&#x5C0F;&#x5152;&#x9EBB;&#x75F9;)</h4>
 
 <ul>
@@ -3855,7 +3913,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-73.png" alt="Alt text" style="width:80%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-73.png" alt="Alt text" style="width:80%;background-color: white;padding:0">
 <ul>
 <li>
 <p>&#x751F;&#x6D3B;&#x53F2;</p>
@@ -3883,7 +3941,7 @@ deoxy-octanoate(KDO)<br>
 -12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
  151.7 139 205zm0 0v40h399900v-40z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.011em;"><span></span></span></span></span></span></span></span></span> &#x7D50;&#x69CB;&#x86CB;&#x767D;</li>
 <li>tempalte RNA (-) &#x2192; genomic RNA(+)<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-74.png" alt></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-74.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ol>
 </li>
 <li>
@@ -3973,7 +4031,7 @@ deoxy-octanoate(KDO)<br>
 </li>
 <li>
 <p>&#x53EF;&#x4EE5;&#x63D2;&#x5165;&#x5BBF;&#x4E3B; DNA<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-75.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-75.png" alt="Alt text" style=";background-color: white;padding:0"></p>
 </li>
 <li>
 <p>mRNA</p>
@@ -4080,7 +4138,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </li>
 <li>E1, E2 &#x8868;&#x9762;&#x91A3;&#x86CB;&#x767D;&#x5177;&#x6297;&#x539F;&#x6027;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-76.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-76.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="%E7%96%BE%E7%97%85%E5%85%AC%E8%A1%9B-1">&#x75BE;&#x75C5;&#x516C;&#x885B;</h4>
 
 <ul>
@@ -4141,7 +4199,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 <h3 class="mume-header" id="%E8%82%9D%E7%82%8E%E6%95%B4%E7%90%86">&#x809D;&#x708E;&#x6574;&#x7406;</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th></th>
@@ -4194,7 +4252,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <td>&#x7956;&#x570B;&#x75AB;&#x82D7;</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 class="mume-header" id="rhabdoviridae-%E7%A0%B2%E5%BD%88%E7%8B%80%E7%97%85%E6%AF%92">Rhabdoviridae (&#x7832;&#x5F48;&#x72C0;&#x75C5;&#x6BD2;)</h2>
 
 <ul>
@@ -4203,7 +4261,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>Negri body
 <ul>
 <li>&#x795E;&#x7D93;&#x7D30;&#x80DE;&#x8CEA;&#x5167;&#x75C5;&#x6BD2; inclusion bodies<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-112.png" alt></li>
+<img src="paste_src/&#x5FAE;&#x514D;-112.png" alt="alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -4256,8 +4314,8 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-81.png" alt="Alt text" style="width:50%;background-color: white;">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-82.png" alt="Alt text" style="width:50%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-81.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-82.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 </div>
 <ul>
 <li>&#x75BE;&#x75C5;&#x516C;&#x885B;
@@ -4296,8 +4354,8 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-83.png" alt="Alt text" style="width:65%;background-color: white;">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-84.png" alt="Alt text" style="width:35%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-83.png" alt="Alt text" style="width:65%;background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-84.png" alt="Alt text" style="width:35%;background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="measles%E9%BA%BB%E7%96%B9">Measles(&#x9EBB;&#x75B9;)</h3>
 
@@ -4404,7 +4462,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-98.png" alt="Alt text" style="width:40%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-98.png" alt="Alt text" style="width:40%;background-color: white;padding:0">
 <ul>
 <li>
 <p>Asepitic meningitis</p>
@@ -4457,7 +4515,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 
 <ul>
 <li>&#x5F88;&#x5927;&#x9846; (130-14000nm)<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-93.png" alt="Alt text" style="width:40%;background-color: white;"></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-93.png" alt="Alt text" style="width:40%;background-color: white;padding:0"></li>
 <li>Receptor: Niemann-Pick C1 (NPC1)
 <ul>
 <li>&#x81BD;&#x56FA;&#x9187;&#x8ABF;&#x7BC0;&#xFF0C;&#x7626;&#x5B50;&#x5C11;&#x8868;&#x73FE;</li>
@@ -4465,11 +4523,11 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-94.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-94.png" alt="Alt text" style=";background-color: white;padding:0">
 <ul>
 <li>
 <p>Hemorrhagic rash<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-92.png" alt="Alt text" style="width:40%;background-color: white;"></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-92.png" alt="Alt text" style="width:40%;background-color: white;padding:0"></p>
 </li>
 <li>
 <p>Ebola (&#x4F0A;&#x6CE2;&#x62C9;)</p>
@@ -4548,14 +4606,14 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-95.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-95.png" alt="Alt text" style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">Antibody-dependent enhancement (ADE)</p>
 <ul>
 <li>&#x6297;&#x9AD4;&#x6548;&#x50F9;&#x4E0D;&#x8DB3;&#xFF0C;&#x53CD;&#x800C;&#x4FC3;&#x9032;&#x75C5;&#x6BD2;&#x9032;&#x5165;</li>
 <li><strong>&#x6297;&#x9AD4;-&#x75C5;&#x6BD2;</strong>&#x901A;&#x904E;&#x7D30;&#x80DE;&#x8868;&#x9762;&#x7684;Fc&#x53D7;&#x9AD4;&#x9032;&#x5165;&#x5BBF;&#x4E3B;&#x7D30;&#x80DE;&#x3002;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-96.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-96.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="japanese-encephalitis-virus-%E6%97%A5%E6%9C%AC%E8%85%A6%E7%82%8E">Japanese encephalitis virus (&#x65E5;&#x672C;&#x8166;&#x708E;)</h3>
 
@@ -4619,7 +4677,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>&#x4E2D;&#x5916;&#x5C64;&#x7684;capsid (&#x3C3;3/VP7)&#x5728;&#x8178;&#x9053;&#x88AB;&#x86CB;&#x767D;&#x9176;&#x5206;&#x89E3;</li>
 <li>&#x3C3;1/VP4 &#x88AB;&#x5207;&#x5272;&#x7522;&#x751F; ISVP</li>
 <li>VP4 &#x2192; VP5,VP8<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-78.png" alt="Alt text" style="width:50%;background-color: white;"></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-78.png" alt="Alt text" style="width:50%;background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -4634,7 +4692,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <p>&#x4E1F; RNA(+)&#x51FA;&#x4F86;&#x505A;&#x86CB;&#x767D;</p>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-77.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-77.png" alt="Alt text" style=";background-color: white;padding:0">
 <ul>
 <li>&#x53E3;&#x7CDE;&#x50B3;&#x67D3;</li>
 </ul>
@@ -4722,8 +4780,8 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-86.png" alt="Alt text" style="width:45%;background-color: white;">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-87.png" alt="Alt text" style="width:55%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-86.png" alt="Alt text" style="width:45%;background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-87.png" alt="Alt text" style="width:55%;background-color: white;padding:0">
 </div>
 <ul>
 <li>&#x7D50;&#x69CB;&#x57FA;&#x56E0;
@@ -4741,7 +4799,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-88.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-88.png" alt="Alt text" style=";background-color: white;padding:0">
 <ul>
 <li>
 <p>Protease cleavage</p>
@@ -4769,8 +4827,8 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-89.png" alt="Alt text" style="width:50%;background-color: white;">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-90.png" alt="Alt text" style="width:50%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-89.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-90.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 </div>
 <div class="admonition info">
 <p class="admonition-title">Chemokine</p>
@@ -4809,7 +4867,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-85.png" alt="Alt text" style="width:60%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-85.png" alt="Alt text" style="width:60%;background-color: white;padding:0">
 <h3 class="mume-header" id="lentivirinae%E6%85%A2%E7%97%85%E6%AF%92%E4%BA%9E%E7%A7%91">Lentivirinae(&#x6162;&#x75C5;&#x6BD2;&#x4E9E;&#x79D1;)</h3>
 
 <ul>
@@ -4836,7 +4894,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 <h2 class="mume-header" id="%E6%95%B4%E7%90%86-3">&#x6574;&#x7406;</h2>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 
@@ -5009,10 +5067,10 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <td>CCR5, CXCR4</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="%E7%89%B9%E6%AE%8A%E7%B5%90%E6%A7%8B">&#x7279;&#x6B8A;&#x7D50;&#x69CB;</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x75C5;&#x6BD2;</th>
@@ -5052,7 +5110,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <td>&#x88AB;&#x86CB;&#x767D;&#x9176;&#x5207;&#x5272;&#x7522;&#x751F;</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="%E7%96%BE%E7%97%85-1">&#x75BE;&#x75C5;</h3>
 
 <ul>
@@ -5187,13 +5245,13 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 
 <h2 class="mume-header" id="lymph-node">Lymph node</h2>
 
-<p><img src="paste_src/image-096.png" alt></p>
+<img src="paste_src/image-096.png" alt=" " style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">High endothelial venules</p>
 <ul>
 <li>&#x770B;&#x7BA1;&#x6DCB;&#x5DF4;&#x7D30;&#x80DE;&#x9032;&#x5165;&#x8840;&#x7BA1;</li>
 <li>&#x8A8D; L slectine &#xFF0C;&#x6210;&#x719F;&#x4E0D;&#x8868;&#x73FE;<br>
-<img src="paste_src/2023-10-15-03-07-49.png" alt style="width:100%;background-color: white;"></li>
+<img src="paste_src/2023-10-15-03-07-49.png" alt style="width:100%;background-color: white;padding:0"></li>
 </ul>
 </div>
 <h2 class="mume-header" id="spleen">Spleen</h2>
@@ -5206,8 +5264,8 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/image-097.png" alt="Alt text" style="width:45%;background-color: white;">
-<img src="paste_src/image-098.png" alt="Alt text" style="width:45%;background-color: white;">
+<img src="paste_src/image-097.png" alt="Alt text" style="width:45%;background-color: white;padding:0">
+<img src="paste_src/image-098.png" alt="Alt text" style="width:45%;background-color: white;padding:0">
 </div>
 <ul>
 <li>Germinal center
@@ -5230,7 +5288,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </dl>
 <h3 class="mume-header" id="tlrs">TLRs</h3>
 
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-102.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-102.png" alt="alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="pathway-%E6%AD%BB%E8%83%8C">Pathway &#x6B7B;&#x80CC;</h4>
 
 <blockquote>
@@ -5261,7 +5319,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>TLR</th>
@@ -5294,7 +5352,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="%E5%85%B6%E4%BB%96%E6%AD%BB%E8%83%8C">&#x5176;&#x4ED6;&#xFF0C;&#x6B7B;&#x80CC;</h3>
 
 <h4 class="mume-header" id="%E7%B4%B0%E8%83%9E%E8%B3%AA">&#x7D30;&#x80DE;&#x8CEA;</h4>
@@ -5354,11 +5412,9 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 <h3 class="mume-header" id="opsonization-%E8%AA%BF%E7%90%86">Opsonization &#x8ABF;&#x7406;</h3>
 
-<p><img src="paste_src/image-121.png" alt></p>
-<ul>
-<li>C3b, C4b</li>
-<li>&#x7D50;&#x5408; Ig</li>
-</ul>
+<img src="paste_src/image-121.png" alt="Alt text" style=";background-color: white;padding:0">
+- C3b, C4b
+- &#x7D50;&#x5408; Ig
 <h4 class="mume-header" id="%E8%A3%9C%E9%AB%94%E5%8F%97%E9%AB%94-cr">&#x88DC;&#x9AD4;&#x53D7;&#x9AD4; (CR)</h4>
 
 <blockquote>
@@ -5383,7 +5439,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </li>
 <li>CR3 &#x662F; <a href="#tight-binding">integrin</a></li>
 </ul>
-<img src="paste_src/2024-03-27-15-16-29.png" alt style="width:50%;background-color: white;">
+<img src="paste_src/2024-03-27-15-16-29.png" alt style="width:50%;background-color: white;padding:0">
 <h3 class="mume-header" id="chemotaxis-%E8%B6%A8%E5%8C%96">Chemotaxis &#x8DA8;&#x5316;</h3>
 
 <ul>
@@ -5398,8 +5454,8 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>c3&#x8F49;&#x5316;&#x9176; + C3b = &#x5207; C5</li>
 <li>C5b, 6, 7, 8, 9 &#x5F62;&#x6210; Membrane attack complex(MAC)</li>
 </ul>
-<img src="paste_src/image-122.png" alt="Alt text" style="width:100%;background-color: white;">
-<img src="paste_src/image-124.png" alt="Alt text" style="width:100%;background-color: white;">
+<img src="paste_src/image-122.png" alt="Alt text" style="width:100%;background-color: white;padding:0">
+<img src="paste_src/image-124.png" alt="Alt text" style="width:100%;background-color: white;padding:0">
 <h4 class="mume-header" id="classical">Classical</h4>
 
 <ol>
@@ -5408,14 +5464,14 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>C1r &#x6D3B;&#x5316; C1s</li>
 <li>&#x7522;&#x751F; <mark>C4b2a</mark></li>
 </ol>
-<p><img src="paste_src/image-123.png" alt></p>
+<img src="paste_src/image-123.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="lectin">Lectin</h4>
 
 <ul>
 <li>Mannose-binding lectin(MBL) &#x76F4;&#x63A5;&#x8A8D; Ag</li>
 <li>&#x7522;&#x751F; <mark>C3bBb</mark></li>
 </ul>
-<p><img src="paste_src/image-125.png" alt></p>
+<img src="paste_src/image-125.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="alternative">Alternative</h4>
 
 <blockquote>
@@ -5426,14 +5482,14 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>C3b+B=C3bB</li>
 <li>C3bB (D)&#x2192; <mark>C3bBb</mark></li>
 </ol>
-<p><img src="paste_src/image-126.png" alt></p>
+<img src="paste_src/image-126.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="alternative-2-fluid-phase">Alternative-2 (Fluid phase)</h4>
 
 <ul>
 <li>C3 &#x6C34;&#x89E3;&#x6210; C3(H<sub>2</sub>O)&#x958B;&#x59CB;</li>
 <li>C3(H<sub>2</sub>O)+B (D)&#x2192; <mark>C3(H<sub>2</sub>O)Bb</mark></li>
 </ul>
-<p><img src="paste_src/image-127.png" alt></p>
+<img src="paste_src/image-127.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="%E6%8A%91%E5%88%B6">&#x6291;&#x5236;</h4>
 
 <ul>
@@ -5543,15 +5599,15 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-4.png" alt="Alt text" style="width:40%;background-color: white;">
-<img src="paste_src/%E5%BE%AE%E5%85%8D.png" alt="Alt text" style="width:55%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-4.png" alt="Alt text" style="width:40%;background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D.png" alt="Alt text" style="width:55%;background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="c-%E5%9E%8B%E5%87%9D%E9%9B%86%E7%B4%A0c-type-lectin-like-family">C &#x578B;&#x51DD;&#x96C6;&#x7D20;(C-type lectin-like family)</h3>
 
 <ul>
 <li>&#x8FA8;&#x8A8D;&#x6297;&#x539F;</li>
 <li>Mannose receptor<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-1.png" alt="Alt text" style="width:30%;background-color: white;"></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-1.png" alt="Alt text" style="width:30%;background-color: white;padding:0"></li>
 <li>Dectin-1
 <ul>
 <li>&#x8FA8;&#x8A8D;&#x771F;&#x83CC;&#x7D30;&#x80DE;&#x58C1;&#x7684; &#x3B2;-1,3-linked glucans</li>
@@ -5564,12 +5620,12 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>&#x6293;&#x4F4F;&#x6297;&#x9AD4;</li>
 <li>Fc&#x3B3; Receptor &#x6293; IgG</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-2.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-2.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="complement-receptor">Complement receptor</h3>
 
 <ul>
 <li>CD11b<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-3.png" alt></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-3.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 <h3 class="mume-header" id="%E6%8A%91%E5%88%B6%E6%80%A7%E7%9A%84%E5%8F%97%E9%AB%94inhibitory-receptor">&#x6291;&#x5236;&#x6027;&#x7684;&#x53D7;&#x9AD4;(inhibitory receptor)</h3>
 
@@ -5663,7 +5719,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <p>&#x6293; MHC I &#x4E0D;&#x8868;&#x73FE;&#x7684;</p>
 <ul>
 <li>NK receptor &#x50B3;&#x905E;&#x6BBA;&#x4E86;&#x6211;<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-5.png" alt></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-5.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>
@@ -5699,8 +5755,8 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-6.png" alt="Alt text" style="width:49%;background-color: white;">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-8.png" alt="Alt text" style="width:49%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-6.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-8.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -5709,7 +5765,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <dd>immunoreceptor tyrosine inhibitory motif</dd>
 <dt>HLA E</dt>
 <dd>human leukocyte antigen E&#xFF0C;&#x4E00;&#x7A2E; MHC I &#xFF0C;&#x4E00;&#x822C;&#x7684;MHC I &#x5448;&#x73FE;&#x6297;&#x539F;&#xFF0C;HLA E &#x5448;&#x73FE;&#x88FD;&#x9020; MHC I &#x5269;&#x4E0B;&#x7684;&#x5783;&#x573E;&#x3002;<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-7.png" alt></dd>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-7.png" alt="Alt text" style=";background-color: white;padding:0"></dd>
 </dl>
 </div>
 <h4 class="mume-header" id="%E5%A6%82%E4%BD%95%E6%AE%BA">&#x5982;&#x4F55;&#x6BBA;</h4>
@@ -5747,7 +5803,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">NK v.s. NKT</p>
-<img src="paste_src/&#x5FAE;&#x514D;-101.png" alt="alt text" style="width:30%;background-color: white;">
+<img src="paste_src/&#x5FAE;&#x514D;-101.png" alt="alt text" style="width:30%;background-color: white;padding:0">
 </div>
 <h2 class="mume-header" id="%E5%85%88%E5%A4%A9%E6%80%A7%E6%B7%8B%E5%B7%B4%E7%B4%B0%E8%83%9Einnate-lymphoid-cells-ilcs">&#x5148;&#x5929;&#x6027;&#x6DCB;&#x5DF4;&#x7D30;&#x80DE;(innate lymphoid cells, ILCs)</h2>
 
@@ -5758,7 +5814,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x7A2E;&#x985E;</th>
@@ -5799,7 +5855,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 class="mume-header" id="b-cell">B cell</h2>
 
 <ul>
@@ -5880,7 +5936,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>Light: &#x3BA;, &#x3BB;</li>
 <li>Heavy: &#x3BC;(IgM), &#x3B3;(IgG), &#x3B1;(IgA), &#x3B4;(IgD), &#x3B5;(IgE)</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-027.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-027.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="development">Development</h3>
 
 <ul>
@@ -5893,7 +5949,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-028.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-028.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="ig">Ig?</h3>
 
 <h4 class="mume-header" id="igm">IgM</h4>
@@ -5904,14 +5960,14 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>&#x5F88;&#x5927;&#x652F;&#xFF0C;&#x4E3B;&#x8981;&#x5728;&#x8840;&#x7BA1; 10%</li>
 <li>&#x6D3B;&#x5316; C1</li>
 </ul>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-029.png" alt="Alt text" style="width:60%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-029.png" alt="Alt text" style="width:60%;background-color: white;padding:0">
 <h4 class="mume-header" id="igd">IgD</h4>
 
 <ul>
 <li>&#x4E3B;&#x8981;&#x5728; B cell &#x8868;&#x9762;</li>
 <li>&#x4F5C;&#x70BA; Triger?</li>
 </ul>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-030.png" alt="Alt text" style="width:60%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-030.png" alt="Alt text" style="width:60%;background-color: white;padding:0">
 <h4 class="mume-header" id="igg">IgG</h4>
 
 <ul>
@@ -5929,7 +5985,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>&#x9AD8;&#x7A7F;&#x900F;&#x529B; (&#x552F;&#x4E00;&#x80FD;&#x904E;&#x80CE;&#x76E4;)</li>
 <li>&#x6D3B;&#x5316; C1</li>
 </ul>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-031.png" alt="Alt text" style="width:60%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-031.png" alt="Alt text" style="width:60%;background-color: white;padding:0">
 <h4 class="mume-header" id="iga">IgA</h4>
 
 <ul>
@@ -5939,7 +5995,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>Compoment &#x9ECF;&#x5728;&#x4E0A;&#x9762;
 <ul>
 <li>IgA &#x6703;&#x53BB;&#x6709;&#x9ECF;&#x6DB2;&#x7684;&#x8154;&#x5BA4;&#xFF0C; Complement &#x80FD;&#x4FDD;&#x8B77;<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-033.png" alt="Alt text" style="width:60%;background-color: white;"></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-033.png" alt="Alt text" style="width:60%;background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -5951,7 +6007,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-032.png" alt="Alt text" style="width:60%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-032.png" alt="Alt text" style="width:60%;background-color: white;padding:0">
 <h4 class="mume-header" id="ige">IgE</h4>
 
 <ul>
@@ -5960,7 +6016,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>&#x4E82;&#x5206;&#x6CCC;&#x3001;&#x4E82;&#x9ECF;Mastcell &#x7684; Fc receptor &#x2192; &#x53BB;&#x9846;&#x7C92;&#xFF0C;&#x767C;&#x708E;</li>
 <li></li>
 </ul>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-034.png" alt="Alt text" style="width:60%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-034.png" alt="Alt text" style="width:60%;background-color: white;padding:0">
 <h2 class="mume-header" id="t-cell">T cell</h2>
 
 <ul>
@@ -5971,7 +6027,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <dl>
 <dt>DiGeorge syndrome</dt>
 <dd>&#x80F8;&#x817A;&#x767C;&#x80B2;&#x4E0D;&#x5168;<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-9.png" alt></dd>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-9.png" alt="Alt text" style=";background-color: white;padding:0"></dd>
 </dl>
 <h3 class="mume-header" id="tcr-cd3-complex">TCR-CD3 complex</h3>
 
@@ -5980,7 +6036,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>&#x78F7;&#x9178;&#x5316;&#x5247; ITAM activate</li>
 <li>6 &#x500B;&#x5206;&#x5B50;&#xFF1A;&#x3B6;&#x3B6;&#x3001;&#x3B5;&#x3B4;&#x3001;&#x3B3;&#x3B5;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-12.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-12.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="alphabeta-t-vs-gammadelta-t">&#x3B1;&#x3B2;-T v.s. &#x3B3;&#x3B4;-T</h3>
 
 <ul>
@@ -5992,11 +6048,11 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </li>
 <li></li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-13.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-13.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="%E7%99%BC%E8%82%B2-1">&#x767C;&#x80B2;</h3>
 
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-109.png" alt></p>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-110.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-109.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/&#x5FAE;&#x514D;-110.png" alt="alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="selection">selection</h3>
 
 <div class="dcl">
@@ -6022,7 +6078,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>&#x662F;&#x5426;&#x7D50;&#x5408;&#x81EA;&#x6211;&#x6297;&#x539F;&#xFF1F;&#x662F;&#x5C31;&#x6B7B;&#x4EA1;&#x3002;</li>
 </ul>
 </section></div>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-11.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-11.png" alt="Alt text" style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title"> &#x80F8;&#x7DDA;</p>
 <ul>
@@ -6038,7 +6094,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-10.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-10.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
 <h2 class="mume-header" id="%E4%BD%A0%E6%98%AF%E5%93%AA%E7%A8%AE-t-cell">&#x4F60;&#x662F;&#x54EA;&#x7A2E; T cell</h2>
 
@@ -6091,7 +6147,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>Activated CD4 T &#x5206;&#x5316;&#x800C;&#x4F86;&#xFF0C;&#x5177;&#x5099;&#x57F7;&#x884C;&#x7279;&#x5B9A;&#x514D;&#x75AB;&#x529F;&#x80FD;&#x7684;&#x7D30;&#x80DE;&#x3002;</li>
 <li>&#x53EA;&#x80FD;&#x9078;&#x4E00;&#x689D;&#x8DEF;&#x8D70; (&#x62EE;&#x6297;)</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-31.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-31.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="t~h~1">T<sub>H</sub>1</h4>
 
 <ul>
@@ -6104,7 +6160,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>&#x5BC4;&#x751F;&#x87F2; &#xFF08;&#x55DC;&#x9178;&#xFF09;</li>
 <li>M2 Macrophage &#x555F;&#x52D5;&#x4FEE;&#x5FA9;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-32.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-32.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="t~h~17">T<sub>H</sub>17</h4>
 
 <ul>
@@ -6122,7 +6178,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>IL-17&#x3001;IL-22 &#x4FC3;&#x9032;&#x4E0A;&#x76AE;&#x7D30;&#x80DE;&#x7522;&#x751F;&#x6297;&#x5FAE;&#x751F;&#x7269;&#x86CB;&#x767D;(antimicrobial peptides)&#x3002;
 <ul>
 <li>&#x6BBA;&#x80DE;&#x5916;&#x7D30;&#x83CC;&#x548C;&#x771F;&#x83CC;&#x3002;<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-33.png" alt></li>
+<img src="paste_src/&#x5FAE;&#x514D;-33.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -6178,8 +6234,8 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>&#x3B2; ~ H, &#x3B1; ~ L</li>
 <li>T cell &#x591A;&#x6A23;&#x6027;&#x8F03;&#x9AD8;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-14.png" alt><br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-15.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-14.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-15.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="dna-%E9%87%8D%E7%B5%84">DNA &#x91CD;&#x7D44;</h3>
 
 <ul>
@@ -6214,7 +6270,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <blockquote>
 <p>&#x7C97;&#x9AD4;: Effector T</p>
 </blockquote>
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th></th>
@@ -6264,7 +6320,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <td>CCR7</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h1 class="mume-header" id="%E5%85%8D%E7%96%AB%E9%81%8E%E7%A8%8B">&#x514D;&#x75AB;&#x904E;&#x7A0B;</h1>
 
 <h2 class="mume-header" id="%E7%99%BC%E7%82%8E">&#x767C;&#x708E;</h2>
@@ -6310,7 +6366,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-105.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-105.png" alt="alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="%E8%A1%80%E7%90%83%E6%BB%B2%E5%87%BAdiapedesis">&#x8840;&#x7403;&#x6EF2;&#x51FA;(diapedesis)</h3>
 
 <blockquote>
@@ -6401,7 +6457,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 (second signal)</li>
 <li>Cytokine signals (third signal)</li>
 </ol>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D2.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D2.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="adhesion">adhesion</h3>
 
 <ol>
@@ -6414,7 +6470,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <dt>ICAM</dt>
 <dd>intercellular adhesion molecule</dd>
 </dl>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D2-1.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D2-1.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="primary-signal">Primary signal</h3>
 
 <p><mark>APC, &#x78BA;&#x8A8D;&#x5C08;&#x4E00;&#x6027;</mark></p>
@@ -6425,7 +6481,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <dt>Lck</dt>
 <dd>Lymphocyte-specific protein tyrosine kinase</dd>
 </dl>
-<img src="paste_src/2023-10-29-13-05-22.png" alt style="width:80%;background-color: white;">
+<img src="paste_src/2023-10-29-13-05-22.png" alt style="width:80%;background-color: white;padding:0">
 <h3 class="mume-header" id="co-stimulation-second-signal">Co-stimulation (second signal)</h3>
 
 <p><mark>&#x6575;&#x6211;&#x8FA8;&#x8B58;</mark></p>
@@ -6453,8 +6509,8 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D2-2.png" alt></p>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-114.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D2-2.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/&#x5FAE;&#x514D;-114.png" alt="alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="%E6%8A%91%E5%88%B6-1">&#x6291;&#x5236;</h4>
 
 <ul>
@@ -6476,11 +6532,11 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <ul>
 <li>Cytokines &#x5C0E;&#x81F4;&#x5206;&#x5316;</li>
 <li>TGF-&#x3B2; &#x2192; &#x6291;&#x5236;<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D2-3.png" alt></li>
+<img src="paste_src/%E5%BE%AE%E5%85%8D2-3.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 <h2 class="mume-header" id="t~h~-%E4%B8%BB%E5%B0%8E">T<sub>H</sub> &#x4E3B;&#x5C0E;</h2>
 
-<img src="paste_src/%E5%BE%AE%E5%85%8D2-4.png" alt="Alt text" style="width:100%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D2-4.png" alt="Alt text" style="width:100%;background-color: white;padding:0">
 <div class="fbox" style="display: inline-flex;
         flex-direction: row;
         justify-content: space-between;
@@ -6489,10 +6545,10 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-22.png" alt="Alt text" style="width:49%;background-color: white;">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-24.png" alt="Alt text" style="width:49%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-22.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-24.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
 </div>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-26.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-26.png" alt="Alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="t-b-cell-interactions">T-B cell interactions</h2>
 
 <ul>
@@ -6504,7 +6560,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <li>&#x53EF;&#x8B8A;&#x6BB5;&#xFF08;V&#xFF09;&#x3001;&#x591A;&#x6A23;&#x6BB5;&#xFF08;D&#xFF09;&#x4EE5;&#x53CA;&#x9023;&#x63A5;&#x6BB5;&#xFF08;J&#xFF09;</li>
 <li>&#x8F15;&#x93C8;&#x6C92;&#x6709;D</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-39.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-39.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="somatic-hypermutation%E9%AB%94%E7%B4%B0%E8%83%9E%E8%B6%85%E7%AA%81%E8%AE%8A">Somatic hypermutation(&#x9AD4;&#x7D30;&#x80DE;&#x8D85;&#x7A81;&#x8B8A;)</h3>
 
 <ul>
@@ -6521,7 +6577,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <p>T cell &#x7684; IL 4, CD40/CD40L &#x89F8;&#x767C;</p>
 </li>
 </ul>
-<img src="paste_src/&#x5FAE;&#x514D;-100.png" alt="alt text" style="width:50%;background-color: white;">
+<img src="paste_src/&#x5FAE;&#x514D;-100.png" alt="alt text" style="width:50%;background-color: white;padding:0">
 <dl>
 <dt>AID</dt>
 <dd>Activation-induced cytidine deaminase</dd>
@@ -6538,15 +6594,15 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <li>CD &#x524D;&#x9762;&#x6C92;&#x6709;&#x526A;&#x63A5;&#x9EDE; &#x2192; &#x8B8A;&#x4E0D;&#x51FA; IgD</li>
 <li>V-D-J &#x5F8C;&#x9762;&#x63A5;&#x8981;&#x7684;&#x985E;&#x578B;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D2-5.png" alt><br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D2-6.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D2-5.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D2-6.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="rna-%E5%89%AA%E6%8E%A5">RNA &#x526A;&#x63A5;</h4>
 
 <ul>
 <li>IgM &#x21C6; IgD</li>
 <li>&#x526A; Poly A</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-35.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-35.png" alt="Alt text" style=";background-color: white;padding:0">
 <h4 class="mume-header" id="t-cell-%E6%8E%A7%E5%88%B6">T cell &#x63A7;&#x5236;</h4>
 
 <div class="dcl">
@@ -6577,18 +6633,18 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 </ul>
 </section>
 <section>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-36.png" alt="Alt text" style="width:100%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-36.png" alt="Alt text" style="width:100%;background-color: white;padding:0">
 </section></div>
 <h4 class="mume-header" id="%E5%88%9D%E7%B4%9A%E6%AC%A1%E7%B4%9A%E5%85%8D%E7%96%AB">&#x521D;&#x7D1A;&#x6B21;&#x7D1A;&#x514D;&#x75AB;</h4>
 
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-37.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-37.png" alt="Alt text" style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">T-independent and dependent antigens</p>
 <ul>
 <li>&#x6839;&#x64DA;&#x6297;&#x539F;&#x9700;&#x4E0D;&#x9700;&#x8981; T<sub>FH</sub> &#x52A0;&#x6301;</li>
 <li>&#x4E00;&#x822C;&#x975E;&#x86CB;&#x767D;&#x8CEA;&#x6297;&#x539F;&#x90FD;&#x662F; T-independent</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-34.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-34.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
 <h1 class="mume-header" id="%E5%85%8D%E7%96%AB%E5%AD%B8%E7%B5%B1%E6%95%B4">&#x514D;&#x75AB;&#x5B78;&#x7D71;&#x6574;</h1>
 
@@ -6612,15 +6668,15 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
         position: relative;
         left: 50%;
         transform: translateX(-50%);">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-19.png" alt="Alt text" style="width:30%;background-color: white;">
-<img src="paste_src/%E5%BE%AE%E5%85%8D-20.png" alt="Alt text" style="width:35%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-19.png" alt="Alt text" style="width:30%;background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-20.png" alt="Alt text" style="width:35%;background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="%E5%9F%BA%E5%9B%A0">&#x57FA;&#x56E0;</h3>
 
 <ul>
 <li>HLA&#x57FA;&#x56E0;&#x5EA7;&#x4F4D;&#x65BC;&#x7B2C;6 &#x5C0D;&#x67D3;&#x8272;&#x9AD4;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-106.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-106.png" alt="alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="mhc-i-%E5%85%A7%E6%BA%90%E6%80%A7%E6%8A%97%E5%8E%9F%E5%91%88%E7%8F%BE">MHC I (&#x5167;&#x6E90;&#x6027;&#x6297;&#x539F;&#x5448;&#x73FE;)</h3>
 
 <ol>
@@ -6632,7 +6688,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <li>&#x904B;&#x8F38;&#x5230;&#x7D30;&#x80DE;&#x819C;</li>
 <li>TCR &#x548C; &#x3B1;3 &#x7D50;&#x5408;</li>
 </ol>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-16.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-16.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="mhc-ii-%E5%A4%96%E6%BA%90%E6%80%A7%E6%8A%97%E5%8E%9F%E5%91%88%E7%8F%BE">MHC II (&#x5916;&#x6E90;&#x6027;&#x6297;&#x539F;&#x5448;&#x73FE;)</h3>
 
 <ol>
@@ -6643,16 +6699,16 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <li>HLA-DM &#x89E3;&#x958B; CLIP</li>
 <li>TCR &#x7D50;&#x5408; &#x3B2;2</li>
 </ol>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-17.png" alt><br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-18.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-17.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-18.png" alt="Alt text" style=";background-color: white;padding:0">
 <dl>
 <dt>Li</dt>
 <dd>&#x6046;&#x5B9A;&#x93C8;, invariant chain,CD74<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-107.png" alt></dd>
+<img src="paste_src/&#x5FAE;&#x514D;-107.png" alt="alt text" style=";background-color: white;padding:0"></dd>
 </dl>
 <div class="admonition info">
 <p class="admonition-title">CDRs</p>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-21.png" alt="Alt text" style="width:60%;background-color: white;">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-21.png" alt="Alt text" style="width:60%;background-color: white;padding:0">
 <dl>
 <dt>CDRs</dt>
 <dd>Complementarity-Determining Regions</dd>
@@ -6703,7 +6759,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 </ul>
 <h2 class="mume-header" id="prrs">PRRs</h2>
 
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-104.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-104.png" alt="alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E5%B9%B2%E6%93%BE%E7%B4%A0">&#x5E72;&#x64FE;&#x7D20;</h2>
 
 <ul>
@@ -6737,7 +6793,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 
 <h3 class="mume-header" id="b-t-cell">B, T cell</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x7D30;&#x80DE;&#x985E;&#x578B;</th>
@@ -6792,7 +6848,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <td>&#x4FC3;&#x9032;&#x8ABF;&#x7BC0;&#x6027;B/T&#x7D30;&#x80DE;&#x6291;&#x5236;&#x4F5C;&#x7528;</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="il-1-beta">IL-1 (&#x3B2;)</h3>
 
 <ul>
@@ -6854,7 +6910,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 </li>
 <li>&#x4FC3;&#x9032;&#x6F3F;&#x7D30;&#x80DE;&#x7684;&#x751F;&#x5B58;&#x3002;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-40.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-40.png" alt="Alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="il-7">IL-7</h3>
 
 <ul>
@@ -6954,7 +7010,7 @@ tumor necrosis factor</p>
 <p>&#x523A;&#x6FC0; dendritic cell &#x767C;&#x80B2;</p>
 <h2 class="mume-header" id="chemokin">Chemokin</h2>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>Chemokin</th>
@@ -7004,7 +7060,7 @@ tumor necrosis factor</p>
 <td>&#x6DCB;&#x5DF4; &#x2192; &#x8840;&#x7BA1;</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 class="mume-header" id="cd">CD?</h2>
 
 <h3 class="mume-header" id="cd1d">CD1d</h3>
@@ -7018,7 +7074,7 @@ tumor necrosis factor</p>
 <ul>
 <li>&#x8DDF; TCR &#x4E00;&#x8D77;</li>
 </ul>
-<img src="paste_src/2023-10-29-04-14-16.png" alt style="width:40%;background-color: white;">
+<img src="paste_src/2023-10-29-04-14-16.png" alt style="width:40%;background-color: white;padding:0">
 <h3 class="mume-header" id="cd11">CD11</h3>
 
 <ul>
@@ -7045,7 +7101,7 @@ tumor necrosis factor</p>
 </li>
 <li>Macrophage &#x8A8D; LPS</li>
 </ul>
-<img src="paste_src/&#x5FAE;&#x514D;-103.png" alt="alt text" style="width:30%;background-color: white;">
+<img src="paste_src/&#x5FAE;&#x514D;-103.png 30" alt="alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="cd15">CD15</h3>
 
 <ul>
@@ -7063,7 +7119,7 @@ tumor necrosis factor</p>
 <li>&#x8868;&#x73FE;: B cell&#x3001;&#x6FFE;&#x6CE1;&#x6A39;&#x7A81;&#x7D30;&#x80DE;&#x3001;NK&#x3001;Macrophage&#x3001;<mark>&#x9178;</mark>&#x4E2D;&#x9E7C;&#x3001;&#x8840;&#x5C0F;&#x677F;&#x548C;&#x80A5;&#x5927;&#x7D30;&#x80DE;</li>
 <li>&#x78F7;&#x9178;&#x5316; ITAM</li>
 </ul>
-<img src="paste_src/2024-03-26-14-25-35.png" alt style="width:100%;background-color: white;">
+<img src="paste_src/2024-03-26-14-25-35.png" alt style="width:100%;background-color: white;padding:0">
 <h3 class="mume-header" id="cd19">CD19</h3>
 
 <ul>
@@ -7231,7 +7287,7 @@ tumor necrosis factor</p>
 <li>&#x7D30;&#x80DE;&#x51CB;&#x4EA1;&#x958B;&#x95DC;</li>
 <li>NK cell Fas ligang &#x63A5;&#x4E0A;&#x53BB;&#x6BBA;&#x7D30;&#x80DE;</li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-99.png" alt></p>
+<img src="paste_src/&#x5FAE;&#x514D;-99.png" alt="alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="cd117">CD117</h3>
 
 <ul>
@@ -7242,7 +7298,7 @@ tumor necrosis factor</p>
 
 <h3 class="mume-header" id="%E9%81%8E%E6%95%8F">&#x904E;&#x654F;</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>&#x985E;&#x578B;</th>
@@ -7327,7 +7383,7 @@ tumor necrosis factor</p>
 <td>diabetes mellitus (IDDM) &#x80F0;&#x5CF6;&#x7D20;&#x4F9D;&#x8CF4;&#x578B;&#x7CD6;&#x5C3F;&#x75C5;</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="%E8%87%AA%E9%AB%94%E5%85%8D%E7%96%AB">&#x81EA;&#x9AD4;&#x514D;&#x75AB;</h3>
 
 <ul>
@@ -7401,7 +7457,7 @@ tumor necrosis factor</p>
 </ul>
 <h3 class="mume-header" id="%E6%8E%92%E6%96%A5%E5%8F%8D%E6%87%89">&#x6392;&#x65A5;&#x53CD;&#x61C9;</h3>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>type</th>
@@ -7426,7 +7482,7 @@ tumor necrosis factor</p>
 <td>&#x8840;&#x7BA1;&#x5167;&#x76AE;&#x7D30;&#x80DE;&#x56E0;&#x70BA;&#x9577;&#x671F;&#x53D7;&#x514D;&#x75AB;&#x7D30;&#x80DE;&#x904E;&#x4F86;&#x653B;&#x64CA;&#xFF0C;&#x9020;&#x6210;&#x9577;&#x671F;&#x767C;&#x708E;&#x53CD;&#x61C9;&#x3002;</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 class="mume-header" id="%E5%85%8D%E7%96%AB%E6%8A%91%E5%88%B6">&#x514D;&#x75AB;&#x6291;&#x5236;</h3>
 
 <ul>
@@ -7442,10 +7498,10 @@ tumor necrosis factor</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%BE%AE%E5%85%8D-97.png" alt></p>
+<img src="paste_src/%E5%BE%AE%E5%85%8D-97.png" alt="Alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E9%81%8E%E6%95%8F%E5%82%BBb%E5%9F%BA%E5%9B%A0">&#x904E;&#x654F;&#x50BB;B&#x57FA;&#x56E0;</h2>
 
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>Disease</th>
@@ -7516,8 +7572,9 @@ tumor necrosis factor</p>
 <td>bystander cell</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <br><br>
+
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
 <script> 
 var Main_LeftListLiSelector = $(".md-sidebar-toc li");
