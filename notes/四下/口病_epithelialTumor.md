@@ -244,6 +244,9 @@ Acral
 
 >煙、酒、檳榔
 
+- 好發: lateral/ventral tongue、floor of mouth
+
+
 | 名稱 |  原因 ||特徵||
 |-|-|-|-|-|-|-|
 |Oral submucous fiberosis | Arecoline (檳榔鹼)|| \oneline{ 
@@ -276,7 +279,8 @@ Leukoplakia, Erythroplakia |紅斑較嚴重，不產生角質 ![alt text](paste_
 
 
 
-### Oral epithelial dysplasia 
+### Oral epithelial dysplasia (OED)
+> OED &in; OMPD 
 
 - 硬顎較少發生。
 - 分為三個程度
@@ -284,7 +288,7 @@ Leukoplakia, Erythroplakia |紅斑較嚴重，不產生角質 ![alt text](paste_
 
 #### Mild
 - 影響到下三分之一
-- Basal cell 增生
+- Basal cell 增生，變大
 - Rete ridge 變寬
 - 底層 keratin (紅染)
 - 可能發炎
@@ -302,6 +306,18 @@ Leukoplakia, Erythroplakia |紅斑較嚴重，不產生角質 ![alt text](paste_
 ![alt text](paste_src/口病-83.png =50)
 
 ![alt text](paste_src/口病-79.png)
+
+
+
+## Oral Squamous Cell Carcunoma(OSCC)
+- 徵兆: OMPD
+- 好發: lateral/ventral tongue, floor of mouth 
+  - 檳榔: Tongue
+- `GENT:`
+  - TP53: 抑癌基因，沒有藥物
+  - PIK3CA: 致癌基因，有標靶藥物
+- 紅白斑，凸起
+![alt text](paste_src/口病_epithelialTumor.png)
 
 
 ## 整理 
