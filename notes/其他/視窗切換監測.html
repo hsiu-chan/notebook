@@ -3,7 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>即時視窗切換監測</title>
+    <title>Im@TMU 視窗大挑戰</title>
+
+    <!-- SEO 基本 metadata -->
+    <meta name="description" content="一個簡單的即時視窗切換監測範例，當使用者切換視窗時會變換背景顏色，並顯示重來按鈕。">
+    <meta name="keywords" content="視窗切換, JavaScript, 視窗焦點, HTML, 網頁設計">
+    <meta name="author" content="Xiang">
+
+    <!-- 社交媒體 metadata（Open Graph 協議） -->
+    <meta property="og:title" content="Im@TMU 視窗大挑戰">
+    <meta property="og:description" content="挑戰線上考試拿高分">
+    <!-- <meta property="og:image" content=> 請替換為實際圖片 URL 
+    <meta property="og:url" content="https://example.com">-->
+    <meta property="og:type" content="website">
+
+    <!-- Twitter 卡片 metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Im@TMU 視窗大挑戰">
+    <meta name="twitter:description" content="挑戰線上考試拿高分">
+    <!--<meta name="twitter:image" content="https://example.com/image.jpg">  請替換為實際圖片 URL -->
+
+    <!-- CSS 設計 -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,26 +35,64 @@
             font-size: 24px;
             color: #333;
         }
+        #resetButton {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.3s ease;
+        }
+        #resetButton.show {
+            display: block;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        #resetButton:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
 
-    <h1>即時視窗切換監測</h1>
+    <h1>Im@TMU 視窗大挑戰</h1>
     <div id="status">目前在視窗內</div>
+    <button id="resetButton">重來</button>
 
     <script>
-        // 當視窗失去焦點時觸發
+        const status = document.getElementById("status");
+        const resetButton = document.getElementById("resetButton");
+
         window.addEventListener("blur", function() {
-            document.getElementById("status").textContent = "視窗已切換";
+            status.textContent = "視窗已切換";
             document.body.style.backgroundColor = "black";
-            document.getElementById("status").style.color = "white";
+            status.style.color = "white";
+            resetButton.classList.add("show");
         });
 
-        // 當視窗重新獲得焦點時觸發
         window.addEventListener("focus", function() {
-            document.getElementById("status").textContent = "視窗已切換回來";
+            if (!resetButton.classList.contains("show")) {
+                status.textContent = "視窗已切換回來";
+                document.body.style.backgroundColor = "white";
+                status.style.color = "black";
+            }
+        });
+
+        resetButton.addEventListener("click", function() {
+            status.textContent = "目前在視窗內";
             document.body.style.backgroundColor = "white";
-            document.getElementById("status").style.color = "black";
+            status.style.color = "black";
+            resetButton.classList.remove("show");
         });
     </script>
 
