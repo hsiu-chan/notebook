@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>phrase</key>
+		<string> Necrotizing periodontal diseases </string>
+		<key>shortcut</key>
+		<string>npd</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Prevotella intermedia_Fusobacterium_Treponema_Selenomonas</string>
+		<key>shortcut</key>
+		<string>npdbacterium</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> 治療步驟：A. 局部麻醉+排膿:透過牙齦溝(explorer、probe、no.11 blade) B. 清創、牙根整平、刮除牙結石 C. Compression of the soft tissue wall. D. 用食鹽水(saline)或防腐劑(antiseptics)初醒 E. 咬合調整 F. 抗生素。 抗生素使用時機：出現系統性症狀(部分牙關緊閉、全身不適、發燒、發癌細胞增加、淋巴結腫大)</string>
+		<key>shortcut</key>
+		<string>Pabscess</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> 治療方式：服用 Acyclovir、擦 Acyclovir 藥膏、姑息治療(控制牙菌斑、給止痛藥、局部麻醉)。成人多採用姑息治療，若是服用 Acyclovir，則孩童劑量為 15mr/kg、成人劑量為200mg/kg。</string>
+		<key>shortcut</key>
+		<string>hpv</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Porphyromonas gingivalis</string>
+		<key>shortcut</key>
+		<string>pg</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Tannerella forsythia </string>
+		<key>shortcut</key>
+		<string>tf</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Treponema denticola</string>
+		<key>shortcut</key>
+		<string>td</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Dentogingival fibers Dentoperiosteal fibers Circular fibers Trans-septal gingival fibers</string>
+		<key>shortcut</key>
+		<string>gingivalfiber</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Dentogingival fibers Dentoperiosteal fibers Circular fibers Trans-septal gingival fibers</string>
+		<key>shortcut</key>
+		<string>gf</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Apical group Alveolar crest group Horizontal group Oblique group</string>
+		<key>shortcut</key>
+		<string>pdlgroup</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Gingival sulcus</string>
+		<key>shortcut</key>
+		<string>gs</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> mucogingival junction </string>
+		<key>shortcut</key>
+		<string>mgj</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Matrix metalloproteinases</string>
+		<key>shortcut</key>
+		<string>mmps</string>
+	</dict>
+</array>
+</plist>

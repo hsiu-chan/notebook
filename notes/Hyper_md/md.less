@@ -11,7 +11,7 @@
 @line-color: #8b8b8b;
 @hover-color: rgb(135, 255, 255);
 @mobile-max-width: 600px;
-
+@0000: rgba(0,0,0,0);
 
 
 .markdown-preview {
@@ -85,9 +85,10 @@
   width: 100%;  // 強制表格寬度不超過容器
   table-layout: fixed;  // 固定表格布局，根據寬度自動分配單元格
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
   border-collapse: collapse;  // 合併邊框
   display: table;
+  margin-top: 1rem;
 
   @media screen and (max-width:@mobile-max-width){
     
@@ -131,6 +132,25 @@
       /* 文字對齊方式 */
 
     }
+  }
+
+
+  th.top-left,
+  td.top-left {
+    background: linear-gradient(to top right,
+    @0000 49.5%, @line-color 49.5%, @line-color 50.5%,
+    @0000 50.5%);
+  }
+
+  th.top-left>.col-title,
+  td.top-left>.col-title {
+    text-align: right;
+  }
+
+  
+  th.top-left>.row-title,
+  td.top-left>.row-title{
+    text-align: left;
   }
 
 }
@@ -522,6 +542,10 @@ html body {
       object-fit: contain;
     }
 
+  }
+  table .fbox{
+    left: 0;
+    transform: translateX(0);
   }
 
 }

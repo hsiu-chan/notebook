@@ -49,9 +49,10 @@
   width: 100%;
   table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
   border-collapse: collapse;
   display: table;
+  margin-top: 1rem;
 }
 @media screen and (max-width: 600px) {
   .markdown-preview table {
@@ -85,6 +86,18 @@
   /* 控制項目符號的位置 */
   text-align: left;
   /* 文字對齊方式 */
+}
+.markdown-preview table th.top-left,
+.markdown-preview table td.top-left {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+}
+.markdown-preview table th.top-left > .col-title,
+.markdown-preview table td.top-left > .col-title {
+  text-align: right;
+}
+.markdown-preview table th.top-left > .row-title,
+.markdown-preview table td.top-left > .row-title {
+  text-align: left;
 }
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
@@ -344,6 +357,10 @@ html body .fbox img {
   padding: 0;
   background-color: rgba(0, 0, 0, 0) !important;
   object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
 }
 .modal {
   display: none;

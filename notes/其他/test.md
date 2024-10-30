@@ -234,3 +234,45 @@ https://shd101wyy.github.io/markdown-preview-enhanced/#/
 ## 危險，容易有 bug 的毒瘤: 內嵌可執行代碼
 
 @web https://shd101wyy.github.io/markdown-preview-enhanced/#/code-chunk?id=showcases-outdated
+
+
+
+## 施工中 
+
+
+<table class="diagonal">
+    <thead>
+        <tr>
+            <th class="top-left">
+                <div class="col-title">星期</div>
+                <div class="row-title">節次</div>
+            </th>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>第一節</td>
+            <td>國文</td>
+            <td class="top-left">
+                <div class="col-title">星期</div>
+                <div class="row-title">節次</div>
+            </td>
+            <td>數學</td>
+        </tr>
+        <tr>
+            <td>第二節</td>
+            <td>自然</td>
+            <td>歷史</td>
+            <td>地理</td>
+        </tr>
+        <tr>
+            <td>第三節</td>
+            <td>公民</td>
+            <td>體育</td>
+            <td>音樂</td>
+        </tr>
+    </tbody>
+</table>

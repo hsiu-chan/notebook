@@ -43,6 +43,177 @@
 			"@web https://"
 		],
 	},
+
+	"mermaid":{
+		"prefix": "mermaid",
+		"body":[
+		"```mermaid",
+		"graph ${1}",
+		"```"
+		]
+	},
+
+	"code_env":{
+		"prefix": ["code"],
+		"body": [
+			"```${1}",
+			"${2}",
+			"```"
+		]
+	},
+	
+	"rarr":{
+		"prefix": ["rarr","->"],
+		"body": "&rarr;"
+
+	},
+	"larr":{
+		"prefix": "larr",
+		"body": "&larr;"
+
+	},
+	"uarr":{
+		"prefix": "uarr",
+		"body": "&uarr;"
+
+	},
+	"darr":{
+		"prefix": "darr",
+		"body": "&darr;"
+
+	},
+	"alpha":{
+		"prefix": "alpha",
+		"body": "&alpha;"
+
+	},
+	"beta":{
+		"prefix": "beta",
+		"body": "&beta;"
+
+	},
+	"gamma":{
+		"prefix": "gamma",
+		"body": "&gamma;"
+
+	},
+	"delta":{
+		"prefix": "delta",
+		"body": "&delta;"
+
+	},
+	"epsilon":{
+		"prefix": "epsilon",
+		"body": "&epsilon;"
+
+	},
+	"zeta":{
+		"prefix": "zeta",
+		"body": "&zeta;"
+
+	},
+	"eta":{
+		"prefix": "eta",
+		"body": "&eta;"
+
+	},
+	"theta":{
+		"prefix": "theta",
+		"body": "&theta;"
+	},
+	"iota":{
+		"prefix": "iota",
+		"body": "&iota;"
+	},
+	"kappa":{
+		"prefix": "kappa",
+		"body": "&kappa;"
+	},
+	"lambda":{
+		"prefix": "lambda",
+		"body": "&lambda;"
+	},
+	"theta":{
+		"prefix": "theta",
+		"body": "&theta;"
+	},
+	"mu":{
+		"prefix": "mu",
+		"body": "&mu;"
+	},
+	"nu":{
+		"prefix": "nu",
+		"body": "&nu;"
+	},
+	"xi":{
+		"prefix": "xi",
+		"body": "&xi;"
+	},
+	"omicron":{
+		"prefix": "omicron",
+		"body": "&omicron;"
+	},
+	"pi":{
+		"prefix": "pi",
+		"body": "&pi;"
+	},
+	"mu":{
+		"prefix": "mu",
+		"body": "&mu;"
+	},
+	"rho":{
+		"prefix": "rho",
+		"body": "&rho;"
+	},"sigma":{
+		"prefix": "sigma",
+		"body": "&sigma;"
+	},
+	"tau":{
+		"prefix": "tau",
+		"body": "&tau;"
+	},
+	"upsilon":{
+		"prefix": "upsilon",
+		"body": "&upsilon;"
+	},
+	"phi":{
+		"prefix": "phi",
+		"body": "&phi;"
+	},
+	"chi":{
+		"prefix": "chi",
+		"body": "&chi;"
+	},
+	"psi":{
+		"prefix": "psi",
+		"body": "&psi;"
+	},
+	"omega":{
+		"prefix": "omega",
+		"body": "&omega;"
+	},
+
+	"check":{
+		"prefix": "check",
+		"body": "&check;"
+	},
+
+	"cross":{
+		"prefix": "cross",
+		"body": "&cross;"
+	},
+
+
+
+
+	"region":{
+		"prefix": ["region","fold"],
+		"body": [
+			"<!-- #region -->",
+			"${1}",
+			"<!-- #endregion -->"
+	]
+	},
 	":::note":{
 		"prefix": "note:",
 		"body": [

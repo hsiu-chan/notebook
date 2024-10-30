@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>即時視窗切換監測</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            transition: background-color 0.3s;
+        }
+        #status {
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>即時視窗切換監測</h1>
+    <div id="status">目前在視窗內</div>
+
+    <script>
+        // 當視窗失去焦點時觸發
+        window.addEventListener("blur", function() {
+            document.getElementById("status").textContent = "視窗已切換";
+            document.body.style.backgroundColor = "black";
+            document.getElementById("status").style.color = "white";
+        });
+
+        // 當視窗重新獲得焦點時觸發
+        window.addEventListener("focus", function() {
+            document.getElementById("status").textContent = "視窗已切換回來";
+            document.body.style.backgroundColor = "white";
+            document.getElementById("status").style.color = "black";
+        });
+    </script>
+
+</body>
+</html>
