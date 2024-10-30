@@ -73,26 +73,27 @@
         const status = document.getElementById("status");
         const resetButton = document.getElementById("resetButton");
 
+        // 當視窗失去焦點時觸發
         window.addEventListener("blur", function() {
             status.textContent = "視窗已切換";
             document.body.style.backgroundColor = "black";
             status.style.color = "white";
-            resetButton.classList.add("show");
+            resetButton.classList.add("show"); // 顯示重來按鈕
         });
 
+        // 當視窗重新獲得焦點時，只改變背景顏色，不更動狀態文字
         window.addEventListener("focus", function() {
             if (!resetButton.classList.contains("show")) {
-                status.textContent = "視窗已切換回來";
-                document.body.style.backgroundColor = "white";
-                status.style.color = "black";
+                document.body.style.backgroundColor = "white"; // 僅恢復背景顏色
             }
         });
 
+        // 點擊重來按鈕復位狀態
         resetButton.addEventListener("click", function() {
             status.textContent = "目前在視窗內";
             document.body.style.backgroundColor = "white";
             status.style.color = "black";
-            resetButton.classList.remove("show");
+            resetButton.classList.remove("show"); // 隱藏重來按鈕
         });
     </script>
 
