@@ -294,6 +294,14 @@
         ],
         "description": "Markdown to one line HTML"
     },
+	"Picture box": {
+        "prefix": "\\picBox",
+        "body": [
+            "\\picBox{$1}"
+        ],
+        "description": "Markdown to one line HTML"
+    },
+	
 	"Collapse area": {
         "prefix": "\\collapse",
         "body": [

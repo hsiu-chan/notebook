@@ -18,13 +18,19 @@
 		<key>phrase</key>
 		<string> 治療步驟：A. 局部麻醉+排膿:透過牙齦溝(explorer、probe、no.11 blade) B. 清創、牙根整平、刮除牙結石 C. Compression of the soft tissue wall. D. 用食鹽水(saline)或防腐劑(antiseptics)初醒 E. 咬合調整 F. 抗生素。 抗生素使用時機：出現系統性症狀(部分牙關緊閉、全身不適、發燒、發癌細胞增加、淋巴結腫大)</string>
 		<key>shortcut</key>
-		<string>Pabscess</string>
+		<string>abscess</string>
 	</dict>
 	<dict>
 		<key>phrase</key>
 		<string> 治療方式：服用 Acyclovir、擦 Acyclovir 藥膏、姑息治療(控制牙菌斑、給止痛藥、局部麻醉)。成人多採用姑息治療，若是服用 Acyclovir，則孩童劑量為 15mr/kg、成人劑量為200mg/kg。</string>
 		<key>shortcut</key>
 		<string>hpv</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> pg_tf_td_fn</string>
+		<key>shortcut</key>
+		<string>4bac</string>
 	</dict>
 	<dict>
 		<key>phrase</key>
@@ -46,6 +52,12 @@
 	</dict>
 	<dict>
 		<key>phrase</key>
+		<string> Fusobacterium nucleatum</string>
+		<key>shortcut</key>
+		<string>fn</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
 		<string> Dentogingival fibers Dentoperiosteal fibers Circular fibers Trans-septal gingival fibers</string>
 		<key>shortcut</key>
 		<string>gingivalfiber</string>
@@ -58,7 +70,7 @@
 	</dict>
 	<dict>
 		<key>phrase</key>
-		<string> Apical group Alveolar crest group Horizontal group Oblique group</string>
+		<string> Apical group Alveolar crest group Horizontal group Oblique group Alveolar crestal fibers</string>
 		<key>shortcut</key>
 		<string>pdlgroup</string>
 	</dict>
@@ -79,6 +91,72 @@
 		<string> Matrix metalloproteinases</string>
 		<key>shortcut</key>
 		<string>mmps</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> alveolar mucosa</string>
+		<key>shortcut</key>
+		<string>am</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> periodontal ligament</string>
+		<key>shortcut</key>
+		<string>pdl</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> 1.Strategies of  immune subversion 2. impaired host defense 3. tissue homeostasis / periodontal health 4. inflammation and bone loss</string>
+		<key>shortcut</key>
+		<string>pg4</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> periodontal</string>
+		<key>shortcut</key>
+		<string>perio</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Acellular Afibrillar/ Acellular Extrinsic-fiber/ Cellular Intrinsic-fiber/ Cellular Mixed-fiber </string>
+		<key>shortcut</key>
+		<string>cementum</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> epithelium</string>
+		<key>shortcut</key>
+		<string>epi</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> connective tissue </string>
+		<key>shortcut</key>
+		<string>ct</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> oral gingiva epithelium</string>
+		<key>shortcut</key>
+		<string>og</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Gingival_sulcus free_gingiva marginal_groove attached_gingiva attached_gingiva mucogingival_junction alveolar_mucosa </string>
+		<key>shortcut</key>
+		<string>gs6</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> Presence of copper amalgam</string>
+		<key>shortcut</key>
+		<string>ama</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
+		<string> 有 14%的青少年(15-19 歲)患有牙周炎。有 1%的成年人(35-44 歲)沒有疾病，但有53%的成年人患有牙周炎。 有 73%的老年人(65-74 歲) 患有牙周炎。</string>
+		<key>shortcut</key>
+		<string>CPITN</string>
 	</dict>
 </array>
 </plist>

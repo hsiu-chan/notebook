@@ -1,0 +1,983 @@
+<!DOCTYPE html><html><head>
+      <title>&#x53E3;&#x75C5;_&#x76AE;&#x819A;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("data:application/x-font-woff;charset=utf-8;base64,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") format("woff");
+}
+
+.admonition {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 1.2rem;
+  border-left: .4rem solid rgba(68, 138, 255, .8);
+  border-radius: .2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  overflow: auto;
+}
+
+.admonition>p {
+  margin-top: .8rem;
+}
+
+.admonition>.admonition-title {
+  margin: 0 -1.2rem;
+  padding: .8rem 1.2rem .8rem 3.6rem;
+  border-bottom: 1px solid rgba(68, 138, 255, .2);
+  background-color: rgba(68, 138, 255, .1);
+  font-weight: 700;
+}
+
+.admonition>.admonition-title:before {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.5rem;
+  color: rgba(68, 138, 255, .8);
+  content: "\E3C9";
+}
+
+.admonition>.admonition-title:before {
+  font-family: Material Icons;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  text-transform: none;
+  white-space: nowrap;
+  speak: none;
+  word-wrap: normal;
+  direction: ltr;
+}
+
+.admonition.summary,
+.admonition.abstract,
+.admonition.tldr {
+  border-left-color: rgba(0, 176, 255, .8);
+}
+
+.admonition.summary>.admonition-title,
+.admonition.abstract>.admonition-title,
+.admonition.tldr>.admonition-title {
+  background-color: rgba(0, 176, 255, .1);
+  border-bottom-color: rgba(0, 176, 255, .2);
+}
+
+.admonition.summary>.admonition-title:before,
+.admonition.abstract>.admonition-title:before,
+.admonition.tldr>.admonition-title:before {
+  color: rgba(0, 176, 255, 1);
+  ;
+  content: "\E8D2";
+}
+
+.admonition.hint,
+.admonition.tip {
+  border-left-color: rgba(0, 191, 165, .8);
+}
+
+.admonition.hint>.admonition-title,
+.admonition.tip>.admonition-title {
+  background-color: rgba(0, 191, 165, .1);
+  border-bottom-color: rgba(0, 191, 165, .2);
+}
+
+.admonition.hint>.admonition-title:before,
+.admonition.tip>.admonition-title:before {
+  color: rgba(0, 191, 165, 1);
+  content: "\E80E";
+}
+
+.admonition.info,
+.admonition.todo {
+  border-left-color: rgba(0, 184, 212, .8);
+}
+
+.admonition.info>.admonition-title,
+.admonition.todo>.admonition-title {
+  background-color: rgba(0, 184, 212, .1);
+  border-bottom-color: rgba(0, 184, 212, .2);
+}
+
+.admonition.info>.admonition-title:before,
+.admonition.todo>.admonition-title:before {
+  color: rgba(0, 184, 212, 1);
+  ;
+  content: "\E88E";
+}
+
+.admonition.success,
+.admonition.check,
+.admonition.done {
+  border-left-color: rgba(0, 200, 83, .8);
+}
+
+.admonition.success>.admonition-title,
+.admonition.check>.admonition-title,
+.admonition.done>.admonition-title {
+  background-color: rgba(0, 200, 83, .1);
+  border-bottom-color: rgba(0, 200, 83, .2);
+}
+
+.admonition.success>.admonition-title:before,
+.admonition.check>.admonition-title:before,
+.admonition.done>.admonition-title:before {
+  color: rgba(0, 200, 83, 1);
+  ;
+  content: "\E876";
+}
+
+.admonition.question,
+.admonition.help,
+.admonition.faq {
+  border-left-color: rgba(100, 221, 23, .8);
+}
+
+.admonition.question>.admonition-title,
+.admonition.help>.admonition-title,
+.admonition.faq>.admonition-title {
+  background-color: rgba(100, 221, 23, .1);
+  border-bottom-color: rgba(100, 221, 23, .2);
+}
+
+.admonition.question>.admonition-title:before,
+.admonition.help>.admonition-title:before,
+.admonition.faq>.admonition-title:before {
+  color: rgba(100, 221, 23, 1);
+  ;
+  content: "\E887";
+}
+
+.admonition.warning,
+.admonition.attention,
+.admonition.caution {
+  border-left-color: rgba(255, 145, 0, .8);
+}
+
+.admonition.warning>.admonition-title,
+.admonition.attention>.admonition-title,
+.admonition.caution>.admonition-title {
+  background-color: rgba(255, 145, 0, .1);
+  border-bottom-color: rgba(255, 145, 0, .2);
+}
+
+.admonition.attention>.admonition-title:before {
+  color: rgba(255, 145, 0, 1);
+  content: "\E417";
+}
+
+.admonition.warning>.admonition-title:before,
+.admonition.caution>.admonition-title:before {
+  color: rgba(255, 145, 0, 1);
+  content: "\E002";
+}
+
+.admonition.failure,
+.admonition.fail,
+.admonition.missing {
+  border-left-color: rgba(255, 82, 82, .8);
+}
+
+.admonition.failure>.admonition-title,
+.admonition.fail>.admonition-title,
+.admonition.missing>.admonition-title {
+  background-color: rgba(255, 82, 82, .1);
+  border-bottom-color: rgba(255, 82, 82, .2);
+}
+
+.admonition.failure>.admonition-title:before,
+.admonition.fail>.admonition-title:before,
+.admonition.missing>.admonition-title:before {
+  color: rgba(255, 82, 82, 1);
+  ;
+  content: "\E14C";
+}
+
+.admonition.danger,
+.admonition.error,
+.admonition.bug {
+  border-left-color: rgba(255, 23, 68, .8);
+}
+
+.admonition.danger>.admonition-title,
+.admonition.error>.admonition-title,
+.admonition.bug>.admonition-title {
+  background-color: rgba(255, 23, 68, .1);
+  border-bottom-color: rgba(255, 23, 68, .2);
+}
+
+.admonition.danger>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E3E7";
+}
+
+.admonition.error>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E14C";
+}
+
+.admonition.bug>.admonition-title:before {
+  color: rgba(255, 23, 68, 1);
+  content: "\E868";
+}
+
+.admonition.example,
+.admonition.snippet {
+  border-left-color: rgba(0, 184, 212, .8);
+}
+
+.admonition.example>.admonition-title,
+.admonition.snippet>.admonition-title {
+  background-color: rgba(0, 184, 212, .1);
+  border-bottom-color: rgba(0, 184, 212, .2);
+}
+
+.admonition.example>.admonition-title:before,
+.admonition.snippet>.admonition-title:before {
+  color: rgba(0, 184, 212, 1);
+  ;
+  content: "\E242";
+}
+
+.admonition.quote,
+.admonition.cite {
+  border-left-color: rgba(158, 158, 158, .8);
+}
+
+.admonition.quote>.admonition-title,
+.admonition.cite>.admonition-title {
+  background-color: rgba(158, 158, 158, .1);
+  border-bottom-color: rgba(158, 158, 158, .2);
+}
+
+.admonition.quote>.admonition-title:before,
+.admonition.cite>.admonition-title:before {
+  color: rgba(158, 158, 158, 1);
+  ;
+  content: "\E244";
+}
+
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.markdown-preview .title {
+  align-items: center;
+}
+.markdown-preview .title h1 {
+  border-bottom: 0;
+  text-align: center;
+  font-size: 2.75em;
+}
+.markdown-preview h1 {
+  padding-bottom: 0.3rem;
+  border-bottom: solid #fff;
+}
+.markdown-preview h2 {
+  font-weight: normal;
+  padding-bottom: 0.3rem;
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview h3 {
+  font-weight: bold;
+}
+.markdown-preview h4 {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+.markdown-preview hr {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1pt solid #8b8b8b;
+}
+@media screen and (max-width: 450px) {
+  .table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .table-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
+.markdown-preview table {
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+  color: #f0ffff;
+  border-collapse: collapse;
+  display: table;
+}
+@media screen and (max-width: 450px) {
+  .markdown-preview table {
+    table-layout: auto;
+  }
+}
+.markdown-preview table thead {
+  position: sticky;
+  background-color: hsl(220, 13%, 8%);
+  top: 0;
+  z-index: 999;
+}
+.markdown-preview table th {
+  text-align: center;
+  font-weight: bold;
+  color: #81b4f4;
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td {
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table tr {
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td ol,
+.markdown-preview table th ol,
+.markdown-preview table td ul,
+.markdown-preview table th ul {
+  padding-left: 0;
+  list-style-position: inside;
+  /* 控制項目符號的位置 */
+  text-align: left;
+  /* 文字對齊方式 */
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
+  width: 100%;
+  max-width: 914px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 32px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
+}
+html body {
+  background-color: hsl(220, 13%, 18%);
+  /* 侧栏 */
+  /* 侧栏自动编号 */
+  /* 复位计数器 */
+  /* 进行编号 */
+  /*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
+}
+html body img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+html body .md-sidebar-toc {
+  margin: 0rem 0rem 0em 0em;
+  padding: 0rem 0rem 0em 0rem;
+  width: auto;
+  max-width: 768px;
+  margin-bottom: 1em;
+  background-color: rgba(186, 55, 55, 0.1);
+  /*背景颜色*/
+  position: absolute;
+  z-index: 70;
+}
+html body .md-sidebar-toc a {
+  color: inherit;
+  font-size: 0.7rem !important;
+}
+html body .md-sidebar-toc a:hover {
+  color: inherit;
+}
+html body .md-sidebar-toc li {
+  margin-left: 1rem;
+  margin-bottom: 0 !important;
+  text-align: left;
+  /*左对齐*/
+}
+html body .md-sidebar-toc ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+  padding-right: 0 !important;
+}
+html body .md-sidebar-toc ul li {
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-weight: bold;
+  /*一级大纲*/
+}
+html body .md-sidebar-toc ul li:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc ul ul {
+  padding-left: 0rem !important;
+  display: none;
+}
+html body .md-sidebar-toc .active {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc .active ul,
+html body .md-sidebar-toc .active ul ul,
+html body .md-sidebar-toc .active li {
+  display: block;
+}
+html body .md-sidebar-toc ul ul:hover {
+  color: #87ffff;
+}
+html body .md-sidebar-toc ul ul li {
+  margin-bottom: 8pt !important;
+  margin-top: 3pt !important;
+  margin-left: 0rem;
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 0.2rem;
+  border-left: 2px rgba(0, 0, 0, 0) solid;
+}
+html body .md-sidebar-toc ul ul li:hover {
+  font-style: normal;
+  border-left: 2px solid;
+}
+html body .md-sidebar-toc ul ul ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+}
+html body .md-sidebar-toc ul ul ul li {
+  margin-top: 2pt !important;
+  margin-bottom: 2pt !important;
+  margin-left: 0rem;
+  padding-left: 0.5rem;
+  border-left: 0px;
+}
+html body .md-sidebar-toc ul ul ul li:hover {
+  border-left: 0px solid;
+}
+html body body {
+  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+}
+html body .md-sidebar-toc li {
+  counter-reset: outline-h1;
+}
+html body .md-sidebar-toc ul li {
+  counter-reset: outline-h2;
+}
+html body .md-sidebar-toc ul ul li {
+  counter-reset: outline-h3;
+}
+html body .md-sidebar-toc ul ul ul li {
+  counter-reset: outline-h4;
+}
+html body .md-sidebar-toc ul ul ul ul li {
+  counter-reset: outline-h5;
+}
+html body .md-sidebar-toc ul ul li:before {
+  counter-increment: outline-h2;
+  content: counter(outline-h2) " ";
+  font-size: 0.7em;
+}
+html body .md-sidebar-toc ul ul ul li:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
+}
+html body .md-sidebar-toc ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
+}
+html body .md-sidebar-toc ul ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
+}
+html body .dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+html body header,
+html body section,
+html body aside,
+html body .in,
+html body footer {
+  margin: 0 1% 0.3em 0;
+}
+html body section {
+  float: left;
+  width: 49%;
+}
+html body footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+html body .btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+html body .btn:active {
+  opacity: 0.8;
+}
+@media screen and (max-width: 400px) {
+  html body img {
+    width: 100% !important;
+  }
+}
+html body .fbox {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html body .fbox img {
+  position: relative;
+  left: 0;
+  transform: translate(0, 0);
+  padding: 0;
+  background-color: white;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+      <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="%E7%9A%AE%E8%86%9A%E7%96%BE%E7%97%85">&#x76AE;&#x819A;&#x75BE;&#x75C5;</h1>
+
+<h2 class="mume-header" id="%E5%A4%96%E8%83%9A%E5%B1%A4%E7%99%BC%E8%82%B2%E4%B8%8D%E8%89%AF">&#x5916;&#x80DA;&#x5C64;&#x767C;&#x80B2;&#x4E0D;&#x826F;</h2>
+
+<dl>
+<dt>Ectodermal Dysplasia</dt>
+<dd>&#x5169;&#x500B;&#x4EE5;&#x4E0A;&#x5916;&#x80DA;&#x5C64;&#x4F86;&#x6E90;&#x7684;&#x69CB;&#x9020;&#x7121;</dd>
+</dl>
+<ul>
+<li><span style="margin:0; color:Deepskyblue">X&#x96B1;&#x6027;</span></li>
+<li>EDA mutation
+<ul>
+<li>NF&#x3BA;B family</li>
+</ul>
+</li>
+<li>&#x7279;&#x5FB5;
+<ul>
+<li>&#x7F3A;&#x7259;&#x3001;&#x5C11;&#x9AEE;&#x3001;&#x53E3;&#x4E7E;&#x3001;&#x7121;&#x6C57;</li>
+<li>&#x5B8C;&#x5168;&#x7F3A;&#x7259; (anodontia) &#x5C11;&#x898B;</li>
+<li>&#x773C;&#x775B;&#x5468;&#x570D;&#x7D30;&#x5C0F;&#x3001;&#x6709;&#x8272;&#x7D20;&#x6C89;&#x6FB1;&#x7684;&#x76BA;&#x7D0B;</li>
+<li>midface hypoplasia</li>
+<li>&#x6307;&#x7532;&#x53EF;&#x80FD;&#x51FA;&#x73FE;&#x71DF;&#x990A;&#x4E0D;&#x826F;&#x548C;&#x6613;&#x788E;</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;.png" alt="alt text" style=";background-color: white;padding:0">
+<h2 class="mume-header" id="%E8%A7%92%E5%8C%96%E7%95%B0%E5%B8%B8">&#x89D2;&#x5316;&#x7570;&#x5E38;</h2>
+
+<p>Disorder of Keratinization</p>
+<div class="admonition info">
+<p class="admonition-title">&#x89D2;&#x8CEA;</p>
+<p>5&#x3001;14: &#x8907;&#x5C64;&#x53E3;&#x8154;&#x4E0A;&#x76AE;&#x90FD;&#x6709;</p>
+<p>1&#x3001;6&#x3001;10&#x3001;16: &#x89D2;&#x5316;</p>
+<p>4&#x3001;13&#x3001;19: &#x975E;&#x89D2;&#x5316;</p>
+</div>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">&#x540D;&#x7A31;</th>
+
+<th>&#x6210;&#x56E0;</th>
+<th>GLA</th>
+<th colspan="3">&#x7279;&#x5FB5;</th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2" colspan="2">White Sponge Nevus<sup>&#x826F;</sup> <br> (Cannon disease)</td>
+
+<td rowspan="2">&#x9AD4;&#x986F;&#x6027;</td>
+<td rowspan="2">&#x5169;&#x5074;&#x7684;&#x9830;&#x9ECF;&#x819C;&#xFF0C;&#x51FA;&#x751F;&#x6642;&#x3001;&#x5B69;&#x7AE5;&#x65E9;&#x671F;</td>
+<td colspan="3"><ul> <li>&#x53E3;&#x8154;&#x9ECF;&#x819C;&#x7684;&#x6B63;&#x5E38;&#x89D2;&#x8CEA;&#x5316;&#x7F3A;&#x9677;</li> <li>&#x5C0D;&#x7A31;</li> <li>keratin 4 &#x548C; keratin 13 &#x8868;&#x73FE;&#x5728;&#x4E0A;&#x76AE;&#x7684;&#x68D8;&#x72C0;&#x4E0A;&#x76AE;&#x7D30;&#x80DE;&#x5C64;</li> </ul></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>hyperparakeratosis, acanthosis</li> <li>spinous layer &#x6E05;&#x6F88;&#x7684;&#x7D30;&#x80DE;&#x8CEA;</li> <li>&#x8868;&#x5C64;&#x7D30;&#x80DE;&#x6838;&#x5468;&#x570D;&#x55DC;&#x9178;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-1.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Hereditary Benign Intraepithelial Dyskeratosis<sup>&#x826F;</sup> <br>(HBID, Witkop&#x2019;s disease)</td>
+
+<td rowspan="2">&#x9AD4;&#x986F;&#x6027; <br><code>GENE</code>: 4q35&#x7AEF;&#x7C92;, <span style="margin:0; color: gray;">NLRP1, M77T</span></td>
+<td rowspan="2">&#x53E3;&#x8154;&#x8207;&#x7D50;&#x819C;&#x9ECF;&#x819C;&#xFF0C;&#x5B69;&#x7AE5;</td>
+<td colspan="3"><ul> <li>&#x985E;&#x4F3C;Cannon disease</li> <li>&#x773C;&#x775B;: &#x4E0D;&#x900F;&#x660E;&#x51DD;&#x81A0;&#x72C0;&#x6591;&#x584A;</li> <li>&#x820C;&#x80CC;: &#x901A;&#x5E38;&#x6C92;&#x6709;&#x5F71;&#x97FF;</li> </ul> - <img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-2.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>hyperparakeratosis, acanthosis</li> <li>upper spinous layer &#x5C40;&#x90E8;&#x89D2;&#x5316;</li> <li>ell-within-a- cell</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-3.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+<td rowspan="3" colspan="2">Pachyonychia Congenita  &#x5148;&#x5929;&#x6027;&#x539A;&#x7532;&#x75C7;</td>
+
+<td rowspan="3">&#x9AD4;&#x986F;&#x6027;</td>
+<td rowspan="3">-</td>
+<td colspan="3"><ul> <li>keratin 6a, 6b, 16, 17</li> <li>&#x624B;&#x638C;&#x8DDF;&#x8173;&#x638C;&#x539A;&#x7E6D;&#x3001;&#x6307;&#x7532;&#x5E95;&#x90E8;&#x7D2F;&#x7A4D;&#x89D2;&#x86CB;&#x767D;</li> <li>&#x591A;&#x6C57;</li> <li>&#x8D70;&#x8DEF;&#x6703;&#x6709;&#x660E;&#x986F;&#x7684;&#x75BC;&#x75DB;</li> </ul> <div class="fbox"><img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-8.png" alt="alt text" style="width:50%;background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-9.png" alt="alt text" style="width:30%;background-color: white;padding:0"></div></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>&#x53E3;&#x5167;<sup>&#x826F;</sup> <code>GENE</code>: keratin 6a (KRT6a)</li> <li>&#x5982;&#x679C;: Keratin 17 &#x2192; neonatal teeth, oral white lesion(1/3)</li> </ul></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>hyperkeratosis, acanthosis</li> <li>&#x6591;&#x72C0;&#x9846;&#x7C92;&#x589E;&#x751F;(patchy hypergranulosis)</li> <li>&#x6BDB;&#x56CA;&#x75C5;&#x8B8A;&#xFF0C;&#x5835;&#x585E;</li> <li>white spongy nevus &#x6BD4;&#x8F03;: &#x8868;&#x76AE;&#x7D30;&#x80DE;&#x6838;&#x65C1;&#x6E05;&#x6F88;&#x7684;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-4.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Dyskeratosis Congenita <br> &#x5148;&#x5929;&#x6027;&#x89D2;&#x5316;&#x4E0D;&#x826F;</td>
+
+<td rowspan="2"><span style="margin:0; color:Deepskyblue">X&#x96B1;&#x6027;</span> <br> <code>GENE</code>: DKC1</td>
+<td rowspan="2">10y &#x2193;</td>
+<td colspan="3"><ul> <li>&#x5F71;&#x97FF; telomerase</li> <li>&#x518D;&#x751F;&#x6027;&#x8CA7;&#x8840;(aplastic anemia)</li> <li>&#x6613;&#x6709;&#x60E1;&#x6027;&#x8B8A;&#x5316;</li> <li>&#x76AE;&#x819A;&#x7DB2;&#x72C0;&#x7684;&#x8272;&#x7D20;&#x904E;&#x5EA6;&#x6C89;&#x6FB1;</li> <li>&#x6307;&#x7532;&#x6703;&#x6709;&#x660E;&#x986F;&#x7684;&#x840E;&#x7E2E;&#xFF0C;&#x751A;&#x81F3;&#x6D88;&#x5931;</li> <li>&#x6C92;&#x5F97;&#x91AB;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-5.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>&#x6C34;&#x6CE1;(bullae) &#x2192; &#x767D;&#x6591; &#x2192; OPMD</li> </ul></td>
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Hereditary Mucoepithelial Dysplasia<sup>&#x826F;</sup></td>
+
+<td rowspan="2">&#x9AD4;&#x986F;&#x6027;</td>
+<td rowspan="2">-</td>
+<td colspan="3"><ul> <li>&#x5C11;&#x6BDB;&#x812B;&#x9AEE;&#x3001;&#x754F;&#x5149;&#x3001;&#x8996;&#x529B;&#x660E;&#x986F;&#x53D7;&#x640D;</li> <li>&#x8EDF;&#x786C;&#x984E;&#x4EA4;&#x754C;&#x660E;&#x986F;&#x706B;&#x7D05;&#x73ED;</li> <li>&#x8868;&#x5FB5;&#x660E;&#x986F;&#xFF0C;&#x4F46;&#x901A;&#x5E38;&#x6C92;&#x6709;&#x75C7;&#x72C0;(asymptomatic)</li> </ul></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>minimal keratinization</li> <li>&#x96DC;&#x4E82;&#x7121;&#x7AE0;&#x7684;&#x6210;&#x719F;</li> <li>&#x7121;&#x660E;&#x986F;&#x7684;&#x6838;&#x3001;&#x7D30;&#x80DE;&#x591A;&#x5F62;&#x6027;</li> </ul> <div class="fbox"> <img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-6.png" alt="alt text" style="width:60%;background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-7.png" alt="alt text" style="width:35%;background-color: white;padding:0"></div></td>
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Papillon-Lef&#xE8;vre Syndrome</td>
+
+<td rowspan="2"><code>GENE</code>: cathepsin C gene</td>
+<td rowspan="2">&#x624B;&#x638C;&#x8207;&#x8173;&#x5E95;</td>
+<td colspan="3"><ul> <li>Cathepsin C: &#x6EB6;&#x9176;&#x9AD4;&#x5167;&#x86CB;&#x767D;&#x9176;</li> <li>&#x76AE;&#x819A;&#x75C5;&#x7076;&#x7684;&#x6CBB;&#x7642;:&#x7DAD; A &#x9178;&#x985E;(systemic retinoids)</li> </ul></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>PMN &#x529F;&#x80FD;&#x4E0D;&#x8DB3; &#x2192; &#x56B4;&#x91CD;&#x7259;&#x5468;&#x75C5;</li> <li>&#x5FEB;&#x901F;&#x7684;&#x9AA8;&#x6D41;&#x5931; &#x2192; floating in air</li> <li>&#x7030;&#x6F2B;&#x51FA;&#x8840;&#x8207;&#x589E;&#x751F;&#x6027;&#x7259;&#x9F66;&#x708E;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-10.png" alt="alt text" style="width:25%;background-color: white;padding:0"></td>
+
+
+</tr>
+</tbody>
+</table></div>
+<h2 class="mume-header" id="%E8%89%B2%E7%B4%A0%E7%9B%B8%E9%97%9C">&#x8272;&#x7D20;&#x76F8;&#x95DC;</h2>
+
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">&#x540D;&#x7A31;</th>
+
+<th>&#x6210;&#x56E0;</th>
+<th>GLA</th>
+<th colspan="3">&#x7279;&#x5FB5;</th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Peutz-Jeghers syndrome</td>
+
+<td>&#x9AD4;&#x986F;&#x6027;&#xFF0C;<br> &#x6291;&#x764C; <code>GENE</code>: STK11(LKB1)</td>
+<td>&#x5152;&#x7AE5;&#x65E9;&#x671F;</td>
+<td colspan="3"><ul> <li>&#x96C0;&#x6591;&#x6A23;(freckle-like): &#x967D;&#x5149;&#x7121;&#x95DC;&#xFF0C;&#x767C;&#x751F;&#x65BC;&#x624B;&#x90E8;&#x3001;&#x958B;&#x53E3;&#x5468;&#x570D;</li> <li>&#x6731;&#x7D05;&#x5340;&#x3001;&#x53E3;&#x8154;&#x9ECF;&#x819C;&#x3001;&#x820C;&#x982D;&#x51FA;&#x73FE; &#x3C6; 1~4mm &#x7684;&#x68D5;&#x8272;&#x81F3;&#x85CD;&#x7070;&#x8272;&#x6591;&#x9EDE;</li> <li>&#x8178;&#x606F;&#x8089;(intestinal polyps&#xFF0C;&#x826F;) &#x2192; &#x8178;&#x6897;&#x585E; &#x2192; &#x5927;&#x6BD4;&#x4F8B;&#x767C;&#x5C55;&#x6210;&#x80C3;&#x8178;&#x9053;&#x817A;&#x764C;</li> <li>&#x9ED1;&#x8272;&#x7D20;&#x7D30;&#x80DE;&#x7121;&#x660E;&#x986F;&#x589E;&#x52A0;&#xFF0C;&#x4F46;&#x6A39;&#x7A81;&#x5EF6;&#x9577;</li> </ul></td>
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Incontinentia Pigmenti <br> (&#x8272;&#x7D20;&#x5931;&#x8ABF;&#x75C5;&#xFF0C;Bloch-Sulzberger syndrome )</td>
+
+<td rowspan="2"><span style="margin:0; color:red">X&#x986F;&#x6027;</span> <br> <code>GENE</code>: NEMO (NF&#x3BA;B Essential Modulator)</td>
+<td rowspan="2">&#x525B;&#x51FA;&#x751F;</td>
+<td colspan="3"><ul> <li>&#x5148;&#x5929;&#x514D;&#x75AB; gg</li> <li>CNS (30%)</li> <li>&#x773C;&#x775B; (35%): &#x659C;&#x8996;(strabismus)&#x3001;&#x773C;&#x7403;&#x9707;&#x986B;(nystagmus)&#x3001;&#x767D;&#x5167;&#x969C;(cataracts)&#x3001;&#x8996;&#x7DB2;&#x819C;&#x8840;&#x7BA1;&#x7570;&#x5E38;&#x3001;&#x8996;&#x795E;&#x7D93;&#x840E;&#x7E2E;</li> <li>&#x76AE;&#x819A;: &#x6C34;&#x76B0;&#x671F; &#x2192; &#x75A3;&#x72C0;&#x671F; &#x2192; &#x8272;&#x7D20;&#x904E;&#x5EA6;&#x6C89;&#x7A4D;&#x968E;&#x6BB5; &#x2192; &#x840E;&#x7E2E;&#x548C;&#x812B;&#x8272;&#x968E;&#x6BB5;</li> <li>&#x53E3;&#x8154;: &#x540C; EDA mutation</li> </ul></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><h4>&#x6C34;&#x76B0;&#x671F;</h4>&#x4E0A;&#x76AE;&#x5167;&#x88C2;&#x89E3;&#xFF0C;&#x5167;&#x90E8;&#x5145;&#x6EFF;&#x55DC;&#x9178;&#x6027;&#x7403;<h4>&#x75A3;&#x72C0;&#x671F;</h4>&#x904E;&#x5EA6;&#x89D2;&#x5316;, acanthosis, papillomatosis<h4>&#x8272;&#x7D20;&#x904E;&#x5EA6;&#x6C89;&#x7A4D;&#x968E;&#x6BB5;</h4>&#x76AE;&#x4E0B;&#x7D50;&#x7DE0;&#x7D44;&#x7E54; melanin-containing macrophage&#xFF0C;&#x5373;&#x9ED1;&#x8272;&#x7D20;&#x5931;&#x8ABF;(melanin incontinence)<img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-11.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+</tbody>
+</table></div>
+<h2 class="mume-header" id="%E4%B8%8A%E7%9A%AE%E8%A3%82%E8%A7%A3%E7%97%85">&#x4E0A;&#x76AE;&#x88C2;&#x89E3;&#x75C5;</h2>
+
+<p>Acantholytic Disorder</p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">&#x540D;&#x7A31;</th>
+
+<th>&#x6210;&#x56E0;</th>
+<th>GLA</th>
+<th colspan="3">&#x7279;&#x5FB5;</th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2" colspan="2">Keratosis follicularis (Darier Disease)</td>
+
+<td rowspan="3">&#x9AD4;&#x986F;&#x6027;&#xFF0C; ATP2A2 mutation &#x2192; &#x7D30;&#x80DE;&#x5167;&#x9223;&#x96E2;&#x5B50;&#x5E6B;&#x6D66;(SERCA2) &#x7570;&#x5E38; &#x2192; desmosome &#x7570;&#x5E38;</td>
+<td rowspan="2">10-20y</td>
+<td colspan="3"><ul> <li>&#x76AE;&#x819A;&#x660E;&#x986F;&#x75C7;&#x72C0;&#xFF0C;&#x53E3;&#x8154;&#x8F15;&#x5FAE;</li> <li>&#x591A;&#x767C;&#x6027;&#x7D05;&#x6591;</li> <li>keratin &#x5806;&#x7A4D; &#x2192; &#x60E1;&#x81ED;</li> <li>&#x6307;&#x7532;&#x51FA;&#x73FE;&#x7E31;&#x5411;&#x7DDA;&#x689D;&#x3001;&#x9686;&#x8D77;&#x3001;&#x75BC;&#x75DB;&#x7684;&#x88C2;&#x53E3;&#x3002;</li> <li>&#x53E3;&#x8154;: &#x89D2;&#x5316;&#x7C98;&#x819C;&#xFF0C;&#x5E73;&#x9802;&#x4E18;&#x75B9;(flat topped papules)</li> </ul> <div class="fbox"><img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-12.png" alt="alt text" style="width:30%;background-color: white;padding:0"><img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-13.png" alt="alt text" style="width:25%;background-color: white;padding:0"><img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-14.png" alt="alt text" style="width:30%;background-color: white;padding:0"></div><img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-15.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>&#x4E0A;&#x76AE;&#x5167;&#x88C2; (acantholysis)</li> <li>Rete ridges &#x7A84;&#x9577;&#xFF0C;&#x4E14;&#x5448;&#x8A66;&#x7BA1;&#x72C0;&#x3002;</li> <li>&#x89D2;&#x5316;&#x4E0D;&#x826F;&#x7D30;&#x80DE;: corps ronds &amp; grains(&#x985E;&#x4F3C;&#x65BC;&#x7A40;&#x7C92;)</li> <li>central keratin plug : keratin &#x5806;&#x7A4D;</li> </ul> <div class="fbox"><img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-16.png" alt="alt text" style="width:50%;background-color: white;padding:0"><img src="paste_src/&#x53E3;&#x75C5;_&#x76AE;&#x819A;-17.png" alt="alt text" style="width:50%;background-color: white;padding:0"></div></td>
+
+
+</tr>
+<tr>
+<td colspan="2">Warty Dyskeratoma <br> (&#x75A3;&#x72C0;&#x89D2;&#x5316;&#x4E0D;&#x826F;&#xFF0C; <br> Isolated Darier disease)</td>
+
+
+<td><ul> <li>&#x76AE;&#x819A;: &#x55AE;&#x767C;&#xFF0C;&#x8001;&#x4EBA;</li> <li>&#x53E3;&#x8154;: &#x89D2;&#x5316;&#x7C98;&#x819C;&#xFF0C;40y&#x2191;</li> </ul></td>
+<td colspan="3"><ul> <li>&#x4FDD;&#x5B88;&#x6027;&#x5207;&#x9664;&#xFF0C;&#x9810;&#x5F8C;&#x826F;&#x597D;&#xFF0C;&#x6C92;&#x6709;&#x660E;&#x986F;&#x7684;&#x60E1;&#x6027;&#x6F5B;&#x80FD;</li> <li>&#x985E;&#x4F3C; Darier disease&#xFF0C;&#x9664;&#x4E86;&#x7121; corps ronds, grains &#x578B;&#x614B;</li> </ul></td>
+
+
+</tr>
+</tbody>
+</table></div>
+<h2 class="mume-header" id="connective-tissue-tumors">Connective Tissue Tumors</h2>
+
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">&#x540D;&#x7A31;</th>
+
+<th>&#x6210;&#x56E0;</th>
+<th>GLA</th>
+<th colspan="3">&#x7279;&#x5FB5;</th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hereditary Hemorrhagic Telangiectasia (&#x907A;&#x50B3;&#x6027;&#x51FA;&#x8840;&#x6027;&#x5FAE;&#x8840;&#x7BA1;&#x64F4;&#x5F35;&#x75C7;&#xFF0C;HHT&#xFF0C;Weber syndrome)</td>
+<td>&#x9AD4;&#x986F;&#x6027;</td>
+<td><code>GENE</code><ul> <li>HHT1: endoglin(ENG)</li> <li>HHT2: activin receptor-like kinase(ALK1;ACVRL1)</li> <li>HHT + juvenile polyposis: MADH4</li> </ul></td>
+<td colspan="4"><ul> <li>&#x6D41;&#x9F3B;&#x8840;(epistaxis)&#x800C;&#x88AB;&#x8A3A;&#x65B7;</li> <li>&#x53E3;&#x9F3B;&#x7C98;&#x819C;&#x7D05;&#x8272;&#x4E18;&#x75B9;&#xFF0C;&#x58D3;&#x8FEB;&#x8B8A;&#x767D;</li> <li>&#x8178;&#x9053;&#x6613;&#x51FA;&#x8840; &#x2192; &#x6162;&#x6027;&#x7F3A;&#x9435;&#x6027;&#x8CA7;&#x8840;</li> <li>&#x52D5;&#x975C;&#x8108;&#x5ED4;(arteriovenous fistulas)</li> <li>&#x7259;&#x5468;&#x8840;&#x7BA1;&#x7578;&#x5F62; &#x2192; &#x83CC;&#x8840; &#x2192; &#x5316;&#x81BF;&#x6027;&#x80BA;&#x6813;&#x585E;</li> </ul></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
+<h2 class="mume-header" id="%E5%85%B6%E4%BB%96">&#x5176;&#x4ED6;</h2>
+
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">&#x540D;&#x7A31;</th>
+
+<th>&#x6210;&#x56E0;</th>
+<th>GLA</th>
+<th colspan="3">&#x7279;&#x5FB5;</th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Xeroderma Pigmentosum<sup>&#x7F55;</sup> <br> &#x8457;&#x8272;&#x6027;&#x4E7E;&#x76AE;&#x75C5;</td>
+
+<td>&#x9AD4;&#x96B1;&#x6027;&#xFF0C;UV&#x640D;&#x50B7;&#x4FEE;&#x5FA9;&#x4E0D;&#x80FD;</td>
+<td>&#x4E0B;&#x5507;&#x548C;&#x820C;&#x5C16;(SCC &#x591A;)&#xFF0C;<br> &#x5F88;&#x65E9; <br> (&#x53E3;&#x8154;: 20y&#x2193; ; &#x975E;&#x9ED1;&#x8272;&#x7D20;&#x76AE;&#x819A;&#x764C;: 10y&#x2193;)</td>
+<td colspan="3"><ul> <li>&#x5BB9;&#x6613;&#x8F49;&#x6210; SCC, BCC</li> <li>&#x6C92;&#x5F97;&#x91AB;</li> </ul></td>
+
+
+</tr>
+</tbody>
+</table></div>
+<br><br>
+
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+<script> 
+var Main_LeftListLiSelector = $(".md-sidebar-toc li");
+
+$(Main_LeftListLiSelector).on('click', function() {
+  $(Main_LeftListLiSelector).removeClass('active');
+  $(this).addClass('active');
+});
+</script>
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#%E7%9A%AE%E8%86%9A%E7%96%BE%E7%97%85">&#x76AE;&#x819A;&#x75BE;&#x75C5;</a>
+<ul>
+<li><a href="#%E5%A4%96%E8%83%9A%E5%B1%A4%E7%99%BC%E8%82%B2%E4%B8%8D%E8%89%AF">&#x5916;&#x80DA;&#x5C64;&#x767C;&#x80B2;&#x4E0D;&#x826F;</a></li>
+<li><a href="#%E8%A7%92%E5%8C%96%E7%95%B0%E5%B8%B8">&#x89D2;&#x5316;&#x7570;&#x5E38;</a></li>
+<li><a href="#%E8%89%B2%E7%B4%A0%E7%9B%B8%E9%97%9C">&#x8272;&#x7D20;&#x76F8;&#x95DC;</a></li>
+<li><a href="#%E4%B8%8A%E7%9A%AE%E8%A3%82%E8%A7%A3%E7%97%85">&#x4E0A;&#x76AE;&#x88C2;&#x89E3;&#x75C5;</a></li>
+<li><a href="#connective-tissue-tumors">Connective Tissue Tumors</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96">&#x5176;&#x4ED6;</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
