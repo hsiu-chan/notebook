@@ -77,6 +77,15 @@
 .markdown-preview table tr {
   border: 1.5px solid #8b8b8b;
 }
+.markdown-preview table td,
+.markdown-preview table tr {
+  /* 中文隨意斷行，英文盡量不斷 */
+  word-break: break-word;
+  /* 英文單字超出時自動加上 - */
+  hyphens: auto;
+  /* 若空白過多不強制換行 */
+  white-space: normal;
+}
 .markdown-preview table td ol,
 .markdown-preview table th ol,
 .markdown-preview table td ul,
@@ -355,7 +364,7 @@ html body .fbox {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);

@@ -111,11 +111,28 @@
 
   td {
     border: 1.5px solid @line-color;
+
+
   }
 
   tr {
     border: 1.5px solid @line-color;
+
   }
+
+  td, tr{
+   
+
+     /* 中文隨意斷行，英文盡量不斷 */
+     word-break: break-word;
+     /* 英文單字超出時自動加上 - */
+     hyphens: auto;
+     /* 若空白過多不強制換行 */
+     white-space: normal;
+  }
+
+
+
 
   tr:nth-child(2n) {
     //background-color: #202020;
@@ -533,7 +550,7 @@ html body {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);

@@ -412,6 +412,42 @@ Grading 的判斷較為主觀,[staging](#oscc-staging) 和預後(prognosis)的�
 - 組織 
   - nonkeratinizing SCC
 
+
+
+## Keratoacanthoma^良^ (角質棘皮瘤)
+
+> 罵取硬要補充，都給他講就好啦
+
+- 自限性上皮增生
+- 病因: DNA 修復缺陷 
+  - 陽光曝曬: 65-71y，男性
+  - 與其他DNA 修復缺陷疾病相關 
+    - Xeroderma Pigmentosum
+    - Muir-Torre Syndrome
+- 位置: 上下唇頻率相等
+- 特徵: 
+  - 堅硬、界限清楚、廣底
+  - 中央角蛋白栓塞
+
+
+![alt text](paste_src/口病_epithelialTumor-7.png)
+![alt text](paste_src/口病_epithelialTumor-8.png)
+
+- 三階段 
+  - Growth Phase: 會迅速增大
+  - Stationary Phase: 穩定大小 
+  - Involution Phase:自發性消
+    - 大多 6 至 12 月消退
+
+- 組織 
+  - 中央凹陷處的邊緣會有銳角
+  - 坑洞內充滿角蛋白
+  - 不會延伸超過病灶的汗腺
+  - 分化成熟，但角化不良，可能 keratin pearls
+  - 與 SCC 很難區分 &rarr; 切
+
+![alt text](paste_src/口病_epithelialTumor-9.png =25)
+
 ## 整理 
 
 ### Verruciform xanthoma 相關疾病

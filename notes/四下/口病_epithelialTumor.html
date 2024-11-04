@@ -308,7 +308,7 @@
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .table-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -323,11 +323,12 @@
   width: 100%;
   table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
   border-collapse: collapse;
   display: table;
+  margin-top: 1rem;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .markdown-preview table {
     table-layout: auto;
   }
@@ -354,17 +355,28 @@
 .markdown-preview table th ol,
 .markdown-preview table td ul,
 .markdown-preview table th ul {
-  padding-left: 0;
   list-style-position: inside;
   /* 控制項目符號的位置 */
   text-align: left;
   /* 文字對齊方式 */
 }
+.markdown-preview table th.top-left,
+.markdown-preview table td.top-left {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+}
+.markdown-preview table th.top-left > .col-title,
+.markdown-preview table td.top-left > .col-title {
+  text-align: right;
+}
+.markdown-preview table th.top-left > .row-title,
+.markdown-preview table td.top-left > .row-title {
+  text-align: left;
+}
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -386,6 +398,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
+  /* Modal (background for enlarged image) */
   /* 侧栏 */
   /* 侧栏自动编号 */
   /* 复位计数器 */
@@ -615,7 +628,63 @@ html body .fbox img {
   left: 0;
   transform: translate(0, 0);
   padding: 0;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
@@ -720,7 +789,7 @@ html body .fbox img {
 
 
 
-<td colspan="4"><ul> <li>hyperparakeratosis &#x4F46; granular layer &#x660E;&#x986F; &#x2192; coarse keratohyalin granules</li> <li>&#x201C;cupping&#x201D; effect: rete ridges &#x5F80; lesion &#x4E2D;&#x5FC3;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-51.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+<td colspan="4"><ul> <li>hyperparakeratosis &#x4F46; granular layer &#x660E;&#x986F; &#x2192; coarse keratohyalin granules</li> <li>&#x201C;cupping&#x201D; effect: rete ridges &#x5F80; lesion &#x4E2D;&#x5FC3;<br><img src="paste_src/&#x53E3;&#x75C5;-51.png" alt="alt text" style="width:50%;background-color: white;padding:0"></li> </ul></td>
 
 
 
@@ -767,14 +836,14 @@ html body .fbox img {
 
 <td colspan="2"><strong>Papillomatous variant</strong> <ul> <ul> <li>&#x820C;&#x3001;attached gingiva</li> </ul> </ul> <img src="paste_src/&#x53E3;&#x75C5;-53.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
-<td colspan="2"><strong>Papulonodular</strong> <ul> <li>&#x5E38;&#x898B;</li> <li>&#x6241;&#x5E73;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-54.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="2"><strong>Papulonodular</strong><br>- &#x5E38;&#x898B;<br>- &#x6241;&#x5E73; <img src="paste_src/&#x53E3;&#x75C5;-54.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 </tr>
 <tr>
 
 
 
-<td colspan="4"><ul> <li>acanthosis: spinous layer (&#x68D8;&#x72C0;&#x5C64;) &#x589E;&#x751F;</li> <li>rete ridge &#x5BEC;&#x6241;&#xFF0C;&#x6DF1;&#x5EA6;&#x5DEE;&#x4E0D;&#x591A;</li> <li>Connective tissue &#x767C;&#x708E;&#x7D30;&#x80DE;&#x6D78;&#x6F64;</li> <li>Koliofcyte</li> <li>mitosoid cells (spinous cell &#x4E4B;&#x9593;&#xFF0C;&#x5F77;&#x5F7F;&#x5728;&#x5206;&#x88C2;)</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-71.png" alt="alt text" style=";background-color: white;padding:0"><img src="paste_src/&#x53E3;&#x75C5;-56.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="4"><ul> <li>acanthosis: spinous layer (&#x68D8;&#x72C0;&#x5C64;) &#x589E;&#x751F;</li> <li>rete ridge &#x5BEC;&#x6241;&#xFF0C;&#x6DF1;&#x5EA6;&#x5DEE;&#x4E0D;&#x591A;</li> <li>Connective tissue &#x767C;&#x708E;&#x7D30;&#x80DE;&#x6D78;&#x6F64;</li> <li>Koliofcyte</li> <li>mitosoid cells (spinous cell &#x4E4B;&#x9593;&#xFF0C;&#x5F77;&#x5F7F;&#x5728;&#x5206;&#x88C2;)<br><img src="paste_src/&#x53E3;&#x75C5;-71.png" alt="alt text" style=";background-color: white;padding:0"><img src="paste_src/&#x53E3;&#x75C5;-56.png" alt="alt text" style=";background-color: white;padding:0"></li> </ul></td>
 
 
 
@@ -1053,7 +1122,7 @@ html body .fbox img {
 <tr>
 <td>Superficial Spreading (Pagetoid) -</td>
 <td><ul> <li>&#x7537;&#x6027;: &#x5169;&#x80A9;&#x80DB;&#x9AA8;&#x9593;</li> <li>&#x5973;&#x6027;: &#x5C0F;&#x817F;&#x5F8C;&#x65B9;</li> </ul></td>
-<td colspan="3"><ul> <li>&#x9023;&#x7E8C; ridge &#x90FD;&#x6709; nest</li> <li><mark>Pagetoid spread, Paget&#x2019;s disease</mark>: single tumor cell&#x6D78;&#x6F64;&#x65BC;&#x8868;&#x9762;&#x4E0A;&#x76AE;&#x7684;&#x4E0A;&#x5C64;</li> </ul> <div class="fbox"> <img src="paste_src/&#x53E3;&#x75C5;-75.png" alt="alt text" style="width:50%;background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-6.png" alt="alt text" style="width:40%;background-color: white;padding:0"> </div></td>
+<td colspan="3"><ul> <li>&#x9023;&#x7E8C; ridge &#x90FD;&#x6709; nest<br>- <mark>Pagetoid spread, Paget&#x2019;s disease</mark>: single tumor cell&#x6D78;&#x6F64;&#x65BC;&#x8868;&#x9762;&#x4E0A;&#x76AE;&#x7684;&#x4E0A;&#x5C64;<br><div class="fbox"><br><img src="paste_src/&#x53E3;&#x75C5;-75.png" alt="alt text" style="width:50%;background-color: white;padding:0"></div></li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-6.png" alt="alt text" style="width:40%;background-color: white;padding:0"> </td>
 
 
 </tr>
@@ -1074,7 +1143,7 @@ html body .fbox img {
 <tr>
 <td>Lentigo maligna</td>
 <td>&#x4E2D;&#x81C9;(&#x967D;&#x5149;&#x66DD;&#x66EC;)</td>
-<td colspan="3"><ul> <li>&#x751F;&#x9577;&#x6162;&#xFF0C;Radial growth&#x5E73;&#x5747;15&#x5E74;</li> <li>Lamina propia &#x6C92;&#x5565;&#x7D30;&#x80DE;&#xFF0C;&#x55DC;&#x9E7C;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-76.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>&#x751F;&#x9577;&#x6162;&#xFF0C;Radial growth&#x5E73;&#x5747;15&#x5E74;</li> <li>Lamina propia &#x6C92;&#x5565;&#x7D30;&#x80DE;&#xFF0C;&#x55DC;&#x9E7C;<br><img src="paste_src/&#x53E3;&#x75C5;-76.png" alt="alt text" style="width:50%;background-color: white;padding:0"></li> </ul></td>
 
 
 </tr>
@@ -1128,7 +1197,7 @@ html body .fbox img {
 <td>Oral submucous fiberosis</td>
 <td colspan="2">Arecoline (&#x6AB3;&#x6994;&#x9E7C;)</td>
 
-<td colspan="2"><ul> <li>&#x2192; SCC</li> <li>hyperkeratosis &#x6216; parakeratosis&#xFF0C;&#x4E0A;&#x76AE;&#x8B8A;&#x8584;&#x3002;</li> <li>Collagen fiber &#x6700;&#x6DF1;&#x4FB5;&#x72AF;&#x808C;&#x8089;&#x5C64;</li> <li>&#x7121;&#x6CD5;&#x5FA9;&#x539F;</li> </ul></td>
+<td colspan="2"><ul> <li>&#x2192; SCC<br>- hyperkeratosis &#x6216; parakeratosis&#xFF0C;&#x4E0A;&#x76AE;&#x8B8A;&#x8584;&#x3002;</li> <li>Collagen fiber &#x6700;&#x6DF1;&#x4FB5;&#x72AF;&#x808C;&#x8089;&#x5C64;</li> <li>&#x7121;&#x6CD5;&#x5FA9;&#x539F;</li> </ul></td>
 
 </tr>
 <tr>
@@ -1156,7 +1225,7 @@ html body .fbox img {
 
 
 
-<td colspan="2"><ul> <li>Sharp &#x5206;&#x5316;&#x6539;&#x8B8A;</li> <li>bulbous rete ridge &#x2192; &#x5EF6;&#x9577;</li> <li>exophytic, endophytic growth, cyst &#x5145;&#x6EFF; keratin</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-86.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;-87.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="2"><ul> <li>Sharp &#x5206;&#x5316;&#x6539;&#x8B8A;</li> <li>bulbous rete ridge &#x2192; &#x5EF6;&#x9577;</li> <li>exophytic, endophytic growth, cyst &#x5145;&#x6EFF; keratin<br><img src="paste_src/&#x53E3;&#x75C5;-86.png" alt="alt text" style=";background-color: white;padding:0"></li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-87.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 </tr>
 </tbody>
@@ -1318,6 +1387,59 @@ html body .fbox img {
 </ul>
 </li>
 </ul>
+<h2 class="mume-header" id="keratoacanthoma%E8%89%AF-%E8%A7%92%E8%B3%AA%E6%A3%98%E7%9A%AE%E7%98%A4">Keratoacanthoma<sup>&#x826F;</sup> (&#x89D2;&#x8CEA;&#x68D8;&#x76AE;&#x7624;)</h2>
+
+<blockquote>
+<p>&#x7F75;&#x53D6;&#x786C;&#x8981;&#x88DC;&#x5145;&#xFF0C;&#x90FD;&#x7D66;&#x4ED6;&#x8B1B;&#x5C31;&#x597D;&#x5566;</p>
+</blockquote>
+<ul>
+<li>&#x81EA;&#x9650;&#x6027;&#x4E0A;&#x76AE;&#x589E;&#x751F;</li>
+<li>&#x75C5;&#x56E0;: DNA &#x4FEE;&#x5FA9;&#x7F3A;&#x9677;
+<ul>
+<li>&#x967D;&#x5149;&#x66DD;&#x66EC;: 65-71y&#xFF0C;&#x7537;&#x6027;</li>
+<li>&#x8207;&#x5176;&#x4ED6;DNA &#x4FEE;&#x5FA9;&#x7F3A;&#x9677;&#x75BE;&#x75C5;&#x76F8;&#x95DC;
+<ul>
+<li>Xeroderma Pigmentosum</li>
+<li>Muir-Torre Syndrome</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x4F4D;&#x7F6E;: &#x4E0A;&#x4E0B;&#x5507;&#x983B;&#x7387;&#x76F8;&#x7B49;</li>
+<li>&#x7279;&#x5FB5;:
+<ul>
+<li>&#x5805;&#x786C;&#x3001;&#x754C;&#x9650;&#x6E05;&#x695A;&#x3001;&#x5EE3;&#x5E95;</li>
+<li>&#x4E2D;&#x592E;&#x89D2;&#x86CB;&#x767D;&#x6813;&#x585E;</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-7.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-8.png" alt="alt text" style=";background-color: white;padding:0">
+<ul>
+<li>
+<p>&#x4E09;&#x968E;&#x6BB5;</p>
+<ul>
+<li>Growth Phase: &#x6703;&#x8FC5;&#x901F;&#x589E;&#x5927;</li>
+<li>Stationary Phase: &#x7A69;&#x5B9A;&#x5927;&#x5C0F;</li>
+<li>Involution Phase:&#x81EA;&#x767C;&#x6027;&#x6D88;
+<ul>
+<li>&#x5927;&#x591A; 6 &#x81F3; 12 &#x6708;&#x6D88;&#x9000;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x7D44;&#x7E54;</p>
+<ul>
+<li>&#x4E2D;&#x592E;&#x51F9;&#x9677;&#x8655;&#x7684;&#x908A;&#x7DE3;&#x6703;&#x6709;&#x92B3;&#x89D2;</li>
+<li>&#x5751;&#x6D1E;&#x5167;&#x5145;&#x6EFF;&#x89D2;&#x86CB;&#x767D;</li>
+<li>&#x4E0D;&#x6703;&#x5EF6;&#x4F38;&#x8D85;&#x904E;&#x75C5;&#x7076;&#x7684;&#x6C57;&#x817A;</li>
+<li>&#x5206;&#x5316;&#x6210;&#x719F;&#xFF0C;&#x4F46;&#x89D2;&#x5316;&#x4E0D;&#x826F;&#xFF0C;&#x53EF;&#x80FD; keratin pearls</li>
+<li>&#x8207; SCC &#x5F88;&#x96E3;&#x5340;&#x5206; &#x2192; &#x5207;</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-9.png" alt="alt text" style="width:25%;background-color: white;padding:0">
 <h2 class="mume-header" id="%E6%95%B4%E7%90%86">&#x6574;&#x7406;</h2>
 
 <h3 class="mume-header" id="verruciform-xanthoma-%E7%9B%B8%E9%97%9C%E7%96%BE%E7%97%85">Verruciform xanthoma &#x76F8;&#x95DC;&#x75BE;&#x75C5;</h3>
@@ -1500,6 +1622,7 @@ $(Main_LeftListLiSelector).on('click', function() {
 <li><a href="#span-stylemargin0-color-deepskyblue-hpv-associated-oropharyngeal-squamous-cell-ca-opsccspan"> HPV-associated oropharyngeal squamous cell CA (OPSCC)</a></li>
 </ul>
 </li>
+<li><a href="#keratoacanthoma%E8%89%AF-%E8%A7%92%E8%B3%AA%E6%A3%98%E7%9A%AE%E7%98%A4">Keratoacanthoma<sup>&#x826F;</sup> (&#x89D2;&#x8CEA;&#x68D8;&#x76AE;&#x7624;)</a></li>
 <li><a href="#%E6%95%B4%E7%90%86">&#x6574;&#x7406;</a>
 <ul>
 <li><a href="#verruciform-xanthoma-%E7%9B%B8%E9%97%9C%E7%96%BE%E7%97%85">Verruciform xanthoma &#x76F8;&#x95DC;&#x75BE;&#x75C5;</a></li>
