@@ -10,7 +10,7 @@
 @primary-color: hsl(220, 13%, 18%); // 定義主顏色變量
 @line-color: #8b8b8b;
 @hover-color: rgb(135, 255, 255);
-@mobile-max-width: 600px;
+@mobile-max-width: 800px;
 @0000: rgba(0,0,0,0);
 
 
@@ -77,6 +77,10 @@
     }
     -ms-overflow-style: none;  // 隱藏滾動條（IE 和 Edge）
     scrollbar-width: none;  // 隱藏滾動條（Firefox）
+
+    table {
+      table-layout:auto; 
+    }
   }
 }
 
@@ -84,6 +88,7 @@
 .markdown-preview table {
   width: 100%;  // 強制表格寬度不超過容器
   table-layout: fixed;  // 固定表格布局，根據寬度自動分配單元格
+  min-width: @mobile-max-width ;
   text-align: center;
   color: #fff7f0;
   border-collapse: collapse;  // 合併邊框
@@ -92,7 +97,8 @@
 
   @media screen and (max-width:@mobile-max-width){
     
-    table-layout:auto;     
+    table-layout:auto; 
+    width:auto;    
   }
 
   thead {

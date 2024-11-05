@@ -34,7 +34,7 @@
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .table-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -44,19 +44,24 @@
   .table-scroll-wrapper::-webkit-scrollbar {
     display: none;
   }
+  .table-scroll-wrapper table {
+    table-layout: auto;
+  }
 }
 .markdown-preview table {
   width: 100%;
   table-layout: fixed;
+  min-width: 800px;
   text-align: center;
   color: #fff7f0;
   border-collapse: collapse;
   display: table;
   margin-top: 1rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .markdown-preview table {
     table-layout: auto;
+    width: auto;
   }
 }
 .markdown-preview table thead {
