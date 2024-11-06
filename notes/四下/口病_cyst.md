@@ -67,14 +67,38 @@ n["非齒源(Non-Odontogenic)"]
 
 
 
+
+
 ### 發育型
 
-| |原因|好發| 年齡 |特徵
-|-|-|-|-|-|
-|Dentigerous cyst (DC)|follicle 分離|38,48| 10 - 30y| 阻生齒,牙根吸收 <br>&phi; = 3-4mm
-|Eruption cyst (EC)| Dentigerous 萌發 |12a, 12b, 34a, ?6|10y &darr;|藍色或紫棕色 ![alt text](paste_src/口病.png)
-| Odontogenic Keratocyst cyst (OKC)| dental lamina rest| 下顎骨後端，下齒槽管上方|10-40y |組生齒(40%) 
-|^|^|^|^|PCNA (proliferating cell nuclear antigen),<br> Ki-67, <br> Gorlin Syndrome 
+| |原因|好發| 年齡 |特徵||
+|-|-|-|-|-|-|
+|Dentigerous cyst (DC)|follicle 分離| 38,48 | 10 - 30y| \oneline{
+
+- 阻生齒,牙根吸收
+- 包 CEJ
+- &phi; = 3-4mm
+
+![alt text](paste_src/口病_cyst.png =60)
+}|
+|Eruption cyst (EC)| Dentigerous 萌發 |12a, 12b, 34a, ?6|10y &darr;|\oneline{
+
+藍色或紫棕色  
+
+\picBox{
+![alt text](paste_src/口病_cyst-1.png =30)
+![alt text](paste_src/口病.png =40) 
+}
+
+}|
+| Odontogenic Keratocyst cyst (OKC)| \oneline{
+- dental lamina rest
+- Gorlin syndrome 相關
+- `GENE`: 
+  - `PCNA (proliferating cell nuclear antigen)
+  - Ki-67 
+
+} | 下顎骨後端，下齒槽管上方|10-40y |組生齒(40%) 
 |^|^|^|^| Radiolucent、<br> MD方向下顎骨吸收，但牙根完整。 ![alt text](paste_src/口病-2.png)
 |^|^|^|^|4-8 層、副角化(有核)、Basal cell 為 palisaded(柵狀)
 |^|^|^|^|高復發 (30%)

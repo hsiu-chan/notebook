@@ -308,7 +308,7 @@
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .table-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -323,11 +323,12 @@
   width: 100%;
   table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
   border-collapse: collapse;
   display: table;
+  margin-top: 1rem;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .markdown-preview table {
     table-layout: auto;
   }
@@ -354,17 +355,28 @@
 .markdown-preview table th ol,
 .markdown-preview table td ul,
 .markdown-preview table th ul {
-  padding-left: 0;
   list-style-position: inside;
   /* 控制項目符號的位置 */
   text-align: left;
   /* 文字對齊方式 */
 }
+.markdown-preview table th.top-left,
+.markdown-preview table td.top-left {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+}
+.markdown-preview table th.top-left > .col-title,
+.markdown-preview table td.top-left > .col-title {
+  text-align: right;
+}
+.markdown-preview table th.top-left > .row-title,
+.markdown-preview table td.top-left > .row-title {
+  text-align: left;
+}
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -386,6 +398,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
+  /* Modal (background for enlarged image) */
   /* 侧栏 */
   /* 侧栏自动编号 */
   /* 复位计数器 */
@@ -615,7 +628,63 @@ html body .fbox img {
   left: 0;
   transform: translate(0, 0);
   padding: 0;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
@@ -691,7 +760,8 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <th>&#x539F;&#x56E0;</th>
 <th>&#x597D;&#x767C;</th>
 <th>&#x5E74;&#x9F61;</th>
-<th>&#x7279;&#x5FB5;</th>
+<th colspan="2">&#x7279;&#x5FB5;</th>
+
 </tr>
 </thead>
 <tbody>
@@ -700,84 +770,96 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td>follicle &#x5206;&#x96E2;</td>
 <td>38,48</td>
 <td>10 - 30y</td>
-<td>&#x963B;&#x751F;&#x9F52;,&#x7259;&#x6839;&#x5438;&#x6536; <br>&#x3C6; = 3-4mm</td>
+<td colspan="2"><ul> <li>&#x963B;&#x751F;&#x9F52;,&#x7259;&#x6839;&#x5438;&#x6536;</li> <li>&#x5305; CEJ</li> <li>&#x3C6; = 3-4mm<br><img src="paste_src/&#x53E3;&#x75C5;_cyst.png" alt="alt text" style="width:60%;background-color: white;padding:0"></li> </ul></td>
+
 </tr>
 <tr>
 <td>Eruption cyst (EC)</td>
 <td>Dentigerous &#x840C;&#x767C;</td>
 <td>12a, 12b, 34a, ?6</td>
 <td>10y &#x2193;</td>
-<td>&#x85CD;&#x8272;&#x6216;&#x7D2B;&#x68D5;&#x8272; <img src="paste_src/&#x53E3;&#x75C5;.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="2">&#x85CD;&#x8272;&#x6216;&#x7D2B;&#x68D5;&#x8272;<br><div class="fbox"> <img src="paste_src/&#x53E3;&#x75C5;_cyst-1.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;.png" alt="alt text" style="width:40%;background-color: white;padding:0"><br></div></td>
+
 </tr>
 <tr>
 <td rowspan="5">Odontogenic Keratocyst cyst (OKC)</td>
-<td rowspan="5">dental lamina rest</td>
+<td rowspan="5"><ul> <li>dental lamina rest</li> <li>Gorlin syndrome &#x76F8;&#x95DC;</li> </ul></td>
 <td rowspan="5">&#x4E0B;&#x984E;&#x9AA8;&#x5F8C;&#x7AEF;&#xFF0C;&#x4E0B;&#x9F52;&#x69FD;&#x7BA1;&#x4E0A;&#x65B9;</td>
 <td rowspan="5">10-40y</td>
-<td>&#x7D44;&#x751F;&#x9F52;(40%)</td>
+<td colspan="2">&#x7D44;&#x751F;&#x9F52;(40%)</td>
+
 </tr>
 <tr>
 
 
 
 
-<td>PCNA (proliferating cell nuclear antigen),<br> Ki-67, <br> Gorlin Syndrome</td>
+<td colspan="2">PCNA (proliferating cell nuclear antigen),<br> Ki-67, <br> Gorlin Syndrome</td>
+
 </tr>
 <tr>
 
 
 
 
-<td>Radiolucent&#x3001;<br> MD&#x65B9;&#x5411;&#x4E0B;&#x984E;&#x9AA8;&#x5438;&#x6536;&#xFF0C;&#x4F46;&#x7259;&#x6839;&#x5B8C;&#x6574;&#x3002; <img src="paste_src/&#x53E3;&#x75C5;-2.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="2">Radiolucent&#x3001;<br> MD&#x65B9;&#x5411;&#x4E0B;&#x984E;&#x9AA8;&#x5438;&#x6536;&#xFF0C;&#x4F46;&#x7259;&#x6839;&#x5B8C;&#x6574;&#x3002; <img src="paste_src/&#x53E3;&#x75C5;-2.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
 </tr>
 <tr>
 
 
 
 
-<td>4-8 &#x5C64;&#x3001;&#x526F;&#x89D2;&#x5316;(&#x6709;&#x6838;)&#x3001;Basal cell &#x70BA; palisaded(&#x67F5;&#x72C0;)</td>
+<td colspan="2">4-8 &#x5C64;&#x3001;&#x526F;&#x89D2;&#x5316;(&#x6709;&#x6838;)&#x3001;Basal cell &#x70BA; palisaded(&#x67F5;&#x72C0;)</td>
+
 </tr>
 <tr>
 
 
 
 
-<td>&#x9AD8;&#x5FA9;&#x767C; (30%)</td>
+<td colspan="2">&#x9AD8;&#x5FA9;&#x767C; (30%)</td>
+
 </tr>
 <tr>
 <td><p style="color:DeepSkyBlue">Orthokeratinized Odontogenic cyst (OOC)</p></td>
 <td>-</td>
 <td>&#x4E0B;&#x984E;&#x5F8C;&#x7259;</td>
 <td>&#x5E74;&#x8F15;&#x4EBA;</td>
-<td>&#x963B;&#x751F;&#x9F52; (66%)&#x3001; <br> granule layer &#x660E;&#x986F; &#x3001;<br> &#x751F;&#x9577;&#x6162;</td>
+<td colspan="2">&#x963B;&#x751F;&#x9F52; (66%)&#x3001; <br> granule layer &#x660E;&#x986F; &#x3001;<br> &#x751F;&#x9577;&#x6162;</td>
+
 </tr>
 <tr>
 <td>Gingival Cyst of the newborn</td>
 <td rowspan="6">dental lamina rest</td>
 <td>&#x65B0;&#x751F;&#x5152;&#x4E0A;&#x984E;&#x7259;&#x9F66; <img src="paste_src/&#x53E3;&#x75C5;-4.png" alt="alt text" style=";background-color: white;padding:0"></td>
 <td>-</td>
-<td>&#x7BA1;&#x8154;&#x5167;&#x542B;&#x6709;&#x89D2;&#x8CEA;&#x788E;&#x5C51;(keratinaceous debris) <img src="paste_src/&#x53E3;&#x75C5;-5.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="2">&#x7BA1;&#x8154;&#x5167;&#x542B;&#x6709;&#x89D2;&#x8CEA;&#x788E;&#x5C51;(keratinaceous debris) <img src="paste_src/&#x53E3;&#x75C5;-5.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
 </tr>
 <tr>
 <td rowspan="3">Gingival Cyst of the adult (LPC &#x9577;&#x51FA;&#x4F86;)</td>
 
 <td rowspan="3">&#x4E0B;&#x984E;premolar&#x3001;canine facial &#x7259;&#x9F66;</td>
 <td rowspan="3">40-60y</td>
-<td>&#x85CD;&#x8272;(bluish)&#x3001;&#x85CD;&#x7070;&#x8272;(DeepSkyBlue-gray) <img src="paste_src/&#x53E3;&#x75C5;-6.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="2">&#x85CD;&#x8272;(bluish)&#x3001;&#x85CD;&#x7070;&#x8272;(DeepSkyBlue-gray) <img src="paste_src/&#x53E3;&#x75C5;-6.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
 </tr>
 <tr>
 
 
 
 
-<td>focal plaques</td>
+<td colspan="2">focal plaques</td>
+
 </tr>
 <tr>
 
 
 
 
-<td rowspan="2">focal plaques<img src="paste_src/&#x53E3;&#x75C5;-7.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td rowspan="2" colspan="2">focal plaques<img src="paste_src/&#x53E3;&#x75C5;-7.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
 </tr>
 <tr>
 <td rowspan="2">Lateral Periodontal (LPC)</td>
@@ -785,17 +867,20 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td rowspan="2">&#x4E0B;&#x984E; premolar&#x3001;canine&#x3001;lateral incisor lateral root &#x8868;&#x9762;</td>
 <td rowspan="2">40-70y</td>
 
+
 </tr>
 <tr>
 
 
 
 
-<td>&#x985E;&#x4F3C; OKC&#xFF0C;&#x4F46;&#x63A8;&#x958B;&#x7259;&#x9F52; <img src="paste_src/&#x53E3;&#x75C5;-8.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+<td colspan="2">&#x985E;&#x4F3C; OKC&#xFF0C;&#x4F46;&#x63A8;&#x958B;&#x7259;&#x9F52; <img src="paste_src/&#x53E3;&#x75C5;-8.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+
 </tr>
 <tr>
 <td>Botryoid Odontogenic Cyst (BOC)</td>
-<td colspan="4">&#x591A;&#x56CA; LPC</td>
+<td colspan="5">&#x591A;&#x56CA; LPC</td>
+
 
 
 
@@ -805,56 +890,64 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 <td rowspan="4">-</td>
 <td rowspan="4">&#x524D;&#x7259;(65%) <img src="paste_src/&#x53E3;&#x75C5;-19.png" alt="alt text" style=";background-color: white;padding:0"></td>
 <td rowspan="4">20-40y<br> &#x82E5;&#x6709; odontoma&#xFF0C;17y &#x767C;&#x75C5;</td>
-<td>&#x672A;&#x840C;&#x767C;&#x7684;&#x7259;&#x9F52;(33%)&#x3001; &#x963B;&#x751F;&#x9F52;(66%)</td>
+<td colspan="2">&#x672A;&#x840C;&#x767C;&#x7684;&#x7259;&#x9F52;(33%)&#x3001; &#x963B;&#x751F;&#x9F52;(66%)</td>
+
 </tr>
 <tr>
 
 
 
 
-<td>basal cell reverse polarity <img src="paste_src/&#x53E3;&#x75C5;-9.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="2">basal cell reverse polarity <img src="paste_src/&#x53E3;&#x75C5;-9.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
 </tr>
 <tr>
 
 
 
 
-<td>ghost cells (&#x55DC;&#x9178;&#x7121;&#x6838;) <img src="paste_src/&#x53E3;&#x75C5;-10.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="2">ghost cells (&#x55DC;&#x9178;&#x7121;&#x6838;) <img src="paste_src/&#x53E3;&#x75C5;-10.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
 </tr>
 <tr>
 
 
 
 
-<td>&#x3B2; catenine +</td>
+<td colspan="2">&#x3B2; catenine +</td>
+
 </tr>
 <tr>
 <td>Peripheral Calcifying Odontogenic Cyst</td>
 <td>COC &#x9577;&#x51FA;&#x4F86;</td>
 <td>-</td>
 <td>60-80y</td>
-<td>.<img src="paste_src/&#x53E3;&#x75C5;-11.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="2">.<img src="paste_src/&#x53E3;&#x75C5;-11.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
 </tr>
 <tr>
 <td rowspan="3">Glandular Odontogenic Cyst (GOC)</td>
 <td rowspan="3">-</td>
 <td rowspan="3">&#x4E0B;&#x984E;&#x524D;&#x7259;</td>
 <td rowspan="3">46-51y</td>
-<td>&#x8DE8;&#x4E2D;&#x7DDA;&#x3001;&#x7121; MAML2</td>
+<td colspan="2">&#x8DE8;&#x4E2D;&#x7DDA;&#x3001;&#x7121; MAML2</td>
+
 </tr>
 <tr>
 
 
 
 
-<td>&#x5FA9;&#x767C;&#x3001;&#x4FB5;&#x72AF;&#x6027;&#xFF0C;&#x5403; cortical bone <img src="paste_src/&#x53E3;&#x75C5;-12.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="2">&#x5FA9;&#x767C;&#x3001;&#x4FB5;&#x72AF;&#x6027;&#xFF0C;&#x5403; cortical bone <img src="paste_src/&#x53E3;&#x75C5;-12.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
 </tr>
 <tr>
 
 
 
 
-<td>&#x676F;&#x72C0;&#x7D30;&#x80DE;, cilia, focal plaques</td>
+<td colspan="2">&#x676F;&#x72C0;&#x7D30;&#x80DE;, cilia, focal plaques</td>
+
 </tr>
 </tbody>
 </table></div>
@@ -1108,7 +1201,7 @@ n[&quot;&#x975E;&#x9F52;&#x6E90;(Non-Odontogenic)&quot;]
 </table></div>
 <dl>
 <dt>Gardner syndrome</dt>
-<dd>APC&#x57FA;&#x56E0;&#x7A81;&#x8B8A;&#xFF0C;&#x3B2; catenin &#x5206;&#x89E3;&#x4E0D;&#x6389; &#x2192; &#x4E0A;&#x76AE;&#x589E;&#x751F; <a href="..\%E5%9C%8B%E8%80%83\%E5%8F%A3%E8%83%9A%E6%95%B4%E7%90%86.html#wnt">Wnt &#x76F8;&#x95DC;</a></dd>
+<dd>APC&#x57FA;&#x56E0;&#x7A81;&#x8B8A;&#xFF0C;&#x3B2; catenin &#x5206;&#x89E3;&#x4E0D;&#x6389; &#x2192; &#x4E0A;&#x76AE;&#x589E;&#x751F; <a href="../%E5%9C%8B%E8%80%83/%E5%8F%A3%E8%83%9A%E6%95%B4%E7%90%86.html#wnt">Wnt &#x76F8;&#x95DC;</a></dd>
 </dl>
 <div class="admonition info">
 <p class="admonition-title">&#x9B4F;&#x6C0F;&#x74B0;(Waldeyer ring)</p>

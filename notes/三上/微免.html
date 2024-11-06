@@ -308,7 +308,7 @@
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .table-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -323,11 +323,12 @@
   width: 100%;
   table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
   border-collapse: collapse;
   display: table;
+  margin-top: 1rem;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .markdown-preview table {
     table-layout: auto;
   }
@@ -354,17 +355,28 @@
 .markdown-preview table th ol,
 .markdown-preview table td ul,
 .markdown-preview table th ul {
-  padding-left: 0;
   list-style-position: inside;
   /* 控制項目符號的位置 */
   text-align: left;
   /* 文字對齊方式 */
 }
+.markdown-preview table th.top-left,
+.markdown-preview table td.top-left {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+}
+.markdown-preview table th.top-left > .col-title,
+.markdown-preview table td.top-left > .col-title {
+  text-align: right;
+}
+.markdown-preview table th.top-left > .row-title,
+.markdown-preview table td.top-left > .row-title {
+  text-align: left;
+}
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -386,6 +398,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
+  /* Modal (background for enlarged image) */
   /* 侧栏 */
   /* 侧栏自动编号 */
   /* 复位计数器 */
@@ -615,7 +628,63 @@ html body .fbox img {
   left: 0;
   transform: translate(0, 0);
   padding: 0;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
@@ -890,14 +959,7 @@ deoxy-octanoate(KDO)<br>
 <li>LPS &#x9577;&#x4E00;&#x6839; O antigen, Lipid A&#x90FD;&#x662F;&#x6297;&#x539F;</li>
 <li>G(-)</li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox">
 <img src="paste_src/image-65.png" alt="Alt text" style="width:30%;background-color: white;padding:0">
 <img src="paste_src/image-66.png" alt="Alt text" style="width:69%;background-color: white;padding:0">
 </div>
@@ -1648,9 +1710,12 @@ deoxy-octanoate(KDO)<br>
 <ul>
 <li>&#x53AD;&#x6C27;</li>
 <li>Endogenous infection (&#x81EA;&#x7522;&#x81EA;&#x92B7;)</li>
-<li>&#x201D;&#x81FC;&#x9F52;&#x201C;&#x83CC;&#x843D;<br>
-<img src="paste_src/%E5%BE%AE%E5%85%8D-49.png" alt="Alt text" style="width:30%;background-color: white;padding:0"></li>
+<li>&#x201D;&#x81FC;&#x9F52;&#x201C;&#x83CC;&#x843D;</li>
+<li>&#x7D44;&#x7E54;&#x4E2D;&#x6BDB;&#x6BDB;&#x908A;&#x754C; (&#x50CF;&#x9EF4;&#x83CC;)&#xFF0C;&#x653E;&#x5C04;&#x72C0;&#x7D2B;&#x8272;&#x689D;&#x7D0B;</li>
 </ul>
+<div class="fbox">
+<img src="paste_src/%E5%BE%AE%E5%85%8D-49.png" alt="Alt text" style="width:30%;background-color: white;padding:0">
+<img src="paste_src/&#x5FAE;&#x514D;-115.png" alt="alt text" style="width:40%;background-color: white;padding:0"> </div>
 <h2 class="mume-header" id="cutibacterium%E7%97%A4%E7%98%A1%E4%B8%99%E9%85%B8%E6%A1%BF%E8%8F%8Cproprionibacteriumg">Cutibacterium(&#x75E4;&#x7621;&#x4E19;&#x9178;&#x687F;&#x83CC;&#xFF0C;Proprionibacterium&#xFF0C;G+)</h2>
 
 <ul>
@@ -1886,14 +1951,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/%E5%BE%AE%E5%85%8D-52.png" alt="Alt text" style="width:35%;background-color: white;padding:0">
 <img src="paste_src/%E5%BE%AE%E5%85%8D-53.png" alt="Alt text" style="width:60%;background-color: white;padding:0">
 </div>
@@ -3292,14 +3350,7 @@ deoxy-octanoate(KDO)<br>
 </ul>
 </li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/%E5%BE%AE%E5%85%8D-63.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 <img src="paste_src/%E5%BE%AE%E5%85%8D-64.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 </div>
@@ -4306,14 +4357,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/%E5%BE%AE%E5%85%8D-81.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 <img src="paste_src/%E5%BE%AE%E5%85%8D-82.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 </div>
@@ -4346,14 +4390,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/%E5%BE%AE%E5%85%8D-83.png" alt="Alt text" style="width:65%;background-color: white;padding:0">
 <img src="paste_src/%E5%BE%AE%E5%85%8D-84.png" alt="Alt text" style="width:35%;background-color: white;padding:0">
 </div>
@@ -4772,14 +4809,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </li>
 <li>&#x5169;&#x689D;&#x76F8;&#x540C; ss RNA(+)</li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/%E5%BE%AE%E5%85%8D-86.png" alt="Alt text" style="width:45%;background-color: white;padding:0">
 <img src="paste_src/%E5%BE%AE%E5%85%8D-87.png" alt="Alt text" style="width:55%;background-color: white;padding:0">
 </div>
@@ -4819,14 +4849,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ol>
 </li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/%E5%BE%AE%E5%85%8D-89.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 <img src="paste_src/%E5%BE%AE%E5%85%8D-90.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 </div>
@@ -5256,14 +5279,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </div>
 <h2 class="mume-header" id="spleen">Spleen</h2>
 
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/image-097.png" alt="Alt text" style="width:45%;background-color: white;padding:0">
 <img src="paste_src/image-098.png" alt="Alt text" style="width:45%;background-color: white;padding:0">
 </div>
@@ -5505,7 +5521,9 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <li>DAF: C3&#x8F49;&#x5316;&#x9176; (C3bBb&#x3001;C4b2a)</li>
 <li>CD59&#x3001;S protein: MAC</li>
 </ul>
-<h2 class="mume-header" id="%E5%97%9C%E4%B8%AD%E6%80%A7%E7%99%BD%E8%A1%80%E7%90%83neutrophils">&#x55DC;&#x4E2D;&#x6027;&#x767D;&#x8840;&#x7403;(neutrophils)</h2>
+<h2 class="mume-header" id="pmn-polymorphonuclear">PMN (polymorphonuclear)</h2>
+
+<h3 class="mume-header" id="%E5%97%9C%E4%B8%AD%E6%80%A7%E7%99%BD%E8%A1%80%E7%90%83neutrophils">&#x55DC;&#x4E2D;&#x6027;&#x767D;&#x8840;&#x7403;(neutrophils)</h3>
 
 <ul>
 <li>&#x7279;&#x6B8A;&#x9846;&#x7C92;(specific granule)
@@ -5522,7 +5540,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<h2 class="mume-header" id="%E5%97%9C%E9%85%B8%E6%80%A7%E7%99%BD%E8%A1%80%E7%90%83eosinophils">&#x55DC;&#x9178;&#x6027;&#x767D;&#x8840;&#x7403;(eosinophils)</h2>
+<h3 class="mume-header" id="%E5%97%9C%E9%85%B8%E6%80%A7%E7%99%BD%E8%A1%80%E7%90%83eosinophils">&#x55DC;&#x9178;&#x6027;&#x767D;&#x8840;&#x7403;(eosinophils)</h3>
 
 <ul>
 <li>&#x6210;&#x719F;
@@ -5534,7 +5552,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </li>
 <li>&#x7D44;&#x7E54;&#x9593;&#x5E38;&#x898B;</li>
 </ul>
-<h2 class="mume-header" id="%E5%97%9C%E9%B9%BC%E6%80%A7%E7%99%BD%E8%A1%80%E7%90%83basophils">&#x55DC;&#x9E7C;&#x6027;&#x767D;&#x8840;&#x7403;(basophils)</h2>
+<h3 class="mume-header" id="%E5%97%9C%E9%B9%BC%E6%80%A7%E7%99%BD%E8%A1%80%E7%90%83basophils">&#x55DC;&#x9E7C;&#x6027;&#x767D;&#x8840;&#x7403;(basophils)</h3>
 
 <ul>
 <li>IgE receptor
@@ -5598,14 +5616,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 </ul>
 </li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/%E5%BE%AE%E5%85%8D-4.png" alt="Alt text" style="width:40%;background-color: white;padding:0">
 <img src="paste_src/%E5%BE%AE%E5%85%8D.png" alt="Alt text" style="width:55%;background-color: white;padding:0">
 </div>
@@ -5754,14 +5765,7 @@ Subviral &#x53EF;&#x505A;&#x75AB;&#x82D7;(HBsAg)</p>
 <dt>K</dt>
 <dd>lysine</dd>
 </dl>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/%E5%BE%AE%E5%85%8D-6.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
 <img src="paste_src/%E5%BE%AE%E5%85%8D-8.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
 </div>
@@ -6544,14 +6548,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <h2 class="mume-header" id="t~h~-%E4%B8%BB%E5%B0%8E">T<sub>H</sub> &#x4E3B;&#x5C0E;</h2>
 
 <img src="paste_src/%E5%BE%AE%E5%85%8D2-4.png" alt="Alt text" style="width:100%;background-color: white;padding:0">
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/%E5%BE%AE%E5%85%8D-22.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
 <img src="paste_src/%E5%BE%AE%E5%85%8D-24.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
 </div>
@@ -6667,14 +6664,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <li>MHC I: 8-10 &#x80FA;&#x57FA;&#x9178;</li>
 <li>MHC II 13-25 &#x80FA;&#x57FA;&#x9178;</li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/%E5%BE%AE%E5%85%8D-19.png" alt="Alt text" style="width:30%;background-color: white;padding:0">
 <img src="paste_src/%E5%BE%AE%E5%85%8D-20.png" alt="Alt text" style="width:35%;background-color: white;padding:0">
 </div>
@@ -6925,6 +6915,7 @@ inflammasome[inflammasome]----&gt;1 &amp; 18
 <ul>
 <li>Chemokin &#x529F;&#x80FD;&#xFF0C;&#x975E; IL</li>
 <li>&#x6539;&#x8B8A; integrin &#x69CB;&#x578B;&#x6539;&#x8B8A;&#xFF0C;&#x548C;ICAM-1&#x3001;ICAM-2 &#x5F62;&#x6210;&#x66F4;&#x52A0;&#x7DCA;&#x5BC6;&#x7684;&#x7D50;&#x5408;</li>
+<li>&#x523A;&#x6FC0; PMN&#xFF0C;&#x5206;&#x6CCC; MMPs</li>
 </ul>
 <h3 class="mume-header" id="il-10-%E6%8A%91%E5%88%B6">IL-10 (&#x6291;&#x5236;)</h3>
 
@@ -7920,9 +7911,13 @@ $(Main_LeftListLiSelector).on('click', function() {
 <li><a href="#lysis-%E6%BA%B6%E8%A7%A3">Lysis &#x6EB6;&#x89E3;</a></li>
 </ul>
 </li>
+<li><a href="#pmn-polymorphonuclear">PMN (polymorphonuclear)</a>
+<ul>
 <li><a href="#%E5%97%9C%E4%B8%AD%E6%80%A7%E7%99%BD%E8%A1%80%E7%90%83neutrophils">&#x55DC;&#x4E2D;&#x6027;&#x767D;&#x8840;&#x7403;(neutrophils)</a></li>
 <li><a href="#%E5%97%9C%E9%85%B8%E6%80%A7%E7%99%BD%E8%A1%80%E7%90%83eosinophils">&#x55DC;&#x9178;&#x6027;&#x767D;&#x8840;&#x7403;(eosinophils)</a></li>
 <li><a href="#%E5%97%9C%E9%B9%BC%E6%80%A7%E7%99%BD%E8%A1%80%E7%90%83basophils">&#x55DC;&#x9E7C;&#x6027;&#x767D;&#x8840;&#x7403;(basophils)</a></li>
+</ul>
+</li>
 <li><a href="#%E8%82%A5%E5%A4%A7%E7%B4%B0%E8%83%9Emast-cell">&#x80A5;&#x5927;&#x7D30;&#x80DE;(mast cell)</a></li>
 <li><a href="#monocytemacrophage">Monocyte/Macrophage</a>
 <ul>
