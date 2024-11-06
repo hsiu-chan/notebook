@@ -10,7 +10,7 @@ export_on_save:
     html: true
 ---
 
-# 齒源性腫瘤 Odontogenic Tumor 
+# 齒源性腫瘤 Odontogenic Tumor
 > - 上皮組織惡性病變: carcinoma
 > - 間葉組織惡性病變: sarcoma
 
@@ -42,7 +42,7 @@ export_on_save:
 |-|-|-|-|-|-|-|-|
 Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \oneline{
 - 牙齒發育過程上皮(典型良性)在錯的位置
-- BRAF mutation 
+- BRAF mutation
 - DC 變過來 (unicystic)
 } |下顎 (80-85%)|-| \oneline{
 - 最常見(80%)，長得慢，通常會到了腫瘤很大時才來就診。
@@ -72,17 +72,21 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 | Calcifying epithelial odontogenic tumor (CEOT) ||-|下顎 | 30-50y|\oneline{
 - 類似 Ameloblastoma，可能單多囊
 - 鈣化，長得慢，低侵略，邊界清楚
-- 阻生齒 
+- 阻生齒
 - 復發率約 15%
 ![alt text](paste_src/口病-102.png)
 }|
 |^|^|^|^|^| \oneline{
-- intercellular bridge 
+- intercellular bridge
 - 嗜酸 amyloid-like substance (ODAM) &rarr; ==Congo red==
 - 多核細胞(→)
-![alt text](paste_src/口病-103.png) ![alt text](paste_src/口病-104.png)
+ 
+
+\picBox{
+![alt text](paste_src/口病-103.png =40)
+![alt text](paste_src/口病-104.png =40) }
 }|
-| \style[color: red;]{Adenomatoid odontogenic tumor (AOT)} ||-|上顎、前牙、犬齒、頰側|-| \oneline{
+| \style[color: red;]{Adenomatoid odontogenic tumor (AOT)} ||-|上顎、前牙、犬齒、頰側|10-19y| \oneline{
 **Tumor of two-third**
 1. 10~19y
 2. Female
@@ -93,29 +97,31 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 |^|^|^|^|^| radiolucency 跨過 CEJ，可能有鈣化 ![alt text](paste_src/口病-100.png) |
 |^|^|^|^|^| \oneline{
 - fibrous capsule 厚 &rarr; 切得乾淨
-- 上皮螺旋(whorled mass)、玫瑰(rosettelike)團塊
-- Ductlike 
+- Ductlike、上皮螺旋(whorled mass)、玫瑰(rosettelike)團塊
 - 2/3 鈣化， 內部 fiber 少
-![alt text](paste_src/口病-101.png)
-}| 
+- 靠近 Capsule 有 Anastomosing cords 上皮
+
+![alt text](paste_src/口病_odontogenicTumor-2.png)
+}|
 | Squamous odontogenic tumor ||-|上顎前，下顎後|-| \oneline{
 - 可能造成牙根鬆動，一般無症狀
 - "正常"鱗狀上皮小島被Fiber包圍
 - 上皮小島內可能會出現一些 microcyst
 ![alt text](paste_src/口病-105.png)
-}| 
+}|
 | Clear cell odontogenic carcinoma |biphasic |一堆 Clear cell, 一堆 Glycogen|-|-|\oneline{
 - Clear cell
 - 嗜酸多邊形上皮 (eosinophilic polygonal epithelial cells)
 ![alt text](paste_src/口病-124.png)
 }
 |^|monophasic| -|-|-| \oneline{
-- 只有 Clear cell 
-- 均質 hyalinized CT 
+- 只有 Clear cell
+- 均質 hyalinized CT
+
 ![alt text](paste_src/口病-125.png)
 }
 |^| ameloblastoma-like |-|-|-|\oneline{
-- 最外圈 Clear cell 反極 
+- 最外圈 Clear cell 反極
 
 ![alt text](paste_src/口病-126.png)
 }
@@ -129,11 +135,12 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 | Ameloblastic fibroma ||-| 下顎臼齒區| 20y &darr; | \oneline{
 - 通常無症狀
 - 阻生齒(75%)
-- fiber &rarr; 邊界清楚
+- fiber 多 &rarr; 邊界清楚
 - odontogenic epithelium 排列成兩層細胞 long, narrow cords
 - Ameloblast 包未成熟 fibroblast，小顆無 cyst
-- CT 充滿 fibroblast
+- CT 充滿缺乏分化 fibroblast
 ![alt text](paste_src/口病-106.png)
+![alt text](paste_src/口病_odontogenicTumor.png)
 }|
 | \style[color: DeepSkyBlue;]{ Ameloblastic fibrosarcoma} ||Ameloblastic fibroma 惡化 | 下顎(80%) | 27.5y (1.5:1)| \oneline{
 - 侵犯快，==會痛==
@@ -141,10 +148,9 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 - 向外侵犯 &rarr; 粘膜潰養
 }
 |^|^|^|^|^|\oneline{
-- 只有 CT 惡性 
-- 
+- 只有 CT 惡性
 }
-| Odontoma |compound  | 最常見|上顎前牙| ^|\oneline{
+| Odontoma |compound  | 最常見|上顎前牙| 20y &darr;|\oneline{
 - 構造順序排列
 
 ![alt text](paste_src/口病-107.png)
@@ -156,14 +162,14 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 ![alt text](paste_src/口病-108.png)
 ![alt text](paste_src/口病-110.png)
 
-}| 
+}|
 | Ameloblastic fibro-odontoma || Ameloblastic fibroma + Odontoma | 下顎後 | 10y | \oneline{
 - 多為單房，分界明顯
 
 ![alt text](paste_src/口病-111.png)
 }|
 |Primordial Odontogenic Tumor ^新^||-| 下顎後牙(3^rd 大臼齒, 乳臼齒) | 10y-20y| \oneline{
-- 良性，分界好，堅硬，無痛 
+- 良性，分界好，堅硬，無痛
 - 包住牙冠
 ![alt text](paste_src/口病-112.png)
 }
@@ -189,7 +195,9 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 - 厚的 epithelium
 - WHO type 類似
 - 某些區域類似 giant cell granuloma
-  ![alt text](paste_src/口病-115.png)
+  ![alt text](paste_src/口病-115.png =40)
+
+![alt text](paste_src/口病_odontogenicTumor-1.png)
 }|
 | Granular Cell Odontogenic tumor ||-|-|-| \oneline{
 - 富含 Lysosome &rarr; 嗜酸
@@ -209,7 +217,7 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 - ==不受控生長==，但不能不同牙齒黏一起
 - 阻生齒、未萌發
 - ==2/3 腫痛==
-- Pulp 存活 
+- Pulp 存活
 - 高復發
 
 ![alt text](paste_src/口病-118.png)
@@ -218,7 +226,7 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 - 有 Capsule，cementum 高柱狀
 - 多核巨細胞
   - cementoclast, ==odontoclast==
-- 小空腔: cementocyte 
+- 小空腔: cementocyte
 - reversal line
 ![alt text](paste_src/口病-119.png)
 ![alt text](paste_src/口病-123.png)
@@ -245,7 +253,7 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 - OOC (66%)
 - COC(33%機率)
 - 單房 Ameloblastoma
-- Adenomatoid odontogenic tumor (66%)
+- AOT (66%)
 - Ameloblastic fibroma (75%)
 
 } | \oneline{
@@ -266,7 +274,7 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 
 }| \oneline{
 - OKC
-- LPC  
+- LPC 
 }|
 
 
@@ -291,6 +299,13 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 | OOC <br> COC <br> Simple Bone Cyst | GOC <br> Ameloblastoma |
 
 
-## 頰舌擴張 
+## 骨擴張
 
+
+
+
+
+### 頰舌擴張
+
+- BBC
 - 多房 Ameloblastoma

@@ -14,8 +14,17 @@ export_on_save:
 
 
 
+\oneline{
+- d
+- d
+\picBox{
+    ![alt text](paste_src/test-5.png =50)
+        ![alt text](paste_src/test-5.png =20)
+
+}
 
 
+}
 
 
 
