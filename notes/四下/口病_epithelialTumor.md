@@ -15,9 +15,6 @@ export_on_save:
 ## HPV 
 
 
-|lesion |type|
-|-|-|
-focal epithelial hyperplasia|13、32
 
 
 | Low-risk | High-risk |
@@ -262,7 +259,9 @@ xanthoma
 - 生長慢，Radial growth平均15年
 - Lamina propia 沒啥細胞，嗜鹼
 
-![alt text](paste_src/口病-76.png =50)
+\picBox{
+![alt text](paste_src/口病_epithelialTumor-10.png =40)
+![alt text](paste_src/口病-76.png =50) }
 }|
 | Lentigo maligna - || Lentigo malign 侵犯 |
 | Acral Lentiginous - |oral melanoma中最常見的類型 | \oneline{

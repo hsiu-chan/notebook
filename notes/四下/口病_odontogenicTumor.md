@@ -103,7 +103,7 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 
 ![alt text](paste_src/口病_odontogenicTumor-2.png)
 }|
-| Squamous odontogenic tumor ||-|上顎前，下顎後|-| \oneline{
+| Squamous odontogenic tumor ||錯位|上顎前，下顎後|-| \oneline{
 - 可能造成牙根鬆動，一般無症狀
 - "正常"鱗狀上皮小島被Fiber包圍
 - 上皮小島內可能會出現一些 microcyst
@@ -235,6 +235,23 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 
 ## 齒源性腫瘤、Cyst 整理
 
+- 良性，但棘手，高復發
+  - OKC (局部侵犯，切不乾淨)
+  - GOC (局部侵犯)
+  - Ameloblastoma (局部侵犯)
+    - 惡性 &rarr; Ameloblastic fibrosarcoma (侵犯又快又痛)
+  - myxoma: 長得慢，但拿不乾淨
+- 頰舌擴張
+  - BBC
+  - 多房 Ameloblastoma
+- 非下顎好發
+  - EC: 乳前牙, 第一大臼齒
+  - COC: 前牙，上下一樣多
+  - AOT: 上顎前牙犬齒頰側
+  - Squamous odontogenic tumor: 上顎前，下顎後
+  - compound Odontoma: 上顎前牙
+  - Odontogenic fibroma: 上顎為第一大臼齒以前、下顎為第一大臼齒以後
+
 
 
 
@@ -266,16 +283,23 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 | \oneline{
 - DC
 - RC
-- Ameloblastoma 多房型
-- Ameloblastic Carcinoma
-- Squamous odontogenic tumor
-- Odontogenic fibroma
-- Odontogenic myxoma
 
 }| \oneline{
 - OKC
 - LPC 
 }|
+|\oneline{
+- GOC
+- Ameloblastoma 多房型
+- Ameloblastic Carcinoma
+- Squamous odontogenic tumor
+- Odontogenic fibroma
+} |^|
+|\oneline{
+- Odontogenic myxoma
+
+}|^
+
 
 
 | 正角化上皮| 不完全角化上皮| 非角化上皮 |
@@ -297,15 +321,3 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 | 單房 Unilocular| 多房 Multilocular|
 |-----|-------------------------------|
 | OOC <br> COC <br> Simple Bone Cyst | GOC <br> Ameloblastoma |
-
-
-## 骨擴張
-
-
-
-
-
-### 頰舌擴張
-
-- BBC
-- 多房 Ameloblastoma

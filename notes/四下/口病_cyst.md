@@ -116,7 +116,7 @@ n["非齒源(Non-Odontogenic)"]
 |^|^|^|^| &beta; catenine + |
 | Peripheral Calcifying Odontogenic Cyst|COC 長出來 |-|60-80y |.![alt text](paste_src/口病-11.png)|
 |Glandular Odontogenic Cyst (GOC)|-|下顎前牙|46-51y| 跨中線、無 MAML2|
-|^|^|^|^| 復發、侵犯性，吃 cortical bone ![alt text](paste_src/口病-12.png)
+|^|^|^|^| 復發、局部侵犯性，吃 cortical bone ![alt text](paste_src/口病-12.png)
 |^|^|^|^| 杯狀細胞, cilia, focal plaques
 
 
