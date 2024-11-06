@@ -218,3 +218,18 @@ Gardner syndrome
 |^|^|^|^| 侵犯牙根之間區域，不影響鄰牙，近遠心擴張 ![alt text](paste_src/口病-43.png)|
 | Aneurysmal Bone Cyst <br> 動脈瘤性骨囊腫|==大小不等==骨內堆積被纖維結締組織和活性骨包圍，並充滿血液| 長骨或脊椎骨、 下顎(2%)後牙  | 30y &darr; | 骨頭腫得快，可能多房，邊界不一定完整 ![alt text](paste_src/口病-44.png)
 |^|^|^|^| Granulation tissue: 巨噬細胞蝕骨 ![alt text](paste_src/口病-45.png) |
+
+
+## 整理 
+
+
+
+![alt text](paste_src/口病-17.png)
+
+> - COC 在前區
+
+![alt text](paste_src/口病-18.png)
+
+
+> - BOC = 多囊 LPC &rarr; 在 premolar
+> - Slaodontogenic Cyst (GOC) 在前牙跨中線

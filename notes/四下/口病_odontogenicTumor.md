@@ -223,3 +223,74 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 ![alt text](paste_src/口病-119.png)
 ![alt text](paste_src/口病-123.png)
 }|
+
+
+## 齒源性腫瘤、Cyst 整理
+
+
+
+
+| 男性較多                                                                                                                                                                                                                                  | 女性較多                                                                       |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| OOC <br>odontogenic carcinoma<br>NDC <br> EC<br>Stafne Defect <br> Simple Bone Cyst 長骨型 | Nasolabial Cyst <br> Gardner syndrome <br>Pilar cysts |
+
+
+
+| 必定伴隨阻生牙| 可能伴隨阻生牙| 一定不伴隨阻生牙|
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|
+|\oneline{
+- DC
+}|\oneline{
+- OKC(40%)
+- OOC (66%)
+- COC(33%機率)
+- 單房 Ameloblastoma
+- Adenomatoid odontogenic tumor (66%)
+- Ameloblastic fibroma (75%)
+
+} | \oneline{
+- LPC
+ } |
+
+
+| 牙根吸收| 牙根不太吸收|
+|-|-|
+| \oneline{
+- DC
+- RC
+- Ameloblastoma 多房型
+- Ameloblastic Carcinoma
+- Squamous odontogenic tumor
+- Odontogenic fibroma
+- Odontogenic myxoma
+
+}| \oneline{
+- OKC
+- LPC  
+}|
+
+
+| 正角化上皮| 不完全角化上皮| 非角化上皮 |
+|-------------------------------------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| \oneline{
+- OOC
+- EC
+- Dermoid cyst
+
+} |\oneline{
+- OKC
+- Oral Lymphoepithelial Cyst
+
+  }  |\oneline{
+- DC
+- LPC
+- GOC} |
+
+| 單房 Unilocular| 多房 Multilocular|
+|-----|-------------------------------|
+| OOC <br> COC <br> Simple Bone Cyst | GOC <br> Ameloblastoma |
+
+
+## 頰舌擴張 
+
+- 多房 Ameloblastoma
