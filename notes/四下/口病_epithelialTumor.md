@@ -208,7 +208,7 @@ xanthoma
 - ABCDE
   - Asymmetry
   - Border irregularity
-  - Colot veruegation
+  - Color variegation
   - Diameter >6mm
   - Evolving
 - Horizontal phase(Radial) &rarr; Vertical phase (Invasive)
@@ -232,7 +232,9 @@ xanthoma
   - `GENE:` Kit (CD117) 
 
 
-![alt text](paste_src/口病_epithelialTumor-5.png =50)
+\picBox{
+![alt text](paste_src/口病_epithelialTumor-11.png =50)
+![alt text](paste_src/口病_epithelialTumor-5.png =50)}
 
 
 
@@ -428,9 +430,9 @@ Grading 的判斷較為主觀,[staging](#oscc-staging) 和預後(prognosis)的�
   - 堅硬、界限清楚、廣底
   - 中央角蛋白栓塞
 
-
-![alt text](paste_src/口病_epithelialTumor-7.png)
-![alt text](paste_src/口病_epithelialTumor-8.png)
+\picBox{
+![alt text](paste_src/口病_epithelialTumor-7.png =40)
+![alt text](paste_src/口病_epithelialTumor-8.png =40)}
 
 - 三階段 
   - Growth Phase: 會迅速增大
@@ -482,6 +484,17 @@ Grading 的判斷較為主觀,[staging](#oscc-staging) 和預後(prognosis)的�
 ![alt text](paste_src/口病_epithelialTumor-1.png =40)
 
 :::
+
+
+
+#### Oral melanoma staging 
+
+- T3: 黏膜
+- T4a: 深軟組織、軟骨、硬骨、overlying skin
+- T4b: 腦組織及腦神經、masticator space、頸動脈、prevertebral space、縱隔腔結構
+
+
+
 
 #### OSCC staging 
 
