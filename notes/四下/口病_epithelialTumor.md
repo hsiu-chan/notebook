@@ -496,7 +496,7 @@ Grading 的判斷較為主觀,[staging](#oscc-staging) 和預後(prognosis)的�
 
 
 
-#### OSCC staging 
+#### OSCC and HPV- OPSCC staging 
 
 - T
 
@@ -532,3 +532,17 @@ n1-->|否|s["T? &rarr; Stage ?"]
 
 
 ![alt text](paste_src/口病_epithelialTumor-3.png =100)
+
+#### HPV+ OPSCC 
+
+```mermaid
+graph LR 
+
+m["M1?"] -->|是| s4[IV]
+
+m -->|否| n["(N3 or T4)?"] -->|是| s3[III]
+
+n-->|否| nn["(N2 or T3)?"] -->|是| s2[II]
+nn -->|否| s1[I]
+
+```
