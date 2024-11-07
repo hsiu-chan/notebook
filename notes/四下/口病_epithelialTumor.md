@@ -505,4 +505,17 @@ DOI(mm) \ size(cm) | < 2 |2~4 | > 4|
 3b| - |-| - | &check;|
 
 - Staging 
+
+
+```mermaid
+graph LR 
+
+
+m["(M1 or N2)?"] -->|是| s4[IV]
+m-->|否|n1[N1?] -->|是|s3[III]
+n1-->|否|s["T? &rarr; Stage ?"]
+```
+
+
+
 ![alt text](paste_src/口病_epithelialTumor-3.png =100)
