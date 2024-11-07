@@ -308,7 +308,7 @@
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .table-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -323,11 +323,12 @@
   width: 100%;
   table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
   border-collapse: collapse;
   display: table;
+  margin-top: 1rem;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .markdown-preview table {
     table-layout: auto;
   }
@@ -354,17 +355,28 @@
 .markdown-preview table th ol,
 .markdown-preview table td ul,
 .markdown-preview table th ul {
-  padding-left: 0;
   list-style-position: inside;
   /* 控制項目符號的位置 */
   text-align: left;
   /* 文字對齊方式 */
 }
+.markdown-preview table th.top-left,
+.markdown-preview table td.top-left {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+}
+.markdown-preview table th.top-left > .col-title,
+.markdown-preview table td.top-left > .col-title {
+  text-align: right;
+}
+.markdown-preview table th.top-left > .row-title,
+.markdown-preview table td.top-left > .row-title {
+  text-align: left;
+}
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -386,6 +398,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
+  /* Modal (background for enlarged image) */
   /* 侧栏 */
   /* 侧栏自动编号 */
   /* 复位计数器 */
@@ -615,7 +628,63 @@ html body .fbox img {
   left: 0;
   transform: translate(0, 0);
   padding: 0;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
@@ -648,7 +717,7 @@ html body .fbox img {
 <td>Duct &#x7834;</td>
 <td>&#x4E0B;&#x5507;</td>
 <td>Youth</td>
-<td colspan="3"><ul> <li>&#x767C;&#x708E; &#x2192; Foamy cell</li> <li>&#x85CD;&#x8272;&#x816B;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-128.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>&#x767C;&#x708E; &#x2192; Foamy cell</li> <li>&#x85CD;&#x8272;&#x816B;<br><img src="paste_src/&#x53E3;&#x75C5;-128.png" alt="alt text" style=";background-color: white;padding:0"></li> </ul></td>
 
 
 </tr>
@@ -697,7 +766,7 @@ html body .fbox img {
 
 <td rowspan="2">&#x7F3A;&#x8840; &#x2192; &#x5C40;&#x90E8;&#x7834;&#x58DE;&#x6027;&#x767C;&#x708E;: &#x5C40;&#x90E8;&#x9EBB;&#x9189;&#x5291;(Dental injection) &#x3001;&#x4E0D;&#x5408;&#x7684;&#x5047;&#x7259;</td>
 <td rowspan="2">&#x8EDF;&#x786C;&#x984E;&#x9023;&#x63A5;&#x8655;&#x3001;&#x5C0F;&#x553E;&#x6DB2;&#x817A;</td>
-<td rowspan="2">-</td>
+<td rowspan="2">46y</td>
 <td colspan="3"><ul> <li>&#x706B;&#x5C71;&#x53E3;&#x72C0;&#x6F70;&#x760D;&#xFF0C;&#x4E0D;&#x592A;&#x75DB; (&#x8207;&#x6F70;&#x760D;&#x5927;&#x5C0F;&#x4E0D;&#x6210;&#x6BD4;&#x4F8B;)</li> <li>5-6 &#x9031;&#x81EA;&#x5DF1;&#x6703;&#x597D;&#xFF0C;&#x6301;&#x7E8C; 2 &#x9031;&#x61F7;&#x7591;&#x60E1;&#x6027;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-132.png" alt="alt text" style=";background-color: white;padding:0">&#xFF5C;</td>
 
 
@@ -708,7 +777,7 @@ html body .fbox img {
 
 
 
-<td colspan="3"><ul> <li>Duct &#x9C57;&#x72C0;&#x5316;&#x751F; (Squamous metaplasia, ~SCC)</li> <li>&#x817A;&#x6CE1;&#x58DE;&#x6B7B;(acinar necrosis)</li> <li>&#x5C0F;&#x8449;&#x7D50;&#x69CB;&#x5B8C;&#x6574;</li> <li>&#x7121;&#x7D30;&#x80DE;&#x7570;&#x751F; (no cytologic atypia)</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-133.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>Duct &#x9C57;&#x72C0;&#x5316;&#x751F; (Squamous metaplasia, ~SCC)</li> <li>&#x817A;&#x6CE1;&#x58DE;&#x6B7B;(acinar necrosis)</li> <li>&#x5C0F;&#x8449;&#x7D50;&#x69CB;&#x5B8C;&#x6574;</li> <li>&#x7121;&#x7D30;&#x80DE;&#x7570;&#x751F; (no cytologic atypia)<br><img src="paste_src/&#x53E3;&#x75C5;-133.png" alt="alt text" style=";background-color: white;padding:0"></li> </ul></td>
 
 
 </tr>
@@ -766,7 +835,7 @@ html body .fbox img {
 <td colspan="2">S.aureus,<br> S.viridans,<br> S. pneumoniae</td>
 
 <td>-</td>
-<td colspan="3"><ul> <li>&#x8868;&#x6DFA;&#xFF0C;&#x75BC;&#x75DB;&#xFF0C;&#x7D05;&#x6591;</li> <li>&#x4F4E;&#x71D2;&#xFF0C;&#x6709; Pus</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-134.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>&#x8868;&#x6DFA;&#xFF0C;&#x75BC;&#x75DB;&#xFF0C;&#x7D05;&#x6591;</li> <li>&#x4F4E;&#x71D2;&#xFF0C;&#x6709; Pus<br><img src="paste_src/&#x53E3;&#x75C5;-134.png" alt="alt text" style=";background-color: white;padding:0"></li> </ul></td>
 
 
 </tr>
@@ -844,7 +913,7 @@ html body .fbox img {
 <td>&#x548C;&#x9223;&#x3001;&#x78F7;&#x7684;&#x4EE3;&#x8B1D;&#x7121;&#x95DC;</td>
 <td>Submandibular gland</td>
 <td>-</td>
-<td colspan="3"><ul> <li>&#x55AE;&#x767C;</li> <li>&#x7528;&#x9910; 30mins &#x75DB;</li> <li>&#x786C;&#x3001;&#x4E0D;&#x79FB;&#x52D5;</li> <li>&#x6AA2;&#x6E2C;&#x9700;&#x8981; occlusal film</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-136.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>&#x55AE;&#x767C;</li> <li>&#x7528;&#x9910; 30mins &#x75DB;</li> <li>&#x786C;&#x3001;&#x4E0D;&#x79FB;&#x52D5;</li> <li>&#x6AA2;&#x6E2C;&#x9700;&#x8981; occlusal film<br><img src="paste_src/&#x53E3;&#x75C5;-136.png" alt="alt text" style=";background-color: white;padding:0"></li> </ul></td>
 
 
 </tr>
@@ -952,7 +1021,7 @@ html body .fbox img {
 <td colspan="2"><span style="margin:0; color:red">Acinic cell CA </span></td>
 
 <td>-</td>
-<td colspan="3"><ul> <li>capsule</li> <li>&#x6DCB;&#x5DF4;&#x7D50;&#x8F49;&#x79FB;: 8-11%</li> <li>&#x591A;&#x8B8A;&#x7684;&#x7D50;&#x69CB;&#x53CA;&#x7D30;&#x80DE;&#x578B;&#x614B;:</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-16.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>capsule</li> <li>&#x6DCB;&#x5DF4;&#x7D50;&#x8F49;&#x79FB;: 8-11%</li> <li>&#x591A;&#x8B8A;&#x7684;&#x7D50;&#x69CB;&#x53CA;&#x7D30;&#x80DE;&#x578B;&#x614B;:<br><img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-16.png" alt="alt text" style=";background-color: white;padding:0"></li> </ul></td>
 
 
 </tr>
@@ -961,7 +1030,7 @@ html body .fbox img {
 <td colspan="2"><span style="margin:0; color:red">Pleomorphic adenoma <br>(PA, &#x591A;&#x578B;&#x6027;&#x817A;&#x7624;)</span><span style="margin:0; color:lightgreen"><sup>&#x826F;,1st</sup></span></td>
 
 <td rowspan="2">30-55y</td>
-<td colspan="3"><ul> <li>&#x4E3B;&#x8981;&#x4F86;&#x6E90;: &#x4E0A;&#x76AE;&#x3001;myoepithelial cell</li> <li>&#x9577;&#x8D8A;&#x4E45;&#xFF0C;&#x8F49;&#x60E1;&#x6A5F;&#x7387;&#x8D8A;&#x5927;</li> <li>&#x5982;&#x679C;&#x5E7E;&#x4E4E; myoepithelial cell &#x2192; myoepithelioma (&#x826F;)</li> <li>&#x908A;&#x754C;&#x660E;&#x986F;&#xFF0C;capsule&#xFF0C;&#x4F46;&#x53EF;&#x80FD;&#x6C92;&#x5305;&#x597D; &#x2192; Daughter nodule &#x2192; carcinoma ex pleomorphic adenoma</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>&#x4E3B;&#x8981;&#x4F86;&#x6E90;: &#x4E0A;&#x76AE;&#x3001;myoepithelial cell</li> <li>&#x9577;&#x8D8A;&#x4E45;&#xFF0C;&#x8F49;&#x60E1;&#x6A5F;&#x7387;&#x8D8A;&#x5927;</li> <li>&#x5982;&#x679C;&#x5E7E;&#x4E4E; myoepithelial cell &#x2192; myoepithelioma (&#x826F;)</li> <li>&#x908A;&#x754C;&#x660E;&#x986F;&#xFF0C;capsule&#xFF0C;&#x4F46;&#x53EF;&#x80FD;&#x6C92;&#x5305;&#x597D; &#x2192; Daughter nodule &#x2192; carcinoma ex pleomorphic adenoma<br><img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;.png" alt="alt text" style=";background-color: white;padding:0"></li> </ul></td>
 
 
 </tr>
@@ -976,7 +1045,7 @@ html body .fbox img {
 </tr>
 <tr>
 
-<td rowspan="2" colspan="2"><span style="margin:0; color:red">Adenoid cystic CA</span></td>
+<td rowspan="2" colspan="2"><span style="margin:0; color:red">Adenoid cystic CA (AdCC)</span></td>
 
 <td rowspan="2">-</td>
 <td colspan="3"><ul> <li>&#x597D;&#x767C;: minor salivary g.</li> <li>&#x908A;&#x7DE3;&#x4E0D;&#x5B8C;&#x6574;&#xFF0C;&#x6613;&#x5FA9;&#x767C;</li> <li>&#x5927;&#x65BC;50%&#x8F49;&#x79FB;</li> <li><code>GENE:</code> MYB-NFIB fusion</li> <li>&#x6613;&#x6709;&#x795E;&#x7D93;&#x4FB5;&#x72AF; &#x2192; &#x75DB;</li> <li>CD43(+), CD117(+)</li> </ul></td>
@@ -988,7 +1057,7 @@ html body .fbox img {
 
 
 
-<td colspan="3"><ul> <li>hyalinized or myxoid &#x7684; myoepithelial cell &#x7D44;&#x6210;&#x7BE9;&#x72C0;&#x7D50;&#x69CB;</li> <li>Basement membrane &#x539A;</li> <li>&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x5C0E;&#x7BA1;(&#x85CD;&#x7BAD;&#x982D;)</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-17.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-18.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-19.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>hyalinized or myxoid &#x7684; myoepithelial cell &#x7D44;&#x6210;&#x7BE9;&#x72C0;&#x7D50;&#x69CB;</li> <li>Basement membrane &#x539A;</li> <li>&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x5C0E;&#x7BA1;(&#x85CD;&#x7BAD;&#x982D;)<br><img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-17.png" alt="alt text" style=";background-color: white;padding:0"></li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-18.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-19.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 
 </tr>
@@ -1024,7 +1093,7 @@ html body .fbox img {
 <td colspan="2"><span style="margin:0; color:red">Canalicular Adenoma</span><span style="margin:0; color:lightgreen"><sup>&#x826F;</sup></span> <br> &#x5C0F;&#x7BA1;&#x817A;&#x7624;</td>
 
 <td>&#x4E0A;&#x5507;(75%)&#xFF0C;70y &#x2191;</td>
-<td colspan="3"><ul> <li>&#x5169;&#x689D;&#x55AE;&#x5C64;&#x67F1;&#x72C0;&#x6216;&#x7ACB;&#x65B9;&#x5E73;&#x884C;&#x6392;&#x5217;</li> <li>&#x8840;&#x7BA1;&#x591A;&#x6613;&#x51FA;&#x8840;(high vascularity)</li> <li>Cyst</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-9.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-8.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>&#x5169;&#x689D;&#x55AE;&#x5C64;&#x67F1;&#x72C0;&#x6216;&#x7ACB;&#x65B9;&#x5E73;&#x884C;&#x6392;&#x5217;</li> <li>&#x8840;&#x7BA1;&#x591A;&#x6613;&#x51FA;&#x8840;(high vascularity)</li> <li>Cyst<br><img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-9.png" alt="alt text" style="width:40%;background-color: white;padding:0"></li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-8.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
 
 
 </tr>
@@ -1042,7 +1111,7 @@ html body .fbox img {
 
 
 
-<td colspan="3"><strong>membranous type</strong> <ul> <li>&#x5E95;&#x5C64;&#x6DF1;&#x67D3;</li> <li>&#x4E00;&#x5708;&#x539A; hyaline &#x5806;&#x7A4D;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-10.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+<td colspan="3"><strong>membranous type</strong><br>- &#x5E95;&#x5C64;&#x6DF1;&#x67D3; <ul> <li>&#x4E00;&#x5708;&#x539A; hyaline &#x5806;&#x7A4D;<br><img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-10.png" alt="alt text" style="width:50%;background-color: white;padding:0"></li> </ul></td>
 
 
 </tr>
@@ -1060,7 +1129,7 @@ html body .fbox img {
 <td colspan="2"><span style="margin:0; color: DeepSkyBlue;">Warthin&#x2019;s tumor</span><span style="margin:0; color:lightgreen"><sup>&#x826F;,2nd</sup></span></td>
 
 <td>50-70y</td>
-<td colspan="3"><ul> <li>Papillary cystadenoma lymphomatosum</li> <ul> <li>&#x986F;&#x5FAE;&#x4E0B;&#x53EF;&#x898B;&#x5230;&#x7BA1;&#x8154;(cyst)&#x5468;&#x570D;&#x5448;&#x73FE;&#x4E73;&#x7A81;&#x72C0;(papillary)&#x7A81;&#x8D77;&#xFF0C;&#x80CC;&#x666F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5F88;&#x591A;lymphoid tissue</li> </ul> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-7.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>Papillary cystadenoma lymphomatosum</li> <ul> <li>&#x986F;&#x5FAE;&#x4E0B;&#x53EF;&#x898B;&#x5230;&#x7BA1;&#x8154;(cyst)&#x5468;&#x570D;&#x5448;&#x73FE;&#x4E73;&#x7A81;&#x72C0;(papillary)&#x7A81;&#x8D77;&#xFF0C;&#x80CC;&#x666F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5F88;&#x591A;lymphoid tissue<br><img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-7.png" alt="alt text" style=";background-color: white;padding:0"></li> </ul> </ul></td>
 
 
 </tr>
@@ -1078,7 +1147,7 @@ html body .fbox img {
 <td rowspan="3" colspan="2"><span style="margin:0; color:red">Mucoepidermoid carcinoma<sup>1st</sup></span></td>
 
 <td rowspan="3">-</td>
-<td colspan="3"><ul> <li>Radio relation</li> <li>parotid gland (60-70%) &#x2192; Palate</li> <li><code>GENE:</code>MECT1-MAML2 fusion</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-12.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-13.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>Radio relation</li> <li>parotid gland (60-70%) &#x2192; Palate</li> <li><code>GENE:</code>MECT1-MAML2 fusion<br><img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-12.png" alt="alt text" style=";background-color: white;padding:0"></li> </ul> <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-13.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 
 </tr>
@@ -1129,6 +1198,29 @@ html body .fbox img {
 </tr>
 </tbody>
 </table></div>
+<h2 class="mume-header" id="%E6%95%B4%E7%90%86">&#x6574;&#x7406;</h2>
+
+<ul>
+<li>Youth
+<ul>
+<li>mucous extravasation Ranula</li>
+<li>Mumps</li>
+<li>Subacute Necrotizing Sialadenitis</li>
+</ul>
+</li>
+<li>&#x597D;&#x767C;&#x65BC; Palate
+<ul>
+<li>AdCC</li>
+<li>polymorphous adenocarcinoma</li>
+<li>clear cell carcinoma (80%)</li>
+</ul>
+</li>
+<li>&#x597D;&#x767C;&#x65BC;&#x4E0A;&#x5507;
+<ul>
+<li>Canalicular adenoma (75%)</li>
+</ul>
+</li>
+</ul>
 <img src="paste_src/&#x53E3;&#x75C5;_&#x553E;&#x6DB2;&#x817A;-11.png" alt="alt text" style=";background-color: white;padding:0">
 <br><br>
 
@@ -1149,6 +1241,7 @@ $(Main_LeftListLiSelector).on('click', function() {
 <li><a href="#sialadenitis">Sialadenitis</a></li>
 <li><a href="#%E5%85%B6%E4%BB%96">&#x5176;&#x4ED6;</a></li>
 <li><a href="#tumor">Tumor</a></li>
+<li><a href="#%E6%95%B4%E7%90%86">&#x6574;&#x7406;</a></li>
 </ul>
 </li>
 </ul>
