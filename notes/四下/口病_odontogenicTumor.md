@@ -271,6 +271,7 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 - COC(33%機率)
 - 單房 Ameloblastoma
 - AOT (66%)
+- CEOT
 - Ameloblastic fibroma (75%)
 
 } | \oneline{
