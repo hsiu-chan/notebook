@@ -61,12 +61,103 @@ export_on_save:
 ![alt text](paste_src/口病_Hema-4.png =40)}
 
 
-## Lymphoma
-### Diffuse Large B-cell Lymphoma 
 
-- 成人最常見 Lymphoma (20%)
+## Kikuchi-Fujimoto disease
+
+- 淋巴結發炎壞死
+- Necrosis: 砂粒狀，粉粉的
+- nuclear dust: 核破碎的髒東西
+- Histiocytes: 結締組織macrophage，CD68, CD163
+
+![alt text](paste_src/口病_Hema-15.png)
+
+
+## Cat Scratch Disease
+
+- Granulomas 但一堆 neutrophil
+
+
+
+
+:::left
+## Kimura disease
+> eosinophils 跑到 Lymph Follicle
+
+- 亞洲年輕的成年男性 (20-30y)
+- 深層病灶，淋巴、唾液腫
+- 血管增生，型態正常
+- 抽血 eosinophils 升高
+- IgE-positive mast cell
+
+:::right
+## Epithelioid Hemangioma
+> eosinophils 跑到 Lymph Follicle
+
+
+- 男女差不多 (30-50y)
+- 淺層病灶，淋巴唾液較少腫脹
+- 血管增生，但圓胖內皮 &rarr; 墓碑
+- 抽血無 eosinophils 升高
+
+:::
+
+
+## Castleman disease 
+- Onion skin: 淋巴圍血管，一圈又一圈
+- 血管壁退化 &rarr; hyalinized walls
+- Paraneoplastic Pemphigus 可能引發
+  - HHV 8, IL6
+
+
+![alt text](paste_src/口病_Hema-16.png =40)
+
+
+## Rosai-Dorfman disease 
+
+
+- 大 Histiocytes 吃周圍 lymphocyte 
+
+![alt text](paste_src/口病_Hema-17.png =35)
+
+
+
+
+----
+> 再來是惡性
+
+## Lymphoma
+
+- 口內 
+  - Diffuse Large B-cell Lymphoma (DLBCL)
+- 唾液腺
+  - Mucosa-Associated Lymphoid Tissue (MALT)
+
+- 與免疫低下無關 
+  - Hodgkin Lymphoma (HL)
+  - DLBCL
+  - Burkitt Lymphoma
+
+
+
+
+
+### Diffuse Large B-cell Lymphoma (DLBCL)
+
+- 成人口內最常見 Lymphoma (20%)
 - 40-50y
 - 快速增長，並在淋巴結及其他器官（例如肝臟、脾臟或骨髓）形成腫瘤。
+- IHC: BCL6, CD10, MUM1
+
+### MALT lymphoma 
+
+- Sjogren syndrome 的衍生疾病。
+  - 好發: Parotid gland
+- Helicobacter pylori 相關
+- Russell body (From plasma cell)
+
+![alt text](paste_src/口病_Hema-9.png)
+
+
 
 ### Burkitt lymphoma
 > B lymphocyte 的惡性腫瘤
@@ -81,7 +172,10 @@ export_on_save:
   - Sporadic 15-20% 
   - HIV: 25%
 - t(8;14)(t 代表 translocation )， c-MYC 轉位到十四對染色體的 IgH 免疫球蛋白重鏈基因的位置
-  - c-MYC 大量產生
+  - c-MYC: Light zone 跟 T~FH~ 結合存活表現
+  - c-MYC 大量產生 &rarr; 增生 
+  - Ki-67(+)
+
 ---
 - 口腔常出現
 - 年輕 
@@ -95,11 +189,24 @@ export_on_save:
 
 
 
+
+### Plasmablastic Lymphoma
+
+- EBV related
+- 年紀大
+- 淋巴結外
+- IHC: 
+  - Plasma cell marker: CD38, CD138, CD97a
+
+
+
+
 ### Extranodal NK/T Cell Lymphoma 
 
 - EBV related (100%)
 - 淋巴結之外的 NK/T cell 所發展出來的
-- 侵犯血管 (尤其是動脈)
+- 長在鼻中線
+- 圍著血管長，侵犯血管 (尤其是動脈)
   - 造成大區域缺血壞死
 - 侵犯性強，化學治療不敏感 &rarr; 預後不佳，大部分病歷都在診斷後三年內過世
 
@@ -107,6 +214,13 @@ export_on_save:
 ![alt text](paste_src/口病_Hema-6.png =60)
 
 ![alt text](paste_src/口病_Hema-7.png =50)
+
+### Mycosis Fungoides 
+
+- CD4 T cell 
+- 侵犯上皮 
+
+
 
 ## Solitary Plasmacytoma 單一漿細胞瘤
 > 過多免疫球蛋白堆積在細胞質
@@ -130,12 +244,50 @@ export_on_save:
 ## Langerhans Cell Histiocytosis 
 
 - Langerhans cell 增生的腫瘤
+- BRAF 
+- 骨侵蝕，從上皮往下長
+- 15y &darr;，男女差不多。
 - 蝕骨
 - IHC: 
-  - HLA-DR
+  - HLA-DR: 來自 MHC II
   - S-100
   - CD1a
   - CD-207(langerin)
+- punched out, scooped out 
+\picBox{
+![alt text](paste_src/口病_Hema-11.png =35)
+![alt text](paste_src/口病_Hema-10.png =60)}
+
+
+- 一堆 Eosinophil
+- Langerhans Cell: Coffee been 細胞核
+
+
+punched out
+: 邊緣清晰、圓形或類似「穿孔」的骨病變
+
+
+## multiple myeloma
+
+- 骨破壞 
+- 蛋白尿
+- punched out
+![alt text](paste_src/口病_Hema-12.png =60)
+
+- Plasma cell 大小不一
+- &kappa; chain 超多 (10:1) &rarr; 來自單株
+- 可能表現 CD79a, CD56
+
+![alt text](paste_src/口病_Hema-13.png =60)
+
+
+
+- Amyloidosis (澱粉狀病變)
+  - 大舌頭，節結狀
+  - 眼睛 Waxy plagues 
+  - 堆在 Blood vessel 周邊
+
+![alt text](paste_src/口病_Hema-14.png =30)
 
 ## Oral Graft versus Host Disease (GVHD)
 
