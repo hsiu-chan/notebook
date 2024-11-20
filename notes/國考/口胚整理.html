@@ -51,7 +51,7 @@
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .table-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -66,11 +66,12 @@
   width: 100%;
   table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
   border-collapse: collapse;
   display: table;
+  margin-top: 1rem;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .markdown-preview table {
     table-layout: auto;
   }
@@ -97,17 +98,28 @@
 .markdown-preview table th ol,
 .markdown-preview table td ul,
 .markdown-preview table th ul {
-  padding-left: 0;
   list-style-position: inside;
   /* 控制項目符號的位置 */
   text-align: left;
   /* 文字對齊方式 */
 }
+.markdown-preview table th.top-left,
+.markdown-preview table td.top-left {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+}
+.markdown-preview table th.top-left > .col-title,
+.markdown-preview table td.top-left > .col-title {
+  text-align: right;
+}
+.markdown-preview table th.top-left > .row-title,
+.markdown-preview table td.top-left > .row-title {
+  text-align: left;
+}
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -129,6 +141,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
+  /* Modal (background for enlarged image) */
   /* 侧栏 */
   /* 侧栏自动编号 */
   /* 复位计数器 */
@@ -358,7 +371,63 @@ html body .fbox img {
   left: 0;
   transform: translate(0, 0);
   padding: 0;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
@@ -589,11 +658,37 @@ fe--&gt;pp[&quot;&#x54BD;&#x56CA;(pharyngeal pouch)&quot;]
 <h2 class="mume-header" id="%E7%89%99%E9%BD%92">&#x7259;&#x9F52;</h2>
 
 <ul>
-<li>Pax 9: &#x7259;&#x80DA;&#x4F4D;&#x7F6E;&#x6C7A;&#x5B9A;</li>
-<li>&#x524D;&#x7259;: Msx-1, 2</li>
-<li>&#x5F8C;&#x7259;: Dlx-2, Barx-1</li>
+<li>
+<p>Fgf-8: &#x53E3;&#x8154;&#x4E0A;&#x76AE;&#x8868;&#x73FE;&#xFF0C;&#x8D77;&#x59CB;&#x8A98;&#x767C;&#x5916;&#x9593;&#x8449;&#x9577;&#x7259; (Lhx-6, Lhx-7, Pax 9)</p>
+</li>
+<li>
+<p>Lhx-6, Lhx-7: &#x5916;&#x9593;&#x8449;&#x6700;&#x65E9;&#x8207;&#x7259;&#x9F52;&#x76F8;&#x95DC;&#x57FA;&#x56E0;</p>
+</li>
+<li>
+<p>Pax 9: &#x7259;&#x80DA;&#x4F4D;&#x7F6E;&#x6C7A;&#x5B9A;&#xFF0C;&#x5206;&#x5316;</p>
+</li>
+<li>
+<p>Lef-1: &#x5E6B;&#x52A9;&#x82BD;&#x5F62;&#x671F;&#x5F8C;&#x7259;&#x9F52;&#x7684;&#x751F;&#x9577;&#x767C;&#x80B2;</p>
+</li>
+<li>
+<p>&#x524D;&#x7259;:</p>
+<ul>
+<li>Msx-1, 2 (&#x9580;&#x9F52;)</li>
 </ul>
-<p><img src="paste_src/2023-03-14-11-08-54.png" alt style="width:100%;background-color: white;padding:0">x</p>
+</li>
+<li>
+<p>&#x5F8C;&#x7259;:</p>
+<ul>
+<li>Dlx-2 (&#x591A; cusp),</li>
+<li>Barx-1 (&#x81FC;&#x9F52;)</li>
+</ul>
+</li>
+<li>
+<p>BMP-4: &#x6291;&#x5236; Pax9, Barx</p>
+</li>
+</ul>
+<img src="paste_src/&#x53E3;&#x80DA;&#x6574;&#x7406;-6.png" alt="alt text" style="width:80%;background-color: white;padding:0">
+<img src="paste_src/2023-03-14-11-08-54.png" alt style="width:80%;background-color: white;padding:0">
 <h2 class="mume-header" id="enamel-protein">Enamel protein</h2>
 
 <ul>
@@ -648,6 +743,10 @@ fe--&gt;pp[&quot;&#x54BD;&#x56CA;(pharyngeal pouch)&quot;]
 </li>
 </ul>
 <img src="paste_src/&#x53E3;&#x80DA;&#x6574;&#x7406;.png" alt="alt text" style=";background-color: white;padding:0">
+<h1 class="mume-header" id="%E9%8C%AF%E8%B9%84%E6%80%AA%E8%B9%84">&#x932F;&#x8E44;&#x602A;&#x8E44;</h1>
+
+<img src="paste_src/&#x53E3;&#x80DA;&#x6574;&#x7406;-5.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x80DA;&#x6574;&#x7406;-7.png" alt="alt text" style=";background-color: white;padding:0">
 <br><br>
 
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
@@ -685,6 +784,7 @@ $(Main_LeftListLiSelector).on('click', function() {
 <li><a href="#dentin-protein">Dentin protein</a></li>
 </ul>
 </li>
+<li><a href="#%E9%8C%AF%E8%B9%84%E6%80%AA%E8%B9%84">&#x932F;&#x8E44;&#x602A;&#x8E44;</a></li>
 </ul>
 </div>
       <a id="sidebar-toc-btn">&#x2261;</a>

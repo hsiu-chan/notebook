@@ -308,7 +308,7 @@
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .table-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -323,11 +323,12 @@
   width: 100%;
   table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
   border-collapse: collapse;
   display: table;
+  margin-top: 1rem;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .markdown-preview table {
     table-layout: auto;
   }
@@ -354,17 +355,28 @@
 .markdown-preview table th ol,
 .markdown-preview table td ul,
 .markdown-preview table th ul {
-  padding-left: 0;
   list-style-position: inside;
   /* 控制項目符號的位置 */
   text-align: left;
   /* 文字對齊方式 */
 }
+.markdown-preview table th.top-left,
+.markdown-preview table td.top-left {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+}
+.markdown-preview table th.top-left > .col-title,
+.markdown-preview table td.top-left > .col-title {
+  text-align: right;
+}
+.markdown-preview table th.top-left > .row-title,
+.markdown-preview table td.top-left > .row-title {
+  text-align: left;
+}
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -386,6 +398,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
+  /* Modal (background for enlarged image) */
   /* 侧栏 */
   /* 侧栏自动编号 */
   /* 复位计数器 */
@@ -615,7 +628,63 @@ html body .fbox img {
   left: 0;
   transform: translate(0, 0);
   padding: 0;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
@@ -669,10 +738,14 @@ y &amp; a--&gt;g[gastrulation: w3]--&gt;f[&#x80DA;&#x80CE;&#x958B;&#x59CB;&#x647
 <h4 class="mume-header" id="%E5%8E%9F%E8%85%B8%E5%8C%96gastrulation-w3">&#x539F;&#x8178;&#x5316;(gastrulation): w3</h4>
 
 <ul>
-<li>primitive node &#x6298;&#x9032;&#x4F86;&#x8B8A;&#x810A;&#x7D22;(notochord)</li>
-<li>&#x4E2D;&#x80DA;&#x5C64;(mesoderm)</li>
+<li>
+<p>primitive node &#x6298;&#x9032;&#x4F86;&#x8B8A;&#x810A;&#x7D22;(notochord)</p>
+</li>
+<li>
+<p>&#x4E2D;&#x80DA;&#x5C64;(mesoderm)</p>
+</li>
 </ul>
-<p><img src="paste_src/2023-03-04-00-36-36.png" alt></p>
+<img src="paste_src/2023-03-04-00-36-36.png" alt style=";background-color: white;padding:0">
 <div class="admonition note">
 <p class="admonition-title">&#x5167;&#x5916;&#x80DA;&#x5C64;&#x4EA4;&#x754C;</p>
 <p>&#x53E3;&#x8154;&#x3001;&#x809B;&#x9580;</p>
@@ -694,47 +767,47 @@ y &amp; a--&gt;g[gastrulation: w3]--&gt;f[&#x80DA;&#x80CE;&#x958B;&#x59CB;&#x647
 <dd>(Sonic hedgehog) &#x5DE6;&#x53F3;&#x5206;&#x5316;&#xFF0C;&#x6C7A;&#x5B9A;&#x56DB;&#x80A2;&#x4EE5;&#x53CA;&#x8166;&#x810A;&#x9AD3;&#x6B63;&#x4E2D;&#x7DDA;&#x7684;&#x5F62;&#x6210;</dd>
 <dt>cadherins</dt>
 <dd>&#x7D30;&#x80DE;&#x9023;&#x7D50;&#xFF0C;&#x5206;N,P,E&#xFF0C;&#x540C;&#x6027;&#x76F8;&#x5438;<br>
-<img src="paste_src/2023-03-04-00-43-03.png" alt></dd>
+<img src="paste_src/2023-03-04-00-43-03.png" alt style=";background-color: white;padding:0"></dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">epithelial&#x2014;mesenchymal transitions (EMT)</p>
 <p>Slug,Snail,and Twist &#x8CA0;&#x8CAC;&#x6253;&#x6563;epithelial cell&#x5F62;&#x6210;mesenchymal<br>
-<img src="paste_src/2023-03-04-00-45-58.png" alt></p>
+<img src="paste_src/2023-03-04-00-45-58.png" alt style=";background-color: white;padding:0"></p>
 </div>
 <h2 class="mume-header" id="%E5%88%86%E7%AF%80">&#x5206;&#x7BC0;</h2>
 
 <dl>
 <dt>somites</dt>
 <dd>&#x8EC0;&#x5E79;&#x5F62;&#x6210;&#x808C;&#x8089;&#x3001;&#x9AA8;&#x982D;&#x3001;&#x7D50;&#x7DE0;&#x7D44;&#x7E54;<br>
-<img src="paste_src/2023-03-04-00-47-37.png" alt></dd>
+<img src="paste_src/2023-03-04-00-47-37.png" alt style=";background-color: white;padding:0"></dd>
 <dt>somitomeres(musculature)</dt>
 <dd>&#x982D;&#x9838;&#x90E8;&#xFF0C;&#x516B;&#x5C0D;&#x9023;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x50C5;&#x7522;&#x751F;&#x808C;&#x8089;</dd>
 <dt>neural crest cells(NCCs)</dt>
 <dd>EMT&#x6253;&#x6563;&#xFF0C;&#x5206;&#x5316;&#x6210;&#x982D;&#x9838;&#x90E8;&#x96DC;&#x4E03;&#x96DC;&#x516B;<br>
-<img src="paste_src/2023-03-04-00-51-21.png" alt></dd>
+<img src="paste_src/2023-03-04-00-51-21.png" alt style=";background-color: white;padding:0"></dd>
 </dl>
 <h1 class="mume-header" id="%E4%B8%BB%E7%B5%90%E6%A7%8B">&#x4E3B;&#x7D50;&#x69CB;</h1>
 
-<p><img src="paste_src/2023-03-13-14-25-47.png" alt></p>
+<img src="paste_src/2023-03-13-14-25-47.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="somitomeres">somitomeres</h2>
 
 <ul>
 <li>&#x516B;&#x5C0D;&#x9023;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x50C5;&#x7522;&#x751F;&#x808C;&#x8089;</li>
 <li>1,2 &#x5F62;&#x6210;&#x9871;&#x984F;,3-8 &#x5F62;&#x6210;pharyngeal</li>
 </ul>
-<p><img src="paste_src/2023-03-08-19-27-52.png" alt></p>
+<img src="paste_src/2023-03-08-19-27-52.png" alt style=";background-color: white;padding:0">
 <img src="paste_src/2023-04-16-22-17-44.png" alt style="width:100%;background-color: white;padding:0">
 <dl>
 <dt>Hox</dt>
 <dd>somitomeres 3 &#x4E4B;&#x5F8C;&#x8868;&#x73FE;</dd>
 <dt>Dlx family</dt>
 <dd>&#x4E3B;&#x5C0E;&#x4E0A;&#x4E0B;&#x984E;&#x5206;&#x652F;<br>
-<img src="paste_src/2023-03-08-19-25-05.png" alt></dd>
+<img src="paste_src/2023-03-08-19-25-05.png" alt style=";background-color: white;padding:0"></dd>
 </dl>
 <h2 class="mume-header" id="pharyngeal-pounch-groove">Pharyngeal pounch /groove</h2>
 
-<p><img src="paste_src/2023-03-08-19-30-18.png" alt><br>
-<img src="paste_src/2023-03-08-19-32-48.png" alt></p>
+<img src="paste_src/2023-03-08-19-30-18.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2023-03-08-19-32-48.png" alt style=";background-color: white;padding:0">
 <ul>
 <li>&#x9664;&#x4E86; 1st Pharyngeal pouch &#x5F62;&#x6210;&#x5167;&#x8033;&#x9053;&#xFF0C;&#x5176;&#x4ED6;&#x90FD;&#x5F62;&#x6210;&#x817A;&#x9AD4;</li>
 </ul>
@@ -819,6 +892,12 @@ y &amp; a--&gt;g[gastrulation: w3]--&gt;f[&#x80DA;&#x80CE;&#x958B;&#x59CB;&#x647
 <td>CN IX</td>
 </tr>
 <tr>
+<td>Artery</td>
+<td>&#x4E0A;&#x984E;</td>
+<td>&#x820C;&#x3001;&#x9419;&#x9AA8;</td>
+<td>&#x7E3D;&#x9838;&#x3001;&#x5167;&#x9838;</td>
+</tr>
+<tr>
 <td>muscular</td>
 <td>&#x5480;&#x56BC;&#x808C;</td>
 <td>&#x8868;&#x60C5;&#x808C;</td>
@@ -857,50 +936,61 @@ y &amp; a--&gt;g[gastrulation: w3]--&gt;f[&#x80DA;&#x80CE;&#x958B;&#x59CB;&#x647
 
 </tr>
 <tr>
+<td>Artery</td>
+<td><ul> <li>&#x5DE6;&#x5074;: &#x4E3B;&#x52D5;&#x8108;&#x5F13;&#x3001;&#x5DE6;&#x7E3D;&#x9838;&#x52D5;&#x8108;&#x548C;&#x9396;&#x9AA8;&#x4E0B;&#x52D5;&#x8108;</li> <li>&#x53F3;&#x5074;: &#x53F3;&#x9396;&#x9AA8;&#x4E0B;&#x52D5;&#x8108;</li> </ul></td>
+<td><ul> <li>&#x5DE6;&#x5074;: &#x80BA;&#x52D5;&#x8108;&#x5F13;&#x3001;&#x5DE6;&#x80BA;&#x52D5;&#x8108;&#x3001;&#x52D5;&#x8108;&#x5C0E;&#x7BA1;(ductus arterious)</li> </ul> <ul> <li>&#x53F3;&#x5074;: &#x53F3;&#x80BA;&#x52D5;&#x8108;</li> </ul></td>
+</tr>
+<tr>
 <td>muscular</td>
 <td colspan="2">CN X &#x652F;&#x914D;</td>
 
 </tr>
-<tr>
-<td>&#x5099;&#x8A3B;</td>
-<td>&#x4E3B;&#x52D5;&#x8108;&#x5F13;</td>
-<td>-</td>
-</tr>
 </tbody>
 </table></div>
+<img src="paste_src/&#x53E3;&#x80DA;.png" alt="alt text" style="width:80%;background-color: white;padding:0">
 <h2 class="mume-header" id="fiber">Fiber</h2>
 
 <img src="paste_src/2023-06-02-17-29-20.png" alt style="width:100%;background-color: white;padding:0">
 <ul>
-<li>I
+<li>
+<p>I</p>
 <ul>
 <li>&#x4E09;&#x80A1;&#x87BA;&#x65CB;</li>
 </ul>
 </li>
-<li>III
+<li>
+<p>III</p>
 <ul>
 <li>&#x80DA;&#x80CE;/ repair</li>
 </ul>
 </li>
-<li>IV
+<li>
+<p>IV</p>
 <ul>
 <li>Basal laminae</li>
 </ul>
 </li>
-<li>VII
+<li>
+<p>VII</p>
 <ul>
 <li>epithelium</li>
 <li>&#x9328;&#x5B9A;</li>
 </ul>
 </li>
-<li>IX</li>
-<li>Cartilage</li>
-<li>X
+<li>
+<p>IX</p>
+</li>
+<li>
+<p>Cartilage</p>
+</li>
+<li>
+<p>X</p>
 <ul>
 <li>Hypertrophic zone (Cartilage)</li>
 </ul>
 </li>
-<li>XII
+<li>
+<p>XII</p>
 <ul>
 <li>&#x97CC;&#x5E36;</li>
 </ul>
@@ -925,7 +1015,7 @@ y &amp; a--&gt;g[gastrulation: w3]--&gt;f[&#x80DA;&#x80CE;&#x958B;&#x59CB;&#x647
 <p>26d</p>
 <ul>
 <li>Frontal prominence<br>
-<img src="paste_src/2023-03-13-14-54-20.png" alt></li>
+<img src="paste_src/2023-03-13-14-54-20.png" alt style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>
@@ -952,8 +1042,12 @@ y &amp; a--&gt;g[gastrulation: w3]--&gt;f[&#x80DA;&#x80CE;&#x958B;&#x59CB;&#x647
 <ul>
 <li>&#x521D;&#x7D1A;&#x4E0A;&#x984E;&#x7684;&#x5F62;&#x6210;
 <ul>
-<li>&#x5167;&#x9F3B;&#x7A81; &#x2192; &#x4E0A;&#x9837;&#x9593;&#x7D50;(intermaxillary segment)</li>
-<li>&#x5507;&#x90E8;(&#x4E0A;&#x5507;&#x4EBA;&#x4E2D;)&#x3001;&#x4E0A;&#x9837;&#x9AA8;&#x90E8;(&#x9644; 4 &#x9846;&#x9580;&#x9F52;)&#x3001;&#x984E;&#x90E8; (&#x5F62;&#x6210;&#x4E09;&#x89D2;&#x5F62;&#x539F;&#x984E;)</li>
+<li>
+<p>&#x5167;&#x9F3B;&#x7A81; &#x2192; &#x4E0A;&#x9837;&#x9593;&#x7D50;(intermaxillary segment)</p>
+</li>
+<li>
+<p>&#x5507;&#x90E8;(&#x4E0A;&#x5507;&#x4EBA;&#x4E2D;)&#x3001;&#x4E0A;&#x9837;&#x9AA8;&#x90E8;(&#x9644; 4 &#x9846;&#x9580;&#x9F52;)&#x3001;&#x984E;&#x90E8; (&#x5F62;&#x6210;&#x4E09;&#x89D2;&#x5F62;&#x539F;&#x984E;)</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -968,8 +1062,12 @@ y &amp; a--&gt;g[gastrulation: w3]--&gt;f[&#x80DA;&#x80CE;&#x958B;&#x59CB;&#x647
 <li>
 <p>9w</p>
 <ul>
-<li>&#x62AC;&#x982D;(upper facial complex has lifted away from the thorax)</li>
-<li>&#x9577;&#x4E0B;&#x984E;</li>
+<li>
+<p>&#x62AC;&#x982D;(upper facial complex has lifted away from the thorax)</p>
+</li>
+<li>
+<p>&#x9577;&#x4E0B;&#x984E;</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -992,7 +1090,7 @@ y &amp; a--&gt;g[gastrulation: w3]--&gt;f[&#x80DA;&#x80CE;&#x958B;&#x59CB;&#x647
 </ul>
 </section>
 <section>
-<p><img src="paste_src/2023-04-16-23-53-06.png" alt></p>
+<img src="paste_src/2023-04-16-23-53-06.png" alt style=";background-color: white;padding:0">
 </section></div>
 <h2 class="mume-header" id="arch">Arch</h2>
 
@@ -1011,21 +1109,23 @@ y &amp; a--&gt;g[gastrulation: w3]--&gt;f[&#x80DA;&#x80CE;&#x958B;&#x59CB;&#x647
 <h1 class="mume-header" id="%E9%AA%A8%E9%A0%AD">&#x9AA8;&#x982D;</h1>
 
 <ul>
-<li>&#x8EDF;&#x9AA8;&#x5167;&#x9AA8;&#x5316;(Endochondral ossification)
+<li>
+<p>&#x8EDF;&#x9AA8;&#x5167;&#x9AA8;&#x5316;(Endochondral ossification)</p>
 <ul>
 <li>&#x9871;&#x5E95;</li>
 <li>TMJ</li>
 </ul>
 </li>
-<li>&#x819C;&#x5167;&#x9AA8;&#x5316;(Membranous bone)
+<li>
+<p>&#x819C;&#x5167;&#x9AA8;&#x5316;(Membranous bone)</p>
 <ul>
 <li>&#x9871;&#x9802;Cranial vault</li>
 <li>face</li>
 </ul>
 </li>
 </ul>
-<img src="paste_src/2023-03-09-01-27-03.png" alt style="width:100%;background-color: white;padding:0" class="mume-header" id="mandible">
-##  Mandible
+<img src="paste_src/2023-03-09-01-27-03.png" alt style="width:100%;background-color: white;padding:0">
+<h2 class="mume-header" id="mandible">Mandible</h2>
 
 <ul>
 <li>6W &#x958B;&#x59CB;&#x5F62;&#x6210;Meckel&#x2019;s cartilage
@@ -1064,14 +1164,7 @@ y &amp; a--&gt;g[gastrulation: w3]--&gt;f[&#x80DA;&#x80CE;&#x958B;&#x59CB;&#x647
 </tr>
 </tbody>
 </table></div>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox">
 <img src="paste_src/2023-03-09-01-33-33.png" alt style="width:48%;background-color: white;padding:0">
 <img src="paste_src/2023-03-09-01-23-57.png" alt style="width:48%;background-color: white;padding:0">
 </div>
@@ -1127,7 +1220,7 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 </ul>
 <h2 class="mume-header" id="stage">stage</h2>
 
-<p><img src="../%E5%9C%8B%E8%80%83/paste_src/%E5%8F%A3%E8%83%9A-1.png" alt></p>
+<img src="../&#x570B;&#x8003;/paste_src/&#x53E3;&#x80DA;-1.png" alt="alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="bud-stage">Bud stage</h3>
 
 <ul>
@@ -1136,40 +1229,58 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 <li>Condensation of ectornesenchyme</li>
 </ul>
 <img src="paste_src/2023-03-14-11-15-49.png" alt style="width:100%;background-color: white;padding:0">
-<img src="paste_src/2023-03-13-15-41-52.png" alt style="width:100%;background-color: white;padding:0" class="mume-header" id="cap-stage">
-##  Cap stage 
+<img src="paste_src/2023-03-13-15-41-52.png" alt style="width:100%;background-color: white;padding:0">
+<h2 class="mume-header" id="cap-stage">Cap stage</h2>
 
 <ul>
-<li>&#x7D44;&#x7E54;&#x5206;&#x5316;(histodifferentiation)</li>
-<li>Dental organ
+<li>
+<p>&#x7D44;&#x7E54;&#x5206;&#x5316;(histodifferentiation)</p>
+</li>
+<li>
+<p>Dental organ</p>
 <ul>
-<li>OEE (Outer enamel epi., cuboidal)</li>
-<li>Stellate reticulum</li>
-<li>IEE</li>
+<li>
+<p>OEE (Outer enamel epi., cuboidal)</p>
+</li>
+<li>
+<p>Stellate reticulum</p>
+</li>
+<li>
+<p>IEE</p>
+</li>
 </ul>
 </li>
-<li>dental papilla</li>
-<li>dental sac (follicle)</li>
+<li>
+<p>dental papilla</p>
+</li>
+<li>
+<p>dental sac (follicle)</p>
+</li>
 </ul>
 <img src="paste_src/2023-03-14-11-18-46.png" alt style="width:49%;background-color: white;padding:0">
 <img src="paste_src/2023-03-14-11-29-25.png" alt style="width:49%;background-color: white;padding:0">
-![](paste_src/2023-03-13-16-15-49.png)
+<img src="paste_src/2023-03-13-16-15-49.png" alt style=";background-color: white;padding:0">
 <div class="admonition note">
 <p class="admonition-title">Enamel knot</p>
 <p>&#x7259;&#x9F52;&#x958B;&#x59CB;&#x5F62;&#x6210;&#x4F4D;&#x7F6E;&#xFF0C;&#x8B8A;&#x6210;cusp</p>
-<p><img src="paste_src/2023-03-14-11-31-02.png" alt></p>
+<img src="paste_src/2023-03-14-11-31-02.png" alt style=";background-color: white;padding:0">
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Enamel cord</p>
 <p>OEE,IEE&#x50B3;&#x8A0A;?&#x529F;&#x80FD;&#x4E0D;&#x660E;<br>
-<img src="paste_src/2023-03-14-11-32-32.png" alt></p>
+<img src="paste_src/2023-03-14-11-32-32.png" alt style=";background-color: white;padding:0"></p>
 </div>
 <h2 class="mume-header" id="early-bell-stage">Early bell stage</h2>
 
 <ul>
-<li>&#x5F62;&#x614B;&#x5206;&#x5316;(Morphodifferentiation)</li>
-<li>Dental lamina &#x65B7;&#x958B;</li>
-<li>Cervical loop &#x53CD;&#x6298;
+<li>
+<p>&#x5F62;&#x614B;&#x5206;&#x5316;(Morphodifferentiation)</p>
+</li>
+<li>
+<p>Dental lamina &#x65B7;&#x958B;</p>
+</li>
+<li>
+<p>Cervical loop &#x53CD;&#x6298;</p>
 <ul>
 <li>&#x5F62;&#x6210;&#x7259;&#x6839;&#x958B;&#x59CB;&#x4F4D;&#x7F6E;<br>
 <img src="paste_src/2023-05-20-19-01-49.png" alt style="width:100%;background-color: white;padding:0"></li>
@@ -1179,25 +1290,32 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 <hr>
 <p>&#x7531;&#x4E0A;&#x800C;&#x4E0B;</p>
 <ul>
-<li>&#x661F;&#x5F62;&#x7DB2;&#x72C0;&#x5C64;(Stellate Reticulum)</li>
-<li>Stratum intermedium (&#x7259;&#x6839;&#x7121;)
+<li>
+<p>&#x661F;&#x5F62;&#x7DB2;&#x72C0;&#x5C64;(Stellate Reticulum)</p>
+</li>
+<li>
+<p>Stratum intermedium (&#x7259;&#x6839;&#x7121;)</p>
 <ul>
 <li>Enamel &#x7684;&#x5F62;&#x6210;&#x5FC5;&#x9808;</li>
 </ul>
 </li>
-<li>IEE <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Ameloblast
+<li>
+<p>IEE <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Ameloblast</p>
 <ul>
 <li>&#x55AE;&#x5C64;&#x67F1;&#x72C0;</li>
 <li>&#x5411;&#x4E0B;&#x751F;&#x6210;Enamel</li>
 </ul>
 </li>
-<li>Dental papilla <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Odontoblast
+<li>
+<p>Dental papilla <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Odontoblast</p>
 <ul>
 <li>&#x5411;&#x4E0A;&#x751F;&#x6210;pre dentine</li>
 <li>pre dentine &#x5F15;&#x5C0E; Ameloblast &#x751F;&#x6210; Enamel</li>
 </ul>
 </li>
-<li>Dental papilla <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Pulp tissue</li>
+<li>
+<p>Dental papilla <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Pulp tissue</p>
+</li>
 </ul>
 <hr>
 <img src="paste_src/2023-03-27-19-49-05.png" alt style="width:80%;background-color: white;padding:0">
@@ -1217,10 +1335,10 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 </li>
 <li>Odontoblast, IEE &#x754C;&#x7DDA;&#x5206;&#x51FA;&#x4F86;&#xFF0C;&#x7522;&#x751F;root sheath</li>
 </ul>
-<p><img src="paste_src/2023-03-14-11-56-32.png" alt><br>
-<img src="paste_src/2023-03-14-11-58-39.png" alt><br>
-<img src="paste_src/2023-03-22-03-26-36.png" alt><br>
-<img src="paste_src/2023-03-13-16-11-28.png" alt style="width:100%;background-color: white;padding:0"></p>
+<img src="paste_src/2023-03-14-11-56-32.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2023-03-14-11-58-39.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2023-03-22-03-26-36.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2023-03-13-16-11-28.png" alt style="width:100%;background-color: white;padding:0">
 <h2 class="mume-header" id="%E6%95%B4%E7%90%86%E5%9C%96">&#x6574;&#x7406;&#x5716;</h2>
 
 <img src="paste_src/2023-04-17-03-05-01.png" alt style="width:100%;background-color: white;padding:0">
@@ -1259,14 +1377,7 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 </ul>
 </li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox"> 
 <img src="paste_src/2023-03-20-15-52-38.png" alt style="width:48%;background-color: white;padding:0">
 <img src="paste_src/2023-04-17-03-12-15.png" alt style="width:48%;background-color: white;padding:0">
 </div>
@@ -1278,7 +1389,7 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 <li>&#x751F;&#x6210;&#x6642;30%&#x9223;&#x5316;&#xFF0C;&#x6574;&#x500B;&#x9577;&#x597D;&#x518D;&#x9223;&#x5316;&#x5230;96%(3&#x5E74;)</li>
 </ul>
 <img src="paste_src/2023-04-17-03-24-30.png" alt style="width:100%;background-color: white;padding:0">
-![](paste_src/2023-03-22-03-19-47.png)
+<img src="paste_src/2023-03-22-03-19-47.png" alt style=";background-color: white;padding:0">
 <div class="admonition note">
 <p class="admonition-title">Tomes&#x2019; process</p>
 <ul>
@@ -1319,22 +1430,24 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 <li>&#x7DCA;&#x5BC6; Ameloblast&#xFF0C;&#x6838;&#x504F;</li>
 <li>Inner/Outer enamel &#x7684; Tomes&#x2019; process&#x6C92;&#x51FA;&#x73FE;&#xFF0C;&#x7121;Enamel rod &amp; interrod</li>
 </ul>
-<img src="paste_src/2023-03-22-23-02-24.png" alt style="width:100%;background-color: white;padding:0" class="mume-header" id="maturation-stage">
-###  Maturation stage
+<img src="paste_src/2023-03-22-23-02-24.png" alt style="width:100%;background-color: white;padding:0">
+<h3 class="mume-header" id="maturation-stage">Maturation stage</h3>
 
 <ul>
 <li>&#x5206;&#x6CCC;&#x5B8C;&#x6210;&#xFF0C;&#x958B;&#x59CB;&#x9223;&#x5316;&#xFF0C;&#x7D04;&#x4E09;&#x5E74;</li>
 <li>Ameloblast &#x4E82;&#x6392;
 <ul>
-<li>Ruffle-ended (80%)
+<li>
+<p>Ruffle-ended (80%)</p>
 <ul>
 <li>&#x5206;&#x6CCC; Ca<sup>2+</sup></li>
 </ul>
 </li>
-<li>Smooth-ended (20%)
+<li>
+<p>Smooth-ended (20%)</p>
 <ul>
 <li>&#x7D30;&#x80DE;&#x9593;&#x758F;&#x9B06;&#xFF0C;&#x9001;&#x51FA;polypeptide<br>
-<img src="paste_src/2023-03-22-23-25-10.png" alt></li>
+<img src="paste_src/2023-03-22-23-25-10.png" alt style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -1342,28 +1455,32 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Amelogenesis imperfecta</p>
-<p><img src="paste_src/2023-03-22-03-21-58.png" alt></p>
+<img src="paste_src/2023-03-22-03-21-58.png" alt style=";background-color: white;padding:0">
 </div>
 <h2 class="mume-header" id="enamel-protein">Enamel protein</h2>
 
 <ul>
-<li>amelogenins
+<li>
+<p>amelogenins</p>
 <ul>
 <li>&#x4E3B;&#x8981;&#x63A7;&#x5236;&#x539A;&#x5EA6;&#x5BEC;&#x5EA6;</li>
 <li>90%</li>
 </ul>
 </li>
-<li>Ameloblastin
+<li>
+<p>Ameloblastin</p>
 <ul>
 <li>&#x63A7;&#x5236;&#x9577;&#x9577;</li>
 </ul>
 </li>
-<li>Enamelin
+<li>
+<p>Enamelin</p>
 <ul>
 <li>5%</li>
 </ul>
 </li>
-<li>Enzymes (&#x6253;&#x65B7; protein)
+<li>
+<p>Enzymes (&#x6253;&#x65B7; protein)</p>
 <ul>
 <li>MMP20</li>
 <li>KLK4</li>
@@ -1397,7 +1514,7 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 <h3 class="mume-header" id="gnarled-enamel">Gnarled Enamel</h3>
 
 <p>Cusp &#x4E82;&#x4E03;&#x516B;&#x7CDF; Enamel</p>
-<p><img src="paste_src/2023-03-23-00-31-59.png" alt></p>
+<img src="paste_src/2023-03-23-00-31-59.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="enamel-lamellae">Enamel lamellae</h3>
 
 <p>&#x6709;&#x6A5F;&#x7269;&#x6E23;&#x6E23;&#x805A;&#x96C6;</p>
@@ -1408,10 +1525,10 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 <li>rods &#x5F9E; Dentin &#x5230; Enamel &#x8F49;&#x5411;&#x9020;&#x6210;</li>
 <li>&#x7531;DEJ&#x4F38;&#x51FA;&#xFF0C;&#x77ED;&#x77ED;&#x7684;&#x4E0D;&#x6703;&#x5EF6;&#x9577;&#x5230;&#x7259;&#x9F52;&#x8868;&#x9762;&#x3002;</li>
 </ul>
-<p><img src="paste_src/2023-03-23-00-34-09.png" alt></p>
+<img src="paste_src/2023-03-23-00-34-09.png" alt style=";background-color: white;padding:0">
 <div class="admonition note">
 <p class="admonition-title">DEJ</p>
-<p><img src="paste_src/2023-03-23-00-36-27.png" alt></p>
+<img src="paste_src/2023-03-23-00-36-27.png" alt style=";background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="enamel-spindles">Enamel spindles</h3>
 
@@ -1423,11 +1540,17 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 <h1 class="mume-header" id="dentin">Dentin</h1>
 
 <ul>
-<li>70% &#x7926;&#x5316;<br>
-<img src="paste_src/2023-03-27-19-41-36.png" alt></li>
-<li>&#x751F;&#x9577;&#x901F;&#x5EA6; 4&#x3BC;m / day</li>
-<li>Odontoblast (&#x6DF1;&#x8272; dentin &#x6DFA;&#x8272; predentin)<br>
-<img src="paste_src/2023-03-27-19-42-35.png" alt></li>
+<li>
+<p>70% &#x7926;&#x5316;<br>
+<img src="paste_src/2023-03-27-19-41-36.png" alt style=";background-color: white;padding:0"></p>
+</li>
+<li>
+<p>&#x751F;&#x9577;&#x901F;&#x5EA6; 4&#x3BC;m / day</p>
+</li>
+<li>
+<p>Odontoblast (&#x6DF1;&#x8272; dentin &#x6DFA;&#x8272; predentin)</p>
+<img src="paste_src/2023-03-27-19-42-35.png" alt style=";background-color: white;padding:0">
+</li>
 </ul>
 <dl>
 <dt>Dental tubules</dt>
@@ -1436,13 +1559,13 @@ d--&gt;|&#x523A;&#x6FC0;|pa
 <div class="dcl">
 <section>
 <p>Crown<br>
-<img src="paste_src/2023-03-27-19-55-27.png" alt></p>
+<img src="paste_src/2023-03-27-19-55-27.png" alt style=";background-color: white;padding:0"></p>
 </section>
 <section>
 <p>root<br>
-<img src="paste_src/2023-03-27-19-55-32.png" alt></p>
+<img src="paste_src/2023-03-27-19-55-32.png" alt style=";background-color: white;padding:0"></p>
 </section></div>
-<p><img src="paste_src/2023-03-27-19-57-05.png" alt></p>
+<img src="paste_src/2023-03-27-19-57-05.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E5%88%86%E9%A1%9E">&#x5206;&#x985E;</h2>
 
 <div class="mermaid">graph TD 
@@ -1456,8 +1579,10 @@ D--&gt;|&#x5916;&#x754C;&#x523A;&#x6FC0;|t[Tertiary]
 <dd>Dental tubules &#x5468;&#x570D;/ &#x4E2D;&#x9593;<br>
 <img src="paste_src/2023-03-27-20-01-29.png" alt style="width:100%;background-color: white;padding:0"></dd>
 <dt>Primary/ secondary dentin</dt>
-<dd>&#x7259;&#x6839;&#x5F62;&#x6210;&#x524D;/ &#x5F8C; dentin (&#x7259;&#x6839;&#x5F62;&#x6210;&#x9700;&#x5169;&#x5E74;)<br>
-<img src="paste_src/2023-03-28-02-55-43.png" alt style="width:100%;background-color: white;padding:0"></dd>
+<dd>&#x7259;&#x6839;&#x5F62;&#x6210;&#x524D;/ &#x5F8C; dentin (&#x7259;&#x6839;&#x5F62;&#x6210;&#x9700;&#x5169;&#x5E74;)</dd>
+</dl>
+<img src="paste_src/2023-03-28-02-55-43.png" alt style="width:100%;background-color: white;padding:0">
+<dl>
 <dt>Mantle dentin</dt>
 <dd>&#x7B2C;&#x4E00;&#x5C64; predentin &#x7DCA;&#x9130; Enamel</dd>
 <dt>Tertiary dentin</dt>
@@ -1517,10 +1642,12 @@ D--&gt;|&#x5916;&#x754C;&#x523A;&#x6FC0;|t[Tertiary]
 <dd>
 <ul>
 <li>False (Concentric): &#x7121;Dental tubules<br>
-<img src="paste_src/2023-03-28-03-37-31.png" alt style="width:100%;background-color: white;padding:0"><br>
-<img src="paste_src/2023-03-28-03-34-47.png" alt style="width:100%;background-color: white;padding:0"></li>
+<img src="paste_src/2023-03-28-03-37-31.png" alt style="width:100%;background-color: white;padding:0"></li>
 </ul>
 </dd>
+</dl>
+<img src="paste_src/2023-03-28-03-34-47.png" alt style="width:100%;background-color: white;padding:0">
+<dl>
 <dt>Diffuse Pulp Calcification</dt>
 <dd>&#x6839;&#x7BA1;&#x8D8A;&#x4F86;&#x8D8A;&#x5C0F;</dd>
 </dl>
@@ -1578,17 +1705,25 @@ D--&gt;|&#x5916;&#x754C;&#x523A;&#x6FC0;|t[Tertiary]
 <h2 class="mume-header" id="%E7%99%BC%E8%82%B2">&#x767C;&#x80B2;</h2>
 
 <ol>
-<li>Cervical loop &#x2192; Hertwig&#x2019;s epithelial root sheath (HERS)<br>
-<img src="paste_src/2023-05-20-19-15-43.png" alt style="width:100%;background-color: white;padding:0"></li>
+<li>Cervical loop &#x2192; Hertwig&#x2019;s epithelial root sheath (HERS)</li>
+</ol>
+<img src="paste_src/2023-05-20-19-15-43.png" alt style="width:100%;background-color: white;padding:0">
+<ol start="2">
 <li>HERS &#x523A;&#x6FC0; Pulp tissue &#x8F49;&#x5316;&#x6210; Odontoblast &#x2192; Predentin &#x2192; Dentin</li>
 <li>Dentin &#x523A;&#x6FC0; HERS &#x65B7;&#x88C2;</li>
 <li>Dental follicle &#x63A5;&#x89F8; Predentin &#x8F49;&#x5316;&#x6210; Cementoblasts</li>
 <li>HERS
 <ul>
-<li>&#x6B98;&#x7559;&#x5728;PDL&#x5F62;&#x6210; Epithelial cell rests of Malassez (ERMS)</li>
-<li>&#x767C;&#x708E;&#x5F62;&#x6210;&#x6839;&#x5C16;&#x56CA;&#x816B; (radicular cyst)</li>
-<li>&#x5C11;&#x6578;&#x5F62;&#x6210;&#x4FEE;&#x88DC;&#x7528;blast<br>
-<img src="paste_src/2023-05-20-19-38-46.png" alt style="width:100%;background-color: white;padding:0"></li>
+<li>
+<p>&#x6B98;&#x7559;&#x5728;PDL&#x5F62;&#x6210; Epithelial cell rests of Malassez (ERMS)</p>
+</li>
+<li>
+<p>&#x767C;&#x708E;&#x5F62;&#x6210;&#x6839;&#x5C16;&#x56CA;&#x816B; (radicular cyst)</p>
+</li>
+<li>
+<p>&#x5C11;&#x6578;&#x5F62;&#x6210;&#x4FEE;&#x88DC;&#x7528;blast<br>
+<img src="paste_src/2023-05-20-19-38-46.png" alt style="width:100%;background-color: white;padding:0"></p>
+</li>
 </ul>
 </li>
 </ol>
@@ -1615,27 +1750,51 @@ D--&gt;|&#x5916;&#x754C;&#x523A;&#x6FC0;|t[Tertiary]
 <h3 class="mume-header" id="acellular-extrinsic-fiber-cementumaefc">Acellular extrinsic fiber cementum(AEFC)</h3>
 
 <ul>
-<li>Primary cementum&#xFF0C;&#x7259;&#x6839;&#x5F62;&#x6210;&#x5C31;&#x9577;</li>
-<li>&#x7B2C;&#x4E00;&#x5C64; Cementoblast &#x61C9;&#x8A72;&#x5177;&#x6709; Fibroblast &#x7279;&#x5FB5;&#xFF0C;&#x53BB;&#x8DDF;Dentin &#x9ECF;&#x5728;&#x4E00;&#x8D77;</li>
-<li>Cementum &#x5927;&#x6982; 15-20&#x3BC;m &#x958B;&#x59CB;&#x7926;&#x5316;&#xFF08;&#x6709;&#x65B9;&#x5411;&#x6027;&#xFF09;</li>
-<li>&#x5916;&#x5C64; Cementoblasts &#x5411;&#x5167;&#x5206;&#x6CCC; Matrix Protein</li>
-<li>PDL fiber &#x4F38;&#x5230; Cementum &#x88E1;&#x9762;</li>
-<li>&#x8D8A;&#x88E1;&#x9762;&#x8D8A;&#x4F4E;(45-60%)</li>
-<li>&#x4E0A;2/3&#x4E3B;&#x8981;&#x56FA;&#x5B9A;&#x7259;&#x9F52;</li>
+<li>
+<p>Primary cementum&#xFF0C;&#x7259;&#x6839;&#x5F62;&#x6210;&#x5C31;&#x9577;</p>
+</li>
+<li>
+<p>&#x7B2C;&#x4E00;&#x5C64; Cementoblast &#x61C9;&#x8A72;&#x5177;&#x6709; Fibroblast &#x7279;&#x5FB5;&#xFF0C;&#x53BB;&#x8DDF;Dentin &#x9ECF;&#x5728;&#x4E00;&#x8D77;</p>
+</li>
+<li>
+<p>Cementum &#x5927;&#x6982; 15-20&#x3BC;m &#x958B;&#x59CB;&#x7926;&#x5316;&#xFF08;&#x6709;&#x65B9;&#x5411;&#x6027;&#xFF09;</p>
+</li>
+<li>
+<p>&#x5916;&#x5C64; Cementoblasts &#x5411;&#x5167;&#x5206;&#x6CCC; Matrix Protein</p>
+</li>
+<li>
+<p>PDL fiber &#x4F38;&#x5230; Cementum &#x88E1;&#x9762;</p>
+</li>
+<li>
+<p>&#x8D8A;&#x88E1;&#x9762;&#x8D8A;&#x4F4E;(45-60%)</p>
+</li>
+<li>
+<p>&#x4E0A;2/3&#x4E3B;&#x8981;&#x56FA;&#x5B9A;&#x7259;&#x9F52;</p>
+</li>
 </ul>
 <h3 class="mume-header" id="cellular-intrinsic-fiber-cementum-cifc">Cellular intrinsic fiber cementum (CIFC)</h3>
 
 <ul>
-<li>&#x7259;&#x6839;&#x9577;&#x4E00;&#x534A;&#x958B;&#x59CB;&#x9577;</li>
-<li>&#x9577;&#x5F97;&#x5FEB;&#xFF0C;&#x7926;&#x5316;&#x5C11;</li>
-<li>&#x4E0B;1/3&#xFF0C;apical &#x4E4B;&#x9593;</li>
-<li>&#x542B; Cementoid cell (&#x770B;&#x4E0D;&#x592A;&#x5230;)
+<li>
+<p>&#x7259;&#x6839;&#x9577;&#x4E00;&#x534A;&#x958B;&#x59CB;&#x9577;</p>
+</li>
+<li>
+<p>&#x9577;&#x5F97;&#x5FEB;&#xFF0C;&#x7926;&#x5316;&#x5C11;</p>
+</li>
+<li>
+<p>&#x4E0B;1/3&#xFF0C;apical &#x4E4B;&#x9593;</p>
+</li>
+<li>
+<p>&#x542B; Cementoid cell (&#x770B;&#x4E0D;&#x592A;&#x5230;)</p>
 <ul>
 <li>repair &#x7528;</li>
 </ul>
 </li>
-<li>fiber bundles &#x90E8;&#x5206;&#x9223;&#x5316;&#xFF0C;&#x56FA;&#x5B9A;&#x7259;&#x9F52; (from PDL)</li>
-<li>Cementoblast &#x4E0D;&#x6D3B;&#x5316;&#x88AB;Cementum &#x5305;&#xFF0C;&#x8B8A;&#x6210;Cementocytes
+<li>
+<p>fiber bundles &#x90E8;&#x5206;&#x9223;&#x5316;&#xFF0C;&#x56FA;&#x5B9A;&#x7259;&#x9F52; (from PDL)</p>
+</li>
+<li>
+<p>Cementoblast &#x4E0D;&#x6D3B;&#x5316;&#x88AB;Cementum &#x5305;&#xFF0C;&#x8B8A;&#x6210;Cementocytes</p>
 <ul>
 <li>&#x6BDB;&#x6BDB;(canaliculi)&#x671D;&#x5167;&#xFF08;root surface&#xFF09;<br>
 <img src="paste_src/2023-05-20-23-01-08.png" alt style="width:100%;background-color: white;padding:0"></li>
@@ -1727,15 +1886,8 @@ D--&gt;|&#x5916;&#x754C;&#x523A;&#x6FC0;|t[Tertiary]
 <li>&#x4F4F;&#x5728; Howship&#x2019;s lacunae</li>
 <li>Sealing zone &#x8CA0;&#x8CAC;&#x5BC6;&#x5C01;</li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
-<p><img src="paste_src/2023-06-02-16-54-51.png" alt style="width:50%;background-color: white;padding:0"> <img src="paste_src/2023-06-02-16-55-05.png" alt style="width:50%;background-color: white;padding:0"></p>
+<div class="fbox"> 
+<img src="paste_src/2023-06-02-16-54-51.png" alt style="width:50%;background-color: white;padding:0"> <img src="paste_src/2023-06-02-16-55-05.png" alt style="width:50%;background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="bone-sialoprotein-osteopontin">Bone sialoprotein/ Osteopontin</h3>
 
@@ -1811,8 +1963,12 @@ D--&gt;|&#x5916;&#x754C;&#x523A;&#x6FC0;|t[Tertiary]
 <ul>
 <li>&#x5148; clast &#xFF0C;&#x518D; blast &#x56DE;&#x4F86;
 <ul>
-<li>&#x6709; Cement/ reversal line (&#x53CD;&#x8F49;&#x7DDA;)</li>
-<li>Collagen &#x5C11;&#xFF0C; Calcium-to-phosphorus &#x9AD8;</li>
+<li>
+<p>&#x6709; Cement/ reversal line (&#x53CD;&#x8F49;&#x7DDA;)</p>
+</li>
+<li>
+<p>Collagen &#x5C11;&#xFF0C; Calcium-to-phosphorus &#x9AD8;</p>
+</li>
 </ul>
 </li>
 <li>Blast &#x586B;&#x6EFF;&#x8B8A;&#x6210; Filling cone</li>
@@ -1935,14 +2091,14 @@ D--&gt;|&#x5916;&#x754C;&#x523A;&#x6FC0;|t[Tertiary]
 </li>
 <li>
 <p>&#x5148; Lingual &#x518D;&#x5F80;&#x7259;&#x6839;&#x4E4B;&#x9593;<br>
-<img src="paste_src/2023-04-10-14-18-29.png" alt style="width:100%;background-color: white;padding:0"><br>
-<img src="paste_src/2023-04-10-14-18-33.png" alt style="width:100%;background-color: white;padding:0"><br>
-<img src="paste_src/2023-04-10-14-18-40.png" alt style="width:100%;background-color: white;padding:0"><br>
-<img src="paste_src/2023-04-10-14-18-47.png" alt style="width:100%;background-color: white;padding:0"><br>
-<img src="paste_src/2023-04-10-14-18-51.png" alt style="width:100%;background-color: white;padding:0"><br>
-<img src="paste_src/2023-04-10-14-18-54.png" alt style="width:100%;background-color: white;padding:0"></p>
+<img src="paste_src/2023-04-10-14-18-29.png" alt style="width:100%;background-color: white;padding:0"></p>
 </li>
 </ul>
+<img src="paste_src/2023-04-10-14-18-33.png" alt style="width:100%;background-color: white;padding:0">
+<img src="paste_src/2023-04-10-14-18-40.png" alt style="width:100%;background-color: white;padding:0">
+<img src="paste_src/2023-04-10-14-18-47.png" alt style="width:100%;background-color: white;padding:0">
+<img src="paste_src/2023-04-10-14-18-51.png" alt style="width:100%;background-color: white;padding:0">
+<img src="paste_src/2023-04-10-14-18-54.png" alt style="width:100%;background-color: white;padding:0">
 <h2 class="mume-header" id="%E8%90%8C%E7%99%BC%E9%A0%86%E5%BA%8F">&#x840C;&#x767C;&#x9806;&#x5E8F;</h2>
 
 <ul>
@@ -2044,7 +2200,7 @@ D--&gt;|&#x5916;&#x754C;&#x523A;&#x6FC0;|t[Tertiary]
 <div class="admonition note">
 <p class="admonition-title">&#x5305;&#x819C;&#x9846;&#x7C92;</p>
 <img src="paste_src/2023-05-01-14-18-29.png" alt style="width:100%;background-color: white;padding:0">
-&#x7CD6;&#x8102;&#x8CEA;
+<p>&#x7CD6;&#x8102;&#x8CEA;</p>
 </div>
 <h3 class="mume-header" id="granular-layer">Granular layer</h3>
 
@@ -2148,14 +2304,7 @@ D--&gt;|&#x5916;&#x754C;&#x523A;&#x6FC0;|t[Tertiary]
 </tbody>
 </table></div>
 <img src="paste_src/2023-05-08-13-22-03.png" alt style="width:100%;background-color: white;padding:0">
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox">
 <img src="paste_src/2023-05-08-13-41-58.png" alt style="width:40%;background-color: white;padding:0">
 <img src="paste_src/2023-05-08-13-48-59.png" alt style="width:60%;background-color: white;padding:0">
 </div>
@@ -2314,8 +2463,8 @@ D--&gt;|&#x5916;&#x754C;&#x523A;&#x6FC0;|t[Tertiary]
 <li>&#x8001;&#x4EBA;&#x5BB9;&#x6613;&#x53E3;&#x4E7E;&#x3001;&#x654F;&#x611F;&#xFF0C;&#x4F46;&#x9664;&#x4E86;&#x53E3;&#x8154;&#x9ECF;&#x819C;&#x8B8A;&#x8584;&#x53CA;&#x553E;&#x6DB2;&#x5206;&#x6CCC;&#x6E1B;&#x5C11;&#xFF0C;&#x4E26;&#x7121;&#x7279;&#x5225;&#x75C5;&#x8B8A;</li>
 <li>&#x53E3;&#x8154;&#x975C;&#x8108;&#x66F2;&#x5F35; (varicosities) (&#x4E0B;&#x5716;)&#xFF1A;&#x4E3B;&#x8981;&#x767C;&#x751F;&#x5728;&#x8001;&#x5E74;&#x4EBA;&#x820C;&#x8179;</li>
 </ul>
-<img src="paste_src/2023-05-08-15-55-12.png" alt style="width:100%;background-color: white;padding:0" class="mume-header" id="%E6%AF%94%E8%BC%83">
-##  &#x6BD4;&#x8F03; 
+<img src="paste_src/2023-05-08-15-55-12.png" alt style="width:100%;background-color: white;padding:0">
+<h2 class="mume-header" id="%E6%AF%94%E8%BC%83">&#x6BD4;&#x8F03;</h2>
 
 <h3 class="mume-header" id="%E6%9B%B4%E6%96%B0%E9%80%B1%E6%9C%9F">&#x66F4;&#x65B0;&#x9031;&#x671F;</h3>
 
@@ -2348,32 +2497,36 @@ D--&gt;|&#x5916;&#x754C;&#x523A;&#x6FC0;|t[Tertiary]
 <h2 class="mume-header" id="%E7%99%BC%E8%82%B2-1">&#x767C;&#x80B2;</h2>
 
 <ul>
-<li>&#x521D;&#x7D1A;&#x9873;&#x984E;&#x95DC;&#x7BC0;&#x5B58;&#x5728;&#x6642;&#x9593;&#x70BA;&#x56DB;&#x500B;&#x6708;&#x5DE6;&#x53F3;,</li>
-<li>&#x7B2C;&#x4E09;&#x500B;&#x6708;&#x6B21;&#x7D1A;&#x9873;&#x984E;&#x95DC;&#x7BC0;&#x5F62;&#x6210;</li>
-<li>A&#x70BA;12 &#x5468;&#x80CE;&#x5152;&#x7684;&#x767C;&#x80B2;&#x5716;,
+<li>
+<p>&#x521D;&#x7D1A;&#x9873;&#x984E;&#x95DC;&#x7BC0;&#x5B58;&#x5728;&#x6642;&#x9593;&#x70BA;&#x56DB;&#x500B;&#x6708;&#x5DE6;&#x53F3;,</p>
+</li>
+<li>
+<p>&#x7B2C;&#x4E09;&#x500B;&#x6708;&#x6B21;&#x7D1A;&#x9873;&#x984E;&#x95DC;&#x7BC0;&#x5F62;&#x6210;</p>
+</li>
+<li>
+<p>A&#x70BA;12 &#x5468;&#x80CE;&#x5152;&#x7684;&#x767C;&#x80B2;&#x5716;,</p>
 <ul>
-<li>&#x7D05;&#x8272;&#x5708;&#x5708;&#x70BA; temporal blastema(&#x9873;&#x9AA8;&#x59CB;&#x57FA;)
+<li>
+<p>&#x7D05;&#x8272;&#x5708;&#x5708;&#x70BA; temporal blastema(&#x9873;&#x9AA8;&#x59CB;&#x57FA;)</p>
 <ul>
 <li>&#x51FA;&#x73FE;&#x8F03;&#x65E9;&#x3001;&#x9AA8;&#x5316;&#x8F03;&#x65E9;</li>
 </ul>
 </li>
-<li>&#x7DA0;&#x8272;&#x5708;&#x5708;&#x70BA; condylar blastema(&#x9AC1;&#x7A81;&#x59CB;&#x57FA;)</li>
+<li>
+<p>&#x7DA0;&#x8272;&#x5708;&#x5708;&#x70BA; condylar blastema(&#x9AC1;&#x7A81;&#x59CB;&#x57FA;)</p>
+</li>
 </ul>
 </li>
-<li>B: &#x4E0B;&#x95DC;&#x7BC0;&#x8154;&#x8F03;&#x4E0A;&#x95DC;&#x7BC0;&#x8154;&#x65E9;&#x5F62;&#x6210;</li>
+<li>
+<p>B: &#x4E0B;&#x95DC;&#x7BC0;&#x8154;&#x8F03;&#x4E0A;&#x95DC;&#x7BC0;&#x8154;&#x65E9;&#x5F62;&#x6210;</p>
+</li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
+<div class="fbox">
 <img src="paste_src/2023-06-10-15-51-10.png" alt style="width:20%;background-color: white;padding:0">
 <img src="paste_src/2023-06-10-15-52-05.png" alt style="width:75%;background-color: white;padding:0">
 </div>
 <br><br>
+
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
 <script> 
 var Main_LeftListLiSelector = $(".md-sidebar-toc li");
