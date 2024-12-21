@@ -288,6 +288,9 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 }| \oneline{
 - OKC
 - LPC 
+- Ewing Sarcoma
+- Fibrosacroma
+- Langerhans Cell Histiocytosis（LCH）
 }|
 |\oneline{
 - GOC

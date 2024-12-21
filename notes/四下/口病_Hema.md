@@ -294,3 +294,13 @@ punched out
 - 骨髓移植造成
 - 急性 (3 月內)
   - 移植 T cell 攻擊組織
+
+
+## 整理 
+
+- Lymphoma 和 EBV
+  - Burkitt Lymphoma
+  - Hodgkin Lymphoma
+  - NK/T-Cell Lymphoma
+  - Lymphoepithelial carcinoma 
+- 成人最常見的 lymphoma: Diffuse large B cell lymphoma 
