@@ -68,6 +68,7 @@ neuroectodermal tumor of infancy、MEN2B
   - Infantile Fibrosacroma
 
 
+<embed src="soft tissue.pdf" width="100%" height="600px" type="application/pdf">
 
 
 # Bone 
@@ -76,3 +77,13 @@ neuroectodermal tumor of infancy、MEN2B
   1. Osteosarcoma
   2. Chondrosarcoma
   3. Ewing Sarcoma
+ 
+
+- 代謝性骨病變最常見
+  1. Osteoporosis
+  2. Paget's Disease of Bone
+  3. Osteomalacia / Rickets
+
+
+<!--  <iframe src="bone.pdf" width="100%" height="600px"></iframe>-->
+<embed src="bone.pdf" width="100%" height="600px" type="application/pdf">
