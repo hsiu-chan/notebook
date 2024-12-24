@@ -51,7 +51,7 @@
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .table-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -66,11 +66,12 @@
   width: 100%;
   table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
   border-collapse: collapse;
   display: table;
+  margin-top: 1rem;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .markdown-preview table {
     table-layout: auto;
   }
@@ -97,17 +98,28 @@
 .markdown-preview table th ol,
 .markdown-preview table td ul,
 .markdown-preview table th ul {
-  padding-left: 0;
   list-style-position: inside;
   /* 控制項目符號的位置 */
   text-align: left;
   /* 文字對齊方式 */
 }
+.markdown-preview table th.top-left,
+.markdown-preview table td.top-left {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+}
+.markdown-preview table th.top-left > .col-title,
+.markdown-preview table td.top-left > .col-title {
+  text-align: right;
+}
+.markdown-preview table th.top-left > .row-title,
+.markdown-preview table td.top-left > .row-title {
+  text-align: left;
+}
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -129,6 +141,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
+  /* Modal (background for enlarged image) */
   /* 侧栏 */
   /* 侧栏自动编号 */
   /* 复位计数器 */
@@ -358,7 +371,63 @@ html body .fbox img {
   left: 0;
   transform: translate(0, 0);
   padding: 0;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
@@ -398,6 +467,57 @@ html body .fbox img {
 <img src="paste_src/&#x54AC;&#x5408;-4.png" alt="alt text" style=";background-color: white;padding:0"></p>
 </li>
 </ul>
+<h1 class="mume-header" id="%E5%A4%A7%E4%BA%82%E9%AC%A5">&#x5927;&#x4E82;&#x9B25;</h1>
+
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th></th>
+<th>&#x9673;&#x5065;&#x8A8C;</th>
+<th>&#x90ED;&#x5C1A;&#x502B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CO</td>
+<td colspan="2">MICP=CO(&#x5C11;&#x7528;)</td>
+
+</tr>
+<tr>
+<td>CR</td>
+<td colspan="2">&#x6700;&#x5F8C;&#xFF0C;&#x4F46;&#x8981;&#x6C42;&#x4E0D;&#x80FD;&#x58D3;&#x8FEB;</td>
+
+</tr>
+<tr>
+<td>Terminal hinge axis</td>
+<td>CR&#xFF0C;condylar&#x4E2D;&#x5FC3;</td>
+<td>&#x4E0D;&#x4E00;&#x5B9A;condylar&#x4E2D;&#x5FC3;</td>
+</tr>
+</tbody>
+</table></div>
+<h1 class="mume-header" id="%E5%92%AC%E5%90%88%E5%AD%B8%E5%8F%AA%E6%9C%89%E5%90%B5%E6%9E%B6%E5%92%8C-intro">&#x54AC;&#x5408;&#x5B78;&#x53EA;&#x6709;&#x5435;&#x67B6;&#x548C; Intro</h1>
+
+<dl>
+<dt>Gothic arch tracing</dt>
+<dd>&#x5176;&#x5BE6;1, 3 &#x662F;&#x5169;&#x500B;&#x5F27;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4F86;&#x627E; CR<br>
+<img src="paste_src/&#x54AC;&#x5408;-5.png" alt="alt text" style=";background-color: white;padding:0"></dd>
+<dt>Relaxed resting position</dt>
+<dd>EMG &#x4F4E;&#x9EDE;</dd>
+<dt>HMBF</dt>
+<dd>Position of highest maximal biting force</dd>
+<dt>Mutual Protection</dt>
+<dd>&#x5074;&#x65B9;&#x904B;&#x52D5;&#x7531;&#x7259;&#x6839;&#x9577;&#x524D;&#x7259;&#x652F;&#x6490;&#xFF0C;&#x5782;&#x76F4;&#x529B;&#x91CF;&#x7531;&#x77ED;&#x7259;&#x6839;&#x5F8C;&#x7259;&#x652F;&#x6490;</dd>
+<dt>Cantilever</dt>
+<dd>&#x57FA;&#x5EA7;&#x907F;&#x514D;&#x5F8C;&#x7259;&#x3001;&#x72AC;&#x9F52;<br>
+<img src="paste_src/&#x54AC;&#x5408;-6.png" alt="alt text" style="width:30%;background-color: white;padding:0"></dd>
+<dt>Ante&#x2019;s Law</dt>
+<dd>&#x8DE8;&#x7259;&#x5F13;&#x7A69;&#x5B9A;&#x3001;&#x591A;&#x57FA;&#x53F0;&#x652F;&#x6490;</dd>
+</dl>
+<img src="paste_src/&#x54AC;&#x5408;-7.png" alt="alt text" style=";background-color: white;padding:0">
+<dl>
+<dt>Lucia Jig Technique</dt>
+<dd>&#x7528; anterior guidance &#x53D6; CR</dd>
+</dl>
 <br><br>
 
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
@@ -412,6 +532,8 @@ $(Main_LeftListLiSelector).on('click', function() {
       </div>
       <div class="md-sidebar-toc"><ul>
 <li><a href="#intro">Intro</a></li>
+<li><a href="#%E5%A4%A7%E4%BA%82%E9%AC%A5">&#x5927;&#x4E82;&#x9B25;</a></li>
+<li><a href="#%E5%92%AC%E5%90%88%E5%AD%B8%E5%8F%AA%E6%9C%89%E5%90%B5%E6%9E%B6%E5%92%8C-intro">&#x54AC;&#x5408;&#x5B78;&#x53EA;&#x6709;&#x5435;&#x67B6;&#x548C; Intro</a></li>
 </ul>
 </div>
       <a id="sidebar-toc-btn">&#x2261;</a>
