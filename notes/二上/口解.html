@@ -308,7 +308,7 @@
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .table-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -323,11 +323,12 @@
   width: 100%;
   table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
   border-collapse: collapse;
   display: table;
+  margin-top: 1rem;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .markdown-preview table {
     table-layout: auto;
   }
@@ -354,17 +355,28 @@
 .markdown-preview table th ol,
 .markdown-preview table td ul,
 .markdown-preview table th ul {
-  padding-left: 0;
   list-style-position: inside;
   /* 控制項目符號的位置 */
   text-align: left;
   /* 文字對齊方式 */
 }
+.markdown-preview table th.top-left,
+.markdown-preview table td.top-left {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+}
+.markdown-preview table th.top-left > .col-title,
+.markdown-preview table td.top-left > .col-title {
+  text-align: right;
+}
+.markdown-preview table th.top-left > .row-title,
+.markdown-preview table td.top-left > .row-title {
+  text-align: left;
+}
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -386,6 +398,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
+  /* Modal (background for enlarged image) */
   /* 侧栏 */
   /* 侧栏自动编号 */
   /* 复位计数器 */
@@ -615,7 +628,63 @@ html body .fbox img {
   left: 0;
   transform: translate(0, 0);
   padding: 0;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
@@ -628,7 +697,7 @@ html body .fbox img {
 
 <h2 class="mume-header" id="subclavian-a">Subclavian a.</h2>
 
-<p><img src="paste_src/2022-10-01-16-45-44.png" alt></p>
+<img src="paste_src/2022-10-01-16-45-44.png" alt style=";background-color: white;padding:0">
 <div class="mermaid">flowchart LR
 subgraph first
 v &amp; it &amp; tt
@@ -668,7 +737,7 @@ a--&gt;e(suprascapular a.);
 a--&gt;f(ascending cervical a.);
 </div><h2 class="mume-header" id="axillary-a">Axillary a.</h2>
 
-<p><img src="paste_src/2022-10-03-00-51-42.png" alt></p>
+<img src="paste_src/2022-10-03-00-51-42.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="common-carotid">Common carotid</h2>
 
 <ul>
@@ -683,10 +752,10 @@ a--&gt;f(ascending cervical a.);
 <li>Carotid canal&#x5165;&#x9871;</li>
 <li>carotid a. &#x593E; Stylopharyngeus m.(CN IX) , Styloglossus m. (CN XII)</li>
 </ul>
-<p><img src="paste_src/%E5%8F%A3%E8%A7%A3-3.png" alt></p>
+<img src="paste_src/&#x53E3;&#x89E3;-3.png" alt="alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="external-carotid">External carotid</h2>
 
-<p><img src="paste_src/2022-10-03-20-55-41.png" alt></p>
+<img src="paste_src/2022-10-03-20-55-41.png" alt style=";background-color: white;padding:0">
 <div class="mermaid">graph LR
 e[External carotid]
 e--&gt;st[Sup.thyroid a.]--&gt;|&#x5206;&#x652F;|sl[Sup. laryngeal a.]
@@ -730,7 +799,7 @@ lingual a.<span class="katex"><span class="katex-mathml"><math xmlns="http://www
 10[facial a.]==submandibular&lt;br&gt;gland &#x4E0A;==&gt;1
 10--&gt;a[ascending palatine a.]
 10--&gt;t[tonsillar b.]
-</div><p><img src="paste_src/2022-10-02-20-33-05.png" alt></p>
+</div><img src="paste_src/2022-10-02-20-33-05.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="ascending-palatine-a">Ascending palatine a.</h3>
 
 <ul>
@@ -738,7 +807,7 @@ lingual a.<span class="katex"><span class="katex-mathml"><math xmlns="http://www
 <li>&#x652F;&#x914D;&#x8EDF;&#x984E;</li>
 <li>&#x652F;&#x914D;palatine tonsil, auditory tube</li>
 </ul>
-<p><img src="paste_src/2022-12-14-17-45-20.png" alt></p>
+<img src="paste_src/2022-12-14-17-45-20.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="maxillary-a">Maxillary a.</h2>
 
 <ul>
@@ -746,7 +815,7 @@ lingual a.<span class="katex"><span class="katex-mathml"><math xmlns="http://www
 <li>Pterygoid part</li>
 <li>Pterygopalatine part</li>
 </ul>
-<p><img src="paste_src/2022-10-05-21-01-06.png" alt></p>
+<img src="paste_src/2022-10-05-21-01-06.png" alt style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Maxillary a.&#x901A;&#x904E;pterygoid muscle&#x6DFA;&#x5C64;&#xFF0C;&#x7A7F;&#x5165;<a href="#pterygopalatine-fossa">pterygopalatine fossa</a></p>
@@ -828,7 +897,7 @@ psa---&gt;mt[maxillary&lt;br&gt;tuberosity]
 <dt>maxillary tuberosity</dt>
 <dd>on <a href="#alveolar-bone">alveolar bone</a></dd>
 </dl>
-<p><img src="paste_src/2022-10-08-17-32-36.png" alt></p>
+<img src="paste_src/2022-10-08-17-32-36.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="scm%E8%A1%80%E6%B6%B2">SCM&#x8840;&#x6DB2;</h2>
 
 <p><strong>&#x4E0A;1/3</strong></p>
@@ -846,7 +915,7 @@ psa---&gt;mt[maxillary&lt;br&gt;tuberosity]
 </ul>
 <h2 class="mume-header" id="cerebral-arterial-circle">Cerebral arterial circle</h2>
 
-<p><img src="paste_src/2022-12-14-14-45-24.png" alt></p>
+<img src="paste_src/2022-12-14-14-45-24.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="ophthalmic-a">Ophthalmic a.</h3>
 
 <ul>
@@ -860,7 +929,7 @@ psa---&gt;mt[maxillary&lt;br&gt;tuberosity]
 <li>Ciliary a.</li>
 <li>Lacrimal a.</li>
 </ul>
-<p><img src="paste_src/2022-12-14-14-48-02.png" alt></p>
+<img src="paste_src/2022-12-14-14-48-02.png" alt style=";background-color: white;padding:0">
 <h1 class="mume-header" id="vein">Vein</h1>
 
 <img src="paste_src/2022-10-03-19-32-10.png" alt style="width:100%;background-color: white;padding:0">
@@ -965,14 +1034,14 @@ mt[Mid. temporal v.]--&gt;sp
 </tr>
 </tbody>
 </table></div>
-<p><img src="paste_src/2022-12-01-09-42-46.png" alt></p>
-<p><img src="paste_src/%E5%8F%A3%E8%A7%A3-6.png" alt></p>
+<img src="paste_src/2022-12-01-09-42-46.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x89E3;-6.png" alt="alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="cn-iii-iv-vi">CN III, IV, VI</h2>
 
 <blockquote>
 <p><a href="#%E7%9C%BC%E7%9C%B6">&#x773C;&#x7736;</a></p>
 </blockquote>
-<p><img src="paste_src/2022-12-01-10-37-06.png" alt></p>
+<img src="paste_src/2022-12-01-10-37-06.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="cn-iii">CN III</h3>
 
 <ul>
@@ -1002,7 +1071,7 @@ mt[Mid. temporal v.]--&gt;sp
 </ul>
 <div class="admonition info">
 <p class="admonition-title">injure</p>
-<p><img src="paste_src/2022-12-01-10-33-11.png" alt></p>
+<img src="paste_src/2022-12-01-10-33-11.png" alt style=";background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="cn-iv">CN IV</h3>
 
@@ -1021,38 +1090,21 @@ mt[Mid. temporal v.]--&gt;sp
 </ul>
 <h2 class="mume-header" id="cn-v1">CN V1</h2>
 
-<p><img src="paste_src/2022-12-01-10-49-34.png" alt></p>
-<ul>
-<li>Lacrimal n.
-<ul>
-<li><a href="#gland">lacrimal g.</a></li>
-</ul>
-</li>
-<li>Nasociliary n.
-<ul>
-<li>Ant./ Post. ethmoid n.
-<ul>
-<li>&#x9032;&#x5165;Ethmoid sinus</li>
-</ul>
-</li>
-<li>Infratrochlear n.</li>
-<li>Long ciliary n.
-<ul>
-<li>&#x77B3;&#x5B54;&#x64F4;&#x5F35;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Frontal n.
-<ul>
-<li>Supratrochlear n.</li>
-<li>Supraorbital n.</li>
-</ul>
-</li>
-</ul>
+<img src="paste_src/2022-12-01-10-49-34.png" alt style=";background-color: white;padding:0">
+- Lacrimal n.
+  - [lacrimal g.](#gland)
+- Nasociliary n.
+  - Ant./ Post. ethmoid n.
+    - &#x9032;&#x5165;Ethmoid sinus
+  - Infratrochlear n.
+  - Long ciliary n.
+    - &#x77B3;&#x5B54;&#x64F4;&#x5F35;
+- Frontal n.
+  - Supratrochlear n.
+  - Supraorbital n.
 <h2 class="mume-header" id="cn-v2">CN V2</h2>
 
-<p><img src="paste_src/2022-10-08-18-17-19.png" alt></p>
+<img src="paste_src/2022-10-08-18-17-19.png" alt style=";background-color: white;padding:0">
 <div class="mermaid">flowchart LR
 
 subgraph iof[Inferior Orbital fissure]
@@ -1118,7 +1170,7 @@ lp--&gt;s[Soft&lt;br&gt;palate]
 gp--&gt;h[hard&lt;br&gt;plate]
 pg--&gt;pp[post. ganglionic&lt;br&gt;Paresympathetic fiber]--&gt;l[Lacrimal g.]
 click if &quot;#alveolar-bone&quot;
-</div><p><img src="paste_src/2022-10-09-18-48-12.png" alt></p>
+</div><img src="paste_src/2022-10-09-18-48-12.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="cn-v3">CN V3</h2>
 
 <h3 class="mume-header" id="meningeal-br">Meningeal br.</h3>
@@ -1164,7 +1216,7 @@ click if &quot;#alveolar-bone&quot;
 </li>
 <li>Mylohyoid n. (Motor)</li>
 </ul>
-<p><img src="paste_src/IMG_1854.JPG" alt></p>
+<img src="paste_src/IMG_1854.JPG" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="cn-vii">CN VII</h2>
 
 <ul>
@@ -1224,8 +1276,8 @@ click c &quot;#temporal-bone&quot;
 <img src="paste_src/2022-10-06-03-24-00.png" alt style="width:80%;background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">Parotid plexus</p>
-<p><img src="paste_src/2022-10-27-01-02-10.png" alt><br>
-<img src="https://i.imgur.com/KffJWrA.jpg" alt style="width:80%;background-color: white;padding:0"></p>
+<img src="paste_src/2022-10-27-01-02-10.png" alt style=";background-color: white;padding:0">
+<img src="https://i.imgur.com/KffJWrA.jpg" alt style="width:80%;background-color: white;padding:0">
 </div>
 <div class="admonition info">
 <p class="admonition-title">Chorda tympanic</p>
@@ -1285,9 +1337,9 @@ click c &quot;#temporal-bone&quot;
 </ul>
 <blockquote>
 <p>&#x5206;&#x9694;ECA,ICA<br>
-<img src="paste_src/2022-10-22-22-10-58.png" alt></p>
+<img src="paste_src/2022-10-22-22-10-58.png" alt style=";background-color: white;padding:0"></p>
 </blockquote>
-<p><img src="paste_src/2022-12-04-22-45-47.png" alt></p>
+<img src="paste_src/2022-12-04-22-45-47.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="cn-x">CN X</h2>
 
 <h3 class="mume-header" id="structure">Structure</h3>
@@ -1346,7 +1398,7 @@ click c &quot;#temporal-bone&quot;
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E5%8F%A3%E8%A7%A3-1.png" alt></p>
+<img src="paste_src/&#x53E3;&#x89E3;-1.png" alt="alt text" style=";background-color: white;padding:0">
 <div class="admonition warning">
 <p class="admonition-title">recurrent laryngeal n.</p>
 <ul>
@@ -1363,7 +1415,7 @@ click c &quot;#temporal-bone&quot;
 <li>Spinal root(C<sub>1</sub>-C<sub>5</sub>)&#x6DF7;&#x5408;</li>
 <li>&#x5411;&#x5F8C;&#x652F;&#x914D;SCM, Trapezius</li>
 </ul>
-<p><img src="paste_src/2022-12-05-00-26-06.png" alt></p>
+<img src="paste_src/2022-12-05-00-26-06.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="cn-xii">CN XII</h2>
 
 <ul>
@@ -1371,11 +1423,11 @@ click c &quot;#temporal-bone&quot;
 <li>&#x8207;<a href="#ansa-cervicalis">Ansa cervicalis</a> &#x6DF7;&#x548C;</li>
 <li>&#x652F;&#x914D;<a href="#muscle-1">&#x820C;&#x90E8;&#x808C;&#x8089;</a></li>
 </ul>
-<p><img src="paste_src/2022-12-05-00-45-00.png" alt></p>
+<img src="paste_src/2022-12-05-00-45-00.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="cervical-plexuses">Cervical plexuses</h2>
 
-<p><img src="https://i.imgur.com/pXU9GME.png" alt></p>
-<p><img src="paste_src/2022-10-02-15-47-22.png" alt></p>
+<img src="https://i.imgur.com/pXU9GME.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-02-15-47-22.png" alt style=";background-color: white;padding:0">
 <div class="mermaid">graph TB
 b([&#x904B;&#x52D5;])
 c{{&#x611F;&#x89BA;}}
@@ -1405,7 +1457,7 @@ phrenic--ant. scalene m. &#x4E0A;&#x65B9;--&gt;diaphragm[&#x6A6B;&#x8188;]
 <li>Geniohyoid</li>
 <li>Thyrohyoid</li>
 </ul>
-<p><img src="paste_src/2022-12-05-00-44-01.png" alt></p>
+<img src="paste_src/2022-12-05-00-44-01.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="sup-cervical-ganglion">Sup. cervical ganglion</h2>
 
 <p>&#x652F;&#x914D;carotid plexus, pharyngeal plexus</p>
@@ -1555,7 +1607,7 @@ click lc &quot;#cn-v1&quot;
 </td>
 </tr>
 </tbody></table></div>
-<p><img src="paste_src/2023-01-10-00-13-10.png" alt></p>
+<img src="paste_src/2023-01-10-00-13-10.png" alt style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">&#x518D;&#x751F;&#x4E09;&#x8981;&#x4EF6;</p>
 <ul>
@@ -1587,7 +1639,7 @@ click lc &quot;#cn-v1&quot;
 <summary>&#x76F8;&#x9130;&#x9AA8;</summary>
 <p>Pr, S, L, N, E, Z, Mx</p>
 </details>
-<p><img src="paste_src/2022-10-12-20-12-43.png" alt></p>
+<img src="paste_src/2022-10-12-20-12-43.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="parietal-bone">Parietal bone</h3>
 
 <ol>
@@ -1608,9 +1660,16 @@ click lc &quot;#cn-v1&quot;
 </li>
 <li>superior and middle Nasal concha</li>
 </ol>
+<div class="fbox">
+<img src="paste_src/&#x53E3;&#x89E3;-7.png" alt="alt text" style="width:45%;background-color: white;padding:0">
+<img src="paste_src/2022-10-12-22-48-29.png" alt style="width:50%;background-color: white;padding:0">
+</div>
 <h3 class="mume-header" id="inferior-nasal-concha">inferior Nasal concha</h3>
 
-<p><img src="paste_src/2022-10-20-01-59-09.png" alt></p>
+<div class="fbox">
+<img src="paste_src/2022-10-20-01-59-09.png" alt style="width:55%;background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x89E3;-11.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+</div>
 <h3 class="mume-header" id="sphenoid-bone">Sphenoid bone</h3>
 
 <ol>
@@ -1662,20 +1721,20 @@ click lc &quot;#cn-v1&quot;
 <details>
 <summary>&#x76F8;&#x9130;&#x9AA8;</summary>
 <p>F, O, T, E, Pr, V, Z, Pl, Mx<br>
-<img src="paste_src/2022-10-12-20-32-01.png" alt></p>
+<img src="paste_src/2022-10-12-20-32-01.png" alt style=";background-color: white;padding:0"></p>
 </details>
 <blockquote>
 <p>&#x4E0A;&#x8996;&#x5716;<br>
-<img src="paste_src/2022-10-12-20-27-38.png" alt><br>
-<img src="paste_src/2022-11-24-00-28-29.png" alt></p>
+<img src="paste_src/2022-10-12-20-27-38.png" alt style=";background-color: white;padding:0"><br>
+<img src="paste_src/2022-11-24-00-28-29.png" alt style=";background-color: white;padding:0"></p>
 </blockquote>
 <blockquote>
 <p>&#x524D;&#x8996;&#x5716;<br>
-<img src="paste_src/2022-11-04-16-00-49.png" alt></p>
+<img src="paste_src/2022-11-04-16-00-49.png" alt style=";background-color: white;padding:0"></p>
 </blockquote>
 <blockquote>
 <p>&#x5F8C;&#x8996;&#x5716;<br>
-<img src="paste_src/2022-11-24-00-29-18.png" alt></p>
+<img src="paste_src/2022-11-24-00-29-18.png" alt style=";background-color: white;padding:0"></p>
 </blockquote>
 <h3 class="mume-header" id="temporal-bone">Temporal bone</h3>
 
@@ -1715,10 +1774,10 @@ click lc &quot;#cn-v1&quot;
 <summary>&#x76F8;&#x9130;&#x9AA8;</summary>
 <p>Pr, O, S, M</p>
 </details>
-<p><img src="paste_src/2022-11-04-15-51-04.png" alt><br>
-<img src="paste_src/2022-10-24-22-27-13.png" alt><br>
-<img src="paste_src/2022-10-12-22-18-39.png" alt style="width:50%;background-color: white;padding:0"></p>
-<p><img src="paste_src/2022-11-04-15-51-58.png" alt></p>
+<img src="paste_src/2022-11-04-15-51-04.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-24-22-27-13.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-12-22-18-39.png" alt style="width:50%;background-color: white;padding:0">
+<img src="paste_src/2022-11-04-15-51-58.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="occipital-bone">Occipital bone</h3>
 
 <ol>
@@ -1741,12 +1800,10 @@ click lc &quot;#cn-v1&quot;
 <summary>&#x76F8;&#x9130;&#x9AA8;</summary>
 <p>Pr, T, S, C1</p>
 
-<h3 class="mume-header" id="ethmoid-bone-1">Ethmoid bone</h3>
-
-<p><img src="paste_src/2022-10-12-22-48-29.png" alt></p>
 <h3 class="mume-header" id="vomer">Vomer</h3>
 
-<p><img src="paste_src/2022-10-12-22-51-27.png" alt></p>
+<img src="paste_src/2022-10-12-22-51-27.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x89E3;-10.png" alt="alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="maxillary-bone">Maxillary bone</h3>
 
 <ol>
@@ -1768,9 +1825,10 @@ click lc &quot;#cn-v1&quot;
 <summary>&#x76F8;&#x9130;&#x9AA8;</summary>
 <p>F, Z, N, L, V, E, Pl, S, INC</p>
 
+<img src="paste_src/&#x53E3;&#x89E3;-8.png" alt="alt text" style="width:60%;background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">&#x9AA8;&#x6298;</p>
-<p><img src="paste_src/2022-11-05-14-35-56.png" alt></p>
+<img src="paste_src/2022-11-05-14-35-56.png" alt style=";background-color: white;padding:0">
 </div>
 <h3 class="mume-header" id="alveolar-bone">Alveolar bone</h3>
 
@@ -1788,7 +1846,7 @@ click lc &quot;#cn-v1&quot;
 </ul>
 </li>
 </ol>
-<p><img src="paste_src/2022-10-19-17-53-32.png" alt></p>
+<img src="paste_src/2022-10-19-17-53-32.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="palatine-bone">Palatine bone</h3>
 
 <ol>
@@ -1810,7 +1868,7 @@ click lc &quot;#cn-v1&quot;
 
 <ol>
 <li>Symphysis &amp; Parasymphysis <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Body  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Ramus<br>
-<img src="paste_src/2022-10-20-02-43-23.png" alt></li>
+<img src="paste_src/2022-10-20-02-43-23.png" alt style=";background-color: white;padding:0"></li>
 <li>Condylar process</li>
 <li>Coronoid process</li>
 <li>Mandibular foramen
@@ -1829,26 +1887,33 @@ click lc &quot;#cn-v1&quot;
 </ul>
 </li>
 <li>Antegonial notch<br>
-facial a./v.&#x7D93;&#x904E;<br>
-<img src="paste_src/2022-11-04-15-26-08.png" alt></li>
+facial a./v.&#x7D93;&#x904E;</li>
 </ol>
-<p><img src="paste_src/2022-10-20-02-34-40.png" alt></p>
+<img src="paste_src/2022-10-20-02-34-40.png" alt style=";background-color: white;padding:0">
+<div class="fbox">
+<img src="paste_src/&#x53E3;&#x89E3;-12.png" alt="alt text" style="width:45%;background-color: white;padding:0">
+<img src="paste_src/2022-11-04-15-26-08.png" alt style="width:50%;background-color: white;padding:0">
+</div>
+<blockquote>
+<p>&#x570B;&#x8003;&#x6BD2;&#x7624;</p>
+</blockquote>
 <h4 class="mume-header" id="%E8%82%8C%E8%82%89%E6%8E%A5%E9%BB%9E">&#x808C;&#x8089;&#x63A5;&#x9EDE;</h4>
 
-<p><img src="paste_src/2022-10-22-00-41-59.png" alt><br>
-<img src="paste_src/2022-10-22-00-42-29.png" alt></p>
+<img src="paste_src/2022-10-22-00-41-59.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-22-00-42-29.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="hyoid-bone">Hyoid bone</h3>
 
-<p><img src="paste_src/2022-10-20-02-52-11.png" alt></p>
+<img src="paste_src/2022-10-20-02-52-11.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E7%9C%BC%E7%9C%B6">&#x773C;&#x7736;</h2>
 
-<p><img src="paste_src/2022-10-12-16-16-56.png" alt><br>
-<img src="paste_src/2022-10-12-23-01-27.png" alt></p>
+<img src="paste_src/2022-10-12-16-16-56.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-12-23-01-27.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E8%85%A6%E6%B4%9E%E5%80%91">&#x8166;&#x6D1E;&#x5011;</h2>
 
-<p><img src="paste_src/2022-10-12-20-57-51.png" alt><br>
-<img src="paste_src/2022-10-12-22-45-07.png" alt><br>
-<img src="paste_src/2022-10-12-22-45-14.png" alt></p>
+<img src="paste_src/&#x53E3;&#x89E3;-9.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-12-20-57-51.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-12-22-45-07.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-12-22-45-14.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="buttress">Buttress</h2>
 
 <p>&#x50B3;&#x5C0E;&#x529B;&#x91CF;<br>
@@ -1865,8 +1930,8 @@ facial a./v.&#x7D93;&#x904E;<br>
 <li>Median palatine</li>
 <li>Transverse palatine</li>
 </ul>
-<p><img src="paste_src/2022-10-12-19-53-03.png" alt><br>
-<img src="paste_src/2022-10-12-19-53-55.png" alt></p>
+<img src="paste_src/2022-10-12-19-53-03.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-12-19-53-55.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E7%99%BC%E8%82%B2%E5%B9%B4%E8%A1%A8">&#x767C;&#x80B2;&#x5E74;&#x8868;</h2>
 
 <ul>
@@ -1930,12 +1995,12 @@ p--&gt;jd
 </div>
 <div class="admonition tip">
 <p class="admonition-title">&#x75C5;&#x7076;</p>
-<p><img src="paste_src/2022-11-05-02-11-21.png" alt></p>
+<img src="paste_src/2022-11-05-02-11-21.png" alt style=";background-color: white;padding:0">
 </div>
 <h2 class="mume-header" id="groups">Groups</h2>
 
-<p><img src="paste_src/2022-11-04-17-28-41.png" alt><br>
-<img src="paste_src/2022-11-04-16-38-00.png" alt style="width:100%;background-color: white;padding:0"></p>
+<img src="paste_src/2022-11-04-17-28-41.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-11-04-16-38-00.png" alt style="width:100%;background-color: white;padding:0">
 <dl>
 <dt>Level I</dt>
 <dd>the submental group (Ia), and the<br>
@@ -2023,16 +2088,9 @@ Basal --&gt;sdc
 </div><h2 class="mume-header" id="tonsil">Tonsil</h2>
 
 <p><strong>Waldeyer&#x2019;s tonsillar ring</strong></p>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
-<p><img src="paste_src/%E5%8F%A3%E8%A7%A3-4.png" alt><br>
-<img src="paste_src/%E5%8F%A3%E8%A7%A3-5.png" alt></p>
+<div class="fbox"> 
+<img src="paste_src/&#x53E3;&#x89E3;-4.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x89E3;-5.png" alt="alt text" style=";background-color: white;padding:0">
 </div>
 <div class="mermaid">flowchart LR
 rp([Retropharyngeal])
@@ -2077,7 +2135,7 @@ lp &amp; ue --&gt;idc
 <li>Lateral nasal</li>
 <li>Alar</li>
 </ul>
-<p><img src="paste_src/2022-12-14-14-19-50.png" alt></p>
+<img src="paste_src/2022-12-14-14-19-50.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="artery-1">Artery</h2>
 
 <p><strong><a href="#ophthalmic-a">Ophthalmic a.</a></strong></p>
@@ -2094,7 +2152,7 @@ lp &amp; ue --&gt;idc
 <li>Septal a.</li>
 <li>Alar a.</li>
 </ul>
-<p><img src="paste_src/2022-12-14-15-00-04.png" alt></p>
+<img src="paste_src/2022-12-14-15-00-04.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="nerve-1">Nerve</h2>
 
 <ul>
@@ -2163,8 +2221,8 @@ lp &amp; ue --&gt;idc
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/2022-11-23-22-03-42.png" alt><br>
-<img src="paste_src/2022-11-07-20-09-19.png" alt></p>
+<img src="paste_src/2022-11-23-22-03-42.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-11-07-20-09-19.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="artery-2">Artery</h2>
 
 <ul>
@@ -2178,7 +2236,7 @@ lp &amp; ue --&gt;idc
 <p><a href="#facial-a">Sup. labial a.</a></p>
 <ul>
 <li>Septal br.<br>
-<img src="paste_src/2022-12-14-16-07-19.png" alt></li>
+<img src="paste_src/2022-12-14-16-07-19.png" alt style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>
@@ -2193,7 +2251,7 @@ lp &amp; ue --&gt;idc
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/2022-12-14-16-00-38.png" alt></p>
+<img src="paste_src/2022-12-14-16-00-38.png" alt style=";background-color: white;padding:0">
 <h1 class="mume-header" id="paranasal-sinuses">Paranasal sinuses</h1>
 
 <p>&#x9F3B;&#x65C1;&#x7AC7;&#xFF0C;&#x6FD5;&#x6F64;&#x547C;&#x5438;&#x7684;&#x7A7A;&#x6C23;</p>
@@ -2254,11 +2312,11 @@ fs[Frontal s.]--&gt;ei[ethmoidal infundibulum]--&gt;m
 </ul>
 <h2 class="mume-header" id="ethmoid-sinus">Ethmoid sinus</h2>
 
-<p><img src="paste_src/2022-11-23-22-19-14.png" alt></p>
+<img src="paste_src/2022-11-23-22-19-14.png" alt style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">ethmoid bulla</p>
 <p>Mid. ethmoid sinus &#x958B;&#x53E3;<br>
-<img src="paste_src/2022-10-09-22-43-50.png" alt></p>
+<img src="paste_src/2022-10-09-22-43-50.png" alt style=";background-color: white;padding:0"></p>
 </div>
 <ul>
 <li>Ant. ethmoid a./n.</li>
@@ -2274,7 +2332,7 @@ fs[Frontal s.]--&gt;ei[ethmoidal infundibulum]--&gt;m
 <img src="paste_src/2022-10-09-23-10-05.png" alt style="width:100%;background-color: white;padding:0">
 <h1 class="mume-header" id="ear">Ear</h1>
 
-<p><img src="paste_src/2022-10-07-16-19-51.png" alt></p>
+<img src="paste_src/2022-10-07-16-19-51.png" alt style=";background-color: white;padding:0">
 <h1 class="mume-header" id="tmj">TMJ</h1>
 
 <h2 class="mume-header" id="supply">Supply</h2>
@@ -2308,11 +2366,12 @@ fs[Frontal s.]--&gt;ei[ethmoidal infundibulum]--&gt;m
 <li>Masseteric br. of the mandibular n. (Sensor)</li>
 <li>Post. deep temporal nerve</li>
 </ul>
-<p><img src="paste_src/%E5%8F%A3%E8%A7%A3.png" alt></p>
+<img src="paste_src/&#x53E3;&#x89E3;.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x89E3;-13.png" alt="alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="join-capsule">Join capsule</h2>
 
 <p>Articular eminence &#x5230; articular fossa</p>
-<p><img src="paste_src/2022-11-01-10-31-41.png" alt></p>
+<img src="paste_src/2022-11-01-10-31-41.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="joint-disk">Joint disk</h2>
 
 <ul>
@@ -2330,7 +2389,7 @@ Post. band(3mm)</p>
 <p>Upper division &#x9023;&#x5230; Temporal bone &#x7684; postglenoid process</p>
 </li>
 </ul>
-<p><img src="paste_src/2022-11-01-10-35-23.png" alt></p>
+<img src="paste_src/2022-11-01-10-35-23.png" alt style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">collateral ligament</p>
 <img src="paste_src/2022-11-01-10-59-28.png" alt style="width:100%;background-color: white;padding:0">
@@ -2342,7 +2401,7 @@ Post. band(3mm)</p>
 <li>Superior retrodiskal lamina:elastic fibers,&#x63A5;&#x5230; tympanic plate,&#x9650;&#x5236;&#x5E73;&#x884C;&#x79FB;&#x52D5;</li>
 <li>Inferior retrodiskal lamina:Collagen fibers,&#x5C07; disc &#x63A5;&#x5230; condyle,&#x9650;&#x5236;&#x65CB;&#x8F49;&#x79FB;&#x52D5;</li>
 </ol>
-<p><img src="paste_src/2022-11-06-18-24-36.png" alt></p>
+<img src="paste_src/2022-11-06-18-24-36.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="ligament">Ligament</h2>
 
 <ul>
@@ -2369,35 +2428,35 @@ Post. band(3mm)</p>
 <li>&#x65CB;&#x8F49;: &#x4E0B;&#x984E;&#x96E2;&#x4E0A;&#x9580;&#x7259;2.5cm</li>
 <li>&#x5E73;&#x79FB;: disc-condyle complex &#x6CBF; articular eminence &#x6ED1;&#x52D5;,&#x53EF;&#x518D;&#x5F80;&#x524D;&#x5F35;&#x958B;&#x7D04; 1.5 &#x516C;&#x5206;</li>
 </ul>
-<p><img src="paste_src/2022-11-01-11-19-40.png" alt></p>
+<img src="paste_src/2022-11-01-11-19-40.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="movement">movement</h2>
 
-<p><img src="paste_src/2022-11-01-21-18-20.png" alt></p>
+<img src="paste_src/2022-11-01-21-18-20.png" alt style=";background-color: white;padding:0">
 <h1 class="mume-header" id="alveolar-process">Alveolar process</h1>
 
-<p><img src="paste_src/2022-10-22-00-17-11.png" alt></p>
+<img src="paste_src/2022-10-22-00-17-11.png" alt style=";background-color: white;padding:0">
 <ul>
 <li>Alveolus of maxillary central incisor</li>
 <li>Interdental septum</li>
 <li>Interradicular septa</li>
 <li>Alveolar eminence<br>
-<img src="paste_src/2022-10-22-00-33-42.png" alt></li>
+<img src="paste_src/2022-10-22-00-33-42.png" alt style=";background-color: white;padding:0"></li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Dehiscence &amp; Fenestration</p>
-<p><img src="paste_src/2022-10-22-01-01-55.png" alt></p>
+<img src="paste_src/2022-10-22-01-01-55.png" alt style=";background-color: white;padding:0">
 </div>
 <h2 class="mume-header" id="sharpeys-fiber">Sharpey&#x2019;s fiber</h2>
 
 <p>&#x7259;&#x9F52;&#x8207;&#x9F52;&#x69FD;&#x4E4B;&#x9593;&#xFF0C;&#x5305;&#x542B;&#x7E31;&#x5411; principal fiber(Sharpey&#x2019;s fiber) &#x9023;&#x63A5;&#x7259;&#x9F52;&#x8207;&#x9F52;&#x69FD;&#x9AA8;</p>
-<p><img src="paste_src/2022-11-04-16-55-14.png" alt></p>
+<img src="paste_src/2022-11-04-16-55-14.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E5%8D%80%E5%88%86process">&#x5340;&#x5206;process</h2>
 
 <h3 class="mume-header" id="%E4%B8%8A%E9%96%80%E9%BD%92">&#x4E0A;&#x9580;&#x9F52;</h3>
 
 <ul>
 <li>&#x5074;&#x9580;&#x7259;&#x6839;&#x8F03;&#x9760;&#x8FD1;&#x9F3B;&#x8154;&#x5E95;<br>
-<img src="paste_src/2022-10-22-01-11-31.png" alt></li>
+<img src="paste_src/2022-10-22-01-11-31.png" alt style=";background-color: white;padding:0"></li>
 </ul>
 <h3 class="mume-header" id="%E4%B8%8A%E7%8A%AC%E9%BD%92">&#x4E0A;&#x72AC;&#x9F52;</h3>
 
@@ -2418,7 +2477,7 @@ Post. band(3mm)</p>
 <ul>
 <li>alveolar process &#x8584;</li>
 </ul>
-<p><img src="paste_src/2022-10-22-01-25-18.png" alt></p>
+<img src="paste_src/2022-10-22-01-25-18.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="%E4%B8%8B%E8%87%BC%E9%BD%92">&#x4E0B;&#x81FC;&#x9F52;</h3>
 
 <ul>
@@ -2428,9 +2487,9 @@ Post. band(3mm)</p>
 <li>6, 7 &#x591A;&#x7259;&#x6839;&#x4E00;&#x524D;&#x4E00;&#x5F8C;&#xFF0C;distal &#x53EF;&#x80FD;&#x591A;&#x500B;</li>
 <li>8 &#x5728;Submandibular fossa &#x4E0A;</li>
 </ul>
-<p><img src="paste_src/2022-10-22-01-33-14.png" alt><br>
-<img src="paste_src/2022-10-22-01-33-33.png" alt><br>
-<img src="paste_src/2022-10-22-01-33-48.png" alt></p>
+<img src="paste_src/2022-10-22-01-33-14.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-22-01-33-33.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-22-01-33-48.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E5%8D%80%E5%88%86%E4%B8%8A%E4%B8%8B%E9%A1%8E">&#x5340;&#x5206;&#x4E0A;&#x4E0B;&#x984E;</h2>
 
 <ol>
@@ -2452,15 +2511,15 @@ Post. band(3mm)</p>
 
 <h2 class="mume-header" id="structure-1">Structure</h2>
 
-<p><img src="paste_src/2022-12-15-00-47-29.png" alt></p>
+<img src="paste_src/2022-12-15-00-47-29.png" alt style=";background-color: white;padding:0">
 <ul>
 <li>Terminal sulcus(terminalis)&#x5206;&#x524D;&#x5F8C;</li>
 </ul>
 <h3 class="mume-header" id="papillae">Papillae</h3>
 
 <img src="paste_src/2022-12-15-01-09-21.png" alt style="width:100%;background-color: white;padding:0">
-<img src="paste_src/2023-01-03-10-56-05.png" alt style="width:100%;background-color: white;padding:0" class="mume-header" id="filiform">
-####  Filiform
+<img src="paste_src/2023-01-03-10-56-05.png" alt style="width:100%;background-color: white;padding:0">
+<h4 class="mume-header" id="filiform">Filiform</h4>
 
 <ul>
 <li>&#x6700;&#x591A;</li>
@@ -2517,8 +2576,8 @@ Post. band(3mm)</p>
 <li>Submandibular duct</li>
 </ul>
 </div>
-<img src="paste_src/2022-12-04-22-59-01.png" alt style="width:100%;background-color: white;padding:0" class="mume-header" id="artery-3">
-##  Artery
+<img src="paste_src/2022-12-04-22-59-01.png" alt style="width:100%;background-color: white;padding:0">
+<h2 class="mume-header" id="artery-3">Artery</h2>
 
 <h3 class="mume-header" id="lingual-a">Lingual a.</h3>
 
@@ -2528,7 +2587,7 @@ Post. band(3mm)</p>
 <li>Sublingual a.
 <ul>
 <li>&#x6703;&#x5408; Submental a. (Facial a. &#x5206;&#x652F;)<br>
-<img src="paste_src/2022-12-15-01-41-26.png" alt></li>
+<img src="paste_src/2022-12-15-01-41-26.png" alt style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -2552,7 +2611,7 @@ Post. band(3mm)</p>
 <ol start="4">
 <li>Palatoglossus</li>
 </ol>
-<p><img src="paste_src/2022-12-05-00-31-53.png" alt></p>
+<img src="paste_src/2022-12-05-00-31-53.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="intrinsic-muscles">Intrinsic muscles</h3>
 
 <blockquote>
@@ -2565,7 +2624,7 @@ Post. band(3mm)</p>
 <li>Transverse</li>
 <li>Vertical</li>
 </ol>
-<p><img src="paste_src/2022-12-15-01-32-19.png" alt></p>
+<img src="paste_src/2022-12-15-01-32-19.png" alt style=";background-color: white;padding:0">
 <h1 class="mume-header" id="oral-cavity-1">Oral cavity</h1>
 
 <h2 class="mume-header" id="%E4%B8%8A%E9%A1%8E">&#x4E0A;&#x984E;</h2>
@@ -2589,8 +2648,8 @@ Post. band(3mm)</p>
 </li>
 <li>Greater/ Lesser palatine <a href="#pterygopalatine-ganglion">n.</a>/<a href="#third-part">a.</a></li>
 </ul>
-<p><img src="paste_src/2022-11-24-00-34-37.png" alt><br>
-<img src="paste_src/2022-10-19-17-53-32.png" alt></p>
+<img src="paste_src/2022-11-24-00-34-37.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-10-19-17-53-32.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="cheek">Cheek</h2>
 
 <ul>
@@ -2614,11 +2673,11 @@ Post. band(3mm)</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/2022-11-30-22-46-40.png" alt><br>
-<img src="paste_src/2022-12-14-17-26-52.png" alt></p>
+<img src="paste_src/2022-11-30-22-46-40.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-12-14-17-26-52.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="gums">gums</h2>
 
-<p><img src="paste_src/2023-01-03-10-44-39.png" alt></p>
+<img src="paste_src/2023-01-03-10-44-39.png" alt style=";background-color: white;padding:0">
 <ul>
 <li>&#x89D2;&#x5316;&#x7259;&#x9F66;
 <ul>
@@ -2647,18 +2706,18 @@ Post. band(3mm)</p>
 </table></div>
 <h3 class="mume-header" id="parotid-g">Parotid g.</h3>
 
-<p><img src="paste_src/2022-11-01-20-56-34.png" alt><br>
-<img src="paste_src/2022-11-01-21-01-10.png" alt><br>
-<img src="paste_src/2022-12-20-15-57-18.png" alt></p>
+<img src="paste_src/2022-11-01-20-56-34.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-11-01-21-01-10.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-12-20-15-57-18.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="minor-salivary-g">Minor salivary g.</h3>
 
-<p><img src="paste_src/2023-01-03-10-50-20.png" alt></p>
+<img src="paste_src/2023-01-03-10-50-20.png" alt style=";background-color: white;padding:0">
 <h1 class="mume-header" id="pharynx">Pharynx</h1>
 
 <h2 class="mume-header" id="structure-2">Structure</h2>
 
-<p><img src="paste_src/2022-11-23-22-31-55.png" alt><br>
-<img src="paste_src/2022-11-23-22-40-34.png" alt></p>
+<img src="paste_src/2022-11-23-22-31-55.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-11-23-22-40-34.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="nasopharynx">Nasopharynx</h3>
 
 <blockquote>
@@ -2675,11 +2734,9 @@ Post. band(3mm)</p>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Pharyngotympanic tube</p>
-<p><img src="paste_src/2022-11-24-00-03-31.png" alt></p>
-<ul>
-<li>&#x901A;&#x904E; Temporal bone</li>
-<li>&#x5F8C;2/3&#x662F;&#x8EDF;&#x9AA8;</li>
-</ul>
+<img src="paste_src/2022-11-24-00-03-31.png" alt style=";background-color: white;padding:0">
+- &#x901A;&#x904E; Temporal bone 
+- &#x5F8C;2/3&#x662F;&#x8EDF;&#x9AA8;
 </div>
 <hr>
 <h3 class="mume-header" id="oropharynx">Oropharynx</h3>
@@ -2714,10 +2771,10 @@ Post. band(3mm)</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/2022-11-23-22-32-53.png" alt></p>
+<img src="paste_src/2022-11-23-22-32-53.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="muscle-1">Muscle</h2>
 
-<p><img src="paste_src/2022-12-20-16-16-39.png" alt></p>
+<img src="paste_src/2022-12-20-16-16-39.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="%E5%A4%96%E9%83%A8">&#x5916;&#x90E8;</h3>
 
 <ul>
@@ -2763,10 +2820,10 @@ Post. band(3mm)</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/2022-11-23-22-28-38.png" alt></p>
+<img src="paste_src/2022-11-23-22-28-38.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="%E5%85%A7%E9%83%A8">&#x5167;&#x90E8;</h3>
 
-<p><img src="paste_src/2022-11-23-23-14-25.png" alt></p>
+<img src="paste_src/2022-11-23-23-14-25.png" alt style=";background-color: white;padding:0">
 <blockquote>
 <p><a href="#cn-x">Vagus</a> &#x652F;&#x914D;</p>
 </blockquote>
@@ -2812,9 +2869,9 @@ Post. band(3mm)</p>
 <blockquote>
 <p>&#x85CD;&#x5708;: Pharyngotympanic tube<br>
 &#x7DA0;: Tensor veli palatini m.<br>
-<img src="paste_src/2022-11-24-00-16-03.png" alt></p>
+<img src="paste_src/2022-11-24-00-16-03.png" alt style=";background-color: white;padding:0"></p>
 </blockquote>
-<p><img src="paste_src/2022-12-14-17-16-24.png" alt></p>
+<img src="paste_src/2022-12-14-17-16-24.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="nerve-4">Nerve</h2>
 
 <h3 class="mume-header" id="pharyngeal-plexus">Pharyngeal plexus</h3>
@@ -2857,8 +2914,8 @@ Post. band(3mm)</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/2022-12-20-16-59-43.png" alt><br>
-<img src="paste_src/2022-11-23-22-31-31.png" alt></p>
+<img src="paste_src/2022-12-20-16-59-43.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-11-23-22-31-31.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="artery-4">Artery</h2>
 
 <p><strong>From <a href="#(#external-carotid)">Ext. carotid a.</a></strong></p>
@@ -2911,9 +2968,9 @@ Post. band(3mm)</p>
 <h1 class="mume-header" id="larynx-1">Larynx</h1>
 
 <img src="paste_src/2022-12-01-01-31-25.png" alt style="width:100%;background-color: white;padding:0">
-<img src="paste_src/2022-10-26-23-22-04.png" alt style="width:100%;background-color: white;padding:0" class="mume-header" id="muscle-2">
-![](paste_src/2022-12-22-01-07-16.png)
-##  Muscle 
+<img src="paste_src/2022-10-26-23-22-04.png" alt style="width:100%;background-color: white;padding:0">
+<img src="paste_src/2022-12-22-01-07-16.png" alt style=";background-color: white;padding:0">
+<h2 class="mume-header" id="muscle-2">Muscle</h2>
 
 <h3 class="mume-header" id="%E9%97%9C%E9%96%89-epiglotticus">&#x95DC;&#x9589; Epiglotticus</h3>
 
@@ -2954,14 +3011,14 @@ Post. band(3mm)</p>
 </blockquote>
 <ul>
 <li>Cricothyroid m.<br>
-<img src="paste_src/2022-12-01-01-33-37.png" alt></li>
+<img src="paste_src/2022-12-01-01-33-37.png" alt style=";background-color: white;padding:0"></li>
 </ul>
 <img src="paste_src/2022-12-04-23-50-24.png" alt style="width:100%;background-color: white;padding:0">
 <img src="paste_src/2022-12-01-01-46-43.png" alt style="width:40%;background-color: white;padding:0"><img src="paste_src/2022-12-22-01-11-28.png" alt style="width:57%;background-color: white;padding:0">
 <img src="paste_src/2022-12-01-01-49-48.png" alt style="width:100%;background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">&#x5047;&#x8072;&#x5E36;:Vestibular Fold</p>
-<p><img src="paste_src/2022-12-01-01-58-10.png" alt></p>
+<img src="paste_src/2022-12-01-01-58-10.png" alt style=";background-color: white;padding:0">
 </div>
 <h2 class="mume-header" id="artery-5">Artery</h2>
 
@@ -2999,10 +3056,10 @@ Post. band(3mm)</p>
 <img src="paste_src/2022-12-01-02-02-53.png" alt style="width:100%;background-color: white;padding:0">
 <h1 class="mume-header" id="neck">Neck</h1>
 
-<p><img src="paste_src/2022-10-03-00-51-13.png" alt></p>
+<img src="paste_src/2022-10-03-00-51-13.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="triangle">Triangle</h2>
 
-<p><img src="paste_src/2022-12-22-01-55-50.png" alt></p>
+<img src="paste_src/2022-12-22-01-55-50.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="muscle-3">Muscle</h2>
 
 <h3 class="mume-header" id="%E8%88%8C%E9%AA%A8%E4%B8%8A">&#x820C;&#x9AA8;&#x4E0A;</h3>
@@ -3065,7 +3122,7 @@ Post. band(3mm)</p>
 </table></div>
 </section>
 <section>
-<p><img src="paste_src/2022-12-22-02-14-01.png" alt></p>
+<img src="paste_src/2022-12-22-02-14-01.png" alt style=";background-color: white;padding:0">
 </section></div>
 <h3 class="mume-header" id="others-1">Others</h3>
 
@@ -3089,7 +3146,7 @@ Post. band(3mm)</p>
 </table></div>
 <h1 class="mume-header" id="fasciae">Fasciae</h1>
 
-<p><img src="paste_src/2022-11-15-10-41-54.png" alt></p>
+<img src="paste_src/2022-11-15-10-41-54.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="superficial-fascia">Superficial fascia</h2>
 
 <ul>
@@ -3123,7 +3180,7 @@ Post. band(3mm)</p>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/2022-11-15-10-32-06.png" alt></p>
+<img src="paste_src/2022-11-15-10-32-06.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="neck-1">Neck</h3>
 
 <ul>
@@ -3150,9 +3207,9 @@ Post. band(3mm)</p>
 <img src="paste_src/2022-11-15-10-30-50.png" alt style="width:49%;background-color: white;padding:0">
 <h1 class="mume-header" id="space">Space</h1>
 
-<p><img src="paste_src/2022-11-26-17-41-21.png" alt><br>
-<img src="paste_src/2022-11-27-00-31-04.png" alt><br>
-<img src="paste_src/2022-11-27-01-02-17.png" alt></p>
+<img src="paste_src/2022-11-26-17-41-21.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-11-27-00-31-04.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-11-27-01-02-17.png" alt style=";background-color: white;padding:0">
 <div class="mermaid">flowchart TB 
 v[Vestibular&lt;br&gt; space]
 c[Canine&lt;br&gt; space]
@@ -3181,13 +3238,13 @@ sm---smt
 <li>of Maxilla</li>
 <li>of Mandible</li>
 </ul>
-<p><img src="paste_src/2022-11-15-10-48-25.png" alt></p>
+<img src="paste_src/2022-11-15-10-48-25.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="canine-space-maxilla">Canine space (Maxilla)</h2>
 
 <ul>
 <li>Nasolabial sulcus</li>
 </ul>
-<p><img src="paste_src/2022-11-15-10-53-11.png" alt></p>
+<img src="paste_src/2022-11-15-10-53-11.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="buccal-space">Buccal space</h2>
 
 <ul>
@@ -3195,8 +3252,8 @@ sm---smt
 <li>Parotid duct</li>
 <li>Facial a.</li>
 </ul>
-<p><img src="paste_src/2022-11-15-10-54-19.png" alt><br>
-<img src="paste_src/2022-11-26-17-55-14.png" alt></p>
+<img src="paste_src/2022-11-15-10-54-19.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-11-26-17-55-14.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="parotid-space">Parotid space</h2>
 
 <ul>
@@ -3207,7 +3264,7 @@ sm---smt
 </ul>
 <h2 class="mume-header" id="masticator-space">Masticator space</h2>
 
-<p><img src="paste_src/2022-11-15-11-03-23.png" alt></p>
+<img src="paste_src/2022-11-15-11-03-23.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="temporal-space">Temporal space</h3>
 
 <p>Temporalis m.&#x5206;&#x9694;</p>
@@ -3240,7 +3297,7 @@ sm---smt
 </ul>
 <h3 class="mume-header" id="submassetric-space">Submassetric space</h3>
 
-<p><img src="paste_src/2022-11-27-00-27-08.png" alt></p>
+<img src="paste_src/2022-11-27-00-27-08.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="submental-submandibular-space">Submental &amp; Submandibular space</h2>
 
 <p><strong>Submental</strong></p>
@@ -3248,18 +3305,18 @@ sm---smt
 <li>Digastric, Hyoid bone, Mandibular symphysis &#x70BA;&#x754C;</li>
 <li>Superficial cervical fascia&#x70BA;&#x5E95;&#xFF0C;Mylohyoid m. &#x70BA;&#x9802;</li>
 </ul>
-<p><img src="paste_src/2022-11-27-00-54-05.png" alt></p>
+<img src="paste_src/2022-11-27-00-54-05.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="sublingual-space">Sublingual space</h2>
 
 <ul>
 <li>Lingual n./a.</li>
 <li>Hypoglossal n.</li>
 </ul>
-<p><img src="paste_src/2022-11-27-00-57-01.png" alt></p>
+<img src="paste_src/2022-11-27-00-57-01.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="cervical-spaces">Cervical spaces</h2>
 
-<p><img src="paste_src/2022-11-27-01-04-59.png" alt><br>
-<img src="paste_src/2022-11-27-01-07-15.png" alt></p>
+<img src="paste_src/2022-11-27-01-04-59.png" alt style=";background-color: white;padding:0">
+<img src="paste_src/2022-11-27-01-07-15.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="previsceral-space">Previsceral space</h3>
 
 <h3 class="mume-header" id="parapharyngeal-space">Parapharyngeal space</h3>
@@ -3287,7 +3344,7 @@ sm---smt
 <p><a href="#maxillary-a">Maxillary a.</a></p>
 <h2 class="mume-header" id="nerve-6">Nerve</h2>
 
-<p><img src="paste_src/2022-10-07-17-26-06.png" alt></p>
+  <img src="paste_src/2022-10-07-17-26-06.png" alt style=";background-color: white;padding:0">
 <ul>
 <li><a href="#cn-v3">CN V<sub>3</sub></a></li>
 <li><a href="#cn-v2">CN V<sub>2</sub></a></li>
@@ -3361,7 +3418,7 @@ sm---smt
 </ul>
 <h1 class="mume-header" id="temporal-fossa">Temporal fossa</h1>
 
-<p><img src="paste_src/2022-10-09-19-36-02.png" alt></p>
+<img src="paste_src/2022-10-09-19-36-02.png" alt style=";background-color: white;padding:0">
 <h2 class="mume-header" id="artery-6">Artery</h2>
 
 <ul>
@@ -3410,6 +3467,7 @@ sm---smt
 <li>Temporal br. (<a href="#cn-vii">CN VII</a>)</li>
 </ul>
 <br><br>
+
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
 <script> 
 var Main_LeftListLiSelector = $(".md-sidebar-toc li");
@@ -3512,7 +3570,6 @@ $(Main_LeftListLiSelector).on('click', function() {
 <li><a href="#sphenoid-bone">Sphenoid bone</a></li>
 <li><a href="#temporal-bone">Temporal bone</a></li>
 <li><a href="#occipital-bone">Occipital bone</a></li>
-<li><a href="#ethmoid-bone-1">Ethmoid bone</a></li>
 <li><a href="#vomer">Vomer</a></li>
 <li><a href="#maxillary-bone">Maxillary bone</a></li>
 <li><a href="#alveolar-bone">Alveolar bone</a></li>

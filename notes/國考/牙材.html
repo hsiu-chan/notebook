@@ -308,7 +308,7 @@
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .table-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -323,11 +323,12 @@
   width: 100%;
   table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
   border-collapse: collapse;
   display: table;
+  margin-top: 1rem;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .markdown-preview table {
     table-layout: auto;
   }
@@ -354,17 +355,28 @@
 .markdown-preview table th ol,
 .markdown-preview table td ul,
 .markdown-preview table th ul {
-  padding-left: 0;
   list-style-position: inside;
   /* 控制項目符號的位置 */
   text-align: left;
   /* 文字對齊方式 */
 }
+.markdown-preview table th.top-left,
+.markdown-preview table td.top-left {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+}
+.markdown-preview table th.top-left > .col-title,
+.markdown-preview table td.top-left > .col-title {
+  text-align: right;
+}
+.markdown-preview table th.top-left > .row-title,
+.markdown-preview table td.top-left > .row-title {
+  text-align: left;
+}
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -386,6 +398,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
+  /* Modal (background for enlarged image) */
   /* 侧栏 */
   /* 侧栏自动编号 */
   /* 复位计数器 */
@@ -615,7 +628,63 @@ html body .fbox img {
   left: 0;
   transform: translate(0, 0);
   padding: 0;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
@@ -682,35 +751,49 @@ html body .fbox img {
 <h1 class="mume-header" id="%E8%89%B2%E6%BA%AB">&#x8272;&#x6EAB;</h1>
 
 <p>Lab color chart</p>
-<p><img src="paste_src/%E7%89%99%E6%9D%90.png" alt></p>
-<h1 class="mume-header" id="%E7%86%B1%E5%82%B3%E5%B0%8E-%E6%93%B4%E6%95%A3">&#x71B1;&#x50B3;&#x5C0E;&#x3001;&#x64F4;&#x6563;</h1>
+<img src="paste_src/&#x7259;&#x6750;.png" alt="alt text" style=";background-color: white;padding:0">
+<h1 class="mume-header" id="%E7%86%B1%E5%82%B3%E5%B0%8E-%E6%93%B4%E6%95%A3-%E8%86%A8%E8%84%B9">&#x71B1;&#x50B3;&#x5C0E;&#x3001;&#x64F4;&#x6563;&#x3001;&#x81A8;&#x8139;</h1>
 
 <ul>
-<li>
-<p>&#x6BD4;&#x71B1;: Dentin = GI &gt; Enamel &gt; composite</p>
-</li>
-<li>
-<p>&#x71B1;&#x50B3;&#x5C0E; (Thermal conductivity&#xFF0C;&#x39A;)</p>
+<li>&#x6BD4;&#x71B1;: Dentin = GI &gt; Enamel &gt; composite &gt; &#x91D1;&#x5C6C;</li>
+<li>&#x50B3;&#x5C0E;: &#x91D1;&#x6578; &gt; composite &gt; Enamel &gt; Dentin = GI &gt; &#x6C34;</li>
+<li>&#x64F4;&#x6563;: &#x91D1;&#x5C6C; &gt; Enamel &gt; Dentin= GI</li>
+</ul>
+<blockquote>
+<p>Dentin = GI &#x223C; (Enamel + &#x6C34;)/2</p>
+</blockquote>
 <ul>
-<li>&#x67D0;&#x6750;&#x6599;&#x505A;&#x6210;&#x622A;&#x9762;&#x7A4D; 1 cm2&#x3001;&#x539A;&#x5EA6; 1cm&#xFF0C;&#x5169;&#x7AEF;&#x6EAB;&#x5EA6;&#x5DEE; 1 K&#xFF0C;&#x6BCF;&#x79D2;&#x901A;&#x904E;&#x9019;&#x6750;&#x6599;&#x7684;<mark>&#x71B1;&#x91CF;</mark>(&#x904E;&#x7A0B;&#x8981;&#x63A7;&#x5236;&#x5728;&#x6EAB;&#x5EA6;&#x68AF;&#x5EA6;&#x4E0D;&#x8B8A;&#x7684;&#x72C0;&#x614B;)</li>
+<li>&#x81A8;&#x8139;: composite &gt; &#x6C5E; &gt; &#x91D1; &gt; enamel=GI &gt; &#x9226; &gt; Dentin &gt; &#x9676;&#x74F7;</li>
+</ul>
+<blockquote>
+<p>Matrix &gt; &#x7D50;&#x6676; &gt; &#x751F;&#x7269;</p>
+</blockquote>
+<ul>
+<li>&#x71B1;&#x50B3;&#x5C0E; (Thermal conductivity&#xFF0C;&#x39A;)
+<ul>
+<li>&#x67D0;&#x6750;&#x6599;&#x505A;&#x6210;&#x622A;&#x9762;&#x7A4D; 1 cm<sup>2</sup>&#x3001;&#x539A;&#x5EA6; 1cm&#xFF0C;&#x5169;&#x7AEF;&#x6EAB;&#x5EA6;&#x5DEE; 1 K&#xFF0C;&#x6BCF;&#x79D2;&#x901A;&#x904E;&#x9019;&#x6750;&#x6599;&#x7684;<mark>&#x71B1;&#x91CF;</mark>(&#x904E;&#x7A0B;&#x8981;&#x63A7;&#x5236;&#x5728;&#x6EAB;&#x5EA6;&#x68AF;&#x5EA6;&#x4E0D;&#x8B8A;&#x7684;&#x72C0;&#x614B;)</li>
 </ul>
 </li>
-<li>
-<p>&#x71B1;&#x64F4;&#x6563; (Thermal diffusivity)</p>
+<li>&#x71B1;&#x64F4;&#x6563; (Thermal diffusivity)
 <ul>
 <li>&#x7269;&#x9AD4;&#x8868;&#x9762;&#x52A0;&#x71B1;&#x6642;&#xFF0C;<mark>&#x6EAB;&#x5EA6;&#x8B8A;&#x5316;</mark>&#x901F;&#x5EA6;</li>
 <li>Enamel &gt; zoe &gt; Dentin = GI</li>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%89%99%E6%9D%90-1.png" alt></p>
+<img src="paste_src/&#x7259;&#x6750;-1.png" alt="alt text" style=";background-color: white;padding:0">
 <ul>
-<li>&#x71B1;&#x64F4;&#x6563;
+<li>
+<p>&#x71B1;&#x64F4;&#x6563;</p>
 <ul>
 <li>&#x9AD8;&#x5206;&#x5B50;&#x6750;&#x6599; &gt; composite(&#x9AD8;&#x5206;&#x5B50;&#x6750;&#x6599;&#x8207;&#x9676;&#x74F7;&#x6DF7;&#x5408;&#x800C;&#x6210;) &gt; &#x91D1;&#x5C6C; &gt; Ti(&#x91D1;&#x5C6C;&#x4E2D;&#x6700;&#x5C0F;) &gt; &#x9676;&#x74F7;</li>
 </ul>
 </li>
+<li>
+<p>&#x71B1;&#x81A8;&#x8139;</p>
+</li>
 </ul>
+<img src="paste_src/&#x7259;&#x6750;-22.png" alt="alt text" style="width:40%;background-color: white;padding:0">
 <h1 class="mume-header" id="%E9%9B%BB">&#x96FB;</h1>
 
 <ul>
@@ -733,14 +816,66 @@ html body .fbox img {
 <h1 class="mume-header" id="%E6%87%89%E5%8A%9B">&#x61C9;&#x529B;</h1>
 
 <ul>
-<li>Poisson&#x2019;s ratio
+<li>
+<p>Poisson&#x2019;s ratio</p>
 <ul>
 <li>&#x65BD;&#x4E88;&#x62C9;&#x529B;&#xFF0C;&#x800C;&#x6A6B;&#x61C9;&#x8B8A;/&#x7E31;&#x61C9;&#x8B8A; = Poisson&#x2019;s ratio&#x3002;</li>
 <li>&#x7B49;&#x5411;&#x6027;(isotropic): Poisson&#x2019;s ratio = 0.5 (&#x5927;&#x90E8;&#x5206;&#x6750;&#x6599; 0.25~0.3)</li>
 </ul>
 </li>
-<li>&#x8106;&#x6027;&#x6750;&#x6599;&#x8981;&#x7528;&#x5F91;&#x5411;&#x58D3;&#x7E2E;&#x8A66;&#x9A57;<br>
-<img src="paste_src/%E7%89%99%E6%9D%90-2.png" alt></li>
+<li>
+<p>&#x8106;&#x6027;&#x6750;&#x6599;&#x8981;&#x7528;&#x5F91;&#x5411;&#x58D3;&#x7E2E;&#x8A66;&#x9A57;<br>
+<img src="paste_src/&#x7259;&#x6750;-2.png" alt="alt text" style=";background-color: white;padding:0"></p>
+</li>
+<li>
+<p>resilience &#x5F48;&#x6027;&#x80FD;</p>
+<ul>
+<li>&#x61C9;&#x529B;-&#x61C9;&#x8B8A;&#x66F2;&#x7DDA;&#x81F3;<mark>&#x964D;&#x4F0F;</mark>&#x9EDE;&#x4E0B;&#x7684;&#x9762;&#x7A4D;</li>
+<li><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><msubsup><mi>&#x3C3;</mi><mi>y</mi><mn>2</mn></msubsup><mrow><mn>2</mn><mi>E</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\sigma_y^2}{2E}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.2732em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5872em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.7731em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">&#x3C3;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.453em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.3831em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span> (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&#x3C3;</mi><mi>y</mi></msub><mo>:</mo><mtext>&#x5C48;&#x670D;&#x5F37;&#x5EA6;</mtext><mo separator="true">,</mo><mi>E</mi><mo>:</mo><mtext>&#x694A;&#x6C0F;&#x6A21;&#x6578;</mtext></mrow><annotation encoding="application/x-tex">\sigma_y: &#x5C48;&#x670D;&#x5F37;&#x5EA6;, E: &#x694A;&#x6C0F;&#x6A21;&#x6578;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">&#x3C3;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord cjk_fallback">&#x5C48;&#x670D;&#x5F37;&#x5EA6;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">&#x694A;&#x6C0F;&#x6A21;&#x6578;</span></span></span></span>)</li>
+</ul>
+</li>
+<li>
+<p>toughness &#x97CC;&#x6027;</p>
+<ul>
+<li>&#x61C9;&#x529B;-&#x61C9;&#x8B8A;&#x66F2;&#x7DDA;&#x81F3;<mark>&#x65B7;&#x88C2;</mark>&#x9EDE;&#x4E0B;&#x7684;&#x9762;&#x7A4D;</li>
+</ul>
+</li>
+</ul>
+<dl>
+<dt>stiffness</dt>
+<dd>&#x525B;&#x6027;&#xFF0C; k</dd>
+<dt>plastic strain</dt>
+<dd>&#x6C38;&#x4E45;&#x5F62;&#x8B8A;&#x7684;&#x61C9;&#x8B8A;</dd>
+</dl>
+<h1 class="mume-header" id="%E6%B5%81%E9%AB%94">&#x6D41;&#x9AD4;</h1>
+
+<ul>
+<li>&#x725B;&#x9813;&#x6D41;&#x9AD4;
+<ul>
+<li>&#x3C4;=&#x3BC;*&#x3B3;</li>
+<li>&#x3C4;&#xFF1A;&#x526A;&#x5207;&#x61C9;&#x529B;</li>
+<li>&#x1D707;: &#x9ECF;&#x5EA6;&#xFF08;&#x5E38;&#x6578;&#xFF0C;&#x8207;&#x526A;&#x5207;&#x901F;&#x7387;&#x7121;&#x95DC;&#xFF09;</li>
+<li>&#x1D6FE;: &#x526A;&#x5207;&#x901F;&#x7387;&#x3002;</li>
+</ul>
+</li>
+<li>&#x81A8;&#x8139;&#x6D41;&#x9AD4; (Dilatant)
+<ul>
+<li>&#x3C4;=k*&#x3B3;<sup>n</sup> (n&gt;1)</li>
+</ul>
+</li>
+<li>&#x507D;&#x5851;&#x6027;&#x6D41;&#x9AD4; (Pseudoplastic)
+<ul>
+<li>&#x3C4;=k*&#x3B3;<sup>n</sup> (n&lt;1)</li>
+</ul>
+</li>
+<li>&#x5851;&#x6027;&#x6D41;&#x9AD4;&#xFF08;Plastic Fluid&#xFF09;
+<ul>
+<li>&#x3C4;=&#x3C4;<sub>y</sub>+ k*&#x3B3;<sup>n</sup> (n&lt;1)</li>
+<li>&#x3C4;<sub>y</sub>: &#x5C48;&#x670D;&#x61C9;&#x529B;</li>
+<li>&#x5C48;&#x670D;&#x61C9;&#x529B;&#x524D;&#x662F;&#x56FA;&#x9AD4;&#xFF0C;&#x8D85;&#x904E;&#x8B8A;&#x6DB2;&#x9AD4;<br>
+&#x200B;</li>
+</ul>
+</li>
 </ul>
 <h1 class="mume-header" id="%E9%87%91%E5%B1%AC">&#x91D1;&#x5C6C;</h1>
 
@@ -758,7 +893,7 @@ html body .fbox img {
 <p>&#x7DFB;&#x5BC6;&#x6C27;&#x5316;: In, Ga, Sn, Fe, Cr</p>
 </li>
 <li>
-<p>&#x904E;&#x654F;: Cr, Be, Ni</p>
+<p>&#x904E;&#x654F;: Be, Cr, Ni (&#x76AE;&#x524B;&#x4F60;)</p>
 </li>
 <li>
 <p>&#x5408;&#x91D1;&#x9846;&#x7C92;(grain size)&#x8B8A;&#x5C0F; &#x2192; &#x4F7F;&#x5EF6;&#x5C55;&#x6027;&#x4E0A;&#x5347;</p>
@@ -803,13 +938,31 @@ html body .fbox img {
 </thead>
 <tbody>
 <tr>
+<td><strong>HCP</strong><br>(Hexagonal Close-Packed)</td>
+<td>3 <br><img src="paste_src/&#x7259;&#x6750;-8.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td>&#x9AD8; (74%)</td>
+<td>&#x4E2D;&#x4F4E;</td>
+<td>&#x9AD8;</td>
+<td>&#x4E2D;&#x4F4E;</td>
+<td>Zr,Zn, &#x3B1;-Ti, Mg</td>
+</tr>
+<tr>
 <td><strong>BCC</strong><br>(Body-Centered Cubic)</td>
-<td>6 <br> <img src="paste_src/%E7%89%99%E6%9D%90-6.png" alt></td>
+<td>6 <br> <img src="paste_src/&#x7259;&#x6750;-6.png" alt="alt text" style=";background-color: white;padding:0"></td>
 <td>&#x4E2D; (68%)</td>
 <td>&#x4E2D;(&#x9AD8;&#x6EAB;)</td>
 <td>&#x9AD8;</td>
 <td>&#x4E2D;&#x4F4E;</td>
 <td>Fe, Cr, Mo, &#x3B2;-Ti, Fer</td>
+</tr>
+<tr>
+<td><strong>FCC</strong><br>(Face-Centered Cubic)</td>
+<td>12<br> <img src="paste_src/&#x7259;&#x6750;-7.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td>&#x9AD8; (74%)</td>
+<td>&#x9AD8;</td>
+<td>&#x4E2D;&#x4F4E;</td>
+<td>&#x9AD8;</td>
+<td>Au, Ag, Cu, Al, Ni, Aus</td>
 </tr>
 <tr>
 <td><strong>BCT</strong><br>(Body-Centered Tetragonal)</td>
@@ -820,27 +973,9 @@ html body .fbox img {
 <td>&#x4F4E;</td>
 <td>Mar</td>
 </tr>
-<tr>
-<td><strong>HCP</strong><br>(Hexagonal Close-Packed)</td>
-<td>3 <br><img src="paste_src/%E7%89%99%E6%9D%90-8.png" alt></td>
-<td>&#x9AD8; (74%)</td>
-<td>&#x4E2D;&#x4F4E;</td>
-<td>&#x9AD8;</td>
-<td>&#x4E2D;&#x4F4E;</td>
-<td>Zn, &#x3B1;-Ti, Mg</td>
-</tr>
-<tr>
-<td><strong>FCC</strong><br>(Face-Centered Cubic)</td>
-<td>12<br> <img src="paste_src/%E7%89%99%E6%9D%90-7.png" alt></td>
-<td>&#x9AD8; (74%)</td>
-<td>&#x9AD8;</td>
-<td>&#x4E2D;&#x4F4E;</td>
-<td>&#x9AD8;</td>
-<td>Au, Ag, Cu, Al, Aus</td>
-</tr>
 </tbody>
 </table></div>
-<p><img src="paste_src/%E7%89%99%E6%9D%90-5.png" alt></p>
+<img src="paste_src/&#x7259;&#x6750;-5.png" alt="alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E7%86%B1%E8%99%95%E7%90%86">&#x71B1;&#x8655;&#x7406;</h2>
 
 <div class="table-scroll-wrapper"><table>
@@ -867,6 +1002,13 @@ html body .fbox img {
 </table></div>
 <h2 class="mume-header" id="au">Au</h2>
 
+<ul>
+<li>Pd-Au
+<ul>
+<li>Pd &gt; 10% &#x8B8A;&#x767D;</li>
+</ul>
+</li>
+</ul>
 <h3 class="mume-header" id="cu-au">Cu-Au</h3>
 
 <ul>
@@ -881,7 +1023,7 @@ html body .fbox img {
 <ul>
 <li>400-500 &#xB0;C &#x2192; &#x50BE;&#x5411;&#x3B2; phase</li>
 <li>700-800 &#xB0;C &#x2192; &#x50BE;&#x5411;&#x3B1; phase<br>
-<img src="paste_src/%E7%89%99%E6%9D%90-14.png" alt></li>
+<img src="paste_src/&#x7259;&#x6750;-14.png" alt="alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
@@ -893,7 +1035,7 @@ html body .fbox img {
 </li>
 <li>
 <p>grade 1 &#x7D14;&#x5EA6;&#x9AD8;&#xFF0C;&#x786C;&#x5EA6;&#x4F4E;<br>
-<img src="paste_src/%E7%89%99%E6%9D%90-4.png" alt></p>
+<img src="paste_src/&#x7259;&#x6750;-4.png" alt="alt text" style=";background-color: white;padding:0"></p>
 </li>
 <li>
 <p>&#x5F48;&#x6027;&#x6A21;&#x6578;&#x4F4E;&#xFF0C;&#x6613;&#x8B8A;&#x5F62;&#xFF0C;&#x6062;&#x5FA9;&#x6027;&#x5F37;</p>
@@ -915,6 +1057,7 @@ html body .fbox img {
 <li>&#x92FC;+&#x927B;(12-30%)
 <ul>
 <li>30 % &#x6613;&#x8207;&#x78B3;&#x7522;&#x751F;&#x78B3;&#x5316;&#x927B;&#xFF0C;&#x4F7F;&#x7D50;&#x69CB;&#x8B8A;&#x8106;&#x8B8A;&#x786C;&#xFF0C;&#x4E0D;&#x9632;&#x93FD;</li>
+<li>&lt;12% &#x7121;&#x6CD5;&#x7DFB;&#x5BC6;&#x6C27;&#x5316;&#x5C64;</li>
 </ul>
 </li>
 <li>Ni&#x7684;&#x542B;&#x91CF;&#x8D8A;&#x591A;&#xFF0C;&#x5408;&#x91D1;&#x5F48;&#x6027;&#x8D8A;&#x9AD8;
@@ -947,23 +1090,41 @@ html body .fbox img {
 <h2 class="mume-header" id="%E5%85%B6%E4%BB%96%E5%90%88%E9%87%91">&#x5176;&#x4ED6;&#x5408;&#x91D1;</h2>
 
 <ul>
-<li>&#x9226;-&#x92C1;-&#x91E9;(Ti-6Al-4V)&#x5408;&#x91D1;
+<li>
+<p>Ti-6Al-4V</p>
 <ul>
 <li>&#x91CD;&#x91CF;&#x767E;&#x5206;&#x6BD4; 6% Al&#x8207;4% V</li>
+<li>&#x9AD8;&#x6EAB; (975 &#xB0;C &#x2191;) &#x2192; &#x3B2; &#x76F8;&#xFF0C;700&#x2103;-950&#x2103; &#x2192; &#x3B1; &#x76F8;</li>
 <li>&#x92C1;&#x662F;&#x3B1;&#x76F8;&#x7684;&#x7A69;&#x5B9A;&#x5291;</li>
 <li>&#x91E9;&#x3001;&#x9285;&#x3001;&#x9200;&#x662F;&#x3B2;&#x76F8;&#x7684;&#x7A69;&#x5B9A;&#x5291;</li>
 </ul>
 </li>
-<li>Ni-Ti
+<li>
+<p>Ni-Ti</p>
 <ul>
 <li>1-2% Co</li>
 <li>&#x6297;&#x8150;&#x8755;</li>
-<li>&#x53D7;&#x71B1;&#x8B8A;&#x70BA;FCC&#xFF0C;&#x51B7;&#x537B;&#x61C9;&#x529B;&#x8B8A;BCT
+<li>&#x53D7;&#x71B1;FCC&#xFF0C;&#x51B7;&#x537B;&#x61C9;&#x529B;&#x8B8A;BCT
 <ul>
 <li>&#x4F4E;&#x6EAB;&#x53EF;&#x65BD;&#x52A0;&#x5916;&#x529B;&#x6539;&#x8B8A;&#x5176;&#x5F62;&#x72C0;</li>
 <li>&#x53D7;&#x71B1;&#x6062;&#x5FA9;&#x5F62;&#x72C0;</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>
+<p>Co-Cr</p>
+<ul>
+<li>&#x53D7;&#x71B1;FCC&#xFF0C;&#x5BA4;&#x6EAB; HCP</li>
+<li>&#x9AD8;&#x7194;&#x9EDE;&#x3001;&#x9AD8;&#x786C;&#x5EA6;&#x3001;&#x4F4E;&#x5EF6;&#x5C55;</li>
+<li>RPD &#x652F;&#x67B6;</li>
+</ul>
+</li>
+<li>
+<p>Ni-Cr</p>
+<ul>
+<li>FCC</li>
+<li>Cr: &#x8868;&#x9762;&#x786C;&#x5EA6;&#x3001;&#x8010;&#x78E8;&#x3001;&#x8010;&#x8150;&#x8755;</li>
 </ul>
 </li>
 </ul>
@@ -995,13 +1156,13 @@ html body .fbox img {
 <p>&#x9AD8;&#x9ECF;&#x5EA6; (&#x5927;&#x5206;&#x5B50;&#x3001;&#x6C2B;&#x9375;)</p>
 <ul>
 <li>Bis-GMA : &#x5169;&#x500B;&#x96D9;&#x9375;&#x80FD;&#x958B; &#x2192; &#x7DB2;&#x72C0;</li>
-<li>UDMA</li>
 </ul>
 </li>
 <li>
 <p>&#x4F4E;&#x9ECF;&#x5EA6;</p>
 <ul>
 <li>TEGDMA</li>
+<li>UDMA</li>
 </ul>
 </li>
 <li>
@@ -1018,7 +1179,7 @@ html body .fbox img {
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%89%99%E6%9D%90-9.png" alt></p>
+<img src="paste_src/&#x7259;&#x6750;-9.png" alt="alt text" style=";background-color: white;padding:0">
 <div class="admonition warning">
 <p class="admonition-title">MMPs</p>
 <ul>
@@ -1030,11 +1191,18 @@ html body .fbox img {
 <h2 class="mume-header" id="%E5%AE%9A%E9%87%8F">&#x5B9A;&#x91CF;</h2>
 
 <ul>
-<li>&#x55AE;&#x9375;&#x8F49;&#x63DB;&#x5EA6; (Degree of conversion/DC)
+<li>
+<p>&#x55AE;&#x9375;&#x8F49;&#x63DB;&#x5EA6; (Degree of conversion/DC)</p>
 <ul>
 <li>&#x96D9;&#x9375;&#x6253;&#x958B;&#x767E;&#x5206;&#x6BD4;</li>
 <li>Bis-GMA &#x223C; 50-60%</li>
 </ul>
+</li>
+<li>
+<p>&#x54AC;&#x5408;&#x9762; Resin &#x5E74;&#x78E8;&#x640D;&#x91CF;&#x7D04;&#x6BD4; enamel &#x591A; 10% (10-20 &#x3BC;m)</p>
+</li>
+<li>
+<p>&#x5149;&#x805A;&#x5408;&#x7D04;&#x6709; 25% &#x672A;&#x805A;&#x5408;&#x55AE;&#x9AD4;</p>
 </li>
 </ul>
 <h2 class="mume-header" id="%E9%BB%8F%E8%91%97%E5%8A%91">&#x9ECF;&#x8457;&#x5291;</h2>
@@ -1053,7 +1221,7 @@ html body .fbox img {
 <p>Self-etching: &#x9178;&#x8755;&#x4E0D;&#x8DB3;&#xFF0C;Primer resin &#x9700;&#x8981;&#x96E2;&#x5B50;&#x5316;</p>
 </li>
 </ul>
-<p><img src="paste_src/%E7%89%99%E6%9D%90-15.png" alt></p>
+<img src="paste_src/&#x7259;&#x6750;-15.png" alt="alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="resin-based-composites">Resin-Based Composites</h2>
 
 <ul>
@@ -1072,7 +1240,7 @@ html body .fbox img {
 <thead>
 <tr>
 <th></th>
-<th colspan="3">&#x3BC;m</th>
+<th colspan="3">&#x3C6; (&#x3BC;m)</th>
 
 
 </tr>
@@ -1081,6 +1249,12 @@ html body .fbox img {
 <tr>
 <td>Macro-</td>
 <td colspan="3">50</td>
+
+
+</tr>
+<tr>
+<td>Traditional</td>
+<td colspan="3">8-12</td>
 
 
 </tr>
@@ -1121,7 +1295,7 @@ html body .fbox img {
 <ul>
 <li>Initiator: camphorquinone (CQ) + &#x4E09;&#x7D1A;&#x6C28;</li>
 <li>BHT &#x6291;&#x5236;&#x805A;&#x5408;(&#x6293;&#x81EA;&#x7531;&#x57FA;)<br>
-<img src="paste_src/%E7%89%99%E6%9D%90-11.png" alt></li>
+<img src="paste_src/&#x7259;&#x6750;-11.png" alt="alt text" style=";background-color: white;padding:0"></li>
 <li>&#x71C8;
 <ul>
 <li>LED (440~480 nm)</li>
@@ -1143,13 +1317,21 @@ html body .fbox img {
 <li>&#x5076;&#x5408;&#x5291;(Coupling agent)
 <ul>
 <li>Organosilane<br>
-<img src="paste_src/%E7%89%99%E6%9D%90-12.png" alt></li>
+<img src="paste_src/&#x7259;&#x6750;-12.png" alt="alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
 <h1 class="mume-header" id="cements">Cements</h1>
 
-<p><img src="paste_src/%E7%89%99%E6%9D%90-16.png" alt></p>
+<img src="paste_src/&#x7259;&#x6750;-16.png" alt="alt text" style=";background-color: white;padding:0">
+<ul>
+<li>
+<p>Polyacrylic acid &#x80FD;&#x6293;&#x7259;&#x9F52; Ca&#xB2;&#x207A;</p>
+</li>
+<li>
+<p>&#x5F37;&#x5EA6;: RMGI &gt; Resin cement &gt; compomer &gt; ZP &gt; GI &gt; PCC &gt; ZOE</p>
+</li>
+</ul>
 <h2 class="mume-header" id="%E6%9D%90%E6%96%99">&#x6750;&#x6599;</h2>
 
 <blockquote>
@@ -1175,8 +1357,8 @@ html body .fbox img {
 </li>
 <li>&#x4E2D;&#x6027;&#xFF0C;&#x87AF;&#x5408;</li>
 </ul>
-<p><img src="paste_src/%E7%89%99%E6%9D%90-20.png" alt><br>
-<img src="paste_src/%E7%89%99%E6%9D%90-21.png" alt></p>
+<img src="paste_src/&#x7259;&#x6750;-20.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/&#x7259;&#x6750;-21.png" alt="alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="zinc-polycarboxylate-cement-pcc">Zinc Polycarboxylate Cement (PCC)</h3>
 
 <ul>
@@ -1188,7 +1370,7 @@ html body .fbox img {
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%89%99%E6%9D%90-18.png" alt></p>
+<img src="paste_src/&#x7259;&#x6750;-18.png" alt="alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="glass-ionomer-gi">Glass ionomer (GI)</h3>
 
 <ul>
@@ -1202,7 +1384,20 @@ html body .fbox img {
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%89%99%E6%9D%90-19.png" alt></p>
+<img src="paste_src/&#x7259;&#x6750;-19.png" alt="alt text" style=";background-color: white;padding:0">
+<h3 class="mume-header" id="rmgi">RMGI</h3>
+
+<ul>
+<li>&#x9178;&#x9E7C;&#x53CD;&#x61C9;&#x6162;</li>
+<li>&#x87AF;&#x5408;&#x9F52;&#x8CEA;</li>
+<li>&#x6536;&#x7E2E;&#x5927;
+<ul>
+<li>&#x6297;&#x5F35;&#x2191;</li>
+<li>&#x6297;&#x58D3; &#x2193;</li>
+</ul>
+</li>
+<li>&#x4E0D;&#x9069;&#x5408;&#x76F4;&#x63A5; capping</li>
+</ul>
 <h3 class="mume-header" id="liner">Liner</h3>
 
 <ul>
@@ -1212,9 +1407,25 @@ html body .fbox img {
 </ul>
 </li>
 </ul>
+<h4 class="mume-header" id="mta">MTA</h4>
+
+<ul>
+<li>MTA &#x52A0;&#x6C34;&#x958B;&#x59CB;&#x53CD;&#x61C9;</li>
+<li>&#x77FD;&#x9178;&#x9223;, &#x6C2B;&#x6C27;&#x5316;&#x9223;
+<ul>
+<li>pH12</li>
+</ul>
+</li>
+<li>&#x53CD;&#x61C9;&#x6162;&#xFF0C;&#x6297;&#x5F4E;&#x5F37;&#x5EA6;&#x4F4E; (&#x96E2;&#x5B50;&#x6676;&#x9AD4;)
+<ul>
+<li>&#x6700;&#x7D42;&#x5F37;&#x5EA6;&#x548C; ZOE &#x5DEE;&#x4E0D;&#x591A;</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/&#x7259;&#x6750;-30.png" alt="alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="%E5%AE%9A%E9%87%8F-1">&#x5B9A;&#x91CF;</h2>
 
-<p><img src="paste_src/%E7%89%99%E6%9D%90-17.png" alt></p>
+<img src="paste_src/&#x7259;&#x6750;-17.png" alt="alt text" style=";background-color: white;padding:0">
 <h3 class="mume-header" id="film-thickness">Film thickness</h3>
 
 <ul>
@@ -1231,7 +1442,167 @@ html body .fbox img {
 <ul>
 <li>ZnO, &#x805A;&#x4E19;&#x70EF;&#x9178; &#x6613;&#x6EB6;</li>
 </ul>
+<h1 class="mume-header" id="%E5%8D%B0%E6%A8%A1%E6%9D%90">&#x5370;&#x6A21;&#x6750;</h1>
+
+<ul>
+<li>
+<p>&#x53EF;&#x9006;&#xFF1A;Impression compound&#x3001;Agar</p>
+</li>
+<li>
+<p>&#x4E8C;&#x6B21;&#x704C;&#x6A21;(&#x52A0;&#x6210;)&#x3001;&#x55AE;&#x76F8;&#x5370;&#x6A21;&#xFF1A; AS, PE</p>
+</li>
+<li>
+<p>&#x5F48;&#x6027;&#x56DE;&#x5FA9;&#xFF1A;AS &gt; CS &gt; PE &gt; PS</p>
+</li>
+<li>
+<p>&#x6D88;&#x6BD2;</p>
+<ul>
+<li>Agar&#x7D55;&#x5C0D;&#x4E0D;&#x53EF;&#x6CE1;&#x5728;&#x9E7C;&#x6027;&#x620A;&#x4E8C;&#x919B;(alkaline glutaraldehyde)</li>
+<li>iodophors&#x6D88;&#x6BD2;&#x5291;&#xFF1A;&#x6240;&#x6709;&#x5370;&#x6A21;&#x6750;&#x90FD;&#x53EF;&#x4F7F;&#x7528;&#x3002;</li>
+<li>PS&#x3001;CS&#x3001;AS &#x53EF;&#x7528;EPA&#xFF0C;&#x4F46;&#x592A;&#x4E45;&#x89AA;&#x6C34;&#x7684;PVS &#x6703; gg</li>
+</ul>
+</li>
+<li>
+<p>&#x7D30;&#x80DE;&#x6BD2;&#x6027;&#xFF1A;PS&#x6700;&#x4F4E;&#xFF0C;PE&#x6700;&#x9AD8;&#x3002;</p>
+</li>
+<li>
+<p>VPES = VPS(Vinyl polysiloxane) + PE = AS + PE</p>
+</li>
+<li>
+<p>&#x4ECB;&#x9762;&#x6D3B;&#x6027;&#x5291;: PVS</p>
+</li>
+</ul>
+<h2 class="mume-header" id="polysulfide">Polysulfide</h2>
+
+<ul>
+<li>DBP(Dibutyl phthalate/&#x9130;&#x82EF;&#x4E8C;&#x7532;&#x9178;&#x4E8C;&#x4E01;&#x916F;)
+<ul>
+<li>&#x589E;&#x52A0;&#x97CC;&#x6027;</li>
+</ul>
+</li>
+<li>&#x805A;&#x5408;&#x6C27;&#x5316;&#x5F62;&#x6210;&#x96D9;&#x786B;&#x9375;</li>
+<li>Catalyst
+<ul>
+<li>PbO<sub>2</sub>: &#x8910;&#x8272;&#x539F;&#x56E0;</li>
+<li>&#x5EF6;&#x9072;&#x5291;(retarder): &#x6CB9;&#x9178;(Oleic acid)&#x3001; &#x786C;&#x8102;&#x9178;(Stearic acid)</li>
+</ul>
+</li>
+<li>&#x6700;&#x597D;&#x53D6;&#x51FA;&#xFF0C;&#x6297;&#x6495;&#x88C2;&#x6700;&#x5F37;&#xFF0C;&#x4F46;&#x662F;&#x8B8A;&#x5F62;</li>
+</ul>
+<img src="paste_src/&#x7259;&#x6750;-24.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<h2 class="mume-header" id="condensation-silicone">Condensation Silicone</h2>
+
+<ul>
+<li>
+<p>&#x55AE;&#x9AD4;&#xFF1A;&#x805A;&#x4E8C;&#x7532;&#x57FA;&#x74B0;&#x6C27;&#x77FD;&#x6C2E;&#x70F7;</p>
+</li>
+<li>
+<p>Catalyst</p>
+<ul>
+<li>&#x4EA4;&#x806F;&#xFF1A;&#x77FD;&#x9178;&#x70F7;(alkyl silicate)</li>
+</ul>
+</li>
+<li>
+<p>&#x985E;&#x4F3C;&#x6676;&#x9AD4; &#x2192; &#x4E0D;&#x7528; Filler</p>
+<ul>
+<li>&#x5C3A;&#x5BF8;&#x6700;&#x4E0D;&#x7A69;&#x5B9A;</li>
+</ul>
+</li>
+<li>
+<p>&#x975E;&#x5E38;&#x758F;&#x6C34;</p>
+</li>
+</ul>
+<img src="paste_src/&#x7259;&#x6750;-25.png" alt="alt text" style=";background-color: white;padding:0">
+<h2 class="mume-header" id="addition-silicone">Addition Silicone</h2>
+
+<ul>
+<li>&#x5E38;&#x7528;&#xFF0C;&#x6700;&#x7CBE;&#x78BA;&#xFF0C;&#x4F46;&#x8CB4;</li>
+<li>&#x5F48;&#x6027;&#x5FA9;&#x539F;&#x6975;&#x4F73; &#x2192; &#x91CD;&#x8907;&#x704C;&#x6A21;</li>
+<li>&#x758F;&#x6C34;&#xFF0C;&#x754C;&#x9762;&#x6D3B;&#x6027;&#x5291;&#x6539;&#x826F;</li>
+<li>&#x704C;&#x6A21;&#x77F3;&#x818F;&#x5BB9;&#x6613;&#x7522;&#x751F;&#x6C23;&#x6CE1; (H<sub>2</sub>)</li>
+<li>Pt &#x6703;&#x6293; S &#x7684;&#x5B64;&#x5C0D; &#x2192; &#x4E0D;&#x80FD;&#x7528;&#x4E73;&#x81A0;&#x624B;&#x5957;</li>
+</ul>
+<img src="paste_src/&#x7259;&#x6750;-26.png" alt="alt text" style=";background-color: white;padding:0">
+<h2 class="mume-header" id="polyether-pe">Polyether (PE)</h2>
+
+<ul>
+<li>Polyether prepolymer
+<ul>
+<li>PE &#x982D;&#x5C3E;&#x52A0; Aziridine</li>
+<li>Aziridine &#x958B;&#x74B0;&#x52A0;&#x6210;&#x805A;&#x5408; (NCCNCC&#x2026;)</li>
+</ul>
+</li>
+<li>&#x6FD5;&#x6F64;&#x6027;/&#x89AA;&#x6C34;&#x6027;&#x4F73; (-O-)</li>
+<li>&#x5F48;&#x6027;&#x5FA9;&#x539F;&#x6975;&#x4F73; &#x2192; &#x91CD;&#x8907;&#x704C;&#x6A21;</li>
+<li>&#x89F8;&#x8B8A;&#x6027;&#x4F73;(Thixotropic)
+<ul>
+<li>&#x4F3C;&#x6C90;&#x6D74;&#x4E73;</li>
+</ul>
+</li>
+<li>&#x53C8;&#x5FEB;&#x53C8;&#x786C;&#xFF0C;&#x7259;&#x5468;&#x75C5;&#x6BBA;&#x624B;</li>
+</ul>
+<img src="paste_src/&#x7259;&#x6750;-27.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<h2 class="mume-header" id="agar">Agar</h2>
+
+<ul>
+<li>&#x52A0;&#x71B1;&#x6DB2;&#x5316;</li>
+<li>&#x787C;&#x7802;(borax): &#x52A0;&#x5F37;&#xFF0C;&#x4F46;&#x77F3;&#x818F;&#x7DE9;&#x4E7E;(retarder)</li>
+<li>K<sub>2</sub>SO<sub>4</sub>: &#x62B5;&#x92B7; retarder</li>
+<li>&#x71B1;&#x8139;&#x51B7;&#x7E2E; &#x2192; &#x704C;&#x51FA;&#x4F86;&#x7684;&#x6A21;&#x578B;&#x8B8A;&#x5927;</li>
+<li>&#x4FBF;&#x5B9C;&#xFF0C;&#x4F46;&#x90FD;&#x721B;&#xFF0C;&#x7CBE;&#x78BA;&#x5EA6;&#x6BD4; Alginate &#x597D;</li>
+</ul>
+<h2 class="mume-header" id="alginate">Alginate</h2>
+
+<ul>
+<li>&#x4E3B;&#x6210;&#x4EFD;: mannuronic acid&#x548C; guluronic acid</li>
+</ul>
+<img src="paste_src/&#x7259;&#x6750;-28.png" alt="alt text" style="width:80%;background-color: white;padding:0">
+<ul>
+<li>
+<p>filler: &#x77FD;&#x85FB;&#x571F;</p>
+<ul>
+<li>&#x4F7F;&#x8868;&#x9762;&#x5149;&#x6ED1;</li>
+</ul>
+</li>
+<li>
+<p>CaSO<sub>4</sub></p>
+<ul>
+<li>&#x7522;&#x751F; Ca<sup>2+</sup>&#xFF0C;alginate sol &#x4EA4;&#x806F;</li>
+</ul>
+</li>
+<li>
+<p>Na<sub>3</sub>PO<sub>4</sub></p>
+<ul>
+<li>&#x6436; Ca<sup>2+</sup></li>
+</ul>
+</li>
+<li>
+<p>&#x6C1F;&#x5316;&#x7269;</p>
+<ul>
+<li>&#x70BA;surface hardener&#xFF0C;&#x4E14;&#x6703;&#x52A0;&#x901F;&#x77F3;&#x818F;&#x786C;&#x5316;</li>
+</ul>
+</li>
+<li>
+<p>glycol</p>
+<ul>
+<li>&#x9632;&#x6B62;&#x77FD;&#x85FB;&#x571F;&#x4E82;&#x98DB;&#xFF0C;&#x5438;&#x5165;&#x6703;&#x77FD;&#x80BA;&#x75C5;</li>
+</ul>
+</li>
+<li>
+<p>&#x4FBF;&#x5B9C;&#xFF0C;&#x4F46;&#x90FD;&#x721B;</p>
+</li>
+<li>
+<p>&#x4FDD;&#x5B58;&#xFF1A;&#x4FDD;&#x5B58;&#x5728;100%&#x76F8;&#x5C0D;&#x6FD5;&#x5EA6;&#x4E0B; &#x6216;2% K2SO4 (potassium sulfate)&#x4E2D;&#x3002;</p>
+</li>
+</ul>
+<h1 class="mume-header" id="%E6%80%AA%E6%8F%90">&#x602A;&#x63D0;</h1>
+
+<img src="paste_src/&#x7259;&#x6750;-29.png" alt="alt text" style=";background-color: white;padding:0">
+<blockquote>
+<p>&#x6C92;&#x6709;&#x4EBA;&#x5728;&#x4E4E;&#xFF0C;&#x9084;&#x6709; W*s &#x7D66;&#x6211;&#x5BEB; J</p>
+</blockquote>
 <br><br>
+
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
 <script> 
 var Main_LeftListLiSelector = $(".md-sidebar-toc li");
@@ -1245,9 +1616,10 @@ $(Main_LeftListLiSelector).on('click', function() {
       <div class="md-sidebar-toc"><ul>
 <li><a href="#%E7%94%9F%E7%89%A9%E7%9B%B8%E5%AE%B9%E6%80%A7">&#x751F;&#x7269;&#x76F8;&#x5BB9;&#x6027;</a></li>
 <li><a href="#%E8%89%B2%E6%BA%AB">&#x8272;&#x6EAB;</a></li>
-<li><a href="#%E7%86%B1%E5%82%B3%E5%B0%8E-%E6%93%B4%E6%95%A3">&#x71B1;&#x50B3;&#x5C0E;&#x3001;&#x64F4;&#x6563;</a></li>
+<li><a href="#%E7%86%B1%E5%82%B3%E5%B0%8E-%E6%93%B4%E6%95%A3-%E8%86%A8%E8%84%B9">&#x71B1;&#x50B3;&#x5C0E;&#x3001;&#x64F4;&#x6563;&#x3001;&#x81A8;&#x8139;</a></li>
 <li><a href="#%E9%9B%BB">&#x96FB;</a></li>
 <li><a href="#%E6%87%89%E5%8A%9B">&#x61C9;&#x529B;</a></li>
+<li><a href="#%E6%B5%81%E9%AB%94">&#x6D41;&#x9AD4;</a></li>
 <li><a href="#%E9%87%91%E5%B1%AC">&#x91D1;&#x5C6C;</a>
 <ul>
 <li><a href="#%E6%99%B6%E6%A0%BC">&#x6676;&#x683C;</a></li>
@@ -1278,6 +1650,7 @@ $(Main_LeftListLiSelector).on('click', function() {
 <li><a href="#zinc-oxide-eugenol">Zinc oxide eugenol</a></li>
 <li><a href="#zinc-polycarboxylate-cement-pcc">Zinc Polycarboxylate Cement (PCC)</a></li>
 <li><a href="#glass-ionomer-gi">Glass ionomer (GI)</a></li>
+<li><a href="#rmgi">RMGI</a></li>
 <li><a href="#liner">Liner</a></li>
 </ul>
 </li>
@@ -1289,6 +1662,17 @@ $(Main_LeftListLiSelector).on('click', function() {
 </li>
 </ul>
 </li>
+<li><a href="#%E5%8D%B0%E6%A8%A1%E6%9D%90">&#x5370;&#x6A21;&#x6750;</a>
+<ul>
+<li><a href="#polysulfide">Polysulfide</a></li>
+<li><a href="#condensation-silicone">Condensation Silicone</a></li>
+<li><a href="#addition-silicone">Addition Silicone</a></li>
+<li><a href="#polyether-pe">Polyether (PE)</a></li>
+<li><a href="#agar">Agar</a></li>
+<li><a href="#alginate">Alginate</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%AA%E6%8F%90">&#x602A;&#x63D0;</a></li>
 </ul>
 </div>
       <a id="sidebar-toc-btn">&#x2261;</a>
