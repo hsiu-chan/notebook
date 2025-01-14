@@ -697,7 +697,10 @@ html body table .fbox {
 
 <h2 class="mume-header" id="subclavian-a">Subclavian a.</h2>
 
-<img src="paste_src/2022-10-01-16-45-44.png" alt style=";background-color: white;padding:0">
+<div class="fbox">
+<img src="paste_src/2022-10-01-16-45-44.png" alt style="width:75%;background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x89E3;-16.png" alt="alt text" style="width:20%;background-color: white;padding:0">
+</div>
 <div class="mermaid">flowchart LR
 subgraph first
 v &amp; it &amp; tt
@@ -744,14 +747,6 @@ a--&gt;f(ascending cervical a.);
 <li>carotid sheath</li>
 <li>&#x9838;&#x90E8;&#x7121;&#x5206;&#x652F;</li>
 </ul>
-<h2 class="mume-header" id="internal-carotid-a">Internal carotid a.</h2>
-
-<ul>
-<li>&#x9032;&#x5165;carotid canal &#x524D;&#x7121;&#x5206;&#x652F;</li>
-<li>CN X &#x4F34;&#x884C;</li>
-<li>Carotid canal&#x5165;&#x9871;</li>
-<li>carotid a. &#x593E; Stylopharyngeus m.(CN IX) , Styloglossus m. (CN XII)</li>
-</ul>
 <img src="paste_src/&#x53E3;&#x89E3;-3.png" alt="alt text" style=";background-color: white;padding:0">
 <h2 class="mume-header" id="external-carotid">External carotid</h2>
 
@@ -761,12 +756,21 @@ e[External carotid]
 e--&gt;st[Sup.thyroid a.]--&gt;|&#x5206;&#x652F;|sl[Sup. laryngeal a.]
 e--digastric&#x4E0B;--&gt;l[Lingual a.]--&gt;&#x820C;
 e--digastric&#x4E0A;--&gt;f[Facial a.]
-e--&gt;|&#x5F80;&#x5F8C;|ap[Ascending pharyngeal a.]
+e--&gt;ap[Ascending pharyngeal a.]
 e--&#x6CBF;&#x8457;digastric&#x6DF1;&#x5C64;--&gt;o[Occipital a.]
 e--&gt;a[Post. auricular a.]
 e--&gt;m[Maxillary a.]
 e--&gt;sp[Superficial temporal a.]--&#x5206;&#x652F;--&gt;tf[Transverse facial a.]
 sp[Superficial temporal a.]--&#x5206;&#x652F;--&gt;mt[Mid. temporal a.]
+
+
+subgraph &#x5F80;&#x5F8C;
+  ap
+  o 
+  a
+end
+
+
 </div><dl>
 <dt>lingual a.</dt>
 <dd>hyoglossus m. &#x6DF1;&#x5C64;&#xFF0C;digastric&#x4E0B;</dd>
@@ -799,6 +803,7 @@ lingual a.<span class="katex"><span class="katex-mathml"><math xmlns="http://www
 10[facial a.]==submandibular&lt;br&gt;gland &#x4E0A;==&gt;1
 10--&gt;a[ascending palatine a.]
 10--&gt;t[tonsillar b.]
+10--&gt; s[Submental a.]
 </div><img src="paste_src/2022-10-02-20-33-05.png" alt style=";background-color: white;padding:0">
 <h3 class="mume-header" id="ascending-palatine-a">Ascending palatine a.</h3>
 
@@ -898,7 +903,39 @@ psa---&gt;mt[maxillary&lt;br&gt;tuberosity]
 <dd>on <a href="#alveolar-bone">alveolar bone</a></dd>
 </dl>
 <img src="paste_src/2022-10-08-17-32-36.png" alt style=";background-color: white;padding:0">
-<h2 class="mume-header" id="scm%E8%A1%80%E6%B6%B2">SCM&#x8840;&#x6DB2;</h2>
+<h2 class="mume-header" id="superior-thyroid-artery">Superior thyroid artery</h2>
+
+<ul>
+<li>Infrahyoid br.</li>
+<li>Sup. laryngeal a.</li>
+<li>SCM br.</li>
+<li>Cricothryoid br.</li>
+</ul>
+<img src="paste_src/&#x53E3;&#x89E3;-14.png" alt="alt text" style="width:60%;background-color: white;padding:0">
+<h2 class="mume-header" id="tympanic-artery">Tympanic artery</h2>
+
+<div class="fbox">
+<img src="paste_src/&#x53E3;&#x89E3;-18.png" alt="alt text" style="width:35%;background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x89E3;-19.png" alt="alt text" style="width:60%;background-color: white;padding:0"></div>
+<div class="mermaid">graph LR 
+eca[ECA]
+
+apa[ Ascending Pharyngeal a.] 
+ita[ Inf. tympanic a.]
+eca --&gt; apa --&gt;ita
+
+paa[ Post. auricular a.]
+sma[ Stylomastoid a.]
+eca --&gt; paa --&gt; sma --&gt; pta[Post. tympanic a.]
+
+
+mma[Mid. meningeal a.]
+ma[Maxillary a.] ---&gt; ata[Ant. tympanic a.]
+ma --&gt; mma --&gt; sta[Sup. tympanic a.]
+
+
+ica[ICA] ---&gt; cta[Carotico tympanic a.]
+</div><h2 class="mume-header" id="scm%E8%A1%80%E6%B6%B2">SCM&#x8840;&#x6DB2;</h2>
 
 <p><strong>&#x4E0A;1/3</strong></p>
 <ul>
@@ -912,6 +949,14 @@ psa---&gt;mt[maxillary&lt;br&gt;tuberosity]
 <p><strong>&#x4E0B;1/3</strong></p>
 <ul>
 <li><a href="#thyrocervical-trunk">suprascapular a.</a> (&gt;80%)</li>
+</ul>
+<h2 class="mume-header" id="internal-carotid-a">Internal carotid a.</h2>
+
+<ul>
+<li>&#x9032;&#x5165;carotid canal &#x524D;&#x7121;&#x5206;&#x652F;</li>
+<li>CN X &#x4F34;&#x884C;</li>
+<li>Carotid canal&#x5165;&#x9871;</li>
+<li>carotid a. &#x593E; Stylopharyngeus m.(CN IX) , Styloglossus m. (CN XII)</li>
 </ul>
 <h2 class="mume-header" id="cerebral-arterial-circle">Cerebral arterial circle</h2>
 
@@ -935,6 +980,7 @@ psa---&gt;mt[maxillary&lt;br&gt;tuberosity]
 <img src="paste_src/2022-10-03-19-32-10.png" alt style="width:100%;background-color: white;padding:0">
 <img src="paste_src/2022-10-03-19-32-29.png" alt style="width:100%;background-color: white;padding:0">
 <img src="paste_src/2023-01-03-11-04-49.png" alt style="width:100%;background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x89E3;-17.png" alt="alt text" style="width:80%;background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>subclavian vein &#x5728;ant. scalene m. &#x4E0A;&#x65B9;</p>
@@ -965,7 +1011,11 @@ c--&gt;cb
 
 cb---bm
 mt[Mid. temporal v.]--&gt;sp
-</div><h1 class="mume-header" id="nerve">Nerve</h1>
+</div><h2 class="mume-header" id="%E9%A1%B1%E5%85%A7">&#x9871;&#x5167;</h2>
+
+<img src="paste_src/&#x53E3;&#x89E3;-20.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/&#x53E3;&#x89E3;-21.png" alt="alt text" style=";background-color: white;padding:0">
+<h1 class="mume-header" id="nerve">Nerve</h1>
 
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1091,17 +1141,34 @@ mt[Mid. temporal v.]--&gt;sp
 <h2 class="mume-header" id="cn-v1">CN V1</h2>
 
 <img src="paste_src/2022-12-01-10-49-34.png" alt style=";background-color: white;padding:0">
-- Lacrimal n.
-  - [lacrimal g.](#gland)
-- Nasociliary n.
-  - Ant./ Post. ethmoid n.
-    - &#x9032;&#x5165;Ethmoid sinus
-  - Infratrochlear n.
-  - Long ciliary n.
-    - &#x77B3;&#x5B54;&#x64F4;&#x5F35;
-- Frontal n.
-  - Supratrochlear n.
-  - Supraorbital n.
+<ul>
+<li>Lacrimal n.
+<ul>
+<li><a href="#gland">lacrimal g.</a></li>
+</ul>
+</li>
+<li>Nasociliary n.
+<ul>
+<li>Ant./ Post. ethmoid n.
+<ul>
+<li>&#x9032;&#x5165;Ethmoid sinus</li>
+</ul>
+</li>
+<li>Infratrochlear n.</li>
+<li>Long ciliary n.
+<ul>
+<li>&#x77B3;&#x5B54;&#x64F4;&#x5F35;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Frontal n.
+<ul>
+<li>Supratrochlear n.</li>
+<li>Supraorbital n.</li>
+</ul>
+</li>
+</ul>
 <h2 class="mume-header" id="cn-v2">CN V2</h2>
 
 <img src="paste_src/2022-10-08-18-17-19.png" alt style=";background-color: white;padding:0">
@@ -1286,7 +1353,7 @@ click c &quot;#temporal-bone&quot;
 <div class="admonition info">
 <p class="admonition-title">Great petrosal and Vidian</p>
 <img src="paste_src/2022-10-12-21-29-56.png" alt style="width:80%;background-color: white;padding:0">
-[Lesser petrosal n.](#lesser-petrosal-n)
+<p><a href="#cn-ix">Lesser petrosal n.</a></p>
 </div>
 <h2 class="mume-header" id="cn-viii">CN VIII</h2>
 
@@ -1500,7 +1567,7 @@ tp--&gt;lp--&gt;|foramen&lt;br&gt;ovale|oga--&gt;a---&gt;p[(Parotid g.)]
 
 ct----&gt;l--&gt;mga--&gt;lg[(Sublingual g.)] &amp; mg[(Submandibular g.)]
 
-gp--&gt; v--&gt;|Pterygoid&lt;br&gt;canal|pga([Pterygopalatine&lt;br&gt;ganglion])
+gp--&gt; v--&gt;|Foramen Lacerum, &lt;br&gt;Pterygoid canal|pga([Pterygopalatine&lt;br&gt;ganglion])
 
 pga--&gt;z[Zygomatic n.]--&gt;lc[Lacrimal n.]--&gt;ag[(Lacrimal g.)]
 pga----&gt;mug[(Mucous g.)]
@@ -3401,6 +3468,7 @@ sm---smt
 <li><a href="#gland">Vidian n.</a></li>
 <li><a href="#third-part">Vidian a.</a></li>
 </ul>
+<img src="paste_src/&#x53E3;&#x89E3;-15.png" alt="alt text" style="width:80%;background-color: white;padding:0">
 <h2 class="mume-header" id="font-colorf55pharyngeal-canalfont"><font color="#f55">Pharyngeal canal</font></h2>
 
 <p><em><strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2192;</span></span></span></span> Nasopharynx</strong></em></p>
@@ -3485,7 +3553,6 @@ $(Main_LeftListLiSelector).on('click', function() {
 <li><a href="#thyrocervical-trunk">Thyrocervical trunk</a></li>
 <li><a href="#axillary-a">Axillary a.</a></li>
 <li><a href="#common-carotid">Common carotid</a></li>
-<li><a href="#internal-carotid-a">Internal carotid a.</a></li>
 <li><a href="#external-carotid">External carotid</a></li>
 <li><a href="#facial-a">Facial a.</a>
 <ul>
@@ -3499,7 +3566,10 @@ $(Main_LeftListLiSelector).on('click', function() {
 <li><a href="#third-part">Third part</a></li>
 </ul>
 </li>
+<li><a href="#superior-thyroid-artery">Superior thyroid artery</a></li>
+<li><a href="#tympanic-artery">Tympanic artery</a></li>
 <li><a href="#scm%E8%A1%80%E6%B6%B2">SCM&#x8840;&#x6DB2;</a></li>
+<li><a href="#internal-carotid-a">Internal carotid a.</a></li>
 <li><a href="#cerebral-arterial-circle">Cerebral arterial circle</a>
 <ul>
 <li><a href="#ophthalmic-a">Ophthalmic a.</a></li>
@@ -3507,7 +3577,11 @@ $(Main_LeftListLiSelector).on('click', function() {
 </li>
 </ul>
 </li>
-<li><a href="#vein">Vein</a></li>
+<li><a href="#vein">Vein</a>
+<ul>
+<li><a href="#%E9%A1%B1%E5%85%A7">&#x9871;&#x5167;</a></li>
+</ul>
+</li>
 <li><a href="#nerve">Nerve</a>
 <ul>
 <li><a href="#cn-iii-iv-vi">CN III, IV, VI</a>
