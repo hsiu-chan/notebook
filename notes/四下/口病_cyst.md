@@ -144,7 +144,14 @@ n["非齒源(Non-Odontogenic)"]
 |-|-|-|-|-|
 |Periapical(radicular) cysts| Rest of  Malassez 被刺激|-|-|true/ periapical cyst <br> 圓形的光通性==包圍根尖==|
 |^|^|^|^| 牙根吸收, 2cm &uarr; 根管治療無效  ![alt text](paste_src/口病-25.png)|
-| Buccal Bifurcation Cyst| 36, 46 Buccal (兩側 1/3)| 5-13y | -|腫脹，推牙根 ![alt text](paste_src/口病-24.png) |
+| Buccal Bifurcation Cyst| 36, 46 Buccal (兩側 1/3)| 5-13y | -|\oneline{
+- 腫脹，推牙根 
+- cervical enamel extension 相關
+
+
+![alt text](paste_src/口病-24.png) 
+
+}|
 
 
 

@@ -51,13 +51,46 @@ Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \
 - 局部侵犯，少轉移，預後好
 }|
 |^|^|^|^|^|\oneline{
-\collapse[follicular pattern]{![alt text](paste_src/口病-89.png)}
-\collapse[plexiform pattern]{ stellate reticulum 擠扁 ![alt text](paste_src/口病-90.png) }
-\collapse[basal cell pattern (少)]{stellate reticulum 不明顯 ![alt text](paste_src/口病-91.png)}
-\collapse[acanthomatous pattern]{![alt text](paste_src/口病-92.png)}
-\collapse[granular cell pattern]{![alt text](paste_src/口病-93.png)}
+#### follicular Pattern
+- 最常見
+
+![alt text](paste_src/口病-89.png)
+
 }|
-|^|^|^|  前牙 | ^ | \collapse[desmoplastic pattern]{fibrous stroma &rarr; TGF-β &rarr; collagen fiber &rarr; 大量膠原蛋白基質(dense collagenized stroma)堆積 &rarr; radiopaque, odontogenic epithelium 呈現小島狀(small islands)或是索狀(cord) ![alt text](paste_src/口病-94.png)} |
+|^|^|^|^|^|\oneline{
+#### plexiform pattern
+
+- stellate reticulum 擠扁 
+ 
+![alt text](paste_src/口病-90.png)
+
+}|
+|^|^|^|^|^|\oneline{
+
+#### basal cell pattern 
+- 最少
+
+stellate reticulum 不明顯 ![alt text](paste_src/口病-91.png)
+
+}|
+|^|^|^|^|^|\oneline{
+#### acanthomatous pattern
+![alt text](paste_src/口病-92.png)
+}|
+|^|^|^|^|^|\oneline{
+#### granular cell pattern
+- 最常見
+
+![alt text](paste_src/口病-93.png)
+}|
+|^|^|^|  前牙 | ^ | \oneline{
+####  desmoplastic pattern
+
+- fibrous stroma &rarr; TGF-β &rarr; collagen fiber &rarr; 大量膠原蛋白基質(dense collagenized stroma)堆積 &rarr; radiopaque, odontogenic epithelium 呈現小島狀(small islands)或是索狀(cord)
+- 無鈣化，但 RO
+
+
+![alt text](paste_src/口病-94.png)} |
 |^| 單一囊腫型(unicystic) |^|下顎後 | ~23y | \oneline{
 - 預後較多囊好
 - 常圍繞未萌發的牙齒，特別是第三大臼齒
