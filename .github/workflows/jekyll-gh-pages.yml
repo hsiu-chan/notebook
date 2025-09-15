@@ -20,24 +20,39 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # 1. 取得原始碼
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # 2. 安裝 Ruby & Bundler
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'  # 可根據你的 Jekyll 版本調整
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+
+      # 3. 建立 Pages 環境
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
+      # 4. Build Jekyll site
       - name: Build Jekyll site
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+        run: bundle exec jekyll build --source ./ --destination ./_site
 
+      # 5. 上傳 artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./_site
 
   deploy:
     needs: build
