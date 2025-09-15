@@ -1,4 +1,4 @@
-# Workflow: Deploy Jekyll site to GitHub Pages
+# Workflow: Deploy Jekyll site to GitHub Pages (v3-safe)
 name: Deploy Jekyll site to Pages
 
 on:
@@ -26,31 +26,46 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      # Step 2: Setup Pages environment
+      # Step 2: Ensure GitHub Pages is enabled
+      - name: Enable GitHub Pages
+        run: |
+          echo "Checking GitHub Pages status..."
+          PAGE_STATUS=$(gh api repos/${GITHUB_REPOSITORY}/pages | jq -r '.status')
+          if [ "$PAGE_STATUS" != "built" ]; then
+            echo "Pages not enabled. Enabling..."
+            gh api -X POST repos/${GITHUB_REPOSITORY}/pages -F source=main
+            echo "Pages enabled."
+          else
+            echo "Pages already enabled."
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Step 3: Setup Pages environment
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      # Step 3: Setup Ruby environment for Jekyll
+      # Step 4: Setup Ruby for Jekyll
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
 
-      # Step 4: Install dependencies
+      # Step 5: Install dependencies
       - name: Install dependencies
         run: bundle install
 
-      # Step 5: Build the Jekyll site
+      # Step 6: Build the Jekyll site
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
-      # Step 6: Upload the static site as Pages artifact
+      # Step 7: Upload Pages artifact (avoids deprecated v3)
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: './_site'
 
-      # Step 7: Deploy to GitHub Pages
+      # Step 8: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
