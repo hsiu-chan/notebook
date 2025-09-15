@@ -20,9 +20,7 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
@@ -36,9 +34,8 @@ jobs:
           source: ./
           destination: ./_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
