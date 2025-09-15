@@ -1,0 +1,52 @@
+name: Build Notes HTML
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-notes:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Setup Python
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      # 3. Install dependencies
+      - name: Install Python dependencies
+        run: |
+          pip install PyGithub jinja2
+
+      # 4. Generate HTML from repo
+      - name: Generate Notes HTML
+        run: |
+          python scripts/generate_notes.py
+
+      # 5. Commit generated HTML back to repo (optional, if using separate branch for Pages)
+      - name: Commit generated HTML
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Auto-generate notes HTML" || echo "No changes"
+          git push || echo "Nothing to push"
+
+      # 6. Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
