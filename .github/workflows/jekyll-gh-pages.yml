@@ -1,22 +1,15 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy Jekyll to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -25,30 +18,33 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1. 取得原始碼
+      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. 安裝 Ruby & Bundler
+      # 2. Setup Ruby
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'  # 可根據你的 Jekyll 版本調整
+          ruby-version: '3.2'
 
+      # 3. Install dependencies and clear old Bundler cache
       - name: Install dependencies
         run: |
           gem install bundler
+          bundle clean --force
           bundle install --jobs 4 --retry 3
+          bundle update github-pages
 
-      # 3. 建立 Pages 環境
+      # 4. Setup GitHub Pages environment
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      # 4. Build Jekyll site
+      # 5. Build Jekyll site
       - name: Build Jekyll site
         run: bundle exec jekyll build --source ./ --destination ./_site
 
-      # 5. 上傳 artifact
+      # 6. Upload artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
