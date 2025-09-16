@@ -15,6 +15,10 @@ export_on_save:
 Luting agent
 : 黏著劑
 
+
+
+
+
 # Marginal design
 ![alt text](paste_src/FPD.png)
 ![alt text](paste_src/FPD-1.png)
@@ -54,3 +58,15 @@ G. Beveled shoulder (與牙齒夾角約90度，但在邊緣會做成斜面)
 
 
 > 金屬空隙能到 10 &mu;m
+
+# Resistant 
+- 咬合力約 4340N
+- 適宜的taper為5~22&deg;
+- 大臼齒的cusp height至少要有3.5~4 mm
+- h/w > 0.4
+- ZPC 24h 抗壓 70MPa
+
+# Prepare 
+
+- Functional cusp > 1.5mm
+- Nonfunctional cusp > 1mm
