@@ -1,4 +1,4 @@
-name: Deploy Jekyll site to Pages
+name: Deploy Jekyll site to GitHub Pages
 
 on:
   push:
@@ -23,12 +23,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      # 1️⃣ 取得原始碼
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Enable GitHub Pages
+      # 2️⃣ 檢查並啟用 GitHub Pages
+      - name: Ensure GitHub Pages is enabled
         run: |
-          echo "Checking GitHub Pages status..."
           PAGE_STATUS=$(gh api repos/${GITHUB_REPOSITORY}/pages | jq -r '.status')
           if [ "$PAGE_STATUS" != "built" ]; then
             echo "Pages not enabled. Enabling..."
@@ -40,9 +41,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # 3️⃣ 建立 Pages 環境
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # 4️⃣ 安裝 Ruby + Bundler
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -50,17 +53,21 @@ jobs:
           bundler-cache: true
           bundler: '2.4.22'
 
+      # 5️⃣ 安裝依賴
       - name: Install dependencies
         run: bundle install
 
+      # 6️⃣ 建立 Jekyll 網站
       - name: Build Jekyll site
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --destination ./_site
 
+      # 7️⃣ 上傳 artifact
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './_site'
 
+      # 8️⃣ 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
