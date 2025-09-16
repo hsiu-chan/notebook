@@ -50,27 +50,21 @@ jobs:
       - name: Install Python dependencies
         run: pip install PyGithub jinja2
 
-      # 6️⃣ Generate index.html
+      # 6️⃣ Generate index.html directly in _includes
       - name: Generate index.html
         run: python scripts/generate_index.py
 
-      # 7️⃣ Move index.html to Jekyll include (可選)
-      - name: Place index.html in _includes
-        run: |
-          mkdir -p _includes
-          mv index.html _includes/index.html
-
-      # 8️⃣ Build Jekyll site
+      # 7️⃣ Build Jekyll site
       - name: Build Jekyll site
         run: bundle exec jekyll build --destination ./_site
 
-      # 9️⃣ Upload Pages artifact
+      # 8️⃣ Upload Pages artifact
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
-      # 🔟 Deploy to GitHub Pages
+      # 9️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4

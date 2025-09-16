@@ -27,8 +27,12 @@ template = Template(template_str)
 # 渲染 HTML
 html = template.render(dirs=dirs)
 
-# 輸出到首頁 index.html
-with open("index.html", "w", encoding="utf-8") as f:
+# 確保 _includes 資料夾存在
+os.makedirs("_includes", exist_ok=True)
+
+# 輸出到 _includes/index.html
+output_path = os.path.join("_includes", "index.html")
+with open(output_path, "w", encoding="utf-8") as f:
     f.write(html)
 
-print("✅ index.html generated successfully!")
+print(f"✅ index.html generated successfully at {output_path}!")
