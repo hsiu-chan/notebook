@@ -27,7 +27,7 @@ jobs:
     steps:
       # 1. 取得原始碼
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 2. 安裝 Ruby & Bundler
       - name: Setup Ruby
@@ -42,7 +42,7 @@ jobs:
 
       # 3. 建立 Pages 環境
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
 
       # 4. Build Jekyll site
       - name: Build Jekyll site
@@ -50,7 +50,7 @@ jobs:
 
       # 5. 上傳 artifact
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
@@ -63,4 +63,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
