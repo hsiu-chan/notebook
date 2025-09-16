@@ -5,8 +5,8 @@ env:
 on:
   push:
     branches: ["main"]
-    paths:
-      - "notes/**"
+    #paths:
+    #  - "notes/**"
   workflow_dispatch:
 
 permissions:
