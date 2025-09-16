@@ -1,14 +1,16 @@
 name: Build Jekyll + Auto-generate Index
+env:
+  GH_TOKEN: ${{ secrets.PAT_TOKEN }}
 
 on:
   push:
     branches: ["main"]
-    #paths:
-    #  - "notes/**"
+    paths:
+      - "notes/**"
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write   # 需要 write 權限 commit 回 repo
   pages: write
   id-token: write
 
@@ -19,9 +21,6 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
 
     steps:
       # 1️⃣ Checkout repository
@@ -50,26 +49,37 @@ jobs:
       - name: Install Python dependencies
         run: pip install PyGithub jinja2
 
-
-
-      # 6️⃣ Generate index.html directly in _site
+      # 6️⃣ Generate index.html in repo root
       - name: Generate index.html
+        run: python scripts/generate_index.py
+
+      # 7️⃣ Commit generated index.html back to repo only if changed
+      - name: Commit index.html if changed
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          mkdir -p _site
-          python scripts/generate_index.py > _site/index.html
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-generate index.html"
+            git push https://${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+            echo "✅ index.html committed and pushed."
+          else
+            echo "ℹ️ No changes in index.html. Nothing to commit."
+          fi
 
-
-      # 7️⃣ Build Jekyll site
+      # 8️⃣ Build Jekyll site
       - name: Build Jekyll site
         run: bundle exec jekyll build --destination ./_site
 
-      # 8️⃣ Upload Pages artifact
+      # 9️⃣ Upload Pages artifact
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
-      # 9️⃣ Deploy to GitHub Pages
+      # 🔟 Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4
