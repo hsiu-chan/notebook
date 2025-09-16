@@ -10,6 +10,10 @@ export_on_save:
     html: true
 ---
 
+# 名詞 
+
+Luting agent
+: 黏著劑
 
 # Marginal design
 ![alt text](paste_src/FPD.png)
