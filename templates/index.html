@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Notebook</title>
+  <link rel="stylesheet" href="styles/katex.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+  <script src="scripts/jquery-3.4.1.min.js"></script>
+  <style>
+    body[html-show-sidebar-toc] #sidebar-toc { display: block; }
+    #sidebar-toc { display: none; }
+    #sidebar-toc-btn { cursor: pointer; position: fixed; top: 10px; left: 10px; font-size: 24px; }
+    .active { font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <!-- 主內容 -->
+  <div id="main">
+    <div class="title">
+      <h1>NoteBook</h1>
+    </div>
+
+    {% for dir in dirs %}
+      <h2 id="dir_{{ loop.index0 }}">{{ dir.name }}</h2>
+      <ul>
+        {% for file in dir.files %}
+          <li><a href="{{ file.path }}">{{ file.name[:-5] }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+
+  <!-- 側邊目錄 -->
+  <div class="md-sidebar-toc">
+    <ul id="sidebar-toc">
+      {% for dir in dirs %}
+        <li><a href="#dir_{{ loop.index0 }}">{{ dir.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- TOC 開關按鈕 -->
+  <a id="sidebar-toc-btn">&#x2261;</a>
+
+  <script>
+    // 側邊目錄開關
+    $('#sidebar-toc-btn').on('click', function(event){
+      event.stopPropagation();
+      if (document.body.hasAttribute('html-show-sidebar-toc')){
+        document.body.removeAttribute('html-show-sidebar-toc');
+      } else {
+        document.body.setAttribute('html-show-sidebar-toc', true);
+      }
+    });
+
+    // 點擊主內容隱藏側邊目錄
+    $('#main').on('click', function(){
+      if (document.body.hasAttribute('html-show-sidebar-toc')){
+        document.body.removeAttribute('html-show-sidebar-toc');
+      }
+    });
+
+    // 側邊目錄 active 樣式
+    $('#sidebar-toc li a').on('click', function(){
+      $('#sidebar-toc li').removeClass('active');
+      $(this).parent().addClass('active');
+    });
+  </script>
+
+</body>
+</html>

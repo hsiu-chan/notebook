@@ -1,4 +1,4 @@
-name: Build Notes HTML
+name: Auto-generate Notebook Homepage
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
   build-notes:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout repo
+      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -33,18 +33,17 @@ jobs:
         run: |
           pip install PyGithub jinja2
 
-      # 4. Generate HTML from repo
-      - name: Generate Notes HTML
-        run: |
-          python scripts/generate_notes.py
+      # 4. Generate index.html
+      - name: Generate index.html
+        run: python scripts/generate_index.py
 
-      # 5. Commit generated HTML back to repo (optional, if using separate branch for Pages)
-      - name: Commit generated HTML
+      # 5. Commit generated index.html
+      - name: Commit index.html
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add -A
-          git commit -m "Auto-generate notes HTML" || echo "No changes"
+          git add index.html
+          git commit -m "Auto-generate index.html" || echo "No changes"
           git push || echo "Nothing to push"
 
       # 6. Deploy to GitHub Pages
