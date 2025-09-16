@@ -1,0 +1,52 @@
+---
+toc:
+    depth_from: 1
+    depth_to: 3
+html:
+    offline: false
+    embed_local_images: false #嵌入base64圖片
+print_background: true
+export_on_save:
+    html: true
+---
+
+
+# Marginal design
+![alt text](paste_src/FPD.png)
+![alt text](paste_src/FPD-1.png)
+
+
+A. Feather edge
+C. Chamfer
+D. Beveled
+E. Shoulder (與牙齒夾角約90度)(容易有undercut)
+F. Sloped shoulder (與牙齒夾角約120度或135度)
+G. Beveled shoulder (與牙齒夾角約90度，但在邊緣會做成斜面)
+
+- Feather edge(少用)
+  - 做陶瓷貼片(Porcelain Laminated Veneer)
+- Chisel edge
+- Chamfer margin
+  - 鑄造金屬牙冠(cast metal crown)
+  - 現在全瓷冠也可以用
+  - chamfer margin < 0.5mm (半支 Bur)，否則產生 ==unsupported lip of enamel==
+- Beveled margin
+  - Cast
+  - 藏在 Subgingival
+- Shoulder
+  - 要和表面垂直
+  - PFM 的 Buccal
+- Sloped shoulder (與牙齒夾角約120度或135度)
+- Beveled shoulder
+  - Shoulder 外面再 Beveled 
+  - metal collar 的 PFM 的 Buccal
+![alt text](paste_src/FPD-3.png =30)
+
+
+
+
+> 通常 Crown 會略大，Beveled 比較不密
+![alt text](paste_src/FPD-2.png)
+
+
+> 金屬空隙能到 10 &mu;m

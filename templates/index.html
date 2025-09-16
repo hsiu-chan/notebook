@@ -26,7 +26,7 @@
       <h2 id="dir_{{ loop.index0 }}">{{ dir.name }}</h2>
       <ul>
         {% for file in dir.files %}
-          <li><a href="{{ file.path }}">{{ file.name[:-5] }}</a></li>
+          <li><a href="{{ file.path }}?id=3i">{{ file.name[:-5] }}</a></li>
         {% endfor %}
       </ul>
     {% endfor %}
