@@ -50,9 +50,14 @@ jobs:
       - name: Install Python dependencies
         run: pip install PyGithub jinja2
 
-      # 6️⃣ Generate index.html directly in _includes
+
+
+      # 6️⃣ Generate index.html directly in _site
       - name: Generate index.html
-        run: python scripts/generate_index.py
+        run: |
+          mkdir -p _site
+          python scripts/generate_index.py > _site/index.html
+
 
       # 7️⃣ Build Jekyll site
       - name: Build Jekyll site
