@@ -50,6 +50,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
+      - name: Update bundler
+        run: gem install bundler -v "~> 2.4"
 
       # Step 5: Install dependencies
       - name: Install dependencies
