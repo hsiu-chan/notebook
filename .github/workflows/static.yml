@@ -3,8 +3,8 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches: ["main"]
-    paths:
-      - "notes/**"   # 只有 notes 資料夾有變動才觸發
+    #paths:
+    #  - "notes/**"   # 只有 notes 資料夾有變動才觸發
   workflow_dispatch:
 
 permissions:
