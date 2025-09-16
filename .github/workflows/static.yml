@@ -1,10 +1,10 @@
-name: Deploy Jekyll site to GitHub Pages
+name: Build Jekyll + Auto-generate Index
 
 on:
   push:
     branches: ["main"]
-    #paths:
-    #  - "notes/**"   # 只有 notes 資料夾有變動才觸發
+    paths:
+      - "notes/**"
   workflow_dispatch:
 
 permissions:
@@ -17,35 +17,18 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build-and-deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+      url: ${{ steps.deploy.outputs.page_url }}
+
     steps:
-      # 1️⃣ 取得原始碼
+      # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ 檢查並啟用 GitHub Pages
-      - name: Ensure GitHub Pages is enabled
-        run: |
-          PAGE_STATUS=$(gh api repos/${GITHUB_REPOSITORY}/pages | jq -r '.status')
-          if [ "$PAGE_STATUS" != "built" ]; then
-            echo "Pages not enabled. Enabling..."
-            gh api -X POST repos/${GITHUB_REPOSITORY}/pages -F source=main
-            echo "Pages enabled."
-          else
-            echo "Pages already enabled."
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # 3️⃣ 建立 Pages 環境
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      # 4️⃣ 安裝 Ruby + Bundler
+      # 2️⃣ Setup Ruby + Bundler (Jekyll)
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -53,21 +36,41 @@ jobs:
           bundler-cache: true
           bundler: '2.4.22'
 
-      # 5️⃣ 安裝依賴
-      - name: Install dependencies
+      # 3️⃣ Install Jekyll dependencies
+      - name: Install Jekyll dependencies
         run: bundle install
 
-      # 6️⃣ 建立 Jekyll 網站
+      # 4️⃣ Setup Python
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      # 5️⃣ Install Python dependencies
+      - name: Install Python dependencies
+        run: pip install PyGithub jinja2
+
+      # 6️⃣ Generate index.html
+      - name: Generate index.html
+        run: python scripts/generate_index.py
+
+      # 7️⃣ Move index.html to Jekyll include (可選)
+      - name: Place index.html in _includes
+        run: |
+          mkdir -p _includes
+          mv index.html _includes/index.html
+
+      # 8️⃣ Build Jekyll site
       - name: Build Jekyll site
         run: bundle exec jekyll build --destination ./_site
 
-      # 7️⃣ 上傳 artifact
+      # 9️⃣ Upload Pages artifact
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './_site'
+          path: ./_site
 
-      # 8️⃣ 部署到 GitHub Pages
+      # 🔟 Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        id: deployment
+        id: deploy
         uses: actions/deploy-pages@v4
