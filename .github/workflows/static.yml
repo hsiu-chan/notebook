@@ -3,8 +3,8 @@ name: Build Jekyll + Auto-generate Index
 on:
   push:
     branches: ["main"]
-    paths:
-      - "notes/**"
+    #paths:
+    #  - "notes/**"
   workflow_dispatch:
 
 permissions:
