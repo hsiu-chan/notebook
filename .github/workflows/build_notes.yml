@@ -3,6 +3,8 @@ name: Auto-generate Notebook Homepage
 on:
   push:
     branches: ["main"]
+    paths:
+      - "notes/**"   # 只有 notes 資料夾有變動才觸發
   workflow_dispatch:
 
 permissions:
@@ -48,4 +50,4 @@ jobs:
 
       # 6. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
