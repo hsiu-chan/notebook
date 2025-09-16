@@ -1,9 +1,10 @@
-# Workflow: Deploy Jekyll site to GitHub Pages (v3-safe)
 name: Deploy Jekyll site to Pages
 
 on:
   push:
     branches: ["main"]
+    paths:
+      - "notes/**"   # 只有 notes 資料夾有變動才觸發
   workflow_dispatch:
 
 permissions:
@@ -22,11 +23,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Step 2: Ensure GitHub Pages is enabled
       - name: Enable GitHub Pages
         run: |
           echo "Checking GitHub Pages status..."
@@ -41,11 +40,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Step 3: Setup Pages environment
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Step 4: Setup Ruby for Jekyll
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -53,22 +50,17 @@ jobs:
           bundler-cache: true
           bundler: '2.4.22'
 
-      # Step 5: Install dependencies
       - name: Install dependencies
         run: bundle install
 
-      # Step 6: Build the Jekyll site
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
-      # Step 7: Upload Pages artifact (avoids deprecated v3)
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './_site'
 
-      # Step 8: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-#
