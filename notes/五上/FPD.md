@@ -70,3 +70,21 @@ G. Beveled shoulder (與牙齒夾角約90度，但在邊緣會做成斜面)
 
 - Functional cusp > 1.5mm
 - Nonfunctional cusp > 1mm
+
+
+# Complete cast 
+
+![alt text](paste_src/FPD-5.png)
+
+- Chamfer: 0.5mm
+- Functional: 1.5mm
+- Nom-functional: 1mm
+
+# PFM 
+
+![alt text](paste_src/FPD-4.png)
+
+- 燒瓷前後都能修金屬
+- PFM支架燒瓷溫度約960°C，傳統 complete cast crown 金屬會融化
+- 熱膨脹低
+- 磨很多（complete cast crown只咬 1mm
