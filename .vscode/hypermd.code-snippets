@@ -61,7 +61,7 @@
 			"```"
 		]
 	},
-	
+// HTML Entities
 	"rarr":{
 		"prefix": ["rarr","->"],
 		"body": "&rarr;"
@@ -202,11 +202,24 @@
 		"prefix": "cross",
 		"body": "&cross;"
 	},
+	"star":{
+		"prefix": "star",
+		"body": "&star;"
+	},
+	"heart":{
+		"prefix": "heart",
+		"body": "&heart;"
+	},
+	"deg":{
+		"prefix": "deg",
+		"body": "&deg;"
+	},
+
+/////////
 
 
-
-
-	"region":{
+// Code snippets for folding regions and note boxes	
+"region":{
 		"prefix": ["region","fold"],
 		"body": [
 			"<!-- #region -->",
@@ -280,6 +293,7 @@
 			"${3}"
 		]
 	},
+	//////function box////
 	"CSS inside \\style[] in Markdown": {
         "prefix": "\\style",
         "body": [
@@ -308,6 +322,49 @@
             "\\collapse[$1]{$2}"
         ],
         "description": "Collapse area"
-    }
+    },
+	"div-class": {
+		"prefix": "\\div-class",
+		"body": [
+			"\\div-class[${1:class}]{${2:content}}"
+		],
+		"description": "div with class"
+	},
+	"top-right": {
+		"prefix": "\\top-right",
+		"body": [
+			"\\top-right{${1:content}}"
+		],
+		"description": "top-right"
+	},
+	"top-left": {
+		"prefix": "\\top-left",
+		"body": [
+			"\\top-left{${1:content}}"
+		],
+		"description": "top-left"
+	},
+	"bottom-right": {
+		"prefix": "\\bottom-right",
+		"body": [
+			"\\bottom-right{${1:content}}"
+		],
+		"description": "bottom-right"
+	},
+	"bottom-left": {
+		"prefix": "\\bottom-left",
+		"body": [
+			"\\bottom-left{${1:content}}"
+		],
+		"description": "bottom-left"	
+	},
+	"diagonal": {
+		"prefix": "\\diagonal",
+		"body": [
+			"\\diagonal{${1:top-right}|${2:bottom-left}}"
+		],
+		"description": "diagonal"
+	},
+	
 
 }

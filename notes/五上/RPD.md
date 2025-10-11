@@ -192,8 +192,12 @@ Stress breaking Design
 - 一顆 Abutment tooth 兩根 Akers arm，點對稱
 - Dual retention
 
-![alt text](paste_src/RPD-29.png =30)
+:::fbox 
 
+![alt text](paste_src/RPD-29.png =30)
+![alt text](paste_src/RPD-31.png =40)
+
+:::
 
 #### Back-Action clasp 
 

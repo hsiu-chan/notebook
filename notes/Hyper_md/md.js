@@ -42,39 +42,51 @@ document.body.appendChild(imageModal);
 
 
 
-/*window.onload=function(){
-  var head=document.getElementsByTagName('head')[0]; //获取到head元素
-  var link=document.createElement('link');//创建link元素节点，也就是link标签
-  link.rel="stylesheet"; //为link标签添加rel属性
-  link.href="Hyper_md/md.css";//为link标签添加href属性 ， 属性值是css外链样式表的路径
-  head.appendChild(link);//将link元素节点添加到head元素子节点下
-  
-  var script=document.createElement('script');//创建script标签
-  //script.crossorigin="anonymous"
-  script.src="https://kit.fontawesome.com/849ddf9236.js";
-  script.setAttribute('crossorigin', 'anonymous');
-  //head.appendChild(script);//将script标签添加到head的子节点下
-}*/
+window.addEventListener("load", function () {
+  // 檢查 jQuery
+  if (typeof $ === "undefined") {
+    console.warn("jQuery 未載入，無法啟用 TOC 點擊與收闔功能");
+    return;
+  }
 
+  const toc = $(".md-sidebar-toc");
 
-window.onload=function(){
-  var head=document.getElementsByTagName('head')[0];
-  var script=document.createElement('script');
-  //script.crossorigin="anonymous"
-  script.innerHTML=`var Main_LeftListLiSelector = $(".md-sidebar-toc li");
+  // 1️⃣ 點擊項目切換 active 樣式
+  toc.on("click", ".md-toc-link-wrapper", function (e) {
+    e.stopPropagation();
+    toc.find(".md-toc-link-wrapper").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  // 2️⃣ 摺疊展開機制
+  toc.on("click", "details > summary", function (e) {
+    e.stopPropagation();
+    const parent = $(this).parent("details");
+    if (parent.attr("open")) {
+      parent.removeAttr("open");
+    } else {
+      // 關閉其他開啟的層
+      toc.find("details[open]").not(parent.parents()).removeAttr("open");
+      parent.attr("open", true);
+    }
+  });
+
+  // 3️⃣ 預設收合所有子目錄
+  toc.find("details").removeAttr("open");
+});
+
+var Main_LeftListLiSelector = $(".md-sidebar-toc");
+
 $(Main_LeftListLiSelector).on('click', function() {
-$(Main_LeftListLiSelector).removeClass('active');
-$(this).addClass('active');
-});`//收闔目錄
-  head.appendChild(script);
-
-  //tocs=document.querySelectorAll('.md-sidebar-toc ul ul')
-  //for (var i=0; i<tocs.length; i++){
-    //tocs[i].style='display:none'
-  //}
+  $(Main_LeftListLiSelector).removeClass('active');
+  $(this).addClass('active');
+});
 
 
-}
+
+
+
+
 
 
 

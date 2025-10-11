@@ -2,6 +2,7 @@
     "markdown.styles": [
         ".vscode/style.css"
     ],
+    
     "markdown-pdf.styles":[
         ".vscode/style.css",
     ],

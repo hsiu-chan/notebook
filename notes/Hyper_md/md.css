@@ -1,23 +1,17 @@
-/* =============================
-   Markdown Preview Enhanced Custom CSS
-   Optimized Version — 保留原有功能
-   ============================= */
-/* ----------- 基本變數 ----------- */
-/* ----------- 主區域 ----------- */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 .markdown-preview {
   width: 100%;
-  position: relative;
+  position: absolute;
   z-index: 0;
 }
 .markdown-preview .title {
-  display: flex;
   align-items: center;
-  justify-content: center;
 }
 .markdown-preview .title h1 {
-  border: none;
-  font-size: 2.75em;
+  border-bottom: 0;
   text-align: center;
+  font-size: 2.75em;
 }
 .markdown-preview h1 {
   padding-bottom: 0.3rem;
@@ -36,125 +30,110 @@
   font-weight: normal;
   font-size: 1.2em;
 }
-/* ----------- 分隔線 ----------- */
 .markdown-preview hr {
-  border: none;
+  background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
-  background: transparent;
 }
-/* ----------- 表格 ----------- */
-.table-scroll-wrapper {
-  overflow-x: auto;
-  /* 保險措施：若表格仍過寬可橫向滾動 */
-  width: 100%;
-}
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .table-scroll-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    /* 隱藏滾動條 */
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
   .table-scroll-wrapper::-webkit-scrollbar {
     display: none;
   }
-  .table-scroll-wrapper table {
-    table-layout: auto;
-  }
-}
-.table-scroll-wrapper table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-  /* 讓表格欄位可依比例縮放 */
-}
-.table-scroll-wrapper img {
-  max-width: 100%;
-  /* 關鍵：圖片不超過儲存格寬度 */
-  height: auto;
-  /* 保持長寬比例 */
-  display: block;
-  /* 消除 inline 圖片的空白 */
 }
 .markdown-preview table {
   width: 100%;
   table-layout: fixed;
-  min-width: 800px;
-  color: #fff7f0;
   text-align: center;
+  color: #fff7f0;
   border-collapse: collapse;
+  display: table;
   margin-top: 1rem;
-  /* 列內清單 */
-  /* 對角線 top-left 樣式 */
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .markdown-preview table {
-    width: auto;
     table-layout: auto;
+    display: table;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 .markdown-preview table thead {
   position: sticky;
-  top: 0;
-  z-index: 10;
   background-color: hsl(220, 13%, 8%);
-}
-.markdown-preview table th,
-.markdown-preview table td {
-  border: 1.5px solid #8b8b8b;
-  padding: 0.5rem;
-  vertical-align: middle;
+  top: 0;
+  z-index: 999;
 }
 .markdown-preview table th {
+  text-align: center;
   font-weight: bold;
   color: #81b4f4;
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td {
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table tr {
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table td,
-.markdown-preview table tr {
-  word-break: break-word;
-  hyphens: auto;
-  white-space: normal;
+.markdown-preview table th {
+  padding: 0;
+  position: relative;
 }
 .markdown-preview table td ol,
 .markdown-preview table th ol,
 .markdown-preview table td ul,
 .markdown-preview table th ul {
-  padding-left: 1.5rem;
   list-style-position: inside;
+  /* 控制項目符號的位置 */
   text-align: left;
+  /* 文字對齊方式 */
 }
-.markdown-preview table td ol ol,
-.markdown-preview table th ol ol,
-.markdown-preview table td ul ol,
-.markdown-preview table th ul ol,
-.markdown-preview table td ol ul,
-.markdown-preview table th ol ul,
-.markdown-preview table td ul ul,
-.markdown-preview table th ul ul {
-  padding-left: 2rem;
+.markdown-preview table .table-diagonal {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49%, #8b8b8b 49%, #8b8b8b 51%, rgba(0, 0, 0, 0) 51%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-.markdown-preview table .top-left {
-  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+.markdown-preview table .table-diagonal .top-left {
+  position: absolute;
+  top: 5%;
+  left: 5%;
 }
-.markdown-preview table .top-left > .col-title {
-  text-align: right;
+.markdown-preview table .table-diagonal .top-right {
+  position: absolute;
+  top: 5%;
+  right: 5%;
 }
-.markdown-preview table .top-left > .row-title {
-  text-align: left;
+.markdown-preview table .table-diagonal .bottom-right {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
 }
-/* ----------- TOC 側欄 ----------- */
-html body[for="html-export"]:not([data-presentation-mode]).html-show-sidebar-toc .markdown-preview,
+.markdown-preview table .table-diagonal .bottom-left {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
-  padding: 2em;
   box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
   transform: translateX(0);
 }
-html body[for="html-export"]:not([data-presentation-mode]).html-show-sidebar-toc .md-sidebar-toc {
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
   position: fixed;
   top: 0;
   left: 0;
@@ -163,39 +142,71 @@ html body[for="html-export"]:not([data-presentation-mode]).html-show-sidebar-toc
   padding: 32px 10px 48px 0;
   font-size: 14px;
   box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
   overflow: auto;
   background-color: inherit;
-  box-sizing: border-box;
 }
-/* ----------- 全域 body ----------- */
 html body {
   background-color: hsl(220, 13%, 18%);
-  /* ----------- 圖片 ----------- */
-  /* 行動端圖片處理 */
-  /* ----------- TOC 樣式 ----------- */
-  /* ----------- Flex 圖片群組 ----------- */
+  /* Modal (background for enlarged image) */
+  /* 侧栏 */
+  /* 侧栏自动编号 */
+  /* 复位计数器 */
+  /* 进行编号 */
+  /*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
 }
 html body img {
-  display: block;
-  width: 80%;
   max-width: 100%;
-  background-color: white;
-  position: relative;
+  width: 80%;
   top: 0.3rem;
-}
-@media screen and (max-width: 400px) {
-  html body img {
-    width: 100% !important;
-  }
-  html body table img {
-    width: auto !important;
-    max-width: none !important;
-  }
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 html body .md-sidebar-toc {
-  margin: 0;
-  padding: 0;
+  margin: 0rem 0rem 0em 0em;
+  padding: 0rem 0rem 0em 0rem;
+  width: auto;
+  max-width: 768px;
+  margin-bottom: 1em;
   background-color: rgba(186, 55, 55, 0.1);
+  /*背景颜色*/
   position: absolute;
   z-index: 70;
 }
@@ -204,82 +215,204 @@ html body .md-sidebar-toc a {
   font-size: 0.7rem !important;
 }
 html body .md-sidebar-toc a:hover {
-  color: #87ffff;
+  color: inherit;
 }
 html body .md-sidebar-toc li {
+  margin-left: 1rem;
+  margin-bottom: 0 !important;
   text-align: left;
-  margin: 0 0 0 1rem;
+  /*左对齐*/
 }
 html body .md-sidebar-toc ul {
-  padding-left: 0;
-  margin-left: 0;
+  padding-left: 0rem;
+  margin-left: 0rem;
+  padding-right: 0 !important;
 }
 html body .md-sidebar-toc ul li {
   font-size: 0.8rem !important;
+  /*字号*/
   font-weight: bold;
+  /*一级大纲*/
 }
 html body .md-sidebar-toc ul li:hover {
   color: #87ffff;
   font-style: italic;
 }
 html body .md-sidebar-toc ul ul {
+  padding-left: 0rem !important;
   display: none;
-  padding-left: 0 !important;
-}
-html body .md-sidebar-toc ul ul li {
-  margin: 3pt 0 8pt;
-  font-size: 0.8rem !important;
-  font-weight: normal;
-  border-left: 2px solid transparent;
-  padding-left: 0.2rem;
-}
-html body .md-sidebar-toc ul ul li:hover {
-  border-left-color: #87ffff;
 }
 html body .md-sidebar-toc .active {
   color: #87ffff;
   font-style: italic;
 }
 html body .md-sidebar-toc .active ul,
+html body .md-sidebar-toc .active ul ul,
 html body .md-sidebar-toc .active li {
   display: block;
 }
+html body .md-sidebar-toc ul ul:hover {
+  color: #87ffff;
+}
+html body .md-sidebar-toc ul ul li {
+  margin-bottom: 8pt !important;
+  margin-top: 3pt !important;
+  margin-left: 0rem;
+  font-size: 0.8rem !important;
+  /*字号*/
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 0.2rem;
+  border-left: 2px rgba(0, 0, 0, 0) solid;
+}
+html body .md-sidebar-toc ul ul li:hover {
+  font-style: normal;
+  border-left: 2px solid;
+}
+html body .md-sidebar-toc ul ul ul {
+  padding-left: 0rem;
+  margin-left: 0rem;
+}
+html body .md-sidebar-toc ul ul ul li {
+  margin-top: 2pt !important;
+  margin-bottom: 2pt !important;
+  margin-left: 0rem;
+  padding-left: 0.5rem;
+  border-left: 0px;
+}
+html body .md-sidebar-toc ul ul ul li:hover {
+  border-left: 0px solid;
+}
+html body body {
+  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+}
+html body .md-sidebar-toc li {
+  counter-reset: outline-h1;
+}
+html body .md-sidebar-toc ul li {
+  counter-reset: outline-h2;
+}
+html body .md-sidebar-toc ul ul li {
+  counter-reset: outline-h3;
+}
+html body .md-sidebar-toc ul ul ul li {
+  counter-reset: outline-h4;
+}
+html body .md-sidebar-toc ul ul ul ul li {
+  counter-reset: outline-h5;
+}
+html body .md-sidebar-toc ul ul li:before {
+  counter-increment: outline-h2;
+  content: counter(outline-h2) " ";
+  font-size: 0.7em;
+}
+html body .md-sidebar-toc ul ul ul li:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h2) "." counter(outline-h3) " ";
+  font-size: 0.7em;
+}
+html body .md-sidebar-toc ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
+  font-size: 0.7em;
+}
+html body .md-sidebar-toc ul ul ul ul ul li:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+  font-size: 0.7em;
+}
+html body .dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+html body header,
+html body section,
+html body aside,
+html body .in,
+html body footer {
+  margin: 0 1% 0.3em 0;
+}
+html body section {
+  float: left;
+  width: 49%;
+}
+html body footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+html body .btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+html body .btn:active {
+  opacity: 0.8;
+}
+@media screen and (max-width: 400px) {
+  html body img {
+    width: 100% !important;
+  }
+}
 html body .fbox {
   display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-  margin: 0 auto;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 html body .fbox img {
-  background-color: transparent !important;
+  position: relative;
+  left: 0;
+  transform: translate(0, 0);
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0) !important;
   object-fit: contain;
 }
 html body table .fbox {
   left: 0;
-  transform: none;
+  transform: translateX(0);
 }
-/* ----------- Modal 放大圖 ----------- */
 .modal {
   display: none;
   position: fixed;
   z-index: 1000;
-  inset: 0;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
 }
+/* Enlarged image inside modal */
 .modal-content {
   display: block;
   margin: 20px;
   max-width: 90%;
   max-height: 80vh;
+  animation: zoomIn 0.3s;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
   object-fit: contain;
-  animation: zoomIn 0.3s;
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
+/* Zoom in effect */
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -288,6 +421,7 @@ html body table .fbox {
     opacity: 1;
   }
 }
+/* Close button (X) */
 .close {
   position: absolute;
   top: 20px;
@@ -301,19 +435,4 @@ html body table .fbox {
 .close:hover,
 .close:focus {
   color: #bbb;
-}
-/* ----------- Fixed 按鈕 ----------- */
-.btn {
-  position: fixed;
-  z-index: 99;
-  font-size: 24px;
-  color: inherit;
-  text-align: center;
-  width: 32px;
-  opacity: 0.4;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-.btn:active {
-  opacity: 0.8;
 }
