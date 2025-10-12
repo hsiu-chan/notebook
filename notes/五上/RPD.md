@@ -81,7 +81,7 @@ Stress breaking Design
 ### Clasp Design
 
 
-![alt text](paste_src/RPD-14.png)
+![alt text](paste_src/RPD-14.png =50)
 
 - Rest
 - Encirclement: >180&deg;
@@ -93,12 +93,6 @@ Stress breaking Design
 - Gingiva third 以下是 Retention，以上是 Stability
 
 
-#### Roach clasp 
-
-- Infrabulge
-
-
-![alt text](paste_src/RPD-20.png)
 
 
 #### Akers clasp 
@@ -110,7 +104,7 @@ Stress breaking Design
   - Midsection(M)：位於中段，粗細程度與彈性處於中間值(relatively flexible)
   - Terminus(T)：位於最末段，進入 undercut 以下，所以需要最細且彈性也最好(flexible)
 
-![alt text](paste_src/RPD-19.png)
+![alt text](paste_src/RPD-19.png =30)
 
 - 要維持鉤子形狀才有彈性，能調整
 - Preparation (理想:G)
@@ -118,21 +112,6 @@ Stress breaking Design
 
 ![alt text](paste_src/RPD-23.png)
 
-
-#### RPI
-> rest, proximal plate, I bar
-
-
-
-
-- 接近 apical ，力量較大 (6-27N)
-- I bar 離 Gingiva margin 3mm
-  - Vestibular 空間不足
-
-- 不接觸 Lingual 
-  - 解決下顎 Lingual 的 survey line 很高
-
-![alt text](paste_src/RPD-13.png =80)
 
 
 ---
@@ -151,7 +130,7 @@ Stress breaking Design
 
 #### Reverse Circumferential clasp 
 
-- Mesial 往 distal 勾的 Cast Circumferential clasp ，適合 Distal ext.
+- Mesial 往 DB 勾的 Cast Circumferential clasp ，適合 Distal ext.
 - 
 
 #### Ring clasp
@@ -202,6 +181,7 @@ Stress breaking Design
 #### Back-Action clasp 
 
 - ML line angle 出發，勾到 Buccal
+- 用於舌側無倒凹
 - Retention 和 Reciprocal 對抗不足 &rarr; 不穩定
   - ==stress-breaking==
   - 不能用在單側 RPD
@@ -210,6 +190,156 @@ Stress breaking Design
 
 
 ![alt text](paste_src/RPD-30.png =30)
+
+#### Reverse-action clasp (C-clasp)
+
+- DB 出發 C-shaped clasp ，勾 DB
+- Abutment 需要夠高
+- 低彈性
+
+
+#### Onlay clasp 
+
+- 重建咬合平面 
+- 磨對牙
+- Caries++
+
+![alt text](paste_src/RPD-32.png)
+
+#### 整理 
+
+- 只有 DB 有 undercut: 
+  - infrabulge/bar-type > reverse circlet > c-clasp
+
+
+
+### Distal ext. stress breaking 
+
+四種設計 
+
+- wrought-wire circumferential clasp
+- bar-type/infrabulge clasp
+- RPI(rest, proximal plate, I-bar)
+- RPA(rest, proximalplate, Aker’s/suprabulge clasp)
+
+
+#### wrought-wire circumferential clasp 
+
+- 鍛造金屬(wrought-wire)
+  - 熱處理過，容易斷
+  - 彈性最好，易變形 &rarr; 少數能放進 **0.5mm undercut**
+  - 一般用 Stainless，Round 18-gauge (1mm)
+- 可以用 Cast 的 Reciprocal arm (**combination clasp**)
+
+![alt text](paste_src/RPD-33.png =35)
+
+
+#### Bar retainer 
+
+- 用推的作用位置近旋轉中心 &rarr; 力矩小，效率高 (6-27N)
+- bar 離 Gingiva margin 4mm
+- 美觀優於 Suprabulge
+- 接近 Denture border &rarr; Bar 受保護
+- 限制 
+  - Abutment tooth 過度 Lingual tilts
+  - ==Soft tissue undercuts==
+  - Shallow buccal Vestibular 
+  - Frenum (頰繫帶)
+
+![alt text](paste_src/RPD-34.png)
+
+##### T-clasp  (Roach clasp )
+
+- Infrabulge
+- 只勾 DB line angle，以抵抗 Distal rest 中心的旋轉
+
+![alt text](paste_src/RPD-35.png)
+![alt text](paste_src/RPD-20.png)
+
+
+##### Modify T-clasp 
+
+- T 去除 Mesial bar 以求美觀
+
+![alt text](paste_src/RPD-36.png)
+
+##### Y-clasp 
+
+- 比較長的 T (也許是用在 survey line 過高)
+
+![alt text](paste_src/RPD-37.png)
+
+##### I-clasp 
+
+- **Mesial rest**， 避免拔牙效應 
+
+##### Swing-lock denture
+
+![alt text](paste_src/RPD-44.png)
+
+- Retention: 門牙 I Bar + Labial bar
+- Buccal Vestibular 6-8mm
+- 下顎剩下門牙使用
+
+
+
+#### RPI
+> rest, proximal plate, I bar, lingual bar
+
+
+- Mesial occlusal rest
+  - 不接觸到臨牙
+  - 連接 minor connector
+- Proximal plate minor connector
+  - 由上往下到 Mid, Cervical third 交界 (2-4mm)
+  - 盡量 舌側延伸，必免往舌側翻 (Buccal 有 I Bar)
+
+|![alt text](paste_src/RPD-39.png ) |![alt text](paste_src/RPD-40.png ) |![alt text](paste_src/RPD-41.png)|
+|-|-|-|
+|\oneline{
+  Dr. Kratochvil FJ. 1963 <br>
+  穩定，無 Stress breaking
+ } | &check; | 壓在 Alveolar crest |
+
+
+
+- I bar 
+  - 離開 Gingiva margin ==4mm==
+  - Vestibular 空間(4mm)
+  - 越過 Height of contour，Stability & retention
+  - Retention 區域約 2mm
+
+- 不接觸 Lingual 
+  - 解決下顎 Lingual 的 survey line 很高
+- 一定要配 lingual bar
+
+
+- 缺點
+  - I bar 所需 undercut 過低會壓迫牙齦或難以進入
+
+:::fbox 
+![alt text](paste_src/RPD-38.png =40)
+![alt text](paste_src/RPD-13.png =40)
+:::
+
+
+
+
+####　RPA 
+> rest, proximal plate, Akers clasp(modified), lingual bar
+
+- RPA v.s. Akers
+  - RPA 整個 clasp 都在 Undercut 下面， Akers 是 Suprabulge
+- RPA 接觸牙齒處只有一條線和 Undercut 
+  - Cast 要用蠟 Block out 
+![alt text](paste_src/RPD-42.png =80)
+![alt text](paste_src/RPD-43.png =80)
+- 一定要配 lingual bar
+
+
+
+
+
 
 
 ## Inderect retainer 
