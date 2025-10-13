@@ -3,18 +3,14 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
-      
-      
-      
-      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
       
       
       
       
       
       <style>
-      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#aab1bf;background-color:#30353f!important;border:#4b5261;border-radius:3px}pre[class*=language-]{padding:1em}code[class*=language-] .token.cdata,code[class*=language-] .token.comment,code[class*=language-] .token.doctype,code[class*=language-] .token.prolog,pre[class*=language-] .token.cdata,pre[class*=language-] .token.comment,pre[class*=language-] .token.doctype,pre[class*=language-] .token.prolog{color:#5b6270}code[class*=language-] .namespace,pre[class*=language-] .namespace{opacity:.7}code[class*=language-] .token.constant,pre[class*=language-] .token.constant{color:#d19965}code[class*=language-] .token.boolean,code[class*=language-] .token.function-name,code[class*=language-] .token.number,pre[class*=language-] .token.boolean,pre[class*=language-] .token.function-name,pre[class*=language-] .token.number{color:#d19965}code[class*=language-] .token.tag,pre[class*=language-] .token.tag{color:#df6b75}code[class*=language-] .token.symbol,pre[class*=language-] .token.symbol{color:#56b5c2}code[class*=language-] .token.selector,pre[class*=language-] .token.selector{color:#c578dd}code[class*=language-] .token.attr-name,pre[class*=language-] .token.attr-name{color:#d19965}code[class*=language-] .token.string,pre[class*=language-] .token.string{color:#97c279}code[class*=language-] .token.char,pre[class*=language-] .token.char{color:#56b5c2}code[class*=language-] .token.url,pre[class*=language-] .token.url{color:#56b5c2}code[class*=language-] .token.operator,pre[class*=language-] .token.operator{color:#aab1bf}code[class*=language-] .token.atrule,code[class*=language-] .token.attr-value,code[class*=language-] .token.keyword,pre[class*=language-] .token.atrule,pre[class*=language-] .token.attr-value,pre[class*=language-] .token.keyword{color:#c578dd}code[class*=language-] .token.function,pre[class*=language-] .token.function{color:#61afef}code[class*=language-] .token.class-name,pre[class*=language-] .token.class-name{color:#e4bf7a}code[class*=language-] .token.variable,pre[class*=language-] .token.variable{color:#d19965}code[class*=language-] .token.regex,pre[class*=language-] .token.regex{color:#56b5c2}code[class*=language-] .token.important,pre[class*=language-] .token.important{color:#df6b75}code[class*=language-] .token.bold,code[class*=language-] .token.important,pre[class*=language-] .token.bold,pre[class*=language-] .token.important{font-weight:700}code[class*=language-] .token.italic,pre[class*=language-] .token.italic{font-style:italic}code[class*=language-] .token.entity,pre[class*=language-] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#aab1bf;background-color:#272b33;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#fff}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#7c869c}html body strong{color:#fff}html body del{color:#7c869c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#7c869c;background-color:#393f4a;border-left:4px solid #4b5261}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#4b5261;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#fff}html body table td,html body table th{border:1px solid #4b5261;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#fff;background-color:#393f4a;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#4b5261;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#fff;border:1px solid #4b5261;border-bottom:2px solid #3e4450;padding:2px 4px;background-color:#393f4a;border-radius:3px}@media print{html body{background-color:#272b33}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#fff;page-break-after:avoid}html body blockquote{color:#7c869c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 .markdown-preview {
@@ -44,37 +40,119 @@
 }
 .markdown-preview h4 {
   font-style: italic;
-  font-weight: normal ;
+  font-weight: normal;
   font-size: 1.2em;
 }
 .markdown-preview hr {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
+@media screen and (max-width: 600px) {
+  .table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .table-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
 .markdown-preview table {
-  display: block;
-  max-width: 100%;
-  overflow: auto;
+  width: 100%;
+  table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
+  border-collapse: collapse;
+  display: table;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .markdown-preview table {
+    table-layout: auto;
+    display: table;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+.markdown-preview table thead {
+  position: sticky;
+  background-color: hsl(220, 13%, 8%);
+  top: 0;
+  z-index: 999;
 }
 .markdown-preview table th {
   text-align: center;
   font-weight: bold;
   color: #81b4f4;
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table td {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table tr {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td,
+.markdown-preview table th {
+  padding: 0;
+  position: relative;
+}
+.markdown-preview table td ol,
+.markdown-preview table th ol,
+.markdown-preview table td ul,
+.markdown-preview table th ul {
+  list-style-position: inside;
+  /* 控制項目符號的位置 */
+  text-align: left;
+  /* 文字對齊方式 */
+}
+.markdown-preview table .table-diagonal {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49%, #8b8b8b 49%, #8b8b8b 51%, rgba(0, 0, 0, 0) 51%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.markdown-preview table .table-diagonal .top-left {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.markdown-preview table .table-diagonal .top-right {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.markdown-preview table .table-diagonal .bottom-right {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+.markdown-preview table .table-diagonal .bottom-left {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -87,201 +165,155 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   left: 0;
   width: 200px;
   height: 100%;
-  padding: 32px 10px 48px 0;
+  padding: 50px 10px 48px 0;
   font-size: 14px;
   box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
   box-sizing: border-box;
   overflow: auto;
   background-color: inherit;
 }
-html {
-  /* 侧栏 */
-  /*.md-sidebar-toc ul li:hover > ul,
-  .md-sidebar-toc ul li:hover > ul ul{
-    display: block;
-  }*/
-  /* 侧栏自动编号 */
-  /* 复位计数器 */
-  /* 进行编号 */
-}
-html .md-sidebar-toc {
-  margin: 0rem 0rem 0em 0em;
-  padding: 0rem 0rem 0em 0rem;
-  width: auto;
-  max-width: 768px;
-  margin-bottom: 1em;
-  background-color: rgba(255, 255, 255, 0.1);
-  /*背景颜色*/
-  position: absolute;
-  z-index: 70;
-}
-html .md-sidebar-toc a {
-  color: inherit;
-  font-size: 0.7rem !important;
-}
-html .md-sidebar-toc a:hover {
-  color: inherit;
-}
-html .md-sidebar-toc li {
-  margin-left: 1rem;
-  margin-bottom: 0 !important;
-  text-align: left;
-  /*左对齐*/
-}
-html .md-sidebar-toc ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-  padding-right: 0 !important;
-}
-html .md-sidebar-toc ul li {
-  font-size: 0.8rem !important;
-  /*字号*/
-  font-weight: bold;
-  /*一级大纲*/
-}
-html .md-sidebar-toc ul li:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html .md-sidebar-toc ul ul {
-  padding-left: 0rem !important;
-  display: none;
-}
-html .md-sidebar-toc .active {
-  color: #87ffff;
-  font-style: italic;
-}
-html .md-sidebar-toc .active ul,
-html .md-sidebar-toc .active ul ul,
-html .md-sidebar-toc .active li {
-  display: block;
-}
-html .md-sidebar-toc ul ul:hover {
-  color: #87ffff;
-}
-html .md-sidebar-toc ul ul li {
-  margin-bottom: 8pt !important;
-  margin-top: 3pt !important;
-  margin-left: 0rem;
-  font-size: 0.8rem !important;
-  /*字号*/
-  font-style: normal;
-  font-weight: normal;
-  padding-left: 0.2rem;
-  border-left: 2px rgba(0, 0, 0, 0) solid;
-}
-html .md-sidebar-toc ul ul li:hover {
-  font-style: normal;
-  border-left: 2px solid;
-}
-html .md-sidebar-toc ul ul ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-}
-html .md-sidebar-toc ul ul ul li {
-  margin-top: 2pt !important;
-  margin-bottom: 2pt !important;
-  margin-left: 0rem;
-  padding-left: 0.5rem;
-  border-left: 0px;
-}
-html .md-sidebar-toc ul ul ul li:hover {
-  border-left: 0px solid;
-}
 html body {
-  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+  background-color: hsl(220, 13%, 18%);
+  /* === Markdown Preview Enhancer TOC 樣式新版 === */
+  /* 縮排*/
+  /* TOC link */
+  /* 每層 details 都要重置下一層 counter */
+  /* 第一層：h1 */
+  /* 第二層：h2 */
+  /* 第三層：h3 */
+  /* 第四層：h4 */
+  /* 縮排 
+.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
+.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
+.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
+.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
+  /* hover & active */
+  /*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
 }
-html .md-sidebar-toc li {
-  counter-reset: outline-h1;
+html body .md-sidebar-toc {
+  margin: 0;
+  padding: 0.5rem 0;
+  position: absolute;
+  max-width: 768px;
+  background-color: rgba(186, 55, 55, 0.1);
+  z-index: 70;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
-html .md-sidebar-toc ul li {
-  counter-reset: outline-h2;
+html body .md-toc-link-wrapper {
+  list-style: none!important;
 }
-html .md-sidebar-toc ul ul li {
-  counter-reset: outline-h3;
+html body div.md-toc-link-wrapper {
+  margin-left: 0px!important;
 }
-html .md-sidebar-toc ul ul ul li {
-  counter-reset: outline-h4;
+html body details > div > div.md-toc-link-wrapper {
+  margin-left: 24px!important;
 }
-html .md-sidebar-toc ul ul ul ul li {
-  counter-reset: outline-h5;
+html body .md-sidebar-toc a {
+  color: inherit;
+  text-decoration: none;
 }
-html .md-sidebar-toc ul ul li:before {
-  counter-increment: outline-h2;
-  content: counter(outline-h2) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc a:hover {
+  color: #87ffff;
+  font-style: italic;
 }
-html .md-sidebar-toc ul ul ul li:before {
-  counter-increment: outline-h3;
-  content: counter(outline-h2) "." counter(outline-h3) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc {
+  counter-reset: toc-h1;
 }
-html .md-sidebar-toc ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc details {
+  counter-reset: toc-h2;
 }
-html .md-sidebar-toc ul ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc details details {
+  counter-reset: toc-h3;
 }
-.dcl {
+html body .md-sidebar-toc details details details {
+  counter-reset: toc-h4;
+}
+html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h1;
+  content: counter(toc-h1) ". ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h2;
+  content: counter(toc-h1) "." counter(toc-h2) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h3;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h4;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper.active a {
+  color: #87ffff;
+  font-weight: bold;
+}
+html body .dcl {
   /* block 水平置中的方法 */
   margin: 0 auto;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
   margin-right: -1%;
 }
-header,
-section,
-aside,
-.in,
-footer {
+html body header,
+html body section,
+html body aside,
+html body .in,
+html body footer {
   margin: 0 1% 0.3em 0;
 }
-section {
+html body section {
   float: left;
   width: 49%;
 }
-footer {
+html body footer {
   margin-bottom: 0;
   /* 不准其他元素出現在其左右 */
   clear: both;
 }
-/*
-/////三线表/////
-table{
-    border-top: 1.5pt solid;
-    border-bottom: 1.5pt solid;
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    text-align:center;                          //文字居中
-  page-break-inside:avoid;                    //禁止断页
-  width: 100%;                                //扩展表格宽度
-  overflow: auto;
-  margin-bottom: 8pt;                         //表格间距
-  border-collapse:collapse;       
-}
-
-table .katex{
-  font-size: 9pt;                             //表内公式
-}
-table td{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              //表内文字
-}
-
-table thead{
-  border-bottom: 0.75pt solid black;        //三线表中间线
-}
-
-//标题行
-table th{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              
-}
-*/
-.btn {
+html body .btn {
   position: fixed;
   z-index: 99;
   font-size: 24px;
@@ -292,44 +324,123 @@ table th{
   opacity: 0.4;
   word-wrap: break-word;
 }
-.btn:active {
+html body .btn:active {
   opacity: 0.8;
+}
+@media screen and (max-width: 400px) {
+  html body img {
+    width: 100% !important;
+  }
+}
+html body .fbox {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html body .fbox img {
+  position: relative;
+  left: 0;
+  transform: translate(0, 0);
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
-    </head>
-    <body for="html-export">
-      <div class="mume markdown-preview  ">
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
       <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
       <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="arduino">Arduino</h1>
-
-<h2 class="mume-header" id="pinmodename-definition">pinMode(name, definition)</h2>
-
+<link rel="stylesheet" href="../Hyper_md/md.css">
+<h1 id="arduino">Arduino </h1>
+<h2 id="pinmodename-definition">pinMode(name, definition) </h2>
 <pre class="language-text">pinMode(LED_BUILTIN, OUTPUT);
 </pre>
-<h2 class="mume-header" id="digitalwritename-%E9%9B%BB%E4%BD%8D">digitalWrite(name, &#x96FB;&#x4F4D;)</h2>
-
+<h2 id="digitalwritename-電位">digitalWrite(name, 電位) </h2>
 <pre class="language-text">digitalWrite(LED_BUILTIN, HIGH)
 </pre>
-<h2 class="mume-header" id="baud-rate">Baud Rate</h2>
-
+<h2 id="baud-rate">Baud Rate </h2>
 <pre class="language-text">Serial.begin(9600)
 </pre>
-<p>&#x50B3;&#x8F38;&#x901F;&#x5EA6;&#x6BCF;&#x79D2; 9600 bps&#xFF0C;&#x4E00;&#x822C;&#x901A;&#x8A0A;&#x5169;&#x7AEF;&#x88DD;&#x7F6E;&#x90FD;&#x8981;&#x8A2D;&#x70BA;&#x76F8;&#x540C;&#x7684;&#x9B91;&#x7387;</p>
+<p>傳輸速度每秒 9600 bps，一般通訊兩端裝置都要設為相同的鮑率</p>
 <blockquote>
-<p>Arduino&#x4E26;&#x4E0D;&#x662F;&#x771F;&#x6B63;&#x7684;Serial Port &#x50B3;&#x8F38;:<br>
-arduino &#x7684;COM port&#x662F;&#x900F;&#x904E;&#x677F;&#x5B50;&#x4E0A;&#x7684; &#x6676;&#x7247;&#x6A21;&#x64EC;&#x7684;<br>
-&#x5176;&#x5BE6; Arduino &#x4E0A;&#x6709;&#x4E00;&#x9846;&#x6676;&#x7247;&#x5C31;&#x662F; USB to Serail converter<br>
-&#x6BD4;&#x5982; Duemilanove &#x7684; FT232r&#xFF0C;&#x6216;&#x662F; UNO &#x7684; atmega16u2<br>
-&#x6240;&#x4EE5;&#x771F;&#x6B63; PC &#x7684; COM Port &#x901F;&#x5EA6;&#x9650;&#x5236;&#x9084;&#x8981;&#x67E5; USB to Serial &#x6676;&#x7247;&#x7684; datasheet</p>
+<p>Arduino並不是真正的Serial Port 傳輸:<br>
+arduino 的COM port是透過板子上的 晶片模擬的<br>
+其實 Arduino 上有一顆晶片就是 USB to Serail converter<br>
+比如 Duemilanove 的 FT232r，或是 UNO 的 atmega16u2<br>
+所以真正 PC 的 COM Port 速度限制還要查 USB to Serial 晶片的 datasheet</p>
 </blockquote>
-<h2 class="mume-header" id="analogwrite">analogWrite</h2>
-
+<h2 id="analogwrite">analogWrite </h2>
 <pre class="language-text">analogWrite(11,val)
 </pre>
 <p>Writes an analog value (PWM wave) to a pin</p>
-<table>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>BOARD</th>
@@ -344,9 +455,8 @@ arduino &#x7684;COM port&#x662F;&#x900F;&#x904E;&#x677F;&#x5B50;&#x4E0A;&#x7684;
 <td>490 Hz (pins 4 and 13: 980 Hz)</td>
 </tr>
 </tbody>
-</table>
-<h2 class="mume-header" id="liquidcrystal_i2c">LiquidCrystal_I2C</h2>
-
+</table></div>
+<h2 id="liquidcrystal_i2c">LiquidCrystal_I2C </h2>
 <pre class="language-text">#include &lt;LiquidCrystal_I2C.h&gt;
 LiquidCrystal_I2C lcd(0x27,16,2);
 // set the LCD address to 0x27 for a 16x2 display
@@ -356,36 +466,32 @@ void setup()
     lcd.backlight();
     
     lcd.setCursor(3,0);
-    lcd.print(&quot;Hello, HAAA&quot;);
+    lcd.print("Hello, HAAA");
     lcd.setCursor(2,1);
-    lcd.print(&quot;bot Arduino!&quot;);
+    lcd.print("bot Arduino!");
 }
 </pre>
-<h2 class="mume-header" id="%E6%8C%89%E9%88%95">&#x6309;&#x9215;</h2>
-
-<p><img src="https://i.imgur.com/2bcpQRE.png" alt></p>
-<pre class="language-text">const int BUTTON_PIN = 10;  // &#x6309;&#x9375;&#x7684;&#x63A5;&#x8173;
-int buttonState = 0;   // &#x6309;&#x9215;&#x7684;&#x72C0;&#x614B;
+<h2 id="按鈕">按鈕 </h2>
+<img src="https://i.imgur.com/2bcpQRE.png" alt="" style=";background-color: white;padding:0">
+<pre class="language-text">const int BUTTON_PIN = 10;  // 按鍵的接腳
+int buttonState = 0;   // 按鈕的狀態
 
 void setup() {
-  pinMode(BUTTON_PIN, INPUT); //&#x8A2D;&#x5B9A;&#x6309;&#x9215;&#x7684;&#x63A5;&#x8173;&#x70BA;&#x8F38;&#x5165;&#xFF0C;&#x56E0;&#x70BA;&#x6211;&#x5011;&#x8981;&#x8B80;&#x53D6;&#x5B83;&#x7684;&#x72C0;&#x614B;
+  pinMode(BUTTON_PIN, INPUT); //設定按鈕的接腳為輸入，因為我們要讀取它的狀態
   }
 
 void loop() {
-  buttonState = digitalRead(BUTTON_PIN);  //&#x8B80;&#x53D6;&#x6309;&#x9375;&#x7684;&#x72C0;&#x614B;
+  buttonState = digitalRead(BUTTON_PIN);  //讀取按鍵的狀態
   }
 </pre>
-<h2 class="mume-header" id="analog-to-digital-convert">Analog to Digital Convert</h2>
+<h2 id="analog-to-digital-convert">Analog to Digital Convert </h2>
+<p>ADC偵測電壓，將訊號用10bit 模擬</p>
+<pre class="language-text">pinMode(腳位, INPUT); // Arduino UNO: A0~A5
 
-<p>ADC&#x5075;&#x6E2C;&#x96FB;&#x58D3;&#xFF0C;&#x5C07;&#x8A0A;&#x865F;&#x7528;10bit &#x6A21;&#x64EC;</p>
-<pre class="language-text">pinMode(&#x8173;&#x4F4D;, INPUT); // Arduino UNO: A0~A5
-
-int val = analogRead(&#x8173;&#x4F4D;);   // Arduino UNO: A0~A5, val=0-1023
+int val = analogRead(腳位);   // Arduino UNO: A0~A5, val=0-1023
 </pre>
-<h2 class="mume-header" id="adafruit-gfx-library">Adafruit GFX Library</h2>
-
-<h3 class="mume-header" id="font">Font</h3>
-
+<h2 id="adafruit-gfx-library">Adafruit GFX Library </h2>
+<h3 id="font">Font </h3>
 <pre class="language-text"> const uint8_t Tiny3x3a2pt7bBitmaps[] PROGMEM = {
     0xC0, 0xB4, 0xBF, 0x80, 0x6B, 0x00, 0xDD, 0x80, 0x59, 0x80, 0x80, 0x64,
     0x98, 0xF0, 0x5D, 0x00, 0xC0, 0xE0, 0x80, 0x2A, 0x00, 0x55, 0x00, 0x94,
@@ -401,28 +507,26 @@ int val = analogRead(&#x8173;&#x4F4D;);   // Arduino UNO: A0~A5, val=0-1023
     0xF0, 0xAC, 0x80, 0x90, 0x79, 0x80, 0xF0, 0xCF, 0x00, 0x78};
 
 const GFXglyph Tiny3x3a2pt7bGlyphs[] PROGMEM = {
-    {0, 0, 0, 4, 0, 1},     // 0x20 &apos; &apos;
-    {0, 1, 2, 3, 1, -2},    // 0x21 &apos;!&apos;
-    {1, 3, 2, 4, 0, -2},    // 0x22 &apos;&quot;&apos;
-    {2, 3, 3, 4, 0, -2},    // 0x23 &apos;#&apos;
-    {4, 3, 3, 4, 0, -2},    // 0x24 &apos;$&apos;
-    {6, 3, 3, 4, 0, -2},    // 0x25 &apos;%&apos;
-    {8, 3, 3, 4, 0, -2},    // 0x26 &apos;&amp;&apos;
-    {10, 1, 1, 3, 1, -2},   // 0x27 &apos;&apos;&apos;
-    {11, 2, 3, 3, 0, -2},   // 0x28 &apos;(&apos;
-    {12, 2, 3, 4, 1, -2},   // 0x29 &apos;)&apos;
-    {13, 2, 2, 4, 1, -2},   // 0x2A &apos;*&apos;
-    //....
-    {141, 3, 2, 4, 0, -2}}; // 0x7E &apos;~&apos;
+    {0, 0, 0, 4, 0, 1},     // 0x20 ' '
+    {0, 1, 2, 3, 1, -2},    // 0x21 '!'
+    {1, 3, 2, 4, 0, -2},    // 0x22 '"'
+    {2, 3, 3, 4, 0, -2},    // 0x23 '#'
+    {4, 3, 3, 4, 0, -2},    // 0x24 '$'
+    {6, 3, 3, 4, 0, -2},    // 0x25 '%'
+    {8, 3, 3, 4, 0, -2},    // 0x26 '&amp;'
+    {10, 1, 1, 3, 1, -2},   // 0x27 '''
+    {11, 2, 3, 3, 0, -2},   // 0x28 '('
+    {12, 2, 3, 4, 1, -2},   // 0x29 ')'
+    {13, 2, 2, 4, 1, -2},   &lt;em style="color:grey"&gt;0x2A '*'&lt;/em&gt;....
+    {141, 3, 2, 4, 0, -2}}; // 0x7E '~'
 
 const GFXfont Tiny3x3a2pt7b PROGMEM = {(uint8_t *)Tiny3x3a2pt7bBitmaps,
                                        (GFXglyph *)Tiny3x3a2pt7bGlyphs, 0x20,
                                        0x7E, 4};
 </pre>
-<h4 class="mume-header" id="%E5%AD%97%E7%AC%A6%E5%AE%9A%E7%BE%A9">&#x5B57;&#x7B26;&#x5B9A;&#x7FA9;</h4>
-
+<h4 id="字符定義">字符定義 </h4>
 <pre class="language-text">typedef struct {
-  uint16_t bitmapOffset; ///&#x8D77;&#x9EDE;
+  uint16_t bitmapOffset; ///起點
   uint8_t width;         
   uint8_t height;        
   uint8_t xAdvance;      /// Distance to advance cursor (x axis)
@@ -430,44 +534,88 @@ const GFXfont Tiny3x3a2pt7b PROGMEM = {(uint8_t *)Tiny3x3a2pt7bBitmaps,
   int8_t yOffset;        /// Y dist from cursor pos to UL corner
 } GFXglyph;
 </pre>
-<p>&#x8D77;&#x9EDE;&#x958B;&#x59CB;&#x5230;&#x4E0B;&#x4E00;&#x500B;&#x5B57;&#x8D77;&#x9EDE;&#x524D;&#x5C55;&#x958B;&#x6210;&#x4E8C;&#x9032;&#x5236;&#x586B;&#x5165;W*H&#x683C;&#x5B50;&#x88E1;</p>
+<p>起點開始到下一個字起點前展開成二進制填入W*H格子裡</p>
 <br><br>
-<script type="text/javascript" src="../Hyper_md/md.js"></script>
-<script> 
-var Main_LeftListLiSelector = $(".md-sidebar-toc li");
 
-$(Main_LeftListLiSelector).on('click', function() {
-  $(Main_LeftListLiSelector).removeClass('active');
-  $(this).addClass('active');
-});
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+
+<script>
+var page = document.getElementsByClassName('markdown-preview')[0]
+page.addEventListener('click', function(event) {
+  event.stopPropagation()
+  
+  document.body.removeAttribute('html-show-sidebar-toc');
+ 
+})
 </script>
+
+
       </div>
-      <div class="md-sidebar-toc"><ul>
-<li><a href="#arduino">Arduino</a>
-<ul>
-<li><a href="#pinmodename-definition">pinMode(name, definition)</a></li>
-<li><a href="#digitalwritename-%E9%9B%BB%E4%BD%8D">digitalWrite(name, &#x96FB;&#x4F4D;)</a></li>
-<li><a href="#baud-rate">Baud Rate</a></li>
-<li><a href="#analogwrite">analogWrite</a></li>
-<li><a href="#liquidcrystal_i2c">LiquidCrystal_I2C</a></li>
-<li><a href="#%E6%8C%89%E9%88%95">&#x6309;&#x9215;</a></li>
-<li><a href="#analog-to-digital-convert">Analog to Digital Convert</a></li>
-<li><a href="#adafruit-gfx-library">Adafruit GFX Library</a>
-<ul>
-<li><a href="#font">Font</a>
-<ul>
-<li><a href="#%E5%AD%97%E7%AC%A6%E5%AE%9A%E7%BE%A9">&#x5B57;&#x7B26;&#x5B9A;&#x7FA9;</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#arduino" class="md-toc-link"><p>Arduino</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#pinmodename-definition" class="md-toc-link">
+            <p>pinMode(name, definition)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#digitalwritename-電位" class="md-toc-link">
+            <p>digitalWrite(name, 電位)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#baud-rate" class="md-toc-link">
+            <p>Baud Rate</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#analogwrite" class="md-toc-link">
+            <p>analogWrite</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#liquidcrystal_i2c" class="md-toc-link">
+            <p>LiquidCrystal_I2C</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#按鈕" class="md-toc-link">
+            <p>按鈕</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#analog-to-digital-convert" class="md-toc-link">
+            <p>Analog to Digital Convert</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#adafruit-gfx-library" class="md-toc-link"><p>Adafruit GFX Library</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#font" class="md-toc-link"><p>Font</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#字符定義" class="md-toc-link">
+            <p>字符定義</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
 </div>
-      <a id="sidebar-toc-btn">&#x2261;</a>
-    
-    
+</div>
+      <a id="sidebar-toc-btn">≡</a>
     
     
     

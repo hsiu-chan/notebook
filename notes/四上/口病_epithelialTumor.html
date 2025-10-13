@@ -1,277 +1,16 @@
 <!DOCTYPE html><html><head>
-      <title>&#x53E3;&#x75C5;_epithelialTumor</title>
+      <title>口病_epithelialTumor</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
       
       
-      
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@9.1.7/dist/mermaid.min.js"></script>
-      
-      
-      
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js"></script>
       
       
       <style>
-      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url("data:application/x-font-woff;charset=utf-8;base64,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") format("woff");
-}
-
-.admonition {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
-  position: relative;
-  margin: 1.5625em 0;
-  padding: 0 1.2rem;
-  border-left: .4rem solid rgba(68, 138, 255, .8);
-  border-radius: .2rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  overflow: auto;
-}
-
-.admonition>p {
-  margin-top: .8rem;
-}
-
-.admonition>.admonition-title {
-  margin: 0 -1.2rem;
-  padding: .8rem 1.2rem .8rem 3.6rem;
-  border-bottom: 1px solid rgba(68, 138, 255, .2);
-  background-color: rgba(68, 138, 255, .1);
-  font-weight: 700;
-}
-
-.admonition>.admonition-title:before {
-  position: absolute;
-  left: 1.2rem;
-  font-size: 1.5rem;
-  color: rgba(68, 138, 255, .8);
-  content: "\E3C9";
-}
-
-.admonition>.admonition-title:before {
-  font-family: Material Icons;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 2rem;
-  text-transform: none;
-  white-space: nowrap;
-  speak: none;
-  word-wrap: normal;
-  direction: ltr;
-}
-
-.admonition.summary,
-.admonition.abstract,
-.admonition.tldr {
-  border-left-color: rgba(0, 176, 255, .8);
-}
-
-.admonition.summary>.admonition-title,
-.admonition.abstract>.admonition-title,
-.admonition.tldr>.admonition-title {
-  background-color: rgba(0, 176, 255, .1);
-  border-bottom-color: rgba(0, 176, 255, .2);
-}
-
-.admonition.summary>.admonition-title:before,
-.admonition.abstract>.admonition-title:before,
-.admonition.tldr>.admonition-title:before {
-  color: rgba(0, 176, 255, 1);
-  ;
-  content: "\E8D2";
-}
-
-.admonition.hint,
-.admonition.tip {
-  border-left-color: rgba(0, 191, 165, .8);
-}
-
-.admonition.hint>.admonition-title,
-.admonition.tip>.admonition-title {
-  background-color: rgba(0, 191, 165, .1);
-  border-bottom-color: rgba(0, 191, 165, .2);
-}
-
-.admonition.hint>.admonition-title:before,
-.admonition.tip>.admonition-title:before {
-  color: rgba(0, 191, 165, 1);
-  content: "\E80E";
-}
-
-.admonition.info,
-.admonition.todo {
-  border-left-color: rgba(0, 184, 212, .8);
-}
-
-.admonition.info>.admonition-title,
-.admonition.todo>.admonition-title {
-  background-color: rgba(0, 184, 212, .1);
-  border-bottom-color: rgba(0, 184, 212, .2);
-}
-
-.admonition.info>.admonition-title:before,
-.admonition.todo>.admonition-title:before {
-  color: rgba(0, 184, 212, 1);
-  ;
-  content: "\E88E";
-}
-
-.admonition.success,
-.admonition.check,
-.admonition.done {
-  border-left-color: rgba(0, 200, 83, .8);
-}
-
-.admonition.success>.admonition-title,
-.admonition.check>.admonition-title,
-.admonition.done>.admonition-title {
-  background-color: rgba(0, 200, 83, .1);
-  border-bottom-color: rgba(0, 200, 83, .2);
-}
-
-.admonition.success>.admonition-title:before,
-.admonition.check>.admonition-title:before,
-.admonition.done>.admonition-title:before {
-  color: rgba(0, 200, 83, 1);
-  ;
-  content: "\E876";
-}
-
-.admonition.question,
-.admonition.help,
-.admonition.faq {
-  border-left-color: rgba(100, 221, 23, .8);
-}
-
-.admonition.question>.admonition-title,
-.admonition.help>.admonition-title,
-.admonition.faq>.admonition-title {
-  background-color: rgba(100, 221, 23, .1);
-  border-bottom-color: rgba(100, 221, 23, .2);
-}
-
-.admonition.question>.admonition-title:before,
-.admonition.help>.admonition-title:before,
-.admonition.faq>.admonition-title:before {
-  color: rgba(100, 221, 23, 1);
-  ;
-  content: "\E887";
-}
-
-.admonition.warning,
-.admonition.attention,
-.admonition.caution {
-  border-left-color: rgba(255, 145, 0, .8);
-}
-
-.admonition.warning>.admonition-title,
-.admonition.attention>.admonition-title,
-.admonition.caution>.admonition-title {
-  background-color: rgba(255, 145, 0, .1);
-  border-bottom-color: rgba(255, 145, 0, .2);
-}
-
-.admonition.attention>.admonition-title:before {
-  color: rgba(255, 145, 0, 1);
-  content: "\E417";
-}
-
-.admonition.warning>.admonition-title:before,
-.admonition.caution>.admonition-title:before {
-  color: rgba(255, 145, 0, 1);
-  content: "\E002";
-}
-
-.admonition.failure,
-.admonition.fail,
-.admonition.missing {
-  border-left-color: rgba(255, 82, 82, .8);
-}
-
-.admonition.failure>.admonition-title,
-.admonition.fail>.admonition-title,
-.admonition.missing>.admonition-title {
-  background-color: rgba(255, 82, 82, .1);
-  border-bottom-color: rgba(255, 82, 82, .2);
-}
-
-.admonition.failure>.admonition-title:before,
-.admonition.fail>.admonition-title:before,
-.admonition.missing>.admonition-title:before {
-  color: rgba(255, 82, 82, 1);
-  ;
-  content: "\E14C";
-}
-
-.admonition.danger,
-.admonition.error,
-.admonition.bug {
-  border-left-color: rgba(255, 23, 68, .8);
-}
-
-.admonition.danger>.admonition-title,
-.admonition.error>.admonition-title,
-.admonition.bug>.admonition-title {
-  background-color: rgba(255, 23, 68, .1);
-  border-bottom-color: rgba(255, 23, 68, .2);
-}
-
-.admonition.danger>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E3E7";
-}
-
-.admonition.error>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E14C";
-}
-
-.admonition.bug>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E868";
-}
-
-.admonition.example,
-.admonition.snippet {
-  border-left-color: rgba(0, 184, 212, .8);
-}
-
-.admonition.example>.admonition-title,
-.admonition.snippet>.admonition-title {
-  background-color: rgba(0, 184, 212, .1);
-  border-bottom-color: rgba(0, 184, 212, .2);
-}
-
-.admonition.example>.admonition-title:before,
-.admonition.snippet>.admonition-title:before {
-  color: rgba(0, 184, 212, 1);
-  ;
-  content: "\E242";
-}
-
-.admonition.quote,
-.admonition.cite {
-  border-left-color: rgba(158, 158, 158, .8);
-}
-
-.admonition.quote>.admonition-title,
-.admonition.cite>.admonition-title {
-  background-color: rgba(158, 158, 158, .1);
-  border-bottom-color: rgba(158, 158, 158, .2);
-}
-
-.admonition.quote>.admonition-title:before,
-.admonition.cite>.admonition-title:before {
-  color: rgba(158, 158, 158, 1);
-  ;
-  content: "\E244";
-}
-
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#aab1bf;background-color:#30353f!important;border:#4b5261;border-radius:3px}pre[class*=language-]{padding:1em}code[class*=language-] .token.cdata,code[class*=language-] .token.comment,code[class*=language-] .token.doctype,code[class*=language-] .token.prolog,pre[class*=language-] .token.cdata,pre[class*=language-] .token.comment,pre[class*=language-] .token.doctype,pre[class*=language-] .token.prolog{color:#5b6270}code[class*=language-] .namespace,pre[class*=language-] .namespace{opacity:.7}code[class*=language-] .token.constant,pre[class*=language-] .token.constant{color:#d19965}code[class*=language-] .token.boolean,code[class*=language-] .token.function-name,code[class*=language-] .token.number,pre[class*=language-] .token.boolean,pre[class*=language-] .token.function-name,pre[class*=language-] .token.number{color:#d19965}code[class*=language-] .token.tag,pre[class*=language-] .token.tag{color:#df6b75}code[class*=language-] .token.symbol,pre[class*=language-] .token.symbol{color:#56b5c2}code[class*=language-] .token.selector,pre[class*=language-] .token.selector{color:#c578dd}code[class*=language-] .token.attr-name,pre[class*=language-] .token.attr-name{color:#d19965}code[class*=language-] .token.string,pre[class*=language-] .token.string{color:#97c279}code[class*=language-] .token.char,pre[class*=language-] .token.char{color:#56b5c2}code[class*=language-] .token.url,pre[class*=language-] .token.url{color:#56b5c2}code[class*=language-] .token.operator,pre[class*=language-] .token.operator{color:#aab1bf}code[class*=language-] .token.atrule,code[class*=language-] .token.attr-value,code[class*=language-] .token.keyword,pre[class*=language-] .token.atrule,pre[class*=language-] .token.attr-value,pre[class*=language-] .token.keyword{color:#c578dd}code[class*=language-] .token.function,pre[class*=language-] .token.function{color:#61afef}code[class*=language-] .token.class-name,pre[class*=language-] .token.class-name{color:#e4bf7a}code[class*=language-] .token.variable,pre[class*=language-] .token.variable{color:#d19965}code[class*=language-] .token.regex,pre[class*=language-] .token.regex{color:#56b5c2}code[class*=language-] .token.important,pre[class*=language-] .token.important{color:#df6b75}code[class*=language-] .token.bold,code[class*=language-] .token.important,pre[class*=language-] .token.bold,pre[class*=language-] .token.important{font-weight:700}code[class*=language-] .token.italic,pre[class*=language-] .token.italic{font-style:italic}code[class*=language-] .token.entity,pre[class*=language-] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#aab1bf;background-color:#272b33;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#fff}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#7c869c}html body strong{color:#fff}html body del{color:#7c869c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#7c869c;background-color:#393f4a;border-left:4px solid #4b5261}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#4b5261;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#fff}html body table td,html body table th{border:1px solid #4b5261;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#fff;background-color:#393f4a;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#4b5261;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#fff;border:1px solid #4b5261;border-bottom:2px solid #3e4450;padding:2px 4px;background-color:#393f4a;border-radius:3px}@media print{html body{background-color:#272b33}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#fff;page-break-after:avoid}html body blockquote{color:#7c869c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face{font-family:"Material Icons";font-style:normal;font-weight:400;src:local("Material Icons"),local("MaterialIcons-Regular"),url("data:application/x-font-woff;charset=utf-8;base64,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") format("woff")}.admonition{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);position:relative;margin:1.5625em 0;padding:0 1.2rem;border-left:.4rem solid rgba(68,138,255,.8);border-radius:.2rem;background-color:rgba(255,255,255,.05);overflow:auto}.admonition>p{margin-top:.8rem}.admonition>.admonition-title{margin:0 -1.2rem;padding:.8rem 1.2rem .8rem 3.6rem;border-bottom:1px solid rgba(68,138,255,.2);background-color:rgba(68,138,255,.1);font-weight:700}.admonition>.admonition-title:before{position:absolute;left:1.2rem;font-size:1.5rem;color:rgba(68,138,255,.8);content:"\E3C9"}.admonition>.admonition-title:before{font-family:Material Icons;font-style:normal;font-variant:normal;font-weight:400;line-height:2rem;text-transform:none;white-space:nowrap;speak:none;word-wrap:normal;direction:ltr}.admonition.abstract,.admonition.summary,.admonition.tldr{border-left-color:rgba(0,176,255,.8)}.admonition.abstract>.admonition-title,.admonition.summary>.admonition-title,.admonition.tldr>.admonition-title{background-color:rgba(0,176,255,.1);border-bottom-color:rgba(0,176,255,.2)}.admonition.abstract>.admonition-title:before,.admonition.summary>.admonition-title:before,.admonition.tldr>.admonition-title:before{color:#00b0ff;content:"\E8D2"}.admonition.hint,.admonition.tip{border-left-color:rgba(0,191,165,.8)}.admonition.hint>.admonition-title,.admonition.tip>.admonition-title{background-color:rgba(0,191,165,.1);border-bottom-color:rgba(0,191,165,.2)}.admonition.hint>.admonition-title:before,.admonition.tip>.admonition-title:before{color:#00bfa5;content:"\E80E"}.admonition.info,.admonition.todo{border-left-color:rgba(0,184,212,.8)}.admonition.info>.admonition-title,.admonition.todo>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.info>.admonition-title:before,.admonition.todo>.admonition-title:before{color:#00b8d4;content:"\E88E"}.admonition.check,.admonition.done,.admonition.success{border-left-color:rgba(0,200,83,.8)}.admonition.check>.admonition-title,.admonition.done>.admonition-title,.admonition.success>.admonition-title{background-color:rgba(0,200,83,.1);border-bottom-color:rgba(0,200,83,.2)}.admonition.check>.admonition-title:before,.admonition.done>.admonition-title:before,.admonition.success>.admonition-title:before{color:#00c853;content:"\E876"}.admonition.faq,.admonition.help,.admonition.question{border-left-color:rgba(100,221,23,.8)}.admonition.faq>.admonition-title,.admonition.help>.admonition-title,.admonition.question>.admonition-title{background-color:rgba(100,221,23,.1);border-bottom-color:rgba(100,221,23,.2)}.admonition.faq>.admonition-title:before,.admonition.help>.admonition-title:before,.admonition.question>.admonition-title:before{color:#64dd17;content:"\E887"}.admonition.attention,.admonition.caution,.admonition.warning{border-left-color:rgba(255,145,0,.8)}.admonition.attention>.admonition-title,.admonition.caution>.admonition-title,.admonition.warning>.admonition-title{background-color:rgba(255,145,0,.1);border-bottom-color:rgba(255,145,0,.2)}.admonition.attention>.admonition-title:before{color:#ff9100;content:"\E417"}.admonition.caution>.admonition-title:before,.admonition.warning>.admonition-title:before{color:#ff9100;content:"\E002"}.admonition.fail,.admonition.failure,.admonition.missing{border-left-color:rgba(255,82,82,.8)}.admonition.fail>.admonition-title,.admonition.failure>.admonition-title,.admonition.missing>.admonition-title{background-color:rgba(255,82,82,.1);border-bottom-color:rgba(255,82,82,.2)}.admonition.fail>.admonition-title:before,.admonition.failure>.admonition-title:before,.admonition.missing>.admonition-title:before{color:#ff5252;content:"\E14C"}.admonition.bug,.admonition.danger,.admonition.error{border-left-color:rgba(255,23,68,.8)}.admonition.bug>.admonition-title,.admonition.danger>.admonition-title,.admonition.error>.admonition-title{background-color:rgba(255,23,68,.1);border-bottom-color:rgba(255,23,68,.2)}.admonition.danger>.admonition-title:before{color:#ff1744;content:"\E3E7"}.admonition.error>.admonition-title:before{color:#ff1744;content:"\E14C"}.admonition.bug>.admonition-title:before{color:#ff1744;content:"\E868"}.admonition.example,.admonition.snippet{border-left-color:rgba(0,184,212,.8)}.admonition.example>.admonition-title,.admonition.snippet>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.example>.admonition-title:before,.admonition.snippet>.admonition-title:before{color:#00b8d4;content:"\E242"}.admonition.cite,.admonition.quote{border-left-color:rgba(158,158,158,.8)}.admonition.cite>.admonition-title,.admonition.quote>.admonition-title{background-color:rgba(158,158,158,.1);border-bottom-color:rgba(158,158,158,.2)}.admonition.cite>.admonition-title:before,.admonition.quote>.admonition-title:before{color:#9e9e9e;content:"\E244"}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 .markdown-preview {
@@ -331,6 +70,9 @@
 @media screen and (max-width: 600px) {
   .markdown-preview table {
     table-layout: auto;
+    display: table;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 .markdown-preview table thead {
@@ -351,6 +93,11 @@
 .markdown-preview table tr {
   border: 1.5px solid #8b8b8b;
 }
+.markdown-preview table td,
+.markdown-preview table th {
+  padding: 0;
+  position: relative;
+}
 .markdown-preview table td ol,
 .markdown-preview table th ol,
 .markdown-preview table td ul,
@@ -360,17 +107,46 @@
   text-align: left;
   /* 文字對齊方式 */
 }
-.markdown-preview table th.top-left,
-.markdown-preview table td.top-left {
-  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49.5%, #8b8b8b 49.5%, #8b8b8b 50.5%, rgba(0, 0, 0, 0) 50.5%);
+.markdown-preview table .table-diagonal {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49%, #8b8b8b 49%, #8b8b8b 51%, rgba(0, 0, 0, 0) 51%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-.markdown-preview table th.top-left > .col-title,
-.markdown-preview table td.top-left > .col-title {
-  text-align: right;
+.markdown-preview table .table-diagonal .top-left {
+  position: absolute;
+  top: 5%;
+  left: 5%;
 }
-.markdown-preview table th.top-left > .row-title,
-.markdown-preview table td.top-left > .row-title {
-  text-align: left;
+.markdown-preview table .table-diagonal .top-right {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.markdown-preview table .table-diagonal .bottom-right {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+.markdown-preview table .table-diagonal .bottom-left {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
@@ -389,7 +165,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   left: 0;
   width: 200px;
   height: 100%;
-  padding: 32px 10px 48px 0;
+  padding: 50px 10px 48px 0;
   font-size: 14px;
   box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
   box-sizing: border-box;
@@ -398,11 +174,20 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
-  /* Modal (background for enlarged image) */
-  /* 侧栏 */
-  /* 侧栏自动编号 */
-  /* 复位计数器 */
-  /* 进行编号 */
+  /* === Markdown Preview Enhancer TOC 樣式新版 === */
+  /* 縮排*/
+  /* TOC link */
+  /* 每層 details 都要重置下一層 counter */
+  /* 第一層：h1 */
+  /* 第二層：h2 */
+  /* 第三層：h3 */
+  /* 第四層：h4 */
+  /* 縮排 
+.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
+.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
+.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
+.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
+  /* hover & active */
   /*
   /////三线表/////
   table{
@@ -436,140 +221,74 @@ html body {
   }
   */
 }
-html body img {
-  max-width: 100%;
-  width: 80%;
-  top: 0.3rem;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-  display: block;
-  padding: 0;
-  background-color: white;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-}
 html body .md-sidebar-toc {
-  margin: 0rem 0rem 0em 0em;
-  padding: 0rem 0rem 0em 0rem;
-  width: auto;
-  max-width: 768px;
-  margin-bottom: 1em;
-  background-color: rgba(186, 55, 55, 0.1);
-  /*背景颜色*/
+  margin: 0;
+  padding: 0.5rem 0;
   position: absolute;
+  max-width: 768px;
+  background-color: rgba(186, 55, 55, 0.1);
   z-index: 70;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+html body .md-toc-link-wrapper {
+  list-style: none!important;
+}
+html body div.md-toc-link-wrapper {
+  margin-left: 0px!important;
+}
+html body details > div > div.md-toc-link-wrapper {
+  margin-left: 24px!important;
 }
 html body .md-sidebar-toc a {
   color: inherit;
-  font-size: 0.7rem !important;
+  text-decoration: none;
 }
 html body .md-sidebar-toc a:hover {
-  color: inherit;
+  color: #87ffff;
+  font-style: italic;
 }
-html body .md-sidebar-toc li {
-  margin-left: 1rem;
-  margin-bottom: 0 !important;
-  text-align: left;
-  /*左对齐*/
+html body .md-sidebar-toc {
+  counter-reset: toc-h1;
 }
-html body .md-sidebar-toc ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-  padding-right: 0 !important;
+html body .md-sidebar-toc details {
+  counter-reset: toc-h2;
 }
-html body .md-sidebar-toc ul li {
-  font-size: 0.8rem !important;
-  /*字号*/
+html body .md-sidebar-toc details details {
+  counter-reset: toc-h3;
+}
+html body .md-sidebar-toc details details details {
+  counter-reset: toc-h4;
+}
+html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h1;
+  content: counter(toc-h1) ". ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h2;
+  content: counter(toc-h1) "." counter(toc-h2) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h3;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h4;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper.active a {
+  color: #87ffff;
   font-weight: bold;
-  /*一级大纲*/
-}
-html body .md-sidebar-toc ul li:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc ul ul {
-  padding-left: 0rem !important;
-  display: none;
-}
-html body .md-sidebar-toc .active {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc .active ul,
-html body .md-sidebar-toc .active ul ul,
-html body .md-sidebar-toc .active li {
-  display: block;
-}
-html body .md-sidebar-toc ul ul:hover {
-  color: #87ffff;
-}
-html body .md-sidebar-toc ul ul li {
-  margin-bottom: 8pt !important;
-  margin-top: 3pt !important;
-  margin-left: 0rem;
-  font-size: 0.8rem !important;
-  /*字号*/
-  font-style: normal;
-  font-weight: normal;
-  padding-left: 0.2rem;
-  border-left: 2px rgba(0, 0, 0, 0) solid;
-}
-html body .md-sidebar-toc ul ul li:hover {
-  font-style: normal;
-  border-left: 2px solid;
-}
-html body .md-sidebar-toc ul ul ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-}
-html body .md-sidebar-toc ul ul ul li {
-  margin-top: 2pt !important;
-  margin-bottom: 2pt !important;
-  margin-left: 0rem;
-  padding-left: 0.5rem;
-  border-left: 0px;
-}
-html body .md-sidebar-toc ul ul ul li:hover {
-  border-left: 0px solid;
-}
-html body body {
-  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
-}
-html body .md-sidebar-toc li {
-  counter-reset: outline-h1;
-}
-html body .md-sidebar-toc ul li {
-  counter-reset: outline-h2;
-}
-html body .md-sidebar-toc ul ul li {
-  counter-reset: outline-h3;
-}
-html body .md-sidebar-toc ul ul ul li {
-  counter-reset: outline-h4;
-}
-html body .md-sidebar-toc ul ul ul ul li {
-  counter-reset: outline-h5;
-}
-html body .md-sidebar-toc ul ul li:before {
-  counter-increment: outline-h2;
-  content: counter(outline-h2) " ";
-  font-size: 0.7em;
-}
-html body .md-sidebar-toc ul ul ul li:before {
-  counter-increment: outline-h3;
-  content: counter(outline-h2) "." counter(outline-h3) " ";
-  font-size: 0.7em;
-}
-html body .md-sidebar-toc ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
-  font-size: 0.7em;
-}
-html body .md-sidebar-toc ul ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
-  font-size: 0.7em;
 }
 html body .dcl {
   /* block 水平置中的方法 */
@@ -688,15 +407,19 @@ html body table .fbox {
 }
 
       </style>
-    </head>
-    <body for="html-export">
-      <div class="mume markdown-preview  ">
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
       <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
       <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="epithelial-tumors">Epithelial tumors</h1>
-
-<h2 class="mume-header" id="hpv">HPV</h2>
-
+<link rel="stylesheet" href="../Hyper_md/md.css">
+<h1 id="epithelial-tumors">Epithelial tumors </h1>
+<h2 id="hpv">HPV </h2>
 <div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
@@ -706,8 +429,8 @@ html body table .fbox {
 </thead>
 <tbody>
 <tr>
-<td>&#x826F;</td>
-<td>&#x60E1;</td>
+<td>良</td>
+<td>惡</td>
 </tr>
 <tr>
 <td>episomal form</td>
@@ -716,335 +439,139 @@ html body table .fbox {
 </tbody>
 </table></div>
 <ul>
-<li>E6 &#x2192; p53, E7 &#x2192; RB</li>
+<li>E6 → p53, E7 → RB</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">episomal v.s. integrated form</p>
-<img src="paste_src/&#x53E3;&#x75C5;-46.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/口病-46.png" alt="alt text" style=";background-color: white;padding:0">
 </div>
-<div class="table-scroll-wrapper"><table>
-<thead>
-<tr>
-<th>&#x8B8A;&#x7570;&#x540D;&#x7A31;</th>
-<th>&#x98A8;&#x96AA;/ &#x539F;&#x56E0;</th>
-<th>&#x4F4D;&#x7F6E;</th>
-<th colspan="4">&#x75C7;&#x72C0;&#x3001;&#x7279;&#x5FB5;</th>
-
-
-
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="3">papilloma <br>(6, 11)</td>
-<td rowspan="3">30~50y</td>
-<td rowspan="3">&#x8EDF;&#x984E;&#x3001;&#x53E3;&#x8154;&#x5E38;&#x898B;</td>
-<td colspan="4">&#x55AE;&#x767C;&#x3001;&#x4F4E;&#x50B3;&#x67D3;</td>
-
-
-
-</tr>
-<tr>
-
-
-
-<td colspan="4">pedunculated, sessile(&#x5C11;) <img src="paste_src/&#x53E3;&#x75C5;-47.png" alt="alt text" style=";background-color: white;padding:0"></td>
-
-
-
-</tr>
-<tr>
-
-
-
-<td colspan="4">stratified squamous epi. &#x5305;&#x7D50;&#x7DE0;&#x7D44;&#x7E54; <br> hyperparakeratosis (&#x6709;&#x6838;&#x3001;&#x9846;&#x7C92;&#x5C64;&#x7F3A;&#x5931;) <img src="paste_src/&#x53E3;&#x75C5;-50.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
-
-
-
-</tr>
-<tr>
-<td rowspan="3">Verruca vulgaris <br>&#x5C0B;&#x5E38;&#x75A3; <br>(2, 4)</td>
-<td rowspan="3">-</td>
-<td rowspan="3">&#x76AE;&#x819A;&#x3001;&#x53E3;&#x8154;(&#x5C11;&#x898B;&#x3001;&#x63A5;&#x89F8;&#x3001;&#x81EA;&#x50B3;&#x67D3;)</td>
-<td colspan="4">&#x5927;&#x591A;&#x662F;sessile(&#x7121;&#x6897;)</td>
-
-
-
-</tr>
-<tr>
-
-
-
-<td colspan="4"><ul> <li>hyperparakeratosis &#x4F46; granular layer &#x660E;&#x986F; &#x2192; coarse keratohyalin granules</li> <li>&#x201C;cupping&#x201D; effect: rete ridges &#x5F80; lesion &#x4E2D;&#x5FC3;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-51.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
-
-
-
-</tr>
-<tr>
-
-
-
-<td colspan="4">&#x5C0F;&#x5B69;&#x8EAB;&#x4E0A;&#x6709;&#x6A5F;&#x6703;&#x81EA;&#x884C;&#x75CA;&#x7652;&#xFF0C;&#x6CBB;&#x7642;&#x9700;&#x8981; basal layer &#x6E05;&#x4E7E;&#x6DE8;</td>
-
-
-
-</tr>
-<tr>
-<td rowspan="2">Condyloma acuminatum <br> &#x5C16;&#x92B3;&#x6FD5;&#x75A3;</td>
-<td rowspan="2">-</td>
-<td rowspan="2"><ul> <li>&#x53E3;&#x5167;: 6, 11</li> <li>&#x809B;&#x9580;: 16, 18</li> </ul></td>
-<td colspan="4">&#x591A;&#x9846;&#x3001;&#x754C;&#x7DDA;&#x6E05;&#x695A;&#x3001;&#x7121;&#x75DB;&#x3001;&#x5152;&#x7AE5;&#x6709;&#x6A5F;&#x6703;&#x81EA;&#x6108;</td>
-
-
-
-</tr>
-<tr>
-
-
-
-<td colspan="4">&#x5EE3;&#x5E95;&#x3001;papillary &#x7A81;&#x8D77;&#x4E0D;&#x660E;&#x986F;&#x3001;Koilocytes (&#x7A7A;&#x4EAE;&#x3001;&#x8461;&#x8404;&#x4E7E;&#x6838;) <img src="paste_src/&#x53E3;&#x75C5;-52.png" alt="alt text" style=";background-color: white;padding:0"></td>
-
-
-
-</tr>
-<tr>
-<td rowspan="3"><span style="margin:0; color: red;"> Multifocal epithelial hyperplasia (Heck&#x2019;s disease&#xFF0C;<br> 13, 32)</span></td>
-<td rowspan="3">&#x4F4E;&#x793E;&#x7D93;&#x3001;HIV</td>
-<td rowspan="3">&#x5507;&#x3001;&#x9830;&#x3001;&#x820C;</td>
-<td colspan="4">&#x5C0F;&#x3001;&#x8EDF;&#x3001;&#x591A;&#x3001;&#x7121;&#x75DB;</td>
-
-
-
-</tr>
-<tr>
-
-
-
-<td colspan="2"><strong>Papillomatous variant</strong> <ul> <ul> <li>&#x820C;&#x3001;attached gingiva</li> </ul> </ul> <img src="paste_src/&#x53E3;&#x75C5;-53.png" alt="alt text" style=";background-color: white;padding:0"></td>
-
-<td colspan="2"><strong>Papulonodular</strong> <ul> <li>&#x5E38;&#x898B;</li> <li>&#x6241;&#x5E73;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-54.png" alt="alt text" style=";background-color: white;padding:0"></td>
-
-</tr>
-<tr>
-
-
-
-<td colspan="4"><ul> <li>acanthosis: spinous layer (&#x68D8;&#x72C0;&#x5C64;) &#x589E;&#x751F;</li> <li>rete ridge &#x5BEC;&#x6241;&#xFF0C;&#x6DF1;&#x5EA6;&#x5DEE;&#x4E0D;&#x591A;</li> <li>Connective tissue &#x767C;&#x708E;&#x7D30;&#x80DE;&#x6D78;&#x6F64;</li> <li>Koliofcyte</li> <li>mitosoid cells (spinous cell &#x4E4B;&#x9593;&#xFF0C;&#x5F77;&#x5F7F;&#x5728;&#x5206;&#x88C2;)</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-71.png" alt="alt text" style=";background-color: white;padding:0"><img src="paste_src/&#x53E3;&#x75C5;-56.png" alt="alt text" style=";background-color: white;padding:0"></td>
-
-
-
-</tr>
-<tr>
-<td rowspan="2">Verruciform xanthoma (&#x975E; HPV)</td>
-<td rowspan="2">Leasion &#x65C1;&#xFF0C;&#x7570;&#x5E38;&#x514D;&#x75AB;&#x53CD;&#x61C9;</td>
-<td rowspan="2">&#x53E3;&#x8154; &gt; &#x76AE;&#x819A; &gt; &#x6027;&#x5668;</td>
-<td colspan="4">&#x6CB9;&#x8102;&#x6490;&#x8D77; epi. &#x5F62;&#x6210; Verruciform&#x3002;&#x975E; Metabolic  <img src="paste_src/&#x53E3;&#x75C5;-57.png" alt="alt text" style="width:50%;background-color: white;padding:0"><img src="paste_src/&#x53E3;&#x75C5;-58.png" alt="alt text" style="width:30%;background-color: white;padding:0"></td>
-
-
-
-</tr>
-<tr>
-
-
-
-<td colspan="4"><ul> <li>parakeratin plugging: parakeratin layer &#x589E;&#x539A; &#x2192; &#x7D30;&#x83CC;&#x767C;&#x708E;</li> <li>&#x7D50;&#x7DE0;&#x7D44;&#x7E54;&#x7A7A;&#x4EAE; (foamy histocytes)</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-59.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
-
-
-
-</tr>
-</tbody>
-</table></div>
+<p>|變異名稱 |風險/ 原因|位置|症狀、特徵||||<br>
+|-|-|-|-|-|-|-|-|<br>
+|papilloma <br>(6, 11)| 30~50y |軟顎、口腔常見 |單發、低傳染|<br>
+|<sup>|</sup>| ^|pedunculated, sessile(少) <img src="paste_src/口病-47.png" alt="alt text" style=";background-color: white;padding:0"> |<br>
+|<sup>|</sup>|^| stratified squamous epi. 包結締組織 <br> hyperparakeratosis (有核、顆粒層缺失) <img src="paste_src/口病-50.png" alt="alt text" style="width:50%;background-color: white;padding:0"><br>
+| Verruca vulgaris <br>尋常疣 <br>(2, 4) | -|皮膚、口腔(少見、接觸、自傳染) |大多是sessile(無梗)|<br>
+|<sup>|</sup>|^| </p><ul> <li>hyperparakeratosis 但 granular layer 明顯 → coarse keratohyalin granules</li> <li>“cupping” effect: rete ridges 往 lesion 中心</li> </ul> <img src="paste_src/口病-51.png" alt="alt text" style="width:50%;background-color: white;padding:0"><br>
+|<sup>|</sup>|^| 小孩身上有機會自行痊癒，治療需要 basal layer 清乾淨<br>
+| Condyloma acuminatum <br> 尖銳濕疣 |-|<ul> <li>口內: 6, 11</li> <li>肛門: 16, 18</li> </ul>| 多顆、界線清楚、無痛、兒童有機會自愈<br>
+|<sup>|</sup>|^| 廣底、papillary 突起不明顯、Koilocytes (空亮、葡萄乾核) <img src="paste_src/口病-52.png" alt="alt text" style=";background-color: white;padding:0"> |<br>
+|<span style="margin:0; color: red;"> Multifocal epithelial hyperplasia (Heck’s disease，<br> 13, 32)</span>|低社經、HIV| 唇、頰、舌 | 小、軟、多、無痛|<br>
+|<sup>|</sup>|^| <strong>Papillomatous variant</strong> <ul> <ul> <li>舌、attached gingiva</li> </ul> </ul> <img src="paste_src/口病-53.png" alt="alt text" style=";background-color: white;padding:0"> || <strong>Papulonodular</strong> <ul> <li>常見</li> <li>扁平</li> </ul> <img src="paste_src/口病-54.png" alt="alt text" style=";background-color: white;padding:0"> |<br>
+|<sup>|</sup>|^| <ul> <li>acanthosis: spinous layer (棘狀層) 增生</li> <li>rete ridge 寬扁，深度差不多</li> <li>Connective tissue 發炎細胞浸潤</li> <li>Koliofcyte</li> <li>mitosoid cells (spinous cell 之間，彷彿在分裂)</li> </ul> <img src="paste_src/口病-71.png" alt="alt text" style=";background-color: white;padding:0"><img src="paste_src/口病-56.png" alt="alt text" style=";background-color: white;padding:0"> |<br>
+Verruciform xanthoma (非 HPV)|Leasion 旁，異常免疫反應 |口腔 &gt; 皮膚 &gt; 性器 | 油脂撐起 epi. 形成 Verruciform。非 Metabolic  <img src="paste_src/口病-57.png" alt="alt text" style="width:50%;background-color: white;padding:0"><img src="paste_src/口病-58.png" alt="alt text" style="width:30%;background-color: white;padding:0">|<br>
+|<sup>|</sup>|^|<ul> <li>parakeratin plugging: parakeratin layer 增厚 → 細菌發炎</li> <li>結締組織空亮 (foamy histocytes)</li> </ul> <img src="paste_src/口病-59.png" alt="alt text" style="width:50%;background-color: white;padding:0"><p></p>
 <dl>
 <dt>xanthoma</dt>
-<dd>&#x5403;&#x4E86;&#x6CB9;&#x8102;&#x7684; Macrophage &#x7D30;&#x80DE;&#xFF0C;CD63+, CD68+, CD163+ IHC8+&#xFF0C;diastase-PAS&#x67D3;&#x8272;+</dd>
+<dd>吃了油脂的 Macrophage 細胞，CD63+, CD68+, CD163+ IHC8+，diastase-PAS染色+</dd>
 </dl>
 <div class="admonition info">
 <p class="admonition-title">diastase-PAS</p>
 <ul>
-<li>diastase: &#x6FB1;&#x7C89;&#x9176;</li>
+<li>diastase: 澱粉酶</li>
 <li>PAS: Periodic Acid-Schiff stain</li>
-<li>&#x904E;&#x7898;&#x9178;&#x6C27;&#x5316; OH &#x6210; =O&#xFF0C;Schiff &#x67D3;</li>
+<li>過碘酸氧化 OH 成 =O，Schiff 染</li>
 </ul>
 </div>
-<h2 class="mume-header" id="melanotic-lesions">Melanotic lesions</h2>
-
-<h3 class="mume-header" id="%E8%89%B2%E7%B4%A0%E5%A2%9E%E5%8A%A0">&#x8272;&#x7D20;&#x589E;&#x52A0;</h3>
-
-<div class="table-scroll-wrapper"><table>
-<thead>
-<tr>
-<th>&#x540D;&#x7A31;</th>
-<th>&#x55AE;&#x767C;?</th>
-<th colspan="2">&#x98A8;&#x96AA;/&#x4F4D;&#x7F6E;</th>
-
-<th colspan="2">&#x7279;&#x5FB5;</th>
-
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="3"><span style="margin:0; color: red;">Oral melanotic Macules</span></td>
-<td rowspan="3">&#x55AE;</td>
-<td rowspan="3" colspan="2">&#x4E0B;&#x5507;&#x6731;&#x7D05;&#x5340;(vermilion zone, 33%), Buccal mucosa, gingiva, palate</td>
-
-<td colspan="2">&#x8868;&#x9762;&#x5E73;&#x5766;&#x3001;&#x68D5;&#x9ED1;&#x8272;&#x3001;&#x908A;&#x754C;&#x6E05;&#x695A;&#x3001;&#x3C6;&lt;5mm <img src="paste_src/&#x53E3;&#x75C5;-62.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
-
-</tr>
-<tr>
-
-
-
-
-<td colspan="2">&#x4E0D;&#x9808;&#x6CBB;&#x7642;&#xFF0C;&#x4F46;&#x4E0D;&#x6613;&#x548C; Oral melanoma &#x5206;&#x8FA8; &#x2192; &#x71D2;&#x6BC0;!</td>
-
-</tr>
-<tr>
-
-
-
-
-<td colspan="2"><strong>&#x9ED1;&#x8272;&#x7D20;&#x5931;&#x7981;(melanin incontinence):</strong> <br> basal cell &#x53EF;&#x80FD;&#x7834;&#x640D; &#x2192; macrophage &#x65BC; CT &#x541E;&#x566C; &#x2192; <mark>melanophage</mark> <img src="paste_src/&#x53E3;&#x75C5;-63.png" alt="alt text" style=";background-color: white;padding:0"></td>
-
-</tr>
-<tr>
-<td>Physiologic Pigmentation (&#x751F;&#x7406;&#x6027;)</td>
-<td rowspan="5">&#x591A;</td>
-<td colspan="2">&#x9ED1;&#x4EBA;</td>
-
-<td colspan="2">-</td>
-
-</tr>
-<tr>
-<td>Chronic irritation (&#x6162;&#x6027;&#x523A;&#x6FC0;)</td>
-
-<td colspan="4"><ul> <li>&#x5E38;&#x54AC;&#x5230;&#x7684;&#x9830;&#x5074;</li> <li>&#x985E;&#x5929;&#x76B0;&#x7621;(pemphigoid)</li> <li>Smoker&#x2019;s melanosis</li> <li>&#x591A;&#x6C2F;&#x806F;&#x82EF;(PCB)&#x6C59;&#x67D3;</li> </ul></td>
-
-
-
-</tr>
-<tr>
-<td>Syndromes or Diseases Associated</td>
-
-<td colspan="4"><ol> <li>Peutz-Jeghers syndrome</li> <li>Addison&#x2019;s disease</li> <li>Neurofibromatosis</li> <li>McCune-Albright syndrome</li> </ol></td>
-
-
-
-</tr>
-<tr>
-<td rowspan="2">Drug-induced</td>
-
-<td rowspan="2" colspan="2"><mark>&#x594E;&#x5BE7;(chloroquine)</mark>, palate</td>
-
-<td colspan="2">&#x5DE6;&#x53F3;&#x6C92;&#x6709;&#x5B8C;&#x5168;&#x5C0D;&#x7A31; <img src="paste_src/&#x53E3;&#x75C5;-69.png" alt="alt text" style=";background-color: white;padding:0"></td>
-
-</tr>
-<tr>
-
-
-
-
-<td colspan="2">melanin&#x5806;&#x7A4D;&#xFF0C;&#x78BA;&#x8A3A;&#x76F4;&#x63A5; Bleaching</td>
-
-</tr>
-</tbody>
-</table></div>
+<h2 id="melanotic-lesions">Melanotic lesions </h2>
+<h3 id="色素增加">色素增加 </h3>
+<p>|名稱| 單發? |風險/位置 || 特徵 ||<br>
+|-|-|-|-|-|-|-|-|<br>
+|<span style="margin:0; color: red;">Oral melanotic Macules</span>|  單 | 下唇朱紅區(vermilion zone, 33%), Buccal mucosa, gingiva, palate||表面平坦、棕黑色、邊界清楚、φ&lt;5mm <img src="paste_src/口病-62.png" alt="alt text" style="width:50%;background-color: white;padding:0">|<br>
+|<sup>|</sup>|<sup>|</sup>| 不須治療，但不易和 Oral melanoma 分辨 → 燒毀! |<br>
+|<sup>|</sup>|<sup>|</sup>| <strong>黑色素失禁(melanin incontinence):</strong> <br> basal cell 可能破損 → macrophage 於 CT 吞噬 → <mark>melanophage</mark> <img src="paste_src/口病-63.png" alt="alt text" style=";background-color: white;padding:0">|||<br>
+| Physiologic Pigmentation (生理性)  | 多 | 黑人|| - |<br>
+| Chronic irritation (慢性刺激) |^|</p><ul> <li>常咬到的頰側</li> <li>類天皰瘡(pemphigoid)</li> <li>Smoker’s melanosis</li> <li>多氯聯苯(PCB)汙染</li> </ul>|| |<br>
+|Syndromes or Diseases Associated |^|<ol> <li>Peutz-Jeghers syndrome</li> <li>Addison’s disease</li> <li>Neurofibromatosis</li> <li>McCune-Albright syndrome</li> </ol>|<br>
+| Drug-induced |^|<mark>奎寧(chloroquine)</mark>, palate|| 左右沒有完全對稱 <img src="paste_src/口病-69.png" alt="alt text" style=";background-color: white;padding:0"> |<br>
+|<sup>|</sup>|<sup>|</sup>| melanin堆積，確診直接 Bleaching |<p></p>
 <div class="admonition info">
-<p class="admonition-title"> &#x4E00;&#x4E9B;&#x540D;&#x8A5E;</p>
-<img src="paste_src/&#x53E3;&#x75C5;-60.png" alt="alt text" style=";background-color: white;padding:0">
+<p class="admonition-title"> 一些名詞</p>
+<img src="paste_src/口病-60.png" alt="alt text" style=";background-color: white;padding:0">
 </div>
-<h4 class="mume-header" id="peutz-jeghers-syndrome">Peutz-Jeghers syndrome</h4>
-
+<h4 id="peutz-jeghers-syndrome">Peutz-Jeghers syndrome </h4>
 <ul>
-<li>&#x9AD4;&#x67D3;&#x8272;&#x9AD4;&#x986F;&#x6027;</li>
+<li>體染色體顯性</li>
 <li>STK11/LKB1</li>
-<li>peri-oral&#x8DDF;oral cavity&#x6703;&#x51FA;&#x73FE;&#x5F88;&#x591A;pigment</li>
-<li>&#x60E1;&#x5316;&#x8178;&#x9053;&#x764C;&#x75C7;intestinal cancer 15&#x88AB; &#x2192; &#x9810;&#x9632;&#x6027;&#x5207;&#x8178;&#x5B50;</li>
+<li>peri-oral跟oral cavity會出現很多pigment</li>
+<li>惡化腸道癌症intestinal cancer 15被 → 預防性切腸子</li>
 </ul>
 <div class="dcl">
 <section>
-<img src="paste_src/&#x53E3;&#x75C5;-64.png " alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/口病-64.png " alt="alt text" style=";background-color: white;padding:0">
 </section>
 <section>
-<img src="paste_src/&#x53E3;&#x75C5;-65.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/口病-65.png" alt="alt text" style=";background-color: white;padding:0">
 </section></div>
-<img src="paste_src/&#x53E3;&#x75C5;-66.png" alt="alt text" style=";background-color: white;padding:0">
-<h4 class="mume-header" id="addisons-disease">Addison&#x2019;s disease</h4>
-
+<img src="paste_src/口病-66.png" alt="alt text" style=";background-color: white;padding:0">
+<h4 id="addisons-disease">Addison’s disease </h4>
 <ul>
-<li>&#x814E;&#x4E0A;&#x817A; &#x2193; &#x2192; cortisol &#x2193; &#x2192; ACTH&#x2191; &#x2192; &#x3B1;-MSH &#x2192; malannin</li>
-<li>&#x9762;&#x8272;&#x9EEF;&#x6DE1;</li>
-<li>&#x5230;&#x8655;&#x90FD;&#x9ED1;&#x8272;&#x7D20;&#x6C89;&#x6FB1;</li>
+<li>腎上腺 ↓ → cortisol ↓ → ACTH↑ → α-MSH → malannin</li>
+<li>面色黯淡</li>
+<li>到處都黑色素沉澱</li>
 </ul>
-<img src="paste_src/&#x53E3;&#x75C5;-67.png" alt="alt text" style=";background-color: white;padding:0">
-<h4 class="mume-header" id="neurofibromatosis">Neurofibromatosis</h4>
-
+<img src="paste_src/口病-67.png" alt="alt text" style=";background-color: white;padding:0">
+<h4 id="neurofibromatosis">Neurofibromatosis </h4>
 <ul>
-<li>cafe-au-lait spots disease (&#x5496;&#x5561;&#x725B;&#x5976;&#x6591;)</li>
-<li>neurofibroma (&#x795E;&#x7D93;&#x7E96;&#x7DAD;&#x7624;)</li>
+<li>cafe-au-lait spots disease (咖啡牛奶斑)</li>
+<li>neurofibroma (神經纖維瘤)</li>
 </ul>
-<h4 class="mume-header" id="mccune-albright-syndrome-albrights-syndrome">McCune-Albright syndrome (Albright&#x2019;s syndrome)</h4>
-
+<h4 id="mccune-albright-syndrome-albrights-syndrome">McCune-Albright syndrome (Albright’s syndrome) </h4>
 <ul>
-<li>&#x5496;&#x5561;&#x725B;&#x5976;&#x6591;</li>
-<li>&#x907A;&#x50B3;&#x6027;&#x75BE;&#x75C5;</li>
-<li>&#x591A;&#x9AA8;&#x6027;&#x7E96;&#x7DAD;&#x767C;&#x80B2;&#x4E0D;&#x826F;(Polyostotic Fibrous Dysplasia)</li>
+<li>咖啡牛奶斑</li>
+<li>遺傳性疾病</li>
+<li>多骨性纖維發育不良(Polyostotic Fibrous Dysplasia)</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title">&#x5496;&#x5561;&#x725B;&#x5976;&#x6591;</p>
-<img src="paste_src/&#x53E3;&#x75C5;-68.png" alt="alt text" style=";background-color: white;padding:0">
+<p class="admonition-title">咖啡牛奶斑</p>
+<img src="paste_src/口病-68.png" alt="alt text" style=";background-color: white;padding:0">
 </div>
-<h3 class="mume-header" id="naevus">Naevus</h3>
-
+<h3 id="naevus">Naevus </h3>
 <ul>
-<li>Naevus cell &#x7121; Dendrites</li>
-<li>&#x4F4D;&#x7F6E;:
+<li>Naevus cell 無 Dendrites</li>
+<li>位置:
 <ul>
-<li>&#x5148;&#x5929;: &#x56DB;&#x80A2;&#xFF0C;&#x53E3;&#x5167;&#x5C11;&#x898B;<br>
-<img src="paste_src/&#x53E3;&#x75C5;-73.png" alt="alt text" style="width:40%;background-color: white;padding:0"></li>
-<li>&#x5F8C;&#x5929;: <mark>NRAS(&#x5927; lesion&#xFF0C;6%)</mark>, BRAF(&#x5C0F; lesion&#xFF0C;80%) mutation (3.~5.&#x662F;&#x4E00;&#x500B;&#x6F38;&#x9032;&#x7684;&#x904E;&#x7A0B;)<br>
-<img src="paste_src/&#x53E3;&#x75C5;-70.png" alt="alt text" style=";background-color: white;padding:0"></li>
+<li>先天: 四肢，口內少見<br>
+<img src="paste_src/口病-73.png" alt="alt text" style="width:40%;background-color: white;padding:0"></li>
+<li>後天: <mark>NRAS(大 lesion，6%)</mark>, BRAF(小 lesion，80%) mutation (3.~5.是一個漸進的過程)<br>
+<img src="paste_src/口病-70.png" alt="alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
-<h4 class="mume-header" id="span-stylemargin0-colorred-intraoral-melanocytic-nevusspan"><span style="margin:0; color:red ;">Intraoral melanocytic Nevus</span></h4>
-
+<h4 id="span-stylemargin0-colorred-intraoral-melanocytic-nevusspan"><span style="margin:0; color:red ;">Intraoral melanocytic Nevus</span> </h4>
 <ul>
-<li>&#x5F8C;&#x5929;&#xFF0C;&#x53E3;&#x5167;&#xFF0C;&#x6700;&#x5E38;&#x898B;</li>
-<li>&#x4F4D;&#x7F6E;: Palate,mucobuccal fold, orgingiva</li>
+<li>後天，口內，最常見</li>
+<li>位置: Palate,mucobuccal fold, orgingiva</li>
 <li>BRAF</li>
 <li>35y</li>
 </ul>
-<h4 class="mume-header" id="span-stylemargin0-colorred-blue-nevusspan"><span style="margin:0; color:red ;">Blue nevus</span></h4>
-
+<h4 id="span-stylemargin0-colorred-blue-nevusspan"><span style="margin:0; color:red ;">Blue nevus</span> </h4>
 <ul>
-<li>&#x5F8C;&#x5929;&#xFF0C;&#x53E3;&#x5167;&#xFF0C;&#x6B21;&#x5E38;&#x898B;</li>
-<li>&#x4F4D;&#x7F6E;: Palate</li>
+<li>後天，口內，次常見</li>
+<li>位置: Palate</li>
 <li>GNAQ mutation</li>
 </ul>
-<h4 class="mume-header" id="%E7%B5%84%E7%B9%94">&#x7D44;&#x7E54;</h4>
-
+<h4 id="組織">組織 </h4>
 <ul>
-<li>Cell &#x5206;&#x4E09;&#x985E;&#xFF1A;
+<li>Cell 分三類：
 <ul>
-<li>A: Epithelioid (&#x5728; epi)</li>
+<li>A: Epithelioid (在 epi)</li>
 <li>B: Lymphocyte-like</li>
 <li>Spindle-shaped<br>
-<img src="paste_src/&#x53E3;&#x75C5;-72.png" alt="alt text" style=";background-color: white;padding:0"></li>
+<img src="paste_src/口病-72.png" alt="alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
-<li>Compound (&#x5728; epi., dermis &#x4E4B;&#x9593;) &#x6216; Intradermal
+<li>Compound (在 epi., dermis 之間) 或 Intradermal
 <ul>
-<li>&#x53EA;&#x6709; Junctional &#x6703;&#x5448;&#x73FE; Tear-like Nest</li>
+<li>只有 Junctional 會呈現 Tear-like Nest</li>
 </ul>
 </li>
-<li>Indian-file pattern: &#x947D;&#x9032; Dermis &#x6392;&#x6210;&#x4E00;&#x6392;<br>
-<img src="paste_src/&#x53E3;&#x75C5;-74.png" alt="alt text" style=";background-color: white;padding:0"></li>
-<li>&#x6DF1;&#x5C64;&#x53EF;&#x80FD;&#x570D;&#x76AE;&#x819A;&#x9644;&#x5C6C;&#x7269;&#x3001;&#x795E;&#x7D93;</li>
+<li>Indian-file pattern: 鑽進 Dermis 排成一排<br>
+<img src="paste_src/口病-74.png" alt="alt text" style=";background-color: white;padding:0"></li>
+<li>深層可能圍皮膚附屬物、神經</li>
 </ul>
-<h3 class="mume-header" id="melanoma-%E6%83%A1">Melanoma (&#x60E1;)</h3>
-
+<h3 id="melanoma-惡">Melanoma (惡) </h3>
 <blockquote>
-<p>&#x53EF;&#x4EE5;&#x5F9E; Melano cell, Naevus &#x8F49;&#x904E;&#x4F86;&#xFF0C;&#x591A;&#x8B8A;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x6C92;&#x6709; Pigmentation</p>
+<p>可以從 Melano cell, Naevus 轉過來，多變，甚至可以沒有 Pigmentation</p>
 </blockquote>
 <ul>
 <li>
@@ -1058,10 +585,10 @@ html body table .fbox {
 </ul>
 </li>
 <li>
-<p>Horizontal phase(Radial) &#x2192; Vertical phase (Invasive)</p>
+<p>Horizontal phase(Radial) → Vertical phase (Invasive)</p>
 </li>
 <li>
-<p>&#x67D3;&#x8272;:</p>
+<p>染色:</p>
 <ul>
 <li>S100</li>
 <li>HBM-45, Mitf: Spindle-shaped cells</li>
@@ -1071,9 +598,9 @@ html body table .fbox {
 <li>
 <p><strong>Cutaneous melanoma</strong></p>
 <ul>
-<li>&#x7B2C;&#x4E09;&#x5E38;&#x898B;(&lt;5%)&#x7684;&#x76AE;&#x819A;&#x764C;&#xFF0C;&#x4F46;&#x537B;&#x662F;&#x76AE;&#x819A;&#x764C;&#x4E2D;&#x81F4;&#x6B7B;&#x7387;&#x6700;&#x9AD8;&#x7684;(75%)(&#x7B2C;&#x4E00;&#x5E38;&#x898B;&#x70BA;basal cell carcinoma&#xFF0C;&#x7B2C;&#x4E8C;&#x70BA;SCC)</li>
-<li>&#x4E3B;&#x56E0;&#x70BA; UV</li>
-<li><code>GLA:</code> &#x767D;&#x4EBA;&#x6210;&#x4EBA;&#xFF0C;&#x4E2D;&#x5E74;(45-84&#x6B72;&#xFF0C;&#x5E73;&#x5747;61&#x6B72;)</li>
+<li>第三常見(&lt;5%)的皮膚癌，但卻是皮膚癌中致死率最高的(75%)(第一常見為basal cell carcinoma，第二為SCC)</li>
+<li>主因為 UV</li>
+<li><code>GLA:</code> 白人成人，中年(45-84歲，平均61歲)</li>
 <li><code>GENE:</code>
 <ul>
 <li>CDKN2A, CDK4 mutation</li>
@@ -1085,23 +612,23 @@ html body table .fbox {
 <li>
 <p><strong><span style="margin:0; color: Deepskyblue;">Oral mucosal melanoma</span></strong></p>
 <ul>
-<li>&#x539F;&#x56E0;&#x4E0D;&#x660E;</li>
-<li><mark>&#x58DE;&#x900F;&#x4E86;&#xFF0C;&#x76F4;&#x63A5; T3</mark></li>
-<li>&#x4F54; melanoma &lt;1%</li>
-<li><code>GLA:</code> &#x7537;&#x6027;&#xFF0C;hard palate or maxillary alveolus&#xFF0C;50-70y</li>
+<li>原因不明</li>
+<li><mark>壞透了，直接 T3</mark></li>
+<li>佔 melanoma &lt;1%</li>
+<li><code>GLA:</code> 男性，hard palate or maxillary alveolus，50-70y</li>
 <li><code>GENE:</code> Kit (CD117)</li>
 </ul>
 </li>
 </ul>
 <div class="fbox">
-<img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-11.png" alt="alt text" style="width:50%;background-color: white;padding:0">
-<img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-5.png" alt="alt text" style="width:50%;background-color: white;padding:0"></div>
+<img src="paste_src/口病_epithelialTumor-11.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/口病_epithelialTumor-5.png" alt="alt text" style="width:50%;background-color: white;padding:0"></div>
 <div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
-<th>&#x985E;&#x578B;</th>
-<th>&#x597D;&#x767C;</th>
-<th colspan="3">&#x7279;&#x5FB5;</th>
+<th>類型</th>
+<th>好發</th>
+<th colspan="3">特徵</th>
 
 
 </tr>
@@ -1109,8 +636,8 @@ html body table .fbox {
 <tbody>
 <tr>
 <td>Superficial Spreading (Pagetoid) -</td>
-<td><ul> <li>&#x7537;&#x6027;: &#x5169;&#x80A9;&#x80DB;&#x9AA8;&#x9593;</li> <li>&#x5973;&#x6027;: &#x5C0F;&#x817F;&#x5F8C;&#x65B9;</li> </ul></td>
-<td colspan="3"><ul> <li>&#x9023;&#x7E8C; ridge &#x90FD;&#x6709; nest</li> <li><mark>Pagetoid spread, Paget&#x2019;s disease</mark>: single tumor cell&#x6D78;&#x6F64;&#x65BC;&#x8868;&#x9762;&#x4E0A;&#x76AE;&#x7684;&#x4E0A;&#x5C64;</li> </ul> <div class="fbox"> <img src="paste_src/&#x53E3;&#x75C5;-75.png" alt="alt text" style="width:50%;background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-6.png" alt="alt text" style="width:40%;background-color: white;padding:0"> </div></td>
+<td><ul> <li>男性: 兩肩胛骨間</li> <li>女性: 小腿後方</li> </ul></td>
+<td colspan="3"><ul> <li>連續 ridge 都有 nest</li> <li><mark>Pagetoid spread, Paget’s disease</mark>: single tumor cell浸潤於表面上皮的上層</li> </ul> <div class="fbox"> <img src="paste_src/口病-75.png" alt="alt text" style="width:50%;background-color: white;padding:0"> <img src="paste_src/口病_epithelialTumor-6.png" alt="alt text" style="width:40%;background-color: white;padding:0"> </div></td>
 
 
 </tr>
@@ -1124,35 +651,35 @@ html body table .fbox {
 <tr>
 <td colspan="2">Nodular -</td>
 
-<td colspan="3">&#x7121; Radial phase&#xFF0C;&#x76F4;&#x63A5;&#x5F80;&#x4E0B;&#x4FB5;&#x72AF;</td>
+<td colspan="3">無 Radial phase，直接往下侵犯</td>
 
 
 </tr>
 <tr>
 <td>Lentigo maligna</td>
-<td>&#x4E2D;&#x81C9;(&#x967D;&#x5149;&#x66DD;&#x66EC;)</td>
-<td colspan="3"><ul> <li>&#x751F;&#x9577;&#x6162;&#xFF0C;Radial growth&#x5E73;&#x5747;15&#x5E74;</li> <li>Lamina propia &#x6C92;&#x5565;&#x7D30;&#x80DE;&#xFF0C;&#x55DC;&#x9E7C;</li> </ul> <div class="fbox"> <img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-10.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;-76.png" alt="alt text" style="width:50%;background-color: white;padding:0"> </div></td>
+<td>中臉(陽光曝曬)</td>
+<td colspan="3"><ul> <li>生長慢，Radial growth平均15年</li> <li>Lamina propia 沒啥細胞，嗜鹼</li> </ul> <div class="fbox"> <img src="paste_src/口病_epithelialTumor-10.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病-76.png" alt="alt text" style="width:50%;background-color: white;padding:0"> </div></td>
 
 
 </tr>
 <tr>
 <td colspan="2">Lentigo maligna -</td>
 
-<td colspan="3">Lentigo malign &#x4FB5;&#x72AF;</td>
+<td colspan="3">Lentigo malign 侵犯</td>
 
 
 </tr>
 <tr>
 <td rowspan="2">Acral Lentiginous -</td>
-<td rowspan="2">oral melanoma&#x4E2D;&#x6700;&#x5E38;&#x898B;&#x7684;&#x985E;&#x578B;</td>
-<td colspan="3"><ul> <li>&#x9ED1;&#x4EBA;&#x6700;&#x5E38;&#x898B;&#x7684;melanoma</li> <li>oral melanoma&#x4E2D;&#x6700;&#x5E38;&#x898B;&#x7684;&#x985E;&#x578B;</li> </ul></td>
+<td rowspan="2">oral melanoma中最常見的類型</td>
+<td colspan="3"><ul> <li>黑人最常見的melanoma</li> <li>oral melanoma中最常見的類型</li> </ul></td>
 
 
 </tr>
 <tr>
 
 
-<td colspan="3"><ul> <li>&#x5728;&#x6307;&#x7532;&#x4E0B;&#x9762; (&#x7121;&#x6BDB;)</li> <li>&#x4E0A;&#x76AE;&#x589E;&#x751F;&#xFF0C;rete ridge &#x8B8A;&#x9577;</li> <li>Junctional nest</li> </ul></td>
+<td colspan="3"><ul> <li>在指甲下面 (無毛)</li> <li>上皮增生，rete ridge 變長</li> <li>Junctional nest</li> </ul></td>
 
 
 </tr>
@@ -1160,183 +687,133 @@ html body table .fbox {
 </table></div>
 <dl>
 <dt>Acral</dt>
-<dd>&#x80A2;&#x7AEF;</dd>
+<dd>肢端</dd>
 </dl>
-<h2 class="mume-header" id="oral-potentially-malignant-disorders-opmd">Oral potentially malignant disorders (OPMD)</h2>
-
+<h2 id="oral-potentially-malignant-disorders-opmd">Oral potentially malignant disorders (OPMD) </h2>
 <blockquote>
-<p>&#x7159;&#x3001;&#x9152;&#x3001;&#x6AB3;&#x6994;</p>
+<p>煙、酒、檳榔</p>
 </blockquote>
 <ul>
-<li>&#x597D;&#x767C;: lateral/ventral tongue&#x3001;floor of mouth</li>
+<li>好發: lateral/ventral tongue、floor of mouth</li>
 </ul>
-<div class="table-scroll-wrapper"><table>
-<thead>
-<tr>
-<th>&#x540D;&#x7A31;</th>
-<th colspan="2">&#x539F;&#x56E0;</th>
-
-<th colspan="2">&#x7279;&#x5FB5;</th>
-
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Oral submucous fiberosis</td>
-<td colspan="2">Arecoline (&#x6AB3;&#x6994;&#x9E7C;)</td>
-
-<td colspan="2"><ul> <li>&#x2192; SCC</li> <li>hyperkeratosis &#x6216; parakeratosis&#xFF0C;&#x4E0A;&#x76AE;&#x8B8A;&#x8584;&#x3002;</li> <li>Collagen fiber &#x6700;&#x6DF1;&#x4FB5;&#x72AF;&#x808C;&#x8089;&#x5C64;</li> <li>&#x7121;&#x6CD5;&#x5FA9;&#x539F;</li> </ul></td>
-
-</tr>
-<tr>
-<td rowspan="2">Leukoplakia, Erythroplakia</td>
-<td rowspan="2" colspan="2">&#x7D05;&#x6591;&#x8F03;&#x56B4;&#x91CD;&#xFF0C;&#x4E0D;&#x7522;&#x751F;&#x89D2;&#x8CEA; <img src="paste_src/&#x53E3;&#x75C5;-78.png" alt="alt text" style=";background-color: white;padding:0"></td>
-
-<td colspan="2"><ul> <li>&#x767D;&#x8272;&#x7684;&#x591A;&#x70BA; hyperkeratosis &#x2192; &#x7528;&#x6392;&#x9664;&#x6CD5;&#x8A3A;&#x65B7;</li> <li>verrucous &#x9AD8;&#x98A8;&#x96AA;</li> <li>&#x5973;&#x6027; maligant transformation rate &#x9AD8;</li> </ul></td>
-
-</tr>
-<tr>
-
-
-
-<td colspan="2">.<img src="paste_src/&#x53E3;&#x75C5;-77.png" alt="alt text" style=";background-color: white;padding:0"></td>
-
-</tr>
-<tr>
-<td rowspan="2"><span style="margin:0; color: red;"> Poliferative verrucous leukoplakia (pbl) </span></td>
-<td rowspan="2" colspan="2">&#xFF1F;</td>
-
-<td colspan="2"><ul> <li>&#x5973;&#xFF0C;gingiva/alveolar gingiva&#xFF0C;66.8y</li> <li>&#x83F8;&#x9152;&#x6AB3;&#x6994;&#x7121;&#x95DC;</li> <li>&#x4E0D;&#x5207;&#x6389;&#x9AD8;&#x6A5F;&#x7387;&#x764C;&#x5316;</li> <li>&#x591A;&#x767C;&#x6027;</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-84.png" alt="alt text" style=";background-color: white;padding:0"></td>
-
-</tr>
-<tr>
-
-
-
-<td colspan="2"><ul> <li>Sharp &#x5206;&#x5316;&#x6539;&#x8B8A;</li> <li>bulbous rete ridge &#x2192; &#x5EF6;&#x9577;</li> <li>exophytic, endophytic growth, cyst &#x5145;&#x6EFF; keratin</li> </ul> <img src="paste_src/&#x53E3;&#x75C5;-86.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/&#x53E3;&#x75C5;-87.png" alt="alt text" style=";background-color: white;padding:0"></td>
-
-</tr>
-</tbody>
-</table></div>
-<h3 class="mume-header" id="oral-epithelial-dysplasia-oed">Oral epithelial dysplasia (OED)</h3>
-
+<p>| 名稱 |  原因 ||特徵||<br>
+|-|-|-|-|-|-|-|<br>
+|Oral submucous fiberosis | Arecoline (檳榔鹼)|| </p><ul> <li>→ SCC</li> <li>hyperkeratosis 或 parakeratosis，上皮變薄。</li> <li>Collagen fiber 最深侵犯肌肉層</li> <li>無法復原</li> </ul> |<br>
+Leukoplakia, Erythroplakia |紅斑較嚴重，不產生角質 <img src="paste_src/口病-78.png" alt="alt text" style=";background-color: white;padding:0">||<ul> <li>白色的多為 hyperkeratosis → 用排除法診斷</li> <li>verrucous 高風險</li> <li>女性 maligant transformation rate 高</li> </ul> |<br>
+|<sup>|</sup>|^| .<img src="paste_src/口病-77.png" alt="alt text" style=";background-color: white;padding:0"><br>
+| <span style="margin:0; color: red;"> Poliferative verrucous leukoplakia (pbl) </span>|  ？ || <ul> <li>女，gingiva/alveolar gingiva，66.8y</li> <li>菸酒檳榔無關</li> <li>不切掉高機率癌化</li> <li>多發性</li> </ul> <img src="paste_src/口病-84.png" alt="alt text" style=";background-color: white;padding:0">|<br>
+|<sup>|</sup>|^| <ul> <li>Sharp 分化改變</li> <li>bulbous rete ridge → 延長</li> <li>exophytic, endophytic growth, cyst 充滿 keratin</li> </ul> <img src="paste_src/口病-86.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/口病-87.png" alt="alt text" style=";background-color: white;padding:0"><p></p>
+<h3 id="oral-epithelial-dysplasia-oed">Oral epithelial dysplasia (OED) </h3>
 <blockquote>
-<p>OED &#x2208; OMPD</p>
+<p>OED ∈ OMPD</p>
 </blockquote>
 <ul>
-<li>&#x786C;&#x984E;&#x8F03;&#x5C11;&#x767C;&#x751F;&#x3002;</li>
-<li>&#x5206;&#x70BA;&#x4E09;&#x500B;&#x7A0B;&#x5EA6;</li>
+<li>硬顎較少發生。</li>
+<li>分為三個程度</li>
 </ul>
-<h4 class="mume-header" id="mild">Mild</h4>
-
+<h4 id="mild">Mild </h4>
 <ul>
-<li>&#x5F71;&#x97FF;&#x5230;&#x4E0B;&#x4E09;&#x5206;&#x4E4B;&#x4E00;</li>
-<li>Basal cell &#x589E;&#x751F;&#xFF0C;&#x8B8A;&#x5927;</li>
-<li>Rete ridge &#x8B8A;&#x5BEC;</li>
-<li>&#x5E95;&#x5C64; keratin (&#x7D05;&#x67D3;)</li>
-<li>&#x53EF;&#x80FD;&#x767C;&#x708E;</li>
+<li>影響到下三分之一</li>
+<li>Basal cell 增生，變大</li>
+<li>Rete ridge 變寬</li>
+<li>底層 keratin (紅染)</li>
+<li>可能發炎</li>
 </ul>
-<img src="paste_src/&#x53E3;&#x75C5;-80.png" alt="alt text" style="width:50%;background-color: white;padding:0">
-<h4 class="mume-header" id="moderate">Moderate</h4>
-
+<img src="paste_src/口病-80.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<h4 id="moderate">Moderate </h4>
 <ul>
-<li>&#x5230;&#x4E2D;&#x4E09;&#x5206;&#x4E4B;&#x4E00;<br>
-<img src="paste_src/&#x53E3;&#x75C5;-81.png" alt="alt text" style="width:50%;background-color: white;padding:0"></li>
+<li>到中三分之一<br>
+<img src="paste_src/口病-81.png" alt="alt text" style="width:50%;background-color: white;padding:0"></li>
 </ul>
-<h4 class="mume-header" id="sever">Sever</h4>
-
-<img src="paste_src/&#x53E3;&#x75C5;-82.png" alt="alt text" style="width:50%;background-color: white;padding:0">
-<img src="paste_src/&#x53E3;&#x75C5;-83.png" alt="alt text" style="width:50%;background-color: white;padding:0">
-<img src="paste_src/&#x53E3;&#x75C5;-79.png" alt="alt text" style=";background-color: white;padding:0">
-<h2 class="mume-header" id="oral-squamous-cell-carcunomaoscc">Oral Squamous Cell Carcunoma(OSCC)</h2>
-
+<h4 id="sever">Sever </h4>
+<img src="paste_src/口病-82.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/口病-83.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/口病-79.png" alt="alt text" style=";background-color: white;padding:0">
+<h2 id="oral-squamous-cell-carcunomaoscc">Oral Squamous Cell Carcunoma(OSCC) </h2>
 <ul>
-<li>&#x5FB5;&#x5146;: OMPD</li>
-<li>&#x597D;&#x767C;: lateral/ventral tongue, floor of mouth
+<li>徵兆: OMPD</li>
+<li>好發: lateral/ventral tongue, floor of mouth
 <ul>
-<li>&#x6AB3;&#x6994;: Tongue</li>
+<li>檳榔: Tongue</li>
 </ul>
 </li>
 <li><code>GENT:</code>
 <ul>
-<li>TP53: &#x6291;&#x764C;&#x57FA;&#x56E0;&#xFF0C;&#x6C92;&#x6709;&#x85E5;&#x7269;</li>
-<li>PIK3CA: &#x81F4;&#x764C;&#x57FA;&#x56E0;&#xFF0C;&#x6709;&#x6A19;&#x9776;&#x85E5;&#x7269;</li>
+<li>TP53: 抑癌基因，沒有藥物</li>
+<li>PIK3CA: 致癌基因，有標靶藥物</li>
 </ul>
 </li>
-<li>&#x7D05;&#x767D;&#x6591;&#xFF0C;&#x51F8;&#x8D77;<br>
-<img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor.png" alt="alt text" style=";background-color: white;padding:0"></li>
+<li>紅白斑，凸起<br>
+<img src="paste_src/口病_epithelialTumor.png" alt="alt text" style=";background-color: white;padding:0"></li>
 </ul>
-<h3 class="mume-header" id="%E5%88%86%E7%B4%9A">&#x5206;&#x7D1A;</h3>
-
+<h3 id="分級">分級 </h3>
 <blockquote>
-<p>&#x6839;&#x64DA;&#x548C;&#x6B63;&#x5E38;&#x4E0A;&#x76AE;&#x7684;&#x76F8;&#x4F3C;&#x5EA6;&#x53CA;&#x7522;&#x751F;&#x7684; keratin &#x591A;&#x5BE1;&#x4F86;&#x5206;&#x7D1A;</p>
+<p>根據和正常上皮的相似度及產生的 keratin 多寡來分級</p>
 </blockquote>
 <ol>
-<li>Grade I, well-differentiated: &#x7522;&#x751F;&#x6B63;&#x5E38;&#x91CF;&#x7684; keratin</li>
-<li>Grade II, moderately-differentiated: &#x7522;&#x751F;&#x5C11;&#x91CF;&#x7684; keratin</li>
-<li>Grade III, poorly-differentiated: &#x5E7E;&#x4E4E;&#x4E0D;&#x7522;&#x751F; keratin</li>
+<li>Grade I, well-differentiated: 產生正常量的 keratin</li>
+<li>Grade II, moderately-differentiated: 產生少量的 keratin</li>
+<li>Grade III, poorly-differentiated: 幾乎不產生 keratin</li>
 </ol>
-<p>Grading &#x7684;&#x5224;&#x65B7;&#x8F03;&#x70BA;&#x4E3B;&#x89C0;,<a href="#oscc-staging">staging</a> &#x548C;&#x9810;&#x5F8C;(prognosis)&#x7684;&#x76F8;&#x95DC;&#x6027;&#x6BD4; grading &#x9AD8;&#x5F88;&#x591A;&#x3002;</p>
-<h2 class="mume-header" id="verrucous-carcinomavc">Verrucous Carcinoma(VC)</h2>
-
+<p>Grading 的判斷較為主觀,<a href="#oscc-staging">staging</a> 和預後(prognosis)的相關性比 grading 高很多。</p>
+<h2 id="verrucous-carcinomavc">Verrucous Carcinoma(VC) </h2>
 <ul>
-<li>Ackerman&#x2019;s tumor</li>
-<li>&#x5206;&#x5316;&#x826F;&#x597D;&#xFF0C;&#x4E0D;&#x6703;&#x947D;&#xFF0C;&#x7528;&#x63A8;&#x7684;(Pushing) &#x2192; &#x4FB5;&#x72AF;&#x7A0D;&#x5DEE;</li>
-<li>HPV &#x4F4E;&#x76F8;&#x95DC;</li>
-<li>&#x56DB;&#x5468;&#x53EF;&#x80FD;&#x6709; SCC(20%)</li>
+<li>Ackerman’s tumor</li>
+<li>分化良好，不會鑽，用推的(Pushing) → 侵犯稍差</li>
+<li>HPV 低相關</li>
+<li>四周可能有 SCC(20%)</li>
 </ul>
-<img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-4.png" alt="alt text" style="width:60%;background-color: white;padding:0">
-<h2 class="mume-header" id="oropharyngeal-cancer">Oropharyngeal Cancer</h2>
-
+<img src="paste_src/口病_epithelialTumor-4.png" alt="alt text" style="width:60%;background-color: white;padding:0">
+<h2 id="oropharyngeal-cancer">Oropharyngeal Cancer </h2>
 <p><mark>Staging &gt; Grading</mark></p>
 <div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
-<th>&#x7279;&#x5FB5;</th>
+<th>特徵</th>
 <th>HPV(+)</th>
 <th>HPV(-)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>&#x767C;&#x751F;&#x7387;&#x8DA8;&#x52E2;</td>
-<td>&#x589E;&#x52A0;</td>
-<td>&#x6E1B;&#x5C11;</td>
+<td>發生率趨勢</td>
+<td>增加</td>
+<td>減少</td>
 </tr>
 <tr>
-<td>&#x5E74;&#x7D00;</td>
+<td>年紀</td>
 <td>55-58y</td>
 <td>+ 3 ~ 4 y</td>
 </tr>
 <tr>
-<td>&#x5371;&#x96AA;&#x56E0;&#x5B50;</td>
-<td>&#x591A;&#x91CD;&#x6027;&#x4F34;&#x4FB6;&#x3001;&#x62BD;&#x83F8;</td>
-<td>&#x62BD;&#x83F8;&#x3001;&#x9152;&#x7CBE;</td>
+<td>危險因子</td>
+<td>多重性伴侶、抽菸</td>
+<td>抽菸、酒精</td>
 </tr>
 <tr>
-<td>&#x5206;&#x671F;(stage)</td>
+<td>分期(stage)</td>
 <td><ul> <li>Small primary</li> <li>large nodal</li> <li>metastases</li> </ul></td>
 <td>Variable</td>
 </tr>
 <tr>
-<td>&#x4F86;&#x6E90;</td>
-<td>&#x984E;&#x548C;&#x820C;&#x6241;&#x6843;&#x817A;&#x7684;&#x96B1;&#x7AA9;&#x4E0A;&#x76AE; (crypt epithelium)</td>
-<td>&#x8868;&#x5C64;&#x4E0A;&#x76AE; (surface epithelium)</td>
+<td>來源</td>
+<td>顎和舌扁桃腺的隱窩上皮 (crypt epithelium)</td>
+<td>表層上皮 (surface epithelium)</td>
 </tr>
 <tr>
-<td>&#x764C;&#x524D;&#x75C5;&#x8B8A;</td>
-<td>&#x96E3;&#x5075;&#x6E2C;</td>
+<td>癌前病變</td>
+<td>難偵測</td>
 <td>Squamous dysplasia</td>
 </tr>
 <tr>
-<td>&#x4E3B;&#x8981;&#x578B;&#x614B;</td>
+<td>主要型態</td>
 <td>nonkeratinizing SCC</td>
 <td>keratinizing SCC</td>
 </tr>
 <tr>
-<td>&#x5206;&#x7D1A;(grading)</td>
-<td>&#x2717;</td>
-<td>&#x2713;</td>
+<td>分級(grading)</td>
+<td>✗</td>
+<td>✓</td>
 </tr>
 <tr>
 <td>p16 IHC</td>
@@ -1344,48 +821,46 @@ html body table .fbox {
 <td>-</td>
 </tr>
 <tr>
-<td>&#x5B58;&#x6D3B;&#x7387;</td>
-<td>&#x8F03;&#x597D;</td>
-<td>&#x8F03;&#x5DEE;</td>
+<td>存活率</td>
+<td>較好</td>
+<td>較差</td>
 </tr>
 </tbody>
 </table></div>
-<h3 class="mume-header" id="span-stylemargin0-color-deepskyblue-hpv-associated-oropharyngeal-squamous-cell-ca-opsccspan"><span style="margin:0; color: Deepskyblue;"> HPV-associated oropharyngeal squamous cell CA (OPSCC)</span></h3>
-
+<h3 id="span-stylemargin0-color-deepskyblue-hpv-associated-oropharyngeal-squamous-cell-ca-opsccspan"><span style="margin:0; color: Deepskyblue;"> HPV-associated oropharyngeal squamous cell CA (OPSCC)</span> </h3>
 <ul>
 <li>
-<p>&#x5E38;&#x5E38;&#x75C5;&#x4EBA;&#x4F86;&#x7684;&#x6642;&#x5019;&#x90FD;&#x5DF2;&#x7D93;&#x8F49;&#x79FB;&#x5230;&#x9838;&#x90E8;&#x6DCB;&#x5DF4;&#xFF0C;&#x9838;&#x90E8;&#x6DCB;&#x5DF4;&#x7D50;&#x901A;&#x5E38;&#x4E0D;&#x6703;&#x75DB;</p>
+<p>常常病人來的時候都已經轉移到頸部淋巴，頸部淋巴結通常不會痛</p>
 </li>
 <li>
 <p>HPV type 16 (90%)</p>
 <ul>
-<li>p16 IHC (&#x514D;&#x75AB;&#x87A2;&#x5149;&#x67D3;&#x8272;)&#xFF0C;&#x82E5; 70%&#x7D30;&#x80DE;&#x6838;&#x3001;&#x503C;&#x90FD;&#x5448;&#x73FE;&#x67D3;&#x8272;&#x5373;&#x78BA;&#x8A3A; (<mark>&#x53E3;&#x54BD; only</mark>)</li>
+<li>p16 IHC (免疫螢光染色)，若 70%細胞核、值都呈現染色即確診 (<mark>口咽 only</mark>)</li>
 </ul>
 </li>
 <li>
-<p>Risk:  <span style="margin:0; color: Deepskyblue;">&#x6027;&#x884C;&#x70BA;</span></p>
+<p>Risk:  <span style="margin:0; color: Deepskyblue;">性行為</span></p>
 </li>
 <li>
 <p>GLA: 4:1, -, 55-58y</p>
 </li>
 <li>
-<p>&#x7D44;&#x7E54;</p>
+<p>組織</p>
 <ul>
 <li>nonkeratinizing SCC</li>
 </ul>
 </li>
 </ul>
-<h2 class="mume-header" id="keratoacanthoma%E8%89%AF-%E8%A7%92%E8%B3%AA%E6%A3%98%E7%9A%AE%E7%98%A4">Keratoacanthoma<sup>&#x826F;</sup> (&#x89D2;&#x8CEA;&#x68D8;&#x76AE;&#x7624;)</h2>
-
+<h2 id="keratoacanthoma良-角質棘皮瘤">Keratoacanthoma<sup>良</sup> (角質棘皮瘤) </h2>
 <blockquote>
-<p>&#x7F75;&#x53D6;&#x786C;&#x8981;&#x88DC;&#x5145;&#xFF0C;&#x90FD;&#x7D66;&#x4ED6;&#x8B1B;&#x5C31;&#x597D;&#x5566;</p>
+<p>罵取硬要補充，都給他講就好啦</p>
 </blockquote>
 <ul>
-<li>&#x81EA;&#x9650;&#x6027;&#x4E0A;&#x76AE;&#x589E;&#x751F;</li>
-<li>&#x75C5;&#x56E0;: DNA &#x4FEE;&#x5FA9;&#x7F3A;&#x9677;
+<li>自限性上皮增生</li>
+<li>病因: DNA 修復缺陷
 <ul>
-<li>&#x967D;&#x5149;&#x66DD;&#x66EC;: 65-71y&#xFF0C;&#x7537;&#x6027;</li>
-<li>&#x8207;&#x5176;&#x4ED6;DNA &#x4FEE;&#x5FA9;&#x7F3A;&#x9677;&#x75BE;&#x75C5;&#x76F8;&#x95DC;
+<li>陽光曝曬: 65-71y，男性</li>
+<li>與其他DNA 修復缺陷疾病相關
 <ul>
 <li>Xeroderma Pigmentosum</li>
 <li>Muir-Torre Syndrome</li>
@@ -1393,78 +868,75 @@ html body table .fbox {
 </li>
 </ul>
 </li>
-<li>&#x4F4D;&#x7F6E;: &#x4E0A;&#x4E0B;&#x5507;&#x983B;&#x7387;&#x76F8;&#x7B49;</li>
-<li>&#x7279;&#x5FB5;:
+<li>位置: 上下唇頻率相等</li>
+<li>特徵:
 <ul>
-<li>&#x5805;&#x786C;&#x3001;&#x754C;&#x9650;&#x6E05;&#x695A;&#x3001;&#x5EE3;&#x5E95;</li>
-<li>&#x4E2D;&#x592E;&#x89D2;&#x86CB;&#x767D;&#x6813;&#x585E;</li>
+<li>堅硬、界限清楚、廣底</li>
+<li>中央角蛋白栓塞</li>
 </ul>
 </li>
 </ul>
 <div class="fbox">
-<img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-7.png" alt="alt text" style="width:40%;background-color: white;padding:0">
-<img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-8.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div>
+<img src="paste_src/口病_epithelialTumor-7.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+<img src="paste_src/口病_epithelialTumor-8.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div>
 <ul>
 <li>
-<p>&#x4E09;&#x968E;&#x6BB5;</p>
+<p>三階段</p>
 <ul>
-<li>Growth Phase: &#x6703;&#x8FC5;&#x901F;&#x589E;&#x5927;</li>
-<li>Stationary Phase: &#x7A69;&#x5B9A;&#x5927;&#x5C0F;</li>
-<li>Involution Phase:&#x81EA;&#x767C;&#x6027;&#x6D88;
+<li>Growth Phase: 會迅速增大</li>
+<li>Stationary Phase: 穩定大小</li>
+<li>Involution Phase:自發性消
 <ul>
-<li>&#x5927;&#x591A; 6 &#x81F3; 12 &#x6708;&#x6D88;&#x9000;</li>
+<li>大多 6 至 12 月消退</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p>&#x7D44;&#x7E54;</p>
+<p>組織</p>
 <ul>
-<li>&#x4E2D;&#x592E;&#x51F9;&#x9677;&#x8655;&#x7684;&#x908A;&#x7DE3;&#x6703;&#x6709;&#x92B3;&#x89D2;</li>
-<li>&#x5751;&#x6D1E;&#x5167;&#x5145;&#x6EFF;&#x89D2;&#x86CB;&#x767D;</li>
-<li>&#x4E0D;&#x6703;&#x5EF6;&#x4F38;&#x8D85;&#x904E;&#x75C5;&#x7076;&#x7684;&#x6C57;&#x817A;</li>
-<li>&#x5206;&#x5316;&#x6210;&#x719F;&#xFF0C;&#x4F46;&#x89D2;&#x5316;&#x4E0D;&#x826F;&#xFF0C;&#x53EF;&#x80FD; keratin pearls</li>
-<li>&#x8207; SCC &#x5F88;&#x96E3;&#x5340;&#x5206; &#x2192; &#x5207;</li>
+<li>中央凹陷處的邊緣會有銳角</li>
+<li>坑洞內充滿角蛋白</li>
+<li>不會延伸超過病灶的汗腺</li>
+<li>分化成熟，但角化不良，可能 keratin pearls</li>
+<li>與 SCC 很難區分 → 切</li>
 </ul>
 </li>
 </ul>
-<img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-9.png" alt="alt text" style="width:25%;background-color: white;padding:0">
-<h2 class="mume-header" id="%E6%95%B4%E7%90%86">&#x6574;&#x7406;</h2>
-
-<h3 class="mume-header" id="verruciform-xanthoma-%E7%9B%B8%E9%97%9C%E7%96%BE%E7%97%85">Verruciform xanthoma &#x76F8;&#x95DC;&#x75BE;&#x75C5;</h3>
-
+<img src="paste_src/口病_epithelialTumor-9.png" alt="alt text" style="width:25%;background-color: white;padding:0">
+<h2 id="整理">整理 </h2>
+<h3 id="verruciform-xanthoma-相關疾病">Verruciform xanthoma 相關疾病 </h3>
 <blockquote>
-<p>&#x8207;&#x76AE;&#x819A;&#x3001;&#x9ECF;&#x819C;&#x7834;&#x58DE;&#x76F8;&#x95DC;&#x7684;Immune disease&#x3001;precancerous disease</p>
+<p>與皮膚、黏膜破壞相關的Immune disease、precancerous disease</p>
 </blockquote>
 <ul>
-<li>&#x6241;&#x5E73;&#x82D4;&#x766C;(lichen planus)</li>
-<li>&#x75B1;&#x7621;(pemphigus vulgaris)</li>
-<li>&#x7D05;&#x6591;&#x6027;&#x72FC;&#x7621;(lupus erythematosus)</li>
-<li>&#x79FB;&#x690D;&#x76F8;&#x95DC;&#x75BE;&#x75C5;(graft-versus-host disease(gvhd))</li>
-<li>&#x5927;&#x76B0;&#x6027;&#x8868;&#x76AE;&#x9B06;&#x61C8;(epidermolysis bullosa&#x4FD7;&#x7A31;&#x6CE1;&#x6CE1;&#x9F8D;&#x75C7;)</li>
-<li>&#x4E0A;&#x76AE;&#x75C5;&#x8B8A;(epithelial dysplasia)</li>
-<li>&#x9C57;&#x72C0;&#x7D30;&#x80DE;&#x764C;(squamous cell carcinoma)</li>
-<li>&#x75A3;&#x72C0;&#x89D2;&#x5316;&#x4E0D;&#x826F;&#x7624;(warty dyskeratoma)&#x3002;</li>
+<li>扁平苔癬(lichen planus)</li>
+<li>疱瘡(pemphigus vulgaris)</li>
+<li>紅斑性狼瘡(lupus erythematosus)</li>
+<li>移植相關疾病(graft-versus-host disease(gvhd))</li>
+<li>大皰性表皮鬆懈(epidermolysis bullosa俗稱泡泡龍症)</li>
+<li>上皮病變(epithelial dysplasia)</li>
+<li>鱗狀細胞癌(squamous cell carcinoma)</li>
+<li>疣狀角化不良瘤(warty dyskeratoma)。</li>
 </ul>
-<h3 class="mume-header" id="tnm-staging">TNM staging</h3>
-
+<h3 id="tnm-staging">TNM staging </h3>
 <ul>
-<li>Tumor: &#x539F;&#x767C;&#x6027;&#x816B;&#x7624;(primary tumor)&#x7684;&#x5927;&#x5C0F;&#x548C;&#x4FB5;&#x72AF;&#x7BC4;&#x570D;
+<li>Tumor: 原發性腫瘤(primary tumor)的大小和侵犯範圍
 <ul>
-<li>&#x5927;&#x5C0F;(cm)</li>
-<li>&#x6DF1;&#x5EA6; (DOI&#xFF0C;mm)</li>
-<li><code>TX</code>: &#x7121;&#x6CD5;&#x8A55;&#x4F30;</li>
+<li>大小(cm)</li>
+<li>深度 (DOI，mm)</li>
+<li><code>TX</code>: 無法評估</li>
 <li><code>Tis</code>: carcinoma in situ</li>
 </ul>
 </li>
-<li>Lymph Node: &#x64F4;&#x6563;&#x81F3;&#x5340;&#x57DF;&#x6DCB;&#x5DF4;&#x7D50;&#x7684;&#x7A0B;&#x5EA6;
+<li>Lymph Node: 擴散至區域淋巴結的程度
 <ul>
-<li>&#x8F49;&#x79FB;&#x7684;&#x6DCB;&#x5DF4;&#x7D50;&#x9846;&#x6578;&#x3001;&#x5927;&#x5C0F;(cm)&#x3001;&#x540C;/&#x5C0D;/&#x96D9;&#x5074;(ipsi-, contra-, bi-)</li>
-<li>extranodal extension (ENE&#xFF0C;&#x6DCB;&#x5DF4;&#x7D50;&#x5916;&#x64F4;&#x6563;)
+<li>轉移的淋巴結顆數、大小(cm)、同/對/雙側(ipsi-, contra-, bi-)</li>
+<li>extranodal extension (ENE，淋巴結外擴散)
 <ul>
-<li><code>Minor</code>: &#x64F4;&#x6563;&lt; 2 mm</li>
-<li><code>Major</code>: &#x64F4;&#x6563;&gt; 2 mm</li>
-<li><code>NX</code>: &#x6DCB;&#x5DF4;&#x7D50;&#x7121;&#x6CD5;&#x88AB;&#x8A55;&#x4F30;</li>
+<li><code>Minor</code>: 擴散&lt; 2 mm</li>
+<li><code>Major</code>: 擴散&gt; 2 mm</li>
+<li><code>NX</code>: 淋巴結無法被評估</li>
 </ul>
 </li>
 </ul>
@@ -1473,17 +945,15 @@ html body table .fbox {
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-1.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+<img src="paste_src/口病_epithelialTumor-1.png" alt="alt text" style="width:40%;background-color: white;padding:0">
 </div>
-<h4 class="mume-header" id="oral-melanoma-staging">Oral melanoma staging</h4>
-
+<h4 id="oral-melanoma-staging">Oral melanoma staging </h4>
 <ul>
-<li>T3: &#x9ECF;&#x819C;</li>
-<li>T4a: &#x6DF1;&#x8EDF;&#x7D44;&#x7E54;&#x3001;&#x8EDF;&#x9AA8;&#x3001;&#x786C;&#x9AA8;&#x3001;overlying skin</li>
-<li>T4b: &#x8166;&#x7D44;&#x7E54;&#x53CA;&#x8166;&#x795E;&#x7D93;&#x3001;masticator space&#x3001;&#x9838;&#x52D5;&#x8108;&#x3001;prevertebral space&#x3001;&#x7E31;&#x9694;&#x8154;&#x7D50;&#x69CB;</li>
+<li>T3: 黏膜</li>
+<li>T4a: 深軟組織、軟骨、硬骨、overlying skin</li>
+<li>T4b: 腦組織及腦神經、masticator space、頸動脈、prevertebral space、縱隔腔結構</li>
 </ul>
-<h4 class="mume-header" id="oscc-and-hpv-opscc-staging">OSCC and HPV- OPSCC staging</h4>
-
+<h4 id="oscc-and-hpv–opscc-staging">OSCC and HPV- OPSCC staging </h4>
 <ul>
 <li>T</li>
 </ul>
@@ -1509,14 +979,11 @@ html body table .fbox {
 <td>T2</td>
 <td>T3</td>
 </tr>
-<tr>
-<td>&gt;10</td>
-<td>?</td>
-<td>T3</td>
-<td>T3</td>
-</tr>
 </tbody>
 </table></div>
+<blockquote>
+<p>10 |? |T3| T3</p>
+</blockquote>
 <ul>
 <li>N</li>
 </ul>
@@ -1524,19 +991,19 @@ html body table .fbox {
 <thead>
 <tr>
 <th>N</th>
-<th colspan="2">&#x6DCB;&#x5DF4;&#x7D50;</th>
+<th colspan="2">淋巴結</th>
 
-<th>&#x5927;&#x5C0F;</th>
+<th>大小</th>
 <th>ENE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td rowspan="2">&#x55AE;</td>
-<td rowspan="3">&#x540C;</td>
-<td>&#x2264; 3 cm</td>
-<td rowspan="5">&#x2717;</td>
+<td rowspan="2">單</td>
+<td rowspan="3">同</td>
+<td>≤ 3 cm</td>
+<td rowspan="5">✗</td>
 </tr>
 <tr>
 <td>2a</td>
@@ -1547,15 +1014,15 @@ html body table .fbox {
 </tr>
 <tr>
 <td>2b</td>
-<td>&#x591A;</td>
+<td>多</td>
 
-<td rowspan="2">&#x2264; 6cm</td>
+<td rowspan="2">≤ 6cm</td>
 
 </tr>
 <tr>
 <td>2c</td>
 <td>-</td>
-<td>&#x5C0D;/&#x96D9;</td>
+<td>對/雙</td>
 
 
 </tr>
@@ -1571,7 +1038,7 @@ html body table .fbox {
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>&#x2713;</td>
+<td>✓</td>
 </tr>
 </tbody>
 </table></div>
@@ -1581,89 +1048,155 @@ html body table .fbox {
 <div class="mermaid">graph LR 
 
 
-m[&quot;(M1 or N2)?&quot;] --&gt;|&#x662F;| s4[IV]
-m--&gt;|&#x5426;|n1[N1?] --&gt;|&#x662F;|s3[III]
-n1--&gt;|&#x5426;|s[&quot;T? &amp;rarr; Stage ?&quot;]
-</div><img src="paste_src/&#x53E3;&#x75C5;_epithelialTumor-3.png" alt="alt text" style="width:100%;background-color: white;padding:0">
-<h4 class="mume-header" id="hpv-opscc">HPV+ OPSCC</h4>
-
+m["(M1 or N2)?"] --&gt;|是| s4[IV]
+m--&gt;|否|n1[N1?] --&gt;|是|s3[III]
+n1--&gt;|否|s["T? &amp;rarr; Stage ?"]
+</div><img src="paste_src/口病_epithelialTumor-3.png" alt="alt text" style="width:100%;background-color: white;padding:0">
+<h4 id="hpv-opscc">HPV+ OPSCC </h4>
 <div class="mermaid">graph LR 
 
-m[&quot;M1?&quot;] --&gt;|&#x662F;| s4[IV]
+m["M1?"] --&gt;|是| s4[IV]
 
-m --&gt;|&#x5426;| n[&quot;(N3 or T4)?&quot;] --&gt;|&#x662F;| s3[III]
+m --&gt;|否| n["(N3 or T4)?"] --&gt;|是| s3[III]
 
-n--&gt;|&#x5426;| nn[&quot;(N2 or T3)?&quot;] --&gt;|&#x662F;| s2[II]
-nn --&gt;|&#x5426;| s1[I]
+n--&gt;|否| nn["(N2 or T3)?"] --&gt;|是| s2[II]
+nn --&gt;|否| s1[I]
 
 </div><br><br>
 
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
-<script> 
-var Main_LeftListLiSelector = $(".md-sidebar-toc li");
 
-$(Main_LeftListLiSelector).on('click', function() {
-  $(Main_LeftListLiSelector).removeClass('active');
-  $(this).addClass('active');
-});
+<script>
+var page = document.getElementsByClassName('markdown-preview')[0]
+page.addEventListener('click', function(event) {
+  event.stopPropagation()
+  
+  document.body.removeAttribute('html-show-sidebar-toc');
+ 
+})
 </script>
+
+
       </div>
-      <div class="md-sidebar-toc"><ul>
-<li><a href="#epithelial-tumors">Epithelial tumors</a>
-<ul>
-<li><a href="#hpv">HPV</a></li>
-<li><a href="#melanotic-lesions">Melanotic lesions</a>
-<ul>
-<li><a href="#%E8%89%B2%E7%B4%A0%E5%A2%9E%E5%8A%A0">&#x8272;&#x7D20;&#x589E;&#x52A0;</a></li>
-<li><a href="#naevus">Naevus</a></li>
-<li><a href="#melanoma-%E6%83%A1">Melanoma (&#x60E1;)</a></li>
-</ul>
-</li>
-<li><a href="#oral-potentially-malignant-disorders-opmd">Oral potentially malignant disorders (OPMD)</a>
-<ul>
-<li><a href="#oral-epithelial-dysplasia-oed">Oral epithelial dysplasia (OED)</a></li>
-</ul>
-</li>
-<li><a href="#oral-squamous-cell-carcunomaoscc">Oral Squamous Cell Carcunoma(OSCC)</a>
-<ul>
-<li><a href="#%E5%88%86%E7%B4%9A">&#x5206;&#x7D1A;</a></li>
-</ul>
-</li>
-<li><a href="#verrucous-carcinomavc">Verrucous Carcinoma(VC)</a></li>
-<li><a href="#oropharyngeal-cancer">Oropharyngeal Cancer</a>
-<ul>
-<li><a href="#span-stylemargin0-color-deepskyblue-hpv-associated-oropharyngeal-squamous-cell-ca-opsccspan"> HPV-associated oropharyngeal squamous cell CA (OPSCC)</a></li>
-</ul>
-</li>
-<li><a href="#keratoacanthoma%E8%89%AF-%E8%A7%92%E8%B3%AA%E6%A3%98%E7%9A%AE%E7%98%A4">Keratoacanthoma<sup>&#x826F;</sup> (&#x89D2;&#x8CEA;&#x68D8;&#x76AE;&#x7624;)</a></li>
-<li><a href="#%E6%95%B4%E7%90%86">&#x6574;&#x7406;</a>
-<ul>
-<li><a href="#verruciform-xanthoma-%E7%9B%B8%E9%97%9C%E7%96%BE%E7%97%85">Verruciform xanthoma &#x76F8;&#x95DC;&#x75BE;&#x75C5;</a></li>
-<li><a href="#tnm-staging">TNM staging</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#epithelial-tumors" class="md-toc-link"><p>Epithelial tumors</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#hpv" class="md-toc-link">
+            <p>HPV</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#melanotic-lesions" class="md-toc-link"><p>Melanotic lesions</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#色素增加" class="md-toc-link">
+            <p>色素增加</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#naevus" class="md-toc-link">
+            <p>Naevus</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#melanoma-惡" class="md-toc-link">
+            <p>Melanoma (惡)</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#oral-potentially-malignant-disorders-opmd" class="md-toc-link"><p>Oral potentially malignant disorders (OPMD)</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#oral-epithelial-dysplasia-oed" class="md-toc-link">
+            <p>Oral epithelial dysplasia (OED)</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#oral-squamous-cell-carcunomaoscc" class="md-toc-link"><p>Oral Squamous Cell Carcunoma(OSCC)</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#分級" class="md-toc-link">
+            <p>分級</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#verrucous-carcinomavc" class="md-toc-link">
+            <p>Verrucous Carcinoma(VC)</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#oropharyngeal-cancer" class="md-toc-link"><p>Oropharyngeal Cancer</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#span-stylemargin0-color-deepskyblue-hpv-associated-oropharyngeal-squamous-cell-ca-opsccspan" class="md-toc-link">
+            <p><span style="margin:0; color: Deepskyblue;"> HPV-associated oropharyngeal squamous cell CA (OPSCC)</span></p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#keratoacanthoma良-角質棘皮瘤" class="md-toc-link">
+            <p>Keratoacanthoma<sup>良</sup> (角質棘皮瘤)</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#整理" class="md-toc-link"><p>整理</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#verruciform-xanthoma-相關疾病" class="md-toc-link">
+            <p>Verruciform xanthoma 相關疾病</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#tnm-staging" class="md-toc-link">
+            <p>TNM staging</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
 </div>
-      <a id="sidebar-toc-btn">&#x2261;</a>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
     
     
-    <script>
-// config mermaid init call
-// http://knsv.github.io/mermaid/#configuration
-//
-// You can edit the 'MERMAID_CONFIG' variable below.
-MERMAID_CONFIG = {
-  startOnLoad: false,
+    <script type="module">
+// TODO: If ZenUML gets integrated into mermaid in the future,
+//      we can remove the following lines.
+
+
+var MERMAID_CONFIG = ({"startOnLoad":false});
+if (typeof MERMAID_CONFIG !== 'undefined') {
+  MERMAID_CONFIG.startOnLoad = false
+  MERMAID_CONFIG.cloneCssStyles = false
+  MERMAID_CONFIG.theme = "dark"
 }
 
-if (window['MERMAID_CONFIG']) {
-  window['MERMAID_CONFIG'].startOnLoad = false
-  window['MERMAID_CONFIG'].cloneCssStyles = false
-  window['MERMAID_CONFIG'].theme = "dark"
-}
-mermaid.initialize(window['MERMAID_CONFIG'] || {})
+mermaid.initialize(MERMAID_CONFIG || {})
 if (typeof(window['Reveal']) !== 'undefined') {
   function mermaidRevealHelper(event) {
     var currentSlide = event.currentSlide
@@ -1677,14 +1210,17 @@ if (typeof(window['Reveal']) !== 'undefined') {
       }
     }
   }
-  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('slidetransitionend', mermaidRevealHelper)
   Reveal.addEventListener('ready', mermaidRevealHelper)
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
 } else {
-  mermaid.init(null, document.getElementsByClassName('mermaid'))
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
 }
 </script>
-    
-    
     
     
     

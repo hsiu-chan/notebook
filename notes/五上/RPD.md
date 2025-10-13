@@ -14,6 +14,24 @@ export_on_save:
 # RPD 
 
 
+- Support
+  - rest
+  - indirect retainer
+  - denture base
+  - major connector
+- Retention
+  - direct retainers
+- Stability
+  - proximal plate
+  - major connector
+  - minor connector
+  - lingual plate
+  - reciprocal arm
+  - denture base
+  - rigid components in contact with tooth surfaces
+
+
+
 :::note {Abutment}
 用來支撐、固持、或穩定局部義齒 的天然牙或植體 
 
@@ -116,12 +134,13 @@ Stress breaking Design
 
 ---
 #### Cast Circumferential clasp 
-
+> 傳統經典
 - Rest, Akers clasp, Reciprocal
 - 鑄造
   - 半圓
   - 難以調整 
   - 耐用
+- 缺乏 Stress breaking
 
 :::fbox 
 ![alt text](paste_src/RPD-21.png =30) ![alt text](paste_src/RPD-22.png =60)
@@ -340,9 +359,7 @@ Stress breaking Design
 
 
 
-
-
-## Inderect retainer 
+## Indirect retainer 
 
 - fulcrum line: Rest/ abutment 連線 
 - Inderect retainer 離 Rest 越遠，抗旋轉越好 
@@ -401,7 +418,6 @@ Stress breaking Design
 - 為了增加 Inderect retainer 距離，選擇 **MO resst at 2^nd^ Molar**
 
 
-
 ## Denture Base 
 :::left
 - landmark
@@ -451,3 +467,155 @@ relief(3)|Incisive Papilla |The Crest of the Residual Ridge
 - Denture Base 不能 Overextension
 
 ![alt text](paste_src/RPD-12.png)
+
+
+## Stability 
+
+
+- 金屬材夠硬，有 Stability
+- 只是一份調查
+  - 下顎大多是 Class I, II 
+
+![alt text](paste_src/RPD-45.png)
+
+
+- 增加抗力臂
+  - 抗力臂長 &uarr; &rarr; abutment tooth 受力 &darr; &rarr; stability &uarr;
+
+
+
+
+
+
+### Class I 
+
+- R^2^>R^1^
+- 拔牙效應
+- 要 Stress breaking
+  - Wrought Wire
+  - 不能 Cast circumferential retainer
+
+:::fbox 
+![alt text](paste_src/RPD-46.png =40)
+![alt text](paste_src/RPD-47.png =30)
+![alt text](paste_src/RPD-49.png =30)
+
+:::
+
+#### Rotation
+##### Rotation about an fulcrum lines 
+
+> 不會在 Soft tissue 上水平移動，力量雖大，傷害相對小
+
+- Resistant
+  - Retentive clasp 
+  - Minor connector
+  - Indirect retainer
+
+![alt text](paste_src/RPD-52.png =60)
+
+
+##### Rotation about the crest of the residual ridge
+
+
+- Resistant
+  - major and minor connectors
+
+
+![alt text](paste_src/RPD-53.png =60)
+
+
+##### Rotation about center vertical axis 
+
+- Resistant
+  - reciprocal arms
+  - major and minor connectors
+
+  
+![alt text](paste_src/RPD-54.png)
+
+
+
+### Guiding plane 
+
+![alt text](paste_src/RPD-55.png =85)
+
+- 垂直 2-4mm 
+  - Distal Ext. 考量 Stress breaking，只需 1.5-2mm
+- Reciprocal arms 
+  - 只有 retentive arm 接觸會產生側向力 &rarr; 修磨 Guiding 確保 Reciprocal arms 同時接處
+  - 無法磨出適合的 Guiding plane 也能用 lingual plate
+:::fbox 
+![alt text](paste_src/RPD-56.png =45)
+![alt text](paste_src/RPD-57.png =50)
+:::
+
+- 前牙缺牙
+  - 能減少 undercuts 避免塞東西
+
+![alt text](paste_src/RPD-58.png)
+
+
+###  Block out 
+
+Master cast 做完 Block out 才能去翻耐火模
+
+
+#### Parallel block out 
+- 依照 path of insertion
+- 6個要做平行封凹 
+
+
+|Parallel block out |Thickness |Material
+|-|-|-|
+ guiding planes (Proximal)|只有析量刀與**牙面接觸點**之下的倒凹| Hard baseplate wax or blockout material|
+minor connectors下方|^|^|
+connectors 所跨越過的組織倒凹 |只有析量刀與**牙模型表面接觸點** 之下的倒凹|^|
+minor connectors or lingual plates所覆蓋的鄰接縫隙|^|^|
+Bar clasp 起點所跨越過的組織倒凹|^|^|
+bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含的倒凹|-|
+
+
+#### Shaped block out
+
+- 在牙齒之頰及舌側面，用來定位牙鉤臂的蠟型
+- 為了特定 clasp 功能，常用於 I bar, RPI clasp, RPA clasp
+- Thickness
+  - 定位 Retentive Arms: 盡量接近齒頸部位
+  - 定位 Reciprocal arms: 順者 Height of contour
+  - I bar 進入倒凹區時，會在牙齦邊緣處做「斜面狀」或「凹弧狀」的 shaped block out，讓金屬能順利滑過軟組織、不壓迫牙齦。
+- Material: Hard baseplate wax
+#### Arbitrary block out
+
+- 方便鑄造與脫模，而非改變義齒設計
+- 較大面積或深倒凹時可搭配 **oil-based clay** 以填平。
+
+
+
+| Arbitrary block out | Thickness | Material | 備註 |
+|------------|------------------|------------|------|
+| 所有牙齦溝 | 牙齦溝適度平順 | Hard baseplate wax | 避免金屬框架壓迫牙齦緣 |
+| denture framework 下方的大範圍組織倒凹 | 以蠟刀任意填平 | Hard baseplate wax 或 oil-based clay | 防止倒凹造成脫模困難 |
+| denture framework distal 組織倒凹  | ^ | ^| 常見於終末 abutment teeth diatal 組織處 |
+| 未包含於義齒設計的Buccal 牙齒及組織倒凹 | 填平至Coronal third &uarr; | ^| 修整非功能性倒凹區以利脫模 |
+
+#### Relief 
+
+- 刻意留出空間避免壓迫組織
+
+
+
+| 區域 / 適應情況 | Thickness |Material |
+|------------------|----------------|------------|
+| lingual bar/plates 下 |\oneline{
+- 舌側骨面平行於義齒置入方向: 32 gauge wax（0.2–0.25 mm）
+- 舌側骨面**倒凹**: Parallel block out 再 32 gauge
+}| Adhesive wax|
+| major connectors 會接觸的軟薄組織區：Md. Lingual 骨嵴, palatal raphes | 薄薄一層蠟|Hard baseplate wax|
+| Denture base framework 附著在 Resin 上方部分 |20 gauge wax | Adhesive Wax |
+
+
+
+### 整理表 
+
+![alt text](paste_src/RPD-59.png)

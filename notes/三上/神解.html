@@ -1,277 +1,16 @@
 <!DOCTYPE html><html><head>
-      <title>&#x795E;&#x89E3;</title>
+      <title>神解</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
       
       
-      
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid@9.1.7/dist/mermaid.min.js"></script>
-      
-      
-      
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js"></script>
       
       
       <style>
-      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url("data:application/x-font-woff;charset=utf-8;base64,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") format("woff");
-}
-
-.admonition {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
-  position: relative;
-  margin: 1.5625em 0;
-  padding: 0 1.2rem;
-  border-left: .4rem solid rgba(68, 138, 255, .8);
-  border-radius: .2rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  overflow: auto;
-}
-
-.admonition>p {
-  margin-top: .8rem;
-}
-
-.admonition>.admonition-title {
-  margin: 0 -1.2rem;
-  padding: .8rem 1.2rem .8rem 3.6rem;
-  border-bottom: 1px solid rgba(68, 138, 255, .2);
-  background-color: rgba(68, 138, 255, .1);
-  font-weight: 700;
-}
-
-.admonition>.admonition-title:before {
-  position: absolute;
-  left: 1.2rem;
-  font-size: 1.5rem;
-  color: rgba(68, 138, 255, .8);
-  content: "\E3C9";
-}
-
-.admonition>.admonition-title:before {
-  font-family: Material Icons;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 2rem;
-  text-transform: none;
-  white-space: nowrap;
-  speak: none;
-  word-wrap: normal;
-  direction: ltr;
-}
-
-.admonition.summary,
-.admonition.abstract,
-.admonition.tldr {
-  border-left-color: rgba(0, 176, 255, .8);
-}
-
-.admonition.summary>.admonition-title,
-.admonition.abstract>.admonition-title,
-.admonition.tldr>.admonition-title {
-  background-color: rgba(0, 176, 255, .1);
-  border-bottom-color: rgba(0, 176, 255, .2);
-}
-
-.admonition.summary>.admonition-title:before,
-.admonition.abstract>.admonition-title:before,
-.admonition.tldr>.admonition-title:before {
-  color: rgba(0, 176, 255, 1);
-  ;
-  content: "\E8D2";
-}
-
-.admonition.hint,
-.admonition.tip {
-  border-left-color: rgba(0, 191, 165, .8);
-}
-
-.admonition.hint>.admonition-title,
-.admonition.tip>.admonition-title {
-  background-color: rgba(0, 191, 165, .1);
-  border-bottom-color: rgba(0, 191, 165, .2);
-}
-
-.admonition.hint>.admonition-title:before,
-.admonition.tip>.admonition-title:before {
-  color: rgba(0, 191, 165, 1);
-  content: "\E80E";
-}
-
-.admonition.info,
-.admonition.todo {
-  border-left-color: rgba(0, 184, 212, .8);
-}
-
-.admonition.info>.admonition-title,
-.admonition.todo>.admonition-title {
-  background-color: rgba(0, 184, 212, .1);
-  border-bottom-color: rgba(0, 184, 212, .2);
-}
-
-.admonition.info>.admonition-title:before,
-.admonition.todo>.admonition-title:before {
-  color: rgba(0, 184, 212, 1);
-  ;
-  content: "\E88E";
-}
-
-.admonition.success,
-.admonition.check,
-.admonition.done {
-  border-left-color: rgba(0, 200, 83, .8);
-}
-
-.admonition.success>.admonition-title,
-.admonition.check>.admonition-title,
-.admonition.done>.admonition-title {
-  background-color: rgba(0, 200, 83, .1);
-  border-bottom-color: rgba(0, 200, 83, .2);
-}
-
-.admonition.success>.admonition-title:before,
-.admonition.check>.admonition-title:before,
-.admonition.done>.admonition-title:before {
-  color: rgba(0, 200, 83, 1);
-  ;
-  content: "\E876";
-}
-
-.admonition.question,
-.admonition.help,
-.admonition.faq {
-  border-left-color: rgba(100, 221, 23, .8);
-}
-
-.admonition.question>.admonition-title,
-.admonition.help>.admonition-title,
-.admonition.faq>.admonition-title {
-  background-color: rgba(100, 221, 23, .1);
-  border-bottom-color: rgba(100, 221, 23, .2);
-}
-
-.admonition.question>.admonition-title:before,
-.admonition.help>.admonition-title:before,
-.admonition.faq>.admonition-title:before {
-  color: rgba(100, 221, 23, 1);
-  ;
-  content: "\E887";
-}
-
-.admonition.warning,
-.admonition.attention,
-.admonition.caution {
-  border-left-color: rgba(255, 145, 0, .8);
-}
-
-.admonition.warning>.admonition-title,
-.admonition.attention>.admonition-title,
-.admonition.caution>.admonition-title {
-  background-color: rgba(255, 145, 0, .1);
-  border-bottom-color: rgba(255, 145, 0, .2);
-}
-
-.admonition.attention>.admonition-title:before {
-  color: rgba(255, 145, 0, 1);
-  content: "\E417";
-}
-
-.admonition.warning>.admonition-title:before,
-.admonition.caution>.admonition-title:before {
-  color: rgba(255, 145, 0, 1);
-  content: "\E002";
-}
-
-.admonition.failure,
-.admonition.fail,
-.admonition.missing {
-  border-left-color: rgba(255, 82, 82, .8);
-}
-
-.admonition.failure>.admonition-title,
-.admonition.fail>.admonition-title,
-.admonition.missing>.admonition-title {
-  background-color: rgba(255, 82, 82, .1);
-  border-bottom-color: rgba(255, 82, 82, .2);
-}
-
-.admonition.failure>.admonition-title:before,
-.admonition.fail>.admonition-title:before,
-.admonition.missing>.admonition-title:before {
-  color: rgba(255, 82, 82, 1);
-  ;
-  content: "\E14C";
-}
-
-.admonition.danger,
-.admonition.error,
-.admonition.bug {
-  border-left-color: rgba(255, 23, 68, .8);
-}
-
-.admonition.danger>.admonition-title,
-.admonition.error>.admonition-title,
-.admonition.bug>.admonition-title {
-  background-color: rgba(255, 23, 68, .1);
-  border-bottom-color: rgba(255, 23, 68, .2);
-}
-
-.admonition.danger>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E3E7";
-}
-
-.admonition.error>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E14C";
-}
-
-.admonition.bug>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E868";
-}
-
-.admonition.example,
-.admonition.snippet {
-  border-left-color: rgba(0, 184, 212, .8);
-}
-
-.admonition.example>.admonition-title,
-.admonition.snippet>.admonition-title {
-  background-color: rgba(0, 184, 212, .1);
-  border-bottom-color: rgba(0, 184, 212, .2);
-}
-
-.admonition.example>.admonition-title:before,
-.admonition.snippet>.admonition-title:before {
-  color: rgba(0, 184, 212, 1);
-  ;
-  content: "\E242";
-}
-
-.admonition.quote,
-.admonition.cite {
-  border-left-color: rgba(158, 158, 158, .8);
-}
-
-.admonition.quote>.admonition-title,
-.admonition.cite>.admonition-title {
-  background-color: rgba(158, 158, 158, .1);
-  border-bottom-color: rgba(158, 158, 158, .2);
-}
-
-.admonition.quote>.admonition-title:before,
-.admonition.cite>.admonition-title:before {
-  color: rgba(158, 158, 158, 1);
-  ;
-  content: "\E244";
-}
-
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#aab1bf;background-color:#30353f!important;border:#4b5261;border-radius:3px}pre[class*=language-]{padding:1em}code[class*=language-] .token.cdata,code[class*=language-] .token.comment,code[class*=language-] .token.doctype,code[class*=language-] .token.prolog,pre[class*=language-] .token.cdata,pre[class*=language-] .token.comment,pre[class*=language-] .token.doctype,pre[class*=language-] .token.prolog{color:#5b6270}code[class*=language-] .namespace,pre[class*=language-] .namespace{opacity:.7}code[class*=language-] .token.constant,pre[class*=language-] .token.constant{color:#d19965}code[class*=language-] .token.boolean,code[class*=language-] .token.function-name,code[class*=language-] .token.number,pre[class*=language-] .token.boolean,pre[class*=language-] .token.function-name,pre[class*=language-] .token.number{color:#d19965}code[class*=language-] .token.tag,pre[class*=language-] .token.tag{color:#df6b75}code[class*=language-] .token.symbol,pre[class*=language-] .token.symbol{color:#56b5c2}code[class*=language-] .token.selector,pre[class*=language-] .token.selector{color:#c578dd}code[class*=language-] .token.attr-name,pre[class*=language-] .token.attr-name{color:#d19965}code[class*=language-] .token.string,pre[class*=language-] .token.string{color:#97c279}code[class*=language-] .token.char,pre[class*=language-] .token.char{color:#56b5c2}code[class*=language-] .token.url,pre[class*=language-] .token.url{color:#56b5c2}code[class*=language-] .token.operator,pre[class*=language-] .token.operator{color:#aab1bf}code[class*=language-] .token.atrule,code[class*=language-] .token.attr-value,code[class*=language-] .token.keyword,pre[class*=language-] .token.atrule,pre[class*=language-] .token.attr-value,pre[class*=language-] .token.keyword{color:#c578dd}code[class*=language-] .token.function,pre[class*=language-] .token.function{color:#61afef}code[class*=language-] .token.class-name,pre[class*=language-] .token.class-name{color:#e4bf7a}code[class*=language-] .token.variable,pre[class*=language-] .token.variable{color:#d19965}code[class*=language-] .token.regex,pre[class*=language-] .token.regex{color:#56b5c2}code[class*=language-] .token.important,pre[class*=language-] .token.important{color:#df6b75}code[class*=language-] .token.bold,code[class*=language-] .token.important,pre[class*=language-] .token.bold,pre[class*=language-] .token.important{font-weight:700}code[class*=language-] .token.italic,pre[class*=language-] .token.italic{font-style:italic}code[class*=language-] .token.entity,pre[class*=language-] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#aab1bf;background-color:#272b33;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#fff}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#7c869c}html body strong{color:#fff}html body del{color:#7c869c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#7c869c;background-color:#393f4a;border-left:4px solid #4b5261}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#4b5261;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#fff}html body table td,html body table th{border:1px solid #4b5261;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#fff;background-color:#393f4a;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#4b5261;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#fff;border:1px solid #4b5261;border-bottom:2px solid #3e4450;padding:2px 4px;background-color:#393f4a;border-radius:3px}@media print{html body{background-color:#272b33}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#fff;page-break-after:avoid}html body blockquote{color:#7c869c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face{font-family:"Material Icons";font-style:normal;font-weight:400;src:local("Material Icons"),local("MaterialIcons-Regular"),url("data:application/x-font-woff;charset=utf-8;base64,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") format("woff")}.admonition{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);position:relative;margin:1.5625em 0;padding:0 1.2rem;border-left:.4rem solid rgba(68,138,255,.8);border-radius:.2rem;background-color:rgba(255,255,255,.05);overflow:auto}.admonition>p{margin-top:.8rem}.admonition>.admonition-title{margin:0 -1.2rem;padding:.8rem 1.2rem .8rem 3.6rem;border-bottom:1px solid rgba(68,138,255,.2);background-color:rgba(68,138,255,.1);font-weight:700}.admonition>.admonition-title:before{position:absolute;left:1.2rem;font-size:1.5rem;color:rgba(68,138,255,.8);content:"\E3C9"}.admonition>.admonition-title:before{font-family:Material Icons;font-style:normal;font-variant:normal;font-weight:400;line-height:2rem;text-transform:none;white-space:nowrap;speak:none;word-wrap:normal;direction:ltr}.admonition.abstract,.admonition.summary,.admonition.tldr{border-left-color:rgba(0,176,255,.8)}.admonition.abstract>.admonition-title,.admonition.summary>.admonition-title,.admonition.tldr>.admonition-title{background-color:rgba(0,176,255,.1);border-bottom-color:rgba(0,176,255,.2)}.admonition.abstract>.admonition-title:before,.admonition.summary>.admonition-title:before,.admonition.tldr>.admonition-title:before{color:#00b0ff;content:"\E8D2"}.admonition.hint,.admonition.tip{border-left-color:rgba(0,191,165,.8)}.admonition.hint>.admonition-title,.admonition.tip>.admonition-title{background-color:rgba(0,191,165,.1);border-bottom-color:rgba(0,191,165,.2)}.admonition.hint>.admonition-title:before,.admonition.tip>.admonition-title:before{color:#00bfa5;content:"\E80E"}.admonition.info,.admonition.todo{border-left-color:rgba(0,184,212,.8)}.admonition.info>.admonition-title,.admonition.todo>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.info>.admonition-title:before,.admonition.todo>.admonition-title:before{color:#00b8d4;content:"\E88E"}.admonition.check,.admonition.done,.admonition.success{border-left-color:rgba(0,200,83,.8)}.admonition.check>.admonition-title,.admonition.done>.admonition-title,.admonition.success>.admonition-title{background-color:rgba(0,200,83,.1);border-bottom-color:rgba(0,200,83,.2)}.admonition.check>.admonition-title:before,.admonition.done>.admonition-title:before,.admonition.success>.admonition-title:before{color:#00c853;content:"\E876"}.admonition.faq,.admonition.help,.admonition.question{border-left-color:rgba(100,221,23,.8)}.admonition.faq>.admonition-title,.admonition.help>.admonition-title,.admonition.question>.admonition-title{background-color:rgba(100,221,23,.1);border-bottom-color:rgba(100,221,23,.2)}.admonition.faq>.admonition-title:before,.admonition.help>.admonition-title:before,.admonition.question>.admonition-title:before{color:#64dd17;content:"\E887"}.admonition.attention,.admonition.caution,.admonition.warning{border-left-color:rgba(255,145,0,.8)}.admonition.attention>.admonition-title,.admonition.caution>.admonition-title,.admonition.warning>.admonition-title{background-color:rgba(255,145,0,.1);border-bottom-color:rgba(255,145,0,.2)}.admonition.attention>.admonition-title:before{color:#ff9100;content:"\E417"}.admonition.caution>.admonition-title:before,.admonition.warning>.admonition-title:before{color:#ff9100;content:"\E002"}.admonition.fail,.admonition.failure,.admonition.missing{border-left-color:rgba(255,82,82,.8)}.admonition.fail>.admonition-title,.admonition.failure>.admonition-title,.admonition.missing>.admonition-title{background-color:rgba(255,82,82,.1);border-bottom-color:rgba(255,82,82,.2)}.admonition.fail>.admonition-title:before,.admonition.failure>.admonition-title:before,.admonition.missing>.admonition-title:before{color:#ff5252;content:"\E14C"}.admonition.bug,.admonition.danger,.admonition.error{border-left-color:rgba(255,23,68,.8)}.admonition.bug>.admonition-title,.admonition.danger>.admonition-title,.admonition.error>.admonition-title{background-color:rgba(255,23,68,.1);border-bottom-color:rgba(255,23,68,.2)}.admonition.danger>.admonition-title:before{color:#ff1744;content:"\E3E7"}.admonition.error>.admonition-title:before{color:#ff1744;content:"\E14C"}.admonition.bug>.admonition-title:before{color:#ff1744;content:"\E868"}.admonition.example,.admonition.snippet{border-left-color:rgba(0,184,212,.8)}.admonition.example>.admonition-title,.admonition.snippet>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.example>.admonition-title:before,.admonition.snippet>.admonition-title:before{color:#00b8d4;content:"\E242"}.admonition.cite,.admonition.quote{border-left-color:rgba(158,158,158,.8)}.admonition.cite>.admonition-title,.admonition.quote>.admonition-title{background-color:rgba(158,158,158,.1);border-bottom-color:rgba(158,158,158,.2)}.admonition.cite>.admonition-title:before,.admonition.quote>.admonition-title:before{color:#9e9e9e;content:"\E244"}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 .markdown-preview {
@@ -301,37 +40,119 @@
 }
 .markdown-preview h4 {
   font-style: italic;
-  font-weight: normal ;
+  font-weight: normal;
   font-size: 1.2em;
 }
 .markdown-preview hr {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
+@media screen and (max-width: 600px) {
+  .table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .table-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
 .markdown-preview table {
-  display: block;
-  max-width: 100%;
-  overflow: auto;
+  width: 100%;
+  table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
+  border-collapse: collapse;
+  display: table;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .markdown-preview table {
+    table-layout: auto;
+    display: table;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+.markdown-preview table thead {
+  position: sticky;
+  background-color: hsl(220, 13%, 8%);
+  top: 0;
+  z-index: 999;
 }
 .markdown-preview table th {
   text-align: center;
   font-weight: bold;
   color: #81b4f4;
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table td {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table tr {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td,
+.markdown-preview table th {
+  padding: 0;
+  position: relative;
+}
+.markdown-preview table td ol,
+.markdown-preview table th ol,
+.markdown-preview table td ul,
+.markdown-preview table th ul {
+  list-style-position: inside;
+  /* 控制項目符號的位置 */
+  text-align: left;
+  /* 文字對齊方式 */
+}
+.markdown-preview table .table-diagonal {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49%, #8b8b8b 49%, #8b8b8b 51%, rgba(0, 0, 0, 0) 51%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.markdown-preview table .table-diagonal .top-left {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.markdown-preview table .table-diagonal .top-right {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.markdown-preview table .table-diagonal .bottom-right {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+.markdown-preview table .table-diagonal .bottom-left {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -344,201 +165,155 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   left: 0;
   width: 200px;
   height: 100%;
-  padding: 32px 10px 48px 0;
+  padding: 50px 10px 48px 0;
   font-size: 14px;
   box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
   box-sizing: border-box;
   overflow: auto;
   background-color: inherit;
 }
-html {
-  /* 侧栏 */
-  /*.md-sidebar-toc ul li:hover > ul,
-  .md-sidebar-toc ul li:hover > ul ul{
-    display: block;
-  }*/
-  /* 侧栏自动编号 */
-  /* 复位计数器 */
-  /* 进行编号 */
-}
-html .md-sidebar-toc {
-  margin: 0rem 0rem 0em 0em;
-  padding: 0rem 0rem 0em 0rem;
-  width: auto;
-  max-width: 768px;
-  margin-bottom: 1em;
-  background-color: rgba(255, 255, 255, 0.1);
-  /*背景颜色*/
-  position: absolute;
-  z-index: 70;
-}
-html .md-sidebar-toc a {
-  color: inherit;
-  font-size: 0.7rem !important;
-}
-html .md-sidebar-toc a:hover {
-  color: inherit;
-}
-html .md-sidebar-toc li {
-  margin-left: 1rem;
-  margin-bottom: 0 !important;
-  text-align: left;
-  /*左对齐*/
-}
-html .md-sidebar-toc ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-  padding-right: 0 !important;
-}
-html .md-sidebar-toc ul li {
-  font-size: 0.8rem !important;
-  /*字号*/
-  font-weight: bold;
-  /*一级大纲*/
-}
-html .md-sidebar-toc ul li:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html .md-sidebar-toc ul ul {
-  padding-left: 0rem !important;
-  display: none;
-}
-html .md-sidebar-toc .active {
-  color: #87ffff;
-  font-style: italic;
-}
-html .md-sidebar-toc .active ul,
-html .md-sidebar-toc .active ul ul,
-html .md-sidebar-toc .active li {
-  display: block;
-}
-html .md-sidebar-toc ul ul:hover {
-  color: #87ffff;
-}
-html .md-sidebar-toc ul ul li {
-  margin-bottom: 8pt !important;
-  margin-top: 3pt !important;
-  margin-left: 0rem;
-  font-size: 0.8rem !important;
-  /*字号*/
-  font-style: normal;
-  font-weight: normal;
-  padding-left: 0.2rem;
-  border-left: 2px rgba(0, 0, 0, 0) solid;
-}
-html .md-sidebar-toc ul ul li:hover {
-  font-style: normal;
-  border-left: 2px solid;
-}
-html .md-sidebar-toc ul ul ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-}
-html .md-sidebar-toc ul ul ul li {
-  margin-top: 2pt !important;
-  margin-bottom: 2pt !important;
-  margin-left: 0rem;
-  padding-left: 0.5rem;
-  border-left: 0px;
-}
-html .md-sidebar-toc ul ul ul li:hover {
-  border-left: 0px solid;
-}
 html body {
-  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+  background-color: hsl(220, 13%, 18%);
+  /* === Markdown Preview Enhancer TOC 樣式新版 === */
+  /* 縮排*/
+  /* TOC link */
+  /* 每層 details 都要重置下一層 counter */
+  /* 第一層：h1 */
+  /* 第二層：h2 */
+  /* 第三層：h3 */
+  /* 第四層：h4 */
+  /* 縮排 
+.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
+.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
+.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
+.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
+  /* hover & active */
+  /*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
 }
-html .md-sidebar-toc li {
-  counter-reset: outline-h1;
+html body .md-sidebar-toc {
+  margin: 0;
+  padding: 0.5rem 0;
+  position: absolute;
+  max-width: 768px;
+  background-color: rgba(186, 55, 55, 0.1);
+  z-index: 70;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
-html .md-sidebar-toc ul li {
-  counter-reset: outline-h2;
+html body .md-toc-link-wrapper {
+  list-style: none!important;
 }
-html .md-sidebar-toc ul ul li {
-  counter-reset: outline-h3;
+html body div.md-toc-link-wrapper {
+  margin-left: 0px!important;
 }
-html .md-sidebar-toc ul ul ul li {
-  counter-reset: outline-h4;
+html body details > div > div.md-toc-link-wrapper {
+  margin-left: 24px!important;
 }
-html .md-sidebar-toc ul ul ul ul li {
-  counter-reset: outline-h5;
+html body .md-sidebar-toc a {
+  color: inherit;
+  text-decoration: none;
 }
-html .md-sidebar-toc ul ul li:before {
-  counter-increment: outline-h2;
-  content: counter(outline-h2) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc a:hover {
+  color: #87ffff;
+  font-style: italic;
 }
-html .md-sidebar-toc ul ul ul li:before {
-  counter-increment: outline-h3;
-  content: counter(outline-h2) "." counter(outline-h3) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc {
+  counter-reset: toc-h1;
 }
-html .md-sidebar-toc ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc details {
+  counter-reset: toc-h2;
 }
-html .md-sidebar-toc ul ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc details details {
+  counter-reset: toc-h3;
 }
-.dcl {
+html body .md-sidebar-toc details details details {
+  counter-reset: toc-h4;
+}
+html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h1;
+  content: counter(toc-h1) ". ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h2;
+  content: counter(toc-h1) "." counter(toc-h2) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h3;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h4;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper.active a {
+  color: #87ffff;
+  font-weight: bold;
+}
+html body .dcl {
   /* block 水平置中的方法 */
   margin: 0 auto;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
   margin-right: -1%;
 }
-header,
-section,
-aside,
-.in,
-footer {
+html body header,
+html body section,
+html body aside,
+html body .in,
+html body footer {
   margin: 0 1% 0.3em 0;
 }
-section {
+html body section {
   float: left;
   width: 49%;
 }
-footer {
+html body footer {
   margin-bottom: 0;
   /* 不准其他元素出現在其左右 */
   clear: both;
 }
-/*
-/////三线表/////
-table{
-    border-top: 1.5pt solid;
-    border-bottom: 1.5pt solid;
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    text-align:center;                          //文字居中
-  page-break-inside:avoid;                    //禁止断页
-  width: 100%;                                //扩展表格宽度
-  overflow: auto;
-  margin-bottom: 8pt;                         //表格间距
-  border-collapse:collapse;       
-}
-
-table .katex{
-  font-size: 9pt;                             //表内公式
-}
-table td{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              //表内文字
-}
-
-table thead{
-  border-bottom: 0.75pt solid black;        //三线表中间线
-}
-
-//标题行
-table th{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              
-}
-*/
-.btn {
+html body .btn {
   position: fixed;
   z-index: 99;
   font-size: 24px;
@@ -549,65 +324,139 @@ table th{
   opacity: 0.4;
   word-wrap: break-word;
 }
-.btn:active {
+html body .btn:active {
   opacity: 0.8;
+}
+@media screen and (max-width: 400px) {
+  html body img {
+    width: 100% !important;
+  }
+}
+html body .fbox {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html body .fbox img {
+  position: relative;
+  left: 0;
+  transform: translate(0, 0);
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
-    </head>
-    <body for="html-export">
-      <div class="mume markdown-preview  ">
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
       <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
       <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="%E8%84%8A%E6%A4%8E">&#x810A;&#x690E;</h1>
-
+<link rel="stylesheet" href="../Hyper_md/md.css">
+<h1 id="脊椎">脊椎 </h1>
 <ul>
 <li>lateral horn
 <ul>
-<li>&#x4EA4;&#x611F;</li>
+<li>交感</li>
 </ul>
 </li>
 <li>Gracile fasciculus
 <ul>
-<li>&#x4E0A;&#x80A2;</li>
+<li>上肢</li>
 </ul>
 </li>
 <li>fasciculi proprii
 <ul>
-<li>&#x8DE8;&#x5C64;&#x50B3;&#x905E;&#x7684;&#x795E;&#x7D93;&#x675F;</li>
+<li>跨層傳遞的神經束</li>
 </ul>
 </li>
-<li>Relay (projection) cell (20 50 &#x3BC;m)
+<li>Relay (projection) cell (20 50 μm)
 <ul>
-<li>&#x50B3;&#x611F;&#x89BA;&#x5230;&#x5927;&#x8166;</li>
+<li>傳感覺到大腦</li>
 </ul>
 </li>
-<li>&#x3B1; motor neuron and &#x3B3; motor neuron<br>
+<li>α motor neuron and γ motor neuron<br>
 (50 100 uM
 <ul>
-<li>&#x9AA8;&#x9ABC;&#x808C;</li>
+<li>骨骼肌</li>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/image-10.png" alt></p>
-<h2 class="mume-header" id="%E7%99%BC%E8%82%B2">&#x767C;&#x80B2;</h2>
-
+<img src="paste_src/image-10.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="發育">發育 </h2>
 <ul>
-<li>Neural crest &#x2192; posterior root ganglia</li>
+<li>Neural crest → posterior root ganglia</li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-13.png" alt="Alt text" style="width:20%;background-color: white;">
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-14.png" alt="Alt text" style="width:80%;background-color: white;">
+<div class="fbox">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-13.png" alt="Alt text" style="width:20%;background-color: white;padding:0">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-14.png" alt="Alt text" style="width:80%;background-color: white;padding:0">
 </div>
-<h2 class="mume-header" id="central-group">Central group</h2>
-
+<h2 id="central-group">Central group </h2>
 <ul>
 <li>C3-5
 <ul>
@@ -627,99 +476,86 @@ table th{
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/image-11.png" alt></p>
-<h2 class="mume-header" id="posterior-gray-columns">posterior gray columns</h2>
-
+<img src="paste_src/image-11.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="posterior-gray-columns">posterior gray columns </h2>
 <ul>
 <li>Substantia gelatinosa group
 <ul>
-<li>&#x6EAB;&#x3001;&#x75DB;</li>
+<li>溫、痛</li>
 </ul>
 </li>
 <li>Nucleus proprius group
 <ul>
-<li>&#x81EA;&#x9AD4;&#x611F;&#x89BA; proprioception</li>
+<li>自體感覺 proprioception</li>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/image-12.png" alt></p>
-<h2 class="mume-header" id="posterior-gray-columns-intermediate">posterior gray columns (intermediate)</h2>
-
+<img src="paste_src/image-12.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="posterior-gray-columns-intermediate">posterior gray columns (intermediate) </h2>
 <ul>
-<li>Nucleus dorsalis (Clarke&#x2019;s column): C8 L3</li>
+<li>Nucleus dorsalis (Clarke’s column): C8 L3</li>
 </ul>
-<h2 class="mume-header" id="%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84">&#x8981;&#x77E5;&#x9053;&#x7684;</h2>
-
-<h3 class="mume-header" id="%E7%81%B0%E8%B3%AA">&#x7070;&#x8CEA;</h3>
-
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-10.png" alt="Alt text" style="width:50%;background-color: white;">
+<h2 id="要知道的">要知道的 </h2>
+<h3 id="灰質">灰質 </h3>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-10.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 <blockquote>
-<p>&#x518D;&#x4F86;&#x662F;&#x5404;&#x5C64;&#x7D30;&#x80DE;&#x672C;&#x9AD4;&#x529F;&#x80FD;</p>
+<p>再來是各層細胞本體功能</p>
 </blockquote>
-<h4 class="mume-header" id="lamina-i">Lamina I</h4>
-
+<h4 id="lamina-i">Lamina I </h4>
 <ul>
 <li>tip of the dorsal horn</li>
 </ul>
-<h4 class="mume-header" id="substantia-gelatinosa-group-laminae-ii">Substantia gelatinosa group (laminae II)</h4>
-
+<h4 id="substantia-gelatinosa-group-laminae-ii">Substantia gelatinosa group (laminae II) </h4>
 <ul>
-<li>Gray column &#x4E2D;&#x6700;&#x9760;&#x80CC;&#x5074;&#x7684;&#x5340;&#x57DF;</li>
-<li>&#x8F38;&#x5165;&#x75DB;&#x89BA;(pain)&#x3001;&#x6EAB;&#x89BA;(temperature)&#x3001;&#x7C97;&#x7565;&#x7684;&#x89F8;&#x89BA;(light touch)</li>
-<li>&#x50B3;&#x5230; III, IV</li>
+<li>Gray column 中最靠背側的區域</li>
+<li>輸入痛覺(pain)、溫覺(temperature)、粗略的觸覺(light touch)</li>
+<li>傳到 III, IV</li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-7.png" alt></p>
-<h4 class="mume-header" id="nucleus-proprius-group-laminae-iii-iv">Nucleus proprius group (laminae III, IV)</h4>
-
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-7.png" alt="Alt text" style=";background-color: white;padding:0">
+<h4 id="nucleus-proprius-group-laminae-iii-iv">Nucleus proprius group (laminae III, IV) </h4>
 <ul>
-<li>&#x672C;&#x9AD4;&#x611F;&#x89BA;(proprioception), light touch</li>
+<li>本體感覺(proprioception), light touch</li>
 </ul>
-<h4 class="mume-header" id="laminae-v">laminae V</h4>
-
+<h4 id="laminae-v">laminae V </h4>
 <ul>
-<li>&#x611F;&#x89BA;&#x7A7F;&#x5230;&#x5C0D;&#x5074;</li>
+<li>感覺穿到對側</li>
 </ul>
-<h4 class="mume-header" id="laminae-vi">laminae VI</h4>
-
+<h4 id="laminae-vi">laminae VI </h4>
 <ul>
-<li>&#x53C3;&#x8207;&#x810A;&#x690E;&#x53CD;&#x5C04;&#x7684; small interneurons</li>
+<li>參與脊椎反射的 small interneurons</li>
 </ul>
-<h4 class="mume-header" id="lateral-columnhornlaminae-vii">Lateral column(horn)(laminae VII)</h4>
-
+<h4 id="lateral-columnhornlaminae-vii">Lateral column(horn)(laminae VII) </h4>
 <ul>
-<li>T1-L2&#xFF1A;&#x7D30;&#x80DE;&#x8F03;&#x5C0F;&#xFF0C;&#x542B;&#x6709;&#x7BC0;&#x524D;&#x4EA4;&#x611F;&#x795E;&#x7D93;&#x7E96;&#x7DAD;</li>
-<li>S2-S4&#xFF1A;&#x542B;&#x6709;&#x7BC0;&#x524D;&#x526F;&#x4EA4;&#x611F;&#x795E;&#x7D93;&#x7E96;&#x7DAD;</li>
+<li>T1-L2：細胞較小，含有節前交感神經纖維</li>
+<li>S2-S4：含有節前副交感神經纖維</li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-8.png" alt></p>
-<h5 class="mume-header" id="nucleus-dorsalis-clarkes-column">Nucleus dorsalis (Clarke&#x2019;s column)</h5>
-
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-8.png" alt="Alt text" style=";background-color: white;padding:0">
+<h5 id="nucleus-dorsalis-clarkes-column">Nucleus dorsalis (Clarke’s column) </h5>
 <ul>
-<li>&#x672C;&#x9AD4;&#x89BA;&#x3001;&#x5E73;&#x8861;&#x89BA;&#x3001;<br>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-6.png" alt></li>
+<li>本體覺、平衡覺、<br>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-6.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
-<h3 class="mume-header" id="%E7%99%BD%E8%B3%AA">&#x767D;&#x8CEA;</h3>
-
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-9.png" alt></p>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-12.png" alt></p>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-34.png" alt></p>
-<h4 class="mume-header" id="motor">Motor</h4>
-
+<h3 id="白質">白質 </h3>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-9.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-12.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-34.png" alt="Alt text" style=";background-color: white;padding:0">
+<h4 id="motor">Motor </h4>
 <ul>
 <li>Corticospinal tract
 <ul>
-<li>&#x53BB;&#x5927;&#x8166;</li>
+<li>去大腦</li>
 </ul>
 </li>
 <li>Rubrospinal fiber
 <ul>
-<li>&#x53BB;&#x4E2D;&#x8166;</li>
-<li>&#x552F;&#x4E00; flexor</li>
+<li>去中腦</li>
+<li>唯一 flexor</li>
 </ul>
 </li>
 <li>Reticulospinal tract
 <ul>
-<li>Lateral Reticulospinal fiber (&#x6E90;&#x81EA;&#x5EF6;&#x8166;reticular formation)</li>
-<li>Fastigiospinal fiber (&#x6E90;&#x81EA;&#x5C0F;&#x8166;fastigial nucleus)</li>
+<li>Lateral Reticulospinal fiber (源自延腦reticular formation)</li>
+<li>Fastigiospinal fiber (源自小腦fastigial nucleus)</li>
 </ul>
 </li>
 <li>Vestibulospinal tract
@@ -729,59 +565,46 @@ table th{
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-16.png" alt></p>
-<h2 class="mume-header" id="blood-supply">blood supply</h2>
-
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-11.png" alt></p>
-<h1 class="mume-header" id="%E9%80%94%E5%BE%91">&#x9014;&#x5F91;</h1>
-
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-15.png" alt></p>
-<h2 class="mume-header" id="general-somatic-afferent-gsa">General somatic afferent (GSA)</h2>
-
-<h3 class="mume-header" id="exteroceptive-gsa-1-%E7%97%9B-%E6%BA%AB%E8%A6%BA">Exteroceptive GSA-1 (&#x75DB;&#x3001;&#x6EAB;&#x89BA;)</h3>
-
-<p>lateral division of the posterior root &#x2192; posterolateral tract(tract of Lissauer) &#x2192;<br>
-laminae I to V &#x2192; Ventral spinothalamic tract</p>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-16.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="blood-supply">blood supply </h2>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-11.png" alt="Alt text" style=";background-color: white;padding:0">
+<h1 id="途徑">途徑 </h1>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-15.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="general-somatic-afferent-gsa">General somatic afferent (GSA) </h2>
+<h3 id="exteroceptive-gsa-1-痛-溫覺">Exteroceptive GSA-1 (痛、溫覺) </h3>
+<p>lateral division of the posterior root → posterolateral tract(tract of Lissauer) →<br>
+laminae I to V → Ventral spinothalamic tract</p>
 <ul>
-<li>chemical stimuli (&#x75DB;&#x89BA;)&#xFF0C;&#x6700;&#x6162;</li>
+<li>chemical stimuli (痛覺)，最慢</li>
 <li></li>
 </ul>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3.png" alt="Alt text" style="width:50%;background-color: white;">
-<h3 class="mume-header" id="exteroceptive-gsa-2-%E8%A7%B8-%E5%A3%93%E8%A6%BA">Exteroceptive GSA-2 (&#x89F8;&#x3001;&#x58D3;&#x89BA;)</h3>
-
-<p>medial division of the posterior root &#x2192; posterior funiculus</p>
-<h3 class="mume-header" id="proprioceptive-gsa-%E6%9C%AC%E9%AB%94%E6%84%9F%E8%A6%BA">Proprioceptive GSA (&#x672C;&#x9AD4;&#x611F;&#x89BA;)</h3>
-
+<img src="paste_src/%E7%A5%9E%E8%A7%A3.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
+<h3 id="exteroceptive-gsa-2-觸-壓覺">Exteroceptive GSA-2 (觸、壓覺) </h3>
+<p>medial division of the posterior root → posterior funiculus</p>
+<h3 id="proprioceptive-gsa-本體感覺">Proprioceptive GSA (本體感覺) </h3>
 <ul>
-<li>&#x63A5;&#x6536;muscle, tendon, joint &#x7684;stretch, pressure, vibration&#xFF0C;&#x7531;heavily myelinated<br>
-fiber &#x50B3;&#x8F38;&#xFF0C;&#x50B3;&#x905E;&#x5FEB;</li>
-<li>medial division of the posterior root &#x2192; posterior funiculus</li>
+<li>接收muscle, tendon, joint 的stretch, pressure, vibration，由heavily myelinated<br>
+fiber 傳輸，傳遞快</li>
+<li>medial division of the posterior root → posterior funiculus</li>
 </ul>
-<h2 class="mume-header" id="motor-1">Motor</h2>
-
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-1.png" alt></p>
-<h1 class="mume-header" id="%E9%96%93%E8%85%A6">&#x9593;&#x8166;</h1>
-
-<h2 class="mume-header" id="dorsal-thalamus%E4%B8%98%E8%85%A6">(Dorsal) thalamus(&#x4E18;&#x8166;)</h2>
-
+<h2 id="motor-1">Motor </h2>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-1.png" alt="Alt text" style=";background-color: white;padding:0">
+<h1 id="間腦">間腦 </h1>
+<h2 id="dorsal-thalamus丘腦">(Dorsal) thalamus(丘腦) </h2>
 <ul>
-<li>
-<p>fornix &#x795E;&#x7D93;&#x7E96;&#x7DAD;&#x8F38;&#x51FA;&#x5230;&#x5927;&#x8166;<br>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-19.png" alt="Alt text" style="width:70%;background-color: white;"></p>
-</li>
-<li>
-<p>internal medullary lamina &#x5207;&#x6210;&#x56DB;&#x5340;+ &#x5169;&#x9846;&#x7403;</p>
-</li>
+<li>fornix 神經纖維輸出到大腦<br>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-19.png" alt="Alt text" style="width:70%;background-color: white;padding:0"></li>
+<li>internal medullary lamina 切成四區+ 兩顆球</li>
 </ul>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-27.png" alt="Alt text" style="width:70%;background-color: white;">
-<table>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-27.png" alt="Alt text" style="width:70%;background-color: white;padding:0">
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 
-<th colspan="2">&#x5340;&#x57DF;</th>
-<th>&#x7E2E;&#x5BEB;</th>
-<th>&#x5206;&#x985E;</th>
-<th>&#x529F;&#x80FD;</th>
+<th colspan="2">區域</th>
+<th>縮寫</th>
+<th>分類</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
@@ -790,56 +613,56 @@ fiber &#x50B3;&#x8F38;&#xFF0C;&#x50B3;&#x905E;&#x5FEB;</li>
 <td colspan="2">Anterior</td>
 <td>A</td>
 <td>Relay</td>
-<td>&#x908A;&#x7DE3;</td>
+<td>邊緣</td>
 </tr>
 <tr>
 <td rowspan="7">Lateral</td>
 <td rowspan="3">Dorsal tier</td>
 <td>LD</td>
 <td>Association</td>
-<td>&#x9AD8;&#x968E;&#x8996;&#x89BA;</td>
+<td>高階視覺</td>
 </tr>
 <tr>
 
 
 <td>LP</td>
 <td>Association</td>
-<td>&#x9AD8;&#x968E;&#x8996;&#x89BA;</td>
+<td>高階視覺</td>
 </tr>
 <tr>
 
 
 <td>Pulvinar</td>
 <td>Association</td>
-<td>&#x8996;&#x89BA;&#x529F;&#x80FD;&#x3001;&#x773C;&#x775B;&#x904B;&#x52D5;</td>
+<td>視覺功能、眼睛運動</td>
 </tr>
 <tr>
 
 <td rowspan="4">Ventral<br>tier</td>
 <td>VA</td>
 <td>Relay</td>
-<td>&#x57FA;&#x5E95;&#x6838;&#x8F38;&#x5165;</td>
+<td>基底核輸入</td>
 </tr>
 <tr>
 
 
 <td>VL</td>
 <td>Relay</td>
-<td>&#x57FA;&#x5E95;&#x6838;&#x8F38;&#x5165;</td>
+<td>基底核輸入</td>
 </tr>
 <tr>
 
 
 <td>VPL</td>
 <td>Relay</td>
-<td>&#x9AD4;&#x611F;&#x89BA;</td>
+<td>體感覺</td>
 </tr>
 <tr>
 
 
 <td>VPM</td>
 <td>Relay</td>
-<td>&#x984F;&#x9762;&#x611F;&#x89BA;</td>
+<td>顏面感覺</td>
 </tr>
 <tr>
 
@@ -860,39 +683,38 @@ fiber &#x50B3;&#x8F38;&#xFF0C;&#x50B3;&#x905E;&#x5FEB;</li>
 <td colspan="2">Medial</td>
 <td>DM</td>
 <td>Association</td>
-<td>&#x9AD8;&#x968E;&#x8996;&#x89BA;</td>
+<td>高階視覺</td>
 </tr>
 <tr>
 
 
 <td colspan="3">MGB</td>
 <td>Relay</td>
-<td>&#x807D;&#x89BA;</td>
+<td>聽覺</td>
 </tr>
 <tr>
 
 
 <td colspan="3">LGB</td>
 <td>Relay</td>
-<td>&#x8996;&#x89BA;</td>
+<td>視覺</td>
 </tr>
 <tr>
 
 
 <td colspan="3">Thalamic</td>
 <td>reticular</td>
-<td>nucleus - &#x5927;&#x8166;&#x76AE;&#x8CEA;&#x8F38;&#x5165;</td>
+<td>nucleus - 大腦皮質輸入</td>
 </tr>
 </tbody>
-</table>
-<h3 class="mume-header" id="anterior">Anterior</h3>
-
+</table></div>
+<h3 id="anterior">Anterior </h3>
 <ul>
-<li>&#x908A;&#x7DE3;&#x7CFB;&#x7D71;&#x76F8;&#x95DC;</li>
+<li>邊緣系統相關</li>
 </ul>
 <div class="dcl">
 <section>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-28.png" alt></p>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-28.png" alt="Alt text" style=";background-color: white;padding:0">
 <dl>
 <dt>MTT</dt>
 <dd>mammillothalamic tract</dd>
@@ -905,8 +727,7 @@ m[Mammillary bodies]--&gt;|MTT|A--&gt;c[cingulate gyrus]
 c--&gt;p[Parahippocampus]--&gt;h[Hippocampus]--&gt;|Fornix|m
 
 </div></section></div>
-<h3 class="mume-header" id="lateral">Lateral</h3>
-
+<h3 id="lateral">Lateral </h3>
 <ul>
 <li>Dorsal tier
 <ul>
@@ -919,7 +740,7 @@ c--&gt;p[Parahippocampus]--&gt;h[Hippocampus]--&gt;|Fornix|m
 <ul>
 <li>VA
 <ul>
-<li>globus pallidus, substantia nigra &#x8F38;&#x5165;</li>
+<li>globus pallidus, substantia nigra 輸入</li>
 </ul>
 </li>
 <li>VL</li>
@@ -928,72 +749,59 @@ c--&gt;p[Parahippocampus]--&gt;h[Hippocampus]--&gt;|Fornix|m
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="medial">Medial</h3>
-
+<h3 id="medial">Medial </h3>
 <ul>
 <li>dorsomedial nucleus (DM)
 <ul>
-<li>parvicellular(cadually) part &#x526F;</li>
+<li>parvicellular(cadually) part 副</li>
 <li>magnocellular(rostrally)part</li>
-<li>paralaminar part(&#x548C;internal medullary lamina &#x76F8;&#x9130;)</li>
+<li>paralaminar part(和internal medullary lamina 相鄰)</li>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-32.png" alt></p>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-29.png" alt></p>
-<h3 class="mume-header" id="thalamic-reticular-nucleus">Thalamic reticular nucleus</h3>
-
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-32.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-29.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="thalamic-reticular-nucleus">Thalamic reticular nucleus </h3>
 <ul>
-<li>&#x5305;&#x5728;&#x5916;&#x9762;</li>
+<li>包在外面</li>
 </ul>
-<h2 class="mume-header" id="epithalamus%E4%B8%8A%E4%B8%98%E8%85%A6-%E4%B8%8A%E8%A6%96%E4%B8%98">Epithalamus(&#x4E0A;&#x4E18;&#x8166;&#x3001;&#x4E0A;&#x8996;&#x4E18;)</h2>
-
+<h2 id="epithalamus上丘腦-上視丘">Epithalamus(上丘腦、上視丘) </h2>
 <ul>
 <li>pineal gland</li>
-<li>&#x9023;&#x63A5;&#x5230;limbic system (&#x908A;&#x7DE3;&#x7CFB;&#x7D71;&#xFF0C;&#x548C;&#x60C5;&#x7DD2;&#x3001;&#x8A18;&#x61B6;&#x6709;&#x95DC;)</li>
-<li>&#x6709;stria medullaris thalami</li>
+<li>連接到limbic system (邊緣系統，和情緒、記憶有關)</li>
+<li>有stria medullaris thalami</li>
 </ul>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-23.png" alt="Alt text" style="width:70%;background-color: white;">
-<h2 class="mume-header" id="ventral-thalamus">Ventral thalamus</h2>
-
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-23.png" alt="Alt text" style="width:70%;background-color: white;padding:0">
+<h2 id="ventral-thalamus">Ventral thalamus </h2>
 <ul>
-<li>subthalamic nucleus(&#x4E18;&#x8166;&#x5E95;&#x6838;)</li>
+<li>subthalamic nucleus(丘腦底核)</li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-25.png" alt></p>
-<h2 class="mume-header" id="hypothalamus%E4%B8%8B%E4%B8%98%E8%85%A6-%E4%B8%8B%E8%A6%96%E4%B8%98">Hypothalamus(&#x4E0B;&#x4E18;&#x8166;&#x3001;&#x4E0B;&#x8996;&#x4E18;)</h2>
-
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-24.png" alt><br>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-17.png" alt="Alt text" style="width:49%;background-color: white;"></p>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-18.png" alt="Alt text" style="width:49%;background-color: white;">
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-21.png" alt="Alt text" style="width:37%;background-color: white;">
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-22.png" alt="Alt text" style="width:62%;background-color: white;">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-25.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="hypothalamus下丘腦-下視丘">Hypothalamus(下丘腦、下視丘) </h2>
+<div class="fbox"> 
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-24.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-17.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-18.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-21.png" alt="Alt text" style="width:37%;background-color: white;padding:0">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-22.png" alt="Alt text" style="width:62%;background-color: white;padding:0">
 </div>
-<h1 class="mume-header" id="basal-ganglia-%E5%9F%BA%E5%BA%95%E6%A0%B8">Basal ganglia (&#x57FA;&#x5E95;&#x6838;)</h1>
-
+<h1 id="basal-ganglia-基底核">Basal ganglia (基底核) </h1>
 <ul>
-<li>&#x4E00;&#x5768;&#x795E;&#x7D93;&#x6838;
+<li>一坨神經核
 <ul>
 <li>
-<p>Striatum (&#x7D0B;&#x72C0;&#x6838;, &#x8F38;&#x5165;&#x5C64;)</p>
+<p>Striatum (紋狀核, 輸入層)</p>
 <ul>
-<li>caudate nucleus(&#x5C3E;&#x6838;)</li>
-<li>putamen(&#x6BBC;&#x6838;)</li>
+<li>caudate nucleus(尾核)</li>
+<li>putamen(殼核)</li>
 </ul>
 </li>
 <li>
-<p>Globus palidus (GP&#xFF0C;&#x84BC;&#x767D;&#x6838;)</p>
+<p>Globus palidus (GP，蒼白核)</p>
 <ul>
-<li>&#x5C08;&#x4E1F; GABA</li>
-<li>pallidopallidal fibers &#x9023;&#x63A5; External, Internal</li>
-<li>External(&#x6709;&#x795E;&#x7D93;&#x4F86;&#x56DE; SNc)</li>
+<li>專丟 GABA</li>
+<li>pallidopallidal fibers 連接 External, Internal</li>
+<li>External(有神經來回 SNc)</li>
 <li>Internal</li>
 </ul>
 </li>
@@ -1008,9 +816,9 @@ c--&gt;p[Parahippocampus]--&gt;h[Hippocampus]--&gt;|Fornix|m
 </ul>
 </li>
 <li>
-<p>substantia nigrapars compacta (SNc&#xFF0C;&#x9ED1;&#x8CEA;)</p>
+<p>substantia nigrapars compacta (SNc，黑質)</p>
 <ul>
-<li>&#x52D5;&#x4F5C;&#x5F37;&#x5316;&#x5668;</li>
+<li>動作強化器</li>
 </ul>
 </li>
 <li>
@@ -1019,15 +827,15 @@ c--&gt;p[Parahippocampus]--&gt;h[Hippocampus]--&gt;|Fornix|m
 <li>
 <p>Thalamus</p>
 <ul>
-<li>&#x904E;&#x6FFE;&#xFF0C;&#x6FC0;&#x767C;&#x5C64;</li>
+<li>過濾，激發層</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-20.png" alt="Alt text" style="width:70%;background-color: white;">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-20.png" alt="Alt text" style="width:70%;background-color: white;padding:0">
 <ul>
-<li>&#x52D5;&#x4F5C;&#x5354;&#x8ABF;&#x63A7;&#x5236;&#x3001;&#x5B78;&#x7FD2;&#x76F8;&#x95DC;
+<li>動作協調控制、學習相關
 <ul>
 <li>extra-pyramidal system</li>
 </ul>
@@ -1035,101 +843,92 @@ c--&gt;p[Parahippocampus]--&gt;h[Hippocampus]--&gt;|Fornix|m
 <li>executive functions</li>
 <li>behavior and emotions.</li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-2.png" alt><br>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-30.png" alt><br>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-33.png" alt></p>
-<h2 class="mume-header" id="direct-indirect">Direct /Indirect</h2>
-
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-2.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-30.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-33.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="direct-indirect">Direct /Indirect </h2>
 <ul>
-<li>Motor &#x5927;&#x591A;&#x6642;&#x5019;&#x6291;&#x5236;</li>
-<li>&#x8CA0;&#x8CAC;&#x555F;&#x52D5;&#x52D5;&#x4F5C;&#x3001;&#x5354;&#x8ABF;&#x6027;</li>
+<li>Motor 大多時候抑制</li>
+<li>負責啟動動作、協調性</li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-3.png" alt></p>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-3.png" alt="Alt text" style=";background-color: white;padding:0">
 <div class="admonition info">
-<p class="admonition-title">Parkinson&#x2019;s disease</p>
+<p class="admonition-title">Parkinson’s disease</p>
 <ul>
-<li>&#x6291;&#x5236;&#x52D5;&#x4F5C;</li>
-<li>&#x5931;&#x53BB;&#x5354;&#x8ABF;&#x6027;&#xFF0C;&#x4F46;&#x4ECD;&#x7136;&#x6709;&#x529B;</li>
-<li>SNc &#x2193;</li>
+<li>抑制動作</li>
+<li>失去協調性，但仍然有力</li>
+<li>SNc ↓</li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-4.png" alt></p>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-4.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
 <div class="admonition info">
-<p class="admonition-title">Huntington&#x2019;s disease</p>
+<p class="admonition-title">Huntington’s disease</p>
 <ul>
-<li>&#x4E0D;&#x81EA;&#x4E3B;&#x52D5;&#x4F5C;&#x5E72;&#x64FE;</li>
-<li>SNc &#x2191;</li>
+<li>不自主動作干擾</li>
+<li>SNc ↑</li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-5.png" alt></p>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-5.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
-<h1 class="mume-header" id="%E5%B0%8F%E8%85%A6">&#x5C0F;&#x8166;</h1>
-
+<h1 id="小腦">小腦 </h1>
 <ul>
-<li>Inferior cerebellar peduncle(&#x4E0B;&#x5C0F;&#x8166;&#x8173;)
+<li>Inferior cerebellar peduncle(下小腦腳)
 <ul>
-<li>&#x8F38;&#x5165;&#x5C64;</li>
+<li>輸入層</li>
 </ul>
 </li>
-<li>Middle cerebellar peduncle(&#x4E2D;&#x5C0F;&#x8166;&#x8173;)
+<li>Middle cerebellar peduncle(中小腦腳)
 <ul>
-<li>&#x8F38;&#x5165;&#x5C64;</li>
-<li>brachium pontis&#xFF0C;&#x6A4B;&#x8166;&#x624B;&#x81C2;</li>
+<li>輸入層</li>
+<li>brachium pontis，橋腦手臂</li>
 </ul>
 </li>
-<li>Superior Cerebellar peduncle(&#x4E0A;&#x5C0F;&#x8166;&#x8173;)
+<li>Superior Cerebellar peduncle(上小腦腳)
 <ul>
-<li>&#x8F38;&#x51FA;&#x5C64;&#xFF0C;&#x4EA4;&#x53C9;</li>
+<li>輸出層，交叉</li>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-31.png" alt></p>
-<h1 class="mume-header" id="limbic-system">Limbic System</h1>
-
-<p>Limbic System(&#x908A;&#x7DE3;&#x7CFB;&#x7D71;)</p>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-31.png" alt="Alt text" style=";background-color: white;padding:0">
+<h1 id="limbic-system">Limbic System </h1>
+<p>Limbic System(邊緣系統)</p>
 <ul>
-<li>&#x884C;&#x70BA;&#x5B78;&#x7FD2;</li>
-<li>&#x8ABF;&#x63A7; Hypothalamus</li>
+<li>行為學習</li>
+<li>調控 Hypothalamus</li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-40.png" alt></p>
-<h1 class="mume-header" id="hypothalamus">Hypothalamus</h1>
-
-<h2 class="mume-header" id="%E8%A7%A3%E5%89%96">&#x89E3;&#x5256;</h2>
-
-<h3 class="mume-header" id="sagittal-section">Sagittal section</h3>
-
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-35.png" alt></p>
-<p>p&#xFF1A;Preoptic area (optic chiasma &#x8207;anterior commissure &#x4E4B;&#x9593;&#x7684;&#x5340;&#x57DF;)<br>
-a&#xFF1A;Anterior region (optic chiasma &#x4EE5;&#x4E0A;&#x3001;hypothalamic sulcus &#x4EE5;&#x4E0B;&#x7684;&#x5340;&#x57DF;)<br>
-t&#xFF1A;Tuberal region (tuber cinereum &#x4EE5;&#x4E0A;&#x3001;hypothalamic sulcus &#x4EE5;&#x4E0B;&#x7684;&#x5340;&#x57DF;)<br>
-po&#xFF1A;Posterior region (mammillary body &#x4EE5;&#x4E0A;&#x3001;hypothalamic sulcus &#x4EE5;&#x4E0B;&#x7684;&#x5340;&#x57DF;)<br>
-&#x85CD;&#x7DDA;&#xFF1A;hypothalamic sulcus<br>
-O&#xFF1A;optic chiasma<br>
-M&#xFF1A;Mammillary body</p>
-<h3 class="mume-header" id="frontal-section">Frontal section</h3>
-
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-36.png" alt></p>
-<p>pe&#xFF1A;Periventricular zone<br>
-m&#xFF1A;Medial zone<br>
-l&#xFF1A;Lateral zone<br>
-F&#xFF1A;fornix(&#x4F4D;&#x5728;Medial zone&#x8DDF;<br>
-Lateral zone&#x7684;&#x4EA4;&#x754C;)&#xFF1A;Limbic system<br>
-&#x7684;&#x795E;&#x7D93;&#x7E96;&#x7DAD;(&#x9ED1;&#x8272;&#x7684;)&#xFF0C;&#x7A7F;&#x904E;&#x4E0B;&#x8996;&#x4E18;&#xFF0C;<br>
-&#x5230;mammillary body<br>
-OT&#xFF1A;optic tract<br>
-3&#xFF1A;&#x7B2C;&#x4E09;&#x8166;&#x5BA4;<br>
-In&#xFF1A;interthalamic adhesion/ massa<br>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-40.png" alt="Alt text" style=";background-color: white;padding:0">
+<h1 id="hypothalamus">Hypothalamus </h1>
+<h2 id="解剖">解剖 </h2>
+<h3 id="sagittal-section">Sagittal section </h3>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-35.png" alt="Alt text" style=";background-color: white;padding:0">
+<p>p：Preoptic area (optic chiasma 與anterior commissure 之間的區域)<br>
+a：Anterior region (optic chiasma 以上、hypothalamic sulcus 以下的區域)<br>
+t：Tuberal region (tuber cinereum 以上、hypothalamic sulcus 以下的區域)<br>
+po：Posterior region (mammillary body 以上、hypothalamic sulcus 以下的區域)<br>
+藍線：hypothalamic sulcus<br>
+O：optic chiasma<br>
+M：Mammillary body</p>
+<h3 id="frontal-section">Frontal section </h3>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-36.png" alt="Alt text" style=";background-color: white;padding:0">
+<p>pe：Periventricular zone<br>
+m：Medial zone<br>
+l：Lateral zone<br>
+F：fornix(位在Medial zone跟<br>
+Lateral zone的交界)：Limbic system<br>
+的神經纖維(黑色的)，穿過下視丘，<br>
+到mammillary body<br>
+OT：optic tract<br>
+3：第三腦室<br>
+In：interthalamic adhesion/ massa<br>
 intermedia</p>
-<h3 class="mume-header" id="horizontal-section">Horizontal section</h3>
-
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-37.png" alt></p>
-<h2 class="mume-header" id="%E5%88%86%E5%8D%80%E5%8A%9F%E8%83%BD">&#x5206;&#x5340;&#x529F;&#x80FD;</h2>
-
-<table>
+<h3 id="horizontal-section">Horizontal section </h3>
+<img src="paste_src/神解-37.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="分區功能">分區功能 </h2>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
-<th>&#x5206;&#x5340;</th>
-<th>&#x7D50;&#x69CB;</th>
-<th>&#x529F;&#x80FD;</th>
+<th>分區</th>
+<th>結構</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
@@ -1141,7 +940,7 @@ intermedia</p>
 <tr>
 
 <td>lat. tuberal nuclei &amp; tubero-mammillary nucleus</td>
-<td>&#x7761;&#x7720;&#x7526;&#x9192;&#x5FAA;&#x74B0;</td>
+<td>睡眠甦醒循環</td>
 </tr>
 <tr>
 
@@ -1149,167 +948,161 @@ intermedia</p>
 <td>feeding center</td>
 </tr>
 </tbody>
-</table>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-39.png" alt></p>
-<h1 class="mume-header" id="%E9%81%8B%E5%8B%95%E7%A5%9E%E7%B6%93">&#x904B;&#x52D5;&#x795E;&#x7D93;</h1>
-
+</table></div>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-39.png" alt="Alt text" style=";background-color: white;padding:0">
+<h1 id="運動神經">運動神經 </h1>
 <ul>
-<li>&#x8166;&#x795E;&#x7D93;&#x5C0D;&#x5074;&#x611F;&#x89BA;&#xFF0C;&#x5169;&#x5074;&#x904B;&#x52D5;</li>
+<li>腦神經對側感覺，兩側運動</li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-41.png" alt></p>
-<h1 class="mume-header" id="%E6%84%9F%E8%A6%BA%E7%A5%9E%E7%B6%93">&#x611F;&#x89BA;&#x795E;&#x7D93;</h1>
-
-<table>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-41.png" alt="Alt text" style=";background-color: white;padding:0">
+<h1 id="感覺神經">感覺神經 </h1>
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
 <th>Sensor</th>
 <th>fiber</th>
-<th>&#x9069;&#x61C9;</th>
+<th>適應</th>
 <th>function</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Nuclear bag</td>
-<td>A&#x3B1;(Ia)</td>
+<td>Aα(Ia)</td>
 <td rowspan="3">SA</td>
-<td>&#x808C;&#x8089;&#x6536;&#x7E2E;&#x901F;&#x5EA6;</td>
+<td>肌肉收縮速度</td>
 </tr>
 <tr>
 <td>Nuclear chain</td>
-<td>A&#x3B2;</td>
+<td>Aβ</td>
 
-<td>&#x808C;&#x8089;&#x9577;&#x5EA6;</td>
+<td>肌肉長度</td>
 </tr>
 <tr>
 <td>Golgi tedon organ</td>
-<td>A&#x3B1;(Ib)</td>
+<td>Aα(Ib)</td>
 
-<td>&#x808C;&#x8171;&#x5F35;&#x529B;</td>
+<td>肌腱張力</td>
 </tr>
 <tr>
-<td>&#x7279;&#x5316;&#x795E;&#x7D93;&#x672B;&#x7A0D;</td>
-<td>A&#x3B2;</td>
+<td>特化神經末稍</td>
+<td>Aβ</td>
 <td>SA,RA</td>
 <td>deep touch,<br> vibration</td>
 </tr>
 <tr>
-<td>&#x6E38;&#x96E2;&#x795E;&#x7D93;&#x672B;&#x68A2;</td>
-<td>A&#x3B4;, C</td>
+<td>游離神經末梢</td>
+<td>Aδ, C</td>
 <td>-</td>
-<td>light touch,<br>&#x6EAB;, &#x75DB;(&#x50B7;&#x5BB3;)</td>
+<td>light touch,<br>溫, 痛(傷害)</td>
 </tr>
 </tbody>
-</table>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-42.png" alt></p>
-<h1 class="mume-header" id="%E7%96%BE%E7%97%85">&#x75BE;&#x75C5;</h1>
-
+</table></div>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-42.png" alt="Alt text" style=";background-color: white;padding:0">
+<h1 id="疾病">疾病 </h1>
 <ul>
-<li>&#x808C;&#x76AE;
+<li>肌皮
 <ul>
 <li>
-<p>C5, 6: &#x4E8C;&#x982D;</p>
+<p>C5, 6: 二頭</p>
 </li>
 <li>
-<p>C7: &#x4E09;&#x982D;</p>
+<p>C7: 三頭</p>
 </li>
 <li>
-<p>C7: &#x4E2D;&#x6307;</p>
+<p>C7: 中指</p>
 </li>
 <li>
-<p>T4: &#x5976;&#x982D;</p>
+<p>T4: 奶頭</p>
 </li>
 <li>
-<p>T10: &#x809A;&#x81CD;</p>
+<p>T10: 肚臍</p>
 </li>
 <li>
 <p>L4,L5: toe</p>
 </li>
 </ul>
 </li>
-<li>homonymous hemianopia (&#x540C;&#x5074;&#x534A;&#x76F2;)
+<li>homonymous hemianopia (同側半盲)
 <ul>
-<li>&#x4E0B;&#x5716; 3gg<br>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-43.png" alt></li>
+<li>下圖 3gg<br>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-43.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
-<li>Internuclear opthalamoplegia (INO&#xFF1B;&#x6838;&#x9593;&#x6027;&#x773C;&#x808C;&#x7671;&#x7613;)
+<li>Internuclear opthalamoplegia (INO；核間性眼肌癱瘓)
 <ul>
-<li>CN VI&#x548C;CN III &#x9023;&#x4E0D;&#x8D77;&#x4F86;</li>
-<li>&#x4E00;&#x773C;&#x5411;&#x5916;&#x53E6;&#x4E00;&#x773C;&#x4E0D;&#x5411;&#x5167;</li>
+<li>CN VI和CN III 連不起來</li>
+<li>一眼向外另一眼不向內</li>
 </ul>
 </li>
 <li>Cavernous sinus &amp; syndromes
 <ul>
-<li>CN &#x2162;,&#x2163;,&#x2164;<sub>1</sub>, &#x2164;<sub>2</sub>, &#x2165;<br>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-44.png" alt></li>
+<li>CN Ⅲ,Ⅳ,Ⅴ<sub>1</sub>, Ⅴ<sub>2</sub>, Ⅵ<br>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-44.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>Central/Peripheral Facial Nerve Palsy
 <ul>
 <li>CN VII</li>
-<li>&#x4E0B;&#x534A;&#x9762;&#x6524;</li>
+<li>下半面攤</li>
 </ul>
 </li>
 <li>CP (Cerebellopontine) angle tumors
 <ul>
 <li>CN VIII</li>
-<li>&#x807D;&#x529B;&#x55AA;&#x5931;</li>
+<li>聽力喪失</li>
 </ul>
 </li>
 <li>Carpal tunnel syndrome
 <ul>
-<li>&#x6700;&#x5E38;&#x898B; peripheral mononeuropathy</li>
+<li>最常見 peripheral mononeuropathy</li>
 <li>Median nerve</li>
 </ul>
 </li>
 <li>Radial nerve palsy
 <ul>
-<li>&#x864E;&#x53E3;&#x9EBB;</li>
-<li>&#x624B;&#x62AC;&#x4E0D;&#x8D77;&#x4F86;</li>
+<li>虎口麻</li>
+<li>手抬不起來</li>
 </ul>
 </li>
 <li>Diabetic polyneuropathy
 <ul>
-<li>&#x591A;&#x767C;&#x6027;&#x795E;&#x7D93;&#x75C5;&#x8B8A;</li>
-<li>Diabetic Amyotrophy(&#x7CD6;&#x5C3F;&#x75C5;&#x808C;&#x840E;&#x7E2E;)</li>
+<li>多發性神經病變</li>
+<li>Diabetic Amyotrophy(糖尿病肌萎縮)</li>
 </ul>
 </li>
 </ul>
-<h1 class="mume-header" id="%E8%A6%96%E8%A6%BA">&#x8996;&#x89BA;</h1>
-
+<h1 id="視覺">視覺 </h1>
 <dl>
 <dt>orientation selectivity</dt>
-<dd>&#x5EA6;(&#x795E;&#x7D93;&#x6703;&#x66F4;&#x8208;&#x596E;)</dd>
+<dd>度(神經會更興奮)</dd>
 </dl>
-<h2 class="mume-header" id="lateral-geniculate-nucleus">lateral geniculate nucleus</h2>
-
+<h2 id="lateral-geniculate-nucleus">lateral geniculate nucleus </h2>
 <ul>
 <li>
-<p>Magnocellular layer(Layer 1, Layer 2) &#x2192; 4c &#x2192; 4a,4b</p>
+<p>Magnocellular layer(Layer 1, Layer 2) → 4c → 4a,4b</p>
 <ul>
 <li>rod cell</li>
 </ul>
 </li>
 <li>
-<p>Parvocellular layer(Layer3-6)&#x2192; 4c &#x2192; 2,3</p>
+<p>Parvocellular layer(Layer3-6)→ 4c → 2,3</p>
 <ul>
 <li>con</li>
 </ul>
 </li>
 <li>
-<p>layer 1&#x3001;4&#x3001;6 &#x50B3;&#x905E;&#x5C0D;&#x5074;&#x773C;&#x775B;&#x50B3;&#x4F86;&#x7684;&#x8A0A;&#x606F;</p>
+<p>layer 1、4、6 傳遞對側眼睛傳來的訊息</p>
 </li>
 <li>
-<p>layer 2&#x3001;3&#x3001;5 &#x50B3;&#x905E;&#x540C;&#x5074;&#x773C;&#x775B;&#x50B3;&#x4F86;&#x7684;&#x8A0A;</p>
+<p>layer 2、3、5 傳遞同側眼睛傳來的訊</p>
 </li>
 </ul>
 <blockquote>
-<p>(V1&#x5206;&#x516D;&#x5C64;)<br>
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-45.png" alt></p>
+<p>(V1分六層)<br>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-45.png" alt="Alt text" style=";background-color: white;padding:0"></p>
 </blockquote>
-<h2 class="mume-header" id="%E8%A6%96%E8%A6%BA%E7%9A%AE%E5%B1%A4visual-cortex">&#x8996;&#x89BA;&#x76AE;&#x5C64;(Visual Cortex)</h2>
-
+<h2 id="視覺皮層visual-cortex">視覺皮層(Visual Cortex) </h2>
 <blockquote>
 <p>striate cortex,</p>
 </blockquote>
@@ -1322,7 +1115,7 @@ intermedia</p>
 <li>Simple cell</li>
 <li>Complex cell
 <ul>
-<li>&#x53D6;max</li>
+<li>取max</li>
 </ul>
 </li>
 </ul>
@@ -1334,49 +1127,48 @@ intermedia</p>
 <p>extrastriate cortex</p>
 </blockquote>
 <ul>
-<li>V2&#x8655;&#x7406;Binocularity
+<li>V2處理Binocularity
 <ul>
 <li>size tuning</li>
-<li>&#x65BC;binocular(&#x7528;&#x96D9;&#x773C;&#x770B;)</li>
-<li>&#x7D50;&#x8272;&#x5F69;&#x8207;&#x5F62;&#x9AD4;(color and form conjunction)</li>
-<li>&#x8F2A;&#x5ED3;&#x6574;&#x5408;</li>
-<li>V2&#x795E;&#x7D93;&#x53C3;&#x8207;pattern completion (&#x8166;&#x88DC;)</li>
+<li>於binocular(用雙眼看)</li>
+<li>結色彩與形體(color and form conjunction)</li>
+<li>輪廓整合</li>
+<li>V2神經參與pattern completion (腦補)</li>
 <li>orientation selectivity</li>
 </ul>
 </li>
-<li>V3&#x8655;&#x7406;Depth</li>
+<li>V3處理Depth</li>
 </ul>
 <blockquote>
 <p>associated visual cortex</p>
 </blockquote>
 <ul>
-<li>V4&#x8655;&#x7406;Color
+<li>V4處理Color
 <ul>
-<li>Ventral Pathway &#x6574;&#x5408;&#x8F38;&#x51FA;
+<li>Ventral Pathway 整合輸出
 <ul>
-<li>&#x8CEA;&#x5730;</li>
-<li>&#x984F;&#x8272;</li>
-<li>&#x65B9;&#x5411;(&#x5305;&#x542B;&#x904B;&#x52D5;)</li>
+<li>質地</li>
+<li>顏色</li>
+<li>方向(包含運動)</li>
 </ul>
 </li>
-<li>&#x8F38;&#x51FA;&#x5230; Infratemporal sulcus (A, C, P)</li>
+<li>輸出到 Infratemporal sulcus (A, C, P)</li>
 </ul>
 </li>
-<li>V5&#x8655;&#x7406;Movement
+<li>V5處理Movement
 <ul>
-<li>&#x9AD8;&#x7DAD;&#x8A0A;&#x606F;&#x6574;&#x5408;</li>
+<li>高維訊息整合</li>
 <li>orientation selectivity</li>
 <li>Dorsal Pathway
 <ul>
-<li>&#x50B3;&#x905E;&#x7269;&#x9AD4;&#x65B9;&#x5411;&#x3001;&#x904B;&#x52D5;&#x8CC7;&#x8A0A;</li>
-<li>&#x6A23;&#x5728;V4&#x548C;&#x5176;&#x4ED6;&#x8CC7;&#x8A0A;&#x6574;&#x5408;</li>
+<li>傳遞物體方向、運動資訊</li>
+<li>樣在V4和其他資訊整合</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h1 class="mume-header" id="%E8%81%BD%E8%A6%BA">&#x807D;&#x89BA;</h1>
-
+<h1 id="聽覺">聽覺 </h1>
 <div class="dcl">
 <section>
 <div class="mermaid">graph TD 
@@ -1388,179 +1180,328 @@ nv[Ventral cochlear nucleus]
 
 c--&gt;nd &amp; nv
 
-nd &amp; nv--&gt;|Mid-pons|i[&#x5C0D;&#x5074; inferior colliculus]
+nd &amp; nv--&gt;|Mid-pons|i[對側 inferior colliculus]
 
-nv--&gt;|Mid-pons,&lt;br&gt;lateral lemniscus|i[&#x5C0D;&#x5074; inferior colliculus]
+nv--&gt;|Mid-pons,&lt;br&gt;lateral lemniscus|i[對側 inferior colliculus]
 
 
-nv--&gt;|Mid-pons,&lt;br&gt;lateral lemniscus|j[&#x540C;&#x5074; inferior colliculus]
+nv--&gt;|Mid-pons,&lt;br&gt;lateral lemniscus|j[同側 inferior colliculus]
 
 
 i &amp; j --&gt; mg[Med. geniculate nucleus] --&gt; ac[Auditory cortex]
 
 </div></section>
 <section>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-46.png" alt></p>
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-46.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
-<h2 class="mume-header" id="auditory-cortex">Auditory cortex</h2>
-
+<h2 id="auditory-cortex">Auditory cortex </h2>
 <ul>
-<li>Secondary &#x5305; primary
+<li>Secondary 包 primary
 <ul>
-<li>&#x9AD8;&#x983B; &#x2192; cochlea base &#x2192; primary &#x5F8C;&#x9762;</li>
+<li>高頻 → cochlea base → primary 後面</li>
 </ul>
 </li>
-<li>&#x7DA0;&#x8272;Posterior speech cortex(Wernicke&#x2019;s area)&#xFF0C;&#x8AAA;&#x8A71;</li>
+<li>綠色Posterior speech cortex(Wernicke’s area)，說話</li>
 </ul>
-<p><img src="paste_src/%E7%A5%9E%E8%A7%A3-47.png" alt></p>
-<h3 class="mume-header" id="%E9%AB%98%E9%9A%8E%E8%81%BD%E8%A6%BA">&#x9AD8;&#x968E;&#x807D;&#x89BA;</h3>
-
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-47.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="高階聽覺">高階聽覺 </h3>
 <ul>
-<li>Primary &#x5728; A1
+<li>Primary 在 A1
 <ul>
 <li>superior temporal gyrus(STG)
 <ul>
-<li>Upper: &#x807D;&#x89BA;</li>
-<li>Lower: &#x8996;&#x89BA;</li>
+<li>Upper: 聽覺</li>
+<li>Lower: 視覺</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Where
 <ul>
-<li>&#x5F80; Dorsal</li>
+<li>往 Dorsal</li>
 <li>dorsolateral prefrontal cortex(DLPFC)</li>
 </ul>
 </li>
 <li>What
 <ul>
-<li>&#x5F80; Ventral</li>
-<li>ventrolateral prefrontal cortex(VLPFC)&#x3002;</li>
+<li>往 Ventral</li>
+<li>ventrolateral prefrontal cortex(VLPFC)。</li>
 </ul>
 </li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-48.png" alt="Alt text" style="width:50%;background-color: white;">
-<img src="paste_src/%E7%A5%9E%E8%A7%A3-49.png" alt="Alt text" style="width:50%;background-color: white;">
+<div class="fbox"> 
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-48.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/%E7%A5%9E%E8%A7%A3-49.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
 </div>
 <br><br>
+
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
-<script> 
-var Main_LeftListLiSelector = $(".md-sidebar-toc li");
 
-$(Main_LeftListLiSelector).on('click', function() {
-  $(Main_LeftListLiSelector).removeClass('active');
-  $(this).addClass('active');
-});
+<script>
+var page = document.getElementsByClassName('markdown-preview')[0]
+page.addEventListener('click', function(event) {
+  event.stopPropagation()
+  
+  document.body.removeAttribute('html-show-sidebar-toc');
+ 
+})
 </script>
+
+
       </div>
-      <div class="md-sidebar-toc"><ul>
-<li><a href="#%E8%84%8A%E6%A4%8E">&#x810A;&#x690E;</a>
-<ul>
-<li><a href="#%E7%99%BC%E8%82%B2">&#x767C;&#x80B2;</a></li>
-<li><a href="#central-group">Central group</a></li>
-<li><a href="#posterior-gray-columns">posterior gray columns</a></li>
-<li><a href="#posterior-gray-columns-intermediate">posterior gray columns (intermediate)</a></li>
-<li><a href="#%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84">&#x8981;&#x77E5;&#x9053;&#x7684;</a>
-<ul>
-<li><a href="#%E7%81%B0%E8%B3%AA">&#x7070;&#x8CEA;</a></li>
-<li><a href="#%E7%99%BD%E8%B3%AA">&#x767D;&#x8CEA;</a></li>
-</ul>
-</li>
-<li><a href="#blood-supply">blood supply</a></li>
-</ul>
-</li>
-<li><a href="#%E9%80%94%E5%BE%91">&#x9014;&#x5F91;</a>
-<ul>
-<li><a href="#general-somatic-afferent-gsa">General somatic afferent (GSA)</a>
-<ul>
-<li><a href="#exteroceptive-gsa-1-%E7%97%9B-%E6%BA%AB%E8%A6%BA">Exteroceptive GSA-1 (&#x75DB;&#x3001;&#x6EAB;&#x89BA;)</a></li>
-<li><a href="#exteroceptive-gsa-2-%E8%A7%B8-%E5%A3%93%E8%A6%BA">Exteroceptive GSA-2 (&#x89F8;&#x3001;&#x58D3;&#x89BA;)</a></li>
-<li><a href="#proprioceptive-gsa-%E6%9C%AC%E9%AB%94%E6%84%9F%E8%A6%BA">Proprioceptive GSA (&#x672C;&#x9AD4;&#x611F;&#x89BA;)</a></li>
-</ul>
-</li>
-<li><a href="#motor-1">Motor</a></li>
-</ul>
-</li>
-<li><a href="#%E9%96%93%E8%85%A6">&#x9593;&#x8166;</a>
-<ul>
-<li><a href="#dorsal-thalamus%E4%B8%98%E8%85%A6">(Dorsal) thalamus(&#x4E18;&#x8166;)</a>
-<ul>
-<li><a href="#anterior">Anterior</a></li>
-<li><a href="#lateral">Lateral</a></li>
-<li><a href="#medial">Medial</a></li>
-<li><a href="#thalamic-reticular-nucleus">Thalamic reticular nucleus</a></li>
-</ul>
-</li>
-<li><a href="#epithalamus%E4%B8%8A%E4%B8%98%E8%85%A6-%E4%B8%8A%E8%A6%96%E4%B8%98">Epithalamus(&#x4E0A;&#x4E18;&#x8166;&#x3001;&#x4E0A;&#x8996;&#x4E18;)</a></li>
-<li><a href="#ventral-thalamus">Ventral thalamus</a></li>
-<li><a href="#hypothalamus%E4%B8%8B%E4%B8%98%E8%85%A6-%E4%B8%8B%E8%A6%96%E4%B8%98">Hypothalamus(&#x4E0B;&#x4E18;&#x8166;&#x3001;&#x4E0B;&#x8996;&#x4E18;)</a></li>
-</ul>
-</li>
-<li><a href="#basal-ganglia-%E5%9F%BA%E5%BA%95%E6%A0%B8">Basal ganglia (&#x57FA;&#x5E95;&#x6838;)</a>
-<ul>
-<li><a href="#direct-indirect">Direct /Indirect</a></li>
-</ul>
-</li>
-<li><a href="#%E5%B0%8F%E8%85%A6">&#x5C0F;&#x8166;</a></li>
-<li><a href="#limbic-system">Limbic System</a></li>
-<li><a href="#hypothalamus">Hypothalamus</a>
-<ul>
-<li><a href="#%E8%A7%A3%E5%89%96">&#x89E3;&#x5256;</a>
-<ul>
-<li><a href="#sagittal-section">Sagittal section</a></li>
-<li><a href="#frontal-section">Frontal section</a></li>
-<li><a href="#horizontal-section">Horizontal section</a></li>
-</ul>
-</li>
-<li><a href="#%E5%88%86%E5%8D%80%E5%8A%9F%E8%83%BD">&#x5206;&#x5340;&#x529F;&#x80FD;</a></li>
-</ul>
-</li>
-<li><a href="#%E9%81%8B%E5%8B%95%E7%A5%9E%E7%B6%93">&#x904B;&#x52D5;&#x795E;&#x7D93;</a></li>
-<li><a href="#%E6%84%9F%E8%A6%BA%E7%A5%9E%E7%B6%93">&#x611F;&#x89BA;&#x795E;&#x7D93;</a></li>
-<li><a href="#%E7%96%BE%E7%97%85">&#x75BE;&#x75C5;</a></li>
-<li><a href="#%E8%A6%96%E8%A6%BA">&#x8996;&#x89BA;</a>
-<ul>
-<li><a href="#lateral-geniculate-nucleus">lateral geniculate nucleus</a></li>
-<li><a href="#%E8%A6%96%E8%A6%BA%E7%9A%AE%E5%B1%A4visual-cortex">&#x8996;&#x89BA;&#x76AE;&#x5C64;(Visual Cortex)</a></li>
-</ul>
-</li>
-<li><a href="#%E8%81%BD%E8%A6%BA">&#x807D;&#x89BA;</a>
-<ul>
-<li><a href="#auditory-cortex">Auditory cortex</a>
-<ul>
-<li><a href="#%E9%AB%98%E9%9A%8E%E8%81%BD%E8%A6%BA">&#x9AD8;&#x968E;&#x807D;&#x89BA;</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#脊椎" class="md-toc-link"><p>脊椎</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#發育" class="md-toc-link">
+            <p>發育</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#central-group" class="md-toc-link">
+            <p>Central group</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#posterior-gray-columns" class="md-toc-link">
+            <p>posterior gray columns</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#posterior-gray-columns-intermediate" class="md-toc-link">
+            <p>posterior gray columns (intermediate)</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#要知道的" class="md-toc-link"><p>要知道的</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#灰質" class="md-toc-link">
+            <p>灰質</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#白質" class="md-toc-link">
+            <p>白質</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#blood-supply" class="md-toc-link">
+            <p>blood supply</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#途徑" class="md-toc-link"><p>途徑</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#general-somatic-afferent-gsa" class="md-toc-link"><p>General somatic afferent (GSA)</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#exteroceptive-gsa-1-痛-溫覺" class="md-toc-link">
+            <p>Exteroceptive GSA-1 (痛、溫覺)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#exteroceptive-gsa-2-觸-壓覺" class="md-toc-link">
+            <p>Exteroceptive GSA-2 (觸、壓覺)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#proprioceptive-gsa-本體感覺" class="md-toc-link">
+            <p>Proprioceptive GSA (本體感覺)</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#motor-1" class="md-toc-link">
+            <p>Motor</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#間腦" class="md-toc-link"><p>間腦</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#dorsal-thalamus丘腦" class="md-toc-link"><p>(Dorsal) thalamus(丘腦)</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#anterior" class="md-toc-link">
+            <p>Anterior</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#lateral" class="md-toc-link">
+            <p>Lateral</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#medial" class="md-toc-link">
+            <p>Medial</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#thalamic-reticular-nucleus" class="md-toc-link">
+            <p>Thalamic reticular nucleus</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#epithalamus上丘腦-上視丘" class="md-toc-link">
+            <p>Epithalamus(上丘腦、上視丘)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#ventral-thalamus" class="md-toc-link">
+            <p>Ventral thalamus</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#hypothalamus下丘腦-下視丘" class="md-toc-link">
+            <p>Hypothalamus(下丘腦、下視丘)</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#basal-ganglia-基底核" class="md-toc-link"><p>Basal ganglia (基底核)</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#direct-indirect" class="md-toc-link">
+            <p>Direct /Indirect</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#小腦" class="md-toc-link">
+            <p>小腦</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#limbic-system" class="md-toc-link">
+            <p>Limbic System</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#hypothalamus" class="md-toc-link"><p>Hypothalamus</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#解剖" class="md-toc-link"><p>解剖</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#sagittal-section" class="md-toc-link">
+            <p>Sagittal section</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#frontal-section" class="md-toc-link">
+            <p>Frontal section</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#horizontal-section" class="md-toc-link">
+            <p>Horizontal section</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#分區功能" class="md-toc-link">
+            <p>分區功能</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#運動神經" class="md-toc-link">
+            <p>運動神經</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#感覺神經" class="md-toc-link">
+            <p>感覺神經</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#疾病" class="md-toc-link">
+            <p>疾病</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#視覺" class="md-toc-link"><p>視覺</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#lateral-geniculate-nucleus" class="md-toc-link">
+            <p>lateral geniculate nucleus</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#視覺皮層visual-cortex" class="md-toc-link">
+            <p>視覺皮層(Visual Cortex)</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#聽覺" class="md-toc-link"><p>聽覺</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#auditory-cortex" class="md-toc-link"><p>Auditory cortex</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#高階聽覺" class="md-toc-link">
+            <p>高階聽覺</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
 </div>
-      <a id="sidebar-toc-btn">&#x2261;</a>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
     
     
-    <script>
-// config mermaid init call
-// http://knsv.github.io/mermaid/#configuration
-//
-// You can edit the 'MERMAID_CONFIG' variable below.
-MERMAID_CONFIG = {
-  startOnLoad: false,
+    <script type="module">
+// TODO: If ZenUML gets integrated into mermaid in the future,
+//      we can remove the following lines.
+
+
+var MERMAID_CONFIG = ({"startOnLoad":false});
+if (typeof MERMAID_CONFIG !== 'undefined') {
+  MERMAID_CONFIG.startOnLoad = false
+  MERMAID_CONFIG.cloneCssStyles = false
+  MERMAID_CONFIG.theme = "dark"
 }
 
-if (window['MERMAID_CONFIG']) {
-  window['MERMAID_CONFIG'].startOnLoad = false
-  window['MERMAID_CONFIG'].cloneCssStyles = false
-  window['MERMAID_CONFIG'].theme = "dark"
-}
-mermaid.initialize(window['MERMAID_CONFIG'] || {})
+mermaid.initialize(MERMAID_CONFIG || {})
 if (typeof(window['Reveal']) !== 'undefined') {
   function mermaidRevealHelper(event) {
     var currentSlide = event.currentSlide
@@ -1574,14 +1515,17 @@ if (typeof(window['Reveal']) !== 'undefined') {
       }
     }
   }
-  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('slidetransitionend', mermaidRevealHelper)
   Reveal.addEventListener('ready', mermaidRevealHelper)
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
 } else {
-  mermaid.init(null, document.getElementsByClassName('mermaid'))
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
 }
 </script>
-    
-    
     
     
     

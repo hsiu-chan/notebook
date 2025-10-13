@@ -1,277 +1,16 @@
 <!DOCTYPE html><html><head>
-      <title>&#x751F;&#x5316;&#x4E8C;</title>
+      <title>生化二</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
-      
-      
-      
-      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
       
       
       
       
       
       <style>
-      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAfIAAsAAAAADDAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kosY21hcAAAAYAAAADTAAACjtP6ytBnbHlmAAACVAAAAxgAAAQ4zRtvlGhlYWQAAAVsAAAALwAAADYRwZsnaGhlYQAABZwAAAAcAAAAJAeKAzxobXR4AAAFuAAAABIAAAA8OGQAAGxvY2EAAAXMAAAAIAAAACAG5AfwbWF4cAAABewAAAAfAAAAIAEfAERuYW1lAAAGDAAAAVcAAAKFkAhoC3Bvc3QAAAdkAAAAYgAAAK2vz7wkeJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkPsQ4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVLy4xKzzX4chhrmK4QpQmBEkBwAZygyweJzFkr0NwjAQhZ+TEP6CRUfHBEwRUWaQTICyQbpMwRCskA5RUIONxG0RnnNpKAIV4qzPku/8c353ACYAYrIjCWCuMAh2ptf0/hiL3p/gyPUWa3osqlt0L1zu9r71z8dGrJRykFoauXQd932Lj5vhG+MjxGeYI8MKETObMpslf5EyP8tg+vHun5r539PvlvXzaVhRFVQDTPEWKVQR90KhnnC5Ek67vUKN4VuFasM/ldARj43CCkCsEjpJSoVVgRyU0GVSK6wUpFFCx8lFgX0BiXpRPQB4nE2TTWjcRhTH3xttpDhxN7uxPlp3u/FK7moRPixafRijNosxSw/LUsIwNcaEHPZggo/FmEKMCKWU4kNOOftQSlhE8alnH0Ix9BqWnHooPRrTQ0+mnu2bXTu2pPdGM9LM/6c3fwECTM4gBBMYQNqxzLrZAjqYSlqu2TAHZQA0/DQJH6FtzqGDnvbt4Ggwvzw/nL8EfH8kW0fsuRqhgWXZnY7M1picaUL7Du5BHeDzMIl83dAt016wH1qmvtSMo5R6YRJHTR//FXsff/nj/tc/5K9P5d+nP22+fFK5u7v3K39SW3y+OtDKO3L85vD09PD9z5X17a2N1g4tqk01RlqX7gyoEmnsWQtVr4rtZMmukEaFBZxzefkCn11cyKMLZgshRwgTYNoLNXCBz2ja7HvZG7hDpPSNfoo5vs0knK/9hb+rNpu+8kHPgk/Ao4kK3tWtTpSEtvkA9c+wE6UaUdwieNkaHg55tBEtRiEPw1s0+FtrtTcc9two2lhMknV7PZF/cs6+uUFTmpTGbEx7sQCPSLOttHS3GRltqp7SNzVSKzl6aWnZT/CX5k6/v9N3Hh8fHBwffJVjhrC6OgH5dkIt/tPsq+d/PD5Qz7G7efzq1THFjdZVPe/N6ulQ3JnDWSE5junsFsVIiFwL/htf1S5gJ3BfOcUxfHKLnzqpFpyfZ9cX+/5WB6a+Y0pHpzkNrYNVDwMsikK+y7WuLCRg/oFHkA8VT3rDg5ZnU6ktzzINymV0m74Xd5pfIGXyFeVEQSShkzqG7TBBa2OxVRKitLXv7h3uuftXnXq7lz2tZ/WnWa9dx9dCjDhHzmuVQATlmljr9dZErUydSo2Hbi/b1vXtrOeGCk2/8s3ZlO8+ueJT8BVlw5pGw2oYccdSiHHqx0RlabHqdNR9jAETl6PreJcPBnnfpTLnOQ8C3OV8AmQGzouV1iZdeb5SSIoVc8W8/kcDtksUH5FrU6/aqBqNWcMEzxG4DAQ14qRQhi9mWU0rzepKezbjfgCwQKxVYq5ajRgpRqy45CqwkJydcEkbTkvRz8P5/2ZpDTN4nGNgZGBgAOKb6v+/xvPbfGXgZmEAgeuB2kkI+v8bFgbmKiCXg4EJJAoAPyAKhQB4nGNgZGBg1vmvwxDDwgACQJKRARXwAwAzZQHQeJxjYQCCFAYGFgbSMQAcWACdAAAAAAAAAAwALgBgAIQAmADSAQgBIgE8AVABoAHeAfwCHHicY2BkYGDgZ7BgYGMAASYg5gJCBob/YD4DAA/hAWQAeJxlkbtuwkAURMc88gApQomUJoq0TdIQzEOpUDokKCNR0BuzBiO/tF6QSJcPyHflE9Klyyekz2CuG8cr7547M3d9JQO4xjccnJ57vid2cMHqxDWc40G4Tv1JuEF+Fm6ijRfhM+oz4Ra6eBVu4wZvvMFpXLIa40PYQQefwjVc4Uu4Tv1HuEH+FW7i1mkKn6Hj3Am3sHC6wm08Ou8tpSZGe1av1PKggjSxPd8zJtSGTuinyVGa6/Uu8kxZludCmzxMEzV0B6U004k25W35fj2yNlCBSWM1paujKFWZSbfat+7G2mzc7weiu34aczzFNYGBhgfLfcV6iQP3ACkSaj349AxXSN9IT0j16JepOb01doiKbNWt1ovippz6sVYYwsXgX2rGVFIkq7Pl2PNrI6qW6eOshj0xaSq9mpNEZIWs8LZUfOouNkVXxp/d5woqebeYIf4D2J1ywQB4nG3LOw6AIBAE0B384B+PAkgEa+QwNnYmHt+EpXSal5lkSBBnoP8oCFSo0aCFRIceA0ZMmLFAYSW88rmvtMUjG3RiQ9HvpfusM6zWNmtc5H/iPewha50tOt5PS/QBx2IeSwAA") format("woff");
-}
-
-.admonition {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
-  position: relative;
-  margin: 1.5625em 0;
-  padding: 0 1.2rem;
-  border-left: .4rem solid rgba(68, 138, 255, .8);
-  border-radius: .2rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  overflow: auto;
-}
-
-.admonition>p {
-  margin-top: .8rem;
-}
-
-.admonition>.admonition-title {
-  margin: 0 -1.2rem;
-  padding: .8rem 1.2rem .8rem 3.6rem;
-  border-bottom: 1px solid rgba(68, 138, 255, .2);
-  background-color: rgba(68, 138, 255, .1);
-  font-weight: 700;
-}
-
-.admonition>.admonition-title:before {
-  position: absolute;
-  left: 1.2rem;
-  font-size: 1.5rem;
-  color: rgba(68, 138, 255, .8);
-  content: "\E3C9";
-}
-
-.admonition>.admonition-title:before {
-  font-family: Material Icons;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 2rem;
-  text-transform: none;
-  white-space: nowrap;
-  speak: none;
-  word-wrap: normal;
-  direction: ltr;
-}
-
-.admonition.summary,
-.admonition.abstract,
-.admonition.tldr {
-  border-left-color: rgba(0, 176, 255, .8);
-}
-
-.admonition.summary>.admonition-title,
-.admonition.abstract>.admonition-title,
-.admonition.tldr>.admonition-title {
-  background-color: rgba(0, 176, 255, .1);
-  border-bottom-color: rgba(0, 176, 255, .2);
-}
-
-.admonition.summary>.admonition-title:before,
-.admonition.abstract>.admonition-title:before,
-.admonition.tldr>.admonition-title:before {
-  color: rgba(0, 176, 255, 1);
-  ;
-  content: "\E8D2";
-}
-
-.admonition.hint,
-.admonition.tip {
-  border-left-color: rgba(0, 191, 165, .8);
-}
-
-.admonition.hint>.admonition-title,
-.admonition.tip>.admonition-title {
-  background-color: rgba(0, 191, 165, .1);
-  border-bottom-color: rgba(0, 191, 165, .2);
-}
-
-.admonition.hint>.admonition-title:before,
-.admonition.tip>.admonition-title:before {
-  color: rgba(0, 191, 165, 1);
-  content: "\E80E";
-}
-
-.admonition.info,
-.admonition.todo {
-  border-left-color: rgba(0, 184, 212, .8);
-}
-
-.admonition.info>.admonition-title,
-.admonition.todo>.admonition-title {
-  background-color: rgba(0, 184, 212, .1);
-  border-bottom-color: rgba(0, 184, 212, .2);
-}
-
-.admonition.info>.admonition-title:before,
-.admonition.todo>.admonition-title:before {
-  color: rgba(0, 184, 212, 1);
-  ;
-  content: "\E88E";
-}
-
-.admonition.success,
-.admonition.check,
-.admonition.done {
-  border-left-color: rgba(0, 200, 83, .8);
-}
-
-.admonition.success>.admonition-title,
-.admonition.check>.admonition-title,
-.admonition.done>.admonition-title {
-  background-color: rgba(0, 200, 83, .1);
-  border-bottom-color: rgba(0, 200, 83, .2);
-}
-
-.admonition.success>.admonition-title:before,
-.admonition.check>.admonition-title:before,
-.admonition.done>.admonition-title:before {
-  color: rgba(0, 200, 83, 1);
-  ;
-  content: "\E876";
-}
-
-.admonition.question,
-.admonition.help,
-.admonition.faq {
-  border-left-color: rgba(100, 221, 23, .8);
-}
-
-.admonition.question>.admonition-title,
-.admonition.help>.admonition-title,
-.admonition.faq>.admonition-title {
-  background-color: rgba(100, 221, 23, .1);
-  border-bottom-color: rgba(100, 221, 23, .2);
-}
-
-.admonition.question>.admonition-title:before,
-.admonition.help>.admonition-title:before,
-.admonition.faq>.admonition-title:before {
-  color: rgba(100, 221, 23, 1);
-  ;
-  content: "\E887";
-}
-
-.admonition.warning,
-.admonition.attention,
-.admonition.caution {
-  border-left-color: rgba(255, 145, 0, .8);
-}
-
-.admonition.warning>.admonition-title,
-.admonition.attention>.admonition-title,
-.admonition.caution>.admonition-title {
-  background-color: rgba(255, 145, 0, .1);
-  border-bottom-color: rgba(255, 145, 0, .2);
-}
-
-.admonition.attention>.admonition-title:before {
-  color: rgba(255, 145, 0, 1);
-  content: "\E417";
-}
-
-.admonition.warning>.admonition-title:before,
-.admonition.caution>.admonition-title:before {
-  color: rgba(255, 145, 0, 1);
-  content: "\E002";
-}
-
-.admonition.failure,
-.admonition.fail,
-.admonition.missing {
-  border-left-color: rgba(255, 82, 82, .8);
-}
-
-.admonition.failure>.admonition-title,
-.admonition.fail>.admonition-title,
-.admonition.missing>.admonition-title {
-  background-color: rgba(255, 82, 82, .1);
-  border-bottom-color: rgba(255, 82, 82, .2);
-}
-
-.admonition.failure>.admonition-title:before,
-.admonition.fail>.admonition-title:before,
-.admonition.missing>.admonition-title:before {
-  color: rgba(255, 82, 82, 1);
-  ;
-  content: "\E14C";
-}
-
-.admonition.danger,
-.admonition.error,
-.admonition.bug {
-  border-left-color: rgba(255, 23, 68, .8);
-}
-
-.admonition.danger>.admonition-title,
-.admonition.error>.admonition-title,
-.admonition.bug>.admonition-title {
-  background-color: rgba(255, 23, 68, .1);
-  border-bottom-color: rgba(255, 23, 68, .2);
-}
-
-.admonition.danger>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E3E7";
-}
-
-.admonition.error>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E14C";
-}
-
-.admonition.bug>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E868";
-}
-
-.admonition.example,
-.admonition.snippet {
-  border-left-color: rgba(0, 184, 212, .8);
-}
-
-.admonition.example>.admonition-title,
-.admonition.snippet>.admonition-title {
-  background-color: rgba(0, 184, 212, .1);
-  border-bottom-color: rgba(0, 184, 212, .2);
-}
-
-.admonition.example>.admonition-title:before,
-.admonition.snippet>.admonition-title:before {
-  color: rgba(0, 184, 212, 1);
-  ;
-  content: "\E242";
-}
-
-.admonition.quote,
-.admonition.cite {
-  border-left-color: rgba(158, 158, 158, .8);
-}
-
-.admonition.quote>.admonition-title,
-.admonition.cite>.admonition-title {
-  background-color: rgba(158, 158, 158, .1);
-  border-bottom-color: rgba(158, 158, 158, .2);
-}
-
-.admonition.quote>.admonition-title:before,
-.admonition.cite>.admonition-title:before {
-  color: rgba(158, 158, 158, 1);
-  ;
-  content: "\E244";
-}
-
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#aab1bf;background-color:#30353f!important;border:#4b5261;border-radius:3px}pre[class*=language-]{padding:1em}code[class*=language-] .token.cdata,code[class*=language-] .token.comment,code[class*=language-] .token.doctype,code[class*=language-] .token.prolog,pre[class*=language-] .token.cdata,pre[class*=language-] .token.comment,pre[class*=language-] .token.doctype,pre[class*=language-] .token.prolog{color:#5b6270}code[class*=language-] .namespace,pre[class*=language-] .namespace{opacity:.7}code[class*=language-] .token.constant,pre[class*=language-] .token.constant{color:#d19965}code[class*=language-] .token.boolean,code[class*=language-] .token.function-name,code[class*=language-] .token.number,pre[class*=language-] .token.boolean,pre[class*=language-] .token.function-name,pre[class*=language-] .token.number{color:#d19965}code[class*=language-] .token.tag,pre[class*=language-] .token.tag{color:#df6b75}code[class*=language-] .token.symbol,pre[class*=language-] .token.symbol{color:#56b5c2}code[class*=language-] .token.selector,pre[class*=language-] .token.selector{color:#c578dd}code[class*=language-] .token.attr-name,pre[class*=language-] .token.attr-name{color:#d19965}code[class*=language-] .token.string,pre[class*=language-] .token.string{color:#97c279}code[class*=language-] .token.char,pre[class*=language-] .token.char{color:#56b5c2}code[class*=language-] .token.url,pre[class*=language-] .token.url{color:#56b5c2}code[class*=language-] .token.operator,pre[class*=language-] .token.operator{color:#aab1bf}code[class*=language-] .token.atrule,code[class*=language-] .token.attr-value,code[class*=language-] .token.keyword,pre[class*=language-] .token.atrule,pre[class*=language-] .token.attr-value,pre[class*=language-] .token.keyword{color:#c578dd}code[class*=language-] .token.function,pre[class*=language-] .token.function{color:#61afef}code[class*=language-] .token.class-name,pre[class*=language-] .token.class-name{color:#e4bf7a}code[class*=language-] .token.variable,pre[class*=language-] .token.variable{color:#d19965}code[class*=language-] .token.regex,pre[class*=language-] .token.regex{color:#56b5c2}code[class*=language-] .token.important,pre[class*=language-] .token.important{color:#df6b75}code[class*=language-] .token.bold,code[class*=language-] .token.important,pre[class*=language-] .token.bold,pre[class*=language-] .token.important{font-weight:700}code[class*=language-] .token.italic,pre[class*=language-] .token.italic{font-style:italic}code[class*=language-] .token.entity,pre[class*=language-] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#aab1bf;background-color:#272b33;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#fff}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#7c869c}html body strong{color:#fff}html body del{color:#7c869c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#7c869c;background-color:#393f4a;border-left:4px solid #4b5261}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#4b5261;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#fff}html body table td,html body table th{border:1px solid #4b5261;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#fff;background-color:#393f4a;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#4b5261;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#fff;border:1px solid #4b5261;border-bottom:2px solid #3e4450;padding:2px 4px;background-color:#393f4a;border-radius:3px}@media print{html body{background-color:#272b33}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#fff;page-break-after:avoid}html body blockquote{color:#7c869c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face{font-family:"Material Icons";font-style:normal;font-weight:400;src:local("Material Icons"),local("MaterialIcons-Regular"),url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAfIAAsAAAAADDAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kosY21hcAAAAYAAAADTAAACjtP6ytBnbHlmAAACVAAAAxgAAAQ4zRtvlGhlYWQAAAVsAAAALwAAADYRwZsnaGhlYQAABZwAAAAcAAAAJAeKAzxobXR4AAAFuAAAABIAAAA8OGQAAGxvY2EAAAXMAAAAIAAAACAG5AfwbWF4cAAABewAAAAfAAAAIAEfAERuYW1lAAAGDAAAAVcAAAKFkAhoC3Bvc3QAAAdkAAAAYgAAAK2vz7wkeJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkPsQ4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVLy4xKzzX4chhrmK4QpQmBEkBwAZygyweJzFkr0NwjAQhZ+TEP6CRUfHBEwRUWaQTICyQbpMwRCskA5RUIONxG0RnnNpKAIV4qzPku/8c353ACYAYrIjCWCuMAh2ptf0/hiL3p/gyPUWa3osqlt0L1zu9r71z8dGrJRykFoauXQd932Lj5vhG+MjxGeYI8MKETObMpslf5EyP8tg+vHun5r539PvlvXzaVhRFVQDTPEWKVQR90KhnnC5Ek67vUKN4VuFasM/ldARj43CCkCsEjpJSoVVgRyU0GVSK6wUpFFCx8lFgX0BiXpRPQB4nE2TTWjcRhTH3xttpDhxN7uxPlp3u/FK7moRPixafRijNosxSw/LUsIwNcaEHPZggo/FmEKMCKWU4kNOOftQSlhE8alnH0Ix9BqWnHooPRrTQ0+mnu2bXTu2pPdGM9LM/6c3fwECTM4gBBMYQNqxzLrZAjqYSlqu2TAHZQA0/DQJH6FtzqGDnvbt4Ggwvzw/nL8EfH8kW0fsuRqhgWXZnY7M1picaUL7Du5BHeDzMIl83dAt016wH1qmvtSMo5R6YRJHTR//FXsff/nj/tc/5K9P5d+nP22+fFK5u7v3K39SW3y+OtDKO3L85vD09PD9z5X17a2N1g4tqk01RlqX7gyoEmnsWQtVr4rtZMmukEaFBZxzefkCn11cyKMLZgshRwgTYNoLNXCBz2ja7HvZG7hDpPSNfoo5vs0knK/9hb+rNpu+8kHPgk/Ao4kK3tWtTpSEtvkA9c+wE6UaUdwieNkaHg55tBEtRiEPw1s0+FtrtTcc9two2lhMknV7PZF/cs6+uUFTmpTGbEx7sQCPSLOttHS3GRltqp7SNzVSKzl6aWnZT/CX5k6/v9N3Hh8fHBwffJVjhrC6OgH5dkIt/tPsq+d/PD5Qz7G7efzq1THFjdZVPe/N6ulQ3JnDWSE5junsFsVIiFwL/htf1S5gJ3BfOcUxfHKLnzqpFpyfZ9cX+/5WB6a+Y0pHpzkNrYNVDwMsikK+y7WuLCRg/oFHkA8VT3rDg5ZnU6ktzzINymV0m74Xd5pfIGXyFeVEQSShkzqG7TBBa2OxVRKitLXv7h3uuftXnXq7lz2tZ/WnWa9dx9dCjDhHzmuVQATlmljr9dZErUydSo2Hbi/b1vXtrOeGCk2/8s3ZlO8+ueJT8BVlw5pGw2oYccdSiHHqx0RlabHqdNR9jAETl6PreJcPBnnfpTLnOQ8C3OV8AmQGzouV1iZdeb5SSIoVc8W8/kcDtksUH5FrU6/aqBqNWcMEzxG4DAQ14qRQhi9mWU0rzepKezbjfgCwQKxVYq5ajRgpRqy45CqwkJydcEkbTkvRz8P5/2ZpDTN4nGNgZGBgAOKb6v+/xvPbfGXgZmEAgeuB2kkI+v8bFgbmKiCXg4EJJAoAPyAKhQB4nGNgZGBg1vmvwxDDwgACQJKRARXwAwAzZQHQeJxjYQCCFAYGFgbSMQAcWACdAAAAAAAAAAwALgBgAIQAmADSAQgBIgE8AVABoAHeAfwCHHicY2BkYGDgZ7BgYGMAASYg5gJCBob/YD4DAA/hAWQAeJxlkbtuwkAURMc88gApQomUJoq0TdIQzEOpUDokKCNR0BuzBiO/tF6QSJcPyHflE9Klyyekz2CuG8cr7547M3d9JQO4xjccnJ57vid2cMHqxDWc40G4Tv1JuEF+Fm6ijRfhM+oz4Ra6eBVu4wZvvMFpXLIa40PYQQefwjVc4Uu4Tv1HuEH+FW7i1mkKn6Hj3Am3sHC6wm08Ou8tpSZGe1av1PKggjSxPd8zJtSGTuinyVGa6/Uu8kxZludCmzxMEzV0B6U004k25W35fj2yNlCBSWM1paujKFWZSbfat+7G2mzc7weiu34aczzFNYGBhgfLfcV6iQP3ACkSaj349AxXSN9IT0j16JepOb01doiKbNWt1ovippz6sVYYwsXgX2rGVFIkq7Pl2PNrI6qW6eOshj0xaSq9mpNEZIWs8LZUfOouNkVXxp/d5woqebeYIf4D2J1ywQB4nG3LOw6AIBAE0B384B+PAkgEa+QwNnYmHt+EpXSal5lkSBBnoP8oCFSo0aCFRIceA0ZMmLFAYSW88rmvtMUjG3RiQ9HvpfusM6zWNmtc5H/iPewha50tOt5PS/QBx2IeSwAA") format("woff")}.admonition{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);position:relative;margin:1.5625em 0;padding:0 1.2rem;border-left:.4rem solid rgba(68,138,255,.8);border-radius:.2rem;background-color:rgba(255,255,255,.05);overflow:auto}.admonition>p{margin-top:.8rem}.admonition>.admonition-title{margin:0 -1.2rem;padding:.8rem 1.2rem .8rem 3.6rem;border-bottom:1px solid rgba(68,138,255,.2);background-color:rgba(68,138,255,.1);font-weight:700}.admonition>.admonition-title:before{position:absolute;left:1.2rem;font-size:1.5rem;color:rgba(68,138,255,.8);content:"\E3C9"}.admonition>.admonition-title:before{font-family:Material Icons;font-style:normal;font-variant:normal;font-weight:400;line-height:2rem;text-transform:none;white-space:nowrap;speak:none;word-wrap:normal;direction:ltr}.admonition.abstract,.admonition.summary,.admonition.tldr{border-left-color:rgba(0,176,255,.8)}.admonition.abstract>.admonition-title,.admonition.summary>.admonition-title,.admonition.tldr>.admonition-title{background-color:rgba(0,176,255,.1);border-bottom-color:rgba(0,176,255,.2)}.admonition.abstract>.admonition-title:before,.admonition.summary>.admonition-title:before,.admonition.tldr>.admonition-title:before{color:#00b0ff;content:"\E8D2"}.admonition.hint,.admonition.tip{border-left-color:rgba(0,191,165,.8)}.admonition.hint>.admonition-title,.admonition.tip>.admonition-title{background-color:rgba(0,191,165,.1);border-bottom-color:rgba(0,191,165,.2)}.admonition.hint>.admonition-title:before,.admonition.tip>.admonition-title:before{color:#00bfa5;content:"\E80E"}.admonition.info,.admonition.todo{border-left-color:rgba(0,184,212,.8)}.admonition.info>.admonition-title,.admonition.todo>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.info>.admonition-title:before,.admonition.todo>.admonition-title:before{color:#00b8d4;content:"\E88E"}.admonition.check,.admonition.done,.admonition.success{border-left-color:rgba(0,200,83,.8)}.admonition.check>.admonition-title,.admonition.done>.admonition-title,.admonition.success>.admonition-title{background-color:rgba(0,200,83,.1);border-bottom-color:rgba(0,200,83,.2)}.admonition.check>.admonition-title:before,.admonition.done>.admonition-title:before,.admonition.success>.admonition-title:before{color:#00c853;content:"\E876"}.admonition.faq,.admonition.help,.admonition.question{border-left-color:rgba(100,221,23,.8)}.admonition.faq>.admonition-title,.admonition.help>.admonition-title,.admonition.question>.admonition-title{background-color:rgba(100,221,23,.1);border-bottom-color:rgba(100,221,23,.2)}.admonition.faq>.admonition-title:before,.admonition.help>.admonition-title:before,.admonition.question>.admonition-title:before{color:#64dd17;content:"\E887"}.admonition.attention,.admonition.caution,.admonition.warning{border-left-color:rgba(255,145,0,.8)}.admonition.attention>.admonition-title,.admonition.caution>.admonition-title,.admonition.warning>.admonition-title{background-color:rgba(255,145,0,.1);border-bottom-color:rgba(255,145,0,.2)}.admonition.attention>.admonition-title:before{color:#ff9100;content:"\E417"}.admonition.caution>.admonition-title:before,.admonition.warning>.admonition-title:before{color:#ff9100;content:"\E002"}.admonition.fail,.admonition.failure,.admonition.missing{border-left-color:rgba(255,82,82,.8)}.admonition.fail>.admonition-title,.admonition.failure>.admonition-title,.admonition.missing>.admonition-title{background-color:rgba(255,82,82,.1);border-bottom-color:rgba(255,82,82,.2)}.admonition.fail>.admonition-title:before,.admonition.failure>.admonition-title:before,.admonition.missing>.admonition-title:before{color:#ff5252;content:"\E14C"}.admonition.bug,.admonition.danger,.admonition.error{border-left-color:rgba(255,23,68,.8)}.admonition.bug>.admonition-title,.admonition.danger>.admonition-title,.admonition.error>.admonition-title{background-color:rgba(255,23,68,.1);border-bottom-color:rgba(255,23,68,.2)}.admonition.danger>.admonition-title:before{color:#ff1744;content:"\E3E7"}.admonition.error>.admonition-title:before{color:#ff1744;content:"\E14C"}.admonition.bug>.admonition-title:before{color:#ff1744;content:"\E868"}.admonition.example,.admonition.snippet{border-left-color:rgba(0,184,212,.8)}.admonition.example>.admonition-title,.admonition.snippet>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.example>.admonition-title:before,.admonition.snippet>.admonition-title:before{color:#00b8d4;content:"\E242"}.admonition.cite,.admonition.quote{border-left-color:rgba(158,158,158,.8)}.admonition.cite>.admonition-title,.admonition.quote>.admonition-title{background-color:rgba(158,158,158,.1);border-bottom-color:rgba(158,158,158,.2)}.admonition.cite>.admonition-title:before,.admonition.quote>.admonition-title:before{color:#9e9e9e;content:"\E244"}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 .markdown-preview {
@@ -301,37 +40,119 @@
 }
 .markdown-preview h4 {
   font-style: italic;
-  font-weight: normal ;
+  font-weight: normal;
   font-size: 1.2em;
 }
 .markdown-preview hr {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1pt solid #8b8b8b;
 }
+@media screen and (max-width: 600px) {
+  .table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .table-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
 .markdown-preview table {
-  display: block;
-  max-width: 100%;
-  overflow: auto;
+  width: 100%;
+  table-layout: fixed;
   text-align: center;
-  color: #f0ffff;
+  color: #fff7f0;
+  border-collapse: collapse;
+  display: table;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .markdown-preview table {
+    table-layout: auto;
+    display: table;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+.markdown-preview table thead {
+  position: sticky;
+  background-color: hsl(220, 13%, 8%);
+  top: 0;
+  z-index: 999;
 }
 .markdown-preview table th {
   text-align: center;
   font-weight: bold;
   color: #81b4f4;
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table td {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
 }
 .markdown-preview table tr {
-  border: 1.5px solid #b7b7b7;
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td,
+.markdown-preview table th {
+  padding: 0;
+  position: relative;
+}
+.markdown-preview table td ol,
+.markdown-preview table th ol,
+.markdown-preview table td ul,
+.markdown-preview table th ul {
+  list-style-position: inside;
+  /* 控制項目符號的位置 */
+  text-align: left;
+  /* 文字對齊方式 */
+}
+.markdown-preview table .table-diagonal {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49%, #8b8b8b 49%, #8b8b8b 51%, rgba(0, 0, 0, 0) 51%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.markdown-preview table .table-diagonal .top-left {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.markdown-preview table .table-diagonal .top-right {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.markdown-preview table .table-diagonal .bottom-right {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+.markdown-preview table .table-diagonal .bottom-left {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
   width: 100%;
-  max-width: 914px;
+  max-width: 1000px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -344,201 +165,155 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   left: 0;
   width: 200px;
   height: 100%;
-  padding: 32px 10px 48px 0;
+  padding: 50px 10px 48px 0;
   font-size: 14px;
   box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
   box-sizing: border-box;
   overflow: auto;
   background-color: inherit;
 }
-html {
-  /* 侧栏 */
-  /*.md-sidebar-toc ul li:hover > ul,
-  .md-sidebar-toc ul li:hover > ul ul{
-    display: block;
-  }*/
-  /* 侧栏自动编号 */
-  /* 复位计数器 */
-  /* 进行编号 */
-}
-html .md-sidebar-toc {
-  margin: 0rem 0rem 0em 0em;
-  padding: 0rem 0rem 0em 0rem;
-  width: auto;
-  max-width: 768px;
-  margin-bottom: 1em;
-  background-color: rgba(255, 255, 255, 0.1);
-  /*背景颜色*/
-  position: absolute;
-  z-index: 70;
-}
-html .md-sidebar-toc a {
-  color: inherit;
-  font-size: 0.7rem !important;
-}
-html .md-sidebar-toc a:hover {
-  color: inherit;
-}
-html .md-sidebar-toc li {
-  margin-left: 1rem;
-  margin-bottom: 0 !important;
-  text-align: left;
-  /*左对齐*/
-}
-html .md-sidebar-toc ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-  padding-right: 0 !important;
-}
-html .md-sidebar-toc ul li {
-  font-size: 0.8rem !important;
-  /*字号*/
-  font-weight: bold;
-  /*一级大纲*/
-}
-html .md-sidebar-toc ul li:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html .md-sidebar-toc ul ul {
-  padding-left: 0rem !important;
-  display: none;
-}
-html .md-sidebar-toc .active {
-  color: #87ffff;
-  font-style: italic;
-}
-html .md-sidebar-toc .active ul,
-html .md-sidebar-toc .active ul ul,
-html .md-sidebar-toc .active li {
-  display: block;
-}
-html .md-sidebar-toc ul ul:hover {
-  color: #87ffff;
-}
-html .md-sidebar-toc ul ul li {
-  margin-bottom: 8pt !important;
-  margin-top: 3pt !important;
-  margin-left: 0rem;
-  font-size: 0.8rem !important;
-  /*字号*/
-  font-style: normal;
-  font-weight: normal;
-  padding-left: 0.2rem;
-  border-left: 2px rgba(0, 0, 0, 0) solid;
-}
-html .md-sidebar-toc ul ul li:hover {
-  font-style: normal;
-  border-left: 2px solid;
-}
-html .md-sidebar-toc ul ul ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-}
-html .md-sidebar-toc ul ul ul li {
-  margin-top: 2pt !important;
-  margin-bottom: 2pt !important;
-  margin-left: 0rem;
-  padding-left: 0.5rem;
-  border-left: 0px;
-}
-html .md-sidebar-toc ul ul ul li:hover {
-  border-left: 0px solid;
-}
 html body {
-  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
+  background-color: hsl(220, 13%, 18%);
+  /* === Markdown Preview Enhancer TOC 樣式新版 === */
+  /* 縮排*/
+  /* TOC link */
+  /* 每層 details 都要重置下一層 counter */
+  /* 第一層：h1 */
+  /* 第二層：h2 */
+  /* 第三層：h3 */
+  /* 第四層：h4 */
+  /* 縮排 
+.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
+.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
+.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
+.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
+  /* hover & active */
+  /*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
 }
-html .md-sidebar-toc li {
-  counter-reset: outline-h1;
+html body .md-sidebar-toc {
+  margin: 0;
+  padding: 0.5rem 0;
+  position: absolute;
+  max-width: 768px;
+  background-color: rgba(186, 55, 55, 0.1);
+  z-index: 70;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
-html .md-sidebar-toc ul li {
-  counter-reset: outline-h2;
+html body .md-toc-link-wrapper {
+  list-style: none!important;
 }
-html .md-sidebar-toc ul ul li {
-  counter-reset: outline-h3;
+html body div.md-toc-link-wrapper {
+  margin-left: 0px!important;
 }
-html .md-sidebar-toc ul ul ul li {
-  counter-reset: outline-h4;
+html body details > div > div.md-toc-link-wrapper {
+  margin-left: 24px!important;
 }
-html .md-sidebar-toc ul ul ul ul li {
-  counter-reset: outline-h5;
+html body .md-sidebar-toc a {
+  color: inherit;
+  text-decoration: none;
 }
-html .md-sidebar-toc ul ul li:before {
-  counter-increment: outline-h2;
-  content: counter(outline-h2) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc a:hover {
+  color: #87ffff;
+  font-style: italic;
 }
-html .md-sidebar-toc ul ul ul li:before {
-  counter-increment: outline-h3;
-  content: counter(outline-h2) "." counter(outline-h3) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc {
+  counter-reset: toc-h1;
 }
-html .md-sidebar-toc ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc details {
+  counter-reset: toc-h2;
 }
-html .md-sidebar-toc ul ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
-  font-size: 0.7em;
+html body .md-sidebar-toc details details {
+  counter-reset: toc-h3;
 }
-.dcl {
+html body .md-sidebar-toc details details details {
+  counter-reset: toc-h4;
+}
+html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h1;
+  content: counter(toc-h1) ". ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h2;
+  content: counter(toc-h1) "." counter(toc-h2) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h3;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h4;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper.active a {
+  color: #87ffff;
+  font-weight: bold;
+}
+html body .dcl {
   /* block 水平置中的方法 */
   margin: 0 auto;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
   margin-right: -1%;
 }
-header,
-section,
-aside,
-.in,
-footer {
+html body header,
+html body section,
+html body aside,
+html body .in,
+html body footer {
   margin: 0 1% 0.3em 0;
 }
-section {
+html body section {
   float: left;
   width: 49%;
 }
-footer {
+html body footer {
   margin-bottom: 0;
   /* 不准其他元素出現在其左右 */
   clear: both;
 }
-/*
-/////三线表/////
-table{
-    border-top: 1.5pt solid;
-    border-bottom: 1.5pt solid;
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    text-align:center;                          //文字居中
-  page-break-inside:avoid;                    //禁止断页
-  width: 100%;                                //扩展表格宽度
-  overflow: auto;
-  margin-bottom: 8pt;                         //表格间距
-  border-collapse:collapse;       
-}
-
-table .katex{
-  font-size: 9pt;                             //表内公式
-}
-table td{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              //表内文字
-}
-
-table thead{
-  border-bottom: 0.75pt solid black;        //三线表中间线
-}
-
-//标题行
-table th{
-    font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
-    font-size:9pt;                              
-}
-*/
-.btn {
+html body .btn {
   position: fixed;
   z-index: 99;
   font-size: 24px;
@@ -549,90 +324,151 @@ table th{
   opacity: 0.4;
   word-wrap: break-word;
 }
-.btn:active {
+html body .btn:active {
   opacity: 0.8;
+}
+@media screen and (max-width: 400px) {
+  html body img {
+    width: 100% !important;
+  }
+}
+html body .fbox {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html body .fbox img {
+  position: relative;
+  left: 0;
+  transform: translate(0, 0);
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
 }
 
       </style>
-    </head>
-    <body for="html-export">
-      <div class="mume markdown-preview  ">
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
       <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
       <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="lipid">Lipid</h1>
-
-<h2 class="mume-header" id="plasma-lipoproteins">Plasma lipoproteins</h2>
-
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
-<img src="paste_src/image-36.png" alt="Alt text" style="width:30%;background-color: white;">
-<img src="paste_src/image-30.png" alt="Alt text" style="width:30%;background-color: white;">
-<img src="paste_src/image-31.png" alt="Alt text" style="width:30%;background-color: white;">
+<link rel="stylesheet" href="../Hyper_md/md.css">
+<h1 id="lipid">Lipid </h1>
+<h2 id="plasma-lipoproteins">Plasma lipoproteins </h2>
+<div class="fbox">
+<img src="paste_src/image-36.png" alt="Alt text" style="width:30%;background-color: white;padding:0"><img src="paste_src/image-30.png" alt="Alt text" style="width:30%;background-color: white;padding:0"><img src="paste_src/image-31.png" alt="Alt text" style="width:30%;background-color: white;padding:0">
 </div>
-<p><img src="paste_src/image-32.png" alt><br>
-<img src="paste_src/image-38.png" alt></p>
-<h3 class="mume-header" id="%E9%81%8B%E8%BC%B8">&#x904B;&#x8F38;</h3>
-
+<img src="paste_src/image-32.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/image-38.png" alt="Alt text" style=";background-color: white;padding:0">
+### 運輸 {#運輸 }
+- Chylomicrons 裝 Tg
 <ul>
-<li>
-<p>Chylomicrons &#x88DD; Tg</p>
-</li>
-<li>
-<p>HDL &#x7684;&#x86CB;&#x767D;&#x8CEA;&#x591A;&#xFF0C;&#x5E36; cholesterol &#x56DE;&#x809D;</p>
-</li>
-<li>
-<p>VLDL &#x904B;&#x51FA;&#x809D;</p>
-</li>
+<li>HDL 的蛋白質多，帶 cholesterol 回肝</li>
+<li>VLDL 運出肝</li>
 </ul>
-<p><img src="paste_src/image-33.png" alt></p>
+<img src="paste_src/image-33.png" alt="" style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">Cholesterol ester</p>
 <ul>
-<li>Cholesterol ester &#x5B8C;&#x5168;&#x758F;&#x6C34;&#xFF0C;&#x80FD;&#x805A;&#x7684;&#x66F4;&#x5BC6;</li>
+<li>Cholesterol ester 完全疏水，能聚的更密</li>
 </ul>
-<p><img src="paste_src/image-34.png" alt></p>
+<img src="paste_src/image-34.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
-<h3 class="mume-header" id="ldl">LDL</h3>
-
+<h3 id="ldl">LDL </h3>
 <ul>
 <li>apoproteins CII</li>
 <li>apoproteins B100</li>
 </ul>
-<h4 class="mume-header" id="endocytosis-%E9%80%B2%E5%85%A5cell%E5%BE%8C%E8%B2%A0%E5%9B%9E%E9%A5%8B">endocytosis &#x9032;&#x5165;cell&#x5F8C;&#x8CA0;&#x56DE;&#x994B;</h4>
-
+<h4 id="endocytosis-進入cell後負回饋">endocytosis 進入cell後負回饋 </h4>
 <blockquote>
-<p>&#x6291;&#x5236;&#x53EF;&#x964D;&#x8840;&#x8102;</p>
+<p>抑制可降血脂</p>
 </blockquote>
 <ol>
-<li>&#x6291;&#x5236;HMG-CoA
+<li>抑制HMG-CoA
 <ul>
-<li>&#x6E1B;&#x5C11; LDL Receptor</li>
+<li>減少 LDL Receptor</li>
 </ul>
 </li>
-<li>&#x4FC3;&#x9032;ACAT
+<li>促進ACAT
 <ul>
-<li>&#x4FC3;&#x9032; Cholesterol ester&#x5F62;&#x6210;</li>
+<li>促進 Cholesterol ester形成</li>
 </ul>
 </li>
-<li>&#x8ABF;&#x63A7; LDL receptor &#x8868;&#x73FE;</li>
+<li>調控 LDL receptor 表現</li>
 </ol>
-<p><img src="paste_src/image-35.png" alt></p>
-<h2 class="mume-header" id="lipid-acid">Lipid acid</h2>
-
-<h3 class="mume-header" id="%E6%B0%A7%E5%8C%96">&#x6C27;&#x5316;</h3>
-
+<img src="paste_src/image-35.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="lipid-acid">Lipid acid </h2>
+<h3 id="氧化">氧化 </h3>
 <ul>
-<li>&#x3B2;&#x6C27;&#x5316;&#x4E00;&#x5708;&#x5C11;&#x5169;&#x78B3;</li>
+<li>β氧化一圈少兩碳</li>
 </ul>
-<p><img src="paste_src/image-18.png" alt></p>
-<h4 class="mume-header" id="fatty-acid-activation">Fatty acid activation</h4>
-
+<img src="paste_src/image-18.png" alt="Alt text" style=";background-color: white;padding:0">
+<h4 id="fatty-acid-activation">Fatty acid activation </h4>
 <ul>
 <li>Long chain (10-20)
 <ul>
@@ -645,323 +481,261 @@ table th{
 </ul>
 </li>
 </ul>
-<img src="paste_src/image-19.png" alt="Alt text" style="width:40%;background-color: white;">
-<h4 class="mume-header" id="%E7%A9%BF%E8%86%9C">&#x7A7F;&#x819C;</h4>
-
+<img src="paste_src/image-19.png" alt="Alt text" style="width:40%;background-color: white;padding:0">
+<h4 id="穿膜">穿膜 </h4>
 <ul>
-<li>&#x5916;&#x819C;&#x4E0A;&#x52A0; Acetyl-CoA</li>
+<li>外膜上加 Acetyl-CoA</li>
 <li>Carnitine
 <ul>
-<li>&#x6A19;&#x8A18;&#x9001;&#x9032;matrix</li>
+<li>標記送進matrix</li>
 </ul>
 </li>
 <li>Carnitine-acylcarnitine translocase
 <ul>
-<li>&#x8F49;&#x904B; Carnitine, Fatty acyl-Carnitine</li>
+<li>轉運 Carnitine, Fatty acyl-Carnitine</li>
 </ul>
 </li>
 <li>Carnitine acyltransferase I (CPTI)
 <ul>
-<li>&#x5916;&#x819C;&#xFF0C;&#x52A0;&#x4E0A;Carnitine</li>
+<li>外膜，加上Carnitine</li>
 </ul>
 </li>
 <li>Carnitine acyltransferase II (CPTII)
 <ul>
-<li>&#x5167;&#x819C;&#xFF0C;&#x56DE;&#x6536;Carnitine</li>
+<li>內膜，回收Carnitine</li>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/image-20.png" alt></p>
-<h4 class="mume-header" id="the-beta-oxidation-pathway">The &#x3B2;-oxidation pathway</h4>
-
+<img src="paste_src/image-20.png" alt="Alt text" style=";background-color: white;padding:0">
+<h4 id="the-beta-oxidation-pathway">The β-oxidation pathway </h4>
 <blockquote>
-<p>&#x7C92;&#x7DDA;&#x9AD4;&#x57FA;&#x8CEA;<br>
-&#x3B2;&#x6C27;&#x5316;&#x6578;&#x9010;&#x6F38;&#x4E0A;&#x5347;</p>
+<p>粒線體基質<br>
+β氧化數逐漸上升</p>
 </blockquote>
 <div class="dcl">
 <section>
-<h5>Acyl-CoA dehydrogenase</h5>
+<h5 id="acyl-coa-dehydrogenase">Acyl-CoA dehydrogenase </h5>
 <ul>
-<li>&#x3B1;-&#x3B2;&#x6C27;&#x5316;&#x53BB;&#x6C2B;</li>
-<li>&#x7522;&#x751F; FADH<sub>2</sub></li>
+<li>α-β氧化去氫</li>
+<li>產生 FADH<sub>2</sub></li>
 <li>Trans</li>
 </ul>
-<h5>Enoyl-CoA hydratase</h5>
+<h5 id="enoyl-coa-hydratase">Enoyl-CoA hydratase </h5>
 <ul>
-<li>&#x6C34;&#x5408;&#x7522;&#x751F;2&#xB0;&#x9187;</li>
+<li>水合產生2°醇</li>
 </ul>
-<h5>3-L-hydroxyacyl-CoA dehydrogenase</h5>
+<h5 id="3-l-hydroxyacyl-coa-dehydrogenase">3-L-hydroxyacyl-CoA dehydrogenase </h5>
 <ul>
-<li>&#x6C27;&#x5316;&#x7522;&#x751F;&#x916E;</li>
+<li>氧化產生酮</li>
 <li>NADH</li>
 </ul>
-<h5>&#x3B2;-ketothiolase (thiolase)</h5>
+<h5 id="beta-ketothiolase-thiolase">β-ketothiolase (thiolase) </h5>
 <ul>
-<li>&#x5207;&#x4E0B;&#x4E00;&#x500B;Acetyl-CoA</li>
+<li>切下一個Acetyl-CoA</li>
 </ul>
 </section>
 <section>
-<p><img src="paste_src/image-21.png" alt></p>
+<img src="paste_src/image-21.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
-<h5 class="mume-header" id="%E9%80%B2%E5%85%A5-tca-cycle">&#x9032;&#x5165; TCA cycle</h5>
-
+<h5 id="進入-tca-cycle">進入 TCA cycle </h5>
 <ul>
-<li>Acetyl CoA + oxaloacetate &#x2192; Citrate</li>
+<li>Acetyl CoA + oxaloacetate → Citrate</li>
 </ul>
-<h3 class="mume-header" id="%E8%83%BD%E9%87%8F">&#x80FD;&#x91CF;</h3>
-
-<p><img src="paste_src/image-22.png" alt></p>
+<h3 id="能量">能量 </h3>
+<img src="paste_src/image-22.png" alt="Alt text" style=";background-color: white;padding:0">
 <ul>
-<li>&#x4E00;&#x500B;Acetyl-CoA &#x9032;&#x5165; Citric Acid Cycle &#x7522;&#x751F; 3NADH + FADH<sub>2</sub> + ATP/GTP</li>
+<li>一個Acetyl-CoA 進入 Citric Acid Cycle 產生 3NADH + FADH<sub>2</sub> + ATP/GTP</li>
 </ul>
-<h3 class="mume-header" id="unsaturated-fatty-acids">unsaturated fatty acids</h3>
-
-<h4 class="mume-header" id="cis">cis</h4>
-
+<h3 id="unsaturated-fatty-acids">unsaturated fatty acids </h3>
+<h4 id="cis">cis </h4>
 <div class="dcl">
 <section>
-<h5>enoyl-CoA isomerase</h5>
+<h5 id="enoyl-coa-isomerase">enoyl-CoA isomerase </h5>
 <ul>
-<li>3-cis&#x5230;2-trans</li>
+<li>3-cis到2-trans</li>
 </ul>
-<h5>2,4-dienoyl-CoA reductase</h5>
+<h5 id="24-dienoyl-coa-reductase">2,4-dienoyl-CoA reductase </h5>
 <ul>
-<li>&#x6D88;&#x8017;NADPH</li>
-<li>2-trans,4-cis&#x70EF;&#x8F49;&#x6210;3-cis</li>
+<li>消耗NADPH</li>
+<li>2-trans,4-cis烯轉成3-cis</li>
 </ul>
 </section>
 <section>
-<p><img src="paste_src/image-24.png" alt></p>
+<img src="paste_src/image-24.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
-<h4 class="mume-header" id="propionyl-coa">propionyl-CoA</h4>
-
-<p><img src="paste_src/image-26.png" alt></p>
-<h3 class="mume-header" id="ketogenesis">Ketogenesis</h3>
-
-<p><img src="paste_src/image-25.png" alt><br>
-<img src="paste_src/image-28.png" alt></p>
+<h4 id="propionyl-coa">propionyl-CoA </h4>
+<img src="paste_src/image-26.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="ketogenesis">Ketogenesis </h3>
+<img src="paste_src/image-25.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/image-28.png" alt="Alt text" style=";background-color: white;padding:0">
+- 一堆Acetyl-CoA沒有OAA能用（缺糖，缺碳）
+  - Liver mitochondria 先存電子進去( β-hydroxybutyrate)
+  - 組織 β-hydroxybutyrate 氧化回 2Acetyl-CoA+NADH
+    - β-ketoacyl-CoA transferase( S-CoA 攻擊酸)
 <ul>
-<li>
-<p>&#x4E00;&#x5806;Acetyl-CoA&#x6C92;&#x6709;OAA&#x80FD;&#x7528;&#xFF08;&#x7F3A;&#x7CD6;&#xFF0C;&#x7F3A;&#x78B3;&#xFF09;</p>
+<li>β-ketothiolase
 <ul>
-<li>Liver mitochondria &#x5148;&#x5B58;&#x96FB;&#x5B50;&#x9032;&#x53BB;( &#x3B2;-hydroxybutyrate)</li>
-<li>&#x7D44;&#x7E54; &#x3B2;-hydroxybutyrate &#x6C27;&#x5316;&#x56DE; 2Acetyl-CoA+NADH
+<li>兩個 Acetyl-CoA 產生 Acetoacetyl-CoA<br>
+<img src="paste_src/image-27.png" alt="Alt text" style=";background-color: white;padding:0"></li>
+</ul>
+</li>
+<li>HMG-CoA synthase
 <ul>
-<li>&#x3B2;-ketoacyl-CoA transferase( S-CoA &#x653B;&#x64CA;&#x9178;)</li>
+<li>第三個Acetyl-CoA 攻擊酮，產生6C</li>
+</ul>
+</li>
+<li>HMG-CoA lyase
+<ul>
+<li>脱去 Acetyl-CoA</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>
-<p>&#x3B2;-ketothiolase</p>
-<ul>
-<li>&#x5169;&#x500B; Acetyl-CoA &#x7522;&#x751F; Acetoacetyl-CoA<br>
-<img src="paste_src/image-27.png" alt></li>
-</ul>
-</li>
-<li>
-<p>HMG-CoA synthase</p>
-<ul>
-<li>&#x7B2C;&#x4E09;&#x500B;Acetyl-CoA &#x653B;&#x64CA;&#x916E;&#xFF0C;&#x7522;&#x751F;6C</li>
-</ul>
-</li>
-<li>
-<p>HMG-CoA lyase</p>
-<ul>
-<li>&#x8131;&#x53BB; Acetyl-CoA</li>
-</ul>
-</li>
-</ul>
-<h3 class="mume-header" id="%E5%90%88%E6%88%90">&#x5408;&#x6210;</h3>
-
-<p><img src="paste_src/image-41.png" alt></p>
-<ul>
-<li>&#x5728;&#x7D30;&#x80DE;&#x8CEA;&#x4E2D;</li>
-<li>Citrate &#x7A7F;&#x819C;</li>
-</ul>
-<h4 class="mume-header" id="%E7%A9%BF%E8%86%9C-1">&#x7A7F;&#x819C;</h4>
-
-<p><img src="paste_src/image-48.png" alt></p>
-<h4 class="mume-header" id="23-%E8%A3%BD%E4%BD%9C">2+3 &#x88FD;&#x4F5C;</h4>
-
-<h5 class="mume-header" id="acetyl-coa-carboxylase-acc">acetyl-CoA carboxylase (ACC).</h5>
-
-<p><img src="paste_src/image-42.png" alt><br>
-<img src="paste_src/image-43.png" alt></p>
-<ul>
-<li>ACC &#x5148;&#x63A5; E-Biotin&#xFF0C;&#x518D; HCO<sub>3</sub><sup>-</sup></li>
-<li>&#x7522;&#x751F; Malonyl-CoA (3)</li>
-<li><mark>&#x8ABF;&#x63A7;&#x6B65;&#x9A5F;</mark>
-<ul>
-<li>citrate &#x4FC3;&#x9032; (Acetyl-CoA &#x7528;&#x4E0D;&#x5B8C;&#x4E86;)</li>
-<li>AMPK&#x3001;PKA&#x3001;Fatty acyl-CoA &#x6291;&#x5236;</li>
-</ul>
-</li>
-</ul>
-<h4 class="mume-header" id="%E7%94%A2%E7%94%9F23">&#x7522;&#x751F;2+3</h4>
-
-<ul>
-<li>Acetyl-Acyl Carrier Protein (ACP)</li>
-</ul>
-<p><img src="paste_src/image-47.png" alt></p>
-<h4 class="mume-header" id="%E4%B8%80%E5%9D%A8-megasynthase%E8%AE%8A%E6%88%9041">&#x4E00;&#x5768; Megasynthase&#xFF0C;&#x8B8A;&#x6210;4+1</h4>
-
-<p><img src="paste_src/image-46.png" alt></p>
+<h3 id="合成">合成 </h3>
+<img src="paste_src/image-41.png" alt="Alt text" style=";background-color: white;padding:0">
+- 在細胞質中
+- Citrate 穿膜
+<h4 id="穿膜-1">穿膜 </h4>
+<img src="paste_src/image-48.png" alt="Alt text" style=";background-color: white;padding:0">
+<h4 id="23-製作">2+3 製作 </h4>
+<h5 id="acetyl-coa-carboxylase-acc">acetyl-CoA carboxylase (ACC). </h5>
+<img src="paste_src/image-42.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/image-43.png" alt="Alt text" style=";background-color: white;padding:0">
+- ACC 先接 E-Biotin，再 HCO~3~^-^
+- 產生 Malonyl-CoA (3)
+- ==調控步驟==
+  - citrate 促進 (Acetyl-CoA 用不完了)
+  - AMPK、PKA、Fatty acyl-CoA 抑制
+#### 產生2+3 {#產生23 }
+- Acetyl-Acyl Carrier Protein (ACP)
+<img src="paste_src/image-47.png" alt="Alt text" style=";background-color: white;padding:0">
+<h4 id="一坨-megasynthase變成41">一坨 Megasynthase，變成4+1 </h4>
+<img src="paste_src/image-46.png" alt="Alt text" style=";background-color: white;padding:0">
 <div class="dcl">
 <section>
-<h5>&#x3B2;-Ketoacyl-ACP synthase (KS)</h5>
+<h5 id="beta-ketoacyl-acp-synthase-ks">β-Ketoacyl-ACP synthase (KS) </h5>
 <ul>
-<li>2+3 &#x2192;4+1</li>
+<li>2+3 →4+1</li>
 </ul>
 </section>
 <section>
-<p><img src="paste_src/image-45.png" alt></p>
+<img src="paste_src/image-45.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
-<h2 class="mume-header" id="get-tg">Get Tg</h2>
-
-<h3 class="mume-header" id="%E8%86%BD%E9%B9%BD">&#x81BD;&#x9E7D;</h3>
-
+<h2 id="get-tg">Get Tg </h2>
+<h3 id="膽鹽">膽鹽 </h3>
 <ul>
-<li>&#x4ECB;&#x9762;&#x6D3B;&#x6027;&#x5291;</li>
+<li>介面活性劑</li>
 </ul>
-<p><img src="paste_src/image-29.png" alt></p>
-<h3 class="mume-header" id="tg%E4%BB%A3%E8%AC%9D">Tg&#x4EE3;&#x8B1D;</h3>
-
-<p><img src="paste_src/image-39.png" alt><br>
-<img src="paste_src/image-40.png" alt></p>
-<h3 class="mume-header" id="tg-%E5%90%88%E6%88%90">Tg &#x5408;&#x6210;</h3>
-
+<img src="paste_src/image-29.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="tg代謝">Tg代謝 </h3>
+<img src="paste_src/image-39.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/image-40.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="tg-合成">Tg 合成 </h3>
 <div class="dcl">
 <section>
-<h4>&#x539F;&#x6599;</h4>
-<p>DHAP or Glycerol &#x8F49;&#x6210; Glycerol-3-phosphate</p>
-<h4>glycerophosphate acyltransferase (GPAT)</h4>
-<p>&#x63A5;&#x8102;&#x80AA;&#x9178;&#x4E0A;&#x53BB;</p>
+<h4 id="原料">原料 </h4>
+<p>DHAP or Glycerol 轉成 Glycerol-3-phosphate</p>
+<h4 id="glycerophosphate-acyltransferase-gpat">glycerophosphate acyltransferase (GPAT) </h4>
+<p>接脂肪酸上去</p>
 </section>
 <section>
-<p><img src="paste_src/image-49.png" alt></p>
+<img src="paste_src/image-49.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
-<h3 class="mume-header" id="%E8%84%82%E8%82%AA%E6%9A%96%E6%9A%96%E5%8C%85">&#x8102;&#x80AA;&#x6696;&#x6696;&#x5305;</h3>
-
+<h3 id="脂肪暖暖包">脂肪暖暖包 </h3>
 <ul>
-<li>MG &#x2192; TG &#x2192; MG</li>
+<li>MG → TG → MG</li>
 </ul>
-<p><img src="paste_src/image-50.png" alt></p>
-<h2 class="mume-header" id="%E7%A3%B7%E8%84%82">&#x78F7;&#x8102;</h2>
-
-<h3 class="mume-header" id="%E6%BF%80%E6%B4%BB">&#x6FC0;&#x6D3B;</h3>
-
-<p><img src="paste_src/image-77.png" alt></p>
+<img src="paste_src/image-50.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="磷脂">磷脂 </h2>
+<h3 id="激活">激活 </h3>
+<img src="paste_src/image-77.png" alt="Alt text" style=";background-color: white;padding:0">
 <ol>
 <li>glycerol phosphate<br>
 acyltransferase enzymes
 <ul>
-<li>&#x8F49;&#x9178;&#x4E0A;&#x53BB;</li>
+<li>轉酸上去</li>
 </ul>
 </li>
 <li><mark>CDP-diacylglycerol</mark><br>
 synthase
 <ul>
-<li>&#x9ECF;&#x4E0A;CTP&#xFF0C;&#x8B8A;&#x9AD8;&#x80FD;</li>
-<li>PPi &#x2192; 2Pi</li>
+<li>黏上CTP，變高能</li>
+<li>PPi → 2Pi</li>
 </ul>
 </li>
 </ol>
-<h3 class="mume-header" id="%E5%88%86%E6%94%AF%E9%80%B2%E5%8C%96">&#x5206;&#x652F;&#x9032;&#x5316;</h3>
-
+<h3 id="分支進化">分支進化 </h3>
 <blockquote>
-<p>&#x770B;&#x770B;&#x5C31;&#x597D;</p>
+<p>看看就好</p>
 </blockquote>
-<p><img src="paste_src/image-78.png" alt></p>
+<img src="paste_src/image-78.png" alt="Alt text" style=";background-color: white;padding:0">
 <ul>
-<li>PS &#x4E00;&#x5806;&#x88AB;PSD&#x8B8A; PE</li>
+<li>PS 一堆被PSD變 PE</li>
 </ul>
-<h3 class="mume-header" id="pspg-%E8%AA%BF%E7%AF%80">PS/PG &#x8ABF;&#x7BC0;</h3>
-
-<p><img src="paste_src/image-79.png" alt></p>
-<ol>
-<li>PG &#x5E36;&#x8CA0;&#x96FB;</li>
-<li>PE&#x4E0D;&#x5E36;&#x96FB;</li>
-<li>&#x53EF;&#x4EE5;&#x6839;&#x64DA;&#x819C;&#x96FB;&#x4F4D;&#x8ABF;&#x6574;</li>
-</ol>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-62.png" alt></p>
-<h3 class="mume-header" id="%E9%AB%98%E7%AD%89%E7%94%9F%E7%89%A9">&#x9AD8;&#x7B49;&#x751F;&#x7269;</h3>
-
-<p><img src="paste_src/image-81.png" alt></p>
-<ul>
-<li>&#x591A;&#x9014;&#x5F91;PA</li>
-</ul>
-<h3 class="mume-header" id="%E5%81%9A-pc-pe">&#x505A; PC &amp; PE</h3>
-
-<p><img src="paste_src/image-82.png" alt></p>
+<h3 id="pspg-調節">PS/PG 調節 </h3>
+<img src="paste_src/image-79.png" alt="Alt text" style=";background-color: white;padding:0">
+1. PG 帶負電
+2. PE不帶電
+3. 可以根據膜電位調整
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-62.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="高等生物">高等生物 </h3>
+<img src="paste_src/image-81.png" alt="Alt text" style=";background-color: white;padding:0">
+- 多途徑PA
+<h3 id="做-pc–pe">做 PC &amp; PE </h3>
+<img src="paste_src/image-82.png" alt="Alt text" style=";background-color: white;padding:0">
 <ol>
 <li>Kinase</li>
-<li>&#x63A5;&#x4E0A;CMP&#xFF0C;&#x8B8A;&#x6210;CDP-??</li>
-<li>DAG &#x9ECF;&#x4E0A;&#x53BB;</li>
+<li>接上CMP，變成CDP-??</li>
+<li>DAG 黏上去</li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">PEMT</p>
-<p><img src="paste_src/image-84.png" alt></p>
-<ul>
-<li>PE &#x88AB;&#x52A0;&#x4E86;&#x4E09;&#x6B21;&#x7532;&#x57FA;&#x8B8A;&#x6210;PC</li>
-<li>&#x7532;&#x57FA;&#x4F86;&#x6E90;<mark>AdoMet</mark></li>
-<li>methionine adenosyltransferase &#x4E00;&#x6B21;&#x62D4;&#x4E09;&#x500B;Pi<br>
-<img src="paste_src/image-85.png" alt></li>
-</ul>
+<img src="paste_src/image-84.png" alt="Alt text" style=";background-color: white;padding:0">
+- PE 被加了三次甲基變成PC
+- 甲基來源==AdoMet==
+- methionine adenosyltransferase 一次拔三個Pi
+<img src="paste_src/image-85.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
-<h3 class="mume-header" id="pi-cardiolipin">PI &amp; Cardiolipin</h3>
-
-<p><img src="paste_src/image-87.png" alt></p>
+<h3 id="pi–cardiolipin">PI &amp; Cardiolipin </h3>
+<img src="paste_src/image-87.png" alt="Alt text" style=";background-color: white;padding:0">
 <ul>
 <li>Cardiolipin
 <ul>
-<li>&#x5169;&#x500B;DAG &#x9ECF;&#x5728;glycerol</li>
+<li>兩個DAG 黏在glycerol</li>
 </ul>
 </li>
 <li>PI
 <ul>
-<li>CDP-diacylglycerol &#x63A5;&#x516D;&#x78B3;&#x91A3;</li>
-<li>&#x8CA0;&#x96FB;</li>
+<li>CDP-diacylglycerol 接六碳醣</li>
+<li>負電</li>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="%E7%A2%B3%E9%8F%88%E7%BD%AE%E6%8F%9B">&#x78B3;&#x93C8;&#x7F6E;&#x63DB;</h3>
-
+<h3 id="碳鏈置換">碳鏈置換 </h3>
 <ul>
 <li>phospholipases and specific lysophospholipid acyltransferases</li>
-<li>&#x5207;&#x5272;&#x4F4D;&#x7F6E;<br>
-<img src="paste_src/image-86.png" alt></li>
+<li>切割位置<br>
+<img src="paste_src/image-86.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 <div class="admonition tip">
-<p class="admonition-title">&#x86C7;&#x6BD2;</p>
-<p>&#x6709;&#x4E9B;&#x80FD;&#x5207;&#x6389;&#x78B3;&#x93C8;&#xFF0C;&#x8B93;&#x78F7;&#x8102;&#x5C11;&#x4E00;&#x689D;&#xFF0C;&#x8B8A;&#x6210;&#x985E;&#x4F3C;&#x4ECB;&#x9762;&#x6D3B;&#x6027;&#x5291;&#xFF0C;&#x6EB6;cell</p>
+<p class="admonition-title">蛇毒</p>
+<p>有些能切掉碳鏈，讓磷脂少一條，變成類似介面活性劑，溶cell</p>
 </div>
-<h2 class="mume-header" id="steroids">Steroids</h2>
-
-<h3 class="mume-header" id="%E5%90%88%E6%88%90-1">&#x5408;&#x6210;</h3>
-
+<h2 id="steroids">Steroids </h2>
+<h3 id="合成-1">合成 </h3>
 <blockquote>
 <p>27 C</p>
 </blockquote>
-<h4 class="mume-header" id="%E9%80%A3%E6%8E%A5acetate">&#x9023;&#x63A5;acetate</h4>
-
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-6.png" alt="Alt text" style="width:49%;background-color: white;">
-<img src="paste_src/image-89.png" alt="Alt text" style="width:49%;background-color: white;">
+<h4 id="連接acetate">連接acetate </h4>
+<div class="fbox"> 
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-6.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
+<img src="paste_src/image-89.png" alt="Alt text" style="width:49%;background-color: white;padding:0">
 </div>
 <ol>
-<li>&#x7522;&#x751F;mevalonate
+<li>產生mevalonate
 <ul>
-<li><mark>HMG-CoA reductase &#x62D4; S CoA, &#x9084;&#x539F; ketone</mark><br>
-<img src="paste_src/image-90.png" alt><br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-2.png" alt></li>
+<li><mark>HMG-CoA reductase 拔 S CoA, 還原 ketone</mark><br>
+<img src="paste_src/image-90.png" alt="Alt text" style=";background-color: white;padding:0"><br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-2.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ol>
@@ -970,50 +744,46 @@ synthase
 <ol start="2">
 <li>From 6 carbon (C6) mevalonate to 5 carbon (C5) IPP and DMAPP:
 <ul>
-<li>&#x4E09;&#x6B21;&#x78F7;&#x9178;&#x5316;</li>
-<li>&#x7B2C;&#x4E09;&#x500B;&#x78F7;&#x9178;&#x3001;CO<sub>2</sub>&#x4E00;&#x8D77;&#x8D70;</li>
-<li>IPP isomerase &#x8F49;&#x63DB; IPP and DMAPP</li>
+<li>三次磷酸化</li>
+<li>第三個磷酸、CO<sub>2</sub>一起走</li>
+<li>IPP isomerase 轉換 IPP and DMAPP</li>
 </ul>
 </li>
 </ol>
 </section>
 <section>
-<p><img src="paste_src/image-93.png" alt></p>
+<img src="paste_src/image-93.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
 <ol start="3">
-<li>&#x8D8A;&#x4F86;&#x8D8A;&#x9577;
+<li>越來越長
 <ul>
 <li>DMAPP+ 5 IPP</li>
 </ul>
 </li>
 </ol>
-<p><img src="paste_src/image-94.png" alt></p>
-<h4 class="mume-header" id="%E6%88%90%E7%92%B0">&#x6210;&#x74B0;</h4>
-
-<p><img src="paste_src/image-88.png" alt></p>
-<h3 class="mume-header" id="%E8%AA%BF%E6%8E%A7">&#x8ABF;&#x63A7;</h3>
-
-<h4 class="mume-header" id="post-translate">Post translate</h4>
-
+<img src="paste_src/image-94.png" alt="Alt text" style=";background-color: white;padding:0">
+<h4 id="成環">成環 </h4>
+<img src="paste_src/image-88.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="調控">調控 </h3>
+<h4 id="post-translate">Post translate </h4>
 <blockquote>
-<p>&#x6CDB;&#x7D20;&#x8ABF;&#x63A7; HMG CoA reductae</p>
+<p>泛素調控 HMG CoA reductae</p>
 </blockquote>
 <ol>
-<li>Lanosteral (cholesterol &#x524D;&#x9A45;) &#x7D50;&#x5408; Insig</li>
-<li>Insig &#x628A;&#x6240;&#x6709;&#x4EBA;&#x9ECF;&#x8D77;&#x4F86;</li>
-<li>Ubc7 &#x5728; HMG-CoA reductase &#x4E0A;&#x63A5; Ubiquitin</li>
-<li>Proteasome &#x964D;&#x89E3; HMG-CoA reductase</li>
+<li>Lanosteral (cholesterol 前驅) 結合 Insig</li>
+<li>Insig 把所有人黏起來</li>
+<li>Ubc7 在 HMG-CoA reductase 上接 Ubiquitin</li>
+<li>Proteasome 降解 HMG-CoA reductase</li>
 </ol>
 <dl>
 <dt>Ubiquitin</dt>
-<dd>&#x6CDB;&#x7D20;&#xFF0C;&#x6A19;&#x8A18;&#x64CA;&#x6BBA;</dd>
+<dd>泛素，標記擊殺</dd>
 </dl>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C.png" alt></p>
-<h4 class="mume-header" id="transcript">Transcript</h4>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C.png" alt="Alt text" style=";background-color: white;padding:0">
+<h4 id="transcript">Transcript </h4>
 <ul>
-<li>&#x8F49;&#x9304;&#x56E0;&#x5B50;&#xFF1A;bHLH</li>
-<li>&#x9AD8; Cholesterol &#x6703;&#x8B93; Insig &#x6293; SCAP</li>
+<li>轉錄因子：bHLH</li>
+<li>高 Cholesterol 會讓 Insig 抓 SCAP</li>
 </ul>
 <dl>
 <dt>SREBP</dt>
@@ -1021,136 +791,109 @@ synthase
 <dt>Scap</dt>
 <dd>SREBP cleavage-activating protein</dd>
 </dl>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-1.png" alt></p>
-<h3 class="mume-header" id="%E7%94%A8%E9%80%94">&#x7528;&#x9014;</h3>
-
-<h4 class="mume-header" id="bile-acid">Bile acid</h4>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-1.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="用途">用途 </h3>
+<h4 id="bile-acid">Bile acid </h4>
 <ul>
-<li>&#x6700;&#x5927;&#x5B97;</li>
+<li>最大宗</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-3.png" alt></p>
-<h4 class="mume-header" id="progestin">Progestin</h4>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-3.png" alt="Alt text" style=";background-color: white;padding:0">
+<h4 id="progestin">Progestin </h4>
 <ul>
-<li>&#x5C3E;&#x5DF4;&#x5C11;&#x516D;&#x500B;&#xFF0C;21C</li>
+<li>尾巴少六個，21C</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-4.png" alt></p>
-<h3 class="mume-header" id="steroid-hormones-%E5%90%88%E6%88%90">Steroid hormones &#x5408;&#x6210;</h3>
-
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-5.png" alt></p>
-<h2 class="mume-header" id="vitamins">Vitamins</h2>
-
-<h3 class="mume-header" id="vitamin-a">Vitamin A</h3>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-4.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="steroid-hormones-合成">Steroid hormones 合成 </h3>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-5.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="vitamins">Vitamins </h2>
+<h3 id="vitamin-a">Vitamin A </h3>
 <ul>
-<li>Retinal &#x6703;&#x9ECF;&#x5728; Disk &#x548C; Opsin&#x7D50;&#x5408;&#xFF0C;&#x5F62;&#x6210; rhodopsin &#x4E0A;&#x611F;&#x5149;</li>
-<li>&#x7167;&#x5149;&#x4E1F;&#x51FA;&#x8CEA;&#x5B50;&#xFF0C;&#x8B8A;&#x6210; trans</li>
+<li>Retinal 會黏在 Disk 和 Opsin結合，形成 rhodopsin 上感光</li>
+<li>照光丟出質子，變成 trans</li>
 </ul>
-<div class="fbox" style="display: inline-flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 90%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);">
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-7.png" alt="Alt text" style="width:25%;background-color: white;">
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-8.png" alt="Alt text" style="width:25%;background-color: white;">
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-9.png" alt="Alt text" style="width:45%;background-color: white;">
+<div class="fbox">
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-7.png" alt="Alt text" style="width:25%;background-color: white;padding:0">
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-8.png" alt="Alt text" style="width:25%;background-color: white;padding:0">
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-9.png" alt="Alt text" style="width:45%;background-color: white;padding:0">
 </div>
-<h3 class="mume-header" id="vitamin-d">Vitamin D</h3>
-
+<h3 id="vitamin-d">Vitamin D </h3>
 <div class="dcl">
 <section>
 <p>Active form: <mark>1,25-DHC</mark></p>
 </section>
 <section>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-11.png" alt></p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-11.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
-<h2 class="mume-header" id="%E5%90%88%E6%88%90%E6%BF%80%E7%B4%A0%E4%B9%8B%E9%A1%9E%E7%9A%84">&#x5408;&#x6210;&#x6FC0;&#x7D20;&#x4E4B;&#x985E;&#x7684;</h2>
-
-<h3 class="mume-header" id="%E7%A5%9E%E7%B6%93%E7%A3%B7%E8%84%82sphingomyelin">&#x795E;&#x7D93;&#x78F7;&#x8102;(sphingomyelin)</h3>
-
+<h2 id="合成激素之類的">合成激素之類的 </h2>
+<h3 id="神經磷脂sphingomyelin">神經磷脂(sphingomyelin) </h3>
 <ul>
-<li>&#x4E0D;&#x5305;&#x542B;&#x7518;&#x6CB9;&#xFF08;glycerol&#xFF09;</li>
+<li>不包含甘油（glycerol）</li>
 <li>sphingosine(<br>
-&#x9798;&#x80FA;&#x9187;&#xFF0C;18C)+fatty acid = Ceramide (&#x96D9;&#x934A;)</li>
-<li>Ceramide + Phosphatidylcholine = Sphingomyelin + Diacylglycerol (&#x4E8C;&#x91AF;&#x7518;&#x6CB9;)<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-60.png" alt></li>
-<li>Ceramide + UDP-&#x3B1;-D-galactose 0r UDP-&#x3B1;-D-glucose &#x2192; glycosphingolipids</li>
+鞘胺醇，18C)+fatty acid = Ceramide (雙鍊)</li>
+<li>Ceramide + Phosphatidylcholine = Sphingomyelin + Diacylglycerol (二醯甘油)<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-60.png" alt="Alt text" style=";background-color: white;padding:0"></li>
+<li>Ceramide + UDP-α-D-galactose 0r UDP-α-D-glucose → glycosphingolipids</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-63.png" alt></p>
-<h3 class="mume-header" id="arachidonic-acid-%E9%A1%9E">arachidonic acid &#x985E;</h3>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-63.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="arachidonic-acid-類">arachidonic acid 類 </h3>
 <ul>
-<li>Prostaglandins(&#x524D;&#x5217;&#x817A;&#x7D20;,&#x7C21;&#x7A31; PGS)
+<li>Prostaglandins(前列腺素,簡稱 PGS)
 <ul>
-<li>COX-1, COX-2 &#x57FA;&#x56E0;<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-61.png" alt></li>
+<li>COX-1, COX-2 基因<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-61.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
-<li>Thromboxane A2(&#x8840;&#x6813;&#x7D20;)</li>
-<li>Leukotrienes(&#x767D;&#x4E09;&#x70EF;&#x7D20;)
+<li>Thromboxane A2(血栓素)</li>
+<li>Leukotrienes(白三烯素)
 <ul>
-<li>&#x80BA;&#x90E8;&#x5E73;&#x6ED1;&#x808C;&#x6536;&#x7E2E;</li>
+<li>肺部平滑肌收縮</li>
 </ul>
 </li>
 </ul>
-<h2 class="mume-header" id="%E6%95%B4%E7%90%86">&#x6574;&#x7406;</h2>
-
-<p><img src="paste_src/image-44.png" alt></p>
-<h3 class="mume-header" id="%E7%A3%B7%E8%84%82-1">&#x78F7;&#x8102;</h3>
-
-<p><img src="paste_src/image-80.png" alt><br>
-<img src="paste_src/image-83.png" alt></p>
-<h1 class="mume-header" id="%E6%AF%94%E8%BC%83%E7%94%9F%E7%90%86%E7%9A%84%E6%9D%B1%E8%A5%BF">&#x6BD4;&#x8F03;&#x751F;&#x7406;&#x7684;&#x6771;&#x897F;</h1>
-
-<h2 class="mume-header" id="%E8%82%8C%E8%82%89">&#x808C;&#x8089;</h2>
-
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-12.png" alt></p>
+<h2 id="整理">整理 </h2>
+<img src="paste_src/image-44.png" alt="Alt text" style=";background-color: white;padding:0">
+### 磷脂 {#磷脂-1 }
+<img src="paste_src/image-80.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/image-83.png" alt="Alt text" style=";background-color: white;padding:0">
+<h1 id="比較生理的東西">比較生理的東西 </h1>
+<h2 id="肌肉">肌肉 </h2>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-12.png" alt="Alt text" style=";background-color: white;padding:0">
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Glucose-6-phophatase &#x53EA;&#x6709;&#x809D;&#x81DF;&#x6709;&#xFF0C;&#x56E0;&#x6B64;&#x808C;&#x8089;&#x7684;&#x809D;&#x91A3;&#x4E0D;&#x80FD;&#x5229;&#x7528;</p>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-13.png" alt="Alt text" style="width:40%;background-color: white;">
+<p>Glucose-6-phophatase 只有肝臟有，因此肌肉的肝醣不能利用</p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-13.png" alt="Alt text" style="width:40%;background-color: white;padding:0">
 </div>
-<h3 class="mume-header" id="cori-cycle">Cori cycle</h3>
-
+<h3 id="cori-cycle">Cori cycle </h3>
 <ul>
-<li>&#x4EE3;&#x8B1D;&#x4E73;&#x9178;</li>
+<li>代謝乳酸</li>
 <li>gluconeogenesis</li>
 </ul>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-14.png" alt="Alt text" style="width:80%;background-color: white;">
-<h3 class="mume-header" id="creatine-%E8%82%8C%E9%85%B8">Creatine &#x808C;&#x9178;</h3>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-14.png" alt="Alt text" style="width:80%;background-color: white;padding:0">
+<h3 id="creatine-肌酸">Creatine 肌酸 </h3>
 <ul>
-<li>&#x808C;&#x8089;&#x77AC;&#x9593;&#x7206;&#x767C;&#x529B;</li>
-<li>&#x5F62;&#x6210; Creatinine (&#x808C;&#x9178;&#x9150;) &#x4EE3;&#x8B1D;</li>
+<li>肌肉瞬間爆發力</li>
+<li>形成 Creatinine (肌酸酐) 代謝</li>
 </ul>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-15.png" alt="Alt text" style="width:80%;background-color: white;">
-<h2 class="mume-header" id="%E8%82%9D%E8%87%9F">&#x809D;&#x81DF;</h2>
-
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-16.png" alt="Alt text" style="width:80%;background-color: white;">
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-15.png" alt="Alt text" style="width:80%;background-color: white;padding:0">
+<h2 id="肝臟">肝臟 </h2>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-16.png" alt="Alt text" style="width:80%;background-color: white;padding:0">
 <ul>
-<li>Malonyl-CoA &#x6291;&#x5236;&#x916E;&#x9AD4;&#x5F62;&#x6210;</li>
+<li>Malonyl-CoA 抑制酮體形成</li>
 </ul>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-17.png" alt="Alt text" style="width:80%;background-color: white;">
-<h2 class="mume-header" id="insulin">Insulin</h2>
-
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-019.png" alt><br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-18.png" alt></p>
-<h3 class="mume-header" id="receptor">Receptor</h3>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-17.png" alt="Alt text" style="width:80%;background-color: white;padding:0">
+<h2 id="insulin">Insulin </h2>
+<img src="paste_src/生化二-019.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-18.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="receptor">Receptor </h3>
 <ul>
 <li>Receptor tyrosine kinase
 <ul>
-<li>&#x4E00;&#x822C;&#x6703;&#x5F62;&#x6210; dimer&#xFF0C;&#x4F46;&#x662F; Insulin R &#x81EA;&#x8EAB;&#x5C31;&#x662F; Dimer</li>
+<li>一般會形成 dimer，但是 Insulin R 自身就是 Dimer</li>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-020.png" alt></p>
-<h3 class="mume-header" id="glut">GLUT</h3>
-
+<img src="paste_src/生化二-020.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="glut">GLUT </h3>
 <blockquote>
 <p>Glucose transporter</p>
 </blockquote>
@@ -1158,7 +901,7 @@ synthase
 <li>GLUT2
 <ul>
 <li>Liver</li>
-<li>Pancreatic &#x3B2; cell</li>
+<li>Pancreatic β cell</li>
 <li>small intestine</li>
 </ul>
 </li>
@@ -1171,89 +914,81 @@ synthase
 </li>
 <li>GLUT5
 <ul>
-<li>&#x904B; flucose</li>
+<li>運 flucose</li>
 </ul>
 </li>
 </ul>
-<h2 class="mume-header" id="leptin-%E7%98%A6%E7%B4%A0">Leptin (&#x7626;&#x7D20;)</h2>
-
+<h2 id="leptin-瘦素">Leptin (瘦素) </h2>
 <div class="dcl">
 <section>
 <ul>
-<li>Adipose cell &#x7522;&#x751F;</li>
-<li>&#x6291;&#x5236; fat synthesis</li>
-<li>&#x4FC3;&#x9032; &#x3B2;-oxidation</li>
-<li>&#x6291;&#x5236; Hypothalamus</li>
-<li>&#x4FC3;&#x9032;&#x7522;&#x71B1;
+<li>Adipose cell 產生</li>
+<li>抑制 fat synthesis</li>
+<li>促進 β-oxidation</li>
+<li>抑制 Hypothalamus</li>
+<li>促進產熱
 <ul>
-<li>&#x4FC3;&#x9032; Norepinephrine (&#x552F;&#x4E00;&#x53BB;&#x5076;&#x5408;&#x5291;&#xFF0C;&#x6436;&#x96FB;&#x5B50;&#x50B3;&#x905E;)</li>
+<li>促進 Norepinephrine (唯一去偶合劑，搶電子傳遞)</li>
 </ul>
 </li>
 </ul>
 </section>
 <section>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-021.png" alt></p>
+<img src="paste_src/生化二-021.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
-<h2 class="mume-header" id="glucagon-epinephrine">Glucagon / Epinephrine</h2>
-
+<h2 id="glucagon–epinephrine">Glucagon / Epinephrine </h2>
 <ul>
-<li>&#x4FC3;&#x9032;&#x5206;&#x89E3;
+<li>促進分解
 <ul>
-<li>&#x4F8B;&#x5916;: Epinephrine &#x6703;&#x4FC3;&#x9032;&#x808C;&#x8089;&#x7CD6;&#x89E3;</li>
+<li>例外: Epinephrine 會促進肌肉糖解</li>
 </ul>
 </li>
-<li>cAMP &#x589E;&#x52A0;
+<li>cAMP 增加
 <ul>
-<li>&#x4FC3;&#x9032;&#x8102;&#x80AA;&#x3001;&#x809D;&#x7CD6;&#x5206;&#x89E3;</li>
-<li>G protein &#x9014;&#x5F91;</li>
-<li>&#x4FC3;&#x9032; Protein Kinase A (PKA)</li>
+<li>促進脂肪、肝糖分解</li>
+<li>G protein 途徑</li>
+<li>促進 Protein Kinase A (PKA)</li>
 </ul>
 </li>
 </ul>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-22.png" alt="Alt text" style="width:50%;background-color: white;">
-<h1 class="mume-header" id="%E8%83%BA%E4%BB%A3%E8%AC%9D">&#x80FA;&#x4EE3;&#x8B1D;</h1>
-
-<h2 class="mume-header" id="ubiquitin">Ubiquitin</h2>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-22.png" alt="Alt text" style="width:50%;background-color: white;padding:0">
+<h1 id="胺代謝">胺代謝 </h1>
+<h2 id="ubiquitin">Ubiquitin </h2>
 <div class="dcl">
 <section>
 <ul>
-<li>&#x6A19;&#x8A18;&#x5206;&#x89E3;</li>
-<li>&#x6A19;&#x8A18;&#x9700;&#x82B1;ATP</li>
-<li>HECT E3 &#x628A;&#x5B83;&#x63A5;&#x5728; Lysine</li>
-<li>Proteasome &#x5206;&#x89E3;</li>
+<li>標記分解</li>
+<li>標記需花ATP</li>
+<li>HECT E3 把它接在 Lysine</li>
+<li>Proteasome 分解</li>
 </ul>
 </section>
 <section>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-020.png" alt></p>
+<img src="paste_src/生化二-020.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
-<h2 class="mume-header" id="amino-acid-metabolism">Amino acid metabolism</h2>
-
+<h2 id="amino-acid-metabolism">Amino acid metabolism </h2>
 <div class="admonition info">
 <p class="admonition-title">Kidney proximal tubular cells</p>
 <ul>
-<li>&#x7522;&#x80FA;</li>
+<li>產胺</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-021.png" alt></p>
+<img src="paste_src/生化二-021.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
-<h3 class="mume-header" id="%E8%BD%89%E8%83%BA%E6%A9%9F%E5%88%B6">&#x8F49;&#x80FA;&#x6A5F;&#x5236;</h3>
-
+<h3 id="轉胺機制">轉胺機制 </h3>
 <ul>
-<li><mark>&#x3B1;-ketoglutarate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2194;</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2194;</span></span></span></span> L-glutarate</mark></li>
+<li><mark>α-ketoglutarate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">↔</span></span></span></span> L-glutarate</mark></li>
 </ul>
-<h4 class="mume-header" id="%E8%BD%89%E8%83%BA%E9%85%B6">&#x8F49;&#x80FA;&#x9176;&#xFF1A;</h4>
-
+<h4 id="轉胺酶">轉胺酶： </h4>
 <ul>
 <li>Alanine aminotransferase (ALT; glutamate pyruvate transaminase, GPT)</li>
 <li>Aspartate aminotransferase (AST; glutamate oxaloacetate transaminase, GOT)</li>
 </ul>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-22.png" alt="Alt text" style="width:40%;background-color: white;">
-<h4 class="mume-header" id="%E8%BC%94%E9%85%B6-pyridoxal-5-phosphate-plp-vitb6">&#x8F14;&#x9176;: pyridoxal 5 phosphate (PLP, VitB6)</h4>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-22.png" alt="Alt text" style="width:40%;background-color: white;padding:0">
+<h4 id="輔酶-pyridoxal-5-phosphate-plp-vitb6">輔酶: pyridoxal 5 phosphate (PLP, VitB6) </h4>
 <div class="dcl">
 <section>
 <ul>
-<li>&#x5927;&#x5BB6;&#x7684;&#x8F14;&#x9176;
+<li>大家的輔酶
 <ul>
 <li>Transamination</li>
 <li>Decarboxylation</li>
@@ -1269,163 +1004,151 @@ synthase
 </ul>
 </section>
 <section>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-23.png" alt></p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-23.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
-<h2 class="mume-header" id="%E8%A1%80%E6%B6%B2%E9%81%8B%E8%BC%B8">&#x8840;&#x6DB2;&#x904B;&#x8F38;</h2>
-
+<h2 id="血液運輸">血液運輸 </h2>
 <ul>
 <li>
-<p>&#x4E00;&#x822C;&#x7D44;&#x7E54;&#x6C2E;&#x5EE2;&#x7269;&#x7528; L-glutamine &#x904B;&#x9001; (&#x8F49;&#x6210;&#x4E2D;&#x6027;)<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-24.png" alt="Alt text" style="width:40%;background-color: white;"></p>
+<p>一般組織氮廢物用 L-glutamine 運送 (轉成中性)<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-24.png" alt="Alt text" style="width:40%;background-color: white;padding:0"></p>
 </li>
 <li>
-<p>&#x808C;&#x8089;&#x6C2E;&#x5EE2;&#x7269;&#x7528; Alanine &#x904B;&#x9001;</p>
+<p>肌肉氮廢物用 Alanine 運送</p>
 <ul>
-<li><mark>Pyruvate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2194;</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2194;</span></span></span></span> Alanine</mark><br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-25.png" alt="Alt text" style="width:30%;background-color: white;"></li>
+<li><mark>Pyruvate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">↔</span></span></span></span> Alanine</mark><br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-25.png" alt="Alt text" style="width:30%;background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
-<h2 class="mume-header" id="glutamate-releases-in-liver">Glutamate Releases in liver</h2>
-
+<h2 id="glutamate-releases-in-liver">Glutamate Releases in liver </h2>
 <ul>
-<li>&#x5148;&#x8F49;&#x80FA;&#x518D;&#x8131;&#x80FA;&#xFF0C;&#x3B1;-ketoglutarate &#x9032;&#x5165; TCA cycle
+<li>先轉胺再脱胺，α-ketoglutarate 進入 TCA cycle
 <ul>
 <li>aminotransferase</li>
 <li>glutamate dehydrogenase</li>
 </ul>
 </li>
-<li>&#x5728; mitochondria</li>
+<li>在 mitochondria</li>
 </ul>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-26.png" alt="Alt text" style="width:70%;background-color: white;">
-<h2 class="mume-header" id="urea-cycle-%E5%B0%BF%E7%B4%A0%E5%BE%AA%E7%92%B0">Urea Cycle &#x5C3F;&#x7D20;&#x5FAA;&#x74B0;</h2>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-26.png" alt="Alt text" style="width:70%;background-color: white;padding:0">
+<h2 id="urea-cycle-尿素循環">Urea Cycle 尿素循環 </h2>
 <ul>
-<li>mitochondria &#x958B;&#x59CB;&#xFF0C;&#x5728;&#x7D30;&#x80DE;&#x8CEA;&#x7D50;&#x675F;</li>
-<li>&#x4E00;&#x5708;&#x6392;&#x9664; 2N</li>
+<li>mitochondria 開始，在細胞質結束</li>
+<li>一圈排除 2N</li>
 </ul>
-<h3 class="mume-header" id="mitochondria-%E5%85%A7">mitochondria &#x5167;</h3>
-
+<h3 id="mitochondria-內">mitochondria 內 </h3>
 <ol>
 <li>
-<p>NH<sub>4</sub><sup>+</sup>, CO<sub>2</sub>, ATP &#x2192; Carbamoyl phosphate</p>
+<p>NH<sub>4</sub><sup>+</sup>, CO<sub>2</sub>, ATP → Carbamoyl phosphate</p>
 <ul>
-<li>&#x8D77;&#x59CB;&#x9175;&#x7D20;&#xFF1A; Carbamoyl phosphate Synthetase</li>
+<li>起始酵素： Carbamoyl phosphate Synthetase</li>
 </ul>
 </li>
 <li>
-<p>&#x52A0; ornithine</p>
+<p>加 ornithine</p>
 <ul>
 <li>transcarbamoylase<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-27.png" alt="Alt text" style="width:70%;background-color: white;"></li>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-27.png" alt="Alt text" style="width:70%;background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>
 <p>Formation of argininosuccinate through a citrullyl AMP intermediate</p>
 <ul>
-<li><mark>oxaloacetate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2194;</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">&#x2194;</span></span></span></span> Aspartate</mark><br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-29.png" alt="Alt text" style="width:70%;background-color: white;"></li>
+<li><mark>oxaloacetate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">↔</span></span></span></span> Aspartate</mark><br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-29.png" alt="Alt text" style="width:70%;background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>
-<p>Fumarate &#x9023;&#x63A5; Urea cycle, TCA cycle<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-30.png" alt="Alt text" style="width:70%;background-color: white;"></p>
+<p>Fumarate 連接 Urea cycle, TCA cycle<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-30.png" alt="Alt text" style="width:70%;background-color: white;padding:0"></p>
 </li>
 <li>
 <p>Formation of urea and ornithine</p>
 <ul>
-<li>Urea + Arginine &#x2192; Ornithine<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-31.png" alt="Alt text" style="width:70%;background-color: white;"></li>
+<li>Urea + Arginine → Ornithine<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-31.png" alt="Alt text" style="width:70%;background-color: white;padding:0"></li>
 </ul>
 </li>
 </ol>
-<h2 class="mume-header" id="%E8%BD%89%E8%83%BA%E6%95%B4%E7%90%86">&#x8F49;&#x80FA;&#x6574;&#x7406;</h2>
-
+<h2 id="轉胺整理">轉胺整理 </h2>
 <blockquote>
-<p>&#x6C27;&#x5316;&#x812B;&#x80FA;</p>
+<p>氧化脫胺</p>
 </blockquote>
 <ul>
 <li>
-<p>&#x3B1;-Ketoglutarate  &#x21C6; Glutamate</p>
+<p>α-Ketoglutarate  ⇆ Glutamate</p>
 <ul>
-<li>Glutamate &#x9032;&#x5165;&#x809D;&#x81DF; mitochondria</li>
+<li>Glutamate 進入肝臟 mitochondria</li>
 </ul>
 </li>
 <li>
-<p>Oxaloacetate &#x21C6; Aspartate</p>
+<p>Oxaloacetate ⇆ Aspartate</p>
 <ul>
-<li>Aspartate &#x5E36;&#x51FA;&#x809D;&#x81DF; mitochondria</li>
+<li>Aspartate 帶出肝臟 mitochondria</li>
 </ul>
 </li>
 <li>
-<p>L-Glutamate &#x21C6; L-glutamine</p>
+<p>L-Glutamate ⇆ L-glutamine</p>
 <ul>
-<li>&#x7D44;&#x7E54;&#x8F49;&#x80FA;&#xFF0C;&#x8840;&#x6DB2;&#x904B;&#x8F38;</li>
+<li>組織轉胺，血液運輸</li>
 </ul>
 </li>
 <li>
-<p>Pyruvate &#x21C6; Alanine</p>
+<p>Pyruvate ⇆ Alanine</p>
 <ul>
-<li>&#x808C;&#x8089;&#x8F49;&#x80FA;&#xFF0C;&#x8840;&#x6DB2;&#x904B;&#x8F38;</li>
+<li>肌肉轉胺，血液運輸</li>
 </ul>
 </li>
 </ul>
-<h1 class="mume-header" id="%E8%9B%8B%E7%99%BD%E8%B3%AA%E4%BB%A3%E8%AC%9D">&#x86CB;&#x767D;&#x8CEA;&#x4EE3;&#x8B1D;</h1>
-
-<h2 class="mume-header" id="%E7%94%9F%E9%85%AE%E7%94%9F%E7%B3%96">&#x751F;&#x916E;&#x751F;&#x7CD6;&#xFF1F;</h2>
-
-<p>&#x751F;&#x916E;&#xFF1A;3T2L(&#x53EA;&#x751F;&#x916E;)1F (HMV, &#x5FC5;&#x9808;)</p>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-42.png" alt></p>
-<h2 class="mume-header" id="%E5%90%84%E7%A8%AE%E8%BC%94%E9%85%B6">&#x5404;&#x7A2E;&#x8F14;&#x9176;</h2>
-
-<h3 class="mume-header" id="tetrahydrofolate">Tetrahydrofolate</h3>
-
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-33.png" alt="Alt text" style="width:70%;background-color: white;">
+<h1 id="蛋白質代謝">蛋白質代謝 </h1>
+<h2 id="生酮生糖">生酮生糖？ </h2>
+<p>生酮：3T2L(只生酮)1F (HMV, 必須)</p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-42.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="各種輔酶">各種輔酶 </h2>
+<h3 id="tetrahydrofolate">Tetrahydrofolate </h3>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-33.png" alt="Alt text" style="width:70%;background-color: white;padding:0">
 <ul>
 <li>
-<p>&#x4F86;&#x6E90;&#xFF1A;Vit B9<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-32.png" alt="Alt text" style="width:70%;background-color: white;"></p>
+<p>來源：Vit B9<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-32.png" alt="Alt text" style="width:70%;background-color: white;padding:0"></p>
 </li>
 <li>
 <p>Serine, glycine, methionine,<br>
 histidine metabolism</p>
 </li>
 <li>
-<p>&#x651C;&#x5E36;&#x4E00;&#x500B;&#x78B3;</p>
+<p>攜帶一個碳</p>
 <ul>
 <li>-CH<sub>3</sub><br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-34.png" alt></li>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-34.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="tetrahydrobiopterin-bh~4~">Tetrahydrobiopterin (BH<sub>4</sub>)</h3>
-
+<h3 id="tetrahydrobiopterin-bh4">Tetrahydrobiopterin (BH<sub>4</sub>) </h3>
 <ul>
-<li>&#x4F86;&#x81EA; GTP</li>
-<li>&#x554F;&#x5C31;&#x662F; BH<sub>4</sub></li>
+<li>來自 GTP</li>
+<li>問就是 BH<sub>4</sub></li>
 </ul>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-35.png" alt="Alt text" style="width:70%;background-color: white;">
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-36.png" alt="Alt text" style="width:70%;background-color: white;">
-<h3 class="mume-header" id="biotin-b~7~">Biotin (B<sub>7</sub>)</h3>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-35.png" alt="Alt text" style="width:70%;background-color: white;padding:0">
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-36.png" alt="Alt text" style="width:70%;background-color: white;padding:0">
+<h3 id="biotin-b7">Biotin (B<sub>7</sub>) </h3>
 <ul>
-<li>&#x5E36;&#x78B3;&#x9178;&#x6839;&#x55AE;&#x78B3;</li>
-<li>Carboxylase &#x7CFB;&#x5217;&#x7684;&#x8F14;&#x9176;</li>
-<li>&#x6703;&#x548C; Avidin &#x7D50;&#x5408; (&#x751F;&#x96DE;&#x86CB;&#x4E00;&#x5806;)<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-38.png" alt="Alt text" style="width:70%;background-color: white;"></li>
+<li>帶碳酸根單碳</li>
+<li>Carboxylase 系列的輔酶</li>
+<li>會和 Avidin 結合 (生雞蛋一堆)<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-38.png" alt="Alt text" style="width:70%;background-color: white;padding:0"></li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <ul>
-<li>&#x7CD6;&#x8CEA;&#x65B0;&#x751F; step1</li>
+<li>糖質新生 step1</li>
 </ul>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-37.png" alt="Alt text" style="width:40%;background-color: white;">
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-37.png" alt="Alt text" style="width:40%;background-color: white;padding:0">
 </div>
-<h3 class="mume-header" id="pyridoxal-5-phosphate-plp-vitb6">pyridoxal 5 phosphate (PLP, VitB6)</h3>
-
+<h3 id="pyridoxal-5-phosphate-plp-vitb6">pyridoxal 5 phosphate (PLP, VitB6) </h3>
 <ul>
-<li>&#x8131;&#x53BB;&#x55AE;&#x78B3;</li>
-<li>&#x5927;&#x5BB6;&#x7684;&#x8F14;&#x9176;
+<li>脱去單碳</li>
+<li>大家的輔酶
 <ul>
 <li>Transamination</li>
 <li>Decarboxylation</li>
@@ -1439,172 +1162,155 @@ histidine metabolism</p>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="s-adensylmethionine-sam-adomet">S-Adensylmethionine (SAM, adoMet)</h3>
-
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-39.png" alt="Alt text" style="width:30%;background-color: white;">
+<h3 id="s-adensylmethionine-sam-adomet">S-Adensylmethionine (SAM, adoMet) </h3>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-39.png" alt="Alt text" style="width:30%;background-color: white;padding:0">
 <ul>
-<li>
-<p>&#x7532;&#x57FA;&#x5316;<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-40.png" alt="Alt text" style="width:70%;background-color: white;"></p>
-</li>
-<li>
-<p>Homocysteine</p>
+<li>甲基化<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-40.png" alt="Alt text" style="width:70%;background-color: white;padding:0"></li>
+<li>Homocysteine
 <ul>
-<li>&#x9700;&#x8981; PLP &#x5206;&#x89E3;</li>
+<li>需要 PLP 分解</li>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="thiamin-pyrophosphate-tpp-vit-b~1~">Thiamin pyrophosphate (TPP, Vit B<sub>1</sub>)</h3>
-
+<h3 id="thiamin-pyrophosphate-tpp-vit-b1">Thiamin pyrophosphate (TPP, Vit B<sub>1</sub>) </h3>
 <ul>
 <li>Pyruvate dehydrogenase</li>
-<li>&#x53C3;&#x8207;&#x812B;&#x6C2B;</li>
-<li>&#x7F3A;&#x4E4F;&#xFF1A;beriberi (&#x8173;&#x6C23;&#x75C5;)</li>
+<li>參與脫氫</li>
+<li>缺乏：beriberi (腳氣病)</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-41.png" alt></p>
-<h3 class="mume-header" id="niacin-vit-b~3~">niacin (Vit B<sub>3</sub>)</h3>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-41.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="niacin-vit-b3">niacin (Vit B<sub>3</sub>) </h3>
 <ul>
-<li>NADP, NAD &#x539F;&#x6599;</li>
+<li>NADP, NAD 原料</li>
 </ul>
-<h2 class="mume-header" id="tryptophan">Tryptophan</h2>
-
+<h2 id="tryptophan">Tryptophan </h2>
 <ul>
-<li>&#x552F;&#x4E00;&#x6709;&#x5432;&#x54DA; (ex. IAA)</li>
-<li>&#x8840;&#x6E05;&#x7D20; (Serotonin)</li>
-<li>&#x7121;&#x5149;&#xFF0C;Serotonon &#x2192; &#x892A;&#x9ED1;&#x6FC0;&#x7D20; (melatonin)</li>
+<li>唯一有吲哚 (ex. IAA)</li>
+<li>血清素 (Serotonin)</li>
+<li>無光，Serotonon → 褪黑激素 (melatonin)</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-19.png" alt></p>
-<h2 class="mume-header" id="tyrosine-and-phenylalanine">Tyrosine and Phenylalanine</h2>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-19.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="tyrosine-and-phenylalanine">Tyrosine and Phenylalanine </h2>
 <ul>
-<li>&#x9ED1;&#x8272;&#x7D20;(Melanin)</li>
+<li>黑色素(Melanin)</li>
 <li><mark>tyrosinase</mark></li>
-<li>&#x5152;&#x8336;&#x915A;&#x80FA;&#xFF08;Catecholamine&#xFF09;
+<li>兒茶酚胺（Catecholamine）
 <ul>
-<li>BH<sub>4</sub>, PLP, &#x7532;&#x57FA;&#x5316;<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-21.png" alt></li>
+<li>BH<sub>4</sub>, PLP, 甲基化<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-21.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-22.png" alt="Alt text" style="width:60%;background-color: white;">
-<h3 class="mume-header" id="phenylketonuria-pku-%E8%8B%AF%E9%85%AE%E5%B0%BF%E7%97%87">phenylketonuria (PKU&#xFF0C; &#x82EF;&#x916E;&#x5C3F;&#x75C7;)</h3>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-22.png" alt="Alt text" style="width:60%;background-color: white;padding:0">
+<h3 id="phenylketonuria-pku-苯酮尿症">phenylketonuria (PKU， 苯酮尿症) </h3>
 <ul>
 <li>
-<p>Phenylalanine hydroxylase &#x5931;&#x80FD;</p>
+<p>Phenylalanine hydroxylase 失能</p>
 <ul>
-<li>Phenylalanine&#x6C92;&#x6CD5;&#x8B8A;&#x6210; tyrosine<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-43.png" alt></li>
+<li>Phenylalanine沒法變成 tyrosine<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-43.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>
 <p>BH<sub>4</sub></p>
 </li>
 <li>
-<p>&#x5C11;&#x4E00;&#x500B;&#x90FD;&#x4E0D;&#x884C;<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-44.png" alt="Alt text" style="width:80%;background-color: white;"></p>
+<p>少一個都不行<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-44.png" alt="Alt text" style="width:80%;background-color: white;padding:0"></p>
 </li>
 <li>
-<p>&#x4E09;&#x500B;&#x7522;&#x7269;&#x90FD;&#x6709;&#x795E;&#x7D93;&#x6BD2; &#x2192; severe mental retardation (&#x667A;&#x969C;)<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-45.png" alt="Alt text" style="width:80%;background-color: white;"></p>
+<p>三個產物都有神經毒 → severe mental retardation (智障)<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-45.png" alt="Alt text" style="width:80%;background-color: white;padding:0"></p>
 </li>
 </ul>
-<h3 class="mume-header" id="%E9%BB%91%E5%B0%BF%E7%97%87">&#x9ED1;&#x5C3F;&#x75C7;</h3>
-
+<h3 id="黑尿症">黑尿症 </h3>
 <ul>
-<li>&#x9ED1;&#x5C3F;&#x9178;&#x5806;&#x7A4D; &#x2192; &#x9ED1;&#x5C3F;&#x75C7;
+<li>黑尿酸堆積 → 黑尿症
 <ul>
-<li>&#x4E00;&#x4E9B; Homo &#x7684;&#x6771;&#x897F;&#x4EE3;&#x8B1D;&#x4E0D;&#x6389;</li>
+<li>一些 Homo 的東西代謝不掉</li>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-46.png" alt></p>
-<h2 class="mume-header" id="alpha-ketoglutarate">&#x3B1; Ketoglutarate</h2>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-46.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="alpha-ketoglutarate">α Ketoglutarate </h2>
 <ul>
-<li>Arg, Glu, His, Pro &#x90FD;&#x8D70;&#x9019;&#x689D;</li>
+<li>Arg, Glu, His, Pro 都走這條</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-49.png" alt></p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-49.png" alt="Alt text" style=";background-color: white;padding:0">
 <div class="admonition warning">
 <p class="admonition-title">Glutathione (GSH)</p>
 <ul>
-<li>&#x6E05;&#x81EA;&#x7531;&#x57FA;</li>
-<li>NADPH &#x6E05;&#x9664;</li>
-<li>&#x6A19;&#x8A18;&#x5206;&#x5B50; &#xFF08;&#x809D;&#x81DF;&#x53BB;&#x6BD2;&#xFF09;</li>
-<li>&#x6298;&#x96D9;&#x786B;&#x9375;</li>
+<li>清自由基</li>
+<li>NADPH 清除</li>
+<li>標記分子 （肝臟去毒）</li>
+<li>折雙硫鍵</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-47.png" alt><br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-48.png" alt></p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-47.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-48.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
-<h3 class="mume-header" id="gamma-aminobutyric-acid-gaba">&#x3B3;-aminobutyric acid (GABA)</h3>
-
+<h3 id="gamma-aminobutyric-acid-gaba">γ-aminobutyric acid (GABA) </h3>
 <ul>
-<li>PLP  &#x8131; CO<sub>2</sub></li>
+<li>PLP  脱 CO<sub>2</sub></li>
 </ul>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-50.png" alt="Alt text" style="width:30%;background-color: white;">
-<h3 class="mume-header" id="no">NO</h3>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-50.png" alt="Alt text" style="width:30%;background-color: white;padding:0">
+<h3 id="no">NO </h3>
 <ul>
 <li>
-<p>NO synthase &#x5207; Arginine<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-51.png" alt="Alt text" style="width:80%;background-color: white;"></p>
+<p>NO synthase 切 Arginine<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-51.png" alt="Alt text" style="width:80%;background-color: white;padding:0"></p>
 </li>
 <li>
-<p>&#x8840;&#x7BA1;&#x64F4;&#x5F35;&#xFF1A; cGMP &#x5C0E;&#x81F4;&#xFF0C;Phosphodiesterase (PDE5) &#x6C34;&#x89E3;<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-52.png" alt></p>
+<p>血管擴張： cGMP 導致，Phosphodiesterase (PDE5) 水解<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-52.png" alt="Alt text" style=";background-color: white;padding:0"></p>
 </li>
 </ul>
-<h3 class="mume-header" id="histamine">histamine</h3>
-
-<p>Histidine &#x8131; CO<sub>2</sub> (PLP) &#x8F49; histamine</p>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-54.png" alt="Alt text" style="width:30%;background-color: white;">
-<h2 class="mume-header" id="succinyl-coa">Succinyl CoA</h2>
-
+<h3 id="histamine">histamine </h3>
+<p>Histidine 脱 CO<sub>2</sub> (PLP) 轉 histamine</p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-54.png" alt="Alt text" style="width:30%;background-color: white;padding:0">
+<h2 id="succinyl-coa">Succinyl CoA </h2>
 <ul>
 <li>Iso, Met, Thr, Val</li>
 <li>Biotin, B<sub>12</sub><br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-53.png" alt></li>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-53.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
-<h2 class="mume-header" id="branched-chain-amino-acids-metabolism-bcaa">Branched Chain Amino Acids metabolism (BCAA)</h2>
-
+<h2 id="branched-chain-amino-acids-metabolism-bcaa">Branched Chain Amino Acids metabolism (BCAA) </h2>
 <ul>
-<li>&#x4E0D;&#x5728;&#x809D;&#x81DF;&#x5206;&#x89E3;&#xFF0C;&#x5728;&#x808C;&#x8089;&#x5206;&#x89E3;&#xFF0C;&#x9632;&#x62BD;&#x7B4B;</li>
+<li>不在肝臟分解，在肌肉分解，防抽筋</li>
 <li>leucine, isoleucine, and valine</li>
-<li>&#x6953;&#x7CD6;&#x6F3F;&#x5C3F;&#x75C7; (Maple syrup urin MSUD)</li>
-<li>&#x8F14;&#x9176;&#xFF1A; TPP</li>
+<li>楓糖漿尿症 (Maple syrup urin MSUD)</li>
+<li>輔酶： TPP</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-55.png" alt></p>
-<h2 class="mume-header" id="%E6%95%B4%E7%90%86-1">&#x6574;&#x7406;</h2>
-
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-56.png" alt></p>
-<table>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-55.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="整理-1">整理 </h2>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-56.png" alt="Alt text" style=";background-color: white;padding:0">
+<div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
-<th>&#x985E;&#x5225;</th>
-<th>&#x80FA;&#x57FA;&#x9178;</th>
-<th>&#x8F14;&#x9176;</th>
-<th>&#x884D;&#x751F;&#x7269;</th>
+<th>類別</th>
+<th>胺基酸</th>
+<th>輔酶</th>
+<th>衍生物</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>&#x5432;&#x54DA;</td>
+<td>吲哚</td>
 <td>Trp</td>
 <td>BH<sub>4</sub>, PLP</td>
-<td>Niacin(&#x83F8;&#x9E7C;&#x9178;, Vit B3), Serotonin(&#x8840;&#x6E05;&#x7D20;), Melatonin(&#x9000;&#x9ED1;&#x6FC0;&#x7D20;)</td>
+<td>Niacin(菸鹼酸, Vit B3), Serotonin(血清素), Melatonin(退黑激素)</td>
 </tr>
 <tr>
-<td>&#x82EF;&#x74B0;<br>&#x2192; Fumarate</td>
+<td>苯環<br>→ Fumarate</td>
 <td>Tyr, Phe</td>
 <td>-</td>
-<td>Thyroxine(&#x7532;&#x72C0;&#x817A;&#x7D20;), Melanin(&#x9ED1;&#x8272;&#x7D20;), Catecholamines(&#x5152;&#x8336;&#x915A;&#x80FA;)</td>
+<td>Thyroxine(甲狀腺素), Melanin(黑色素), Catecholamines(兒茶酚胺)</td>
 </tr>
 <tr>
-<td rowspan="4">&#x4E94;&#x78B3;&#x76F4;&#x93C8;&#x8F49;&#x80FA;<br>&#x2192;  &#x3B1;-Ketoglutarate</td>
+<td rowspan="4">五碳直鏈轉胺<br>→  α-Ketoglutarate</td>
 <td>Glu, Gln</td>
 <td>-</td>
-<td>Glutathione (GSH), &#x3B3;-aminobutyric acid (GABA&#xFF0C;&#x812B;&#x9178;), Polyamines</td>
+<td>Glutathione (GSH), γ-aminobutyric acid (GABA，脫酸), Polyamines</td>
 </tr>
 <tr>
 
@@ -1616,7 +1322,7 @@ histidine metabolism</p>
 
 <td>His</td>
 <td>-</td>
-<td>Histamine (&#x7D44;&#x7E54;&#x80FA;&#xFF0C;&#x812B;&#x9178; )</td>
+<td>Histamine (組織胺，脫酸 )</td>
 </tr>
 <tr>
 
@@ -1625,7 +1331,7 @@ histidine metabolism</p>
 <td>-</td>
 </tr>
 <tr>
-<td rowspan="4">&#x56DB;&#x78B3;&#x4E00;&#x57FA;<br>&#x2192; Succinyl-CoA</td>
+<td rowspan="4">四碳一基<br>→ Succinyl-CoA</td>
 <td>Ile</td>
 <td rowspan="4">Biotin(B<sub>7</sub>), <br>cobalamins(B<sub>12</sub>)</td>
 <td>-</td>
@@ -1649,409 +1355,722 @@ histidine metabolism</p>
 <td>-</td>
 </tr>
 <tr>
-<td>BCAA<br> &#x812B;&#x9178;&#x4E0A;SCoA</td>
+<td>BCAA<br> 脫酸上SCoA</td>
 <td>Ile, Leu, Val</td>
 <td>-</td>
 <td>-</td>
 </tr>
 <tr>
-<td>Asp, Asn &#x8F49;&#x80FA;<br> &#x2192; Oxaloacetate</td>
+<td>Asp, Asn 轉胺<br> → Oxaloacetate</td>
 <td>Asp, Asn</td>
 <td>-</td>
 <td>-</td>
 </tr>
 </tbody>
-</table>
-<h1 class="mume-header" id="%E8%9B%8B%E7%99%BD%E8%B3%AA%E5%90%88%E6%88%90">&#x86CB;&#x767D;&#x8CEA;&#x5408;&#x6210;</h1>
-
-<h2 class="mume-header" id="%E9%87%8D%E8%A6%81%E4%B8%89%E7%B5%84%E4%BA%BA">&#x91CD;&#x8981;&#x4E09;&#x7D44;&#x4EBA;</h2>
-
+</table></div>
+<h1 id="蛋白質合成">蛋白質合成 </h1>
+<h2 id="重要三組人">重要三組人 </h2>
 <ul>
-<li>&#x8F49;&#x80FA;&#x4F5C;&#x7528;&#x5206;&#x89E3;&#x3001;&#x5408;&#x6210;</li>
+<li>轉胺作用分解、合成</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-57.png" alt></p>
-<h2 class="mume-header" id="ser-gly-cys">Ser, Gly, Cys</h2>
-
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-58.png" alt="Alt text" style="width:60%;background-color: white;">
-<h3 class="mume-header" id="creatine-%E5%90%88%E6%88%90">Creatine &#x5408;&#x6210;</h3>
-
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-59.png" alt></p>
-<h3 class="mume-header" id="%E8%8A%B3%E9%A6%99%E6%97%8F%E8%83%BA%E5%9F%BA%E9%85%B8%E5%90%88%E6%88%90">&#x82B3;&#x9999;&#x65CF;&#x80FA;&#x57FA;&#x9178;&#x5408;&#x6210;</h3>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-57.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="ser-gly-cys">Ser, Gly, Cys </h2>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-58.png" alt="Alt text" style="width:60%;background-color: white;padding:0">
+<h3 id="creatine-合成">Creatine 合成 </h3>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-59.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="芳香族胺基酸合成">芳香族胺基酸合成 </h3>
 <ul>
 <li>shikimic acid pathway</li>
 <li>Chorismate</li>
 </ul>
-<h1 class="mume-header" id="nucleotide">Nucleotide</h1>
-
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-64.png" alt></p>
-<h2 class="mume-header" id="salvage-pathways">salvage pathways</h2>
-
+<h1 id="nucleotide">Nucleotide </h1>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-64.png" alt="Alt text" style=";background-color: white;padding:0"> 
+<h2 id="salvage-pathways">salvage pathways </h2>
 <ul>
 <li>
-<p>nucleoside, Nucleobases &#x21C6; nucleotide</p>
+<p>nucleoside, Nucleobases ⇆ nucleotide</p>
 <ul>
-<li>&#x62D4;&#x78F7;&#x9178;&#x57FA;</li>
+<li>拔磷酸基</li>
 </ul>
 </li>
 <li>
-<p>Nucleobases &#x56DE;&#x6536;</p>
+<p>Nucleobases 回收</p>
 <ul>
-<li>PRPP &#x9AD8;&#x80FD; C1<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-66.png" alt></li>
+<li>PRPP 高能 C1<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-66.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-65.png" alt></p>
-<h2 class="mume-header" id="purine-%E5%90%88%E6%88%90">Purine &#x5408;&#x6210;</h2>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-65.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="purine-合成">Purine 合成 </h2>
 <dl>
 <dt>de novo synthesis</dt>
-<dd>&#x5F9E;&#x982D;&#x5408;&#x6210;&#xFF0C;&#x5F9E;&#x6700;&#x7C21;&#x55AE;&#x7684;&#x5206;&#x5B50;&#x5408;&#x6210;</dd>
+<dd>從頭合成，從最簡單的分子合成</dd>
 </dl>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-67.png" alt></p>
-<h3 class="mume-header" id="imp-%E5%90%88%E6%88%90">IMP &#x5408;&#x6210;</h3>
-
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-69.png" alt></p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-67.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="imp-合成">IMP 合成 </h3>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-69.png" alt="Alt text" style=";background-color: white;padding:0">
 <div class="dcl">
 <section>
 <ol>
 <li>PRPP amidotransferase
 <ul>
-<li>&#x7522;&#x751F; Phosohoribosylamine (PRA)</li>
-<li>&#x8ABF;&#x63A7;&#x9EDE;</li>
+<li>產生 Phosohoribosylamine (PRA)</li>
+<li>調控點</li>
 </ul>
 </li>
 <li>GAR synthetase
 <ul>
-<li>&#x63A5; Gly</li>
+<li>接 Gly</li>
 </ul>
 </li>
 <li>GAR transformylase
 <ul>
-<li><a href="#tetrahydrofolate">THF</a> &#x53C3;&#x8207;</li>
+<li><a href="#tetrahydrofolate">THF</a> 參與</li>
 </ul>
 </li>
-<li>&#x2026;&#x7522;&#x751F; IMP</li>
+<li>…產生 IMP</li>
 </ol>
 </section>
 <section>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-68.png" alt></p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-68.png" alt="Alt text" style=";background-color: white;padding:0">
 </section></div>
-<h3 class="mume-header" id="%E7%94%A2%E7%94%9F-gmp-amp">&#x7522;&#x751F; GMP, AMP</h3>
-
+<h3 id="產生-gmp-amp">產生 GMP, AMP </h3>
 <ul>
 <li>GMP
 <ul>
-<li>&#x6C27;&#x5316; (NAD<sup>+</sup> &#x53C3;&#x8207;)&#x52A0;&#x6C28;</li>
+<li>氧化 (NAD<sup>+</sup> 參與)加氨</li>
 </ul>
 </li>
 <li>AMP
 <ul>
-<li>&#x63A5; Asp &#x5728;&#x812B; Fumarate</li>
+<li>接 Asp 在脫 Fumarate</li>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-70.png" alt></p>
-<h3 class="mume-header" id="%E8%AA%BF%E6%8E%A7-1">&#x8ABF;&#x63A7;</h3>
-
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-71.png" alt></p>
-<h2 class="mume-header" id="purine-%E4%BB%A3%E8%AC%9D">Purine &#x4EE3;&#x8B1D;</h2>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-70.png" alt="Alt text" style=";background-color: white;padding:0">
+<h3 id="調控-1">調控 </h3>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-71.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="purine-代謝">Purine 代謝 </h2>
 <ol>
-<li>&#x812B; Pi</li>
-<li>&#x812B; Ribose
+<li>脫 Pi</li>
+<li>脫 Ribose
 <ul>
-<li>Adenosine &#x9700;&#x8981;&#x812B;&#x6C28;&#x6210; Inosine</li>
+<li>Adenosine 需要脫氨成 Inosine</li>
 </ul>
 </li>
-<li>&#x8F49;&#x6210; Xanthine
+<li>轉成 Xanthine
 <ul>
-<li>Xanthine &#x4E0D;&#x80FD;&#x8D70; salvage pathway &#x56DE;&#x53BB;</li>
+<li>Xanthine 不能走 salvage pathway 回去</li>
 </ul>
 </li>
 </ol>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-72.png" alt></p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-72.png" alt="Alt text" style=";background-color: white;padding:0">
 <div class="admonition info">
 <p class="admonition-title">adenosine deaminase (ADA) deficiency</p>
 <ul>
-<li>Adenosine &#x7121;&#x6CD5;&#x4EE3;&#x8B1D;&#x6210; Inosine</li>
-<li>dATP &#x904E;&#x591A;&#x6291;&#x5236; dNTP &#x5F62;&#x6210;</li>
+<li>Adenosine 無法代謝成 Inosine</li>
+<li>dATP 過多抑制 dNTP 形成</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-75.png" alt></p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-75.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
 <div class="admonition info">
-<p class="admonition-title">&#x9AD8;&#x5C3F;&#x9178;&#x539F;&#x56E0;</p>
+<p class="admonition-title">高尿酸原因</p>
 <ol>
-<li>PRPP synthetase &#x8CA0;&#x56DE;&#x994B;&#x7570;&#x5E38;</li>
+<li>PRPP synthetase 負回饋異常</li>
 <li>HGPRT
 <ul>
-<li>Guanine &#x8D70;&#x4E0D;&#x4E86; salvage pathway</li>
-<li>Lesch-Nyhan syndrome (&#x5148;&#x5929;)</li>
+<li>Guanine 走不了 salvage pathway</li>
+<li>Lesch-Nyhan syndrome (先天)</li>
 </ul>
 </li>
-<li>Glucose-6-phosphatase &#x7570;&#x5E38;
+<li>Glucose-6-phosphatase 異常
 <ul>
-<li>G6P &#x56DE;&#x4E0D;&#x53BB; Glucose&#xFF0C;&#x6539;&#x8D70; PPP &#x8DEF;&#x5F91;</li>
+<li>G6P 回不去 Glucose，改走 PPP 路徑</li>
 </ul>
 </li>
 </ol>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-73.png" alt></p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-73.png" alt="Alt text" style=";background-color: white;padding:0">
 </div>
 <div class="admonition info">
-<p class="admonition-title">&#x9AD8;&#x5C3F;&#x9178;&#x85E5;&#x7269;</p>
+<p class="admonition-title">高尿酸藥物</p>
 <ul>
 <li>Allopurinol
 <ul>
-<li>&#x7522;&#x751F; Xanthine &#x985E;&#x4F3C;&#x7269;&#xFF0C;&#x6291;&#x5236; Xanthine dehydrogenase &#xFF0C;&#x963B;&#x6B62;&#x7522;&#x751F;&#x5C3F;&#x9178;</li>
+<li>產生 Xanthine 類似物，抑制 Xanthine dehydrogenase ，阻止產生尿酸</li>
 </ul>
 </li>
 </ul>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-74.png" alt="Alt text" style="width:40%;background-color: white;">
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-74.png" alt="Alt text" style="width:40%;background-color: white;padding:0">
 </div>
-<h2 class="mume-header" id="pyrimidine">Pyrimidine</h2>
-
+<h2 id="pyrimidine">Pyrimidine </h2>
 <ul>
 <li>
-<p>&#x539F;&#x6599;:Asp, Glu<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-76.png" alt></p>
+<p>原料:Asp, Glu<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-76.png" alt="Alt text" style=";background-color: white;padding:0"></p>
 </li>
 <li>
-<p>UTP &#x2192; CTP (&#x6700;&#x7D42;&#x7522;&#x7269;)</p>
+<p>UTP → CTP (最終產物)</p>
 </li>
 </ul>
-<h3 class="mume-header" id="%E4%BB%A3%E8%AC%9D">&#x4EE3;&#x8B1D;</h3>
-
+<h3 id="代謝">代謝 </h3>
 <ul>
 <li>
-<p>Cytidine &#x7522;&#x751F; CO<sub>2</sub>, NH<sub>3</sub>, &#x3B2;-Alanine</p>
+<p>Cytidine 產生 CO<sub>2</sub>, NH<sub>3</sub>, β-Alanine</p>
 </li>
 <li>
-<p>Thymine &#x7522;&#x751F; Succinyl-CoA&#xFF0C;&#x9032; TCA</p>
+<p>Thymine 產生 Succinyl-CoA，進 TCA</p>
 <ul>
-<li>&#x6D88;&#x8017; NADPH</li>
+<li>消耗 NADPH</li>
 </ul>
 </li>
 </ul>
-<h2 class="mume-header" id="ntp-reductase">NTP reductase</h2>
-
+<h2 id="ntp-reductase">NTP reductase </h2>
 <ul>
-<li>&#x56DB;&#x805A;&#x9AD4;&#xFF0C;&#x5169;&#x7D44;&#x7368;&#x7ACB;&#x5DE5;&#x4F5C;</li>
-<li>dATP &#x6291;&#x5236; &#x3B1;</li>
-<li>&#x539F;&#x6599;: NDP (TDP &#x9664;&#x5916;)</li>
+<li>四聚體，兩組獨立工作</li>
+<li>dATP 抑制 α</li>
+<li>原料: NDP (TDP 除外)</li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-77.png" alt><br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-78.png" alt></p>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-77.png" alt="Alt text" style=";background-color: white;padding:0">
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-78.png" alt="Alt text" style=";background-color: white;padding:0">
 <ul>
-<li>dUMP &#x2192; dTMP &#x9700;&#x8981; THF
+<li>dUMP → dTMP 需要 THF
 <ul>
 <li>Thymidylate synthase</li>
-<li>C5 &#x52A0;&#x4E0A;&#x7532;&#x57FA;</li>
-<li>5-FU &#x7AF6;&#x722D;&#x6291;&#x5236;</li>
+<li>C5 加上甲基</li>
+<li>5-FU 競爭抑制</li>
 </ul>
 </li>
 </ul>
-<p><img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-79.png" alt></p>
-<h2 class="mume-header" id="%E8%97%A5%E7%89%A9">&#x85E5;&#x7269;</h2>
-
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-79.png" alt="Alt text" style=";background-color: white;padding:0">
+<h2 id="藥物">藥物 </h2>
 <ul>
 <li>
 <p>AZT</p>
 <ul>
 <li>Thymine</li>
-<li>C3 &#x7121;&#x6CD5;&#x63A5;&#x6771;&#x897F;&#xFF0C;&#x6291;&#x5236;&#x53CD;&#x8F49;&#x9304;<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-80.png" alt="Alt text" style="width:50%;background-color: white;"></li>
+<li>C3 無法接東西，抑制反轉錄<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-80.png" alt="Alt text" style="width:50%;background-color: white;padding:0"></li>
 </ul>
 </li>
 <li>
 <p>5FU</p>
 <ul>
-<li>U &#x7684; C5 &#x63A5;&#x4E0D;&#x4E0A;&#x7532;&#x57FA;<br>
-<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-81.png" alt></li>
+<li>U 的 C5 接不上甲基<br>
+<img src="paste_src/%E7%94%9F%E5%8C%96%E4%BA%8C-81.png" alt="Alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
 <br><br>
-<script type="text/javascript" src="../Hyper_md/md.js"></script>
-<script> 
-var Main_LeftListLiSelector = $(".md-sidebar-toc li");
 
-$(Main_LeftListLiSelector).on('click', function() {
-  $(Main_LeftListLiSelector).removeClass('active');
-  $(this).addClass('active');
-});
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+
+<script>
+var page = document.getElementsByClassName('markdown-preview')[0]
+page.addEventListener('click', function(event) {
+  event.stopPropagation()
+  
+  document.body.removeAttribute('html-show-sidebar-toc');
+ 
+})
 </script>
+
+
       </div>
-      <div class="md-sidebar-toc"><ul>
-<li><a href="#lipid">Lipid</a>
-<ul>
-<li><a href="#plasma-lipoproteins">Plasma lipoproteins</a>
-<ul>
-<li><a href="#%E9%81%8B%E8%BC%B8">&#x904B;&#x8F38;</a></li>
-<li><a href="#ldl">LDL</a></li>
-</ul>
-</li>
-<li><a href="#lipid-acid">Lipid acid</a>
-<ul>
-<li><a href="#%E6%B0%A7%E5%8C%96">&#x6C27;&#x5316;</a></li>
-<li><a href="#%E8%83%BD%E9%87%8F">&#x80FD;&#x91CF;</a></li>
-<li><a href="#unsaturated-fatty-acids">unsaturated fatty acids</a></li>
-<li><a href="#ketogenesis">Ketogenesis</a></li>
-<li><a href="#%E5%90%88%E6%88%90">&#x5408;&#x6210;</a></li>
-</ul>
-</li>
-<li><a href="#get-tg">Get Tg</a>
-<ul>
-<li><a href="#%E8%86%BD%E9%B9%BD">&#x81BD;&#x9E7D;</a></li>
-<li><a href="#tg%E4%BB%A3%E8%AC%9D">Tg&#x4EE3;&#x8B1D;</a></li>
-<li><a href="#tg-%E5%90%88%E6%88%90">Tg &#x5408;&#x6210;</a></li>
-<li><a href="#%E8%84%82%E8%82%AA%E6%9A%96%E6%9A%96%E5%8C%85">&#x8102;&#x80AA;&#x6696;&#x6696;&#x5305;</a></li>
-</ul>
-</li>
-<li><a href="#%E7%A3%B7%E8%84%82">&#x78F7;&#x8102;</a>
-<ul>
-<li><a href="#%E6%BF%80%E6%B4%BB">&#x6FC0;&#x6D3B;</a></li>
-<li><a href="#%E5%88%86%E6%94%AF%E9%80%B2%E5%8C%96">&#x5206;&#x652F;&#x9032;&#x5316;</a></li>
-<li><a href="#pspg-%E8%AA%BF%E7%AF%80">PS/PG &#x8ABF;&#x7BC0;</a></li>
-<li><a href="#%E9%AB%98%E7%AD%89%E7%94%9F%E7%89%A9">&#x9AD8;&#x7B49;&#x751F;&#x7269;</a></li>
-<li><a href="#%E5%81%9A-pc-pe">&#x505A; PC &amp; PE</a></li>
-<li><a href="#pi-cardiolipin">PI &amp; Cardiolipin</a></li>
-<li><a href="#%E7%A2%B3%E9%8F%88%E7%BD%AE%E6%8F%9B">&#x78B3;&#x93C8;&#x7F6E;&#x63DB;</a></li>
-</ul>
-</li>
-<li><a href="#steroids">Steroids</a>
-<ul>
-<li><a href="#%E5%90%88%E6%88%90-1">&#x5408;&#x6210;</a></li>
-<li><a href="#%E8%AA%BF%E6%8E%A7">&#x8ABF;&#x63A7;</a></li>
-<li><a href="#%E7%94%A8%E9%80%94">&#x7528;&#x9014;</a></li>
-<li><a href="#steroid-hormones-%E5%90%88%E6%88%90">Steroid hormones &#x5408;&#x6210;</a></li>
-</ul>
-</li>
-<li><a href="#vitamins">Vitamins</a>
-<ul>
-<li><a href="#vitamin-a">Vitamin A</a></li>
-<li><a href="#vitamin-d">Vitamin D</a></li>
-</ul>
-</li>
-<li><a href="#%E5%90%88%E6%88%90%E6%BF%80%E7%B4%A0%E4%B9%8B%E9%A1%9E%E7%9A%84">&#x5408;&#x6210;&#x6FC0;&#x7D20;&#x4E4B;&#x985E;&#x7684;</a>
-<ul>
-<li><a href="#%E7%A5%9E%E7%B6%93%E7%A3%B7%E8%84%82sphingomyelin">&#x795E;&#x7D93;&#x78F7;&#x8102;(sphingomyelin)</a></li>
-<li><a href="#arachidonic-acid-%E9%A1%9E">arachidonic acid &#x985E;</a></li>
-</ul>
-</li>
-<li><a href="#%E6%95%B4%E7%90%86">&#x6574;&#x7406;</a>
-<ul>
-<li><a href="#%E7%A3%B7%E8%84%82-1">&#x78F7;&#x8102;</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E6%AF%94%E8%BC%83%E7%94%9F%E7%90%86%E7%9A%84%E6%9D%B1%E8%A5%BF">&#x6BD4;&#x8F03;&#x751F;&#x7406;&#x7684;&#x6771;&#x897F;</a>
-<ul>
-<li><a href="#%E8%82%8C%E8%82%89">&#x808C;&#x8089;</a>
-<ul>
-<li><a href="#cori-cycle">Cori cycle</a></li>
-<li><a href="#creatine-%E8%82%8C%E9%85%B8">Creatine &#x808C;&#x9178;</a></li>
-</ul>
-</li>
-<li><a href="#%E8%82%9D%E8%87%9F">&#x809D;&#x81DF;</a></li>
-<li><a href="#insulin">Insulin</a>
-<ul>
-<li><a href="#receptor">Receptor</a></li>
-<li><a href="#glut">GLUT</a></li>
-</ul>
-</li>
-<li><a href="#leptin-%E7%98%A6%E7%B4%A0">Leptin (&#x7626;&#x7D20;)</a></li>
-<li><a href="#glucagon-epinephrine">Glucagon / Epinephrine</a></li>
-</ul>
-</li>
-<li><a href="#%E8%83%BA%E4%BB%A3%E8%AC%9D">&#x80FA;&#x4EE3;&#x8B1D;</a>
-<ul>
-<li><a href="#ubiquitin">Ubiquitin</a></li>
-<li><a href="#amino-acid-metabolism">Amino acid metabolism</a>
-<ul>
-<li><a href="#%E8%BD%89%E8%83%BA%E6%A9%9F%E5%88%B6">&#x8F49;&#x80FA;&#x6A5F;&#x5236;</a></li>
-</ul>
-</li>
-<li><a href="#%E8%A1%80%E6%B6%B2%E9%81%8B%E8%BC%B8">&#x8840;&#x6DB2;&#x904B;&#x8F38;</a></li>
-<li><a href="#glutamate-releases-in-liver">Glutamate Releases in liver</a></li>
-<li><a href="#urea-cycle-%E5%B0%BF%E7%B4%A0%E5%BE%AA%E7%92%B0">Urea Cycle &#x5C3F;&#x7D20;&#x5FAA;&#x74B0;</a>
-<ul>
-<li><a href="#mitochondria-%E5%85%A7">mitochondria &#x5167;</a></li>
-</ul>
-</li>
-<li><a href="#%E8%BD%89%E8%83%BA%E6%95%B4%E7%90%86">&#x8F49;&#x80FA;&#x6574;&#x7406;</a></li>
-</ul>
-</li>
-<li><a href="#%E8%9B%8B%E7%99%BD%E8%B3%AA%E4%BB%A3%E8%AC%9D">&#x86CB;&#x767D;&#x8CEA;&#x4EE3;&#x8B1D;</a>
-<ul>
-<li><a href="#%E7%94%9F%E9%85%AE%E7%94%9F%E7%B3%96">&#x751F;&#x916E;&#x751F;&#x7CD6;&#xFF1F;</a></li>
-<li><a href="#%E5%90%84%E7%A8%AE%E8%BC%94%E9%85%B6">&#x5404;&#x7A2E;&#x8F14;&#x9176;</a>
-<ul>
-<li><a href="#tetrahydrofolate">Tetrahydrofolate</a></li>
-<li><a href="#tetrahydrobiopterin-bh~4~">Tetrahydrobiopterin (BH<sub>4</sub>)</a></li>
-<li><a href="#biotin-b~7~">Biotin (B<sub>7</sub>)</a></li>
-<li><a href="#pyridoxal-5-phosphate-plp-vitb6">pyridoxal 5 phosphate (PLP, VitB6)</a></li>
-<li><a href="#s-adensylmethionine-sam-adomet">S-Adensylmethionine (SAM, adoMet)</a></li>
-<li><a href="#thiamin-pyrophosphate-tpp-vit-b~1~">Thiamin pyrophosphate (TPP, Vit B<sub>1</sub>)</a></li>
-<li><a href="#niacin-vit-b~3~">niacin (Vit B<sub>3</sub>)</a></li>
-</ul>
-</li>
-<li><a href="#tryptophan">Tryptophan</a></li>
-<li><a href="#tyrosine-and-phenylalanine">Tyrosine and Phenylalanine</a>
-<ul>
-<li><a href="#phenylketonuria-pku-%E8%8B%AF%E9%85%AE%E5%B0%BF%E7%97%87">phenylketonuria (PKU&#xFF0C; &#x82EF;&#x916E;&#x5C3F;&#x75C7;)</a></li>
-<li><a href="#%E9%BB%91%E5%B0%BF%E7%97%87">&#x9ED1;&#x5C3F;&#x75C7;</a></li>
-</ul>
-</li>
-<li><a href="#alpha-ketoglutarate">&#x3B1; Ketoglutarate</a>
-<ul>
-<li><a href="#gamma-aminobutyric-acid-gaba">&#x3B3;-aminobutyric acid (GABA)</a></li>
-<li><a href="#no">NO</a></li>
-<li><a href="#histamine">histamine</a></li>
-</ul>
-</li>
-<li><a href="#succinyl-coa">Succinyl CoA</a></li>
-<li><a href="#branched-chain-amino-acids-metabolism-bcaa">Branched Chain Amino Acids metabolism (BCAA)</a></li>
-<li><a href="#%E6%95%B4%E7%90%86-1">&#x6574;&#x7406;</a></li>
-</ul>
-</li>
-<li><a href="#%E8%9B%8B%E7%99%BD%E8%B3%AA%E5%90%88%E6%88%90">&#x86CB;&#x767D;&#x8CEA;&#x5408;&#x6210;</a>
-<ul>
-<li><a href="#%E9%87%8D%E8%A6%81%E4%B8%89%E7%B5%84%E4%BA%BA">&#x91CD;&#x8981;&#x4E09;&#x7D44;&#x4EBA;</a></li>
-<li><a href="#ser-gly-cys">Ser, Gly, Cys</a>
-<ul>
-<li><a href="#creatine-%E5%90%88%E6%88%90">Creatine &#x5408;&#x6210;</a></li>
-<li><a href="#%E8%8A%B3%E9%A6%99%E6%97%8F%E8%83%BA%E5%9F%BA%E9%85%B8%E5%90%88%E6%88%90">&#x82B3;&#x9999;&#x65CF;&#x80FA;&#x57FA;&#x9178;&#x5408;&#x6210;</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#nucleotide">Nucleotide</a>
-<ul>
-<li><a href="#salvage-pathways">salvage pathways</a></li>
-<li><a href="#purine-%E5%90%88%E6%88%90">Purine &#x5408;&#x6210;</a>
-<ul>
-<li><a href="#imp-%E5%90%88%E6%88%90">IMP &#x5408;&#x6210;</a></li>
-<li><a href="#%E7%94%A2%E7%94%9F-gmp-amp">&#x7522;&#x751F; GMP, AMP</a></li>
-<li><a href="#%E8%AA%BF%E6%8E%A7-1">&#x8ABF;&#x63A7;</a></li>
-</ul>
-</li>
-<li><a href="#purine-%E4%BB%A3%E8%AC%9D">Purine &#x4EE3;&#x8B1D;</a></li>
-<li><a href="#pyrimidine">Pyrimidine</a>
-<ul>
-<li><a href="#%E4%BB%A3%E8%AC%9D">&#x4EE3;&#x8B1D;</a></li>
-</ul>
-</li>
-<li><a href="#ntp-reductase">NTP reductase</a></li>
-<li><a href="#%E8%97%A5%E7%89%A9">&#x85E5;&#x7269;</a></li>
-</ul>
-</li>
-</ul>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#lipid" class="md-toc-link"><p>Lipid</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#plasma-lipoproteins" class="md-toc-link"><p>Plasma lipoproteins</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#運輸" class="md-toc-link">
+            <p>運輸</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#ldl" class="md-toc-link">
+            <p>LDL</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#lipid-acid" class="md-toc-link"><p>Lipid acid</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#氧化" class="md-toc-link">
+            <p>氧化</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#能量" class="md-toc-link">
+            <p>能量</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#unsaturated-fatty-acids" class="md-toc-link">
+            <p>unsaturated fatty acids</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#ketogenesis" class="md-toc-link">
+            <p>Ketogenesis</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#合成" class="md-toc-link">
+            <p>合成</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#get-tg" class="md-toc-link"><p>Get Tg</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#膽鹽" class="md-toc-link">
+            <p>膽鹽</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#tg代謝" class="md-toc-link">
+            <p>Tg代謝</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#tg-合成" class="md-toc-link">
+            <p>Tg 合成</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#脂肪暖暖包" class="md-toc-link">
+            <p>脂肪暖暖包</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#磷脂" class="md-toc-link"><p>磷脂</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#激活" class="md-toc-link">
+            <p>激活</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#分支進化" class="md-toc-link">
+            <p>分支進化</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#pspg-調節" class="md-toc-link">
+            <p>PS/PG 調節</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#高等生物" class="md-toc-link">
+            <p>高等生物</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#做-pc--pe" class="md-toc-link">
+            <p>做 PC &amp; PE</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#pi--cardiolipin" class="md-toc-link">
+            <p>PI &amp; Cardiolipin</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#碳鏈置換" class="md-toc-link">
+            <p>碳鏈置換</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#steroids" class="md-toc-link"><p>Steroids</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#合成-1" class="md-toc-link">
+            <p>合成</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#調控" class="md-toc-link">
+            <p>調控</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#用途" class="md-toc-link">
+            <p>用途</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#steroid-hormones-合成" class="md-toc-link">
+            <p>Steroid hormones 合成</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#vitamins" class="md-toc-link"><p>Vitamins</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#vitamin-a" class="md-toc-link">
+            <p>Vitamin A</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#vitamin-d" class="md-toc-link">
+            <p>Vitamin D</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#合成激素之類的" class="md-toc-link"><p>合成激素之類的</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#神經磷脂sphingomyelin" class="md-toc-link">
+            <p>神經磷脂(sphingomyelin)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#arachidonic-acid-類" class="md-toc-link">
+            <p>arachidonic acid 類</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#整理" class="md-toc-link"><p>整理</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#磷脂-1" class="md-toc-link">
+            <p>磷脂</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#比較生理的東西" class="md-toc-link"><p>比較生理的東西</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#肌肉" class="md-toc-link"><p>肌肉</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#cori-cycle" class="md-toc-link">
+            <p>Cori cycle</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#creatine-肌酸" class="md-toc-link">
+            <p>Creatine 肌酸</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#肝臟" class="md-toc-link">
+            <p>肝臟</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#insulin" class="md-toc-link"><p>Insulin</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#receptor" class="md-toc-link">
+            <p>Receptor</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#glut" class="md-toc-link">
+            <p>GLUT</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#leptin-瘦素" class="md-toc-link">
+            <p>Leptin (瘦素)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#glucagon--epinephrine" class="md-toc-link">
+            <p>Glucagon / Epinephrine</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#胺代謝" class="md-toc-link"><p>胺代謝</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#ubiquitin" class="md-toc-link">
+            <p>Ubiquitin</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#amino-acid-metabolism" class="md-toc-link"><p>Amino acid metabolism</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#轉胺機制" class="md-toc-link">
+            <p>轉胺機制</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#血液運輸" class="md-toc-link">
+            <p>血液運輸</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#glutamate-releases-in-liver" class="md-toc-link">
+            <p>Glutamate Releases in liver</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#urea-cycle-尿素循環" class="md-toc-link"><p>Urea Cycle 尿素循環</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#mitochondria-內" class="md-toc-link">
+            <p>mitochondria 內</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#轉胺整理" class="md-toc-link">
+            <p>轉胺整理</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#蛋白質代謝" class="md-toc-link"><p>蛋白質代謝</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#生酮生糖" class="md-toc-link">
+            <p>生酮生糖？</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#各種輔酶" class="md-toc-link"><p>各種輔酶</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#tetrahydrofolate" class="md-toc-link">
+            <p>Tetrahydrofolate</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#tetrahydrobiopterin-bh4" class="md-toc-link">
+            <p>Tetrahydrobiopterin (BH<sub>4</sub>)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#biotin-b7" class="md-toc-link">
+            <p>Biotin (B<sub>7</sub>)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#pyridoxal-5-phosphate-plp-vitb6" class="md-toc-link">
+            <p>pyridoxal 5 phosphate (PLP, VitB6)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#s-adensylmethionine-sam-adomet" class="md-toc-link">
+            <p>S-Adensylmethionine (SAM, adoMet)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#thiamin-pyrophosphate-tpp-vit-b1" class="md-toc-link">
+            <p>Thiamin pyrophosphate (TPP, Vit B<sub>1</sub>)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#niacin-vit-b3" class="md-toc-link">
+            <p>niacin (Vit B<sub>3</sub>)</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#tryptophan" class="md-toc-link">
+            <p>Tryptophan</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#tyrosine-and-phenylalanine" class="md-toc-link"><p>Tyrosine and Phenylalanine</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#phenylketonuria-pku-苯酮尿症" class="md-toc-link">
+            <p>phenylketonuria (PKU， 苯酮尿症)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#黑尿症" class="md-toc-link">
+            <p>黑尿症</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#alpha-ketoglutarate" class="md-toc-link"><p>α Ketoglutarate</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#gamma-aminobutyric-acid-gaba" class="md-toc-link">
+            <p>γ-aminobutyric acid (GABA)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#no" class="md-toc-link">
+            <p>NO</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#histamine" class="md-toc-link">
+            <p>histamine</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#succinyl-coa" class="md-toc-link">
+            <p>Succinyl CoA</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#branched-chain-amino-acids-metabolism-bcaa" class="md-toc-link">
+            <p>Branched Chain Amino Acids metabolism (BCAA)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#整理-1" class="md-toc-link">
+            <p>整理</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#蛋白質合成" class="md-toc-link"><p>蛋白質合成</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#重要三組人" class="md-toc-link">
+            <p>重要三組人</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#ser-gly-cys" class="md-toc-link"><p>Ser, Gly, Cys</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#creatine-合成" class="md-toc-link">
+            <p>Creatine 合成</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#芳香族胺基酸合成" class="md-toc-link">
+            <p>芳香族胺基酸合成</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#nucleotide" class="md-toc-link"><p>Nucleotide</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#salvage-pathways" class="md-toc-link">
+            <p>salvage pathways</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#purine-合成" class="md-toc-link"><p>Purine 合成</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#imp-合成" class="md-toc-link">
+            <p>IMP 合成</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#產生-gmp-amp" class="md-toc-link">
+            <p>產生 GMP, AMP</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#調控-1" class="md-toc-link">
+            <p>調控</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#purine-代謝" class="md-toc-link">
+            <p>Purine 代謝</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#pyrimidine" class="md-toc-link"><p>Pyrimidine</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#代謝" class="md-toc-link">
+            <p>代謝</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#ntp-reductase" class="md-toc-link">
+            <p>NTP reductase</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#藥物" class="md-toc-link">
+            <p>藥物</p>
+
+          </a></div>
+        </div>
+      </details>
+    
 </div>
-      <a id="sidebar-toc-btn">&#x2261;</a>
-    
-    
+</div>
+      <a id="sidebar-toc-btn">≡</a>
     
     
     
