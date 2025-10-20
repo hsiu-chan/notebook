@@ -82,6 +82,41 @@
 		"body": "&darr;"
 
 	},
+	"harr":{
+		"prefix": "harr",
+		"body": "&harr;"
+
+	},
+	"varr":{
+		"prefix": "varr",
+		"body": "&varr;"
+
+	},
+	"nearr":{
+		"prefix": "nearr",
+		"body": "&nearr;"
+
+	},
+	"searr":{
+		"prefix": "searr",
+		"body": "&searr;"
+
+	},
+	"swarr":{
+		"prefix": "swarr",
+		"body": "&swarr;"
+
+	},
+	"nwarr":{
+		"prefix": "nwarr",
+		"body": "&nwarr;"
+
+	},
+	"times":{
+		"prefix": "times",
+		"body": "&times;"
+
+	},
 	"alpha":{
 		"prefix": "alpha",
 		"body": "&alpha;"

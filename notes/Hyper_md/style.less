@@ -1,0 +1,505 @@
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+
+
+
+
+
+@mobile-max-width: 600px;
+
+@primary-color: hsl(220, 13%, 18%); // 定義主顏色變量
+@line-color: #8b8b8b;
+@hover-color: rgb(135, 255, 255);
+@transparent: rgba(0,0,0,0);
+
+@table-text-color: #fff7f0;
+@table-diagonal-distance: 5%;
+
+
+.markdown-preview {
+  // modify your style here
+  // eg: background-color: blue;
+  //background-color: #202020;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+
+  .title {
+    align-items: center;
+  }
+
+  .title h1 {
+    border-bottom: 0;
+    text-align: center;
+    font-size: 2.75em;
+  }
+
+  h1 {
+    padding-bottom: 0.3rem;
+    border-bottom: solid #fff;
+  }
+
+  h2 {
+    font-weight: normal;
+    padding-bottom: 0.3rem;
+    border-bottom: 1pt solid #8b8b8b;
+  }
+
+  h3 {
+    font-weight: bold;
+  }
+
+  h4 {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.2em;
+  }
+}
+
+/////////////line////////////////
+.markdown-preview hr {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1pt solid @line-color;
+}
+
+//////////////table//////////////////
+
+
+
+
+.table-scroll-wrapper {
+  // 手機螢幕下的表格滾動設定
+  @media screen and (max-width: @mobile-max-width) {
+    overflow-x: auto;  // 讓表格橫向滾動
+    -webkit-overflow-scrolling: touch;  // 優化手機滾動體驗
+
+    // 隱藏滾動條
+    &::-webkit-scrollbar {
+      display: none;  // 隱藏滾動條（Webkit瀏覽器）
+    }
+    -ms-overflow-style: none;  // 隱藏滾動條（IE 和 Edge）
+    scrollbar-width: none;  // 隱藏滾動條（Firefox）
+  }
+}
+
+
+.markdown-preview table {
+  width: 100%;  // 強制表格寬度不超過容器
+  table-layout: fixed;  // 固定表格布局，根據寬度自動分配單元格
+  text-align: center;
+  color: @table-text-color;
+  border-collapse: collapse;  // 合併邊框
+  display: table;
+  margin-top: 1rem;
+
+  @media screen and (max-width:@mobile-max-width) {
+    table-layout: auto;
+    display: table;      // overflow-x 生效
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; // 手機平滑滾動
+  }
+
+  thead {
+    position: sticky;
+    background-color: lighten(@primary-color, -10%);
+    top: 0;
+    z-index: 999;
+  }
+
+  th {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(129, 180, 244);
+    border: 1.5px solid @line-color;
+  }
+
+  td {
+    border: 1.5px solid @line-color;
+    
+  }
+
+  tr {
+    border: 1.5px solid @line-color;
+  }
+
+  tr:nth-child(2n) {
+    //background-color: #202020;
+  }
+
+  td, th  {
+    padding: 0;
+    position: relative;
+
+    ol,
+    ul {
+      //padding-left: 0;
+      text-align: left;
+      list-style-position: inside;
+      /* 控制項目符號的位置 */
+      text-align: left;
+      /* 文字對齊方式 */
+
+    }
+  }
+
+
+    .table-diagonal {
+      background: linear-gradient(
+        to top right,
+        @transparent 49%,
+        @line-color 49%,
+        @line-color 51%,
+        @transparent 51%
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      // 內部文字位置
+      .top-left {
+        position: absolute;
+        top: @table-diagonal-distance;
+        left: @table-diagonal-distance;
+      }
+      .top-right {
+        position: absolute;
+        top: @table-diagonal-distance;
+        right: @table-diagonal-distance;
+      }
+
+      .bottom-right {
+        position: absolute;
+        bottom: @table-diagonal-distance;
+        right: @table-diagonal-distance;
+      }
+      .bottom-left {
+        position: absolute;
+        bottom: @table-diagonal-distance;
+        left: @table-diagonal-distance
+      }
+  }
+
+}
+
+
+  ////image////
+  img {
+
+    max-width:100%;
+    width: 80%;
+
+    top: 0.3rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: block;
+    padding: 0;
+    background-color: white;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+
+  }
+
+
+
+
+///////////toc/////////////////
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 50px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
+}
+
+
+html body[for="html-export"][html-show-sidebar-toc] .md-sidebar-toc {}
+
+
+
+
+
+html body {
+  background-color: @primary-color;
+
+/* === Markdown Preview Enhancer TOC 樣式新版 === */
+.md-sidebar-toc {
+  margin: 0;
+  padding: 0.5rem 0;
+  position: absolute;
+  max-width: 768px;
+  background-color: rgba(186, 55, 55, 0.1);
+  z-index: 70;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.md-toc-link-wrapper{
+  list-style: none!important;
+
+}
+/* 縮排*/
+
+div.md-toc-link-wrapper{
+  margin-left: 0px!important;
+}
+
+details > div > div.md-toc-link-wrapper {
+  margin-left: 24px!important;
+}
+
+.md-toc > details {
+
+}
+
+
+/* TOC link */
+.md-sidebar-toc a {
+  color: inherit;
+  text-decoration: none;
+}
+.md-sidebar-toc a:hover {
+  color: @hover-color;
+  font-style: italic;
+}
+
+/* 每層 details 都要重置下一層 counter */
+.md-sidebar-toc { counter-reset: toc-h1; }
+.md-sidebar-toc details { counter-reset: toc-h2; }
+.md-sidebar-toc details details { counter-reset: toc-h3; }
+.md-sidebar-toc details details details { counter-reset: toc-h4; }
+
+/* 第一層：h1 */
+.md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
+.md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h1;
+  content: counter(toc-h1) ". ";
+  font-size: 0.75em;
+}
+
+/* 第二層：h2 */
+.md-sidebar-toc details > div > .md-toc-link-wrapper:before,
+.md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h2;
+  content: counter(toc-h1) "." counter(toc-h2) " ";
+  font-size: 0.75em;
+}
+
+/* 第三層：h3 */
+.md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h3;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
+  font-size: 0.75em;
+}
+
+/* 第四層：h4 */
+.md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h4;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
+  font-size: 0.75em;
+}
+
+/* 縮排 
+.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
+.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
+.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
+.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
+
+/* hover & active */
+.md-sidebar-toc .md-toc-link-wrapper:hover {
+  color: @hover-color;
+  font-style: italic;
+}
+.md-sidebar-toc .md-toc-link-wrapper.active a {
+  color: @hover-color;
+  font-weight: bold;
+}
+
+
+  /////////////雙欄///////////////
+  .dcl {
+    //width: 100%;
+    /* block 水平置中的方法 */
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    margin-right: -1%;
+  }
+
+  header,
+  section,
+  aside,
+  .in,
+  footer {
+    margin: 0 1% 0.3em 0;
+  }
+
+  section {
+    float: left;
+    width: 49%;
+  }
+
+  footer {
+    margin-bottom: 0;
+    /* 不准其他元素出現在其左右 */
+    clear: both;
+  }
+
+  //////////////////////////////
+  /*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
+  /////button/////
+  .btn {
+    position: fixed;
+    z-index: 99;
+    font-size: 24px;
+    cursor: pointer;
+    color: inherit;
+    text-align: center;
+    width: 32px;
+    cursor: pointer;
+    opacity: .4;
+    word-wrap: break-word;
+  }
+
+  .btn:active {
+    opacity: .8;
+  }
+
+  ////flex box///////
+  @media screen and (max-width:400px) {
+    img {
+      width: 100% !important;
+    }
+  }
+
+  .fbox {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+      position: relative;
+      left: 0;
+      transform: translate(0, 0);
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0)!important;
+      object-fit: contain;
+    }
+
+  }
+  table .fbox{
+    left: 0;
+    transform: translateX(0);
+  }
+
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  word-wrap: break-word;
+}
+
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+/* Zoom in effect */
+@keyframes zoomIn {
+  
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+  color: #bbb;
+}

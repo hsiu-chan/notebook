@@ -619,3 +619,253 @@ bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含�
 ### 整理表 
 
 ![alt text](paste_src/RPD-59.png)
+
+## Connector 
+- 距離 gingival margin 
+  - Mx. 6mm
+  - Md. 3mm
+
+
+
+### Maxillary Major connector 
+
+- Bead line
+  - 直接壓 tissue 
+  - 避開 torus
+  - 提供 Cast 修磨時完整 Finish line
+  - 金屬收縮後仍能貼附 Tissue 防止食物進入
+  - retention and stability
+
+
+#### Palatal bar
+
+
+:::left
+- 剖面半橢圓形，最厚在中間
+- 厚度寬度限制 &rarr; 強度差，support 很小
+- 只用於 Crest 短 Class III
+- palatal bar 不超過 2^nd^ premolar 前方，否則異物感，
+舌頭常常碰到，影響發音
+:::right
+![alt text](paste_src/RPD-60.png)
+:::
+
+
+
+
+#### Palatal strap
+
+:::left
+- AP> 8mm
+- palatal bar 升級版
+  - Stability++, Support ++
+- 可用於 Class II, III
+- 不要放到 Rugae 、軟齶、gingival margin
+- 有 L-beam principle (下圖)
+  - 跨兩面
+- Distance &darr;, Thickness &uarr; &rarr; flexure &darr;
+
+:::right
+![alt text](paste_src/RPD-61.png =47)
+![alt text](paste_src/RPD-62.png =48)
+:::
+
+
+#### Anteroposterior palatal bar (A-P bar)
+
+:::left
+- 前後兩 Bar ，前方較扁，類似 Strap
+- L-beam 
+- Palatal bar  不超過 2^nd^ premolar 前方
+- 干擾發音、Support 不足
+
+:::right
+![alt text](paste_src/RPD-63.png)
+
+:::
+
+
+
+#### Horseshoe connector
+
+:::left
+
+
+
+- 長度長，flexible &uarr;
+  - 加寬：覆蓋到前牙 palatal side，並向palatal side 延伸6~8mm
+  - 加厚：anterior palate 加厚
+- 兩側的ending 一定要對稱等高
+- 用在前牙有 Modification 的 case 
+
+:::right
+![alt text](paste_src/RPD-64.png)
+:::
+
+#### Anteroposterior palatal strap(A-P strap)
+
+
+- 前後兩條 Strap
+  - AP>8mm
+  - 不蓋 rugae
+- L-beam
+- Stability > AP bar 
+
+![alt text](paste_src/RPD-65.png =49)
+![alt text](paste_src/RPD-66.png =47)
+
+#### Complete palate
+- 不能蓋到 Soft palate
+- L-Beam
+- 兩種設計
+  1. 延伸到前牙 cingulum ，提供indirect retention
+     - 緊密接觸前牙 FG，否則行程 Death space，牙齦增生
+  1. 離前牙的marginal gingivae >6mm 以利清潔
+
+- 適用 
+  - 全部後牙缺失
+  - 牙周不佳
+    - 可以追加樹脂牙，容易 repair
+
+- 缺點 
+  - 重 (upper)
+  - gag reflex(嘔吐感)
+
+![alt text](paste_src/RPD-67.png)
+
+:::tip { Modification of Complete Palate}
+
+- 重 &rarr; 金屬網格打洞
+- gag reflex &rarr; Distal 用 Resin 收尾 (好修磨)
+
+![alt text](paste_src/RPD-69.png =40)
+:::
+
+#### 整理 
+
+> torus 有 Relief 還是能 Complete Palate
+
+![alt text](paste_src/RPD-70.png)
+
+
+### Mandible Major Connector 
+
+- 不用 Beam line 
+- 下顎 RPD 容易發生 Rotation &rarr; Major connector 需要 Relief
+
+
+#### Lingual Bar 
+- 首選 
+- 需要 Marginal &harr; 口底 8mm (3+5) 
+- 上窄下寬
+
+
+![alt text](paste_src/RPD-71.png =50)
+
+#### Sublingual bar 
+
+- bar 水平橫躺於口底
+- 影響舌頭擺放
+- 印模技術求很高，故少見
+
+
+:::fbox 
+
+![alt text](paste_src/RPD-72.png =30)
+![alt text](paste_src/RPD-73.png =50)
+:::
+
+#### Lingual plate
+
+- 蓋住 cingulum, Interproximal spaces
+  - 如果牙周問題嚴重，Interproximal spaces 改用 **Step-back design** (只到 Line angle)
+
+:::fbox 
+![alt text](paste_src/RPD-75.png =60)
+![alt text](paste_src/RPD-74.png =35)
+:::
+
+
+- 要放 Rest 避免推前牙 ( 1^st^ premolar, mesial)
+
+![alt text](paste_src/RPD-76.png =80)
+
+- 能避開 torus 
+- 之後缺牙可以 Repair，增加樹脂牙
+
+
+#### Dental Bar 
+
+- 放牙齒上，細 &rarr; 加厚，但要避免異物感 &rarr; 強度仍不如 Lingual plate
+
+![alt text](paste_src/RPD-77.png)
+
+#### Double lingual bar (Kennedy bar/continuous clasp)
+
+- 類似 AP Bar
+- 鏤空
+  - 軟組織受到更多口水和食物的刺激
+  - 避開 Black triangle &rarr; 美觀
+- 截面
+  - Lower bar：半梨形
+  - upper bar：半橢圓形，高 2~3mm，厚1mm
+- Rest: 1^st^ Premolar, mesial
+- 缺點
+  - 形狀復雜，卡殘渣
+  - Upper bar 類似 Dental Bar ，乾擾舌頭
+
+![alt text](paste_src/RPD-78.png =80)
+
+#### Labial Bar 
+
+- 長 &rarr; flexibility &uarr; &rarr; 加寬加厚
+- 用於牙齒 Lingual tilts 嚴重患者
+
+![alt text](paste_src/RPD-79.png =50)
+
+
+:::info {Swing-Lock RPD (改良式labial bar)}
+- Buccal 扣起來
+- Stability++
+
+:::fbox 
+![alt text](paste_src/RPD-81.png =45)
+![alt text](paste_src/RPD-82.png =50)
+:::
+
+:::
+
+### Minor connector 
+
+- 可分為四大類，設計上越簡單越好
+  1. clasp &harr; Major connector
+     - 不能放到 undercut 以下 
+     - 不能放到 Lingual 最凸點，否則有旋轉效果
+  1. indirect retainers/ auxiliary rests &harr; Major connector
+     - 藏 Embrasure 內
+     - 牙齦最小接觸：垂直主連接體
+  2. denture base &harr; Major Connector
+     - Rigid 
+     - 不要干擾義齒排牙
+     - 上顎：超過tuberosity
+     - 下顎：超過distal free end 2/3
+     - \oneline{\picBox{ 
+     ![alt text](paste_src/RPD-83.png =45)![alt text](paste_src/RPD-84.png =45)}}
+     - Finish line
+![alt text](paste_src/RPD-88.png)
+     - 設計分三種
+      - 釘頭
+          - 金屬貼 Tissue，導熱好，易清潔
+          - Resin 不牢固
+          - crest 萎縮無法調整 &rarr; class III, short span, tooth supported RPD
+          - ![alt text](paste_src/RPD-85.png =60)
+        - 開放式結構
+          - 縱軸不能在 Crest
+          - 橫軸在牙齒之間
+          - 要有 Stopper，防止resin 壓鑄過程Mesh變形
+          - ![alt text](paste_src/RPD-87.png =60)
+        - 網狀結構
+          - 義齒齒頸部被網狀結構干擾
+          - ![alt text](paste_src/RPD-86.png =60)
+  3. vertical projection/bar-type clasps &harr; Major Connector
+     - flexibility

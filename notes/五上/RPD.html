@@ -3,275 +3,14 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
-      
-      
-      
-      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
       
       
       
       
       
       <style>
-      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAfIAAsAAAAADDAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kosY21hcAAAAYAAAADTAAACjtP6ytBnbHlmAAACVAAAAxgAAAQ4zRtvlGhlYWQAAAVsAAAALwAAADYRwZsnaGhlYQAABZwAAAAcAAAAJAeKAzxobXR4AAAFuAAAABIAAAA8OGQAAGxvY2EAAAXMAAAAIAAAACAG5AfwbWF4cAAABewAAAAfAAAAIAEfAERuYW1lAAAGDAAAAVcAAAKFkAhoC3Bvc3QAAAdkAAAAYgAAAK2vz7wkeJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkPsQ4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVLy4xKzzX4chhrmK4QpQmBEkBwAZygyweJzFkr0NwjAQhZ+TEP6CRUfHBEwRUWaQTICyQbpMwRCskA5RUIONxG0RnnNpKAIV4qzPku/8c353ACYAYrIjCWCuMAh2ptf0/hiL3p/gyPUWa3osqlt0L1zu9r71z8dGrJRykFoauXQd932Lj5vhG+MjxGeYI8MKETObMpslf5EyP8tg+vHun5r539PvlvXzaVhRFVQDTPEWKVQR90KhnnC5Ek67vUKN4VuFasM/ldARj43CCkCsEjpJSoVVgRyU0GVSK6wUpFFCx8lFgX0BiXpRPQB4nE2TTWjcRhTH3xttpDhxN7uxPlp3u/FK7moRPixafRijNosxSw/LUsIwNcaEHPZggo/FmEKMCKWU4kNOOftQSlhE8alnH0Ix9BqWnHooPRrTQ0+mnu2bXTu2pPdGM9LM/6c3fwECTM4gBBMYQNqxzLrZAjqYSlqu2TAHZQA0/DQJH6FtzqGDnvbt4Ggwvzw/nL8EfH8kW0fsuRqhgWXZnY7M1picaUL7Du5BHeDzMIl83dAt016wH1qmvtSMo5R6YRJHTR//FXsff/nj/tc/5K9P5d+nP22+fFK5u7v3K39SW3y+OtDKO3L85vD09PD9z5X17a2N1g4tqk01RlqX7gyoEmnsWQtVr4rtZMmukEaFBZxzefkCn11cyKMLZgshRwgTYNoLNXCBz2ja7HvZG7hDpPSNfoo5vs0knK/9hb+rNpu+8kHPgk/Ao4kK3tWtTpSEtvkA9c+wE6UaUdwieNkaHg55tBEtRiEPw1s0+FtrtTcc9two2lhMknV7PZF/cs6+uUFTmpTGbEx7sQCPSLOttHS3GRltqp7SNzVSKzl6aWnZT/CX5k6/v9N3Hh8fHBwffJVjhrC6OgH5dkIt/tPsq+d/PD5Qz7G7efzq1THFjdZVPe/N6ulQ3JnDWSE5junsFsVIiFwL/htf1S5gJ3BfOcUxfHKLnzqpFpyfZ9cX+/5WB6a+Y0pHpzkNrYNVDwMsikK+y7WuLCRg/oFHkA8VT3rDg5ZnU6ktzzINymV0m74Xd5pfIGXyFeVEQSShkzqG7TBBa2OxVRKitLXv7h3uuftXnXq7lz2tZ/WnWa9dx9dCjDhHzmuVQATlmljr9dZErUydSo2Hbi/b1vXtrOeGCk2/8s3ZlO8+ueJT8BVlw5pGw2oYccdSiHHqx0RlabHqdNR9jAETl6PreJcPBnnfpTLnOQ8C3OV8AmQGzouV1iZdeb5SSIoVc8W8/kcDtksUH5FrU6/aqBqNWcMEzxG4DAQ14qRQhi9mWU0rzepKezbjfgCwQKxVYq5ajRgpRqy45CqwkJydcEkbTkvRz8P5/2ZpDTN4nGNgZGBgAOKb6v+/xvPbfGXgZmEAgeuB2kkI+v8bFgbmKiCXg4EJJAoAPyAKhQB4nGNgZGBg1vmvwxDDwgACQJKRARXwAwAzZQHQeJxjYQCCFAYGFgbSMQAcWACdAAAAAAAAAAwALgBgAIQAmADSAQgBIgE8AVABoAHeAfwCHHicY2BkYGDgZ7BgYGMAASYg5gJCBob/YD4DAA/hAWQAeJxlkbtuwkAURMc88gApQomUJoq0TdIQzEOpUDokKCNR0BuzBiO/tF6QSJcPyHflE9Klyyekz2CuG8cr7547M3d9JQO4xjccnJ57vid2cMHqxDWc40G4Tv1JuEF+Fm6ijRfhM+oz4Ra6eBVu4wZvvMFpXLIa40PYQQefwjVc4Uu4Tv1HuEH+FW7i1mkKn6Hj3Am3sHC6wm08Ou8tpSZGe1av1PKggjSxPd8zJtSGTuinyVGa6/Uu8kxZludCmzxMEzV0B6U004k25W35fj2yNlCBSWM1paujKFWZSbfat+7G2mzc7weiu34aczzFNYGBhgfLfcV6iQP3ACkSaj349AxXSN9IT0j16JepOb01doiKbNWt1ovippz6sVYYwsXgX2rGVFIkq7Pl2PNrI6qW6eOshj0xaSq9mpNEZIWs8LZUfOouNkVXxp/d5woqebeYIf4D2J1ywQB4nG3LOw6AIBAE0B384B+PAkgEa+QwNnYmHt+EpXSal5lkSBBnoP8oCFSo0aCFRIceA0ZMmLFAYSW88rmvtMUjG3RiQ9HvpfusM6zWNmtc5H/iPewha50tOt5PS/QBx2IeSwAA") format("woff");
-}
-
-.admonition {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
-  position: relative;
-  margin: 1.5625em 0;
-  padding: 0 1.2rem;
-  border-left: .4rem solid rgba(68, 138, 255, .8);
-  border-radius: .2rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  overflow: auto;
-}
-
-.admonition>p {
-  margin-top: .8rem;
-}
-
-.admonition>.admonition-title {
-  margin: 0 -1.2rem;
-  padding: .8rem 1.2rem .8rem 3.6rem;
-  border-bottom: 1px solid rgba(68, 138, 255, .2);
-  background-color: rgba(68, 138, 255, .1);
-  font-weight: 700;
-}
-
-.admonition>.admonition-title:before {
-  position: absolute;
-  left: 1.2rem;
-  font-size: 1.5rem;
-  color: rgba(68, 138, 255, .8);
-  content: "\E3C9";
-}
-
-.admonition>.admonition-title:before {
-  font-family: Material Icons;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 2rem;
-  text-transform: none;
-  white-space: nowrap;
-  speak: none;
-  word-wrap: normal;
-  direction: ltr;
-}
-
-.admonition.summary,
-.admonition.abstract,
-.admonition.tldr {
-  border-left-color: rgba(0, 176, 255, .8);
-}
-
-.admonition.summary>.admonition-title,
-.admonition.abstract>.admonition-title,
-.admonition.tldr>.admonition-title {
-  background-color: rgba(0, 176, 255, .1);
-  border-bottom-color: rgba(0, 176, 255, .2);
-}
-
-.admonition.summary>.admonition-title:before,
-.admonition.abstract>.admonition-title:before,
-.admonition.tldr>.admonition-title:before {
-  color: rgba(0, 176, 255, 1);
-  ;
-  content: "\E8D2";
-}
-
-.admonition.hint,
-.admonition.tip {
-  border-left-color: rgba(0, 191, 165, .8);
-}
-
-.admonition.hint>.admonition-title,
-.admonition.tip>.admonition-title {
-  background-color: rgba(0, 191, 165, .1);
-  border-bottom-color: rgba(0, 191, 165, .2);
-}
-
-.admonition.hint>.admonition-title:before,
-.admonition.tip>.admonition-title:before {
-  color: rgba(0, 191, 165, 1);
-  content: "\E80E";
-}
-
-.admonition.info,
-.admonition.todo {
-  border-left-color: rgba(0, 184, 212, .8);
-}
-
-.admonition.info>.admonition-title,
-.admonition.todo>.admonition-title {
-  background-color: rgba(0, 184, 212, .1);
-  border-bottom-color: rgba(0, 184, 212, .2);
-}
-
-.admonition.info>.admonition-title:before,
-.admonition.todo>.admonition-title:before {
-  color: rgba(0, 184, 212, 1);
-  ;
-  content: "\E88E";
-}
-
-.admonition.success,
-.admonition.check,
-.admonition.done {
-  border-left-color: rgba(0, 200, 83, .8);
-}
-
-.admonition.success>.admonition-title,
-.admonition.check>.admonition-title,
-.admonition.done>.admonition-title {
-  background-color: rgba(0, 200, 83, .1);
-  border-bottom-color: rgba(0, 200, 83, .2);
-}
-
-.admonition.success>.admonition-title:before,
-.admonition.check>.admonition-title:before,
-.admonition.done>.admonition-title:before {
-  color: rgba(0, 200, 83, 1);
-  ;
-  content: "\E876";
-}
-
-.admonition.question,
-.admonition.help,
-.admonition.faq {
-  border-left-color: rgba(100, 221, 23, .8);
-}
-
-.admonition.question>.admonition-title,
-.admonition.help>.admonition-title,
-.admonition.faq>.admonition-title {
-  background-color: rgba(100, 221, 23, .1);
-  border-bottom-color: rgba(100, 221, 23, .2);
-}
-
-.admonition.question>.admonition-title:before,
-.admonition.help>.admonition-title:before,
-.admonition.faq>.admonition-title:before {
-  color: rgba(100, 221, 23, 1);
-  ;
-  content: "\E887";
-}
-
-.admonition.warning,
-.admonition.attention,
-.admonition.caution {
-  border-left-color: rgba(255, 145, 0, .8);
-}
-
-.admonition.warning>.admonition-title,
-.admonition.attention>.admonition-title,
-.admonition.caution>.admonition-title {
-  background-color: rgba(255, 145, 0, .1);
-  border-bottom-color: rgba(255, 145, 0, .2);
-}
-
-.admonition.attention>.admonition-title:before {
-  color: rgba(255, 145, 0, 1);
-  content: "\E417";
-}
-
-.admonition.warning>.admonition-title:before,
-.admonition.caution>.admonition-title:before {
-  color: rgba(255, 145, 0, 1);
-  content: "\E002";
-}
-
-.admonition.failure,
-.admonition.fail,
-.admonition.missing {
-  border-left-color: rgba(255, 82, 82, .8);
-}
-
-.admonition.failure>.admonition-title,
-.admonition.fail>.admonition-title,
-.admonition.missing>.admonition-title {
-  background-color: rgba(255, 82, 82, .1);
-  border-bottom-color: rgba(255, 82, 82, .2);
-}
-
-.admonition.failure>.admonition-title:before,
-.admonition.fail>.admonition-title:before,
-.admonition.missing>.admonition-title:before {
-  color: rgba(255, 82, 82, 1);
-  ;
-  content: "\E14C";
-}
-
-.admonition.danger,
-.admonition.error,
-.admonition.bug {
-  border-left-color: rgba(255, 23, 68, .8);
-}
-
-.admonition.danger>.admonition-title,
-.admonition.error>.admonition-title,
-.admonition.bug>.admonition-title {
-  background-color: rgba(255, 23, 68, .1);
-  border-bottom-color: rgba(255, 23, 68, .2);
-}
-
-.admonition.danger>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E3E7";
-}
-
-.admonition.error>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E14C";
-}
-
-.admonition.bug>.admonition-title:before {
-  color: rgba(255, 23, 68, 1);
-  content: "\E868";
-}
-
-.admonition.example,
-.admonition.snippet {
-  border-left-color: rgba(0, 184, 212, .8);
-}
-
-.admonition.example>.admonition-title,
-.admonition.snippet>.admonition-title {
-  background-color: rgba(0, 184, 212, .1);
-  border-bottom-color: rgba(0, 184, 212, .2);
-}
-
-.admonition.example>.admonition-title:before,
-.admonition.snippet>.admonition-title:before {
-  color: rgba(0, 184, 212, 1);
-  ;
-  content: "\E242";
-}
-
-.admonition.quote,
-.admonition.cite {
-  border-left-color: rgba(158, 158, 158, .8);
-}
-
-.admonition.quote>.admonition-title,
-.admonition.cite>.admonition-title {
-  background-color: rgba(158, 158, 158, .1);
-  border-bottom-color: rgba(158, 158, 158, .2);
-}
-
-.admonition.quote>.admonition-title:before,
-.admonition.cite>.admonition-title:before {
-  color: rgba(158, 158, 158, 1);
-  ;
-  content: "\E244";
-}
-
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#aab1bf;background-color:#30353f!important;border:#4b5261;border-radius:3px}pre[class*=language-]{padding:1em}code[class*=language-] .token.cdata,code[class*=language-] .token.comment,code[class*=language-] .token.doctype,code[class*=language-] .token.prolog,pre[class*=language-] .token.cdata,pre[class*=language-] .token.comment,pre[class*=language-] .token.doctype,pre[class*=language-] .token.prolog{color:#5b6270}code[class*=language-] .namespace,pre[class*=language-] .namespace{opacity:.7}code[class*=language-] .token.constant,pre[class*=language-] .token.constant{color:#d19965}code[class*=language-] .token.boolean,code[class*=language-] .token.function-name,code[class*=language-] .token.number,pre[class*=language-] .token.boolean,pre[class*=language-] .token.function-name,pre[class*=language-] .token.number{color:#d19965}code[class*=language-] .token.tag,pre[class*=language-] .token.tag{color:#df6b75}code[class*=language-] .token.symbol,pre[class*=language-] .token.symbol{color:#56b5c2}code[class*=language-] .token.selector,pre[class*=language-] .token.selector{color:#c578dd}code[class*=language-] .token.attr-name,pre[class*=language-] .token.attr-name{color:#d19965}code[class*=language-] .token.string,pre[class*=language-] .token.string{color:#97c279}code[class*=language-] .token.char,pre[class*=language-] .token.char{color:#56b5c2}code[class*=language-] .token.url,pre[class*=language-] .token.url{color:#56b5c2}code[class*=language-] .token.operator,pre[class*=language-] .token.operator{color:#aab1bf}code[class*=language-] .token.atrule,code[class*=language-] .token.attr-value,code[class*=language-] .token.keyword,pre[class*=language-] .token.atrule,pre[class*=language-] .token.attr-value,pre[class*=language-] .token.keyword{color:#c578dd}code[class*=language-] .token.function,pre[class*=language-] .token.function{color:#61afef}code[class*=language-] .token.class-name,pre[class*=language-] .token.class-name{color:#e4bf7a}code[class*=language-] .token.variable,pre[class*=language-] .token.variable{color:#d19965}code[class*=language-] .token.regex,pre[class*=language-] .token.regex{color:#56b5c2}code[class*=language-] .token.important,pre[class*=language-] .token.important{color:#df6b75}code[class*=language-] .token.bold,code[class*=language-] .token.important,pre[class*=language-] .token.bold,pre[class*=language-] .token.important{font-weight:700}code[class*=language-] .token.italic,pre[class*=language-] .token.italic{font-style:italic}code[class*=language-] .token.entity,pre[class*=language-] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#aab1bf;background-color:#272b33;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#fff}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#7c869c}html body strong{color:#fff}html body del{color:#7c869c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#7c869c;background-color:#393f4a;border-left:4px solid #4b5261}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#4b5261;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#fff}html body table td,html body table th{border:1px solid #4b5261;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#fff;background-color:#393f4a;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#4b5261;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#fff;border:1px solid #4b5261;border-bottom:2px solid #3e4450;padding:2px 4px;background-color:#393f4a;border-radius:3px}@media print{html body{background-color:#272b33}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#fff;page-break-after:avoid}html body blockquote{color:#7c869c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face{font-family:"Material Icons";font-style:normal;font-weight:400;src:local("Material Icons"),local("MaterialIcons-Regular"),url("data:application/x-font-woff;charset=utf-8;base64,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") format("woff")}.admonition{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);position:relative;margin:1.5625em 0;padding:0 1.2rem;border-left:.4rem solid rgba(68,138,255,.8);border-radius:.2rem;background-color:rgba(255,255,255,.05);overflow:auto}.admonition>p{margin-top:.8rem}.admonition>.admonition-title{margin:0 -1.2rem;padding:.8rem 1.2rem .8rem 3.6rem;border-bottom:1px solid rgba(68,138,255,.2);background-color:rgba(68,138,255,.1);font-weight:700}.admonition>.admonition-title:before{position:absolute;left:1.2rem;font-size:1.5rem;color:rgba(68,138,255,.8);content:"\E3C9"}.admonition>.admonition-title:before{font-family:Material Icons;font-style:normal;font-variant:normal;font-weight:400;line-height:2rem;text-transform:none;white-space:nowrap;speak:none;word-wrap:normal;direction:ltr}.admonition.abstract,.admonition.summary,.admonition.tldr{border-left-color:rgba(0,176,255,.8)}.admonition.abstract>.admonition-title,.admonition.summary>.admonition-title,.admonition.tldr>.admonition-title{background-color:rgba(0,176,255,.1);border-bottom-color:rgba(0,176,255,.2)}.admonition.abstract>.admonition-title:before,.admonition.summary>.admonition-title:before,.admonition.tldr>.admonition-title:before{color:#00b0ff;content:"\E8D2"}.admonition.hint,.admonition.tip{border-left-color:rgba(0,191,165,.8)}.admonition.hint>.admonition-title,.admonition.tip>.admonition-title{background-color:rgba(0,191,165,.1);border-bottom-color:rgba(0,191,165,.2)}.admonition.hint>.admonition-title:before,.admonition.tip>.admonition-title:before{color:#00bfa5;content:"\E80E"}.admonition.info,.admonition.todo{border-left-color:rgba(0,184,212,.8)}.admonition.info>.admonition-title,.admonition.todo>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.info>.admonition-title:before,.admonition.todo>.admonition-title:before{color:#00b8d4;content:"\E88E"}.admonition.check,.admonition.done,.admonition.success{border-left-color:rgba(0,200,83,.8)}.admonition.check>.admonition-title,.admonition.done>.admonition-title,.admonition.success>.admonition-title{background-color:rgba(0,200,83,.1);border-bottom-color:rgba(0,200,83,.2)}.admonition.check>.admonition-title:before,.admonition.done>.admonition-title:before,.admonition.success>.admonition-title:before{color:#00c853;content:"\E876"}.admonition.faq,.admonition.help,.admonition.question{border-left-color:rgba(100,221,23,.8)}.admonition.faq>.admonition-title,.admonition.help>.admonition-title,.admonition.question>.admonition-title{background-color:rgba(100,221,23,.1);border-bottom-color:rgba(100,221,23,.2)}.admonition.faq>.admonition-title:before,.admonition.help>.admonition-title:before,.admonition.question>.admonition-title:before{color:#64dd17;content:"\E887"}.admonition.attention,.admonition.caution,.admonition.warning{border-left-color:rgba(255,145,0,.8)}.admonition.attention>.admonition-title,.admonition.caution>.admonition-title,.admonition.warning>.admonition-title{background-color:rgba(255,145,0,.1);border-bottom-color:rgba(255,145,0,.2)}.admonition.attention>.admonition-title:before{color:#ff9100;content:"\E417"}.admonition.caution>.admonition-title:before,.admonition.warning>.admonition-title:before{color:#ff9100;content:"\E002"}.admonition.fail,.admonition.failure,.admonition.missing{border-left-color:rgba(255,82,82,.8)}.admonition.fail>.admonition-title,.admonition.failure>.admonition-title,.admonition.missing>.admonition-title{background-color:rgba(255,82,82,.1);border-bottom-color:rgba(255,82,82,.2)}.admonition.fail>.admonition-title:before,.admonition.failure>.admonition-title:before,.admonition.missing>.admonition-title:before{color:#ff5252;content:"\E14C"}.admonition.bug,.admonition.danger,.admonition.error{border-left-color:rgba(255,23,68,.8)}.admonition.bug>.admonition-title,.admonition.danger>.admonition-title,.admonition.error>.admonition-title{background-color:rgba(255,23,68,.1);border-bottom-color:rgba(255,23,68,.2)}.admonition.danger>.admonition-title:before{color:#ff1744;content:"\E3E7"}.admonition.error>.admonition-title:before{color:#ff1744;content:"\E14C"}.admonition.bug>.admonition-title:before{color:#ff1744;content:"\E868"}.admonition.example,.admonition.snippet{border-left-color:rgba(0,184,212,.8)}.admonition.example>.admonition-title,.admonition.snippet>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.example>.admonition-title:before,.admonition.snippet>.admonition-title:before{color:#00b8d4;content:"\E242"}.admonition.cite,.admonition.quote{border-left-color:rgba(158,158,158,.8)}.admonition.cite>.admonition-title,.admonition.quote>.admonition-title{background-color:rgba(158,158,158,.1);border-bottom-color:rgba(158,158,158,.2)}.admonition.cite>.admonition-title:before,.admonition.quote>.admonition-title:before{color:#9e9e9e;content:"\E244"}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 .markdown-preview {
@@ -396,6 +135,19 @@
   bottom: 5%;
   left: 5%;
 }
+img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
@@ -413,7 +165,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   left: 0;
   width: 200px;
   height: 100%;
-  padding: 32px 10px 48px 0;
+  padding: 50px 10px 48px 0;
   font-size: 14px;
   box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
   box-sizing: border-box;
@@ -422,11 +174,20 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
-  /* Modal (background for enlarged image) */
-  /* 侧栏 */
-  /* 侧栏自动编号 */
-  /* 复位计数器 */
-  /* 进行编号 */
+  /* === Markdown Preview Enhancer TOC 樣式新版 === */
+  /* 縮排*/
+  /* TOC link */
+  /* 每層 details 都要重置下一層 counter */
+  /* 第一層：h1 */
+  /* 第二層：h2 */
+  /* 第三層：h3 */
+  /* 第四層：h4 */
+  /* 縮排 
+.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
+.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
+.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
+.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
+  /* hover & active */
   /*
   /////三线表/////
   table{
@@ -460,140 +221,74 @@ html body {
   }
   */
 }
-html body img {
-  max-width: 100%;
-  width: 80%;
-  top: 0.3rem;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-  display: block;
-  padding: 0;
-  background-color: white;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-}
 html body .md-sidebar-toc {
-  margin: 0rem 0rem 0em 0em;
-  padding: 0rem 0rem 0em 0rem;
-  width: auto;
-  max-width: 768px;
-  margin-bottom: 1em;
-  background-color: rgba(186, 55, 55, 0.1);
-  /*背景颜色*/
+  margin: 0;
+  padding: 0.5rem 0;
   position: absolute;
+  max-width: 768px;
+  background-color: rgba(186, 55, 55, 0.1);
   z-index: 70;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+html body .md-toc-link-wrapper {
+  list-style: none!important;
+}
+html body div.md-toc-link-wrapper {
+  margin-left: 0px!important;
+}
+html body details > div > div.md-toc-link-wrapper {
+  margin-left: 24px!important;
 }
 html body .md-sidebar-toc a {
   color: inherit;
-  font-size: 0.7rem !important;
+  text-decoration: none;
 }
 html body .md-sidebar-toc a:hover {
-  color: inherit;
+  color: #87ffff;
+  font-style: italic;
 }
-html body .md-sidebar-toc li {
-  margin-left: 1rem;
-  margin-bottom: 0 !important;
-  text-align: left;
-  /*左对齐*/
+html body .md-sidebar-toc {
+  counter-reset: toc-h1;
 }
-html body .md-sidebar-toc ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-  padding-right: 0 !important;
+html body .md-sidebar-toc details {
+  counter-reset: toc-h2;
 }
-html body .md-sidebar-toc ul li {
-  font-size: 0.8rem !important;
-  /*字号*/
+html body .md-sidebar-toc details details {
+  counter-reset: toc-h3;
+}
+html body .md-sidebar-toc details details details {
+  counter-reset: toc-h4;
+}
+html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h1;
+  content: counter(toc-h1) ". ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h2;
+  content: counter(toc-h1) "." counter(toc-h2) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h3;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h4;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper.active a {
+  color: #87ffff;
   font-weight: bold;
-  /*一级大纲*/
-}
-html body .md-sidebar-toc ul li:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc ul ul {
-  padding-left: 0rem !important;
-  display: none;
-}
-html body .md-sidebar-toc .active {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc .active ul,
-html body .md-sidebar-toc .active ul ul,
-html body .md-sidebar-toc .active li {
-  display: block;
-}
-html body .md-sidebar-toc ul ul:hover {
-  color: #87ffff;
-}
-html body .md-sidebar-toc ul ul li {
-  margin-bottom: 8pt !important;
-  margin-top: 3pt !important;
-  margin-left: 0rem;
-  font-size: 0.8rem !important;
-  /*字号*/
-  font-style: normal;
-  font-weight: normal;
-  padding-left: 0.2rem;
-  border-left: 2px rgba(0, 0, 0, 0) solid;
-}
-html body .md-sidebar-toc ul ul li:hover {
-  font-style: normal;
-  border-left: 2px solid;
-}
-html body .md-sidebar-toc ul ul ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-}
-html body .md-sidebar-toc ul ul ul li {
-  margin-top: 2pt !important;
-  margin-bottom: 2pt !important;
-  margin-left: 0rem;
-  padding-left: 0.5rem;
-  border-left: 0px;
-}
-html body .md-sidebar-toc ul ul ul li:hover {
-  border-left: 0px solid;
-}
-html body body {
-  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
-}
-html body .md-sidebar-toc li {
-  counter-reset: outline-h1;
-}
-html body .md-sidebar-toc ul li {
-  counter-reset: outline-h2;
-}
-html body .md-sidebar-toc ul ul li {
-  counter-reset: outline-h3;
-}
-html body .md-sidebar-toc ul ul ul li {
-  counter-reset: outline-h4;
-}
-html body .md-sidebar-toc ul ul ul ul li {
-  counter-reset: outline-h5;
-}
-html body .md-sidebar-toc ul ul li:before {
-  counter-increment: outline-h2;
-  content: counter(outline-h2) " ";
-  font-size: 0.7em;
-}
-html body .md-sidebar-toc ul ul ul li:before {
-  counter-increment: outline-h3;
-  content: counter(outline-h2) "." counter(outline-h3) " ";
-  font-size: 0.7em;
-}
-html body .md-sidebar-toc ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
-  font-size: 0.7em;
-}
-html body .md-sidebar-toc ul ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
-  font-size: 0.7em;
 }
 html body .dcl {
   /* block 水平置中的方法 */
@@ -712,13 +407,35 @@ html body table .fbox {
 }
 
       </style>
-    </head>
-    <body for="html-export">
-      <div class="mume markdown-preview  ">
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+
+<script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+
+<script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+
+<script>
+var page = document.getElementsByClassName('markdown-preview')[0]
+page.addEventListener('click', function(event) {
+  event.stopPropagation()
+  
+  document.body.removeAttribute('html-show-sidebar-toc');
+ 
+})
+</script>
+<link rel="stylesheet" href="../Hyper_md/md.css">
+</head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
       <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
       <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css"><h1 class="mume-header" id="rpd">RPD</h1>
-
+<link rel="stylesheet" href="../Hyper_md/md.css">
+<h1 id="rpd">RPD </h1>
 <ul>
 <li>Support
 <ul>
@@ -747,141 +464,131 @@ html body table .fbox {
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Abutment</p>
-<p>&#x7528;&#x4F86;&#x652F;&#x6490;&#x3001;&#x56FA;&#x6301;&#x3001;&#x6216;&#x7A69;&#x5B9A;&#x5C40;&#x90E8;&#x7FA9;&#x9F52; &#x7684;&#x5929;&#x7136;&#x7259;&#x6216;&#x690D;&#x9AD4;</p>
+<p>用來支撐、固持、或穩定局部義齒 的天然牙或植體</p>
 <ul>
-<li>Primary: &#x8207;&#x7121;&#x7259;&#x5340;&#x63A5;&#x89F8;</li>
-<li>Secondary: &#x53EA;&#x8DDF;&#x7FA9;&#x9F52;&#x63A5;&#x89F8;</li>
+<li>Primary: 與無牙區接觸</li>
+<li>Secondary: 只跟義齒接觸</li>
 </ul>
 </div>
-<h2 class="mume-header" id="retention">Retention</h2>
-
+<h2 id="retention">Retention </h2>
 <ul>
-<li>&#x62B5;&#x6297; Vertical force of dislodgment (&#x812B;&#x4F4D;)</li>
+<li>抵抗 Vertical force of dislodgment (脫位)</li>
 </ul>
 <dl>
 <dt>Stress breaking Design</dt>
-<dd>&#x8B93; Abutment &#x8207; Base &#x53D7;&#x529B;&#x6642;&#x80FD;&#x7368;&#x7ACB;&#x904B;&#x52D5;&#xFF0C;&#x907F;&#x514D;&#x529B;&#x91CF;&#x5168;&#x96C6;&#x4E2D;&#x5728; Abutment</dd>
+<dd>讓 Abutment 與 Base 受力時能獨立運動，避免力量全集中在 Abutment</dd>
 </dl>
-<h3 class="mume-header" id="direct-retainer">Direct Retainer</h3>
-
+<h3 id="direct-retainer">Direct Retainer </h3>
 <img src="paste_src/RPD-15.png" alt="alt text" style=";background-color: white;padding:0">
 <ul>
 <li>attachments
 <ul>
-<li>&#x7F8E;&#x89C0;</li>
-<li>&#x7A69;&#x5B9A;</li>
-<li>Abutment &#x529B;&#x77E9;&#x5C0F; (&#x529B;&#x91CF;&#x63A5;&#x8FD1;&#x65CB;&#x8F49;&#x4E2D;&#x5FC3;)</li>
-<li>Abutment teeth &#x9700;&#x8981; 4-6mm</li>
-<li>&#x8A2D;&#x8A08;&#x8907;&#x96DC;&#x640D;&#x5931;&#x9F52;&#x8CEA;</li>
-<li>&#x9700;&#x8981;&#x826F;&#x597D; Oral hygiene</li>
+<li>美觀</li>
+<li>穩定</li>
+<li>Abutment 力矩小 (力量接近旋轉中心)</li>
+<li>Abutment teeth 需要 4-6mm</li>
+<li>設計複雜損失齒質</li>
+<li>需要良好 Oral hygiene</li>
 </ul>
 </li>
 </ul>
-<h4 class="mume-header" id="intracoronal">Intracoronal</h4>
-
+<h4 id="intracoronal">Intracoronal </h4>
 <img src="paste_src/RPD-16.png" alt="alt text" style=";background-color: white;padding:0">
 <ul>
-<li>&#x4E00;&#x822C;&#x8981; Endo</li>
-<li>Abutment &#x53D7;&#x529B;&#x5927; &#x2192; &#x8981; Splint &#x5728;&#x4E00;&#x8D77;</li>
-<li>&#x5206;&#x985E;
+<li>一般要 Endo</li>
+<li>Abutment 受力大 → 要 Splint 在一起</li>
+<li>分類
 <ul>
-<li>Precision attachments: CNC &#x5207;&#x524A; Matrix, Patrix</li>
+<li>Precision attachments: CNC 切削 Matrix, Patrix</li>
 <li>Semiprecision: Casting</li>
 </ul>
 </li>
 </ul>
-<h4 class="mume-header" id="extracoronal-attachments">Extracoronal attachments</h4>
-
+<h4 id="extracoronal-attachments">Extracoronal attachments </h4>
 <div class="fbox"> 
 <img src="paste_src/RPD-17.png" alt="alt text" style="width:50%;background-color: white;padding:0">
 <img src="paste_src/RPD-18.png" alt="alt text" style="width:48%;background-color: white;padding:0">
 </div>
 <ul>
-<li>&#x7259;&#x9F52; Prepare &#x505A;&#x7259;&#x5957;&#xFF0C;&#x73FE;&#x4ECA;&#x591A;&#x7528; Implant &#x7576; Abutment</li>
-<li>Abutment &#x53D7;&#x529B;&#x5927; &#x2192; &#x8981; Splint &#x5728;&#x4E00;&#x8D77;</li>
-<li>Joint &#x53EF;&#x4EE5;&#x79FB;&#x52D5; &#x2192; &#x7DE9;&#x885D;</li>
-<li>&#x5851;&#x81A0;&#x7684; Matrix &#x53EF;&#x66F4;&#x63DB;&#xFF0C;&#x4E5F;&#x6709;&#x5F48;&#x6027;&#x80FD;&#x9054;&#x5230; Stress breaker</li>
+<li>牙齒 Prepare 做牙套，現今多用 Implant 當 Abutment</li>
+<li>Abutment 受力大 → 要 Splint 在一起</li>
+<li>Joint 可以移動 → 緩衝</li>
+<li>塑膠的 Matrix 可更換，也有彈性能達到 Stress breaker</li>
 </ul>
-<h4 class="mume-header" id="clasp">Clasp</h4>
-
+<h4 id="clasp">Clasp </h4>
 <ul>
-<li>&#x6839;&#x64DA;&#x7259;&#x9264;&#x5F9E;&#x4E0A;&#x6216;&#x4E0B;&#x9264;&#x5206;&#x6210; Suprabulge(Circumferential), Infrabulge</li>
+<li>根據牙鉤從上或下鉤分成 Suprabulge(Circumferential), Infrabulge</li>
 </ul>
-<h3 class="mume-header" id="clasp-design">Clasp Design</h3>
-
+<h3 id="clasp-design">Clasp Design </h3>
 <img src="paste_src/RPD-14.png" alt="alt text" style="width:50%;background-color: white;padding:0">
 <ul>
 <li>
 <p>Rest</p>
 </li>
 <li>
-<p>Encirclement: &gt;180&#xB0;</p>
+<p>Encirclement: &gt;180°</p>
 </li>
 <li>
 <p>Reciprocal Component (stability)</p>
 </li>
 <li>
-<p>Distal extension &#x8981;&#x8003;&#x616E; Stress breaking Design</p>
+<p>Distal extension 要考慮 Stress breaking Design</p>
 </li>
 <li>
-<p>&#x76E1;&#x91CF;&#x5C11; (&#x4E00;&#x822C;&#x653E;&#x4E09;&#x9846; Abutment teeth &#x5C31;&#x8DB3;&#x5920;)</p>
+<p>盡量少 (一般放三顆 Abutment teeth 就足夠)</p>
 </li>
 <li>
-<p>Gingiva third &#x4EE5;&#x4E0B;&#x662F; Retention&#xFF0C;&#x4EE5;&#x4E0A;&#x662F; Stability</p>
+<p>Gingiva third 以下是 Retention，以上是 Stability</p>
 </li>
 </ul>
-<h4 class="mume-header" id="akers-clasp">Akers clasp</h4>
-
+<h4 id="akers-clasp">Akers clasp </h4>
 <ul>
 <li>Suprabulge</li>
-<li>&#x5206;&#x5340;
+<li>分區
 <ul>
-<li>Shoulder (S)&#xFF1A;&#x5F9E; origin &#x4F38;&#x51FA;&#x4F86;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x6709;&#x7A69;&#x5B9A;&#x53CA;&#x5305;&#x8986;&#x529F;&#x80FD;&#xFF0C;&#x9AD4;&#x7A4D;&#x6700;&#x5927;&#x4E14;&#x5F48;&#x6027;&#x6700;&#x4E0D;&#x597D;(rigid)&#x3002;</li>
-<li>Midsection(M)&#xFF1A;&#x4F4D;&#x65BC;&#x4E2D;&#x6BB5;&#xFF0C;&#x7C97;&#x7D30;&#x7A0B;&#x5EA6;&#x8207;&#x5F48;&#x6027;&#x8655;&#x65BC;&#x4E2D;&#x9593;&#x503C;(relatively flexible)</li>
-<li>Terminus(T)&#xFF1A;&#x4F4D;&#x65BC;&#x6700;&#x672B;&#x6BB5;&#xFF0C;&#x9032;&#x5165; undercut &#x4EE5;&#x4E0B;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x6700;&#x7D30;&#x4E14;&#x5F48;&#x6027;&#x4E5F;&#x6700;&#x597D;(flexible)</li>
+<li>Shoulder (S)：從 origin 伸出來的部分，有穩定及包覆功能，體積最大且彈性最不好(rigid)。</li>
+<li>Midsection(M)：位於中段，粗細程度與彈性處於中間值(relatively flexible)</li>
+<li>Terminus(T)：位於最末段，進入 undercut 以下，所以需要最細且彈性也最好(flexible)</li>
 </ul>
 </li>
 </ul>
 <img src="paste_src/RPD-19.png" alt="alt text" style="width:30%;background-color: white;padding:0">
 <ul>
-<li>&#x8981;&#x7DAD;&#x6301;&#x9264;&#x5B50;&#x5F62;&#x72C0;&#x624D;&#x6709;&#x5F48;&#x6027;&#xFF0C;&#x80FD;&#x8ABF;&#x6574;</li>
-<li>Preparation (&#x7406;&#x60F3;:G)</li>
+<li>要維持鉤子形狀才有彈性，能調整</li>
+<li>Preparation (理想:G)</li>
 </ul>
 <img src="paste_src/RPD-23.png" alt="alt text" style=";background-color: white;padding:0">
 <hr>
-<h4 class="mume-header" id="cast-circumferential-clasp">Cast Circumferential clasp</h4>
-
+<h4 id="cast-circumferential-clasp">Cast Circumferential clasp </h4>
 <blockquote>
-<p>&#x50B3;&#x7D71;&#x7D93;&#x5178;</p>
+<p>傳統經典</p>
 </blockquote>
 <ul>
 <li>Rest, Akers clasp, Reciprocal</li>
-<li>&#x9444;&#x9020;
+<li>鑄造
 <ul>
-<li>&#x534A;&#x5713;</li>
-<li>&#x96E3;&#x4EE5;&#x8ABF;&#x6574;</li>
-<li>&#x8010;&#x7528;</li>
+<li>半圓</li>
+<li>難以調整</li>
+<li>耐用</li>
 </ul>
 </li>
-<li>&#x7F3A;&#x4E4F; Stress breaking</li>
+<li>缺乏 Stress breaking</li>
 </ul>
 <div class="fbox"> 
 <img src="paste_src/RPD-21.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/RPD-22.png" alt="alt text" style="width:60%;background-color: white;padding:0">
 </div>
-<h4 class="mume-header" id="reverse-circumferential-clasp">Reverse Circumferential clasp</h4>
-
+<h4 id="reverse-circumferential-clasp">Reverse Circumferential clasp </h4>
 <ul>
-<li>Mesial &#x5F80; DB &#x52FE;&#x7684; Cast Circumferential clasp &#xFF0C;&#x9069;&#x5408; Distal ext.</li>
+<li>Mesial 往 DB 勾的 Cast Circumferential clasp ，適合 Distal ext.</li>
 <li></li>
 </ul>
-<h4 class="mume-header" id="ring-clasp">Ring clasp</h4>
-
+<h4 id="ring-clasp">Ring clasp </h4>
 <ul>
-<li>&#x7528;&#x65BC; Md. Molar (Buccal &#x7121; under cut) &#x2192; &#x52FE; ML</li>
+<li>用於 Md. Molar (Buccal 無 under cut) → 勾 ML</li>
 <li>Supporting strut
 <ul>
-<li>&#x9700;&#x8981;&#x6DF1; Vestibular</li>
-<li>&#x8EDF;&#x7D44;&#x7E54;&#x5012;&#x51F9;&#x4E0D;&#x9069;&#x7528;</li>
+<li>需要深 Vestibular</li>
+<li>軟組織倒凹不適用</li>
 </ul>
 </li>
 <li>Second rest</li>
@@ -890,176 +597,160 @@ html body table .fbox {
 <img src="paste_src/RPD-24.png" alt="alt text" style="width:75%;background-color: white;padding:0">
 <img src="paste_src/RPD-25.png" alt="alt text" style="width:23%;background-color: white;padding:0">
 </div>
-<h4 class="mume-header" id="embrasure-clasp">Embrasure clasp</h4>
-
+<h4 id="embrasure-clasp">Embrasure clasp </h4>
 <ul>
-<li>&#x4E00;&#x7D44;&#x9130;&#x7259;&#x5169;&#x5C0D; Retentive arm &amp; Reciprocal arm&#xFF0C;&#x901A;&#x5E38; Retentive arm &#x6703;&#x4E00;&#x500B; Buccal &#x4E00;&#x500B; Lingual</li>
-<li>&#x9069;&#x7528;&#x65BC; Class II &#x7F3A;&#x7259;</li>
-<li>Lingual side &#x7684; minor connector &#x8584;&#xFF0C;&#x5BB9;&#x6613;&#x54AC;&#x5230;&#xFF0C;&#x65B7;&#x6389;</li>
-<li>&#x4E0D;&#x9069;&#x5408;&#x653E;&#x5728;&#x6709; Distal ext. &#x5074; (&#x53F3;&#x5716;)&#xFF0C;&#x56E0;&#x70BA;&#x7121; Stress breaking</li>
+<li>一組鄰牙兩對 Retentive arm &amp; Reciprocal arm，通常 Retentive arm 會一個 Buccal 一個 Lingual</li>
+<li>適用於 Class II 缺牙</li>
+<li>Lingual side 的 minor connector 薄，容易咬到，斷掉</li>
+<li>不適合放在有 Distal ext. 側 (右圖)，因為無 Stress breaking</li>
 </ul>
 <div class="fbox"> 
 <img src="paste_src/RPD-26.png" alt="alt text" style="width:30%;background-color: white;padding:0">
 <img src="paste_src/RPD-27.png" alt="alt text" style="width:50%;background-color: white;padding:0">
 </div>
-<h4 class="mume-header" id="multiple-clasp">Multiple clasp</h4>
-
+<h4 id="multiple-clasp">Multiple clasp </h4>
 <ul>
-<li>&#x5169;&#x500B; Akers arm&#xFF0C;&#x820C;&#x5074;Reciprocal arm &#x9023;&#x5728;&#x4E00;&#x8D77;</li>
-<li>&#x7528;&#x65BC; #4 &#x7259;&#x5468;&#x4E0D;&#x4F73;&#xFF0C;&#x4EE5; Dual retention &#x5206;&#x6563;&#x53D7;&#x529B;<br>
+<li>兩個 Akers arm，舌側Reciprocal arm 連在一起</li>
+<li>用於 #4 牙周不佳，以 Dual retention 分散受力<br>
 <img src="paste_src/RPD-28.png" alt="alt text" style="width:30%;background-color: white;padding:0"></li>
 </ul>
-<h4 class="mume-header" id="half-and-half-clasp">Half-and-half clasp</h4>
-
+<h4 id="half-and-half-clasp">Half-and-half clasp </h4>
 <ul>
-<li>&#x4E00;&#x9846; Abutment tooth &#x5169;&#x6839; Akers arm&#xFF0C;&#x9EDE;&#x5C0D;&#x7A31;</li>
+<li>一顆 Abutment tooth 兩根 Akers arm，點對稱</li>
 <li>Dual retention</li>
 </ul>
 <div class="fbox"> 
 <img src="paste_src/RPD-29.png" alt="alt text" style="width:30%;background-color: white;padding:0">
 <img src="paste_src/RPD-31.png" alt="alt text" style="width:40%;background-color: white;padding:0">
 </div>
-<h4 class="mume-header" id="back-action-clasp">Back-Action clasp</h4>
-
+<h4 id="back-action-clasp">Back-Action clasp </h4>
 <ul>
-<li>ML line angle &#x51FA;&#x767C;&#xFF0C;&#x52FE;&#x5230; Buccal</li>
-<li>&#x7528;&#x65BC;&#x820C;&#x5074;&#x7121;&#x5012;&#x51F9;</li>
-<li>Retention &#x548C; Reciprocal &#x5C0D;&#x6297;&#x4E0D;&#x8DB3; &#x2192; &#x4E0D;&#x7A69;&#x5B9A;
+<li>ML line angle 出發，勾到 Buccal</li>
+<li>用於舌側無倒凹</li>
+<li>Retention 和 Reciprocal 對抗不足 → 不穩定
 <ul>
 <li><mark>stress-breaking</mark></li>
-<li>&#x4E0D;&#x80FD;&#x7528;&#x5728;&#x55AE;&#x5074; RPD</li>
+<li>不能用在單側 RPD</li>
 </ul>
 </li>
 </ul>
 <img src="paste_src/RPD-30.png" alt="alt text" style="width:30%;background-color: white;padding:0">
-<h4 class="mume-header" id="reverse-action-clasp-c-clasp">Reverse-action clasp (C-clasp)</h4>
-
+<h4 id="reverse-action-clasp-c-clasp">Reverse-action clasp (C-clasp) </h4>
 <ul>
-<li>DB &#x51FA;&#x767C; C-shaped clasp &#xFF0C;&#x52FE; DB</li>
-<li>Abutment &#x9700;&#x8981;&#x5920;&#x9AD8;</li>
-<li>&#x4F4E;&#x5F48;&#x6027;</li>
+<li>DB 出發 C-shaped clasp ，勾 DB</li>
+<li>Abutment 需要夠高</li>
+<li>低彈性</li>
 </ul>
-<h4 class="mume-header" id="onlay-clasp">Onlay clasp</h4>
-
+<h4 id="onlay-clasp">Onlay clasp </h4>
 <ul>
-<li>&#x91CD;&#x5EFA;&#x54AC;&#x5408;&#x5E73;&#x9762;</li>
-<li>&#x78E8;&#x5C0D;&#x7259;</li>
+<li>重建咬合平面</li>
+<li>磨對牙</li>
 <li>Caries++</li>
 </ul>
 <img src="paste_src/RPD-32.png" alt="alt text" style=";background-color: white;padding:0">
-<h4 class="mume-header" id="%E6%95%B4%E7%90%86">&#x6574;&#x7406;</h4>
-
+<h4 id="整理">整理 </h4>
 <ul>
-<li>&#x53EA;&#x6709; DB &#x6709; undercut:
+<li>只有 DB 有 undercut:
 <ul>
 <li>infrabulge/bar-type &gt; reverse circlet &gt; c-clasp</li>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="distal-ext-stress-breaking">Distal ext. stress breaking</h3>
-
-<p>&#x56DB;&#x7A2E;&#x8A2D;&#x8A08;</p>
+<h3 id="distal-ext-stress-breaking">Distal ext. stress breaking </h3>
+<p>四種設計</p>
 <ul>
 <li>wrought-wire circumferential clasp</li>
 <li>bar-type/infrabulge clasp</li>
 <li>RPI(rest, proximal plate, I-bar)</li>
-<li>RPA(rest, proximalplate, Aker&#x2019;s/suprabulge clasp)</li>
+<li>RPA(rest, proximalplate, Aker’s/suprabulge clasp)</li>
 </ul>
-<h4 class="mume-header" id="wrought-wire-circumferential-clasp">wrought-wire circumferential clasp</h4>
-
+<h4 id="wrought-wire-circumferential-clasp">wrought-wire circumferential clasp </h4>
 <ul>
-<li>&#x935B;&#x9020;&#x91D1;&#x5C6C;(wrought-wire)
+<li>鍛造金屬(wrought-wire)
 <ul>
-<li>&#x71B1;&#x8655;&#x7406;&#x904E;&#xFF0C;&#x5BB9;&#x6613;&#x65B7;</li>
-<li>&#x5F48;&#x6027;&#x6700;&#x597D;&#xFF0C;&#x6613;&#x8B8A;&#x5F62; &#x2192; &#x5C11;&#x6578;&#x80FD;&#x653E;&#x9032; <strong>0.5mm undercut</strong></li>
-<li>&#x4E00;&#x822C;&#x7528; Stainless&#xFF0C;Round 18-gauge (1mm)</li>
+<li>熱處理過，容易斷</li>
+<li>彈性最好，易變形 → 少數能放進 <strong>0.5mm undercut</strong></li>
+<li>一般用 Stainless，Round 18-gauge (1mm)</li>
 </ul>
 </li>
-<li>&#x53EF;&#x4EE5;&#x7528; Cast &#x7684; Reciprocal arm (<strong>combination clasp</strong>)</li>
+<li>可以用 Cast 的 Reciprocal arm (<strong>combination clasp</strong>)</li>
 </ul>
 <img src="paste_src/RPD-33.png" alt="alt text" style="width:35%;background-color: white;padding:0">
-<h4 class="mume-header" id="bar-retainer">Bar retainer</h4>
-
+<h4 id="bar-retainer">Bar retainer </h4>
 <ul>
-<li>&#x7528;&#x63A8;&#x7684;&#x4F5C;&#x7528;&#x4F4D;&#x7F6E;&#x8FD1;&#x65CB;&#x8F49;&#x4E2D;&#x5FC3; &#x2192; &#x529B;&#x77E9;&#x5C0F;&#xFF0C;&#x6548;&#x7387;&#x9AD8; (6-27N)</li>
-<li>bar &#x96E2; Gingiva margin 4mm</li>
-<li>&#x7F8E;&#x89C0;&#x512A;&#x65BC; Suprabulge</li>
-<li>&#x63A5;&#x8FD1; Denture border &#x2192; Bar &#x53D7;&#x4FDD;&#x8B77;</li>
-<li>&#x9650;&#x5236;
+<li>用推的作用位置近旋轉中心 → 力矩小，效率高 (6-27N)</li>
+<li>bar 離 Gingiva margin 4mm</li>
+<li>美觀優於 Suprabulge</li>
+<li>接近 Denture border → Bar 受保護</li>
+<li>限制
 <ul>
-<li>Abutment tooth &#x904E;&#x5EA6; Lingual tilts</li>
+<li>Abutment tooth 過度 Lingual tilts</li>
 <li><mark>Soft tissue undercuts</mark></li>
 <li>Shallow buccal Vestibular</li>
-<li>Frenum (&#x9830;&#x7E6B;&#x5E36;)</li>
+<li>Frenum (頰繫帶)</li>
 </ul>
 </li>
 </ul>
 <img src="paste_src/RPD-34.png" alt="alt text" style=";background-color: white;padding:0">
-<h5 class="mume-header" id="t-clasp-roach-clasp">T-clasp  (Roach clasp )</h5>
-
+<h5 id="t-clasp–roach-clasp-">T-clasp  (Roach clasp ) </h5>
 <ul>
 <li>Infrabulge</li>
-<li>&#x53EA;&#x52FE; DB line angle&#xFF0C;&#x4EE5;&#x62B5;&#x6297; Distal rest &#x4E2D;&#x5FC3;&#x7684;&#x65CB;&#x8F49;</li>
+<li>只勾 DB line angle，以抵抗 Distal rest 中心的旋轉</li>
 </ul>
 <img src="paste_src/RPD-35.png" alt="alt text" style=";background-color: white;padding:0">
 <img src="paste_src/RPD-20.png" alt="alt text" style=";background-color: white;padding:0">
-<h5 class="mume-header" id="modify-t-clasp">Modify T-clasp</h5>
-
+<h5 id="modify-t-clasp">Modify T-clasp </h5>
 <ul>
-<li>T &#x53BB;&#x9664; Mesial bar &#x4EE5;&#x6C42;&#x7F8E;&#x89C0;</li>
+<li>T 去除 Mesial bar 以求美觀</li>
 </ul>
 <img src="paste_src/RPD-36.png" alt="alt text" style=";background-color: white;padding:0">
-<h5 class="mume-header" id="y-clasp">Y-clasp</h5>
-
+<h5 id="y-clasp">Y-clasp </h5>
 <ul>
-<li>&#x6BD4;&#x8F03;&#x9577;&#x7684; T (&#x4E5F;&#x8A31;&#x662F;&#x7528;&#x5728; survey line &#x904E;&#x9AD8;)</li>
+<li>比較長的 T (也許是用在 survey line 過高)</li>
 </ul>
 <img src="paste_src/RPD-37.png" alt="alt text" style=";background-color: white;padding:0">
-<h5 class="mume-header" id="i-clasp">I-clasp</h5>
-
+<h5 id="i-clasp">I-clasp </h5>
 <ul>
-<li><strong>Mesial rest</strong>&#xFF0C; &#x907F;&#x514D;&#x62D4;&#x7259;&#x6548;&#x61C9;</li>
+<li><strong>Mesial rest</strong>， 避免拔牙效應</li>
 </ul>
-<h5 class="mume-header" id="swing-lock-denture">Swing-lock denture</h5>
-
+<h5 id="swing-lock-denture">Swing-lock denture </h5>
 <img src="paste_src/RPD-44.png" alt="alt text" style=";background-color: white;padding:0">
 <ul>
-<li>Retention: &#x9580;&#x7259; I Bar + Labial bar</li>
+<li>Retention: 門牙 I Bar + Labial bar</li>
 <li>Buccal Vestibular 6-8mm</li>
-<li>&#x4E0B;&#x984E;&#x5269;&#x4E0B;&#x9580;&#x7259;&#x4F7F;&#x7528;</li>
+<li>下顎剩下門牙使用</li>
 </ul>
-<h4 class="mume-header" id="rpi">RPI</h4>
-
+<h4 id="rpi">RPI </h4>
 <blockquote>
 <p>rest, proximal plate, I bar, lingual bar</p>
 </blockquote>
 <ul>
 <li>Mesial occlusal rest
 <ul>
-<li>&#x4E0D;&#x63A5;&#x89F8;&#x5230;&#x81E8;&#x7259;</li>
-<li>&#x9023;&#x63A5; minor connector</li>
+<li>不接觸到臨牙</li>
+<li>連接 minor connector</li>
 </ul>
 </li>
 <li>Proximal plate minor connector
 <ul>
-<li>&#x7531;&#x4E0A;&#x5F80;&#x4E0B;&#x5230; Mid, Cervical third &#x4EA4;&#x754C; (2-4mm)</li>
-<li>&#x76E1;&#x91CF; &#x820C;&#x5074;&#x5EF6;&#x4F38;&#xFF0C;&#x5FC5;&#x514D;&#x5F80;&#x820C;&#x5074;&#x7FFB; (Buccal &#x6709; I Bar)</li>
+<li>由上往下到 Mid, Cervical third 交界 (2-4mm)</li>
+<li>盡量 舌側延伸，必免往舌側翻 (Buccal 有 I Bar)</li>
 </ul>
 </li>
 </ul>
 <div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
-<th colspan="3"><img src="paste_src/RPD-39.png " alt="alt text" style=";background-color: white;padding:0"></th>
-
-
+<th><img src="paste_src/RPD-39.png " alt="alt text" style=";background-color: white;padding:0"></th>
+<th><img src="paste_src/RPD-40.png " alt="alt text" style=";background-color: white;padding:0"></th>
+<th><img src="paste_src/RPD-41.png" alt="alt text" style=";background-color: white;padding:0"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Dr. Kratochvil FJ. 1963 <br> &#x7A69;&#x5B9A;&#xFF0C;&#x7121; Stress breaking</td>
-<td>&#x2713;</td>
-<td>&#x58D3;&#x5728; Alveolar crest</td>
+<td>Dr. Kratochvil FJ. 1963 <br> 穩定，無 Stress breaking</td>
+<td>✓</td>
+<td>壓在 Alveolar crest</td>
 </tr>
 </tbody>
 </table></div>
@@ -1067,25 +758,25 @@ html body table .fbox {
 <li>
 <p>I bar</p>
 <ul>
-<li>&#x96E2;&#x958B; Gingiva margin <mark>4mm</mark></li>
-<li>Vestibular &#x7A7A;&#x9593;(4mm)</li>
-<li>&#x8D8A;&#x904E; Height of contour&#xFF0C;Stability &amp; retention</li>
-<li>Retention &#x5340;&#x57DF;&#x7D04; 2mm</li>
+<li>離開 Gingiva margin <mark>4mm</mark></li>
+<li>Vestibular 空間(4mm)</li>
+<li>越過 Height of contour，Stability &amp; retention</li>
+<li>Retention 區域約 2mm</li>
 </ul>
 </li>
 <li>
-<p>&#x4E0D;&#x63A5;&#x89F8; Lingual</p>
+<p>不接觸 Lingual</p>
 <ul>
-<li>&#x89E3;&#x6C7A;&#x4E0B;&#x984E; Lingual &#x7684; survey line &#x5F88;&#x9AD8;</li>
+<li>解決下顎 Lingual 的 survey line 很高</li>
 </ul>
 </li>
 <li>
-<p>&#x4E00;&#x5B9A;&#x8981;&#x914D; lingual bar</p>
+<p>一定要配 lingual bar</p>
 </li>
 <li>
-<p>&#x7F3A;&#x9EDE;</p>
+<p>缺點</p>
 <ul>
-<li>I bar &#x6240;&#x9700; undercut &#x904E;&#x4F4E;&#x6703;&#x58D3;&#x8FEB;&#x7259;&#x9F66;&#x6216;&#x96E3;&#x4EE5;&#x9032;&#x5165;</li>
+<li>I bar 所需 undercut 過低會壓迫牙齦或難以進入</li>
 </ul>
 </li>
 </ul>
@@ -1093,62 +784,56 @@ html body table .fbox {
 <img src="paste_src/RPD-38.png" alt="alt text" style="width:40%;background-color: white;padding:0">
 <img src="paste_src/RPD-13.png" alt="alt text" style="width:40%;background-color: white;padding:0">
 </div>
-<h4 class="mume-header" id="rpa">RPA</h4>
-
+<h4 id="rpa">RPA </h4>
 <blockquote>
 <p>rest, proximal plate, Akers clasp(modified), lingual bar</p>
 </blockquote>
 <ul>
 <li>RPA v.s. Akers
 <ul>
-<li>RPA &#x6574;&#x500B; clasp &#x90FD;&#x5728; Undercut &#x4E0B;&#x9762;&#xFF0C; Akers &#x662F; Suprabulge</li>
+<li>RPA 整個 clasp 都在 Undercut 下面， Akers 是 Suprabulge</li>
 </ul>
 </li>
-<li>RPA &#x63A5;&#x89F8;&#x7259;&#x9F52;&#x8655;&#x53EA;&#x6709;&#x4E00;&#x689D;&#x7DDA;&#x548C; Undercut
+<li>RPA 接觸牙齒處只有一條線和 Undercut
 <ul>
-<li>Cast &#x8981;&#x7528;&#x881F; Block out<br>
+<li>Cast 要用蠟 Block out<br>
 <img src="paste_src/RPD-42.png" alt="alt text" style="width:80%;background-color: white;padding:0"><br>
 <img src="paste_src/RPD-43.png" alt="alt text" style="width:80%;background-color: white;padding:0"></li>
 </ul>
 </li>
-<li>&#x4E00;&#x5B9A;&#x8981;&#x914D; lingual bar</li>
+<li>一定要配 lingual bar</li>
 </ul>
-<h2 class="mume-header" id="indirect-retainer">Indirect retainer</h2>
-
+<h2 id="indirect-retainer">Indirect retainer </h2>
 <ul>
-<li>fulcrum line: Rest/ abutment &#x9023;&#x7DDA;</li>
-<li>Inderect retainer &#x96E2; Rest &#x8D8A;&#x9060;&#xFF0C;&#x6297;&#x65CB;&#x8F49;&#x8D8A;&#x597D;
+<li>fulcrum line: Rest/ abutment 連線</li>
+<li>Inderect retainer 離 Rest 越遠，抗旋轉越好
 <ul>
-<li>&#x4E00;&#x822C;&#x5728; first premolar</li>
+<li>一般在 first premolar</li>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="auxiliary-occlusal-rest">Auxiliary occlusal rest</h3>
-
+<h3 id="auxiliary-occlusal-rest">Auxiliary occlusal rest </h3>
 <ul>
-<li>&#x5C31;&#x662F;&#x591A;&#x4E00;&#x500B; Rest</li>
+<li>就是多一個 Rest</li>
 </ul>
-<h3 class="mume-header" id="canine-rest">Canine rest</h3>
-
+<h3 id="canine-rest">Canine rest </h3>
 <ul>
-<li>premolar &#x592A;&#x63A5;&#x8FD1; Fulcrum line &#x6642;&#x4F7F;&#x7528;</li>
-<li>cingulum, Incisor &#x90FD;&#x884C;
+<li>premolar 太接近 Fulcrum line 時使用</li>
+<li>cingulum, Incisor 都行
 <ul>
-<li>Incisor &#x5F71;&#x97FF;&#x7F8E;&#x89C0;</li>
+<li>Incisor 影響美觀</li>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="canine-extensions-from-occlusal-rest">Canine extensions from occlusal rest</h3>
-
+<h3 id="canine-extensions-from-occlusal-rest">Canine extensions from occlusal rest </h3>
 <ul>
-<li>Rest &#x5F9E; Premolar &#x5EF6;&#x4F38;&#x5230; Canine cingulum</li>
-<li>Class I, II (&#x6C92;&#x5F8C;&#x7259;&#x9069;&#x7528;)</li>
+<li>Rest 從 Premolar 延伸到 Canine cingulum</li>
+<li>Class I, II (沒後牙適用)</li>
 </ul>
-<h3 class="mume-header" id="instant">Instant</h3>
-
+<h3 id="instant">Instant </h3>
 <img src="paste_src/RPD.png" alt="alt text" style="width:60%;background-color: white;padding:0">
 <ul>
-<li>#44 &#x7684; Rest &#x540C;&#x6642;&#x662F; Inderect retainer</li>
+<li>#44 的 Rest 同時是 Inderect retainer</li>
 </ul>
 <hr>
 <div class="fbox"> 
@@ -1157,26 +842,26 @@ html body table .fbox {
 <img src="paste_src/RPD-3.png" alt="alt text" style="width:39%;background-color: white;padding:0">
 </div>
 <ul>
-<li><mark>embrasure rest &#x2192; two clasp</mark></li>
-<li>&#x4E2D;&#x5716;
+<li><mark>embrasure rest → two clasp</mark></li>
+<li>中圖
 <ul>
 <li>Canine: Inderect retainer</li>
 <li>Molar: embrasure rest</li>
 <li>Second premolar: mesial rest, Infra budge</li>
 <li>Cons:
 <ul>
-<li>embrasure rest &#x5BB9;&#x6613;&#x65B7;&#x6389;</li>
+<li>embrasure rest 容易斷掉</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>&#x53F3;&#x5716; Better
+<li>右圖 Better
 <ul>
-<li>mesial rest &#x6539; distal: fulcrum line &#x9060;&#x96E2;</li>
-<li>embrasure rest , Inderect retainer &#x6539;&#x6210; &#x5169;&#x7D44; Clasp
+<li>mesial rest 改 distal: fulcrum line 遠離</li>
+<li>embrasure rest , Inderect retainer 改成 兩組 Clasp
 <ul>
-<li>&#x589E;&#x52A0; retention, stability</li>
-<li>&#x5206;&#x6563;&#x53D7;&#x529B;</li>
+<li>增加 retention, stability</li>
+<li>分散受力</li>
 </ul>
 </li>
 </ul>
@@ -1186,10 +871,9 @@ html body table .fbox {
 <img src="paste_src/RPD-4.png" alt="alt text" style=";background-color: white;padding:0">
 <ul>
 <li>Class IV</li>
-<li>&#x70BA;&#x4E86;&#x589E;&#x52A0; Inderect retainer &#x8DDD;&#x96E2;&#xFF0C;&#x9078;&#x64C7; <strong>MO resst at 2<sup>nd</sup> Molar</strong></li>
+<li>為了增加 Inderect retainer 距離，選擇 <strong>MO resst at 2<sup>nd</sup> Molar</strong></li>
 </ul>
-<h2 class="mume-header" id="denture-base">Denture Base</h2>
-
+<h2 id="denture-base">Denture Base </h2>
 <div class="dcl">
 <section>
 <ul>
@@ -1209,17 +893,16 @@ html body table .fbox {
 <ul>
 <li>Distortion of tissue
 <ul>
-<li>&#x89E3;&#x6CD5;: &#x5370;&#x6A21;&#x7684;&#x6642;&#x5019;&#x7528;&#x529B;&#x628A; soft tissue &#x5F80;&#x4E0B;&#x58D3;<br>
+<li>解法: 印模的時候用力把 soft tissue 往下壓<br>
 <img src="paste_src/RPD-7.png" alt="alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="distal-extension">distal extension</h3>
-
+<h3 id="distal-extension">distal extension </h3>
 <ul>
-<li>residual ridge &#x9762;&#x7A4D;&#x8D8A;&#x5927;&#x8D8A;&#x597D;</li>
-<li>Support &#x6548;&#x679C;&#x53D7;&#x5230;bone, Soft tissue &#x5F71;&#x97FF;</li>
-<li>&#x4E0B;&#x984E;&#x9AA8;&#x62D4;&#x7259;&#x5F8C;&#x5BB9;&#x6613;&#x5931;&#x53BB; cortical bone</li>
+<li>residual ridge 面積越大越好</li>
+<li>Support 效果受到bone, Soft tissue 影響</li>
+<li>下顎骨拔牙後容易失去 cortical bone</li>
 </ul>
 <div class="table-scroll-wrapper"><table>
 <thead>
@@ -1236,17 +919,17 @@ html body table .fbox {
 <td><img src="paste_src/RPD-9.png" alt="alt text" style=";background-color: white;padding:0">.</td>
 </tr>
 <tr>
-<td>&#x89E3;&#x5256;&#x578B;&#x614B;</td>
-<td>&#x76AE;&#x8CEA;&#x9AA8;&#x591A;&#x3001;Mucosa&#x8F03;Firm</td>
-<td>&#x6D77;&#x7DBF;&#x9AA8;&#x591A;</td>
+<td>解剖型態</td>
+<td>皮質骨多、Mucosa較Firm</td>
+<td>海綿骨多</td>
 </tr>
 <tr>
-<td>&#x4E3B;&#x8981;&#x53D7;&#x529B;&#x5340;(1)</td>
+<td>主要受力區(1)</td>
 <td>The Crest of the Residual Ridge</td>
 <td>Buccal Shelf Regions</td>
 </tr>
 <tr>
-<td>&#x6B21;&#x8981;&#x53D7;&#x529B;&#x5340;(2)</td>
+<td>次要受力區(2)</td>
 <td>Buccal and Lingual Slopes</td>
 <td>Lingual slopes of the residual ridge</td>
 </tr>
@@ -1261,59 +944,56 @@ html body table .fbox {
 
 </tr>
 <tr>
-<td>&#x53EF;&#x53D7;&#x529B;&#x5340;(4)</td>
+<td>可受力區(4)</td>
 <td>/</td>
-<td>&#x8981;&#x5EF6;&#x4F38;&#x5230;Retromolar pads</td>
+<td>要延伸到Retromolar pads</td>
 </tr>
 </tbody>
 </table></div>
 <hr>
-<h4 class="mume-header" id="%E7%A9%A9%E5%AE%9Adenture-base%E5%8F%97%E5%8A%9B%E8%BB%8C%E8%B7%A1">&#x7A69;&#x5B9A;Denture Base&#x53D7;&#x529B;&#x8ECC;&#x8DE1;</h4>
-
+<h4 id="穩定denture-base受力軌跡">穩定Denture Base受力軌跡 </h4>
 <ul>
 <li>
-<p>&#x53D7;&#x529B;&#x904B;&#x52D5;&#x8ECC;&#x8DE1;&#x5782;&#x76F4;&#xFF0C;&#x907F;&#x514D; Mucosa &#x53D7;&#x50B7;</p>
+<p>受力運動軌跡垂直，避免 Mucosa 受傷</p>
 </li>
 <li>
-<p>Rest &#x5F80;&#x524D;&#xFF0C;&#x534A;&#x65CB;&#x8F49;&#x5F91;&#x8B8A;&#x5927;&#xFF0C;&#x53D7;&#x529B;&#x66F4;&#x5782;&#x76F4;<br>
+<p>Rest 往前，半旋轉徑變大，受力更垂直<br>
 <img src="paste_src/RPD-10.png" alt="alt text" style=";background-color: white;padding:0"></p>
 </li>
 <li>
-<p>Indrect retainer &#x9650;&#x5236; Denture Base</p>
+<p>Indrect retainer 限制 Denture Base</p>
 </li>
 </ul>
 <img src="paste_src/RPD-11.png" alt="alt text" style=";background-color: white;padding:0">
 <ul>
-<li>Denture Base &#x4E0D;&#x80FD; Overextension</li>
+<li>Denture Base 不能 Overextension</li>
 </ul>
 <img src="paste_src/RPD-12.png" alt="alt text" style=";background-color: white;padding:0">
-<h2 class="mume-header" id="stability">Stability</h2>
-
+<h2 id="stability">Stability </h2>
 <ul>
-<li>&#x91D1;&#x5C6C;&#x6750;&#x5920;&#x786C;&#xFF0C;&#x6709; Stability</li>
-<li>&#x53EA;&#x662F;&#x4E00;&#x4EFD;&#x8ABF;&#x67E5;
+<li>金屬材夠硬，有 Stability</li>
+<li>只是一份調查
 <ul>
-<li>&#x4E0B;&#x984E;&#x5927;&#x591A;&#x662F; Class I, II</li>
+<li>下顎大多是 Class I, II</li>
 </ul>
 </li>
 </ul>
 <img src="paste_src/RPD-45.png" alt="alt text" style=";background-color: white;padding:0">
 <ul>
-<li>&#x589E;&#x52A0;&#x6297;&#x529B;&#x81C2;
+<li>增加抗力臂
 <ul>
-<li>&#x6297;&#x529B;&#x81C2;&#x9577; &#x2191; &#x2192; abutment tooth &#x53D7;&#x529B; &#x2193; &#x2192; stability &#x2191;</li>
+<li>抗力臂長 ↑ → abutment tooth 受力 ↓ → stability ↑</li>
 </ul>
 </li>
 </ul>
-<h3 class="mume-header" id="class-i">Class I</h3>
-
+<h3 id="class-i">Class I </h3>
 <ul>
 <li>R<sup>2</sup>&gt;R<sup>1</sup></li>
-<li>&#x62D4;&#x7259;&#x6548;&#x61C9;</li>
-<li>&#x8981; Stress breaking
+<li>拔牙效應</li>
+<li>要 Stress breaking
 <ul>
 <li>Wrought Wire</li>
-<li>&#x4E0D;&#x80FD; Cast circumferential retainer</li>
+<li>不能 Cast circumferential retainer</li>
 </ul>
 </li>
 </ul>
@@ -1322,12 +1002,10 @@ html body table .fbox {
 <img src="paste_src/RPD-47.png" alt="alt text" style="width:30%;background-color: white;padding:0">
 <img src="paste_src/RPD-49.png" alt="alt text" style="width:30%;background-color: white;padding:0">
 </div>
-<h4 class="mume-header" id="rotation">Rotation</h4>
-
-<h5 class="mume-header" id="rotation-about-an-fulcrum-lines">Rotation about an fulcrum lines</h5>
-
+<h4 id="rotation">Rotation </h4>
+<h5 id="rotation-about-an-fulcrum-lines">Rotation about an fulcrum lines </h5>
 <blockquote>
-<p>&#x4E0D;&#x6703;&#x5728; Soft tissue &#x4E0A;&#x6C34;&#x5E73;&#x79FB;&#x52D5;&#xFF0C;&#x529B;&#x91CF;&#x96D6;&#x5927;&#xFF0C;&#x50B7;&#x5BB3;&#x76F8;&#x5C0D;&#x5C0F;</p>
+<p>不會在 Soft tissue 上水平移動，力量雖大，傷害相對小</p>
 </blockquote>
 <ul>
 <li>Resistant
@@ -1339,8 +1017,7 @@ html body table .fbox {
 </li>
 </ul>
 <img src="paste_src/RPD-52.png" alt="alt text" style="width:60%;background-color: white;padding:0">
-<h5 class="mume-header" id="rotation-about-the-crest-of-the-residual-ridge">Rotation about the crest of the residual ridge</h5>
-
+<h5 id="rotation-about-the-crest-of-the-residual-ridge">Rotation about the crest of the residual ridge </h5>
 <ul>
 <li>Resistant
 <ul>
@@ -1349,8 +1026,7 @@ html body table .fbox {
 </li>
 </ul>
 <img src="paste_src/RPD-53.png" alt="alt text" style="width:60%;background-color: white;padding:0">
-<h5 class="mume-header" id="rotation-about-center-vertical-axis">Rotation about center vertical axis</h5>
-
+<h5 id="rotation-about-center-vertical-axis">Rotation about center vertical axis </h5>
 <ul>
 <li>Resistant
 <ul>
@@ -1360,19 +1036,18 @@ html body table .fbox {
 </li>
 </ul>
 <img src="paste_src/RPD-54.png" alt="alt text" style=";background-color: white;padding:0">
-<h3 class="mume-header" id="guiding-plane">Guiding plane</h3>
-
+<h3 id="guiding-plane">Guiding plane </h3>
 <img src="paste_src/RPD-55.png" alt="alt text" style="width:85%;background-color: white;padding:0">
 <ul>
-<li>&#x5782;&#x76F4; 2-4mm
+<li>垂直 2-4mm
 <ul>
-<li>Distal Ext. &#x8003;&#x91CF; Stress breaking&#xFF0C;&#x53EA;&#x9700; 1.5-2mm</li>
+<li>Distal Ext. 考量 Stress breaking，只需 1.5-2mm</li>
 </ul>
 </li>
 <li>Reciprocal arms
 <ul>
-<li>&#x53EA;&#x6709; retentive arm &#x63A5;&#x89F8;&#x6703;&#x7522;&#x751F;&#x5074;&#x5411;&#x529B; &#x2192; &#x4FEE;&#x78E8; Guiding &#x78BA;&#x4FDD; Reciprocal arms &#x540C;&#x6642;&#x63A5;&#x8655;</li>
-<li>&#x7121;&#x6CD5;&#x78E8;&#x51FA;&#x9069;&#x5408;&#x7684; Guiding plane &#x4E5F;&#x80FD;&#x7528; lingual plate</li>
+<li>只有 retentive arm 接觸會產生側向力 → 修磨 Guiding 確保 Reciprocal arms 同時接處</li>
+<li>無法磨出適合的 Guiding plane 也能用 lingual plate</li>
 </ul>
 </li>
 </ul>
@@ -1381,21 +1056,19 @@ html body table .fbox {
 <img src="paste_src/RPD-57.png" alt="alt text" style="width:50%;background-color: white;padding:0">
 </div>
 <ul>
-<li>&#x524D;&#x7259;&#x7F3A;&#x7259;
+<li>前牙缺牙
 <ul>
-<li>&#x80FD;&#x6E1B;&#x5C11; undercuts &#x907F;&#x514D;&#x585E;&#x6771;&#x897F;</li>
+<li>能減少 undercuts 避免塞東西</li>
 </ul>
 </li>
 </ul>
 <img src="paste_src/RPD-58.png" alt="alt text" style=";background-color: white;padding:0">
-<h3 class="mume-header" id="block-out">Block out</h3>
-
-<p>Master cast &#x505A;&#x5B8C; Block out &#x624D;&#x80FD;&#x53BB;&#x7FFB;&#x8010;&#x706B;&#x6A21;</p>
-<h4 class="mume-header" id="parallel-block-out">Parallel block out</h4>
-
+<h3 id="block-out">Block out </h3>
+<p>Master cast 做完 Block out 才能去翻耐火模</p>
+<h4 id="parallel-block-out">Parallel block out </h4>
 <ul>
-<li>&#x4F9D;&#x7167; path of insertion</li>
-<li>6&#x500B;&#x8981;&#x505A;&#x5E73;&#x884C;&#x5C01;&#x51F9;</li>
+<li>依照 path of insertion</li>
+<li>6個要做平行封凹</li>
 </ul>
 <div class="table-scroll-wrapper"><table>
 <thead>
@@ -1408,55 +1081,53 @@ html body table .fbox {
 <tbody>
 <tr>
 <td>guiding planes (Proximal)</td>
-<td rowspan="2">&#x53EA;&#x6709;&#x6790;&#x91CF;&#x5200;&#x8207;<strong>&#x7259;&#x9762;&#x63A5;&#x89F8;&#x9EDE;</strong>&#x4E4B;&#x4E0B;&#x7684;&#x5012;&#x51F9;</td>
+<td rowspan="2">只有析量刀與<strong>牙面接觸點</strong>之下的倒凹</td>
 <td rowspan="5">Hard baseplate wax or blockout material</td>
 </tr>
 <tr>
-<td>minor connectors&#x4E0B;&#x65B9;</td>
+<td>minor connectors下方</td>
 
 
 </tr>
 <tr>
-<td>connectors &#x6240;&#x8DE8;&#x8D8A;&#x904E;&#x7684;&#x7D44;&#x7E54;&#x5012;&#x51F9;</td>
-<td rowspan="3">&#x53EA;&#x6709;&#x6790;&#x91CF;&#x5200;&#x8207;<strong>&#x7259;&#x6A21;&#x578B;&#x8868;&#x9762;&#x63A5;&#x89F8;&#x9EDE;</strong> &#x4E4B;&#x4E0B;&#x7684;&#x5012;&#x51F9;</td>
+<td>connectors 所跨越過的組織倒凹</td>
+<td rowspan="3">只有析量刀與<strong>牙模型表面接觸點</strong> 之下的倒凹</td>
 
 </tr>
 <tr>
-<td>minor connectors or lingual plates&#x6240;&#x8986;&#x84CB;&#x7684;&#x9130;&#x63A5;&#x7E2B;&#x9699;</td>
+<td>minor connectors or lingual plates所覆蓋的鄰接縫隙</td>
 
 
 </tr>
 <tr>
-<td>Bar clasp &#x8D77;&#x9EDE;&#x6240;&#x8DE8;&#x8D8A;&#x904E;&#x7684;&#x7D44;&#x7E54;&#x5012;&#x51F9;</td>
+<td>Bar clasp 起點所跨越過的組織倒凹</td>
 
 
 </tr>
 <tr>
 <td>bar clasp arms to gingival crevice</td>
-<td>&#x50C5;&#x7259;&#x9264;&#x81C2;&#x9644;&#x8457;&#x65BC; &#x5C0F;&#x9023;&#x63A5;&#x9AD4;&#x6240;&#x5305;&#x542B;&#x7684;&#x5012;&#x51F9;</td>
+<td>僅牙鉤臂附著於 小連接體所包含的倒凹</td>
 <td>-</td>
 </tr>
 </tbody>
 </table></div>
-<h4 class="mume-header" id="shaped-block-out">Shaped block out</h4>
-
+<h4 id="shaped-block-out">Shaped block out </h4>
 <ul>
-<li>&#x5728;&#x7259;&#x9F52;&#x4E4B;&#x9830;&#x53CA;&#x820C;&#x5074;&#x9762;&#xFF0C;&#x7528;&#x4F86;&#x5B9A;&#x4F4D;&#x7259;&#x9264;&#x81C2;&#x7684;&#x881F;&#x578B;</li>
-<li>&#x70BA;&#x4E86;&#x7279;&#x5B9A; clasp &#x529F;&#x80FD;&#xFF0C;&#x5E38;&#x7528;&#x65BC; I bar, RPI clasp, RPA clasp</li>
+<li>在牙齒之頰及舌側面，用來定位牙鉤臂的蠟型</li>
+<li>為了特定 clasp 功能，常用於 I bar, RPI clasp, RPA clasp</li>
 <li>Thickness
 <ul>
-<li>&#x5B9A;&#x4F4D; Retentive Arms: &#x76E1;&#x91CF;&#x63A5;&#x8FD1;&#x9F52;&#x9838;&#x90E8;&#x4F4D;</li>
-<li>&#x5B9A;&#x4F4D; Reciprocal arms: &#x9806;&#x8005; Height of contour</li>
-<li>I bar &#x9032;&#x5165;&#x5012;&#x51F9;&#x5340;&#x6642;&#xFF0C;&#x6703;&#x5728;&#x7259;&#x9F66;&#x908A;&#x7DE3;&#x8655;&#x505A;&#x300C;&#x659C;&#x9762;&#x72C0;&#x300D;&#x6216;&#x300C;&#x51F9;&#x5F27;&#x72C0;&#x300D;&#x7684; shaped block out&#xFF0C;&#x8B93;&#x91D1;&#x5C6C;&#x80FD;&#x9806;&#x5229;&#x6ED1;&#x904E;&#x8EDF;&#x7D44;&#x7E54;&#x3001;&#x4E0D;&#x58D3;&#x8FEB;&#x7259;&#x9F66;&#x3002;</li>
+<li>定位 Retentive Arms: 盡量接近齒頸部位</li>
+<li>定位 Reciprocal arms: 順者 Height of contour</li>
+<li>I bar 進入倒凹區時，會在牙齦邊緣處做「斜面狀」或「凹弧狀」的 shaped block out，讓金屬能順利滑過軟組織、不壓迫牙齦。</li>
 </ul>
 </li>
 <li>Material: Hard baseplate wax</li>
 </ul>
-<h4 class="mume-header" id="arbitrary-block-out">Arbitrary block out</h4>
-
+<h4 id="arbitrary-block-out">Arbitrary block out </h4>
 <ul>
-<li>&#x65B9;&#x4FBF;&#x9444;&#x9020;&#x8207;&#x812B;&#x6A21;&#xFF0C;&#x800C;&#x975E;&#x6539;&#x8B8A;&#x7FA9;&#x9F52;&#x8A2D;&#x8A08;</li>
-<li>&#x8F03;&#x5927;&#x9762;&#x7A4D;&#x6216;&#x6DF1;&#x5012;&#x51F9;&#x6642;&#x53EF;&#x642D;&#x914D; <strong>oil-based clay</strong> &#x4EE5;&#x586B;&#x5E73;&#x3002;</li>
+<li>方便鑄造與脫模，而非改變義齒設計</li>
+<li>較大面積或深倒凹時可搭配 <strong>oil-based clay</strong> 以填平。</li>
 </ul>
 <div class="table-scroll-wrapper"><table>
 <thead>
@@ -1464,120 +1135,512 @@ html body table .fbox {
 <th>Arbitrary block out</th>
 <th>Thickness</th>
 <th>Material</th>
-<th>&#x5099;&#x8A3B;</th>
+<th>備註</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>&#x6240;&#x6709;&#x7259;&#x9F66;&#x6E9D;</td>
-<td>&#x7259;&#x9F66;&#x6E9D;&#x9069;&#x5EA6;&#x5E73;&#x9806;</td>
+<td>所有牙齦溝</td>
+<td>牙齦溝適度平順</td>
 <td>Hard baseplate wax</td>
-<td>&#x907F;&#x514D;&#x91D1;&#x5C6C;&#x6846;&#x67B6;&#x58D3;&#x8FEB;&#x7259;&#x9F66;&#x7DE3;</td>
+<td>避免金屬框架壓迫牙齦緣</td>
 </tr>
 <tr>
-<td>denture framework &#x4E0B;&#x65B9;&#x7684;&#x5927;&#x7BC4;&#x570D;&#x7D44;&#x7E54;&#x5012;&#x51F9;</td>
-<td rowspan="2">&#x4EE5;&#x881F;&#x5200;&#x4EFB;&#x610F;&#x586B;&#x5E73;</td>
-<td rowspan="3">Hard baseplate wax &#x6216; oil-based clay</td>
-<td>&#x9632;&#x6B62;&#x5012;&#x51F9;&#x9020;&#x6210;&#x812B;&#x6A21;&#x56F0;&#x96E3;</td>
+<td>denture framework 下方的大範圍組織倒凹</td>
+<td rowspan="2">以蠟刀任意填平</td>
+<td rowspan="3">Hard baseplate wax 或 oil-based clay</td>
+<td>防止倒凹造成脫模困難</td>
 </tr>
 <tr>
-<td>denture framework distal &#x7D44;&#x7E54;&#x5012;&#x51F9;</td>
+<td>denture framework distal 組織倒凹</td>
 
 
-<td>&#x5E38;&#x898B;&#x65BC;&#x7D42;&#x672B; abutment teeth diatal &#x7D44;&#x7E54;&#x8655;</td>
+<td>常見於終末 abutment teeth diatal 組織處</td>
 </tr>
 <tr>
-<td>&#x672A;&#x5305;&#x542B;&#x65BC;&#x7FA9;&#x9F52;&#x8A2D;&#x8A08;&#x7684;Buccal &#x7259;&#x9F52;&#x53CA;&#x7D44;&#x7E54;&#x5012;&#x51F9;</td>
-<td>&#x586B;&#x5E73;&#x81F3;Coronal third &#x2191;</td>
+<td>未包含於義齒設計的Buccal 牙齒及組織倒凹</td>
+<td>填平至Coronal third ↑</td>
 
-<td>&#x4FEE;&#x6574;&#x975E;&#x529F;&#x80FD;&#x6027;&#x5012;&#x51F9;&#x5340;&#x4EE5;&#x5229;&#x812B;&#x6A21;</td>
+<td>修整非功能性倒凹區以利脫模</td>
 </tr>
 </tbody>
 </table></div>
-<h4 class="mume-header" id="relief">Relief</h4>
-
+<h4 id="relief">Relief </h4>
 <ul>
-<li>&#x523B;&#x610F;&#x7559;&#x51FA;&#x7A7A;&#x9593;&#x907F;&#x514D;&#x58D3;&#x8FEB;&#x7D44;&#x7E54;</li>
+<li>刻意留出空間避免壓迫組織</li>
 </ul>
 <div class="table-scroll-wrapper"><table>
 <thead>
 <tr>
-<th>&#x5340;&#x57DF; / &#x9069;&#x61C9;&#x60C5;&#x6CC1;</th>
+<th>區域 / 適應情況</th>
 <th>Thickness</th>
 <th>Material</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>lingual bar/plates &#x4E0B;</td>
-<td><ul> <li>&#x820C;&#x5074;&#x9AA8;&#x9762;&#x5E73;&#x884C;&#x65BC;&#x7FA9;&#x9F52;&#x7F6E;&#x5165;&#x65B9;&#x5411;: 32 gauge wax&#xFF08;0.2&#x2013;0.25 mm&#xFF09;</li> <li>&#x820C;&#x5074;&#x9AA8;&#x9762;<strong>&#x5012;&#x51F9;</strong>: Parallel block out &#x518D; 32 gauge</li> </ul></td>
+<td>lingual bar/plates 下</td>
+<td><ul> <li>舌側骨面平行於義齒置入方向: 32 gauge wax（0.2–0.25 mm）</li> <li>舌側骨面<strong>倒凹</strong>: Parallel block out 再 32 gauge</li> </ul></td>
 <td>Adhesive wax</td>
 </tr>
 <tr>
-<td>major connectors &#x6703;&#x63A5;&#x89F8;&#x7684;&#x8EDF;&#x8584;&#x7D44;&#x7E54;&#x5340;&#xFF1A;Md. Lingual &#x9AA8;&#x5D74;, palatal raphes</td>
-<td>&#x8584;&#x8584;&#x4E00;&#x5C64;&#x881F;</td>
+<td>major connectors 會接觸的軟薄組織區：Md. Lingual 骨嵴, palatal raphes</td>
+<td>薄薄一層蠟</td>
 <td>Hard baseplate wax</td>
 </tr>
 <tr>
-<td>Denture base framework &#x9644;&#x8457;&#x5728; Resin &#x4E0A;&#x65B9;&#x90E8;&#x5206;</td>
+<td>Denture base framework 附著在 Resin 上方部分</td>
 <td>20 gauge wax</td>
 <td>Adhesive Wax</td>
 </tr>
 </tbody>
 </table></div>
-<h3 class="mume-header" id="%E6%95%B4%E7%90%86%E8%A1%A8">&#x6574;&#x7406;&#x8868;</h3>
-
+<h3 id="整理表">整理表 </h3>
 <img src="paste_src/RPD-59.png" alt="alt text" style=";background-color: white;padding:0">
+<h2 id="connector">Connector </h2>
+<ul>
+<li>距離 gingival margin
+<ul>
+<li>Mx. 6mm</li>
+<li>Md. 3mm</li>
+</ul>
+</li>
+</ul>
+<h3 id="maxillary-major-connector">Maxillary Major connector </h3>
+<ul>
+<li>Bead line
+<ul>
+<li>直接壓 tissue</li>
+<li>避開 torus</li>
+<li>提供 Cast 修磨時完整 Finish line</li>
+<li>金屬收縮後仍能貼附 Tissue 防止食物進入</li>
+<li>retention and stability</li>
+</ul>
+</li>
+</ul>
+<h4 id="palatal-bar">Palatal bar </h4>
+<div class="dcl">
+<section>
+<ul>
+<li>剖面半橢圓形，最厚在中間</li>
+<li>厚度寬度限制 → 強度差，support 很小</li>
+<li>只用於 Crest 短 Class III</li>
+<li>palatal bar 不超過 2<sup>nd</sup> premolar 前方，否則異物感，<br>
+舌頭常常碰到，影響發音</li>
+</ul>
+</section>
+<section>
+<img src="paste_src/RPD-60.png" alt="alt text" style=";background-color: white;padding:0">
+</section></div>
+<h4 id="palatal-strap">Palatal strap </h4>
+<div class="dcl">
+<section>
+<ul>
+<li>AP&gt; 8mm</li>
+<li>palatal bar 升級版
+<ul>
+<li>Stability++, Support ++</li>
+</ul>
+</li>
+<li>可用於 Class II, III</li>
+<li>不要放到 Rugae 、軟齶、gingival margin</li>
+<li>有 L-beam principle (下圖)
+<ul>
+<li>跨兩面</li>
+</ul>
+</li>
+<li>Distance ↓, Thickness ↑ → flexure ↓</li>
+</ul>
+</section>
+<section>
+<img src="paste_src/RPD-61.png" alt="alt text" style="width:47%;background-color: white;padding:0">
+<img src="paste_src/RPD-62.png" alt="alt text" style="width:48%;background-color: white;padding:0">
+</section></div>
+<h4 id="anteroposterior-palatal-bar-a-p-bar">Anteroposterior palatal bar (A-P bar) </h4>
+<div class="dcl">
+<section>
+<ul>
+<li>前後兩 Bar ，前方較扁，類似 Strap</li>
+<li>L-beam</li>
+<li>Palatal bar  不超過 2<sup>nd</sup> premolar 前方</li>
+<li>干擾發音、Support 不足</li>
+</ul>
+</section>
+<section>
+<img src="paste_src/RPD-63.png" alt="alt text" style=";background-color: white;padding:0">
+</section></div>
+<h4 id="horseshoe-connector">Horseshoe connector </h4>
+<div class="dcl">
+<section>
+<ul>
+<li>長度長，flexible ↑
+<ul>
+<li>加寬：覆蓋到前牙 palatal side，並向palatal side 延伸6~8mm</li>
+<li>加厚：anterior palate 加厚</li>
+</ul>
+</li>
+<li>兩側的ending 一定要對稱等高</li>
+<li>用在前牙有 Modification 的 case</li>
+</ul>
+</section>
+<section>
+<img src="paste_src/RPD-64.png" alt="alt text" style=";background-color: white;padding:0">
+</section></div>
+<h4 id="anteroposterior-palatal-strapa-p-strap">Anteroposterior palatal strap(A-P strap) </h4>
+<ul>
+<li>前後兩條 Strap
+<ul>
+<li>AP&gt;8mm</li>
+<li>不蓋 rugae</li>
+</ul>
+</li>
+<li>L-beam</li>
+<li>Stability &gt; AP bar</li>
+</ul>
+<img src="paste_src/RPD-65.png" alt="alt text" style="width:49%;background-color: white;padding:0">
+<img src="paste_src/RPD-66.png" alt="alt text" style="width:47%;background-color: white;padding:0">
+<h4 id="complete-palate">Complete palate </h4>
+<ul>
+<li>
+<p>不能蓋到 Soft palate</p>
+</li>
+<li>
+<p>L-Beam</p>
+</li>
+<li>
+<p>兩種設計</p>
+<ol>
+<li>延伸到前牙 cingulum ，提供indirect retention
+<ul>
+<li>緊密接觸前牙 FG，否則行程 Death space，牙齦增生</li>
+</ul>
+</li>
+<li>離前牙的marginal gingivae &gt;6mm 以利清潔</li>
+</ol>
+</li>
+<li>
+<p>適用</p>
+<ul>
+<li>全部後牙缺失</li>
+<li>牙周不佳
+<ul>
+<li>可以追加樹脂牙，容易 repair</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>缺點</p>
+<ul>
+<li>重 (upper)</li>
+<li>gag reflex(嘔吐感)</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/RPD-67.png" alt="alt text" style=";background-color: white;padding:0">
+<div class="admonition tip">
+<p class="admonition-title"> Modification of Complete Palate</p>
+<ul>
+<li>重 → 金屬網格打洞</li>
+<li>gag reflex → Distal 用 Resin 收尾 (好修磨)</li>
+</ul>
+<img src="paste_src/RPD-69.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+</div>
+<h4 id="整理-1">整理 </h4>
+<blockquote>
+<p>torus 有 Relief 還是能 Complete Palate</p>
+</blockquote>
+<img src="paste_src/RPD-70.png" alt="alt text" style=";background-color: white;padding:0">
+<h3 id="mandible-major-connector">Mandible Major Connector </h3>
+<ul>
+<li>不用 Beam line</li>
+<li>下顎 RPD 容易發生 Rotation → Major connector 需要 Relief</li>
+</ul>
+<h4 id="lingual-bar">Lingual Bar </h4>
+<ul>
+<li>首選</li>
+<li>需要 Marginal ↔ 口底 8mm (3+5)</li>
+<li>上窄下寬</li>
+</ul>
+<img src="paste_src/RPD-71.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<h4 id="sublingual-bar">Sublingual bar </h4>
+<ul>
+<li>bar 水平橫躺於口底</li>
+<li>影響舌頭擺放</li>
+<li>印模技術求很高，故少見</li>
+</ul>
+<div class="fbox"> 
+<img src="paste_src/RPD-72.png" alt="alt text" style="width:30%;background-color: white;padding:0">
+<img src="paste_src/RPD-73.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+</div>
+<h4 id="lingual-plate">Lingual plate </h4>
+<ul>
+<li>蓋住 cingulum, Interproximal spaces
+<ul>
+<li>如果牙周問題嚴重，Interproximal spaces 改用 <strong>Step-back design</strong> (只到 Line angle)</li>
+</ul>
+</li>
+</ul>
+<div class="fbox"> 
+<img src="paste_src/RPD-75.png" alt="alt text" style="width:60%;background-color: white;padding:0">
+<img src="paste_src/RPD-74.png" alt="alt text" style="width:35%;background-color: white;padding:0">
+</div>
+<ul>
+<li>要放 Rest 避免推前牙 ( 1<sup>st</sup> premolar, mesial)</li>
+</ul>
+<img src="paste_src/RPD-76.png" alt="alt text" style="width:80%;background-color: white;padding:0">
+<ul>
+<li>能避開 torus</li>
+<li>之後缺牙可以 Repair，增加樹脂牙</li>
+</ul>
+<h4 id="dental-bar">Dental Bar </h4>
+<ul>
+<li>放牙齒上，細 → 加厚，但要避免異物感 → 強度仍不如 Lingual plate</li>
+</ul>
+<img src="paste_src/RPD-77.png" alt="alt text" style=";background-color: white;padding:0">
+<h4 id="double-lingual-bar-kennedy-barcontinuous-clasp">Double lingual bar (Kennedy bar/continuous clasp) </h4>
+<ul>
+<li>類似 AP Bar</li>
+<li>鏤空
+<ul>
+<li>軟組織受到更多口水和食物的刺激</li>
+<li>避開 Black triangle → 美觀</li>
+</ul>
+</li>
+<li>截面
+<ul>
+<li>Lower bar：半梨形</li>
+<li>upper bar：半橢圓形，高 2~3mm，厚1mm</li>
+</ul>
+</li>
+<li>Rest: 1<sup>st</sup> Premolar, mesial</li>
+<li>缺點
+<ul>
+<li>形狀復雜，卡殘渣</li>
+<li>Upper bar 類似 Dental Bar ，乾擾舌頭</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/RPD-78.png" alt="alt text" style="width:80%;background-color: white;padding:0">
+<h4 id="labial-bar">Labial Bar </h4>
+<ul>
+<li>長 → flexibility ↑ → 加寬加厚</li>
+<li>用於牙齒 Lingual tilts 嚴重患者</li>
+</ul>
+<img src="paste_src/RPD-79.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<div class="admonition info">
+<p class="admonition-title">Swing-Lock RPD (改良式labial bar)</p>
+<ul>
+<li>Buccal 扣起來</li>
+<li>Stability++</li>
+</ul>
+<div class="fbox"> 
+<img src="paste_src/RPD-81.png" alt="alt text" style="width:45%;background-color: white;padding:0">
+<img src="paste_src/RPD-82.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+</div>
+</div>
+<h3 id="minor-connector">Minor connector </h3>
+<ul>
+<li>可分為四大類，設計上越簡單越好
+<ol>
+<li>clasp ↔ Major connector
+<ul>
+<li>不能放到 undercut 以下</li>
+<li>不能放到 Lingual 最凸點，否則有旋轉效果</li>
+</ul>
+</li>
+<li>indirect retainers/ auxiliary rests ↔ Major connector
+<ul>
+<li>藏 Embrasure 內</li>
+<li>牙齦最小接觸：垂直主連接體</li>
+</ul>
+</li>
+<li>denture base ↔ Major Connector
+<ul>
+<li>Rigid</li>
+<li>不要干擾義齒排牙</li>
+<li>上顎：超過tuberosity</li>
+<li>下顎：超過distal free end 2/3</li>
+<li>
+<div class="fbox"> <img src="paste_src/RPD-83.png" alt="alt text" style="width:45%;background-color: white;padding:0"><img src="paste_src/RPD-84.png" alt="alt text" style="width:45%;background-color: white;padding:0"></div>
+</li>
+<li>Finish line<br>
+<img src="paste_src/RPD-88.png" alt="alt text" style=";background-color: white;padding:0"></li>
+<li>設計分三種</li>
+<li>釘頭
+<ul>
+<li>金屬貼 Tissue，導熱好，易清潔</li>
+<li>Resin 不牢固</li>
+<li>crest 萎縮無法調整 → class III, short span, tooth supported RPD</li>
+<li>
+<img src="paste_src/RPD-85.png" alt="alt text" style="width:60%;background-color: white;padding:0">
+</li>
+<li>開放式結構
+<ul>
+<li>縱軸不能在 Crest</li>
+<li>橫軸在牙齒之間</li>
+<li>要有 Stopper，防止resin 壓鑄過程Mesh變形</li>
+<li>
+<img src="paste_src/RPD-87.png" alt="alt text" style="width:60%;background-color: white;padding:0">
+</li>
+</ul>
+</li>
+<li>網狀結構
+<ul>
+<li>義齒齒頸部被網狀結構干擾</li>
+<li>
+<img src="paste_src/RPD-86.png" alt="alt text" style="width:60%;background-color: white;padding:0">
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>vertical projection/bar-type clasps ↔ Major Connector
+<ul>
+<li>flexibility</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
 <br><br>
 
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
-<script> 
-var Main_LeftListLiSelector = $(".md-sidebar-toc li");
 
-$(Main_LeftListLiSelector).on('click', function() {
-  $(Main_LeftListLiSelector).removeClass('active');
-  $(this).addClass('active');
-});
+<script>
+var page = document.getElementsByClassName('markdown-preview')[0]
+page.addEventListener('click', function(event) {
+  event.stopPropagation()
+  
+  document.body.removeAttribute('html-show-sidebar-toc');
+ 
+})
 </script>
+
+
       </div>
-      <div class="md-sidebar-toc"><ul>
-<li><a href="#rpd">RPD</a>
-<ul>
-<li><a href="#retention">Retention</a>
-<ul>
-<li><a href="#direct-retainer">Direct Retainer</a></li>
-<li><a href="#clasp-design">Clasp Design</a></li>
-<li><a href="#distal-ext-stress-breaking">Distal ext. stress breaking</a></li>
-</ul>
-</li>
-<li><a href="#indirect-retainer">Indirect retainer</a>
-<ul>
-<li><a href="#auxiliary-occlusal-rest">Auxiliary occlusal rest</a></li>
-<li><a href="#canine-rest">Canine rest</a></li>
-<li><a href="#canine-extensions-from-occlusal-rest">Canine extensions from occlusal rest</a></li>
-<li><a href="#instant">Instant</a></li>
-</ul>
-</li>
-<li><a href="#denture-base">Denture Base</a>
-<ul>
-<li><a href="#distal-extension">distal extension</a></li>
-</ul>
-</li>
-<li><a href="#stability">Stability</a>
-<ul>
-<li><a href="#class-i">Class I</a></li>
-<li><a href="#guiding-plane">Guiding plane</a></li>
-<li><a href="#block-out">Block out</a></li>
-<li><a href="#%E6%95%B4%E7%90%86%E8%A1%A8">&#x6574;&#x7406;&#x8868;</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#rpd" class="md-toc-link"><p>RPD</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#retention" class="md-toc-link"><p>Retention</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#direct-retainer" class="md-toc-link">
+            <p>Direct Retainer</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#clasp-design" class="md-toc-link">
+            <p>Clasp Design</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#distal-ext-stress-breaking" class="md-toc-link">
+            <p>Distal ext. stress breaking</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#indirect-retainer" class="md-toc-link"><p>Indirect retainer</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#auxiliary-occlusal-rest" class="md-toc-link">
+            <p>Auxiliary occlusal rest</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#canine-rest" class="md-toc-link">
+            <p>Canine rest</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#canine-extensions-from-occlusal-rest" class="md-toc-link">
+            <p>Canine extensions from occlusal rest</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#instant" class="md-toc-link">
+            <p>Instant</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#denture-base" class="md-toc-link"><p>Denture Base</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#distal-extension" class="md-toc-link">
+            <p>distal extension</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#stability" class="md-toc-link"><p>Stability</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#class-i" class="md-toc-link">
+            <p>Class I</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#guiding-plane" class="md-toc-link">
+            <p>Guiding plane</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#block-out" class="md-toc-link">
+            <p>Block out</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#整理表" class="md-toc-link">
+            <p>整理表</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#connector" class="md-toc-link"><p>Connector</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#maxillary-major-connector" class="md-toc-link">
+            <p>Maxillary Major connector</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#mandible-major-connector" class="md-toc-link">
+            <p>Mandible Major Connector</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#minor-connector" class="md-toc-link">
+            <p>Minor connector</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
 </div>
-      <a id="sidebar-toc-btn">&#x2261;</a>
-    
-    
+</div>
+      <a id="sidebar-toc-btn">≡</a>
     
     
     
