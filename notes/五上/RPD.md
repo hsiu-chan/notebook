@@ -147,10 +147,12 @@ Stress breaking Design
 :::
 
 
-#### Reverse Circumferential clasp 
+#### Reverse circlet clasp 
 
 - Mesial 往 DB 勾的 Cast Circumferential clasp ，適合 Distal ext.
-- 
+
+
+![alt text](paste_src/RPD-90.png =80)
 
 #### Ring clasp
 
@@ -197,6 +199,17 @@ Stress breaking Design
 
 :::
 
+
+
+#### Reverse action clasp  (C clasp)
+- Rest + C clasp + reciprocal
+- DB出發，繞一圈勾 DB under cut
+- Abutment 需要夠高
+- 低彈性
+
+
+![alt text](paste_src/RPD-91.png)
+
 #### Back-Action clasp 
 
 - ML line angle 出發，勾到 Buccal
@@ -210,11 +223,16 @@ Stress breaking Design
 
 ![alt text](paste_src/RPD-30.png =30)
 
-#### Reverse-action clasp (C-clasp)
+#### Reverse Back-action clasp 
 
-- DB 出發 C-shaped clasp ，勾 DB
-- Abutment 需要夠高
-- 低彈性
+- MB 出發 C-shaped clasp ，勾 ML
+
+
+![alt text](paste_src/RPD-89.png =30)
+
+
+
+
 
 
 #### Onlay clasp 
@@ -307,8 +325,9 @@ Stress breaking Design
 
 
 - Mesial occlusal rest
-  - 不接觸到臨牙
   - 連接 minor connector
+  - Rest, minor connector 不接觸到臨牙
+
 - Proximal plate minor connector
   - 由上往下到 Mid, Cervical third 交界 (2-4mm)
   - 盡量 舌側延伸，必免往舌側翻 (Buccal 有 I Bar)
@@ -371,8 +390,11 @@ Stress breaking Design
 - 就是多一個 Rest 
 
 
-### Canine rest 
+
+
+### Canine rest/ incisal rest
 - premolar 太接近 Fulcrum line 時使用
+- 最常用於下顎犬齒，寬2.5mm 與深1.5mm
 - cingulum, Incisor 都行
   - Incisor 影響美觀
 
@@ -632,6 +654,7 @@ bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含�
 - Bead line
   - 直接壓 tissue 
   - 避開 torus
+  - 厚度 0.5-1mm
   - 提供 Cast 修磨時完整 Finish line
   - 金屬收縮後仍能貼附 Tissue 防止食物進入
   - retention and stability
@@ -776,23 +799,24 @@ bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含�
 :::
 
 #### Lingual plate
-
+- 下寬上窄
 - 蓋住 cingulum, Interproximal spaces
+  - 避免食物卡在縫隙
   - 如果牙周問題嚴重，Interproximal spaces 改用 **Step-back design** (只到 Line angle)
+
+
+- 要放 Rest 避免推前牙 ( 1^st^ premolar, mesial)
+- 能避開 torus 
+- 之後缺牙可以 Repair，增加樹脂牙
+
+
 
 :::fbox 
 ![alt text](paste_src/RPD-75.png =60)
 ![alt text](paste_src/RPD-74.png =35)
-:::
-
-
-- 要放 Rest 避免推前牙 ( 1^st^ premolar, mesial)
-
 ![alt text](paste_src/RPD-76.png =80)
 
-- 能避開 torus 
-- 之後缺牙可以 Repair，增加樹脂牙
-
+:::
 
 #### Dental Bar 
 
@@ -819,7 +843,10 @@ bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含�
 #### Labial Bar 
 
 - 長 &rarr; flexibility &uarr; &rarr; 加寬加厚
-- 用於牙齒 Lingual tilts 嚴重患者
+- 適用於
+  - 錯位牙 (malpositioned teeth)、
+  - 牙齒 Lingual tilts 嚴重患者
+  - 有大 madibular torus 而無法使用 lingual bar/ plate 者
 
 ![alt text](paste_src/RPD-79.png =50)
 
@@ -869,3 +896,67 @@ bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含�
           - ![alt text](paste_src/RPD-86.png =60)
   3. vertical projection/bar-type clasps &harr; Major Connector
      - flexibility
+
+
+
+# Preparation 
+
+## Rest 
+- MD: $\frac{1}{3}$- $\frac{1}{2}$
+- BL: $\frac{1}{2}$
+- Marginal ridge
+  - 深度 1.5mm
+  - 寬度 2.5mm
+
+
+:::info {Extended occlusal rest}
+- Md 加長到 1/2 的 Rest 
+- Support &uarr; 但 Torch &uarr;
+- 僅能用在有 Denture Base 抵銷 Torch 的情況 
+  - Class I, II
+:::
+
+
+
+
+# 其中烤
+
+## 長度 
+
+- Major cont. &harr; FG margin
+  - Mx.: 6mm 
+  - Md.: 3mm 
+- Bead line 
+  - 深度: 0.5-1mm
+- Vestibular for lingual bar: 8mm 
+- GP 接處 Abutment 
+  - 寬 3-4mm (<1/3 BL)
+  - 高 2-4mm (<1/2 CO>)
+  - Distal ext. 考量 Stress breaking，只需 1.5-2mm
+- Relief 
+  - Lingual bar: 32 gauge
+  - Other : 20 gauge 
+- Palatal strap
+  - AP> 8mm
+- Horseshoe connector
+  - 覆蓋到前牙 palatal side，並向palatal side 延伸6~8mm
+
+---
+- I bar 
+  - &harr; FG margin: 4mm
+  - Vestibular: 4mm
+  - 與牙齒接處 &phi;<2mm
+  - Undercut: .01 inch (0.25mm)
+- wrought-wire clasp
+  - 常用18gauge: 1.0 mm
+
+
+## 簡答
+
+- 1.Major connector 設計的基本要求?
+  - 連接 RPD 部件
+  - 提供穩定性、Support
+  - 足夠剛性，避免在咀嚼時彎曲或變形，傳遞咬合受力
+  - 無毒、耐腐蝕，並與口腔組織相容。
+  - 舒適
+  - 易於清潔

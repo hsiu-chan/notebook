@@ -1,0 +1,21 @@
+<!-- The content below will be included at the end of the <head> element. -->
+
+
+<script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+
+<script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<script  type="text/javascript" src="../Hyper_md/md.js"></script>
+
+
+<script type="text/javascript">
+//載入完成後執行
+document.addEventListener("DOMContentLoaded", () => {
+  var page = document.getElementsByClassName('markdown-preview')[0]
+  page.addEventListener('click', function(event) {
+    event.stopPropagation()
+    
+    document.body.removeAttribute('html-show-sidebar-toc');
+  })
+});
+</script>
+<link rel="stylesheet" href="../Hyper_md/style.css">

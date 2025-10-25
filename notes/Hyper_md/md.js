@@ -1,17 +1,13 @@
 //判斷用戶
-var getUrlString = location.href;//取得網址
-var url = new URL(getUrlString);
-if (url.searchParams.get('id')=='3i'){
-  var home = document.createElement("div");
-  home.setAttribute('class', "btn");
-  home.innerHTML = "<i class=\"fa-solid fa-angles-left\"></i>";
-  home.style = "top:8px;left:8px;";
-  home.setAttribute('herf', "../../index.html");
-  home.addEventListener('click', function() {
-    location.href='../../index.html';
-  });
-  document.body.appendChild(home);
-}
+
+const home = document.createElement("div");
+    home.className = "btn";
+    home.innerHTML = `<i class="fa-solid fa-angles-left"></i>`;
+    home.style = "top:8px;left:8px;";
+    home.addEventListener('click', () => {
+      location.href = '../../index.html';
+    });
+
 
 
 //分享按鈕
@@ -19,6 +15,7 @@ var share_bt = document.createElement("div");
 share_bt.setAttribute('class', "btn");
 share_bt.innerHTML = "<i class=\"fa fa-share-alt fa-18\"></i>";
 share_bt.style = "top:8px;right:8px;";
+
 share_bt.addEventListener('click', function() {
   const value = decodeURI(url.hostname+url.pathname);
   const el = document.createElement('textarea');
@@ -28,18 +25,60 @@ share_bt.addEventListener('click', function() {
   document.execCommand('copy');
   document.body.removeChild(el);
 });
-document.body.appendChild(share_bt);
-
-//預覽介面
-
-var imageModal= document.createElement("div");
-imageModal.setAttribute('id', "imageModal");
-imageModal.setAttribute('class', "modal");
-imageModal.innerHTML ="<span class=\"close\">&times;</span><img class=\"modal-content\" id=\"enlargedImage\">";
-document.body.appendChild(imageModal);
 
 
 
+
+
+
+
+//載入完成後執行
+
+document.addEventListener("DOMContentLoaded", () => {
+  const url = new URL(location.href);
+  if (url.searchParams.get('id') === '3i') {
+    document.body.appendChild(home);
+  }
+  document.body.appendChild(share_bt);
+
+  // === Modal 放大圖片功能 ===
+  // === 1️⃣ 建立 Modal 結構 ===
+  const imageModal = document.createElement("div");
+  imageModal.id = "imageModal";
+  imageModal.className = "modal";
+  imageModal.innerHTML = `
+    <span class="close">&times;</span>
+    <img class="modal-content" id="enlargedImage">
+  `;
+  document.body.appendChild(imageModal);
+
+  // === 2️⃣ 取得各元素 ===
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("enlargedImage");
+  const closeBtn = modal.querySelector(".close"); // 從 modal 裡找更穩定
+
+  // === 3️⃣ 綁定所有圖片點擊事件 ===
+  document.querySelectorAll("img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  // === 4️⃣ 關閉按鈕 ===
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // === 5️⃣ 點擊外部區域關閉 ===
+  modal.addEventListener("click", (event) => {
+    if (event.target !== modalImg) {
+      modal.style.display = "none";
+    }
+  });
+
+
+});
 
 
 window.addEventListener("load", function () {
@@ -101,33 +140,4 @@ for (var i = 0; i < mdPreview.length; i++) {
       document.body.removeAttribute('html-show-sidebar-toc');
     }
   })
-}
-
-
-// Get the modal
-var modal = document.getElementById('imageModal');
-
-// Get the image in the modal
-var modalImg = document.getElementById('enlargedImage');
-
-// Get all images and loop through them to add click event
-var images = document.querySelectorAll('img');
-images.forEach(img => {
-    img.onclick = function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-    }
-});
-
-// Get the close button (X) and add click event to close the modal
-var closeBtn = document.querySelector('.close');
-closeBtn.onclick = function() {
-    modal.style.display = "none";
-}
-
-// Close modal when clicking anywhere outside the image
-modal.onclick = function(event) {
-    if (event.target !== modalImg) {
-        modal.style.display = "none";
-    }
 }

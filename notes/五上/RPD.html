@@ -148,47 +148,30 @@ img {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
-html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
-  left: 0;
-  width: 100%;
-  max-width: 1000px;
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 2em;
-  transform: translateX(0);
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  padding: 50px 10px 48px 0;
-  font-size: 14px;
-  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
-  box-sizing: border-box;
-  overflow: auto;
-  background-color: inherit;
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
 }
-html body {
-  background-color: hsl(220, 13%, 18%);
-  /* === Markdown Preview Enhancer TOC 樣式新版 === */
-  /* 縮排*/
-  /* TOC link */
-  /* 每層 details 都要重置下一層 counter */
-  /* 第一層：h1 */
-  /* 第二層：h2 */
-  /* 第三層：h3 */
-  /* 第四層：h4 */
-  /* 縮排 
-.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
-.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
-.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
-.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
-  /* hover & active */
-  /*
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
   /////三线表/////
   table{
       border-top: 1.5pt solid;
@@ -220,119 +203,12 @@ html body {
       font-size:9pt;                              
   }
   */
-}
-html body .md-sidebar-toc {
-  margin: 0;
-  padding: 0.5rem 0;
-  position: absolute;
-  max-width: 768px;
-  background-color: rgba(186, 55, 55, 0.1);
-  z-index: 70;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-html body .md-toc-link-wrapper {
-  list-style: none!important;
-}
-html body div.md-toc-link-wrapper {
-  margin-left: 0px!important;
-}
-html body details > div > div.md-toc-link-wrapper {
-  margin-left: 24px!important;
-}
-html body .md-sidebar-toc a {
-  color: inherit;
-  text-decoration: none;
-}
-html body .md-sidebar-toc a:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc {
-  counter-reset: toc-h1;
-}
-html body .md-sidebar-toc details {
-  counter-reset: toc-h2;
-}
-html body .md-sidebar-toc details details {
-  counter-reset: toc-h3;
-}
-html body .md-sidebar-toc details details details {
-  counter-reset: toc-h4;
-}
-html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h1;
-  content: counter(toc-h1) ". ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h2;
-  content: counter(toc-h1) "." counter(toc-h2) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h3;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h4;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper.active a {
-  color: #87ffff;
-  font-weight: bold;
-}
-html body .dcl {
-  /* block 水平置中的方法 */
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-  margin-right: -1%;
-}
-html body header,
-html body section,
-html body aside,
-html body .in,
-html body footer {
-  margin: 0 1% 0.3em 0;
-}
-html body section {
-  float: left;
-  width: 49%;
-}
-html body footer {
-  margin-bottom: 0;
-  /* 不准其他元素出現在其左右 */
-  clear: both;
-}
-html body .btn {
-  position: fixed;
-  z-index: 99;
-  font-size: 24px;
-  color: inherit;
-  text-align: center;
-  width: 32px;
-  cursor: pointer;
-  opacity: 0.4;
-  word-wrap: break-word;
-}
-html body .btn:active {
-  opacity: 0.8;
-}
 @media screen and (max-width: 400px) {
-  html body img {
+  img {
     width: 100% !important;
   }
 }
-html body .fbox {
+.fbox {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
@@ -342,7 +218,7 @@ html body .fbox {
   left: 50%;
   transform: translateX(-50%);
 }
-html body .fbox img {
+.fbox img {
   position: relative;
   left: 0;
   transform: translate(0, 0);
@@ -350,7 +226,7 @@ html body .fbox img {
   background-color: rgba(0, 0, 0, 0) !important;
   object-fit: contain;
 }
-html body table .fbox {
+table .fbox {
   left: 0;
   transform: translateX(0);
 }
@@ -407,34 +283,29 @@ html body table .fbox {
 }
 
       </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script>
-
-<script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+      <!-- The content below will be included at the end of the <head> element. --><script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
 
 <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="../Hyper_md/md.js"></script>
 
-<script>
-var page = document.getElementsByClassName('markdown-preview')[0]
-page.addEventListener('click', function(event) {
-  event.stopPropagation()
-  
-  document.body.removeAttribute('html-show-sidebar-toc');
- 
-})
+
+<script type="text/javascript">
+//載入完成後執行
+document.addEventListener("DOMContentLoaded", () => {
+  var page = document.getElementsByClassName('markdown-preview')[0]
+  page.addEventListener('click', function(event) {
+    event.stopPropagation()
+    
+    document.body.removeAttribute('html-show-sidebar-toc');
+  })
+});
 </script>
-<link rel="stylesheet" href="../Hyper_md/md.css">
+<link rel="stylesheet" href="../Hyper_md/style.css">
 </head><body for="html-export">
     
     
       <div class="crossnote markdown-preview  ">
-      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
-      <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css">
+      
 <h1 id="rpd">RPD </h1>
 <ul>
 <li>Support
@@ -577,11 +448,11 @@ page.addEventListener('click', function(event) {
 <div class="fbox"> 
 <img src="paste_src/RPD-21.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/RPD-22.png" alt="alt text" style="width:60%;background-color: white;padding:0">
 </div>
-<h4 id="reverse-circumferential-clasp">Reverse Circumferential clasp </h4>
+<h4 id="reverse-circlet-clasp">Reverse circlet clasp </h4>
 <ul>
 <li>Mesial 往 DB 勾的 Cast Circumferential clasp ，適合 Distal ext.</li>
-<li></li>
 </ul>
+<img src="paste_src/RPD-90.png" alt="alt text" style="width:80%;background-color: white;padding:0">
 <h4 id="ring-clasp">Ring clasp </h4>
 <ul>
 <li>用於 Md. Molar (Buccal 無 under cut) → 勾 ML</li>
@@ -623,6 +494,14 @@ page.addEventListener('click', function(event) {
 <img src="paste_src/RPD-29.png" alt="alt text" style="width:30%;background-color: white;padding:0">
 <img src="paste_src/RPD-31.png" alt="alt text" style="width:40%;background-color: white;padding:0">
 </div>
+<h4 id="reverse-action-clasp–c-clasp">Reverse action clasp  (C clasp) </h4>
+<ul>
+<li>Rest + C clasp + reciprocal</li>
+<li>DB出發，繞一圈勾 DB under cut</li>
+<li>Abutment 需要夠高</li>
+<li>低彈性</li>
+</ul>
+<img src="paste_src/RPD-91.png" alt="alt text" style=";background-color: white;padding:0">
 <h4 id="back-action-clasp">Back-Action clasp </h4>
 <ul>
 <li>ML line angle 出發，勾到 Buccal</li>
@@ -635,12 +514,11 @@ page.addEventListener('click', function(event) {
 </li>
 </ul>
 <img src="paste_src/RPD-30.png" alt="alt text" style="width:30%;background-color: white;padding:0">
-<h4 id="reverse-action-clasp-c-clasp">Reverse-action clasp (C-clasp) </h4>
+<h4 id="reverse-back-action-clasp">Reverse Back-action clasp </h4>
 <ul>
-<li>DB 出發 C-shaped clasp ，勾 DB</li>
-<li>Abutment 需要夠高</li>
-<li>低彈性</li>
+<li>MB 出發 C-shaped clasp ，勾 ML</li>
 </ul>
+<img src="paste_src/RPD-89.png" alt="alt text" style="width:30%;background-color: white;padding:0">
 <h4 id="onlay-clasp">Onlay clasp </h4>
 <ul>
 <li>重建咬合平面</li>
@@ -725,13 +603,15 @@ page.addEventListener('click', function(event) {
 <p>rest, proximal plate, I bar, lingual bar</p>
 </blockquote>
 <ul>
-<li>Mesial occlusal rest
+<li>
+<p>Mesial occlusal rest</p>
 <ul>
-<li>不接觸到臨牙</li>
 <li>連接 minor connector</li>
+<li>Rest, minor connector 不接觸到臨牙</li>
 </ul>
 </li>
-<li>Proximal plate minor connector
+<li>
+<p>Proximal plate minor connector</p>
 <ul>
 <li>由上往下到 Mid, Cervical third 交界 (2-4mm)</li>
 <li>盡量 舌側延伸，必免往舌側翻 (Buccal 有 I Bar)</li>
@@ -816,9 +696,10 @@ page.addEventListener('click', function(event) {
 <ul>
 <li>就是多一個 Rest</li>
 </ul>
-<h3 id="canine-rest">Canine rest </h3>
+<h3 id="canine-rest-incisal-rest">Canine rest/ incisal rest </h3>
 <ul>
 <li>premolar 太接近 Fulcrum line 時使用</li>
+<li>最常用於下顎犬齒，寬2.5mm 與深1.5mm</li>
 <li>cingulum, Incisor 都行
 <ul>
 <li>Incisor 影響美觀</li>
@@ -1212,6 +1093,7 @@ page.addEventListener('click', function(event) {
 <ul>
 <li>直接壓 tissue</li>
 <li>避開 torus</li>
+<li>厚度 0.5-1mm</li>
 <li>提供 Cast 修磨時完整 Finish line</li>
 <li>金屬收縮後仍能貼附 Tissue 防止食物進入</li>
 <li>retention and stability</li>
@@ -1375,24 +1257,31 @@ page.addEventListener('click', function(event) {
 </div>
 <h4 id="lingual-plate">Lingual plate </h4>
 <ul>
-<li>蓋住 cingulum, Interproximal spaces
+<li>
+<p>下寬上窄</p>
+</li>
+<li>
+<p>蓋住 cingulum, Interproximal spaces</p>
 <ul>
+<li>避免食物卡在縫隙</li>
 <li>如果牙周問題嚴重，Interproximal spaces 改用 <strong>Step-back design</strong> (只到 Line angle)</li>
 </ul>
+</li>
+<li>
+<p>要放 Rest 避免推前牙 ( 1<sup>st</sup> premolar, mesial)</p>
+</li>
+<li>
+<p>能避開 torus</p>
+</li>
+<li>
+<p>之後缺牙可以 Repair，增加樹脂牙</p>
 </li>
 </ul>
 <div class="fbox"> 
 <img src="paste_src/RPD-75.png" alt="alt text" style="width:60%;background-color: white;padding:0">
 <img src="paste_src/RPD-74.png" alt="alt text" style="width:35%;background-color: white;padding:0">
-</div>
-<ul>
-<li>要放 Rest 避免推前牙 ( 1<sup>st</sup> premolar, mesial)</li>
-</ul>
 <img src="paste_src/RPD-76.png" alt="alt text" style="width:80%;background-color: white;padding:0">
-<ul>
-<li>能避開 torus</li>
-<li>之後缺牙可以 Repair，增加樹脂牙</li>
-</ul>
+</div>
 <h4 id="dental-bar">Dental Bar </h4>
 <ul>
 <li>放牙齒上，細 → 加厚，但要避免異物感 → 強度仍不如 Lingual plate</li>
@@ -1425,7 +1314,13 @@ page.addEventListener('click', function(event) {
 <h4 id="labial-bar">Labial Bar </h4>
 <ul>
 <li>長 → flexibility ↑ → 加寬加厚</li>
-<li>用於牙齒 Lingual tilts 嚴重患者</li>
+<li>適用於
+<ul>
+<li>錯位牙 (malpositioned teeth)、</li>
+<li>牙齒 Lingual tilts 嚴重患者</li>
+<li>有大 madibular torus 而無法使用 lingual bar/ plate 者</li>
+</ul>
+</li>
 </ul>
 <img src="paste_src/RPD-79.png" alt="alt text" style="width:50%;background-color: white;padding:0">
 <div class="admonition info">
@@ -1505,21 +1400,99 @@ page.addEventListener('click', function(event) {
 </ol>
 </li>
 </ul>
+<h1 id="preparation">Preparation </h1>
+<h2 id="rest">Rest </h2>
+<ul>
+<li>MD: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>- <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li>BL: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li>Marginal ridge
+<ul>
+<li>深度 1.5mm</li>
+<li>寬度 2.5mm</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Extended occlusal rest</p>
+<ul>
+<li>Md 加長到 1/2 的 Rest</li>
+<li>Support ↑ 但 Torch ↑</li>
+<li>僅能用在有 Denture Base 抵銷 Torch 的情況
+<ul>
+<li>Class I, II</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="其中烤">其中烤 </h1>
+<h2 id="長度">長度 </h2>
+<ul>
+<li>Major cont. ↔ FG margin
+<ul>
+<li>Mx.: 6mm</li>
+<li>Md.: 3mm</li>
+</ul>
+</li>
+<li>Bead line
+<ul>
+<li>深度: 0.5-1mm</li>
+</ul>
+</li>
+<li>Vestibular for lingual bar: 8mm</li>
+<li>GP 接處 Abutment
+<ul>
+<li>寬 3-4mm (&lt;1/3 BL)</li>
+<li>高 2-4mm (&lt;1/2 CO&gt;)</li>
+<li>Distal ext. 考量 Stress breaking，只需 1.5-2mm</li>
+</ul>
+</li>
+<li>Relief
+<ul>
+<li>Lingual bar: 32 gauge</li>
+<li>Other : 20 gauge</li>
+</ul>
+</li>
+<li>Palatal strap
+<ul>
+<li>AP&gt; 8mm</li>
+</ul>
+</li>
+<li>Horseshoe connector
+<ul>
+<li>覆蓋到前牙 palatal side，並向palatal side 延伸6~8mm</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>I bar
+<ul>
+<li>↔ FG margin: 4mm</li>
+<li>Vestibular: 4mm</li>
+<li>與牙齒接處 φ&lt;2mm</li>
+<li>Undercut: .01 inch (0.25mm)</li>
+</ul>
+</li>
+<li>wrought-wire clasp
+<ul>
+<li>常用18gauge: 1.0 mm</li>
+</ul>
+</li>
+</ul>
+<h2 id="簡答">簡答 </h2>
+<ul>
+<li>1.Major connector 設計的基本要求?
+<ul>
+<li>連接 RPD 部件</li>
+<li>提供穩定性、Support</li>
+<li>足夠剛性，避免在咀嚼時彎曲或變形，傳遞咬合受力</li>
+<li>無毒、耐腐蝕，並與口腔組織相容。</li>
+<li>舒適</li>
+<li>易於清潔</li>
+</ul>
+</li>
+</ul>
 <br><br>
-
-<script type="text/javascript" src="../Hyper_md/md.js"></script>
-
-<script>
-var page = document.getElementsByClassName('markdown-preview')[0]
-page.addEventListener('click', function(event) {
-  event.stopPropagation()
-  
-  document.body.removeAttribute('html-show-sidebar-toc');
- 
-})
-</script>
-
-
       </div>
       <div class="md-sidebar-toc">
 <div class="md-toc">
@@ -1561,8 +1534,8 @@ page.addEventListener('click', function(event) {
             <p>Auxiliary occlusal rest</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#canine-rest" class="md-toc-link">
-            <p>Canine rest</p>
+          <a href="#canine-rest-incisal-rest" class="md-toc-link">
+            <p>Canine rest/ incisal rest</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#canine-extensions-from-occlusal-rest" class="md-toc-link">
@@ -1635,6 +1608,36 @@ page.addEventListener('click', function(event) {
         </div>
       </details>
     
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#preparation" class="md-toc-link"><p>Preparation</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#rest" class="md-toc-link">
+            <p>Rest</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#其中烤" class="md-toc-link"><p>其中烤</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#長度" class="md-toc-link">
+            <p>長度</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#簡答" class="md-toc-link">
+            <p>簡答</p>
+
+          </a></div>
         </div>
       </details>
     

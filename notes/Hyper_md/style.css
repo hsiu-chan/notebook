@@ -122,6 +122,19 @@
   bottom: 5%;
   left: 5%;
 }
+img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
 html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
 html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
   left: 0;
@@ -139,7 +152,7 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
   left: 0;
   width: 200px;
   height: 100%;
-  padding: 32px 10px 48px 0;
+  padding: 50px 10px 48px 0;
   font-size: 14px;
   box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
   box-sizing: border-box;
@@ -148,11 +161,20 @@ html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc
 }
 html body {
   background-color: hsl(220, 13%, 18%);
-  /* Modal (background for enlarged image) */
-  /* 侧栏 */
-  /* 侧栏自动编号 */
-  /* 复位计数器 */
-  /* 进行编号 */
+  /* === Markdown Preview Enhancer TOC 樣式新版 === */
+  /* 縮排*/
+  /* TOC link */
+  /* 每層 details 都要重置下一層 counter */
+  /* 第一層：h1 */
+  /* 第二層：h2 */
+  /* 第三層：h3 */
+  /* 第四層：h4 */
+  /* 縮排 
+.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
+.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
+.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
+.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
+  /* hover & active */
   /*
   /////三线表/////
   table{
@@ -186,140 +208,74 @@ html body {
   }
   */
 }
-html body img {
-  max-width: 100%;
-  width: 80%;
-  top: 0.3rem;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-  display: block;
-  padding: 0;
-  background-color: white;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-}
 html body .md-sidebar-toc {
-  margin: 0rem 0rem 0em 0em;
-  padding: 0rem 0rem 0em 0rem;
-  width: auto;
-  max-width: 768px;
-  margin-bottom: 1em;
-  background-color: rgba(186, 55, 55, 0.1);
-  /*背景颜色*/
+  margin: 0;
+  padding: 0.5rem 0;
   position: absolute;
+  max-width: 768px;
+  background-color: rgba(186, 55, 55, 0.1);
   z-index: 70;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+html body .md-toc-link-wrapper {
+  list-style: none!important;
+}
+html body div.md-toc-link-wrapper {
+  margin-left: 0px!important;
+}
+html body details > div > div.md-toc-link-wrapper {
+  margin-left: 24px!important;
 }
 html body .md-sidebar-toc a {
   color: inherit;
-  font-size: 0.7rem !important;
+  text-decoration: none;
 }
 html body .md-sidebar-toc a:hover {
-  color: inherit;
+  color: #87ffff;
+  font-style: italic;
 }
-html body .md-sidebar-toc li {
-  margin-left: 1rem;
-  margin-bottom: 0 !important;
-  text-align: left;
-  /*左对齐*/
+html body .md-sidebar-toc {
+  counter-reset: toc-h1;
 }
-html body .md-sidebar-toc ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-  padding-right: 0 !important;
+html body .md-sidebar-toc details {
+  counter-reset: toc-h2;
 }
-html body .md-sidebar-toc ul li {
-  font-size: 0.8rem !important;
-  /*字号*/
+html body .md-sidebar-toc details details {
+  counter-reset: toc-h3;
+}
+html body .md-sidebar-toc details details details {
+  counter-reset: toc-h4;
+}
+html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h1;
+  content: counter(toc-h1) ". ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h2;
+  content: counter(toc-h1) "." counter(toc-h2) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h3;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h4;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper.active a {
+  color: #87ffff;
   font-weight: bold;
-  /*一级大纲*/
-}
-html body .md-sidebar-toc ul li:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc ul ul {
-  padding-left: 0rem !important;
-  display: none;
-}
-html body .md-sidebar-toc .active {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc .active ul,
-html body .md-sidebar-toc .active ul ul,
-html body .md-sidebar-toc .active li {
-  display: block;
-}
-html body .md-sidebar-toc ul ul:hover {
-  color: #87ffff;
-}
-html body .md-sidebar-toc ul ul li {
-  margin-bottom: 8pt !important;
-  margin-top: 3pt !important;
-  margin-left: 0rem;
-  font-size: 0.8rem !important;
-  /*字号*/
-  font-style: normal;
-  font-weight: normal;
-  padding-left: 0.2rem;
-  border-left: 2px rgba(0, 0, 0, 0) solid;
-}
-html body .md-sidebar-toc ul ul li:hover {
-  font-style: normal;
-  border-left: 2px solid;
-}
-html body .md-sidebar-toc ul ul ul {
-  padding-left: 0rem;
-  margin-left: 0rem;
-}
-html body .md-sidebar-toc ul ul ul li {
-  margin-top: 2pt !important;
-  margin-bottom: 2pt !important;
-  margin-left: 0rem;
-  padding-left: 0.5rem;
-  border-left: 0px;
-}
-html body .md-sidebar-toc ul ul ul li:hover {
-  border-left: 0px solid;
-}
-html body body {
-  counter-reset: outline-h1 0 outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0;
-}
-html body .md-sidebar-toc li {
-  counter-reset: outline-h1;
-}
-html body .md-sidebar-toc ul li {
-  counter-reset: outline-h2;
-}
-html body .md-sidebar-toc ul ul li {
-  counter-reset: outline-h3;
-}
-html body .md-sidebar-toc ul ul ul li {
-  counter-reset: outline-h4;
-}
-html body .md-sidebar-toc ul ul ul ul li {
-  counter-reset: outline-h5;
-}
-html body .md-sidebar-toc ul ul li:before {
-  counter-increment: outline-h2;
-  content: counter(outline-h2) " ";
-  font-size: 0.7em;
-}
-html body .md-sidebar-toc ul ul ul li:before {
-  counter-increment: outline-h3;
-  content: counter(outline-h2) "." counter(outline-h3) " ";
-  font-size: 0.7em;
-}
-html body .md-sidebar-toc ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) " ";
-  font-size: 0.7em;
-}
-html body .md-sidebar-toc ul ul ul ul ul li:before {
-  counter-increment: outline-h4;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
-  font-size: 0.7em;
 }
 html body .dcl {
   /* block 水平置中的方法 */
