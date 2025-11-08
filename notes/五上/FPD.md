@@ -11,6 +11,8 @@ export_on_save:
 ---
 
 # FPD
+![alt text](paste_src/FPD-23.png)
+
 
 ## 名詞 
 
@@ -68,29 +70,168 @@ G. Beveled shoulder (與牙齒夾角約90度，但在邊緣會做成斜面)
 - h/w > 0.4
 - ZPC 24h 抗壓 70MPa
 
-## Prepare 
 
-- Functional cusp > 1.5mm
-- Nonfunctional cusp > 1mm
+### grooves
+- 幾乎不增加 retention
+- 高度: 3–4 mm
+- 深度: occlusal< cervical
+
 
 
 ## Complete cast 
 
 ![alt text](paste_src/FPD-5.png)
 
-- Chamfer: 0.5mm
-- Functional: 1.5mm
-- Nom-functional: 1mm
+- Chamfer: &geq; 0.5mm
+- Occlusal: 1.5mm
+- retention: 6&deg;
+- resistance: 5-2&deg;
+
+- Mx. molar 
+  - Buccal Cusp (Nonfunctional)
+    - 1-1.5mm (1/2)
+    - occlusoaxial line angle: Bevel, 厚度 &geq; 0.6mm
+      - 太薄cast 做不出來，會 overcontour
+  - Lingual cusp (functional)
+    - 1.5-2mm 
+    - Occlusal third bevel: 要足夠厚度
+
+- Md molar 
+  - Buccal Cusp (functional)
+    - 1.5mm 
+  - Lingual cusp (nonfunctional)
+    - 1mm (幾乎不用特別修)
+
 
 ## PFM 
 
-![alt text](paste_src/FPD-4.png)
 
 - 燒瓷前後都能修金屬
 - PFM支架燒瓷溫度約960°C，傳統 complete cast crown 金屬會融化
 - 熱膨脹低
 - 磨很多（complete cast crown只咬 1mm
+- Subgingival &rarr; 牙周問題
+- 陶瓷至少要1.2mm，金屬至少0.3mm
 
+![alt text](paste_src/FPD-4.png)
+
+![alt text](paste_src/FPD-17.png)
+
+
+### Preparation 
+
+- Depth grooves
+  - 厚度: 1.2+0.3mm
+  - Cervical plane
+    - 牙齒長軸(同時也是置入途徑)
+  - Incisal plane
+    - Facial contour
+  - C/I
+    - 前:1/2
+    - 後:1/1
+
+![alt text](paste_src/FPD-18.png)
+
+- Occlusal/ cusp
+  - Metal: 1-1.5mm
+  - 陶瓷: 2mm
+    - 前牙 Incisor 為了美觀
+    - 後牙為了強度
+
+- 牙齦下金屬環(subgingival metal collar)
+  - 0.5mm subgingival
+  - shoulder margin: 寬1mm，超過 Contact point 才能藏金屬
+
+- Margin 
+  - Shoulder(90&deg;): 支撐 ceramic
+  - Shoulder(90&deg;)+Bevel: metal collar,  Marginal gap &darr;
+  - Shoulder(120&deg;): Free enamel&darr;, Marginal gap &darr;
+
+
+
+## Ceramic 
+
+- 分成 Mill, Press 
+- 不要 Bevel， 邊緣太薄車機做不出來
+- 最小厚度 
+  - Particle filled glass: 1mm
+  - Zirconia: 0.5mm
+- 都要 Rounding
+
+- 材料
+  - particle filled glasses
+  - polycrystalline ceramics
+  - ceramic-polymer compound material
+
+
+
+
+| 類別 | 組成與代表材料 | Flexural strength (MPAa) | 特色|
+|------|------------------------|----------------------------|-|
+| **Particle-filled glasses** |\oneline{
+- Feldspathic porcelain (長石瓷)
+- Leucite-reinforced ceramic
+- Lithium disilicate（二矽酸鋰）
+}| ~120–500  | \oneline{
+- 玻璃含量高 → 透明度最佳
+- 脆性高，不建議長跨距 FPD
+- ==前牙, 單顆冠、貼面、inlay/onlay==
+}
+| **Polycrystalline ceramics**<br>（多晶陶瓷） |\oneline{
+- Zirconia（3Y/4Y/5Y）
+- Alumina（氧化鋁）
+}| ~700–1200+ <br>（Zirconia）|\oneline{
+- 無玻璃相 → 結構緻密、韌性最好
+- 半透明性較差
+- 需良好拋光以避免磨耗對咬牙
+- ==長跨距 FPD、後牙耐咬==
+}
+| **Ceramic-polymer compound material**<br>（陶瓷–樹脂混合材料） | \oneline{
+- Hybrid ceramic / Resin matrix ceramic
+}| ~150–200 |\oneline{
+- 好加工、易修補 &rarr; CAD/CAM
+- 彈性，較不脆
+- 強度不足，不建議 FPD &rarr;==臨時冠、單顆冠、inlay/onlay==
+}
+
+
+ 類陶瓷但帶彈性，較不脆 | 、 友善 |  | **** |
+
+
+
+### anterior crown monolithic
+> Particle filled glass(第一類材料)
+
+- Margin: 1mm
+- Incisal：1.5-2.0 mm
+- Labial, Palatal: 1.0-1.5mm 
+
+![alt text](paste_src/FPD-19.png)
+
+### posterior crown monolithic
+
+
+- Margin：1.0 mm
+- Occlusal：1.5-2.0 mm 
+  - Cusp: 2mm
+- Labial, Palatal: 1.0-1.5 mm。
+- Converge 4-6&deg;
+
+![alt text](paste_src/FPD-20.png)
+
+
+### Inlay 
+
+- Thickness: 1.5-2 mm
+- intercuspal width: < 2.5mm (1/3)
+- Axial wall: 10&deg;
+- TOC(總咬合收斂)：6&deg;
+
+
+
+:::fbox 
+![alt text](paste_src/FPD-21.png =50)![alt text](paste_src/FPD-22.png =50)
+:::
 
 
 ## Post and Core 
@@ -105,6 +246,9 @@ G. Beveled shoulder (與牙齒夾角約90度，但在邊緣會做成斜面)
   - 前牙：幾乎沒差
 
 - Peri-cervical Dentin (PCD) Thickness: CEJ上下各約4mm的dentin厚度，評估 ETT 結構
+
+
+
 
 ### Design 
 
@@ -338,6 +482,32 @@ Serrated|\oneline{
 - 複雜的 FPD>Single crown
 
 
+## impression
+
+- 排齦線(Retraction Cord)
+  - 浸泡止血劑 (Astringent): 酸性環境下才有效 &rarr; 溶 Smear layer &rarr; 術後敏感
+  - dentinal tubule sealing 降低術後敏感
+  - Double cord Technique
+    - 第一條細線放得深：放入牙齦溝底部，在印模時防止牙齦溝出血。
+    - 第二條粗線放得寬：放在margin的高度，用以排開牙齦，放好後要是肉眼可以稍微看到線的，否則牙齦仍然會是封起來的。
+    - 等待適當時間後，取出第二條粗線，就可以印模了。
+
+
+
+- 排齦膏(Displacement paste)
+  - 含有 AlCl~3~
+
+
+
+
+
+
+
+
+
+
+
+
 ## Die 
 
 
@@ -351,11 +521,12 @@ Serrated|\oneline{
   - 先在印模內壁上電度一層極薄且均勻的金屬膜（銅/ 銀），再灌石膏或樹脂
   - 強度高
   - 印模
-    - ==Addition Silicone(PVS)==:導電漆附著良好
+    - Addition Silicone(PVS): 不相容，親油性，導電塗層不易均勻附著
+
     - Condensation silicone：不相容，醇類、有機副產物影響導電漆附著。
     - ==Polysulfide==：鍍銀
     - hydrocolloid：不相容，立即灌模
-    - Polyether：不相容，親水性，導電塗層不易均勻附著
+    - Polyether：容易吸水、變形
     - ==Impression compound==：鍍銅
 
 ### 單齒模的分類 

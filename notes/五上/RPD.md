@@ -156,11 +156,15 @@ Stress breaking Design
 
 #### Ring clasp
 
-- 用於 Md. Molar (Buccal 無 under cut) &rarr; 勾 ML
+- 勾 ML
+  - 用於 Mesial tilting Molar
+  - 用於 Md. Molar (Buccal 無 under cut) &rarr; 
 - Supporting strut
   - 需要深 Vestibular 
   - 軟組織倒凹不適用
 - Second rest
+
+
 :::fbox 
 ![alt text](paste_src/RPD-24.png =75)
 ![alt text](paste_src/RPD-25.png =23)
@@ -361,6 +365,22 @@ Stress breaking Design
 :::
 
 
+:::info { Kratochvil v.s.Krol}
+
+
+|特徵|Kratochvil(1963)|Krol(1973)|
+|-|-|-|
+|Proximal Plate|接觸面積大(Marginal Ridge &harr; Gingival Margin 上方) |接觸面積小，末端與Gingival有 2-3 mm 間隙|
+|^|旨在填滿空間，防止食物嵌塞。|避免壓迫 FG|
+|Physiologic Adjustment| 削除Proximal Plate 不當壓力的區域，允許Base 沉降時以Rest 為軸心旋轉| 不需要，Proximal Plate 間隙已經能減壓|
+|I-bar | -| 3mm clearance |
+| |![alt text](paste_src/RPD-92.png)|
+
+:::
+
+
+
+
 
 
 ####　RPA 
@@ -394,9 +414,10 @@ Stress breaking Design
 
 ### Canine rest/ incisal rest
 - premolar 太接近 Fulcrum line 時使用
-- 最常用於下顎犬齒，寬2.5mm 與深1.5mm
 - cingulum, Incisor 都行
   - Incisor 影響美觀
+  - Cingulum 最常用於上顎犬齒，Enamel 夠厚
+    - MD:2.5mm 與深1.5mm
 
 ### Canine extensions from occlusal rest
 
@@ -576,65 +597,6 @@ relief(3)|Incisive Papilla |The Crest of the Residual Ridge
   - 能減少 undercuts 避免塞東西
 
 ![alt text](paste_src/RPD-58.png)
-
-
-###  Block out 
-
-Master cast 做完 Block out 才能去翻耐火模
-
-
-#### Parallel block out 
-- 依照 path of insertion
-- 6個要做平行封凹 
-
-
-|Parallel block out |Thickness |Material
-|-|-|-|
- guiding planes (Proximal)|只有析量刀與**牙面接觸點**之下的倒凹| Hard baseplate wax or blockout material|
-minor connectors下方|^|^|
-connectors 所跨越過的組織倒凹 |只有析量刀與**牙模型表面接觸點** 之下的倒凹|^|
-minor connectors or lingual plates所覆蓋的鄰接縫隙|^|^|
-Bar clasp 起點所跨越過的組織倒凹|^|^|
-bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含的倒凹|-|
-
-
-#### Shaped block out
-
-- 在牙齒之頰及舌側面，用來定位牙鉤臂的蠟型
-- 為了特定 clasp 功能，常用於 I bar, RPI clasp, RPA clasp
-- Thickness
-  - 定位 Retentive Arms: 盡量接近齒頸部位
-  - 定位 Reciprocal arms: 順者 Height of contour
-  - I bar 進入倒凹區時，會在牙齦邊緣處做「斜面狀」或「凹弧狀」的 shaped block out，讓金屬能順利滑過軟組織、不壓迫牙齦。
-- Material: Hard baseplate wax
-#### Arbitrary block out
-
-- 方便鑄造與脫模，而非改變義齒設計
-- 較大面積或深倒凹時可搭配 **oil-based clay** 以填平。
-
-
-
-| Arbitrary block out | Thickness | Material | 備註 |
-|------------|------------------|------------|------|
-| 所有牙齦溝 | 牙齦溝適度平順 | Hard baseplate wax | 避免金屬框架壓迫牙齦緣 |
-| denture framework 下方的大範圍組織倒凹 | 以蠟刀任意填平 | Hard baseplate wax 或 oil-based clay | 防止倒凹造成脫模困難 |
-| denture framework distal 組織倒凹  | ^ | ^| 常見於終末 abutment teeth diatal 組織處 |
-| 未包含於義齒設計的Buccal 牙齒及組織倒凹 | 填平至Coronal third &uarr; | ^| 修整非功能性倒凹區以利脫模 |
-
-#### Relief 
-
-- 刻意留出空間避免壓迫組織
-
-
-
-| 區域 / 適應情況 | Thickness |Material |
-|------------------|----------------|------------|
-| lingual bar/plates 下 |\oneline{
-- 舌側骨面平行於義齒置入方向: 32 gauge wax（0.2–0.25 mm）
-- 舌側骨面**倒凹**: Parallel block out 再 32 gauge
-}| Adhesive wax|
-| major connectors 會接觸的軟薄組織區：Md. Lingual 骨嵴, palatal raphes | 薄薄一層蠟|Hard baseplate wax|
-| Denture base framework 附著在 Resin 上方部分 |20 gauge wax | Adhesive Wax |
 
 
 
@@ -893,31 +855,119 @@ bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含�
           - ![alt text](paste_src/RPD-87.png =60)
         - 網狀結構
           - 義齒齒頸部被網狀結構干擾
+          - 堅固 &rarr; 可以最薄
           - ![alt text](paste_src/RPD-86.png =60)
   3. vertical projection/bar-type clasps &harr; Major Connector
      - flexibility
+
+##  Block out 
+
+Master cast 做完 Block out 才能去翻耐火模
+
+
+### Parallel block out 
+- 依照 path of insertion
+- 6個要做平行封凹 
+
+
+|Parallel block out |Thickness |Material
+|-|-|-|
+ guiding planes (Proximal)|只有析量刀與**牙面接觸點**之下的倒凹| Hard baseplate wax or blockout material|
+minor connectors下方|^|^|
+connectors 所跨越過的組織倒凹 |只有析量刀與**牙模型表面接觸點** 之下的倒凹|^|
+minor connectors or lingual plates所覆蓋的鄰接縫隙|^|^|
+Bar clasp 起點所跨越過的組織倒凹|^|^|
+bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含的倒凹|-|
+
+
+### Shaped block out
+
+- 在牙齒之頰及舌側面，用來定位牙鉤臂的蠟型
+- 為了特定 clasp 功能，常用於 I bar, RPI clasp, RPA clasp
+- Thickness
+  - 定位 Retentive Arms: 盡量接近齒頸部位
+  - 定位 Reciprocal arms: 順者 Height of contour
+  - I bar 進入倒凹區時，會在牙齦邊緣處做「斜面狀」或「凹弧狀」的 shaped block out，讓金屬能順利滑過軟組織、不壓迫牙齦。
+- Material: Hard baseplate wax
+### Arbitrary block out
+
+- 方便鑄造與脫模，而非改變義齒設計
+- 較大面積或深倒凹時可搭配 **oil-based clay** 以填平。
+
+
+
+| Arbitrary block out | Thickness | Material | 備註 |
+|------------|------------------|------------|------|
+| 所有牙齦溝 | 牙齦溝適度平順 | Hard baseplate wax | 避免金屬框架壓迫牙齦緣 |
+| denture framework 下方的大範圍組織倒凹 | 以蠟刀任意填平 | Hard baseplate wax 或 oil-based clay | 防止倒凹造成脫模困難 |
+| denture framework distal 組織倒凹  | ^ | ^| 常見於終末 abutment teeth diatal 組織處 |
+| 未包含於義齒設計的Buccal 牙齒及組織倒凹 | 填平至Coronal third &uarr; | ^| 修整非功能性倒凹區以利脫模 |
+
+### Relief 
+
+- 刻意留出空間避免壓迫組織
+
+
+
+| 區域 / 適應情況 | Thickness |Material |
+|------------------|----------------|------------|
+| lingual bar/plates 下 |\oneline{
+- 舌側骨面平行於義齒置入方向: 32 gauge wax（0.2–0.25 mm）
+- 舌側骨面**倒凹**: Parallel block out 再 32 gauge
+}| Adhesive wax|
+| major connectors 會接觸的軟薄組織區：Md. Lingual 骨嵴, palatal raphes | 薄薄一層蠟|Hard baseplate wax|
+| Denture base framework 附著在 Resin 上方部分 |20 gauge wax | Adhesive Wax |
+
 
 
 
 # Preparation 
 
 ## Rest 
-- MD: $\frac{1}{3}$- $\frac{1}{2}$
-- BL: $\frac{1}{2}$
-- Marginal ridge
-  - 深度 1.5mm
-  - 寬度 2.5mm
 
 
-:::info {Extended occlusal rest}
-- Md 加長到 1/2 的 Rest 
+
+
+### Extended occlusal rest
+- Md:>$\frac{1}{2}$
+- BL: $\frac{1}{3}$
+- OC: 1mm
 - Support &uarr; 但 Torch &uarr;
 - 僅能用在有 Denture Base 抵銷 Torch 的情況 
   - Class I, II
+
+
+### Occlusal rests
+- Marginal ridge
+  - 深度 1.5mm
+  - BL 2.5mm ($\frac{1}{2}$)
+- MD: $\frac{1}{3}$- $\frac{1}{2}$
+
+
+
+### Incisal rest
+
+- buccal 和 lingual 都要做 bevel,提供空間給
+- 寬 2.5mm
+- 深 1.5mm
+
+:::fbox 
+
+
+![alt text](paste_src/RPD-94.png =40)
+![alt text](paste_src/RPD-95.png =25)
 :::
 
 
 
+
+### Lingual/Cingulum rests
+
+- BL: 2mm
+- MD: 2.5~3mm
+- OC: 1.5mm
+
+![alt text](paste_src/RPD-96.png)
 
 # 其中烤
 
@@ -960,3 +1010,17 @@ bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含�
   - 無毒、耐腐蝕，並與口腔組織相容。
   - 舒適
   - 易於清潔
+
+
+##  其他
+
+- Path of insertion
+> 信不信由你
+![alt text](paste_src/RPD-93.png)
+
+
+- surveyed crown
+  - 經過牙齒測量與導板設計（surveying）的特製冠
+  - 支台牙已有大範圍缺損或預備牙冠。
+  - 牙齒排列不整或有倒凹，需調整牙面以符合義齒設計。
+  - 希望增加支柱牙壽命，減少 RPD 對牙齒的扭力。
