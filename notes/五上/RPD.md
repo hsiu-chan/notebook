@@ -860,7 +860,7 @@ relief(3)|Incisive Papilla |The Crest of the Residual Ridge
   3. vertical projection/bar-type clasps &harr; Major Connector
      - flexibility
 
-##  Block out 
+## Block out 
 
 Master cast 做完 Block out 才能去翻耐火模
 
@@ -919,6 +919,56 @@ bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含�
 | Denture base framework 附著在 Resin 上方部分 |20 gauge wax | Adhesive Wax |
 
 
+
+## Reline, Rebase and Repair
+
+- Relining: 換一層表面，臨床常做
+- Rebasing: 送技工，整個base 換掉
+
+
+
+
+- 診斷
+  - 通常是患者開始抱怨塞東西、不穩 
+  - Denture Base 位置改變
+  - 手壓 distal ext.，Indirect retainer 翹 >2mm
+  - Fit checker
+
+
+### Reline
+
+- Intraoral direct relining
+  - 把材料送進口中然後咬起來
+  - 優點：操作方便，不用送技工
+  - 缺點：reline 的材料穩定性較差、孔洞多，易卡髒東西
+- A closed-mouth functional impression 
+  - impression 再 Packing 
+  - 戴上 framework 後讓患者咬起來，咬合上的掌控比較精準。
+  - 適應
+    - Rebase 
+    - 軟組織變化量大，需要 reline 的量較多
+  - 優點：因為是用 packing 的方式，reline 的材料穩定性佳、緻密性高
+- An open-mouth selective functional impression
+  - 同上，但不咬起來
+  - 咬合會改變
+  - 適應
+    - easily displaced mucosa
+![alt text](paste_src/RPD-97.png =50)
+
+
+
+## Effect 
+
+>Ozan et.al.(2013)
+
+
+缺牙五年後的垂直高度比較
+- 缺牙沒戴活動義齒(高度差將近 6 mm，22.7%)
+   1. 無牙區：21.4±2.5 mm
+   2. 對側有牙區:27.2±2.4 mm
+- 缺牙有戴活動義齒(高度差 7.6 mm，28.8%)
+   1. 無牙區：19.6±2.5 mm
+   2. 對側有牙區：27.2±2.3 mm
 
 
 # Preparation 
