@@ -407,17 +407,29 @@ html body table .fbox {
 }
 
       </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script></head><body for="html-export">
+      <!-- The content below will be included at the end of the <head> element. --><script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+
+<script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+
+
+<script type="text/javascript">
+//載入完成後執行
+document.addEventListener("DOMContentLoaded", () => {
+  var page = document.getElementsByClassName('markdown-preview')[0]
+  page.addEventListener('click', function(event) {
+    event.stopPropagation()
+    
+    document.body.removeAttribute('html-show-sidebar-toc');
+  })
+});
+</script>
+<link rel="stylesheet" href="../Hyper_md/style.css">
+</head><body for="html-export">
     
     
       <div class="crossnote markdown-preview  ">
-      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
-      <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css">
+      
 <h1 id="cyst">cyst </h1>
 <h2 id="分類">分類 </h2>
 <div class="mermaid">graph LR 
@@ -910,7 +922,7 @@ n["非齒源(Non-Odontogenic)"]
 </table></div>
 <dl>
 <dt>Gardner syndrome</dt>
-<dd>APC基因突變，β catenin 分解不掉 → 上皮增生 <a href="..\%E5%9C%8B%E8%80%83\%E5%8F%A3%E8%83%9A%E6%95%B4%E7%90%86.html#wnt">Wnt 相關</a></dd>
+<dd>APC基因突變，β catenin 分解不掉 → 上皮增生 <a href="../%E5%9C%8B%E8%80%83/%E5%8F%A3%E8%83%9A%E6%95%B4%E7%90%86.html#wnt">Wnt 相關</a></dd>
 </dl>
 <div class="admonition info">
 <p class="admonition-title">魏氏環(Waldeyer ring)</p>
@@ -1012,20 +1024,6 @@ n["非齒源(Non-Odontogenic)"]
 </ul>
 </blockquote>
 <br><br>
-
-<script type="text/javascript" src="../Hyper_md/md.js"></script>
-
-<script>
-var page = document.getElementsByClassName('markdown-preview')[0]
-page.addEventListener('click', function(event) {
-  event.stopPropagation()
-  
-  document.body.removeAttribute('html-show-sidebar-toc');
- 
-})
-</script>
-
-
       </div>
       <div class="md-sidebar-toc">
 <div class="md-toc">

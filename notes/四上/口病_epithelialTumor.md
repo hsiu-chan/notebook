@@ -32,8 +32,9 @@ export_on_save:
 :::
 
 
+
 |變異名稱 |風險/ 原因|位置|症狀、特徵||||
-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|
 |papilloma <br>(6, 11)| 30~50y |軟顎、口腔常見 |單發、低傳染|
 |^|^| ^|pedunculated, sessile(少) ![alt text](paste_src/口病-47.png) |
 |^|^|^| stratified squamous epi. 包結締組織 <br> hyperparakeratosis (有核、顆粒層缺失) ![alt text](paste_src/口病-50.png =50)
@@ -95,7 +96,7 @@ xanthoma
 
 ### 色素增加
 |名稱| 單發? |風險/位置 || 特徵 ||
-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|
 |\style[color: red;]{Oral melanotic Macules}|  單 | 下唇朱紅區(vermilion zone, 33%), Buccal mucosa, gingiva, palate||表面平坦、棕黑色、邊界清楚、&phi;<5mm ![alt text](paste_src/口病-62.png =50)|
 |^|^|^|^| 不須治療，但不易和 Oral melanoma 分辨 &rarr; 燒毀! |
 |^|^|^|^| **黑色素失禁(melanin incontinence):** <br> basal cell 可能破損 &rarr; macrophage 於 CT 吞噬 &rarr; ==melanophage== ![alt text](paste_src/口病-63.png)|||
@@ -289,7 +290,7 @@ Acral
 
 
 | 名稱 |  原因 ||特徵||
-|-|-|-|-|-|-|-|
+|-|-|-|-|-|
 |Oral submucous fiberosis | Arecoline (檳榔鹼)|| \oneline{ 
 - &rarr; SCC 
 - hyperkeratosis 或 parakeratosis，上皮變薄。

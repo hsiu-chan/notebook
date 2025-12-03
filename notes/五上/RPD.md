@@ -932,8 +932,10 @@ bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含�
   - 通常是患者開始抱怨塞東西、不穩 
   - Denture Base 位置改變
   - 手壓 distal ext.，Indirect retainer 翹 >2mm
+  - Rotation
   - Fit checker
 
+> ==Framework 要在在正確位置==
 
 ### Reline
 
@@ -941,6 +943,9 @@ bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含�
   - 把材料送進口中然後咬起來
   - 優點：操作方便，不用送技工
   - 缺點：reline 的材料穩定性較差、孔洞多，易卡髒東西
+  - Border modeling 
+    - Buccal: 揉 Cheek 
+    - Lingual: 伸出舌頭
 - A closed-mouth functional impression 
   - impression 再 Packing 
   - 戴上 framework 後讓患者咬起來，咬合上的掌控比較精準。
@@ -954,6 +959,20 @@ bar clasp arms to gingival crevice|僅牙鉤臂附著於 小連接體所包含�
   - 適應
     - easily displaced mucosa
 ![alt text](paste_src/RPD-97.png =50)
+
+
+
+- impression material 
+  - ZOE impression material: 很稀，停產
+  - Polysulfide (rubber base)
+  - PVS
+    - Putty：individual tray 的概念。
+    - Mono-phase：介於 putty 與 wash 之間，可用來印 RPD。
+    - Wash：很細，可用於印 fixed 的 margin。因此印 fixed 時都會用 putty+wash。
+
+- 上顎容易掉牙，下顎酸痛
+![alt text](paste_src/RPD-98.png)
+
 
 
 

@@ -407,17 +407,29 @@ html body table .fbox {
 }
 
       </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script></head><body for="html-export">
+      <!-- The content below will be included at the end of the <head> element. --><script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+
+<script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+
+
+<script type="text/javascript">
+//載入完成後執行
+document.addEventListener("DOMContentLoaded", () => {
+  var page = document.getElementsByClassName('markdown-preview')[0]
+  page.addEventListener('click', function(event) {
+    event.stopPropagation()
+    
+    document.body.removeAttribute('html-show-sidebar-toc');
+  })
+});
+</script>
+<link rel="stylesheet" href="../Hyper_md/style.css">
+</head><body for="html-export">
     
     
       <div class="crossnote markdown-preview  ">
-      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
-      <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css">
+      
 <h1 id="感染">感染 </h1>
 <h2 id="細菌感染-bacterial-infection">細菌感染 Bacterial Infection </h2>
 <h3 id="膿皰瘡-impetigo">膿皰瘡 Impetigo </h3>
@@ -425,14 +437,75 @@ html body table .fbox {
 <li>S. aureus 與 S. pyogenes</li>
 <li>Bullous impetigo:相對比較不常見，主要是由 S. aureus</li>
 </ul>
-<p>|||原因| GLA|特徵||<br>
-|-|-|-|-|-|-|-|-|<br>
-Impetigo || S. aureus 與 S. pyogenes | -|<br>
-|Bullous impetigo || S. aureus |</p><ul> <li>四肢(Extremities)、軀幹和臉</li> </ul> <img src="paste_src/口病_感染.png" alt="alt text" style=";background-color: white;padding:0">|-|<br>
-| 丹毒 Erysipelas || β-hemolytic streptococci |年輕人和較老的成年 |<ul> <li>蝴蝶斑</li> </ul><br>
-| 猩紅熱 Scarlet Fever || Group A, β-hemolytic streptococci | Palate, 3-12y | <ul> <li>Super antigen</li> <li>草莓舌</li> <li>斑疹(Exanthematous rash)</li> <ul> <li>在有壓力或皮膚皺摺區域丘疹更嚴重，發生微血管脆性(capillary fragility)後會出現橫向紅色紋路，稱為 Pastia lines。</li> </ul> </ul><br>
-|<span style="margin:0; color: Deepskyblue;">Tonsillar concretions and Tonsillolithiasis </span>|| 脫落的角質蛋白和伴隨著次級細菌群落的外來物質 | -| 口臭，PANO<br>
-|  白喉 Diphtheria |-|<p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2"></th>
+
+<th>原因</th>
+<th>GLA</th>
+<th colspan="3">特徵</th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Impetigo</td>
+
+<td>S. aureus 與 S. pyogenes</td>
+<td colspan="4">-</td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">Bullous impetigo</td>
+
+<td>S. aureus</td>
+<td><ul> <li>四肢(Extremities)、軀幹和臉</li> </ul> <img src="paste_src/口病_感染.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3">-</td>
+
+
+</tr>
+<tr>
+<td colspan="2">丹毒 Erysipelas</td>
+
+<td>β-hemolytic streptococci</td>
+<td>年輕人和較老的成年</td>
+<td colspan="3"><ul> <li>蝴蝶斑</li> </ul></td>
+
+
+</tr>
+<tr>
+<td colspan="2">猩紅熱 Scarlet Fever</td>
+
+<td>Group A, β-hemolytic streptococci</td>
+<td>Palate, 3-12y</td>
+<td colspan="3"><ul> <li>Super antigen</li> <li>草莓舌</li> <li>斑疹(Exanthematous rash)</li> <ul> <li>在有壓力或皮膚皺摺區域丘疹更嚴重，發生微血管脆性(capillary fragility)後會出現橫向紅色紋路，稱為 Pastia lines。</li> </ul> </ul></td>
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: Deepskyblue;">Tonsillar concretions and Tonsillolithiasis </span></td>
+
+<td>脫落的角質蛋白和伴隨著次級細菌群落的外來物質</td>
+<td>-</td>
+<td colspan="3">口臭，PANO</td>
+
+
+</tr>
+<tr>
+<td>白喉 Diphtheria</td>
+<td colspan="6">-</td>
+
+
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h2 id="病毒">病毒 </h2>
 <ul>
 <li>
@@ -614,20 +687,6 @@ Impetigo || S. aureus 與 S. pyogenes | -|<br>
 </li>
 </ul>
 <br><br>
-
-<script type="text/javascript" src="../Hyper_md/md.js"></script>
-
-<script>
-var page = document.getElementsByClassName('markdown-preview')[0]
-page.addEventListener('click', function(event) {
-  event.stopPropagation()
-  
-  document.body.removeAttribute('html-show-sidebar-toc');
- 
-})
-</script>
-
-
       </div>
       <div class="md-sidebar-toc">
 <div class="md-toc">

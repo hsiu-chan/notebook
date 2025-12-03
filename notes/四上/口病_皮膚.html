@@ -407,17 +407,29 @@ html body table .fbox {
 }
 
       </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script></head><body for="html-export">
+      <!-- The content below will be included at the end of the <head> element. --><script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+
+<script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+
+
+<script type="text/javascript">
+//載入完成後執行
+document.addEventListener("DOMContentLoaded", () => {
+  var page = document.getElementsByClassName('markdown-preview')[0]
+  page.addEventListener('click', function(event) {
+    event.stopPropagation()
+    
+    document.body.removeAttribute('html-show-sidebar-toc');
+  })
+});
+</script>
+<link rel="stylesheet" href="../Hyper_md/style.css">
+</head><body for="html-export">
     
     
       <div class="crossnote markdown-preview  ">
-      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
-      <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css">
+      
 <h1 id="皮膚疾病">皮膚疾病 </h1>
 <h2 id="外胚層發育不良">外胚層發育不良 </h2>
 <dl>
@@ -450,49 +462,362 @@ html body table .fbox {
 <p>1、6、10、16: 角化</p>
 <p>4、13、19: 非角化</p>
 </div>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-| White Sponge Nevus<sup>良</sup> <br> (Cannon disease)|| 體顯性 |兩側的頰黏膜，出生時、孩童早期 |</p><ul> <li>口腔黏膜的正常角質化缺陷</li> <li>對稱</li> <li>keratin 4 和 keratin 13 表現在上皮的棘狀上皮細胞層</li> </ul>|<br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>hyperparakeratosis, acanthosis</li> <li>spinous layer 清澈的細胞質</li> <li>表層細胞核周圍嗜酸</li> </ul> <img src="paste_src/口病_皮膚-1.png" alt="alt text" style=";background-color: white;padding:0"><br>
-| Hereditary Benign Intraepithelial Dyskeratosis<sup>良</sup> <br>(HBID, Witkop’s disease)||體顯性 <br><code>GENE</code>: 4q35端粒, <span style="margin:0; color: gray;">NLRP1, M77T</span>|口腔與結膜黏膜，孩童|<ul> <li>類似Cannon disease</li> <li>眼睛: 不透明凝膠狀斑塊</li> <li>舌背: 通常沒有影響</li> </ul> - <img src="paste_src/口病_皮膚-2.png" alt="alt text" style=";background-color: white;padding:0">|<br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>hyperparakeratosis, acanthosis</li> <li>upper spinous layer 局部角化</li> <li>ell-within-a- cell</li> </ul> <img src="paste_src/口病_皮膚-3.png" alt="alt text" style=";background-color: white;padding:0">|<br>
-|Dyskeratosis Congenita <br> 先天性角化不良|| <span style="margin:0; color:Deepskyblue">X隱性</span> <br> <code>GENE</code>: DKC1 |10y ↓ | <ul> <li>影響 telomerase</li> <li>再生性貧血(aplastic anemia)</li> <li>易有惡性變化</li> <li>皮膚網狀的色素過度沉澱</li> <li>指甲會有明顯的萎縮，甚至消失</li> <li>沒得醫</li> </ul> <img src="paste_src/口病_皮膚-5.png" alt="alt text" style=";background-color: white;padding:0"><br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>水泡(bullae) → 白斑 → OPMD</li> </ul>|<br>
-| Hereditary Mucoepithelial Dysplasia<sup>良</sup>  || 體顯性 | -| <ul> <li>少毛脫髮、畏光、視力明顯受損</li> <li>軟硬顎交界明顯火紅班</li> <li>表徵明顯，但通常沒有症狀(asymptomatic)</li> </ul>|<br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>minimal keratinization</li> <li>雜亂無章的成熟</li> <li>無明顯的核、細胞多形性</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-6.png" alt="alt text" style="width:60%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-7.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div><p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="3">特徵</th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2" colspan="2">White Sponge Nevus<sup>良</sup> <br> (Cannon disease)</td>
+
+<td rowspan="2">體顯性</td>
+<td rowspan="2">兩側的頰黏膜，出生時、孩童早期</td>
+<td colspan="3"><ul> <li>口腔黏膜的正常角質化缺陷</li> <li>對稱</li> <li>keratin 4 和 keratin 13 表現在上皮的棘狀上皮細胞層</li> </ul></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>hyperparakeratosis, acanthosis</li> <li>spinous layer 清澈的細胞質</li> <li>表層細胞核周圍嗜酸</li> </ul> <img src="paste_src/口病_皮膚-1.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Hereditary Benign Intraepithelial Dyskeratosis<sup>良</sup> <br>(HBID, Witkop’s disease)</td>
+
+<td rowspan="2">體顯性 <br><code>GENE</code>: 4q35端粒, <span style="margin:0; color: gray;">NLRP1, M77T</span></td>
+<td rowspan="2">口腔與結膜黏膜，孩童</td>
+<td colspan="3"><ul> <li>類似Cannon disease</li> <li>眼睛: 不透明凝膠狀斑塊</li> <li>舌背: 通常沒有影響</li> </ul> - <img src="paste_src/口病_皮膚-2.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>hyperparakeratosis, acanthosis</li> <li>upper spinous layer 局部角化</li> <li>ell-within-a- cell</li> </ul> <img src="paste_src/口病_皮膚-3.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Dyskeratosis Congenita <br> 先天性角化不良</td>
+
+<td rowspan="2"><span style="margin:0; color:Deepskyblue">X隱性</span> <br> <code>GENE</code>: DKC1</td>
+<td rowspan="2">10y ↓</td>
+<td colspan="3"><ul> <li>影響 telomerase</li> <li>再生性貧血(aplastic anemia)</li> <li>易有惡性變化</li> <li>皮膚網狀的色素過度沉澱</li> <li>指甲會有明顯的萎縮，甚至消失</li> <li>沒得醫</li> </ul> <img src="paste_src/口病_皮膚-5.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>水泡(bullae) → 白斑 → OPMD</li> </ul></td>
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Hereditary Mucoepithelial Dysplasia<sup>良</sup></td>
+
+<td rowspan="2">體顯性</td>
+<td rowspan="2">-</td>
+<td colspan="3"><ul> <li>少毛脫髮、畏光、視力明顯受損</li> <li>軟硬顎交界明顯火紅班</li> <li>表徵明顯，但通常沒有症狀(asymptomatic)</li> </ul></td>
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="3"><ul> <li>minimal keratinization</li> <li>雜亂無章的成熟</li> <li>無明顯的核、細胞多形性</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-6.png" alt="alt text" style="width:60%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-7.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div></td>
+
+
+</tr>
+</tbody>
+</table></div>
 <h3 id="過度角化">過度角化 </h3>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-|  Pachyonychia Congenita  先天性厚甲症|| 體顯性 | - |</p><ul> <li>keratin 6a, 6b, 16, 17</li> <li>手掌跟腳掌厚繭、指甲底部累積角蛋白</li> <li>多汗</li> <li>走路會有明顯的疼痛</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-8.png" alt="alt text" style="width:50%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-9.png" alt="alt text" style="width:30%;background-color: white;padding:0"></div> |<br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>口內<sup>良</sup> <code>GENE</code>: keratin 6a (KRT6a)</li> <li>如果: Keratin 17 → neonatal teeth, oral white lesion(1/3)</li> </ul><br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>hyperkeratosis, acanthosis</li> <li>斑狀顆粒增生(patchy hypergranulosis)</li> <li>毛囊病變，堵塞</li> <li>white spongy nevus 比較: 表皮細胞核旁清澈的</li> </ul> <img src="paste_src/口病_皮膚-4.png" alt="alt text" style=";background-color: white;padding:0">|<br>
-| Papillon-Lefèvre Syndrome || <code>GENE</code>: cathepsin C gene |手掌與腳底 | <ul> <li>Cathepsin C: 溶酶體內蛋白酶</li> <li>手掌與腳底的角質化</li> <li>皮膚病灶的治療:維 A 酸類(systemic retinoids)</li> </ul>|<br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>PMN 功能不足 → 嚴重牙周病</li> <li>快速的骨流失 → floating in air</li> <li>瀰漫出血與增生性牙齦炎</li> </ul> <img src="paste_src/口病_皮膚-10.png" alt="alt text" style="width:25%;background-color: white;padding:0">|<p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3" colspan="2">Pachyonychia Congenita  先天性厚甲症</td>
+
+<td rowspan="3">體顯性</td>
+<td rowspan="3">-</td>
+<td colspan="4"><ul> <li>keratin 6a, 6b, 16, 17</li> <li>手掌跟腳掌厚繭、指甲底部累積角蛋白</li> <li>多汗</li> <li>走路會有明顯的疼痛</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-8.png" alt="alt text" style="width:50%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-9.png" alt="alt text" style="width:30%;background-color: white;padding:0"></div></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>口內<sup>良</sup> <code>GENE</code>: keratin 6a (KRT6a)</li> <li>如果: Keratin 17 → neonatal teeth, oral white lesion(1/3)</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>hyperkeratosis, acanthosis</li> <li>斑狀顆粒增生(patchy hypergranulosis)</li> <li>毛囊病變，堵塞</li> <li>white spongy nevus 比較: 表皮細胞核旁清澈的</li> </ul> <img src="paste_src/口病_皮膚-4.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Papillon-Lefèvre Syndrome</td>
+
+<td rowspan="2"><code>GENE</code>: cathepsin C gene</td>
+<td rowspan="2">手掌與腳底</td>
+<td colspan="4"><ul> <li>Cathepsin C: 溶酶體內蛋白酶</li> <li>手掌與腳底的角質化</li> <li>皮膚病灶的治療:維 A 酸類(systemic retinoids)</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>PMN 功能不足 → 嚴重牙周病</li> <li>快速的骨流失 → floating in air</li> <li>瀰漫出血與增生性牙齦炎</li> </ul> <img src="paste_src/口病_皮膚-10.png" alt="alt text" style="width:25%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h2 id="色素相關">色素相關 </h2>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-| Xeroderma Pigmentosum<sup>罕</sup> <br> 著色性乾皮病 || 體隱性，UV損傷修復不能 | 下唇和舌尖(SCC 多)，<br> 很早 <br> (口腔: 20y↓ ; 非黑色素皮膚癌: 10y↓)  | </p><ul> <li>容易轉成 SCC, BCC</li> <li>沒得醫</li> </ul>|<br>
-|Peutz-Jeghers syndrome || 體顯性，<br> 抑癌 <code>GENE</code>: STK11(LKB1) |兒童早期 | <ul> <li>雀斑樣(freckle-like): 陽光無關，發生於手部、開口周圍</li> <li>朱紅區、口腔黏膜、舌頭出現 φ 1~4mm 的棕色至藍灰色斑點</li> <li>腸息肉(intestinal polyps，良) → 腸梗塞 → 大比例發展成胃腸道腺癌</li> <li>60y女性，乳癌的機率高達 50%</li> </ul> <ul> <li>黑色素細胞無明顯增加，但樹突延長</li> </ul> <div class="fbox"> <img src="paste_src/口病-64.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病-65.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病-66.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div>|<br>
-| Incontinentia Pigmenti <br> (色素失調病，Bloch-Sulzberger syndrome )|| <span style="margin:0; color:red">X顯性</span> <br> <code>GENE</code>: NEMO (NFκB Essential Modulator) | 剛出生| <ul> <li>先天免疫 gg</li> <li>CNS (30%)</li> <li>眼睛 (35%): 斜視(strabismus)、眼球震顫(nystagmus)、白內障(cataracts)、視網膜血管異常、視神經萎縮</li> <li>皮膚: 水皰期 → 疣狀期 → 色素過度沉積階段 → 萎縮和脫色階段</li> <li>口腔: 同 EDA mutation</li> </ul>|<br>
-|<sup>|</sup>|<sup>|</sup>|<h4>水皰期</h4> 上皮內裂解，內部充滿嗜酸性球 <h4>疣狀期</h4> 過度角化, acanthosis, papillomatosis <h4>色素過度沉積階段</h4> 皮下結締組織 melanin-containing macrophage，即黑色素失調(melanin incontinence) <img src="paste_src/口病_皮膚-11.png" alt="alt text" style=";background-color: white;padding:0">|<p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Xeroderma Pigmentosum<sup>罕</sup> <br> 著色性乾皮病</td>
+
+<td>體隱性，UV損傷修復不能</td>
+<td>下唇和舌尖(SCC 多)，<br> 很早 <br> (口腔: 20y↓ ; 非黑色素皮膚癌: 10y↓)</td>
+<td colspan="4"><ul> <li>容易轉成 SCC, BCC</li> <li>沒得醫</li> </ul></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">Peutz-Jeghers syndrome</td>
+
+<td>體顯性，<br> 抑癌 <code>GENE</code>: STK11(LKB1)</td>
+<td>兒童早期</td>
+<td colspan="4"><ul> <li>雀斑樣(freckle-like): 陽光無關，發生於手部、開口周圍</li> <li>朱紅區、口腔黏膜、舌頭出現 φ 1~4mm 的棕色至藍灰色斑點</li> <li>腸息肉(intestinal polyps，良) → 腸梗塞 → 大比例發展成胃腸道腺癌</li> <li>60y女性，乳癌的機率高達 50%</li> </ul> <ul> <li>黑色素細胞無明顯增加，但樹突延長</li> </ul> <div class="fbox"> <img src="paste_src/口病-64.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病-65.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病-66.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Incontinentia Pigmenti <br> (色素失調病，Bloch-Sulzberger syndrome )</td>
+
+<td rowspan="2"><span style="margin:0; color:red">X顯性</span> <br> <code>GENE</code>: NEMO (NFκB Essential Modulator)</td>
+<td rowspan="2">剛出生</td>
+<td colspan="4"><ul> <li>先天免疫 gg</li> <li>CNS (30%)</li> <li>眼睛 (35%): 斜視(strabismus)、眼球震顫(nystagmus)、白內障(cataracts)、視網膜血管異常、視神經萎縮</li> <li>皮膚: 水皰期 → 疣狀期 → 色素過度沉積階段 → 萎縮和脫色階段</li> <li>口腔: 同 EDA mutation</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><h4>水皰期</h4> 上皮內裂解，內部充滿嗜酸性球 <h4>疣狀期</h4> 過度角化, acanthosis, papillomatosis <h4>色素過度沉積階段</h4> 皮下結締組織 melanin-containing macrophage，即黑色素失調(melanin incontinence) <img src="paste_src/口病_皮膚-11.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h2 id="hair-follicle–sebaceous-glands">Hair Follicle &amp; Sebaceous glands </h2>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-| Cowden Syndrome <br> (多發性缺陷瘤症候群，Multiple hamartoma syndrome) || <code>GENE</code>: PTEN (腫瘤抑制，20% 測不到) |</p><ul> <li>良性錯構瘤，惡性機率 ↑</li> <li>皮膚</li> <ul> <li>小丘疹(&lt;1mm): <mark>耳口鼻毛囊錯構瘤</mark></li> <li><mark>肢端角化症(acral keratosis)</mark>、掌趾角化病(palmoplantar keratosis)</li> </ul> <li>Thyroid gland: 甲狀腺腫(goiter)、thyroid adenoma</li> <li>乳房纖維囊, 乳腺癌risk ↑</li> <li>消化道錯構息肉</li> <li><mark>多發性口腔丘疹</mark>: 牙齦、舌背和頰黏膜上皮纖維增生</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-78.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-27.png" alt="alt text" style="width:65%;background-color: white;padding:0"></div>|<br>
-|<span style="margin:0; color: Deepskyblue;"> Muir-Torre Syndrome </span>|| DNA mismatch repair 異常， <code>GENE</code>: MSH2(90%), MLH1 | 50-60y, AIDS |<ul> <li>多發性皮膚腫瘤 + 胃腸道惡性腫瘤</li> <li><mark>皮脂腺瘤(Sebaceous adenoma)</mark></li> </ul> <img src="paste_src/口病_皮膚-30.png" alt="alt text" style="width:30%;background-color: white;padding:0">|<br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>皮脂腺囊腫病變(cystic sebaceous lesions): 缺乏表皮連結</li> <li>角化棘皮瘤樣結構的皮脂腺腫瘤(sebaceous tumors with keratoacanthoma-like architecture)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-28.png" alt="alt text" style="width:45%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-29.png" alt="alt text" style="width:45%;background-color: white;padding:0"></div><p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Cowden Syndrome <br> (多發性缺陷瘤症候群，Multiple hamartoma syndrome)</td>
+
+<td><code>GENE</code>: PTEN (腫瘤抑制，20% 測不到)</td>
+<td colspan="5"><ul> <li>良性錯構瘤，惡性機率 ↑</li> <li>皮膚</li> <ul> <li>小丘疹(&lt;1mm): <mark>耳口鼻毛囊錯構瘤</mark></li> <li><mark>肢端角化症(acral keratosis)</mark>、掌趾角化病(palmoplantar keratosis)</li> </ul> <li>Thyroid gland: 甲狀腺腫(goiter)、thyroid adenoma</li> <li>乳房纖維囊, 乳腺癌risk ↑</li> <li>消化道錯構息肉</li> <li><mark>多發性口腔丘疹</mark>: 牙齦、舌背和頰黏膜上皮纖維增生</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-78.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-27.png" alt="alt text" style="width:65%;background-color: white;padding:0"></div></td>
+
+
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2"><span style="margin:0; color: Deepskyblue;"> Muir-Torre Syndrome </span></td>
+
+<td rowspan="2">DNA mismatch repair 異常， <code>GENE</code>: MSH2(90%), MLH1</td>
+<td rowspan="2">50-60y, AIDS</td>
+<td colspan="4"><ul> <li>多發性皮膚腫瘤 + 胃腸道惡性腫瘤</li> <li><mark>皮脂腺瘤(Sebaceous adenoma)</mark></li> </ul> <img src="paste_src/口病_皮膚-30.png" alt="alt text" style="width:30%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>皮脂腺囊腫病變(cystic sebaceous lesions): 缺乏表皮連結</li> <li>角化棘皮瘤樣結構的皮脂腺腫瘤(sebaceous tumors with keratoacanthoma-like architecture)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-28.png" alt="alt text" style="width:45%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-29.png" alt="alt text" style="width:45%;background-color: white;padding:0"></div></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h2 id="上皮裂解">上皮裂解 </h2>
 <p>Acantholytic Disorder</p>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-| Keratosis follicularis (Darier Disease) || 體顯性， ATP2A2 mutation → 細胞內鈣離子幫浦(SERCA2) 異常 → desmosome 異常 | 10-20y | </p><ul> <li>皮膚明顯症狀，口腔輕微</li> <li>多發性紅斑</li> <li>keratin 堆積 → 惡臭</li> <li>指甲出現縱向線條、隆起、疼痛的裂口。</li> <li>口腔: 角化黏膜，平頂丘疹(flat topped papules)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-12.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-13.png" alt="alt text" style="width:25%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-14.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div> <img src="paste_src/口病_皮膚-15.png" alt="alt text" style=";background-color: white;padding:0"><br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>上皮內裂 (acantholysis)</li> <li>Rete ridges 窄長，且呈試管狀。</li> <li>角化不良細胞: corps ronds &amp; grains(類似於穀粒)</li> <li>central keratin plug : keratin 堆積</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-16.png" alt="alt text" style="width:50%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-17.png" alt="alt text" style="width:50%;background-color: white;padding:0"></div><br>
-| Warty Dyskeratoma <br> (疣狀角化不良， <br> Isolated Darier disease) || - | <ul> <li>皮膚: <mark>單發</mark>，老人</li> <li>口腔: 角化黏膜，40y↑</li> </ul>|<ul> <li>保守性切除，預後良好，沒有明顯的惡性潛能</li> <li>組織病理類似 Darier disease，除了無 corps ronds, grains 型態</li> </ul>|<br>
-| <span style="margin:0; color: red;"> Pemphigus <br> 天疱瘡</span> | 自體免疫疾病<br>
-|^|vulgaris (PV，常見)|Ab 打 Desmosomes|50y|<ul> <li>不結疤，眼球不沾黏</li> <li>口腔病變 first come, last go</li> <li>Desmoglein 3: 口內</li> <li>Desmoglein 1: 皮膚表層</li> <li>大水泡，薄水泡，破水泡</li> <li>Nikolsky sign</li> </ul><br>
-|<sup>|</sup>|<sup>|</sup>| <ul> <li>row of tombstones: 只剩 Basal cell 像 Cleft 突出去</li> <li>acantholysis → Tzanck cell (飄落在Celft 中)</li> <li>上皮細胞之間沉積抗體(IgG, IgM)和補體(C3)</li> <ul> <li>濃度與臨床症狀嚴重度相關</li> </ul> </ul> <img src="paste_src/口病_皮膚-35.png" alt="alt text" style=";background-color: white;padding:0">|<br>
-|Paraneoplastic Pemphigus<sup>罕</sup> (PP) <br> 腫瘤誘導性天疱瘡|| <ul> <li>Lymphoma, Chronic lymphocytic leukemia, Castleman disease 患者</li> <li>異常 IL6 → T<sub>FH</sub> → IL-21 → Plasma cell</li> <li>Ab 打 <mark>Plakin family</mark> Desmoglein 1, 3</li> </ul>|| <ul> <li>天疱瘡症狀</li> <li>突發、多發水泡</li> <li>高致死</li> <li>會出現在手掌腳掌</li> <li>嘴唇出血性結痂</li> <li>紅斑(erythema), 瀰漫性不規則潰瘍(diffuse, irregular ulceration)</li> <li>阻塞性細支氣管炎(bronchiolitis o bliterans)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-36.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-37.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-38.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div>|<br>
-|<sup>|</sup>|<sup>|</sup>| <ul> <li>Dermis 慢性發炎浸潤</li> <li><mark>上皮內、下都裂</mark></li> </ul> <img src="paste_src/口病_皮膚-39.png" alt="alt text" style=";background-color: white;padding:0">|<p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2" colspan="2">Keratosis follicularis (Darier Disease)</td>
+
+<td rowspan="2">體顯性， ATP2A2 mutation → 細胞內鈣離子幫浦(SERCA2) 異常 → desmosome 異常</td>
+<td rowspan="2">10-20y</td>
+<td colspan="4"><ul> <li>皮膚明顯症狀，口腔輕微</li> <li>多發性紅斑</li> <li>keratin 堆積 → 惡臭</li> <li>指甲出現縱向線條、隆起、疼痛的裂口。</li> <li>口腔: 角化黏膜，平頂丘疹(flat topped papules)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-12.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-13.png" alt="alt text" style="width:25%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-14.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div> <img src="paste_src/口病_皮膚-15.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>上皮內裂 (acantholysis)</li> <li>Rete ridges 窄長，且呈試管狀。</li> <li>角化不良細胞: corps ronds &amp; grains(類似於穀粒)</li> <li>central keratin plug : keratin 堆積</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-16.png" alt="alt text" style="width:50%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-17.png" alt="alt text" style="width:50%;background-color: white;padding:0"></div></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">Warty Dyskeratoma <br> (疣狀角化不良， <br> Isolated Darier disease)</td>
+
+<td>-</td>
+<td><ul> <li>皮膚: <mark>單發</mark>，老人</li> <li>口腔: 角化黏膜，40y↑</li> </ul></td>
+<td colspan="4"><ul> <li>保守性切除，預後良好，沒有明顯的惡性潛能</li> <li>組織病理類似 Darier disease，除了無 corps ronds, grains 型態</li> </ul></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="3"><span style="margin:0; color: red;"> Pemphigus <br> 天疱瘡</span></td>
+<td colspan="7">自體免疫疾病</td>
+
+
+
+
+
+
+</tr>
+<tr>
+
+<td rowspan="2">vulgaris (PV，常見)</td>
+<td rowspan="2">Ab 打 Desmosomes</td>
+<td rowspan="2">50y</td>
+<td colspan="4"><ul> <li>不結疤，眼球不沾黏</li> <li>口腔病變 first come, last go</li> <li>Desmoglein 3: 口內</li> <li>Desmoglein 1: 皮膚表層</li> <li>大水泡，薄水泡，破水泡</li> <li>Nikolsky sign</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>row of tombstones: 只剩 Basal cell 像 Cleft 突出去</li> <li>acantholysis → Tzanck cell (飄落在Celft 中)</li> <li>上皮細胞之間沉積抗體(IgG, IgM)和補體(C3)</li> <ul> <li>濃度與臨床症狀嚴重度相關</li> </ul> </ul> <img src="paste_src/口病_皮膚-35.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Paraneoplastic Pemphigus<sup>罕</sup> (PP) <br> 腫瘤誘導性天疱瘡</td>
+
+<td rowspan="2" colspan="2"><ul> <li>Lymphoma, Chronic lymphocytic leukemia, Castleman disease 患者</li> <li>異常 IL6 → T<sub>FH</sub> → IL-21 → Plasma cell</li> <li>Ab 打 <mark>Plakin family</mark> Desmoglein 1, 3</li> </ul></td>
+
+<td colspan="4"><ul> <li>天疱瘡症狀</li> <li>突發、多發水泡</li> <li>高致死</li> <li>會出現在手掌腳掌</li> <li>嘴唇出血性結痂</li> <li>紅斑(erythema), 瀰漫性不規則潰瘍(diffuse, irregular ulceration)</li> <li>阻塞性細支氣管炎(bronchiolitis o bliterans)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-36.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-37.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-38.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>Dermis 慢性發炎浸潤</li> <li><mark>上皮內、下都裂</mark></li> </ul> <img src="paste_src/口病_皮膚-39.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <dl>
 <dt>Nikolsky sign</dt>
 <dd>水泡邊緣摸一摸,給一個側方力量,水泡會越來越大</dd>
@@ -500,26 +825,189 @@ html body table .fbox {
 <h2 id="皮下裂解">皮下裂解 </h2>
 <p>Subepidermal Blistering Disease</p>
 <h3 id="泡泡龍寶寶">泡泡龍寶寶 </h3>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-|Epidermolysis Bullosa <br> (大泡性表皮鬆解，泡泡龍寶寶) | 細胞附著蛋白異常 → 異質性遺傳性皮黏膜水皰病變<br>
-|^ | Simplex | keratin 5, 14 | 上皮內裂，輕微 |<br>
-|^| Junctional |</p><ul> <li>laminin-332</li> <li>BP180</li> <li>α6β4</li> </ul> |<ul> <li>hemidesmosome 異常，上皮下裂</li> <li>無 laminin-332: 牙齒與上皮交界異常</li> <li>IEE 刺激 Dental papilla 出問題 → odontoblast, ameloblast 分化 ↓</li> </ul>|<br>
-|^| Dystrophic type |  collagen 7| <h4>Dominant (體顯性)</h4> <ul> <li>輕微，通常不危及生命,但是會造成毀容</li> </ul> <h4>Generalized Recessive (全身隱性)</h4> <ul> <li>病發 10~20 年後，皮膚反覆癒合 → 手套畸形(mittenlike deformity)</li> <li>小口症(microstomia)、舌沾黏(ankyloglossia)</li> <li>cutaneous SCC risk ↑</li> </ul><br>
-|^| Kindler syndrome | hemidesmosomal attachment protein, <br> kindlin-1 | 基底細胞層下方與透明層的界面處裂解 <img src="paste_src/口病_皮膚-32.png" alt="alt text" style="width:40%;background-color: white;padding:0">|<br>
-| Epidermolysis bullosa acquisita (EBA)|| <ul> <li>後天，自體免疫</li> <li>collagen 7</li> </ul> |手背|<ul> <li>類似 Dystrophic type，結疤</li> <li>粟粒疹(Milia)</li> <li>口腔病灶 (50%)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-56.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-55.png" alt="alt text" style="width:55%;background-color: white;padding:0"></div>|<br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>是溫和、無細胞上皮下囊泡</li> <ul> <li><mark>無明顯發炎細胞浸潤</mark></li> </ul> <li>切片泡飽和鹽水 → 上皮裂 → 人工水泡</li> <li>IgG 在 CT 頂</li> </ul> <img src="paste_src/口病_皮膚-57.png" alt="alt text" style=";background-color: white;padding:0">|<br>
-| Angina Bullosa Hemorrhagica ||創傷、類固醇相關| 軟顎，中年 |<ul> <li>不會產生疤痕</li> <li>滿血液的表皮下水泡</li> </ul> <img src="paste_src/口病_皮膚-58.png" alt="alt text" style="width:40%;background-color: white;padding:0"><p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="5">Epidermolysis Bullosa <br> (大泡性表皮鬆解，泡泡龍寶寶)</td>
+<td colspan="7">細胞附著蛋白異常 → 異質性遺傳性皮黏膜水皰病變</td>
+
+
+
+
+
+
+</tr>
+<tr>
+
+<td>Simplex</td>
+<td>keratin 5, 14</td>
+<td colspan="5">上皮內裂，輕微</td>
+
+
+
+
+</tr>
+<tr>
+
+<td>Junctional</td>
+<td><ul> <li>laminin-332</li> <li>BP180</li> <li>α6β4</li> </ul></td>
+<td colspan="5"><ul> <li>hemidesmosome 異常，上皮下裂</li> <li>無 laminin-332: 牙齒與上皮交界異常</li> <li>IEE 刺激 Dental papilla 出問題 → odontoblast, ameloblast 分化 ↓</li> </ul></td>
+
+
+
+
+</tr>
+<tr>
+
+<td>Dystrophic type</td>
+<td>collagen 7</td>
+<td colspan="5"><h4>Dominant (體顯性)</h4> <ul> <li>輕微，通常不危及生命,但是會造成毀容</li> </ul> <h4>Generalized Recessive (全身隱性)</h4> <ul> <li>病發 10~20 年後，皮膚反覆癒合 → 手套畸形(mittenlike deformity)</li> <li>小口症(microstomia)、舌沾黏(ankyloglossia)</li> <li>cutaneous SCC risk ↑</li> </ul></td>
+
+
+
+
+</tr>
+<tr>
+
+<td>Kindler syndrome</td>
+<td>hemidesmosomal attachment protein, <br> kindlin-1</td>
+<td colspan="5">基底細胞層下方與透明層的界面處裂解 <img src="paste_src/口病_皮膚-32.png" alt="alt text" style="width:40%;background-color: white;padding:0"></td>
+
+
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Epidermolysis bullosa acquisita (EBA)</td>
+
+<td rowspan="2"><ul> <li>後天，自體免疫</li> <li>collagen 7</li> </ul></td>
+<td rowspan="2">手背</td>
+<td colspan="4"><ul> <li>類似 Dystrophic type，結疤</li> <li>粟粒疹(Milia)</li> <li>口腔病灶 (50%)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-56.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-55.png" alt="alt text" style="width:55%;background-color: white;padding:0"></div></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>是溫和、無細胞上皮下囊泡</li> <ul> <li><mark>無明顯發炎細胞浸潤</mark></li> </ul> <li>切片泡飽和鹽水 → 上皮裂 → 人工水泡</li> <li>IgG 在 CT 頂</li> </ul> <img src="paste_src/口病_皮膚-57.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">Angina Bullosa Hemorrhagica</td>
+
+<td>創傷、類固醇相關</td>
+<td>軟顎，中年</td>
+<td colspan="4"><ul> <li>不會產生疤痕</li> <li>滿血液的表皮下水泡</li> </ul> <img src="paste_src/口病_皮膚-58.png" alt="alt text" style="width:40%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h3 id="類天皰瘡">類天皰瘡 </h3>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-| <span style="margin:0; color: red;"> Mucous Membrane Pemphigoid  <br>(黏膜類天皰瘡， <br>Cicatricial pemphigoid，瘢痕性類天皰瘡)</span>|| </p><ul> <li>後天</li> <li>自體免疫: α6, laminin-332</li> </ul> | 50-60y，口腔, 各式黏膜 | <ul> <li>慢性，很少自限性 (會越來越嚴重)</li> <li>口內堅固 vesicles/ bullae，α6 型只有口內病灶</li> <li>皮膚結疤，但口內不會 → 無小口症</li> <li>脫屑性牙齦炎(desquamative gingivitis)</li> <li>眼球沾黏</li> <li>陰道黏膜損傷 → 性交疼痛(dyspareunia)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-40.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-41.png" alt="alt text" style="width:40%;background-color: white;padding:0"> </div><br>
-|<sup>|</sup>|<sup>|</sup>| <ul> <li>上皮和CT完全分開，之間有 Neutrophil</li> <li>IgG, C3 (主)； IgA, IgM</li> <ul> <li>抽血 Ag 測不太到</li> </ul> </ul> <img src="paste_src/口病_皮膚-42.png" alt="alt text" style="width:35%;background-color: white;padding:0"> |<br>
-| <span style="margin:0; color: red;"> Bullous Pemphigoid (BP) <br> 大皰性類天疱瘡 </span> || <ul> <li>後天</li> <li>自體免疫: BP180, BP230 (basement membrane)</li> </ul> | 75-80y | <ul> <li>最常見自體免疫性水皰病，緩解期後復發 (時好時壞)</li> <li>皮膚無疤</li> <li>瘙癢(pruritus) → 多發性硬痂大皰 (tense bullae)</li> </ul><br>
-|<sup>|</sup>|<sup>|</sup>| <ul> <li>上皮和CT完全分開，之間有 eosinophil</li> <li>口內少見 (10-20%)</li> <li>抽血 Ag (+)，但抗體濃度與疾病活動不相關</li> </ul> <img src="paste_src/口病_皮膚-44.png" alt="alt text" style="width:35%;background-color: white;padding:0">|<br>
-| Linear IgA Bullous Disease (LAD) <br> 線狀 IgA 大皰性皮膚病 || <ul> <li>後天</li> <li>自體免疫</li> <li>後天</li> <li>BP180 (細胞外結構 LAD1)</li> </ul>|青少年, 老人| <ul> <li>皮膚: string of beads sign (新病灶圍著舊的)</li> <li>口腔: 糜爛、水皰和慢性潰瘍</li> <li>一點結疤</li> <li>basement membrane IgA 線性沉積</li> <li>Lamina propia 有 Neutrophil 浸潤</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-47.png" alt="alt text" style="width:32%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-45.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-48.png" alt="alt text" style="width:32%;background-color: white;padding:0"> </div>|<br>
-|  Dermatitis Herpetiformis (DH) <br> 疱疹性皮膚炎|| <ul> <li>後天</li> <li>IgA 結合 trans-glu-ase</li> <li><code>GENE</code>: HLA-DQ2 (90%), <br> HLA-DQ8 (other)</li> </ul>| 青壯年和中年人 |<ul> <li>麩質敏感性腸病、乳糜瀉皮膚表現</li> <li>時好時壞，如 BP</li> <li>皮膚: 極度瘙癢，對稱</li> <li>口腔病變不常見</li> </ul><br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>Dermis papilla 有 Neutrophil → 輪廓的消失, nuclear dust</li> <li>Dermis papilla顆粒狀 IgA, C3 沉積物</li> <li>CT 發炎細胞浸潤</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-49.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-50.png" alt="alt text" style="width:32%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-51.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div><p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2" colspan="2"><span style="margin:0; color: red;"> Mucous Membrane Pemphigoid  <br>(黏膜類天皰瘡， <br>Cicatricial pemphigoid，瘢痕性類天皰瘡)</span></td>
+
+<td rowspan="2"><ul> <li>後天</li> <li>自體免疫: α6, laminin-332</li> </ul></td>
+<td rowspan="2">50-60y，口腔, 各式黏膜</td>
+<td colspan="4"><ul> <li>慢性，很少自限性 (會越來越嚴重)</li> <li>口內堅固 vesicles/ bullae，α6 型只有口內病灶</li> <li>皮膚結疤，但口內不會 → 無小口症</li> <li>脫屑性牙齦炎(desquamative gingivitis)</li> <li>眼球沾黏</li> <li>陰道黏膜損傷 → 性交疼痛(dyspareunia)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-40.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-41.png" alt="alt text" style="width:40%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>上皮和CT完全分開，之間有 Neutrophil</li> <li>IgG, C3 (主)； IgA, IgM</li> <ul> <li>抽血 Ag 測不太到</li> </ul> </ul> <img src="paste_src/口病_皮膚-42.png" alt="alt text" style="width:35%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2"><span style="margin:0; color: red;"> Bullous Pemphigoid (BP) <br> 大皰性類天疱瘡 </span></td>
+
+<td rowspan="2"><ul> <li>後天</li> <li>自體免疫: BP180, BP230 (basement membrane)</li> </ul></td>
+<td rowspan="2">75-80y</td>
+<td colspan="4"><ul> <li>最常見自體免疫性水皰病，緩解期後復發 (時好時壞)</li> <li>皮膚無疤</li> <li>瘙癢(pruritus) → 多發性硬痂大皰 (tense bullae)</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>上皮和CT完全分開，之間有 eosinophil</li> <li>口內少見 (10-20%)</li> <li>抽血 Ag (+)，但抗體濃度與疾病活動不相關</li> </ul> <img src="paste_src/口病_皮膚-44.png" alt="alt text" style="width:35%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">Linear IgA Bullous Disease (LAD) <br> 線狀 IgA 大皰性皮膚病</td>
+
+<td><ul> <li>後天</li> <li>自體免疫</li> <li>後天</li> <li>BP180 (細胞外結構 LAD1)</li> </ul></td>
+<td>青少年, 老人</td>
+<td colspan="4"><ul> <li>皮膚: string of beads sign (新病灶圍著舊的)</li> <li>口腔: 糜爛、水皰和慢性潰瘍</li> <li>一點結疤</li> <li>basement membrane IgA 線性沉積</li> <li>Lamina propia 有 Neutrophil 浸潤</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-47.png" alt="alt text" style="width:32%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-45.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-48.png" alt="alt text" style="width:32%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Dermatitis Herpetiformis (DH) <br> 疱疹性皮膚炎</td>
+
+<td rowspan="2"><ul> <li>後天</li> <li>IgA 結合 trans-glu-ase</li> <li><code>GENE</code>: HLA-DQ2 (90%), <br> HLA-DQ8 (other)</li> </ul></td>
+<td rowspan="2">青壯年和中年人</td>
+<td colspan="4"><ul> <li>麩質敏感性腸病、乳糜瀉皮膚表現</li> <li>時好時壞，如 BP</li> <li>皮膚: 極度瘙癢，對稱</li> <li>口腔病變不常見</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>Dermis papilla 有 Neutrophil → 輪廓的消失, nuclear dust</li> <li>Dermis papilla顆粒狀 IgA, C3 沉積物</li> <li>CT 發炎細胞浸潤</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-49.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-50.png" alt="alt text" style="width:32%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-51.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <div class="admonition info">
 <p class="admonition-title"> hemidesmosome</p>
 <blockquote>
@@ -539,22 +1027,162 @@ type VII collagen = BP290</p>
 <ul>
 <li>Basal cell 退化</li>
 </ul>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-| <span style="margin:0; color: red;"> Lichen Planus (LP) <br> 扁平苔癬</span> ||壓力、甲狀腺低落？|中年，口腔黏膜單發|</p><ul> <li>慢性，相對常見</li> <li>皮膚: 蕾絲狀白線網格(Wickham striae)丘疹</li> </ul>|<br>
-|<sup>||</sup>|^|<blockquote>無症狀</blockquote> <h4>網狀型 (Reticular form )</h4> <ul> <li>最常見</li> <li>可能 post-inflammatory melanosis</li> <ul> <li>IL-1 刺激 melanocytes 分泌 melanin</li> </ul> <li>交錯白線圖案 (Wickham striae)</li> </ul> <h4>丘疹型 (Papular type)</h4> <ul> <li>小且密的過度角化丘疹</li> </ul> <h4>斑塊型 (Plaque type)</h4> <ul> <li>舌背有白斑</li> <li>buccal mucosa 有 Wickham striae</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-69.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-70.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div> <blockquote>有症狀</blockquote> <h4>Erosive </h4> <ul> <li>lesion 疼痛灼熱</li> <li>萎縮性紅斑</li> <li>萎縮和潰爛局限於牙齦 → 脫屑性牙齦炎(desquamative gingivitis)</li> </ul> <img src="paste_src/口病_皮膚-71.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <h4>Bullous form</h4> <ul> <li>上皮分離 → 大皰性扁平苔蘚(bullous lichen planus)</li> </ul> <h4>Ulcerative form </h4> <ul> <li>深層侵犯</li> <li>淺灰色/黃色纖維蛋白偽膜覆蓋在黏膜(潰瘍)</li> </ul>|<br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>正角化和角化不全</li> <li>只能 lymphocytes 浸潤 (狹義)</li> <li>上皮和結締組織交界</li> <ul> <li>bandlike T cell</li> <li>Civatte body: 均質，退化的 keratinocyte</li> </ul> <li>basal cell hydropic degeneration</li> <ul> <li>saw-toothed Rete ridge</li> </ul> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-73.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-72.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div>|<br>
-| Lichenoid Contact Reaction || amalgam (半抗原) || LP，但只出現在有 amalgam 的位置、移除 amalgam 即消失。 |<br>
-| Lichenoid Drug Reaction || 藥物 || 非直接性 IgG 螢光染色 → string of pearls (沿著複層鱗狀上皮的 basal cell layer 細胞膜) <img src="paste_src/口病_皮膚-74.png" alt="alt text" style="width:35%;background-color: white;padding:0">|<br>
-| <span style="margin:0; color: red;"> Chronic Ulcerative Stomatitis (CUS) <br> 慢性潰瘍性口炎 </span>|| 自體免疫: p63 的異構體| 60y | <ul> <li>LP區分</li> <ul> <li><mark>類固醇無效</mark>， 奎寧治療</li> <li>條狀角化不明顯</li> <li>皮膚病變少</li> </ul> <li>脫屑性牙齦炎</li> <li>時好時壞，口腔黏膜遊走且不留疤</li> <li>慢性 → <mark>plasma cells</mark> + lymphocytes</li> <li>IgG 在 S.S.epi. 的 basal and parabasal regions 細胞核中</li> <li>ANAs(+)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-75.png" alt="alt text" style="width:33%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-76.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-77.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div>|<br>
-|Graft-Versus-Host Disease (GVHD) || 骨髓移植 | 舌頭、唇頰側黏膜 |<ul> <li>急性或慢性都常出現口內病變</li> <li>條狀角化，類似 LP</li> <li>口腔黏膜灼熱感, 萎縮</li> <li>SCC risk</li> </ul>|<br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>Hyperorthokeratosis</li> <li>short and pointed rete ridge</li> <li>basal cell layer 水腫退化</li> <li>嚴重病例 Collagen 沈積 → 擠壓 acinar → 口乾</li> </ul> <img src="paste_src/口病_皮膚-79.png" alt="alt text" style="width:40%;background-color: white;padding:0"> |<br>
-|  Erythema Multiforme (EM)<br>多形性紅斑 || HSV, 肺炎黴漿菌 (Mycoplasma pneumoniae) 相關 |20-30y, 黏膜(口腔) | <ul> <li>急性、發作快</li> <li>自限性(self-limiting): 2-6 周</li> <li>20%春秋復發 → HSV</li> <li>同心圓斑環 (target or bull’s-eye，<mark>四肢開始</mark>)</li> <li>結膜可能影響</li> <li>唇朱紅區出血性結痂 (類似 PP)</li> <li>口腔紅斑 → 大而淺、邊界不規則的潰瘍</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-62.png" alt="alt text" style="width:20%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-59.png" alt="alt text" style="width:25%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-60.png" alt="alt text" style="width:20%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-61.png" alt="alt text" style="width:25%;background-color: white;padding:0"> </div><br>
-|<sup>||</sup>|^|<ul> <li>上皮上下都裂</li> <li><mark>不太會有角化</mark> → 紅斑</li> <li>Basal cell hydropic degeneration 裂開 → 海綿狀囊泡</li> <li>輕、中度表淺真皮 Lymphocyte 浸潤</li> <li>Satellite cell 壞死</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-64.png" alt="alt text" style="width:45%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-63.png" alt="alt text" style="width:45%;background-color: white;padding:0"></div><br>
-| EM minor|| ^| 只有皮膚，雙側對稱 | <ul> <li>四肢末端上有輕微的隆起、圓形的暗紅色斑塊</li> </ul>|<br>
-| <span style="margin:0; color: red;"> Stevens-Johnson Syndrome </span>|| <ul> <li>藥物暴露</li> <li>carbamazepine: HLA-B<em>1502</em></li><em> </em><li><em>allopurinol: HLA-B</em>5801</li> </ul> | 年輕 | <ul> <li>病變面積&lt;10%</li> <li>flu like</li> <li>扁平紅斑 (<mark>軀幹開始</mark>) →</li> <li>皮膚瀰漫性脫落(diffuse sloughing), 鬆弛性大皰 (flaccid bullae)</li> <li>Nikolsky sign(+)</li> <li>所有黏膜病變</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-65.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-66.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-67.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div>|<br>
-|<sup>||</sup>|^|<ul> <li>上皮下裂</li> <li>basal keratinocytes 退化、壞死</li> <li>慢性發炎細胞稀疏</li> </ul> <img src="paste_src/口病_皮膚-68.png" alt="alt text" style="width:40%;background-color: white;padding:0"><br>
-| <span style="margin:0; color: red;"> Toxic Epidermal Necrolysis</span> ||^| 60y ↑ | <ul> <li>Stevens-Johnson Syndrome，病變面積&gt;30%</li> </ul>|<p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3" colspan="2"><span style="margin:0; color: red;"> Lichen Planus (LP) <br> 扁平苔癬</span></td>
+
+<td rowspan="3">壓力、甲狀腺低落？</td>
+<td rowspan="3">中年，口腔黏膜單發</td>
+<td colspan="4"><ul> <li>慢性，相對常見</li> <li>皮膚: 蕾絲狀白線網格(Wickham striae)丘疹</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><blockquote>無症狀</blockquote> <h4>網狀型 (Reticular form )</h4> <ul> <li>最常見</li> <li>可能 post-inflammatory melanosis</li> <ul> <li>IL-1 刺激 melanocytes 分泌 melanin</li> </ul> <li>交錯白線圖案 (Wickham striae)</li> </ul> <h4>丘疹型 (Papular type)</h4> <ul> <li>小且密的過度角化丘疹</li> </ul> <h4>斑塊型 (Plaque type)</h4> <ul> <li>舌背有白斑</li> <li>buccal mucosa 有 Wickham striae</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-69.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-70.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div> <blockquote>有症狀</blockquote> <h4>Erosive </h4> <ul> <li>lesion 疼痛灼熱</li> <li>萎縮性紅斑</li> <li>萎縮和潰爛局限於牙齦 → 脫屑性牙齦炎(desquamative gingivitis)</li> </ul> <img src="paste_src/口病_皮膚-71.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <h4>Bullous form</h4> <ul> <li>上皮分離 → 大皰性扁平苔蘚(bullous lichen planus)</li> </ul> <h4>Ulcerative form </h4> <ul> <li>深層侵犯</li> <li>淺灰色/黃色纖維蛋白偽膜覆蓋在黏膜(潰瘍)</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>正角化和角化不全</li> <li>只能 lymphocytes 浸潤 (狹義)</li> <li>上皮和結締組織交界</li> <ul> <li>bandlike T cell</li> <li>Civatte body: 均質，退化的 keratinocyte</li> </ul> <li>basal cell hydropic degeneration</li> <ul> <li>saw-toothed Rete ridge</li> </ul> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-73.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-72.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">Lichenoid Contact Reaction</td>
+
+<td colspan="2">amalgam (半抗原)</td>
+
+<td colspan="4">LP，但只出現在有 amalgam 的位置、移除 amalgam 即消失。</td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">Lichenoid Drug Reaction</td>
+
+<td colspan="2">藥物</td>
+
+<td colspan="4">非直接性 IgG 螢光染色 → string of pearls (沿著複層鱗狀上皮的 basal cell layer 細胞膜) <img src="paste_src/口病_皮膚-74.png" alt="alt text" style="width:35%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: red;"> Chronic Ulcerative Stomatitis (CUS) <br> 慢性潰瘍性口炎 </span></td>
+
+<td>自體免疫: p63 的異構體</td>
+<td>60y</td>
+<td colspan="4"><ul> <li>LP區分</li> <ul> <li><mark>類固醇無效</mark>， 奎寧治療</li> <li>條狀角化不明顯</li> <li>皮膚病變少</li> </ul> <li>脫屑性牙齦炎</li> <li>時好時壞，口腔黏膜遊走且不留疤</li> <li>慢性 → <mark>plasma cells</mark> + lymphocytes</li> <li>IgG 在 S.S.epi. 的 basal and parabasal regions 細胞核中</li> <li>ANAs(+)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-75.png" alt="alt text" style="width:33%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-76.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-77.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Graft-Versus-Host Disease (GVHD)</td>
+
+<td rowspan="2">骨髓移植</td>
+<td rowspan="2">舌頭、唇頰側黏膜</td>
+<td colspan="4"><ul> <li>急性或慢性都常出現口內病變</li> <li>條狀角化，類似 LP</li> <li>口腔黏膜灼熱感, 萎縮</li> <li>SCC risk</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>Hyperorthokeratosis</li> <li>short and pointed rete ridge</li> <li>basal cell layer 水腫退化</li> <li>嚴重病例 Collagen 沈積 → 擠壓 acinar → 口乾</li> </ul> <img src="paste_src/口病_皮膚-79.png" alt="alt text" style="width:40%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Erythema Multiforme (EM)<br>多形性紅斑</td>
+
+<td rowspan="3">HSV, 肺炎黴漿菌 (Mycoplasma pneumoniae) 相關</td>
+<td rowspan="2">20-30y, 黏膜(口腔)</td>
+<td colspan="4"><ul> <li>急性、發作快</li> <li>自限性(self-limiting): 2-6 周</li> <li>20%春秋復發 → HSV</li> <li>同心圓斑環 (target or bull’s-eye，<mark>四肢開始</mark>)</li> <li>結膜可能影響</li> <li>唇朱紅區出血性結痂 (類似 PP)</li> <li>口腔紅斑 → 大而淺、邊界不規則的潰瘍</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-62.png" alt="alt text" style="width:20%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-59.png" alt="alt text" style="width:25%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-60.png" alt="alt text" style="width:20%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-61.png" alt="alt text" style="width:25%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>上皮上下都裂</li> <li><mark>不太會有角化</mark> → 紅斑</li> <li>Basal cell hydropic degeneration 裂開 → 海綿狀囊泡</li> <li>輕、中度表淺真皮 Lymphocyte 浸潤</li> <li>Satellite cell 壞死</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-64.png" alt="alt text" style="width:45%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-63.png" alt="alt text" style="width:45%;background-color: white;padding:0"></div></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">EM minor</td>
+
+
+<td>只有皮膚，雙側對稱</td>
+<td colspan="4"><ul> <li>四肢末端上有輕微的隆起、圓形的暗紅色斑塊</li> </ul></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2"><span style="margin:0; color: red;"> Stevens-Johnson Syndrome </span></td>
+
+<td rowspan="3"><ul> <li>藥物暴露</li> <li>carbamazepine: HLA-B<em>1502</em></li><em> </em><li><em>allopurinol: HLA-B</em>5801</li> </ul></td>
+<td rowspan="2">年輕</td>
+<td colspan="4"><ul> <li>病變面積&lt;10%</li> <li>flu like</li> <li>扁平紅斑 (<mark>軀幹開始</mark>) →</li> <li>皮膚瀰漫性脫落(diffuse sloughing), 鬆弛性大皰 (flaccid bullae)</li> <li>Nikolsky sign(+)</li> <li>所有黏膜病變</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-65.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-66.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-67.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>上皮下裂</li> <li>basal keratinocytes 退化、壞死</li> <li>慢性發炎細胞稀疏</li> </ul> <img src="paste_src/口病_皮膚-68.png" alt="alt text" style="width:40%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: red;"> Toxic Epidermal Necrolysis</span></td>
+
+
+<td>60y ↑</td>
+<td colspan="4"><ul> <li>Stevens-Johnson Syndrome，病變面積&gt;30%</li> </ul></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h3 id="lupus-erythematosus-le-紅斑性狼瘡">Lupus Erythematosus (LE) 紅斑性狼瘡 </h3>
 <ul>
 <li>
@@ -575,11 +1203,44 @@ type VII collagen = BP290</p>
 </ul>
 </li>
 </ul>
-<p>|名稱||GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-|  <span style="margin:0; color: red;"> 系統性紅斑狼瘡 (SLE) </span>|| 31y |</p><ul> <li>蝴蝶斑</li> <li>太陽照射更嚴重</li> <li>腎衰竭 (40-50%)</li> <li>pericarditis</li> <li>狼瘡性唇炎 lupus cheilitis</li> <li>口腔(5-25%): 硬顎、頰黏膜和 牙齦</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-80.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-81.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-82.png" alt="alt text" style="width:30%;background-color: white;padding:0"></div>|<br>
-| <span style="margin:0; color: red;"> Chronic cutaneous (CCLE) </span>|| 侷限在皮膚、黏膜表面|<ul> <li>口腔、皮膚病變同時發生。</li> <li>皮膚: 圓盤狀紅斑，光敏性，<mark>有疤痕</mark></li> <li>口腔: 中心萎縮、潰瘍 → 白色放射紋路</li> </ul> <img src="paste_src/口病_皮膚-83.png" alt="alt text" style="width:35%;background-color: white;padding:0">|<br>
-| <span style="margin:0; color: red;"> Subacute cutaneous (SCLE)</span> ||-|<ul> <li>SLE, CCLE 之間</li> <li>光敏性皮膚病灶，<mark>無疤痕</mark></li> <li>口腔類似 CCLE</li> </ul> <img src="paste_src/口病_皮膚-84.png" alt="alt text" style="width:35%;background-color: white;padding:0">|<p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>GLA</th>
+<th colspan="3">特徵</th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2"><span style="margin:0; color: red;"> 系統性紅斑狼瘡 (SLE) </span></td>
+
+<td>31y</td>
+<td colspan="3"><ul> <li>蝴蝶斑</li> <li>太陽照射更嚴重</li> <li>腎衰竭 (40-50%)</li> <li>pericarditis</li> <li>狼瘡性唇炎 lupus cheilitis</li> <li>口腔(5-25%): 硬顎、頰黏膜和 牙齦</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-80.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-81.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-82.png" alt="alt text" style="width:30%;background-color: white;padding:0"></div></td>
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: red;"> Chronic cutaneous (CCLE) </span></td>
+
+<td>侷限在皮膚、黏膜表面</td>
+<td colspan="3"><ul> <li>口腔、皮膚病變同時發生。</li> <li>皮膚: 圓盤狀紅斑，光敏性，<mark>有疤痕</mark></li> <li>口腔: 中心萎縮、潰瘍 → 白色放射紋路</li> </ul> <img src="paste_src/口病_皮膚-83.png" alt="alt text" style="width:35%;background-color: white;padding:0"></td>
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: red;"> Subacute cutaneous (SCLE)</span></td>
+
+<td>-</td>
+<td colspan="3"><ul> <li>SLE, CCLE 之間</li> <li>光敏性皮膚病灶，<mark>無疤痕</mark></li> <li>口腔類似 CCLE</li> </ul> <img src="paste_src/口病_皮膚-84.png" alt="alt text" style="width:35%;background-color: white;padding:0"></td>
+
+
+</tr>
+</tbody>
+</table></div>
 <h4 id="組織">組織 </h4>
 <ul>
 <li>
@@ -626,32 +1287,227 @@ type VII collagen = BP290</p>
 <blockquote>
 <p>Psoriasiform Dermatitis</p>
 </blockquote>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-| Psoriasis <br> 牛皮癬|| </p><ul> <li><code>GENE</code>: PSORS1 (HLA-Cw6 的等位基因)</li> <li>Type IV 過敏: T<sub>H17</sub>打 keratinocyte</li> </ul>| 20-30y，頭皮、手肘和膝蓋| <ul> <li>夏季改善，冬季惡化</li> <li>紅底，銀灰皮削，無症狀(少數乾癢)</li> <li>關節炎(10%)，影響 TMJ</li> <li>牙周病略為關</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-92.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-93.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div>|<br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>hyperkeratosis, Rete ridge 延長</li> <li>角蛋白(parakeratin)異常 → 角蛋白層 neutrophil 聚集</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-95.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-94.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div><br>
-| Erythema Migrans<sup>良</sup> <br> 游移性紅斑，地圖舌 || 都沒啥相關 |多到少: <ol> <li>舌背前 2/3</li> <li>buccal, labial mucosa</li> <li>軟顎或口底</li> </ol>|<ul> <li>紅色: 絲狀乳頭去角化</li> <li>psoriasis 組織特徵</li> <li>血檢</li> <ul> <li>== HLA-Cw6 ==</li> </ul> <li><span style="margin:0; color: gray;"> 部分學者認為牛皮蘚、乾蘚最常見的症狀就是地圖舌</span></li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-89.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-90.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div> |<br>
-| <span style="margin:0; color: Deepskyblue;"> Reactive Arthritis (RA) <br> 反應性關節炎 </span>|| 可能有免疫介導| -| <ul> <li>細菌性痢疾 (沙眼衣原體 Chlamydia trachomatis )的繼發疾病</li> <li>皮膚黏膜表現: 非淋病性尿道炎 + 結膜炎 + 關節炎</li> <ul> <li>環狀龜頭炎</li> </ul> <li>HLA-B27+</li> <li>psoriasis 組織特徵</li> </ul> <img src="paste_src/口病_皮膚-114.png" alt="alt text" style=";background-color: white;padding:0">|<p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2" colspan="2">Psoriasis <br> 牛皮癬</td>
+
+<td rowspan="2"><ul> <li><code>GENE</code>: PSORS1 (HLA-Cw6 的等位基因)</li> <li>Type IV 過敏: T<sub>H17</sub>打 keratinocyte</li> </ul></td>
+<td rowspan="2">20-30y，頭皮、手肘和膝蓋</td>
+<td colspan="4"><ul> <li>夏季改善，冬季惡化</li> <li>紅底，銀灰皮削，無症狀(少數乾癢)</li> <li>關節炎(10%)，影響 TMJ</li> <li>牙周病略為關</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-92.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-93.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>hyperkeratosis, Rete ridge 延長</li> <li>角蛋白(parakeratin)異常 → 角蛋白層 neutrophil 聚集</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-95.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-94.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">Erythema Migrans<sup>良</sup> <br> 游移性紅斑，地圖舌</td>
+
+<td>都沒啥相關</td>
+<td>多到少: <ol> <li>舌背前 2/3</li> <li>buccal, labial mucosa</li> <li>軟顎或口底</li> </ol></td>
+<td colspan="4"><ul> <li>紅色: 絲狀乳頭去角化</li> <li>psoriasis 組織特徵</li> <li>血檢</li> <ul> <li>== HLA-Cw6 ==</li> </ul> <li><span style="margin:0; color: gray;"> 部分學者認為牛皮蘚、乾蘚最常見的症狀就是地圖舌</span></li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-89.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-90.png" alt="alt text" style="width:40%;background-color: white;padding:0"></div></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: Deepskyblue;"> Reactive Arthritis (RA) <br> 反應性關節炎 </span></td>
+
+<td>可能有免疫介導</td>
+<td>-</td>
+<td colspan="4"><ul> <li>細菌性痢疾 (沙眼衣原體 Chlamydia trachomatis )的繼發疾病</li> <li>皮膚黏膜表現: 非淋病性尿道炎 + 結膜炎 + 關節炎</li> <ul> <li>環狀龜頭炎</li> </ul> <li>HLA-B27+</li> <li>psoriasis 組織特徵</li> </ul> <img src="paste_src/口病_皮膚-114.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h2 id="collagen-and-elastic-tissue">Collagen and Elastic Tissue </h2>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-|Ehlers-Danlos Syndrome || 體顯性 (80%) <br> Type V collagen <br> <code>GENE</code>: COL5A1, COL5A2 |-| </p><h4>Classical type</h4> <ul> <li>表皮彈性過高(Hyperelasticity of the skin)</li> <li>papyraceous scarring(薄如紙的瘢痕組織)</li> <li>牙齒: 畸形、大Pulp stone, 牙根牙釉質發育不全</li> </ul>|<br>
-|<sup>|</sup>|<sup>|</sup>|<h4>Hypermobility type </h4> <ul> <li>關節度變大</li> <li>Scar 不明顯</li> </ul>|<br>
-|<sup>|</sup>|<sup>|</sup>|<h4>Vascular/ ecchymotic type</h4> <ul> <li>Collagen III 異常</li> <li>瘀血, 動脈瘤</li> </ul>|<br>
-|<sup>|</sup>|<sup>|</sup>|<h4>type VIII<sup>罕</sup></h4> <ul> <li>較早的牙周病,基因為 C1R and C1S</li> </ul>|<br>
-Marfan’s syndrome || <code>GENE</code>: FBN1 (fibrillin-1，肌原纖維，影響 Collagen) | - |<ul> <li>長四肢、大手掌、長手指</li> <li>Gorlin sign: 舌頭碰鼻尖</li> <li>鷄胸症(pectus carinatum): 胸骨突出</li> <li>漏斗胸(pectus excavatum): 胸骨後突</li> <li>背部綫條筆直</li> <li>二尖瓣脫垂(mitral valve prolapse)</li> <li>動脈瘤(aneurysm)</li> <li>必須給予術前抗生素</li> </ul>|<br>
-|  Tuberous Sclerosis <br> (結節型硬化症， Epilolianuria) || 體顯性， <br> <code>GENE</code>: TSC1, TSC2 | -| <ul> <li>緻密的纖維結締組織增生</li> <ul> <li>下顎 radiolucent lesion</li> <li>血管纖維瘤(angiofibroma): 鼻翼, 指甲旁</li> </ul> </ul> <img src="paste_src/口病_皮膚-19.png" alt="alt text" style=";background-color: white;padding:0"> <ul> <li>結締組織錯構瘤</li> <ul> <li>Shagreen patches</li> <li>Ash-leaf spots: Ash-leaf spots</li> <li>CNS: radiopaque lesion, potato like 增生</li> </ul> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-20.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-25.png" alt="alt text" style="width:25%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-24.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div> <ul> <li>血管平滑肌脂肪瘤<sup>良</sup> (angiomyolipoma): 腎臟，雙側</li> <li>CNS: 癲癇(70%), 智能障礙(30%)</li> <li>心臟橫紋肌瘤<sup>良</sup> (cardiac rhabdomyoma)</li> </ul><br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>enamel pitting: 恆齒前牙</li> <li>多發性的纖維丘疹(Multiple fibrous papules)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-22.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-23.png" alt="alt text" style="width:40%;background-color: white;padding:0"> </div><br>
-|Proteus syndrome || <code>GENE</code>:  AKT1 (PKB related) | - |<ul> <li>sporadic(散發性,非遺傳性)</li> <li>骨骼異常增大</li> <ul> <li>巨頭、巨指、長骨過度生長</li> <li>脊柱側彎(scoliosis)</li> <li>顱外骨疣(cranial exostoses): 外耳、鼻樑、alveolar ridge</li> </ul> <li>moccasin foot: 足部軟組織過度生長</li> <li>龐狀表皮痣(verrucous epidermal nevi)</li> <li>皮下病變</li> <ul> <li>脂肪瘤, 血管瘤, 淋巴管瘤</li> <li>皮下和深部軟組織錯搆瘤</li> </ul> <li>血管異常</li> <ul> <li>多發性鮮紅斑痣(multiple port wine stains)</li> <li>靜脈曲張(varicose veins)</li> </ul> </ul> <img src="paste_src/口病_皮膚-26.png" alt="alt text" style="width:40%;background-color: white;padding:0"><p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="4" colspan="2">Ehlers-Danlos Syndrome</td>
+
+<td rowspan="4">體顯性 (80%) <br> Type V collagen <br> <code>GENE</code>: COL5A1, COL5A2</td>
+<td rowspan="4">-</td>
+<td colspan="4"><h4>Classical type</h4> <ul> <li>表皮彈性過高(Hyperelasticity of the skin)</li> <li>papyraceous scarring(薄如紙的瘢痕組織)</li> <li>牙齒: 畸形、大Pulp stone, 牙根牙釉質發育不全</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><h4>Hypermobility type </h4> <ul> <li>關節度變大</li> <li>Scar 不明顯</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><h4>Vascular/ ecchymotic type</h4> <ul> <li>Collagen III 異常</li> <li>瘀血, 動脈瘤</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><h4>type VIII<sup>罕</sup></h4> <ul> <li>較早的牙周病,基因為 C1R and C1S</li> </ul></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">Marfan’s syndrome</td>
+
+<td><code>GENE</code>: FBN1 (fibrillin-1，肌原纖維，影響 Collagen)</td>
+<td>-</td>
+<td colspan="4"><ul> <li>長四肢、大手掌、長手指</li> <li>Gorlin sign: 舌頭碰鼻尖</li> <li>鷄胸症(pectus carinatum): 胸骨突出</li> <li>漏斗胸(pectus excavatum): 胸骨後突</li> <li>背部綫條筆直</li> <li>二尖瓣脫垂(mitral valve prolapse)</li> <li>動脈瘤(aneurysm)</li> <li>必須給予術前抗生素</li> </ul></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2" colspan="2">Tuberous Sclerosis <br> (結節型硬化症， Epilolianuria)</td>
+
+<td rowspan="2">體顯性， <br> <code>GENE</code>: TSC1, TSC2</td>
+<td rowspan="2">-</td>
+<td colspan="4"><ul> <li>緻密的纖維結締組織增生</li> <ul> <li>下顎 radiolucent lesion</li> <li>血管纖維瘤(angiofibroma): 鼻翼, 指甲旁</li> </ul> </ul> <img src="paste_src/口病_皮膚-19.png" alt="alt text" style=";background-color: white;padding:0"> <ul> <li>結締組織錯構瘤</li> <ul> <li>Shagreen patches</li> <li>Ash-leaf spots: Ash-leaf spots</li> <li>CNS: radiopaque lesion, potato like 增生</li> </ul> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-20.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-25.png" alt="alt text" style="width:25%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-24.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div> <ul> <li>血管平滑肌脂肪瘤<sup>良</sup> (angiomyolipoma): 腎臟，雙側</li> <li>CNS: 癲癇(70%), 智能障礙(30%)</li> <li>心臟橫紋肌瘤<sup>良</sup> (cardiac rhabdomyoma)</li> </ul></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>enamel pitting: 恆齒前牙</li> <li>多發性的纖維丘疹(Multiple fibrous papules)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-22.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-23.png" alt="alt text" style="width:40%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">Proteus syndrome</td>
+
+<td><code>GENE</code>:  AKT1 (PKB related)</td>
+<td>-</td>
+<td colspan="4"><ul> <li>sporadic(散發性,非遺傳性)</li> <li>骨骼異常增大</li> <ul> <li>巨頭、巨指、長骨過度生長</li> <li>脊柱側彎(scoliosis)</li> <li>顱外骨疣(cranial exostoses): 外耳、鼻樑、alveolar ridge</li> </ul> <li>moccasin foot: 足部軟組織過度生長</li> <li>龐狀表皮痣(verrucous epidermal nevi)</li> <li>皮下病變</li> <ul> <li>脂肪瘤, 血管瘤, 淋巴管瘤</li> <li>皮下和深部軟組織錯搆瘤</li> </ul> <li>血管異常</li> <ul> <li>多發性鮮紅斑痣(multiple port wine stains)</li> <li>靜脈曲張(varicose veins)</li> </ul> </ul> <img src="paste_src/口病_皮膚-26.png" alt="alt text" style="width:40%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h2 id="特發性結締組織疾病">特發性結締組織疾病 </h2>
 <p>Idiopathic Connective Tissue Disorders</p>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-| <span style="margin:0; color: red;"> Systemic Sclerosis  <br> 全身性硬化 </span> || M2 macrophage 相關 | 成年 | </p><ul> <li>Raynaud phenomenon(雷諾現象): 情緒困擾、寒冷暴露 → 血管收縮</li> <li>Claw-like finger(爪狀指): 末端指骨吸收、屈曲攣縮 → 手指變短</li> <li>指尖潰瘍</li> <li>皮膚: 瀰漫堅硬、光滑</li> <li>鼻翼萎縮，老鼠臉</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-98.png" alt="alt text" style="width:85%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-99.png" alt="alt text" style="width:14%;background-color: white;padding:0"></div><br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>小口症 (Microstomia)</li> <li>口乾症 (xerostomia), Sjogren syndrome 可能伴隨</li> <li>所有 PDL 增寬</li> <li>骨吸收</li> </ul> <img src="paste_src/口病_皮膚-100.png" alt="alt text" style="width:70%;background-color: white;padding:0"><br>
-|<sup>|</sup>|<sup>|</sup>| <ul> <li>檢測 anti-Scl 70 (topoisomerase I)</li> <li>vessel 阻塞，Dense collagen 堆積</li> </ul> <img src="paste_src/口病_皮膚-101.png" alt="alt text" style=";background-color: white;padding:0"><br>
-| <span style="margin:0; color: red;">localized scleroderma</span> || 類似 Systemic Sclerosis， 但指影響一塊局部皮膚，無後遺症 |<br>
-| <span style="margin:0; color: red;"> CREST Syndrome </span>|| 一種 Scleroderma 變形 | 50-60y |<ul> <li>Calcinosis cutis (皮膚鈣質沉著症)</li> <ul> <li>多發，可移動，不軟</li> </ul> <li>Raynaud phenomenon(雷諾現象)</li> <li>Esophageal dysfunction(食道功能異常)</li> <li>Sclerodactyly (皮硬化)</li> <li>Telangiectasias (毛細血管擴張)</li> <ul> <li>臉部皮膚、朱紅區</li> <li>可能大量出血</li> </ul> </ul><p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3" colspan="2"><span style="margin:0; color: red;"> Systemic Sclerosis  <br> 全身性硬化 </span></td>
+
+<td rowspan="3">M2 macrophage 相關</td>
+<td rowspan="3">成年</td>
+<td colspan="4"><ul> <li>Raynaud phenomenon(雷諾現象): 情緒困擾、寒冷暴露 → 血管收縮</li> <li>Claw-like finger(爪狀指): 末端指骨吸收、屈曲攣縮 → 手指變短</li> <li>指尖潰瘍</li> <li>皮膚: 瀰漫堅硬、光滑</li> <li>鼻翼萎縮，老鼠臉</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-98.png" alt="alt text" style="width:85%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-99.png" alt="alt text" style="width:14%;background-color: white;padding:0"></div></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>小口症 (Microstomia)</li> <li>口乾症 (xerostomia), Sjogren syndrome 可能伴隨</li> <li>所有 PDL 增寬</li> <li>骨吸收</li> </ul> <img src="paste_src/口病_皮膚-100.png" alt="alt text" style="width:70%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>檢測 anti-Scl 70 (topoisomerase I)</li> <li>vessel 阻塞，Dense collagen 堆積</li> </ul> <img src="paste_src/口病_皮膚-101.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: red;">localized scleroderma</span></td>
+
+<td colspan="6">類似 Systemic Sclerosis， 但指影響一塊局部皮膚，無後遺症</td>
+
+
+
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: red;"> CREST Syndrome </span></td>
+
+<td>一種 Scleroderma 變形</td>
+<td>50-60y</td>
+<td colspan="4"><ul> <li>Calcinosis cutis (皮膚鈣質沉著症)</li> <ul> <li>多發，可移動，不軟</li> </ul> <li>Raynaud phenomenon(雷諾現象)</li> <li>Esophageal dysfunction(食道功能異常)</li> <li>Sclerodactyly (皮硬化)</li> <li>Telangiectasias (毛細血管擴張)</li> <ul> <li>臉部皮膚、朱紅區</li> <li>可能大量出血</li> </ul> </ul></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h2 id="缺鐵性貧血相關病症">缺鐵性貧血相關病症 </h2>
 <ul>
 <li>MCV/RBC
@@ -664,27 +1520,168 @@ Marfan’s syndrome || <code>GENE</code>: FBN1 (fibrillin-1，肌原纖維，影
 <li>廣泛性口腔黏膜萎縮(generalized oral mucosal atrophy)</li>
 <li>萎縮性舌炎(atrophic glossitis): 一片光滑</li>
 </ul>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-| Hereditary Hemorrhagic Telangiectasia (遺傳性出血性微血管擴張症，HHT，Weber syndrome)|| 體顯性，<code>GENE</code> </p><ul> <li>HHT1: endoglin (ENG)</li> <li>HHT2: activin receptor-like kinase (ALK1; ACVRL1)</li> <li>HHT + juvenile polyposis: MADH4</li> </ul>|| <ul> <li>流鼻血(epistaxis)而被診斷</li> <li>口鼻黏膜紅色丘疹，壓迫變白</li> <li>萎縮性舌炎</li> <li>腸道易出血 → 慢性缺鐵性貧血</li> <li>動靜脈廔(arteriovenous fistulas)</li> <li>牙周血管畸形 → 菌血 → 化膿性肺栓塞</li> </ul>|<br>
-| <span style="margin:0; color: red;"> Plummer-Vinson syndrom</span><sup>罕</sup> || -| 30-50y |<ul> <li>癌前變化 → SCC</li> <li>食道蹼(esophageal webs) → sideropenic dysphagia(缺鐵性吞嚥困難)</li> <li>萎縮性舌炎</li> <li>匙狀指甲(koilonychia)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-54.png" alt="alt text" style="width:55%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-18.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div><p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Hereditary Hemorrhagic Telangiectasia (遺傳性出血性微血管擴張症，HHT，Weber syndrome)</td>
+
+<td colspan="2">體顯性，<code>GENE</code> <ul> <li>HHT1: endoglin (ENG)</li> <li>HHT2: activin receptor-like kinase (ALK1; ACVRL1)</li> <li>HHT + juvenile polyposis: MADH4</li> </ul></td>
+
+<td colspan="4"><ul> <li>流鼻血(epistaxis)而被診斷</li> <li>口鼻黏膜紅色丘疹，壓迫變白</li> <li>萎縮性舌炎</li> <li>腸道易出血 → 慢性缺鐵性貧血</li> <li>動靜脈廔(arteriovenous fistulas)</li> <li>牙周血管畸形 → 菌血 → 化膿性肺栓塞</li> </ul></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: red;"> Plummer-Vinson syndrom</span><sup>罕</sup></td>
+
+<td>-</td>
+<td>30-50y</td>
+<td colspan="4"><ul> <li>癌前變化 → SCC</li> <li>食道蹼(esophageal webs) → sideropenic dysphagia(缺鐵性吞嚥困難)</li> <li>萎縮性舌炎</li> <li>匙狀指甲(koilonychia)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-54.png" alt="alt text" style="width:55%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-18.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h2 id="退化性-代謝性疾病">退化性、代謝性疾病 </h2>
 <p>Degenerative and Metabolic Diseases</p>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-| Acanthosis Nigricans  <br> 黑色棘皮層增厚病 | 良性| </p><ul> <li>胰島素阻抗有關</li> <ul> <li>可能遺傳性、內分泌、藥物相關</li> </ul> </ul> |<br>
-|^| 惡性 | <ul> <li>差異: <mark>皮膚彎曲區域出現細小乳頭</mark></li> <li>口內特徵 (主要在惡性)</li> <ul> <li>瀰漫性的黏膜改變，呈現細乳頭狀</li> </ul> <li>內臟惡性腫瘤</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-102.png" alt="alt text" style="width:25%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-103.png" alt="alt text" style="width:30%;background-color: white;padding:0"></div><br>
-|^| <ul> <li>Oral: Acanthosis 多 ， Melanin 少</li> <li>Dermin: Acanthosis 少， Melanin 多</li> </ul> |<br>
-| Xanthelasma <br> 黃斑瘤 | 血脂升高 | 中老年，眼周圍|<ul> <li>軟，黃</li> <li>動脈粥樣硬化(atherosclerosis) risk ↑</li> <li>最常見的皮膚黃瘤</li> <li>superficial 至 mid-dermal 存在 xanthoma cell</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-104.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-105.png" alt="alt text" style="width:30%;background-color: white;padding:0"></div><p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">Acanthosis Nigricans  <br> 黑色棘皮層增厚病</td>
+<td>良性</td>
+<td colspan="6"><ul> <li>胰島素阻抗有關</li> <ul> <li>可能遺傳性、內分泌、藥物相關</li> </ul> </ul></td>
+
+
+
+
+
+</tr>
+<tr>
+
+<td>惡性</td>
+<td colspan="6"><ul> <li>差異: <mark>皮膚彎曲區域出現細小乳頭</mark></li> <li>口內特徵 (主要在惡性)</li> <ul> <li>瀰漫性的黏膜改變，呈現細乳頭狀</li> </ul> <li>內臟惡性腫瘤</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-102.png" alt="alt text" style="width:25%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-103.png" alt="alt text" style="width:30%;background-color: white;padding:0"></div></td>
+
+
+
+
+
+</tr>
+<tr>
+
+<td colspan="7"><ul> <li>Oral: Acanthosis 多 ， Melanin 少</li> <li>Dermin: Acanthosis 少， Melanin 多</li> </ul></td>
+
+
+
+
+
+
+</tr>
+<tr>
+<td>Xanthelasma <br> 黃斑瘤</td>
+<td>血脂升高</td>
+<td>中老年，眼周圍</td>
+<td colspan="5"><ul> <li>軟，黃</li> <li>動脈粥樣硬化(atherosclerosis) risk ↑</li> <li>最常見的皮膚黃瘤</li> <li>superficial 至 mid-dermal 存在 xanthoma cell</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-104.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-105.png" alt="alt text" style="width:30%;background-color: white;padding:0"></div></td>
+
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h2 id="血管疾病">血管疾病 </h2>
 <p>Vascular Diseases</p>
-<p>|名稱|| 成因 |GLA|特徵 |||<br>
-|-|-|-|-|-|-|-|-|<br>
-| <span style="margin:0; color: Deepskyblue;"> Behçet Syndrome </span>|| </p><ul> <li>neutrophilic hyperactivity → 系統性血管炎</li> <li><mark>HLA-B51</mark></li> </ul>| 30-40y，眼部、口腔、生殖器和皮膚 | <ul> <li>口腔: 口瘡性潰瘍(aphthous ulcerations)， 周圍有較大的瀰漫性紅斑區</li> <li>皮膚:</li> <ul> <li>pathergy test + (皮下生理食鹽水注射試)</li> <li>結核菌素樣皮膚反應</li> </ul> <li>眼部:</li> <ul> <li>男性更常見</li> <li>發炎 → 白內障(cataracts)、青光眼(glaucoma)、視網膜的新生血管</li> <li>即使治療，25%仍會失明</li> </ul> <li>關節炎，但不變形</li> <li>生殖器</li> <ul> <li>男性: 90%涉及陰囊</li> <li>女性: 於外陰、陰道或子宮頸</li> <li>流疤，復發低</li> </ul> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-106.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-107.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-108.png" alt="alt text" style="width:37%;background-color: white;padding:0"> </div>|<br>
-|<sup>|</sup>|<sup>|</sup>|<ul> <li>白細胞破碎性血管炎(leukocytoclastic vasculitis)，非獨有</li> <li>嗜中性球的壁內浸潤(intramural invasion)、嗜中性球核破裂(karyorrhexis)、紅血球外滲和血管壁纖維蛋白樣壞死(fibrinoid necrosis)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-109.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-110.png" alt="alt text" style="width:40%;background-color: white;padding:0"> </div>|<br>
-| MAGIC syndrome || Behçet syndrome 變形。多發性的口腔與生殖器潰瘍，間質性的軟骨炎 <br>(Mouth and Genital Ulcers with Inflamed Cartilage Syndrome )<br>
-| Aphthous Ulcer  <br> 口瘡性潰瘍 || CD8+ T cell 破壞上皮 | 30y↓， 非角化上皮 | <ul> <li>40% 患者有家族史</li> <li>中間黃，外紅暈</li> <li>Minor type</li> <ul> <li>最常見，80%</li> <li>buccal and labial mucosae</li> <li>φ: 3-10mm</li> <li>7-14d 癒合</li> </ul> </ul> <ul> <ul> <li>熱癢痛， 7-14 天消失</li> </ul> <li>Major type</li> <ul> <li>較深</li> <li>φ: 1-3 cm</li> <li>2-6w 癒合</li> </ul> <li>Herpetiform</li> <ul> <li>多發，且頻繁復發的 Minor</li> </ul> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-111.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-112.png" alt="alt text" style="width:27%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-113.png" alt="alt text" style="width:37%;background-color: white;padding:0"></div>|<br>
-| <span style="margin:0; color: Deepskyblue;"> Kawasaki Disease  <br> 川崎氏病 </span>||-|10y↓亞裔 |<ul> <li>雙側眼球結膜炎</li> <li>頸部淋巴結腫大</li> <li>皮膚:</li> <ul> <li>手掌和腳底紅斑、水腫、指甲周圍脫屑</li> <li>多形性瀰漫性斑丘疹</li> </ul> <li>口腔:</li> <ul> <li>草莓舌</li> <li>嘴唇乾裂</li> <li>咽部紅斑</li> </ul> <li>有冠狀動脈擴張或動脈瘤 (15-25%，致命)</li> </ul><p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2" colspan="2"><span style="margin:0; color: Deepskyblue;"> Behçet Syndrome </span></td>
+
+<td rowspan="2"><ul> <li>neutrophilic hyperactivity → 系統性血管炎</li> <li><mark>HLA-B51</mark></li> </ul></td>
+<td rowspan="2">30-40y，眼部、口腔、生殖器和皮膚</td>
+<td colspan="4"><ul> <li>口腔: 口瘡性潰瘍(aphthous ulcerations)， 周圍有較大的瀰漫性紅斑區</li> <li>皮膚:</li> <ul> <li>pathergy test + (皮下生理食鹽水注射試)</li> <li>結核菌素樣皮膚反應</li> </ul> <li>眼部:</li> <ul> <li>男性更常見</li> <li>發炎 → 白內障(cataracts)、青光眼(glaucoma)、視網膜的新生血管</li> <li>即使治療，25%仍會失明</li> </ul> <li>關節炎，但不變形</li> <li>生殖器</li> <ul> <li>男性: 90%涉及陰囊</li> <li>女性: 於外陰、陰道或子宮頸</li> <li>流疤，復發低</li> </ul> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-106.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-107.png" alt="alt text" style="width:30%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-108.png" alt="alt text" style="width:37%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="4"><ul> <li>白細胞破碎性血管炎(leukocytoclastic vasculitis)，非獨有</li> <li>嗜中性球的壁內浸潤(intramural invasion)、嗜中性球核破裂(karyorrhexis)、紅血球外滲和血管壁纖維蛋白樣壞死(fibrinoid necrosis)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-109.png" alt="alt text" style="width:40%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-110.png" alt="alt text" style="width:40%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2">MAGIC syndrome</td>
+
+<td colspan="6">Behçet syndrome 變形。多發性的口腔與生殖器潰瘍，間質性的軟骨炎 <br>(Mouth and Genital Ulcers with Inflamed Cartilage Syndrome )</td>
+
+
+
+
+
+</tr>
+<tr>
+<td colspan="2">Aphthous Ulcer  <br> 口瘡性潰瘍</td>
+
+<td>CD8+ T cell 破壞上皮</td>
+<td>30y↓， 非角化上皮</td>
+<td colspan="4"><ul> <li>40% 患者有家族史</li> <li>中間黃，外紅暈</li> <li>Minor type</li> <ul> <li>最常見，80%</li> <li>buccal and labial mucosae</li> <li>φ: 3-10mm</li> <li>7-14d 癒合</li> </ul> </ul> <ul> <ul> <li>熱癢痛， 7-14 天消失</li> </ul> <li>Major type</li> <ul> <li>較深</li> <li>φ: 1-3 cm</li> <li>2-6w 癒合</li> </ul> <li>Herpetiform</li> <ul> <li>多發，且頻繁復發的 Minor</li> </ul> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-111.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-112.png" alt="alt text" style="width:27%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-113.png" alt="alt text" style="width:37%;background-color: white;padding:0"></div></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: Deepskyblue;"> Kawasaki Disease  <br> 川崎氏病 </span></td>
+
+<td>-</td>
+<td>10y↓亞裔</td>
+<td colspan="4"><ul> <li>雙側眼球結膜炎</li> <li>頸部淋巴結腫大</li> <li>皮膚:</li> <ul> <li>手掌和腳底紅斑、水腫、指甲周圍脫屑</li> <li>多形性瀰漫性斑丘疹</li> </ul> <li>口腔:</li> <ul> <li>草莓舌</li> <li>嘴唇乾裂</li> <li>咽部紅斑</li> </ul> <li>有冠狀動脈擴張或動脈瘤 (15-25%，致命)</li> </ul></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h2 id="其他">其他 </h2>
 <ul>
 <li>X隱性
@@ -832,20 +1829,6 @@ Marfan’s syndrome || <code>GENE</code>: FBN1 (fibrillin-1，肌原纖維，影
 <h3 id="復發性口瘡">復發性口瘡 </h3>
 <img src="paste_src/口病_皮膚-115.png" alt="alt text" style=";background-color: white;padding:0">
 <br><br>
-
-<script type="text/javascript" src="../Hyper_md/md.js"></script>
-
-<script>
-var page = document.getElementsByClassName('markdown-preview')[0]
-page.addEventListener('click', function(event) {
-  event.stopPropagation()
-  
-  document.body.removeAttribute('html-show-sidebar-toc');
- 
-})
-</script>
-
-
       </div>
       <div class="md-sidebar-toc">
 <div class="md-toc">

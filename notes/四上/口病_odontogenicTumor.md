@@ -38,7 +38,8 @@ export_on_save:
 
 
 ## 上皮性來源
-| ||原因|位置| 年齡 |特徵||
+
+| ||原因|位置| 年齡 |特徵|||
 |-|-|-|-|-|-|-|-|
 Ameloblastoma | 多囊腫型 (coventional solid or multicystic intraosseous) | \oneline{
 - 牙齒發育過程上皮(典型良性)在錯的位置
@@ -164,7 +165,7 @@ stellate reticulum 不明顯 ![alt text](paste_src/口病-91.png)
 ## 混和性來源
 
 | ||原因|位置| 年齡 |特徵||
-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|
 | Ameloblastic fibroma ||-| 下顎臼齒區| 20y &darr; | \oneline{
 - 通常無症狀
 - 阻生齒(75%)
@@ -212,7 +213,7 @@ stellate reticulum 不明顯 ![alt text](paste_src/口病-91.png)
 
 ## 外胚層間葉來源
 
-| ||原因|位置| 年齡 |特徵||
+| ||原因|位置| 年齡 |特徵|||
 |-|-|-|-|-|-|-|-|
 | Odontogenic fibroma | central type^罕^ (骨內)|-| 上顎為第一大臼齒以前、下顎為第一大臼齒以後 | 未萌發的牙齒(5%) | \oneline{
 - 多房: 大，骨頭膨大

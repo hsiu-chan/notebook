@@ -407,17 +407,29 @@ html body table .fbox {
 }
 
       </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script></head><body for="html-export">
+      <!-- The content below will be included at the end of the <head> element. --><script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+
+<script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+
+
+<script type="text/javascript">
+//載入完成後執行
+document.addEventListener("DOMContentLoaded", () => {
+  var page = document.getElementsByClassName('markdown-preview')[0]
+  page.addEventListener('click', function(event) {
+    event.stopPropagation()
+    
+    document.body.removeAttribute('html-show-sidebar-toc');
+  })
+});
+</script>
+<link rel="stylesheet" href="../Hyper_md/style.css">
+</head><body for="html-export">
     
     
       <div class="crossnote markdown-preview  ">
-      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
-      <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css">
+      
 <h1 id="epithelial-tumors">Epithelial tumors </h1>
 <h2 id="hpv">HPV </h2>
 <div class="table-scroll-wrapper"><table>
@@ -445,21 +457,138 @@ html body table .fbox {
 <p class="admonition-title">episomal v.s. integrated form</p>
 <img src="paste_src/口病-46.png" alt="alt text" style=";background-color: white;padding:0">
 </div>
-<p>|變異名稱 |風險/ 原因|位置|症狀、特徵||||<br>
-|-|-|-|-|-|-|-|-|<br>
-|papilloma <br>(6, 11)| 30~50y |軟顎、口腔常見 |單發、低傳染|<br>
-|<sup>|</sup>| ^|pedunculated, sessile(少) <img src="paste_src/口病-47.png" alt="alt text" style=";background-color: white;padding:0"> |<br>
-|<sup>|</sup>|^| stratified squamous epi. 包結締組織 <br> hyperparakeratosis (有核、顆粒層缺失) <img src="paste_src/口病-50.png" alt="alt text" style="width:50%;background-color: white;padding:0"><br>
-| Verruca vulgaris <br>尋常疣 <br>(2, 4) | -|皮膚、口腔(少見、接觸、自傳染) |大多是sessile(無梗)|<br>
-|<sup>|</sup>|^| </p><ul> <li>hyperparakeratosis 但 granular layer 明顯 → coarse keratohyalin granules</li> <li>“cupping” effect: rete ridges 往 lesion 中心</li> </ul> <img src="paste_src/口病-51.png" alt="alt text" style="width:50%;background-color: white;padding:0"><br>
-|<sup>|</sup>|^| 小孩身上有機會自行痊癒，治療需要 basal layer 清乾淨<br>
-| Condyloma acuminatum <br> 尖銳濕疣 |-|<ul> <li>口內: 6, 11</li> <li>肛門: 16, 18</li> </ul>| 多顆、界線清楚、無痛、兒童有機會自愈<br>
-|<sup>|</sup>|^| 廣底、papillary 突起不明顯、Koilocytes (空亮、葡萄乾核) <img src="paste_src/口病-52.png" alt="alt text" style=";background-color: white;padding:0"> |<br>
-|<span style="margin:0; color: red;"> Multifocal epithelial hyperplasia (Heck’s disease，<br> 13, 32)</span>|低社經、HIV| 唇、頰、舌 | 小、軟、多、無痛|<br>
-|<sup>|</sup>|^| <strong>Papillomatous variant</strong> <ul> <ul> <li>舌、attached gingiva</li> </ul> </ul> <img src="paste_src/口病-53.png" alt="alt text" style=";background-color: white;padding:0"> || <strong>Papulonodular</strong> <ul> <li>常見</li> <li>扁平</li> </ul> <img src="paste_src/口病-54.png" alt="alt text" style=";background-color: white;padding:0"> |<br>
-|<sup>|</sup>|^| <ul> <li>acanthosis: spinous layer (棘狀層) 增生</li> <li>rete ridge 寬扁，深度差不多</li> <li>Connective tissue 發炎細胞浸潤</li> <li>Koliofcyte</li> <li>mitosoid cells (spinous cell 之間，彷彿在分裂)</li> </ul> <img src="paste_src/口病-71.png" alt="alt text" style=";background-color: white;padding:0"><img src="paste_src/口病-56.png" alt="alt text" style=";background-color: white;padding:0"> |<br>
-Verruciform xanthoma (非 HPV)|Leasion 旁，異常免疫反應 |口腔 &gt; 皮膚 &gt; 性器 | 油脂撐起 epi. 形成 Verruciform。非 Metabolic  <img src="paste_src/口病-57.png" alt="alt text" style="width:50%;background-color: white;padding:0"><img src="paste_src/口病-58.png" alt="alt text" style="width:30%;background-color: white;padding:0">|<br>
-|<sup>|</sup>|^|<ul> <li>parakeratin plugging: parakeratin layer 增厚 → 細菌發炎</li> <li>結締組織空亮 (foamy histocytes)</li> </ul> <img src="paste_src/口病-59.png" alt="alt text" style="width:50%;background-color: white;padding:0"><p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>變異名稱</th>
+<th>風險/ 原因</th>
+<th>位置</th>
+<th colspan="4">症狀、特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">papilloma <br>(6, 11)</td>
+<td rowspan="3">30~50y</td>
+<td rowspan="3">軟顎、口腔常見</td>
+<td colspan="4">單發、低傳染</td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4">pedunculated, sessile(少) <img src="paste_src/口病-47.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4">stratified squamous epi. 包結締組織 <br> hyperparakeratosis (有核、顆粒層缺失) <img src="paste_src/口病-50.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="3">Verruca vulgaris <br>尋常疣 <br>(2, 4)</td>
+<td rowspan="3">-</td>
+<td rowspan="3">皮膚、口腔(少見、接觸、自傳染)</td>
+<td colspan="4">大多是sessile(無梗)</td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4"><ul> <li>hyperparakeratosis 但 granular layer 明顯 → coarse keratohyalin granules</li> <li>“cupping” effect: rete ridges 往 lesion 中心</li> </ul> <img src="paste_src/口病-51.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4">小孩身上有機會自行痊癒，治療需要 basal layer 清乾淨</td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2">Condyloma acuminatum <br> 尖銳濕疣</td>
+<td rowspan="2">-</td>
+<td rowspan="2"><ul> <li>口內: 6, 11</li> <li>肛門: 16, 18</li> </ul></td>
+<td colspan="4">多顆、界線清楚、無痛、兒童有機會自愈</td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4">廣底、papillary 突起不明顯、Koilocytes (空亮、葡萄乾核) <img src="paste_src/口病-52.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="3"><span style="margin:0; color: red;"> Multifocal epithelial hyperplasia (Heck’s disease，<br> 13, 32)</span></td>
+<td rowspan="3">低社經、HIV</td>
+<td rowspan="3">唇、頰、舌</td>
+<td colspan="4">小、軟、多、無痛</td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="2"><strong>Papillomatous variant</strong> <ul> <ul> <li>舌、attached gingiva</li> </ul> </ul> <img src="paste_src/口病-53.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+<td colspan="2"><strong>Papulonodular</strong> <ul> <li>常見</li> <li>扁平</li> </ul> <img src="paste_src/口病-54.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+<td colspan="4"><ul> <li>acanthosis: spinous layer (棘狀層) 增生</li> <li>rete ridge 寬扁，深度差不多</li> <li>Connective tissue 發炎細胞浸潤</li> <li>Koliofcyte</li> <li>mitosoid cells (spinous cell 之間，彷彿在分裂)</li> </ul> <img src="paste_src/口病-71.png" alt="alt text" style=";background-color: white;padding:0"><img src="paste_src/口病-56.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2">Verruciform xanthoma (非 HPV)</td>
+<td rowspan="2">Leasion 旁，異常免疫反應</td>
+<td rowspan="2">口腔 &gt; 皮膚 &gt; 性器</td>
+<td colspan="4">油脂撐起 epi. 形成 Verruciform。非 Metabolic  <img src="paste_src/口病-57.png" alt="alt text" style="width:50%;background-color: white;padding:0"><img src="paste_src/口病-58.png" alt="alt text" style="width:30%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+<tr>
+
+
+
+<td colspan="4"><ul> <li>parakeratin plugging: parakeratin layer 增厚 → 細菌發炎</li> <li>結締組織空亮 (foamy histocytes)</li> </ul> <img src="paste_src/口病-59.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <dl>
 <dt>xanthoma</dt>
 <dd>吃了油脂的 Macrophage 細胞，CD63+, CD68+, CD163+ IHC8+，diastase-PAS染色+</dd>
@@ -474,16 +603,84 @@ Verruciform xanthoma (非 HPV)|Leasion 旁，異常免疫反應 |口腔 &gt; 皮
 </div>
 <h2 id="melanotic-lesions">Melanotic lesions </h2>
 <h3 id="色素增加">色素增加 </h3>
-<p>|名稱| 單發? |風險/位置 || 特徵 ||<br>
-|-|-|-|-|-|-|-|-|<br>
-|<span style="margin:0; color: red;">Oral melanotic Macules</span>|  單 | 下唇朱紅區(vermilion zone, 33%), Buccal mucosa, gingiva, palate||表面平坦、棕黑色、邊界清楚、φ&lt;5mm <img src="paste_src/口病-62.png" alt="alt text" style="width:50%;background-color: white;padding:0">|<br>
-|<sup>|</sup>|<sup>|</sup>| 不須治療，但不易和 Oral melanoma 分辨 → 燒毀! |<br>
-|<sup>|</sup>|<sup>|</sup>| <strong>黑色素失禁(melanin incontinence):</strong> <br> basal cell 可能破損 → macrophage 於 CT 吞噬 → <mark>melanophage</mark> <img src="paste_src/口病-63.png" alt="alt text" style=";background-color: white;padding:0">|||<br>
-| Physiologic Pigmentation (生理性)  | 多 | 黑人|| - |<br>
-| Chronic irritation (慢性刺激) |^|</p><ul> <li>常咬到的頰側</li> <li>類天皰瘡(pemphigoid)</li> <li>Smoker’s melanosis</li> <li>多氯聯苯(PCB)汙染</li> </ul>|| |<br>
-|Syndromes or Diseases Associated |^|<ol> <li>Peutz-Jeghers syndrome</li> <li>Addison’s disease</li> <li>Neurofibromatosis</li> <li>McCune-Albright syndrome</li> </ol>|<br>
-| Drug-induced |^|<mark>奎寧(chloroquine)</mark>, palate|| 左右沒有完全對稱 <img src="paste_src/口病-69.png" alt="alt text" style=";background-color: white;padding:0"> |<br>
-|<sup>|</sup>|<sup>|</sup>| melanin堆積，確診直接 Bleaching |<p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>單發?</th>
+<th colspan="2">風險/位置</th>
+
+<th colspan="2">特徵</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3"><span style="margin:0; color: red;">Oral melanotic Macules</span></td>
+<td rowspan="3">單</td>
+<td rowspan="3" colspan="2">下唇朱紅區(vermilion zone, 33%), Buccal mucosa, gingiva, palate</td>
+
+<td colspan="2">表面平坦、棕黑色、邊界清楚、φ&lt;5mm <img src="paste_src/口病-62.png" alt="alt text" style="width:50%;background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="2">不須治療，但不易和 Oral melanoma 分辨 → 燒毀!</td>
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="2"><strong>黑色素失禁(melanin incontinence):</strong> <br> basal cell 可能破損 → macrophage 於 CT 吞噬 → <mark>melanophage</mark> <img src="paste_src/口病-63.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+<td>Physiologic Pigmentation (生理性)</td>
+<td rowspan="5">多</td>
+<td colspan="2">黑人</td>
+
+<td colspan="2">-</td>
+
+</tr>
+<tr>
+<td>Chronic irritation (慢性刺激)</td>
+
+<td colspan="4"><ul> <li>常咬到的頰側</li> <li>類天皰瘡(pemphigoid)</li> <li>Smoker’s melanosis</li> <li>多氯聯苯(PCB)汙染</li> </ul></td>
+
+
+
+</tr>
+<tr>
+<td>Syndromes or Diseases Associated</td>
+
+<td colspan="4"><ol> <li>Peutz-Jeghers syndrome</li> <li>Addison’s disease</li> <li>Neurofibromatosis</li> <li>McCune-Albright syndrome</li> </ol></td>
+
+
+
+</tr>
+<tr>
+<td rowspan="2">Drug-induced</td>
+
+<td rowspan="2" colspan="2"><mark>奎寧(chloroquine)</mark>, palate</td>
+
+<td colspan="2">左右沒有完全對稱 <img src="paste_src/口病-69.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+
+<td colspan="2">melanin堆積，確診直接 Bleaching</td>
+
+</tr>
+</tbody>
+</table></div>
 <div class="admonition info">
 <p class="admonition-title"> 一些名詞</p>
 <img src="paste_src/口病-60.png" alt="alt text" style=";background-color: white;padding:0">
@@ -696,13 +893,54 @@ Verruciform xanthoma (非 HPV)|Leasion 旁，異常免疫反應 |口腔 &gt; 皮
 <ul>
 <li>好發: lateral/ventral tongue、floor of mouth</li>
 </ul>
-<p>| 名稱 |  原因 ||特徵||<br>
-|-|-|-|-|-|-|-|<br>
-|Oral submucous fiberosis | Arecoline (檳榔鹼)|| </p><ul> <li>→ SCC</li> <li>hyperkeratosis 或 parakeratosis，上皮變薄。</li> <li>Collagen fiber 最深侵犯肌肉層</li> <li>無法復原</li> </ul> |<br>
-Leukoplakia, Erythroplakia |紅斑較嚴重，不產生角質 <img src="paste_src/口病-78.png" alt="alt text" style=";background-color: white;padding:0">||<ul> <li>白色的多為 hyperkeratosis → 用排除法診斷</li> <li>verrucous 高風險</li> <li>女性 maligant transformation rate 高</li> </ul> |<br>
-|<sup>|</sup>|^| .<img src="paste_src/口病-77.png" alt="alt text" style=";background-color: white;padding:0"><br>
-| <span style="margin:0; color: red;"> Poliferative verrucous leukoplakia (pbl) </span>|  ？ || <ul> <li>女，gingiva/alveolar gingiva，66.8y</li> <li>菸酒檳榔無關</li> <li>不切掉高機率癌化</li> <li>多發性</li> </ul> <img src="paste_src/口病-84.png" alt="alt text" style=";background-color: white;padding:0">|<br>
-|<sup>|</sup>|^| <ul> <li>Sharp 分化改變</li> <li>bulbous rete ridge → 延長</li> <li>exophytic, endophytic growth, cyst 充滿 keratin</li> </ul> <img src="paste_src/口病-86.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/口病-87.png" alt="alt text" style=";background-color: white;padding:0"><p></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>名稱</th>
+<th colspan="2">原因</th>
+
+<th colspan="2">特徵</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oral submucous fiberosis</td>
+<td colspan="2">Arecoline (檳榔鹼)</td>
+
+<td colspan="2"><ul> <li>→ SCC</li> <li>hyperkeratosis 或 parakeratosis，上皮變薄。</li> <li>Collagen fiber 最深侵犯肌肉層</li> <li>無法復原</li> </ul></td>
+
+</tr>
+<tr>
+<td rowspan="2">Leukoplakia, Erythroplakia</td>
+<td rowspan="2" colspan="2">紅斑較嚴重，不產生角質 <img src="paste_src/口病-78.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+<td colspan="2"><ul> <li>白色的多為 hyperkeratosis → 用排除法診斷</li> <li>verrucous 高風險</li> <li>女性 maligant transformation rate 高</li> </ul></td>
+
+</tr>
+<tr>
+
+
+
+<td colspan="2">.<img src="paste_src/口病-77.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+<td rowspan="2"><span style="margin:0; color: red;"> Poliferative verrucous leukoplakia (pbl) </span></td>
+<td rowspan="2" colspan="2">？</td>
+
+<td colspan="2"><ul> <li>女，gingiva/alveolar gingiva，66.8y</li> <li>菸酒檳榔無關</li> <li>不切掉高機率癌化</li> <li>多發性</li> </ul> <img src="paste_src/口病-84.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+<tr>
+
+
+
+<td colspan="2"><ul> <li>Sharp 分化改變</li> <li>bulbous rete ridge → 延長</li> <li>exophytic, endophytic growth, cyst 充滿 keratin</li> </ul> <img src="paste_src/口病-86.png" alt="alt text" style=";background-color: white;padding:0"> <img src="paste_src/口病-87.png" alt="alt text" style=";background-color: white;padding:0"></td>
+
+</tr>
+</tbody>
+</table></div>
 <h3 id="oral-epithelial-dysplasia-oed">Oral epithelial dysplasia (OED) </h3>
 <blockquote>
 <p>OED ∈ OMPD</p>
@@ -1063,20 +1301,6 @@ n--&gt;|否| nn["(N2 or T3)?"] --&gt;|是| s2[II]
 nn --&gt;|否| s1[I]
 
 </div><br><br>
-
-<script type="text/javascript" src="../Hyper_md/md.js"></script>
-
-<script>
-var page = document.getElementsByClassName('markdown-preview')[0]
-page.addEventListener('click', function(event) {
-  event.stopPropagation()
-  
-  document.body.removeAttribute('html-show-sidebar-toc');
- 
-})
-</script>
-
-
       </div>
       <div class="md-sidebar-toc">
 <div class="md-toc">
