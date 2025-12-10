@@ -192,9 +192,9 @@ Rushton bodies
 |^|^|^|^| 破裂 &rarr; 發炎細胞湧入 cyst &rarr; secondary inflammation
 | Dermoid Cyst | Teratoma| 口底中線|兒童、年輕| 多個 germ layer| 
 |^|^|^|^|  \collapse[正角化上皮, Cyst Wall 有皮膚附屬物(皮脂腺細胞核居中)]{![alt text](paste_src/口病-33.png)}|
-| Thyroglossal Duct Cyst <br> 甲狀舌管囊腫 | 甲狀腺殘留 | 脖子中線上、舌骨下(75%) |20y &darr; (40%) | \collapse[Cyst wall 上有 Thyroid follicle ]{![alt text](paste_src/口病-34.png)} |
+| Thyroglossal Duct Cyst <br> 甲狀舌管囊腫 | 甲狀腺殘留 | \collapse[脖子中線上、舌骨下\(75%\)]{![alt text](paste_src/口病_cyst-2.png)}|20y &darr; (40%) | \collapse[Cyst wall 上有 Thyroid follicle ]{![alt text](paste_src/口病-34.png)} |
 | Branchial Cleft Cyst <br> (cervical lymphoepithelial cyst，鰓裂囊) | branchial arches 殘留 (2^nd^，95%)| \collapse[SCM 前/下]{![alt text](paste_src/口病-36.png)}| 10 - 40y| 複層鱗狀、淋巴、發中心(germinal center)。
-| Oral Lymphoepithelial Cyst | 上皮內陷(invagination)淋巴 &rarr; keratin debris | Waldeyer ring, 口底, 舌腹, 軟顎| 年輕人 |  \collapse[&phi;<1cm 的黏膜下黃白色腫塊]{![alt text](paste_src/口病-37.png)}
+| Oral Lymphoepithelial Cyst | 上皮內陷(invagination)淋巴 &rarr; keratin debris | Waldeyer ring, 口底, 舌腹, 軟顎| 40-50y |  \collapse[&phi;<1cm 的黏膜下黃白色腫塊]{![alt text](paste_src/口病-37.png)}
 |^|^| 單發&rarr;發育 <br> 多發&rarr;HIV |^|\collapse[不含rete ridges, 角化不全並脫落填滿空腔, 淋巴組織包圍 ]{![alt text](paste_src/口病-38.png)}|
 
 

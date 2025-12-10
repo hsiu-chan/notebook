@@ -148,47 +148,30 @@ img {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
-html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
-  left: 0;
-  width: 100%;
-  max-width: 1000px;
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 2em;
-  transform: translateX(0);
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  padding: 50px 10px 48px 0;
-  font-size: 14px;
-  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
-  box-sizing: border-box;
-  overflow: auto;
-  background-color: inherit;
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
 }
-html body {
-  background-color: hsl(220, 13%, 18%);
-  /* === Markdown Preview Enhancer TOC 樣式新版 === */
-  /* 縮排*/
-  /* TOC link */
-  /* 每層 details 都要重置下一層 counter */
-  /* 第一層：h1 */
-  /* 第二層：h2 */
-  /* 第三層：h3 */
-  /* 第四層：h4 */
-  /* 縮排 
-.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
-.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
-.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
-.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
-  /* hover & active */
-  /*
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
   /////三线表/////
   table{
       border-top: 1.5pt solid;
@@ -220,119 +203,12 @@ html body {
       font-size:9pt;                              
   }
   */
-}
-html body .md-sidebar-toc {
-  margin: 0;
-  padding: 0.5rem 0;
-  position: absolute;
-  max-width: 768px;
-  background-color: rgba(186, 55, 55, 0.1);
-  z-index: 70;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-html body .md-toc-link-wrapper {
-  list-style: none!important;
-}
-html body div.md-toc-link-wrapper {
-  margin-left: 0px!important;
-}
-html body details > div > div.md-toc-link-wrapper {
-  margin-left: 24px!important;
-}
-html body .md-sidebar-toc a {
-  color: inherit;
-  text-decoration: none;
-}
-html body .md-sidebar-toc a:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc {
-  counter-reset: toc-h1;
-}
-html body .md-sidebar-toc details {
-  counter-reset: toc-h2;
-}
-html body .md-sidebar-toc details details {
-  counter-reset: toc-h3;
-}
-html body .md-sidebar-toc details details details {
-  counter-reset: toc-h4;
-}
-html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h1;
-  content: counter(toc-h1) ". ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h2;
-  content: counter(toc-h1) "." counter(toc-h2) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h3;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h4;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper.active a {
-  color: #87ffff;
-  font-weight: bold;
-}
-html body .dcl {
-  /* block 水平置中的方法 */
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-  margin-right: -1%;
-}
-html body header,
-html body section,
-html body aside,
-html body .in,
-html body footer {
-  margin: 0 1% 0.3em 0;
-}
-html body section {
-  float: left;
-  width: 49%;
-}
-html body footer {
-  margin-bottom: 0;
-  /* 不准其他元素出現在其左右 */
-  clear: both;
-}
-html body .btn {
-  position: fixed;
-  z-index: 99;
-  font-size: 24px;
-  color: inherit;
-  text-align: center;
-  width: 32px;
-  cursor: pointer;
-  opacity: 0.4;
-  word-wrap: break-word;
-}
-html body .btn:active {
-  opacity: 0.8;
-}
 @media screen and (max-width: 400px) {
-  html body img {
+  img {
     width: 100% !important;
   }
 }
-html body .fbox {
+.fbox {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
@@ -342,7 +218,7 @@ html body .fbox {
   left: 50%;
   transform: translateX(-50%);
 }
-html body .fbox img {
+.fbox img {
   position: relative;
   left: 0;
   transform: translate(0, 0);
@@ -350,7 +226,7 @@ html body .fbox img {
   background-color: rgba(0, 0, 0, 0) !important;
   object-fit: contain;
 }
-html body table .fbox {
+table .fbox {
   left: 0;
   transform: translateX(0);
 }
@@ -893,7 +769,7 @@ n["非齒源(Non-Odontogenic)"]
 <tr>
 <td>Thyroglossal Duct Cyst <br> 甲狀舌管囊腫</td>
 <td>甲狀腺殘留</td>
-<td>脖子中線上、舌骨下(75%)</td>
+<td><details><summary>脖子中線上、舌骨下<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>75</mn></mrow><annotation encoding="application/x-tex">75%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">75</span></span></span></span></summary><img src="paste_src/口病_cyst-2.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 <td>20y ↓ (40%)</td>
 <td><details><summary>Cyst wall 上有 Thyroid follicle </summary><img src="paste_src/口病-34.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
@@ -908,7 +784,7 @@ n["非齒源(Non-Odontogenic)"]
 <td rowspan="2">Oral Lymphoepithelial Cyst</td>
 <td rowspan="2">上皮內陷(invagination)淋巴 → keratin debris</td>
 <td>Waldeyer ring, 口底, 舌腹, 軟顎</td>
-<td rowspan="2">年輕人</td>
+<td rowspan="2">40-50y</td>
 <td><details><summary>φ&lt;1cm 的黏膜下黃白色腫塊</summary><img src="paste_src/口病-37.png" alt="alt text" style=";background-color: white;padding:0"></details></td>
 </tr>
 <tr>
@@ -3422,7 +3298,7 @@ nn --&gt;|否| s1[I]
 <tr>
 <td rowspan="2" colspan="2">Paraneoplastic Pemphigus<sup>罕</sup> (PP) <br> 腫瘤誘導性天疱瘡</td>
 
-<td rowspan="2" colspan="2"><ul> <li>Lymphoma, Chronic lymphocytic leukemia, Castleman disease 患者</li> <li>異常 IL6 → T<sub>FH</sub> → IL-21 → Plasma cell</li> <li>Ab 打 <mark>Plakin family</mark> Desmoglein 1, 3</li> </ul></td>
+<td rowspan="2" colspan="2"><ul> <li>Lymphoma, Chronic lymphocytic leukemia, <mark>Castleman disease</mark> 患者</li> <li>異常 IL6 → T<sub>FH</sub> → IL-21 → Plasma cell</li> <li>Ab 打 <mark>Plakin family</mark> Desmoglein 1, 3</li> </ul></td>
 
 <td colspan="4"><ul> <li>天疱瘡症狀</li> <li>突發、多發水泡</li> <li>高致死</li> <li>會出現在手掌腳掌</li> <li>嘴唇出血性結痂</li> <li>紅斑(erythema), 瀰漫性不規則潰瘍(diffuse, irregular ulceration)</li> <li>阻塞性細支氣管炎(bronchiolitis o bliterans)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-36.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-37.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-38.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div></td>
 
@@ -4131,54 +4007,6 @@ type VII collagen = BP290</p>
 </tr>
 </tbody>
 </table></div>
-<h2 id="缺鐵性貧血相關病症">缺鐵性貧血相關病症 </h2>
-<ul>
-<li>MCV/RBC
-<ul>
-<li>缺鐵性貧血: &gt;16</li>
-<li>地中海型貧血: &lt;13</li>
-</ul>
-</li>
-<li>口腔灼熱感、口角炎(angular cheilitis)</li>
-<li>廣泛性口腔黏膜萎縮(generalized oral mucosal atrophy)</li>
-<li>萎縮性舌炎(atrophic glossitis): 一片光滑</li>
-</ul>
-<div class="table-scroll-wrapper"><table>
-<thead>
-<tr>
-<th colspan="2">名稱</th>
-
-<th>成因</th>
-<th>GLA</th>
-<th colspan="4">特徵</th>
-
-
-
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2">Hereditary Hemorrhagic Telangiectasia (遺傳性出血性微血管擴張症，HHT，Weber syndrome)</td>
-
-<td colspan="2">體顯性，<code>GENE</code> <ul> <li>HHT1: endoglin (ENG)</li> <li>HHT2: activin receptor-like kinase (ALK1; ACVRL1)</li> <li>HHT + juvenile polyposis: MADH4</li> </ul></td>
-
-<td colspan="4"><ul> <li>流鼻血(epistaxis)而被診斷</li> <li>口鼻黏膜紅色丘疹，壓迫變白</li> <li>萎縮性舌炎</li> <li>腸道易出血 → 慢性缺鐵性貧血</li> <li>動靜脈廔(arteriovenous fistulas)</li> <li>牙周血管畸形 → 菌血 → 化膿性肺栓塞</li> </ul></td>
-
-
-
-</tr>
-<tr>
-<td colspan="2"><span style="margin:0; color: red;"> Plummer-Vinson syndrom</span><sup>罕</sup></td>
-
-<td>-</td>
-<td>30-50y</td>
-<td colspan="4"><ul> <li>癌前變化 → SCC</li> <li>食道蹼(esophageal webs) → sideropenic dysphagia(缺鐵性吞嚥困難)</li> <li>萎縮性舌炎</li> <li>匙狀指甲(koilonychia)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-54.png" alt="alt text" style="width:55%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-18.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div></td>
-
-
-
-</tr>
-</tbody>
-</table></div>
 <h2 id="退化性-代謝性疾病">退化性、代謝性疾病 </h2>
 <p>Degenerative and Metabolic Diseases</p>
 <div class="table-scroll-wrapper"><table>
@@ -4554,6 +4382,26 @@ type VII collagen = BP290</p>
 <li>Patch phase: 血管圍繞在原本存在的血管旁增生</li>
 <li>Plaque: 明顯的 spindle cell 增生</li>
 <li>Nodule: 血管外 RBC, 有縫狀的管腔</li>
+</ul>
+</li>
+<li>
+<p>Shingles (帶狀皰疹)</p>
+<ul>
+<li>VZV</li>
+</ul>
+</li>
+<li>
+<p>Hand-foot-and-mouth Disease</p>
+<ul>
+<li>Enterovirus</li>
+<li>EV71嚴重的神經系統併發症，例如：
+<ul>
+<li>病毒性腦膜炎 (Viral Meningitis)</li>
+<li>腦炎 (Encephalitis)</li>
+<li>心肌炎 (Myocarditis)</li>
+<li>急性肢體麻痺症 (Acute Flaccid Paralysis, AFP)</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -5040,6 +4888,54 @@ type VII collagen = BP290</p>
 </ul>
 </li>
 </ul>
+<h2 id="缺鐵性貧血相關病症">缺鐵性貧血相關病症 </h2>
+<ul>
+<li>MCV/RBC
+<ul>
+<li>缺鐵性貧血: &gt;16</li>
+<li>地中海型貧血: &lt;13</li>
+</ul>
+</li>
+<li>口腔灼熱感、口角炎(angular cheilitis)</li>
+<li>廣泛性口腔黏膜萎縮(generalized oral mucosal atrophy)</li>
+<li>萎縮性舌炎(atrophic glossitis): 一片光滑</li>
+</ul>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Hereditary Hemorrhagic Telangiectasia (遺傳性出血性微血管擴張症，HHT，Weber syndrome)</td>
+
+<td colspan="2">體顯性，<code>GENE</code> <ul> <li>HHT1: endoglin (ENG)</li> <li>HHT2: activin receptor-like kinase (ALK1; ACVRL1)</li> <li>HHT + juvenile polyposis: MADH4</li> </ul></td>
+
+<td colspan="4"><ul> <li>流鼻血(epistaxis)而被診斷</li> <li>口鼻黏膜紅色丘疹，壓迫變白</li> <li>萎縮性舌炎</li> <li>腸道易出血 → 慢性缺鐵性貧血</li> <li>動靜脈廔(arteriovenous fistulas)</li> <li>牙周血管畸形 → 菌血 → 化膿性肺栓塞</li> <li>黏膜下纖維化症 (Submucous Fibrosis)</li> </ul></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: red;"> Plummer-Vinson syndrom</span><sup>罕</sup></td>
+
+<td>-</td>
+<td>30-50y</td>
+<td colspan="4"><ul> <li>癌前變化 → SCC</li> <li>食道蹼(esophageal webs) → sideropenic dysphagia(缺鐵性吞嚥困難)</li> <li>萎縮性舌炎</li> <li>匙狀指甲(koilonychia)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-54.png" alt="alt text" style="width:55%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-18.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
 <h2 id="整理-3">整理 </h2>
 <ul>
 <li>Lymphoma 和 EBV
@@ -5766,12 +5662,64 @@ neuroectodermal tumor of infancy、MEN2B</li>
 </table></div>
 <h3 id="imperfecta">Imperfecta </h3>
 <h4 id="amelogenesis-imperfecta-ai">Amelogenesis Imperfecta (AI) </h4>
-<img src="paste_src/口病-167.png" alt="alt text" style=";background-color: white;padding:0">
-<img src="paste_src/口病-170.png" alt="alt text" style=";background-color: white;padding:0"> 
+<ul>
+<li>
+<p>低鈣化型 (Hypocalcified):</p>
+<ul>
+<li>enamel 密度低，X-ray 下dentin 分不出界線</li>
+<li>“Moth-eaten” (蟲蝕狀) 外觀</li>
+</ul>
+</li>
+<li>
+<p>發育不全型 (Hypoplastic)：</p>
+<ul>
+<li>enamel薄 → Square crowns, Open contact points</li>
+</ul>
+</li>
+<li>
+<p>髓腔和牙根正常（這是與 DGI 最重要的區別）。</p>
+</li>
+</ul>
+<div class="fbox"> 
+<img src="paste_src/口病-167.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+<img src="paste_src/口病-174.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+</div>
 <h4 id="dentinogenesis-imperfecta-dgi">Dentinogenesis Imperfecta (DGI) </h4>
-<img src="paste_src/口病-169.png" alt="alt text" style=";background-color: white;padding:0">
-<img src="paste_src/口病-168.png" alt="alt text" style=";background-color: white;padding:0">
-<img src="paste_src/口病-171.png" alt="alt text" style=";background-color: white;padding:0">
+<ul>
+<li>Osteogenesis Imperfecta 相關</li>
+<li>Bulbous Crowns</li>
+<li>Cervical Constriction： CEJ 明顯的緊縮，讓牙冠看起來更容易斷裂。</li>
+<li>Pulp Obliteration： 髓腔和根管在萌發後不久就會鈣化、閉鎖，X 光上看不到髓腔。</li>
+<li>Short Roots</li>
+</ul>
+<div class="fbox"> 
+<img src="paste_src/口病-169.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+<img src="paste_src/口病-168.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+<img src="paste_src/口病-171.png" alt="alt text" style="width:70%;background-color: white;padding:0">
+</div>
+<h4 id="dentin-dysplasia-dd">Dentin Dysplasia (DD) </h4>
+<ul>
+<li>Type 1: Radicular (根部型)
+<ul>
+<li>Rootless Teeth</li>
+<li>W形/新月形殘髓： 髓腔幾乎完全鈣化，僅在牙冠部留下一點點水平的、像新月形 (Crescent-shaped) 的透射區。</li>
+<li>根尖病變： 在沒有蛀牙的情況下，常可見Periapical RL，是 Granuloma or Cyst</li>
+</ul>
+</li>
+<li>Type 2: Coronal (冠部型)
+<ul>
+<li>乳牙： 似 DI（球狀牙冠、髓腔鈣化）。</li>
+<li>恆牙（關鍵）：
+<ul>
+<li>牙根長度正常。</li>
+<li>髓腔形呈現 “Thistle-tube appearance” (薊花管狀)，即髓室擴大且延伸至根管口</li>
+<li>髓腔內常充滿 Pulp stones (髓石)。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/口病-175.png" alt="alt text" style=";background-color: white;padding:0"> 
 <h3 id="accessory-cusps">ACCESSORY CUSPS </h3>
 <div class="dcl">
 <section>
@@ -6184,30 +6132,36 @@ neuroectodermal tumor of infancy、MEN2B</li>
 </ul>
 </li>
 <li>
-<p>Eosinophil 浸潤</p>
+<p>脫屑性牙齦炎(desquamative gingivitis)</p>
 <ul>
-<li>Lymph Follicle內
-<ul>
-<li>Kimura disease</li>
-<li>Epithelioid Hemangioma</li>
-</ul>
-</li>
-<li>Hodgkin lymphoma</li>
-<li>Langerhans cell histocytosis (LCH)</li>
-<li>pyostomatitis vegetans (增殖性化膿性口炎)</li>
-<li>Bullous Pemphigoid (BP)</li>
+<li>自體免疫，Interdental papilla高度正常</li>
+<li>PV</li>
+<li>MMP</li>
+<li>SLE</li>
+<li>Erosive Lichen Planus</li>
+<li>Chronic Ulcerative Stomatitis (CUS)</li>
 </ul>
 </li>
 <li>
-<p>休息骨痛</p>
+<p>壞死性潰瘍性齦炎 (necrotizing ulcerative gingivitis, NUG)</p>
 <ul>
-<li>Paget</li>
+<li>細菌感染，Interdental papilla高度下降，幾乎不見</li>
 </ul>
 </li>
 <li>
-<p>休息骨痛緩和</p>
+<p>草莓舌</p>
 <ul>
-<li>osteoarthritic</li>
+<li>kawasaki disease</li>
+<li>猩紅熱</li>
+<li>小孩子的 COVID-19</li>
+</ul>
+</li>
+<li>
+<p>骨痛</p>
+<ul>
+<li>休息骨痛: Paget</li>
+<li>休息骨痛緩和: osteoarthritic</li>
+<li>夜間躺平骨痛:  Osteoid osteoma</li>
 </ul>
 </li>
 <li>
@@ -6235,7 +6189,30 @@ neuroectodermal tumor of infancy、MEN2B</li>
 </li>
 </ul>
 </li>
+<li>
+<p>Eosinophil 浸潤</p>
+<ul>
+<li>Lymph Follicle內
+<ul>
+<li>Kimura disease</li>
+<li>Epithelioid Hemangioma</li>
 </ul>
+</li>
+<li>Hodgkin lymphoma</li>
+<li>Langerhans cell histocytosis (LCH)</li>
+<li>pyostomatitis vegetans (增殖性化膿性口炎)</li>
+<li>Bullous Pemphigoid (BP)</li>
+</ul>
+</li>
+</ul>
+<h2 id="罵取表">罵取表 </h2>
+<img src="paste_src/口病-150.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/口病-151.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/口病-152.png" alt="alt text" style=";background-color: white;padding:0">
+<h3 id="指甲-1">指甲 </h3>
+<img src="paste_src/口病-142.png" alt="alt text" style=";background-color: white;padding:0">
+<h3 id="根尖病變">根尖病變 </h3>
+<img src="paste_src/口病-173.png" alt="alt text" style=";background-color: white;padding:0">
 <h2 id="基因">基因 </h2>
 <h3 id="braf-mutation">BRAF mutation </h3>
 <ul>
@@ -6320,8 +6297,6 @@ neuroectodermal tumor of infancy、MEN2B</li>
 </tr>
 </tbody>
 </table></div>
-<h2 id="指甲-1">指甲 </h2>
-<img src="paste_src/口病-142.png" alt="alt text" style=";background-color: white;padding:0">
 <h2 id="ihc">IHC </h2>
 <ul>
 <li>神經
@@ -6333,7 +6308,7 @@ neuroectodermal tumor of infancy、MEN2B</li>
 </li>
 <li>肌肉
 <ul>
-<li>SAM</li>
+<li>SMA (平滑肌)</li>
 <li>Actin</li>
 <li>Calponin</li>
 <li>Desmin (分化好)</li>
@@ -6440,6 +6415,154 @@ neuroectodermal tumor of infancy、MEN2B</li>
 </ul>
 </li>
 </ul>
+<h2 id="驗血">驗血 </h2>
+<ul>
+<li>自體免疫
+<ul>
+<li>ANA（Antinuclear Antibody）
+<ul>
+<li>高度敏感、但特異性低</li>
+</ul>
+</li>
+<li>RF（Rheumatoid Factor）類風濕因子
+<ul>
+<li>特異性與敏感度都不高</li>
+</ul>
+</li>
+<li>Anti-SS-A(Anti-Ro), Anti-SS-B(Anti-La)
+<ul>
+<li>Sjögren syndrome</li>
+</ul>
+</li>
+<li>Anti-CCP
+<ul>
+<li>RA 特異度最高（&gt;90%）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left">抗體名稱 (Abbreviation)</th>
+<th style="text-align:left">全稱 / 標的</th>
+<th style="text-align:left">相關疾病 (Associated Disease)</th>
+<th style="text-align:left">敏感度 / 特異性 (Sens/Spec)</th>
+<th style="text-align:left">臨床與口腔意義 (Clinical &amp; Oral Significance)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>ANA</strong></td>
+<td style="text-align:left">Antinuclear Antibody<br>(抗核抗體)</td>
+<td style="text-align:left">SLE, Sjögren syndrome, Sclerosis, MCTD 等</td>
+<td style="text-align:left"><strong>敏感度高</strong> (篩檢用)<br><strong>特異性低</strong></td>
+<td style="text-align:left"><strong>自體免疫疾病的初步篩檢</strong>。<br>若口腔有非特異性潰瘍，通常會先測此項以排除系統性問題。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>RF</strong></td>
+<td style="text-align:left">Rheumatoid Factor</td>
+<td style="text-align:left">RA, Sjögren syndrome</td>
+<td style="text-align:left">敏感度與特異性<strong>皆不高</strong></td>
+<td style="text-align:left">僅作參考，易有偽陽性。需結合臨床症狀判定。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Anti-CCP</strong></td>
+<td style="text-align:left">Anti-cyclic citrullinated peptide</td>
+<td style="text-align:left">RA</td>
+<td style="text-align:left"><strong>特異性最高 (&gt;90%)</strong></td>
+<td style="text-align:left"><strong>RA 診斷黃金標準</strong>。<br>用於早期診斷 RA 及預測骨破壞程度。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Anti-SS-A (Ro)</strong><br><strong>Anti-SS-B (La)</strong></td>
+<td style="text-align:left">Sjögren’s Syndrome A/B</td>
+<td style="text-align:left"><strong>Sjögren’s Syndrome</strong>、SLE</td>
+<td style="text-align:left">特異性中等</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Anti-Sm</strong></td>
+<td style="text-align:left">Anti-Smith</td>
+<td style="text-align:left"><strong>系統性紅斑狼瘡 (SLE)</strong></td>
+<td style="text-align:left">敏感度低<br><strong>特異性極高</strong></td>
+<td style="text-align:left"><strong>SLE 的確診指標</strong>。<br>SLE 口腔表現可能為潰瘍或盤狀紅斑。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Anti-intercellular substance</strong></td>
+<td style="text-align:left">抗細胞間質抗體</td>
+<td style="text-align:left"><strong>PV</strong></td>
+<td style="text-align:left"><strong>高特異性 (診斷用)</strong></td>
+<td style="text-align:left">Desmoglein, <strong>脫屑性牙齦炎</strong>。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Anti-BMZ</strong></td>
+<td style="text-align:left">Anti-Basement membrane zone</td>
+<td style="text-align:left"><strong>MMP</strong></td>
+<td style="text-align:left"><strong>高特異性 (診斷用)</strong></td>
+<td style="text-align:left"><strong>脫屑性牙齦炎</strong>。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Anti-Scl70</strong></td>
+<td style="text-align:left">Topoisomerase I</td>
+<td style="text-align:left"><strong>Sclerosis</strong></td>
+<td style="text-align:left"><strong>高特異性</strong></td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<ul>
+<li>發炎
+<ul>
+<li>ESR（Erythrocyte Sedimentation Rate，紅血球沉降速率）
+<ul>
+<li>非特異性、反映全身慢性發炎反應的檢測</li>
+<li>慢（24–48 小時）</li>
+</ul>
+</li>
+<li>CRP(C-reactive protein)
+<ul>
+<li>快（6–8 小時）</li>
+<li>高靈敏</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>細菌感染
+<ul>
+<li>Procalcitonin（PCT）</li>
+</ul>
+</li>
+<li>ACE ↑ (angiotensin-converting enzyme)
+<ul>
+<li>Macrophage 分泌，全身性肉芽腫
+<ul>
+<li>Sarcoidosis</li>
+<li>Tuberculosis</li>
+<li>Leprosy</li>
+</ul>
+</li>
+<li>Hyperthyroidism</li>
+<li>Diabetes mellitus</li>
+</ul>
+</li>
+<li>能否使用carbamazepine
+<ul>
+<li>HLA-B1502</li>
+</ul>
+</li>
+<li>aphthous ulcer(復發性口瘡)
+<ul>
+<li>缺鐵性貧血會有 atrophic glossitis</li>
+<li>CBC(全血球)</li>
+<li>鐵</li>
+<li>TIBC(總鐵結合能力)</li>
+<li>B12、葉酸</li>
+<li>Homocysteine(大球性貧血)</li>
+</ul>
+</li>
+</ul>
 <h2 id="誰有病">誰有病 </h2>
 <dl>
 <dt>Gorlin Syndrome</dt>
@@ -6481,10 +6604,8 @@ neuroectodermal tumor of infancy、MEN2B</li>
 <dt>Warthin tumor</dt>
 <dd>From striated duct，良性</dd>
 </dl>
-<h2 id="罵取表">罵取表 </h2>
-<img src="paste_src/口病-150.png" alt="alt text" style=";background-color: white;padding:0">
-<img src="paste_src/口病-151.png" alt="alt text" style=";background-color: white;padding:0">
-<img src="paste_src/口病-152.png" alt="alt text" style=";background-color: white;padding:0">
+<p>GALVANIZETOEFL8<br>
+EALATOEFL10</p>
 <br><br>
       </div>
       <div class="md-sidebar-toc">
@@ -6769,10 +6890,6 @@ neuroectodermal tumor of infancy、MEN2B</li>
             <p>特發性結締組織疾病</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#缺鐵性貧血相關病症" class="md-toc-link">
-            <p>缺鐵性貧血相關病症</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#退化性-代謝性疾病" class="md-toc-link">
             <p>退化性、代謝性疾病</p>
 
@@ -6952,6 +7069,10 @@ neuroectodermal tumor of infancy、MEN2B</li>
             <p>Oral Graft versus Host Disease (GVHD)</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#缺鐵性貧血相關病症" class="md-toc-link">
+            <p>缺鐵性貧血相關病症</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#整理-3" class="md-toc-link">
             <p>整理</p>
 
@@ -7082,6 +7203,23 @@ neuroectodermal tumor of infancy、MEN2B</li>
         <div>
           <details style="padding:0;;padding-left:24px;" open="">
         <summary class="md-toc-link-wrapper">
+          <a href="#罵取表" class="md-toc-link"><p>罵取表</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#指甲-1" class="md-toc-link">
+            <p>指甲</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#根尖病變" class="md-toc-link">
+            <p>根尖病變</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
           <a href="#基因" class="md-toc-link"><p>基因</p>
 </a>
           </summary>
@@ -7110,20 +7248,16 @@ neuroectodermal tumor of infancy、MEN2B</li>
         </div>
       </details>
     <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#指甲-1" class="md-toc-link">
-            <p>指甲</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#ihc" class="md-toc-link">
             <p>IHC</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#誰有病" class="md-toc-link">
-            <p>誰有病</p>
+          <a href="#驗血" class="md-toc-link">
+            <p>驗血</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#罵取表" class="md-toc-link">
-            <p>罵取表</p>
+          <a href="#誰有病" class="md-toc-link">
+            <p>誰有病</p>
 
           </a></div>
         </div>

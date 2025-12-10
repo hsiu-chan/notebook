@@ -155,24 +155,6 @@ neuroectodermal tumor of infancy、MEN2B
 | **Beckwith-Wiedemann Syndrome** | Chr. 11 (IGF-2) | \oneline{<br>1. 巨舌症 (Macroglossia)<br>2. 臍膨出 (Omphalocele)<br>3. 內臟肥大<br>4. 易患兒童腫瘤 (Wilms, Hepatoblastoma)<br>} |
 
 
-## leukemia
-- 根據 acute/chronic、lymphoid/myeloid 分成四型： 
-  - ALL：最常發生在小孩的(其他型是成年男性居多) 
-  - AML：常見 diffuse gingival enlargement 
-  - CLL 
-  - CML：t(9,22)BCR-ABL 
- 
-- 臨床症狀 
-  - 造血細胞出問題&rarr;血球生成受影響&rarr;血小板最先受影響，thrombocytopenia&rarr; 凝血出問題&rarr;容易瘀血、bleeding、常有點狀瘀血(petechial hemorrhages)在硬顎後方、自發性出血
-  - 常在 gingiva 出現 Neutropenic ulcers，呈現深的、punched-out lesion 伴隨著灰白色的 necrotic base 
-  - 最常發生的是在==牙齦有廣泛性的腫脹(diffuse gingival enlargement)==(特別是AML)，因為裡面都是血液的物質，所以外觀呈現一整片藍紫色。 
-  - IHC 染色
-    - CD45 
-    - Myeloid lineage：MPO & lysozyme & C-kit & CD34 & CD15 (for granulocyte) 
-    - B cell：CD10 & CD79a   
-    - T cell：CD3 
-
-![alt text](paste_src/口病_Soft.png)
 
 ## Drug-related gingival hyperplasia
 - 停藥會消退的：Cyclosporine、鈣離子阻斷劑(nifedipine) 

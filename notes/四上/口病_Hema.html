@@ -148,47 +148,30 @@ img {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
-html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
-  left: 0;
-  width: 100%;
-  max-width: 1000px;
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 2em;
-  transform: translateX(0);
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  padding: 50px 10px 48px 0;
-  font-size: 14px;
-  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
-  box-sizing: border-box;
-  overflow: auto;
-  background-color: inherit;
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
 }
-html body {
-  background-color: hsl(220, 13%, 18%);
-  /* === Markdown Preview Enhancer TOC 樣式新版 === */
-  /* 縮排*/
-  /* TOC link */
-  /* 每層 details 都要重置下一層 counter */
-  /* 第一層：h1 */
-  /* 第二層：h2 */
-  /* 第三層：h3 */
-  /* 第四層：h4 */
-  /* 縮排 
-.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
-.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
-.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
-.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
-  /* hover & active */
-  /*
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
   /////三线表/////
   table{
       border-top: 1.5pt solid;
@@ -220,119 +203,12 @@ html body {
       font-size:9pt;                              
   }
   */
-}
-html body .md-sidebar-toc {
-  margin: 0;
-  padding: 0.5rem 0;
-  position: absolute;
-  max-width: 768px;
-  background-color: rgba(186, 55, 55, 0.1);
-  z-index: 70;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-html body .md-toc-link-wrapper {
-  list-style: none!important;
-}
-html body div.md-toc-link-wrapper {
-  margin-left: 0px!important;
-}
-html body details > div > div.md-toc-link-wrapper {
-  margin-left: 24px!important;
-}
-html body .md-sidebar-toc a {
-  color: inherit;
-  text-decoration: none;
-}
-html body .md-sidebar-toc a:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc {
-  counter-reset: toc-h1;
-}
-html body .md-sidebar-toc details {
-  counter-reset: toc-h2;
-}
-html body .md-sidebar-toc details details {
-  counter-reset: toc-h3;
-}
-html body .md-sidebar-toc details details details {
-  counter-reset: toc-h4;
-}
-html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h1;
-  content: counter(toc-h1) ". ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h2;
-  content: counter(toc-h1) "." counter(toc-h2) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h3;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h4;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper.active a {
-  color: #87ffff;
-  font-weight: bold;
-}
-html body .dcl {
-  /* block 水平置中的方法 */
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-  margin-right: -1%;
-}
-html body header,
-html body section,
-html body aside,
-html body .in,
-html body footer {
-  margin: 0 1% 0.3em 0;
-}
-html body section {
-  float: left;
-  width: 49%;
-}
-html body footer {
-  margin-bottom: 0;
-  /* 不准其他元素出現在其左右 */
-  clear: both;
-}
-html body .btn {
-  position: fixed;
-  z-index: 99;
-  font-size: 24px;
-  color: inherit;
-  text-align: center;
-  width: 32px;
-  cursor: pointer;
-  opacity: 0.4;
-  word-wrap: break-word;
-}
-html body .btn:active {
-  opacity: 0.8;
-}
 @media screen and (max-width: 400px) {
-  html body img {
+  img {
     width: 100% !important;
   }
 }
-html body .fbox {
+.fbox {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
@@ -342,7 +218,7 @@ html body .fbox {
   left: 50%;
   transform: translateX(-50%);
 }
-html body .fbox img {
+.fbox img {
   position: relative;
   left: 0;
   transform: translate(0, 0);
@@ -350,7 +226,7 @@ html body .fbox img {
   background-color: rgba(0, 0, 0, 0) !important;
   object-fit: contain;
 }
-html body table .fbox {
+table .fbox {
   left: 0;
   transform: translateX(0);
 }
@@ -407,17 +283,29 @@ html body table .fbox {
 }
 
       </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script></head><body for="html-export">
+      <!-- The content below will be included at the end of the <head> element. --><script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+
+<script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+
+
+<script type="text/javascript">
+//載入完成後執行
+document.addEventListener("DOMContentLoaded", () => {
+  var page = document.getElementsByClassName('markdown-preview')[0]
+  page.addEventListener('click', function(event) {
+    event.stopPropagation()
+    
+    document.body.removeAttribute('html-show-sidebar-toc');
+  })
+});
+</script>
+<link rel="stylesheet" href="../Hyper_md/style.css">
+</head><body for="html-export">
     
     
       <div class="crossnote markdown-preview  ">
-      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
-      <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css">
+      
 <h1 id="hematologic-disorders">Hematologic Disorders </h1>
 <blockquote>
 <p>需要切片</p>
@@ -452,7 +340,121 @@ html body table .fbox {
 <div class="fbox">
 <img src="paste_src/口病_Hema.png" alt="alt text" style="width:45%;background-color: white;padding:0">
 <img src="paste_src/口病_Hema-1.png" alt="alt text" style="width:45%;background-color: white;padding:0"></div>
-<h2 id="myelodysplastic-syndromemds骨髓發育不良症候群">Myelodysplastic syndrome(MDS，骨髓發育不良症候群) </h2>
+<h2 id="缺鐵性貧血相關病症">缺鐵性貧血相關病症 </h2>
+<ul>
+<li>MCV/RBC
+<ul>
+<li>缺鐵性貧血: &gt;16</li>
+<li>地中海型貧血: &lt;13</li>
+</ul>
+</li>
+<li>口腔灼熱感、口角炎(angular cheilitis)</li>
+<li>廣泛性口腔黏膜萎縮(generalized oral mucosal atrophy)</li>
+<li>萎縮性舌炎(atrophic glossitis): 一片光滑</li>
+</ul>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Hereditary Hemorrhagic Telangiectasia (遺傳性出血性微血管擴張症，HHT，Weber syndrome)</td>
+
+<td colspan="2">體顯性，<code>GENE</code> <ul> <li>HHT1: endoglin (ENG)</li> <li>HHT2: activin receptor-like kinase (ALK1; ACVRL1)</li> <li>HHT + juvenile polyposis: MADH4</li> </ul></td>
+
+<td colspan="4"><ul> <li>流鼻血(epistaxis)而被診斷</li> <li>口鼻黏膜紅色丘疹，壓迫變白</li> <li>萎縮性舌炎</li> <li>腸道易出血 → 慢性缺鐵性貧血</li> <li>動靜脈廔(arteriovenous fistulas)</li> <li>牙周血管畸形 → 菌血 → 化膿性肺栓塞</li> <li>黏膜下纖維化症 (Submucous Fibrosis)</li> </ul></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: red;"> Plummer-Vinson syndrom</span><sup>罕</sup></td>
+
+<td>-</td>
+<td>30-50y</td>
+<td colspan="4"><ul> <li>癌前變化 → SCC</li> <li>食道蹼(esophageal webs) → sideropenic dysphagia(缺鐵性吞嚥困難)</li> <li>萎縮性舌炎</li> <li>匙狀指甲(koilonychia)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-54.png" alt="alt text" style="width:55%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-18.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
+<h2 id="aplastic-anemia再生不良性貧血">Aplastic Anemia再生不良性貧血 </h2>
+<ul>
+<li>cytotoxic T lymphocytes 攻擊骨髓中分化中的造血細胞所致
+<ul>
+<li>暴露於特定環境毒素(如：苯benzene)</li>
+<li>使用某些藥物(尤其是抗生素氯黴素chloramphenicol)</li>
+<li>感染某些病毒(尤其是非A、非B、非C、非G型肝炎病毒)</li>
+</ul>
+</li>
+<li>Dyskeratosis Congenita 可能進展為再生不良性貧血</li>
+<li>紅血球缺乏：造成血液攜氧能力下降
+<ul>
+<li>症狀：疲倦、頭暈、心悸(tachycardia)、無力</li>
+<li>口腔黏膜可能呈蒼白</li>
+</ul>
+</li>
+<li>血小板缺乏(thrombocytopenia)：易出現瘀斑與出血
+<ul>
+<li>影響多個部位，包括視網膜及腦部出血，屬較嚴重表現</li>
+<li>牙齦出血</li>
+<li>口腔黏膜瘀點(petechiae)、紫斑(purpura)、瘀斑(ecchymoses)</li>
+</ul>
+</li>
+<li>白血球缺乏
+<ul>
+<li>最重要的併發症，易導致細菌與真菌感染，常為死亡原因</li>
+<li>牙齦感染性潰瘍</li>
+</ul>
+</li>
+</ul>
+<h2 id="methotrexate-mtx">Methotrexate (MTX) </h2>
+<ul>
+<li>葉酸拮抗劑(folic acid antimetabolite)，作為steroid-sparing agent。用於治療：
+<ul>
+<li>白血病(leukemia)</li>
+<li>solid tumors</li>
+<li>自體免疫疾病</li>
+<li>某些型態 psoriasis</li>
+</ul>
+</li>
+<li>全血球減少(pancytopenia)、肝毒性(hepatotoxicity)</li>
+<li>口腔 (嘴唇、頰黏膜、舌頭)
+<ul>
+<li>紅斑區(erythematous areas)</li>
+<li>不規則潰瘍</li>
+<li>白色假膜(whitish slough)</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/口病_Hema-19.png" alt="alt text" style=";background-color: white;padding:0">
+<h2 id="polycythemia-vera真性紅血球增多症">Polycythemia Vera真性紅血球增多症 </h2>
+<ul>
+<li>紅血球(RBCs)總量增加</li>
+<li>種酪氨酸激酶基因(tyrosine kinase gene)—Janus kinase 2 (JAK2) 的後天突變</li>
+<li>GAL
+<ul>
+<li>60歲</li>
+</ul>
+</li>
+<li>症狀
+<ul>
+<li>初期症狀多非特異性，包括：頭痛、虛弱、頭暈、嗜睡、視力異常、多汗、體重下降、呼吸困難、上腹痛等</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/口病_Hema-18.png" alt="alt text" style=";background-color: white;padding:0">
+## Myelodysplastic syndrome(MDS，骨髓發育不良症候群) {#myelodysplastic-syndromemds骨髓發育不良症候群 }
 <ul>
 <li>如果發展成 Acute leukemia → gingival hyperplasia</li>
 </ul>
@@ -489,56 +491,39 @@ html body table .fbox {
 <li>Histiocytes: 結締組織macrophage，CD68, CD163</li>
 </ul>
 <img src="paste_src/口病_Hema-15.png" alt="alt text" style=";background-color: white;padding:0">
-<h2 id="cat-scratch-disease">Cat Scratch Disease </h2>
+<h2 id="leukemia-myeloid-sarcoma">leukemia, myeloid sarcoma </h2>
 <ul>
-<li>Granulomas 但一堆 neutrophil</li>
+<li>
+<p>根據 acute/chronic、lymphoid/myeloid 分成四型：</p>
+<ul>
+<li>ALL：預後最好，最常發生在小孩(其他型是成年男性居多)</li>
+<li>AML：diffuse gingival enlargement 常見原因</li>
+<li>CLL: 最常見</li>
+<li>CML：t(9,22)BCR-ABL</li>
 </ul>
-<div class="dcl">
-<section>
-<h2 id="kimura-disease">Kimura disease </h2>
-<blockquote>
-<p>eosinophils 跑到 Lymph Follicle</p>
-</blockquote>
+</li>
+<li>
+<p>臨床症狀</p>
 <ul>
-<li>亞洲年輕的成年男性 (20-30y)</li>
-<li>深層病灶，淋巴、唾液腫</li>
-<li>血管增生，型態正常</li>
-<li>抽血 eosinophils 升高</li>
-<li>IgE-positive mast cell</li>
-</ul>
-</section>
-<section>
-<h2 id="epithelioid-hemangioma">Epithelioid Hemangioma </h2>
-<blockquote>
-<p>eosinophils 跑到 Lymph Follicle</p>
-</blockquote>
+<li>造血細胞出問題→血球生成受影響→血小板最先受影響，thrombocytopenia→ 凝血出問題→容易瘀血、bleeding、常有點狀瘀血(petechial hemorrhages)在硬顎後方、自發性出血</li>
+<li>常在 gingiva 出現 Neutropenic ulcers，呈現深的、punched-out lesion 伴隨著灰白色的 necrotic base</li>
+<li>最常發生的是在<mark>牙齦有廣泛性的腫脹(diffuse gingival enlargement)</mark>(特別是AML)，因為裡面都是血液的物質，所以外觀呈現一整片藍紫色。</li>
+<li>IHC 染色
 <ul>
-<li>男女差不多 (30-50y)</li>
-<li>淺層病灶，淋巴唾液較少腫脹</li>
-<li>血管增生，但圓胖內皮 → 墓碑</li>
-<li>抽血無 eosinophils 升高</li>
-</ul>
-</section></div>
-<h2 id="castleman-disease">Castleman disease </h2>
-<ul>
-<li>Onion skin: 淋巴圍血管，一圈又一圈</li>
-<li>血管壁退化 → hyalinized walls</li>
-<li>Paraneoplastic Pemphigus 可能引發
-<ul>
-<li>HHV 8, IL6</li>
+<li>CD45</li>
+<li>Myeloid lineage：MPO &amp; lysozyme &amp; C-kit &amp; CD34 &amp; CD15 (for granulocyte)</li>
+<li>B cell：CD10 &amp; CD79a</li>
+<li>T cell：CD3</li>
 </ul>
 </li>
 </ul>
-<img src="paste_src/口病_Hema-16.png" alt="alt text" style="width:40%;background-color: white;padding:0">
-<h2 id="rosai-dorfman-disease">Rosai-Dorfman disease </h2>
-<ul>
-<li>大 Histiocytes 吃周圍 lymphocyte</li>
+</li>
 </ul>
-<img src="paste_src/口病_Hema-17.png" alt="alt text" style="width:35%;background-color: white;padding:0">
-<hr>
-<blockquote>
-<p>再來是惡性</p>
-</blockquote>
+<img src="paste_src/口病_Soft.png" alt="alt text" style=";background-color: white;padding:0">
+<ul>
+<li>白血病細胞的腫瘤樣聚集稱為骨髓肉瘤(myeloid sarcoma)</li>
+</ul>
+<img src="paste_src/口病_Hema-20.png" alt="alt text" style="width:50%;background-color: white;padding:0">
 <h2 id="lymphoma">Lymphoma </h2>
 <ul>
 <li>
@@ -749,6 +734,52 @@ html body table .fbox {
 </ul>
 </li>
 </ul>
+<h2 id="cat-scratch-disease">Cat Scratch Disease </h2>
+<ul>
+<li>Granulomas 但一堆 neutrophil</li>
+</ul>
+<div class="dcl">
+<section>
+<h2 id="kimura-disease">Kimura disease </h2>
+<blockquote>
+<p>eosinophils 跑到 Lymph Follicle</p>
+</blockquote>
+<ul>
+<li>亞洲年輕的成年男性 (20-30y)</li>
+<li>深層病灶，淋巴、唾液腫</li>
+<li>血管增生，型態正常</li>
+<li>抽血 eosinophils 升高</li>
+<li>IgE-positive mast cell</li>
+</ul>
+</section>
+<section>
+<h2 id="epithelioid-hemangioma">Epithelioid Hemangioma </h2>
+<blockquote>
+<p>eosinophils 跑到 Lymph Follicle</p>
+</blockquote>
+<ul>
+<li>男女差不多 (30-50y)</li>
+<li>淺層病灶，淋巴唾液較少腫脹</li>
+<li>血管增生，但圓胖內皮 → 墓碑</li>
+<li>抽血無 eosinophils 升高</li>
+</ul>
+</section></div>
+<h2 id="castleman-disease">Castleman disease </h2>
+<ul>
+<li>Onion skin: 淋巴圍血管，一圈又一圈</li>
+<li>血管壁退化 → hyalinized walls</li>
+<li>Paraneoplastic Pemphigus 可能引發
+<ul>
+<li>HHV 8, IL6</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/口病_Hema-16.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+<h2 id="rosai-dorfman-disease">Rosai-Dorfman disease </h2>
+<ul>
+<li>大 Histiocytes 吃周圍 lymphocyte</li>
+</ul>
+<img src="paste_src/口病_Hema-17.png" alt="alt text" style="width:35%;background-color: white;padding:0">
 <h2 id="整理">整理 </h2>
 <ul>
 <li>Lymphoma 和 EBV
@@ -762,20 +793,6 @@ html body table .fbox {
 <li>成人最常見的 lymphoma: Diffuse large B cell lymphoma</li>
 </ul>
 <br><br>
-
-<script type="text/javascript" src="../Hyper_md/md.js"></script>
-
-<script>
-var page = document.getElementsByClassName('markdown-preview')[0]
-page.addEventListener('click', function(event) {
-  event.stopPropagation()
-  
-  document.body.removeAttribute('html-show-sidebar-toc');
- 
-})
-</script>
-
-
       </div>
       <div class="md-sidebar-toc">
 <div class="md-toc">
@@ -788,6 +805,22 @@ page.addEventListener('click', function(event) {
           <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#thalassemia-地中海海洋性貧血" class="md-toc-link">
             <p>Thalassemia 地中海/海洋性貧血</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#缺鐵性貧血相關病症" class="md-toc-link">
+            <p>缺鐵性貧血相關病症</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#aplastic-anemia再生不良性貧血" class="md-toc-link">
+            <p>Aplastic Anemia再生不良性貧血</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#methotrexate-mtx" class="md-toc-link">
+            <p>Methotrexate (MTX)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#polycythemia-vera真性紅血球增多症" class="md-toc-link">
+            <p>Polycythemia Vera真性紅血球增多症</p>
 
           </a></div><details style="padding:0;;padding-left:24px;" open="">
         <summary class="md-toc-link-wrapper">
@@ -807,24 +840,8 @@ page.addEventListener('click', function(event) {
             <p>Kikuchi-Fujimoto disease</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#cat-scratch-disease" class="md-toc-link">
-            <p>Cat Scratch Disease</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#kimura-disease" class="md-toc-link">
-            <p>Kimura disease</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#epithelioid-hemangioma" class="md-toc-link">
-            <p>Epithelioid Hemangioma</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#castleman-disease" class="md-toc-link">
-            <p>Castleman disease</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#rosai-dorfman-disease" class="md-toc-link">
-            <p>Rosai-Dorfman disease</p>
+          <a href="#leukemia-myeloid-sarcoma" class="md-toc-link">
+            <p>leukemia, myeloid sarcoma</p>
 
           </a></div><details style="padding:0;;padding-left:24px;" open="">
         <summary class="md-toc-link-wrapper">
@@ -874,6 +891,26 @@ page.addEventListener('click', function(event) {
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#oral-graft-versus-host-disease-gvhd" class="md-toc-link">
             <p>Oral Graft versus Host Disease (GVHD)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#cat-scratch-disease" class="md-toc-link">
+            <p>Cat Scratch Disease</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#kimura-disease" class="md-toc-link">
+            <p>Kimura disease</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#epithelioid-hemangioma" class="md-toc-link">
+            <p>Epithelioid Hemangioma</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#castleman-disease" class="md-toc-link">
+            <p>Castleman disease</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#rosai-dorfman-disease" class="md-toc-link">
+            <p>Rosai-Dorfman disease</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#整理" class="md-toc-link">

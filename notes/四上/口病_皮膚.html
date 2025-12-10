@@ -148,47 +148,30 @@ img {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
-html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
-  left: 0;
-  width: 100%;
-  max-width: 1000px;
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 2em;
-  transform: translateX(0);
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  padding: 50px 10px 48px 0;
-  font-size: 14px;
-  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
-  box-sizing: border-box;
-  overflow: auto;
-  background-color: inherit;
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
 }
-html body {
-  background-color: hsl(220, 13%, 18%);
-  /* === Markdown Preview Enhancer TOC 樣式新版 === */
-  /* 縮排*/
-  /* TOC link */
-  /* 每層 details 都要重置下一層 counter */
-  /* 第一層：h1 */
-  /* 第二層：h2 */
-  /* 第三層：h3 */
-  /* 第四層：h4 */
-  /* 縮排 
-.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
-.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
-.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
-.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
-  /* hover & active */
-  /*
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
   /////三线表/////
   table{
       border-top: 1.5pt solid;
@@ -220,119 +203,12 @@ html body {
       font-size:9pt;                              
   }
   */
-}
-html body .md-sidebar-toc {
-  margin: 0;
-  padding: 0.5rem 0;
-  position: absolute;
-  max-width: 768px;
-  background-color: rgba(186, 55, 55, 0.1);
-  z-index: 70;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-html body .md-toc-link-wrapper {
-  list-style: none!important;
-}
-html body div.md-toc-link-wrapper {
-  margin-left: 0px!important;
-}
-html body details > div > div.md-toc-link-wrapper {
-  margin-left: 24px!important;
-}
-html body .md-sidebar-toc a {
-  color: inherit;
-  text-decoration: none;
-}
-html body .md-sidebar-toc a:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc {
-  counter-reset: toc-h1;
-}
-html body .md-sidebar-toc details {
-  counter-reset: toc-h2;
-}
-html body .md-sidebar-toc details details {
-  counter-reset: toc-h3;
-}
-html body .md-sidebar-toc details details details {
-  counter-reset: toc-h4;
-}
-html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h1;
-  content: counter(toc-h1) ". ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h2;
-  content: counter(toc-h1) "." counter(toc-h2) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h3;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h4;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper.active a {
-  color: #87ffff;
-  font-weight: bold;
-}
-html body .dcl {
-  /* block 水平置中的方法 */
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-  margin-right: -1%;
-}
-html body header,
-html body section,
-html body aside,
-html body .in,
-html body footer {
-  margin: 0 1% 0.3em 0;
-}
-html body section {
-  float: left;
-  width: 49%;
-}
-html body footer {
-  margin-bottom: 0;
-  /* 不准其他元素出現在其左右 */
-  clear: both;
-}
-html body .btn {
-  position: fixed;
-  z-index: 99;
-  font-size: 24px;
-  color: inherit;
-  text-align: center;
-  width: 32px;
-  cursor: pointer;
-  opacity: 0.4;
-  word-wrap: break-word;
-}
-html body .btn:active {
-  opacity: 0.8;
-}
 @media screen and (max-width: 400px) {
-  html body img {
+  img {
     width: 100% !important;
   }
 }
-html body .fbox {
+.fbox {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
@@ -342,7 +218,7 @@ html body .fbox {
   left: 50%;
   transform: translateX(-50%);
 }
-html body .fbox img {
+.fbox img {
   position: relative;
   left: 0;
   transform: translate(0, 0);
@@ -350,7 +226,7 @@ html body .fbox img {
   background-color: rgba(0, 0, 0, 0) !important;
   object-fit: contain;
 }
-html body table .fbox {
+table .fbox {
   left: 0;
   transform: translateX(0);
 }
@@ -512,11 +388,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </tr>
 <tr>
-<td rowspan="2" colspan="2">Dyskeratosis Congenita <br> 先天性角化不良</td>
+<td rowspan="2" colspan="2"><span style="margin:0; color:Deepskyblue">Dyskeratosis Congenita <br> 先天性角化不良</span></td>
 
 <td rowspan="2"><span style="margin:0; color:Deepskyblue">X隱性</span> <br> <code>GENE</code>: DKC1</td>
 <td rowspan="2">10y ↓</td>
-<td colspan="3"><ul> <li>影響 telomerase</li> <li>再生性貧血(aplastic anemia)</li> <li>易有惡性變化</li> <li>皮膚網狀的色素過度沉澱</li> <li>指甲會有明顯的萎縮，甚至消失</li> <li>沒得醫</li> </ul> <img src="paste_src/口病_皮膚-5.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>影響 telomerase</li> <li>再生不良貧血(aplastic anemia)</li> <li>易有惡性變化</li> <li>皮膚網狀的色素過度沉澱</li> <li>指甲會有明顯的萎縮，甚至消失</li> <li>沒得醫</li> </ul> <img src="paste_src/口病_皮膚-5.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 
 </tr>
@@ -799,7 +675,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <tr>
 <td rowspan="2" colspan="2">Paraneoplastic Pemphigus<sup>罕</sup> (PP) <br> 腫瘤誘導性天疱瘡</td>
 
-<td rowspan="2" colspan="2"><ul> <li>Lymphoma, Chronic lymphocytic leukemia, Castleman disease 患者</li> <li>異常 IL6 → T<sub>FH</sub> → IL-21 → Plasma cell</li> <li>Ab 打 <mark>Plakin family</mark> Desmoglein 1, 3</li> </ul></td>
+<td rowspan="2" colspan="2"><ul> <li>Lymphoma, Chronic lymphocytic leukemia, <mark>Castleman disease</mark> 患者</li> <li>異常 IL6 → T<sub>FH</sub> → IL-21 → Plasma cell</li> <li>Ab 打 <mark>Plakin family</mark> Desmoglein 1, 3</li> </ul></td>
 
 <td colspan="4"><ul> <li>天疱瘡症狀</li> <li>突發、多發水泡</li> <li>高致死</li> <li>會出現在手掌腳掌</li> <li>嘴唇出血性結痂</li> <li>紅斑(erythema), 瀰漫性不規則潰瘍(diffuse, irregular ulceration)</li> <li>阻塞性細支氣管炎(bronchiolitis o bliterans)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-36.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-37.png" alt="alt text" style="width:35%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-38.png" alt="alt text" style="width:30%;background-color: white;padding:0"> </div></td>
 
@@ -1508,54 +1384,6 @@ type VII collagen = BP290</p>
 </tr>
 </tbody>
 </table></div>
-<h2 id="缺鐵性貧血相關病症">缺鐵性貧血相關病症 </h2>
-<ul>
-<li>MCV/RBC
-<ul>
-<li>缺鐵性貧血: &gt;16</li>
-<li>地中海型貧血: &lt;13</li>
-</ul>
-</li>
-<li>口腔灼熱感、口角炎(angular cheilitis)</li>
-<li>廣泛性口腔黏膜萎縮(generalized oral mucosal atrophy)</li>
-<li>萎縮性舌炎(atrophic glossitis): 一片光滑</li>
-</ul>
-<div class="table-scroll-wrapper"><table>
-<thead>
-<tr>
-<th colspan="2">名稱</th>
-
-<th>成因</th>
-<th>GLA</th>
-<th colspan="4">特徵</th>
-
-
-
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2">Hereditary Hemorrhagic Telangiectasia (遺傳性出血性微血管擴張症，HHT，Weber syndrome)</td>
-
-<td colspan="2">體顯性，<code>GENE</code> <ul> <li>HHT1: endoglin (ENG)</li> <li>HHT2: activin receptor-like kinase (ALK1; ACVRL1)</li> <li>HHT + juvenile polyposis: MADH4</li> </ul></td>
-
-<td colspan="4"><ul> <li>流鼻血(epistaxis)而被診斷</li> <li>口鼻黏膜紅色丘疹，壓迫變白</li> <li>萎縮性舌炎</li> <li>腸道易出血 → 慢性缺鐵性貧血</li> <li>動靜脈廔(arteriovenous fistulas)</li> <li>牙周血管畸形 → 菌血 → 化膿性肺栓塞</li> </ul></td>
-
-
-
-</tr>
-<tr>
-<td colspan="2"><span style="margin:0; color: red;"> Plummer-Vinson syndrom</span><sup>罕</sup></td>
-
-<td>-</td>
-<td>30-50y</td>
-<td colspan="4"><ul> <li>癌前變化 → SCC</li> <li>食道蹼(esophageal webs) → sideropenic dysphagia(缺鐵性吞嚥困難)</li> <li>萎縮性舌炎</li> <li>匙狀指甲(koilonychia)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-54.png" alt="alt text" style="width:55%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-18.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div></td>
-
-
-
-</tr>
-</tbody>
-</table></div>
 <h2 id="退化性-代謝性疾病">退化性、代謝性疾病 </h2>
 <p>Degenerative and Metabolic Diseases</p>
 <div class="table-scroll-wrapper"><table>
@@ -1908,10 +1736,6 @@ type VII collagen = BP290</p>
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#特發性結締組織疾病" class="md-toc-link">
             <p>特發性結締組織疾病</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#缺鐵性貧血相關病症" class="md-toc-link">
-            <p>缺鐵性貧血相關病症</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#退化性-代謝性疾病" class="md-toc-link">

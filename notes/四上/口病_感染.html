@@ -148,47 +148,30 @@ img {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
-html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
-  left: 0;
-  width: 100%;
-  max-width: 1000px;
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 2em;
-  transform: translateX(0);
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  padding: 50px 10px 48px 0;
-  font-size: 14px;
-  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
-  box-sizing: border-box;
-  overflow: auto;
-  background-color: inherit;
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
 }
-html body {
-  background-color: hsl(220, 13%, 18%);
-  /* === Markdown Preview Enhancer TOC 樣式新版 === */
-  /* 縮排*/
-  /* TOC link */
-  /* 每層 details 都要重置下一層 counter */
-  /* 第一層：h1 */
-  /* 第二層：h2 */
-  /* 第三層：h3 */
-  /* 第四層：h4 */
-  /* 縮排 
-.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
-.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
-.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
-.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
-  /* hover & active */
-  /*
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
   /////三线表/////
   table{
       border-top: 1.5pt solid;
@@ -220,119 +203,12 @@ html body {
       font-size:9pt;                              
   }
   */
-}
-html body .md-sidebar-toc {
-  margin: 0;
-  padding: 0.5rem 0;
-  position: absolute;
-  max-width: 768px;
-  background-color: rgba(186, 55, 55, 0.1);
-  z-index: 70;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-html body .md-toc-link-wrapper {
-  list-style: none!important;
-}
-html body div.md-toc-link-wrapper {
-  margin-left: 0px!important;
-}
-html body details > div > div.md-toc-link-wrapper {
-  margin-left: 24px!important;
-}
-html body .md-sidebar-toc a {
-  color: inherit;
-  text-decoration: none;
-}
-html body .md-sidebar-toc a:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc {
-  counter-reset: toc-h1;
-}
-html body .md-sidebar-toc details {
-  counter-reset: toc-h2;
-}
-html body .md-sidebar-toc details details {
-  counter-reset: toc-h3;
-}
-html body .md-sidebar-toc details details details {
-  counter-reset: toc-h4;
-}
-html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h1;
-  content: counter(toc-h1) ". ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h2;
-  content: counter(toc-h1) "." counter(toc-h2) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h3;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h4;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper.active a {
-  color: #87ffff;
-  font-weight: bold;
-}
-html body .dcl {
-  /* block 水平置中的方法 */
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-  margin-right: -1%;
-}
-html body header,
-html body section,
-html body aside,
-html body .in,
-html body footer {
-  margin: 0 1% 0.3em 0;
-}
-html body section {
-  float: left;
-  width: 49%;
-}
-html body footer {
-  margin-bottom: 0;
-  /* 不准其他元素出現在其左右 */
-  clear: both;
-}
-html body .btn {
-  position: fixed;
-  z-index: 99;
-  font-size: 24px;
-  color: inherit;
-  text-align: center;
-  width: 32px;
-  cursor: pointer;
-  opacity: 0.4;
-  word-wrap: break-word;
-}
-html body .btn:active {
-  opacity: 0.8;
-}
 @media screen and (max-width: 400px) {
-  html body img {
+  img {
     width: 100% !important;
   }
 }
-html body .fbox {
+.fbox {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
@@ -342,7 +218,7 @@ html body .fbox {
   left: 50%;
   transform: translateX(-50%);
 }
-html body .fbox img {
+.fbox img {
   position: relative;
   left: 0;
   transform: translate(0, 0);
@@ -350,7 +226,7 @@ html body .fbox img {
   background-color: rgba(0, 0, 0, 0) !important;
   object-fit: contain;
 }
-html body table .fbox {
+table .fbox {
   left: 0;
   transform: translateX(0);
 }
@@ -504,6 +380,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 </tr>
+<tr>
+<td colspan="2">Scrofula</td>
+
+<td>Mycobacterium tuberculosis</td>
+<td>免疫力低下者</td>
+<td colspan="3">頸部的結核性淋巴腺炎（Cervical Tuberculous Lymphadenitis）</td>
+
+
+</tr>
 </tbody>
 </table></div>
 <h2 id="病毒">病毒 </h2>
@@ -532,6 +417,26 @@ document.addEventListener("DOMContentLoaded", () => {
 <li>Patch phase: 血管圍繞在原本存在的血管旁增生</li>
 <li>Plaque: 明顯的 spindle cell 增生</li>
 <li>Nodule: 血管外 RBC, 有縫狀的管腔</li>
+</ul>
+</li>
+<li>
+<p>Shingles (帶狀皰疹)</p>
+<ul>
+<li>VZV</li>
+</ul>
+</li>
+<li>
+<p>Hand-foot-and-mouth Disease</p>
+<ul>
+<li>Enterovirus</li>
+<li>EV71嚴重的神經系統併發症，例如：
+<ul>
+<li>病毒性腦膜炎 (Viral Meningitis)</li>
+<li>腦炎 (Encephalitis)</li>
+<li>心肌炎 (Myocarditis)</li>
+<li>急性肢體麻痺症 (Acute Flaccid Paralysis, AFP)</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

@@ -38,6 +38,89 @@ export_on_save:
 ![alt text](paste_src/口病_Hema-1.png =45)}
 
 
+## 缺鐵性貧血相關病症
+
+- MCV/RBC
+  - 缺鐵性貧血: >16
+  - 地中海型貧血: <13
+- 口腔灼熱感、口角炎(angular cheilitis)
+- 廣泛性口腔黏膜萎縮(generalized oral mucosal atrophy)
+- 萎縮性舌炎(atrophic glossitis): 一片光滑
+
+
+|名稱|| 成因 |GLA|特徵 ||||
+|-|-|-|-|-|-|-|-|
+| Hereditary Hemorrhagic Telangiectasia (遺傳性出血性微血管擴張症，HHT，Weber syndrome)|| \oneline{
+體顯性，`GENE`
+- HHT1: endoglin (ENG)
+- HHT2: activin receptor-like kinase (ALK1; ACVRL1)
+- HHT + juvenile polyposis: MADH4
+}|| \oneline{
+- 流鼻血(epistaxis)而被診斷
+- 口鼻黏膜紅色丘疹，壓迫變白
+- 萎縮性舌炎
+- 腸道易出血 &rarr; 慢性缺鐵性貧血
+- 動靜脈廔(arteriovenous fistulas)
+- 牙周血管畸形 &rarr; 菌血 &rarr; 化膿性肺栓塞
+- 黏膜下纖維化症 (Submucous Fibrosis) 
+
+}|
+| \style[color: red;]{ Plummer-Vinson syndrom}^罕^ || -| 30-50y |\oneline{
+- 癌前變化 &rarr; SCC
+- 食道蹼(esophageal webs) &rarr; sideropenic dysphagia(缺鐵性吞嚥困難)
+- 萎縮性舌炎
+- 匙狀指甲(koilonychia)
+
+\picBox{
+![alt text](paste_src/口病_皮膚-54.png =55)
+![alt text](paste_src/口病_皮膚-18.png =35)
+}
+}
+
+
+## Aplastic Anemia再生不良性貧血
+
+- cytotoxic T lymphocytes 攻擊骨髓中分化中的造血細胞所致
+  - 暴露於特定環境毒素(如：苯benzene)
+  - 使用某些藥物(尤其是抗生素氯黴素chloramphenicol)
+  - 感染某些病毒(尤其是非A、非B、非C、非G型肝炎病毒)
+- Dyskeratosis Congenita 可能進展為再生不良性貧血
+- 紅血球缺乏：造成血液攜氧能力下降
+  - 症狀：疲倦、頭暈、心悸(tachycardia)、無力
+  - 口腔黏膜可能呈蒼白
+- 血小板缺乏(thrombocytopenia)：易出現瘀斑與出血
+  - 影響多個部位，包括視網膜及腦部出血，屬較嚴重表現
+  - 牙齦出血
+  - 口腔黏膜瘀點(petechiae)、紫斑(purpura)、瘀斑(ecchymoses)
+- 白血球缺乏
+  - 最重要的併發症，易導致細菌與真菌感染，常為死亡原因
+  - 牙齦感染性潰瘍
+
+
+## Methotrexate (MTX)
+
+- 葉酸拮抗劑(folic acid antimetabolite)，作為steroid-sparing agent。用於治療：
+  - 白血病(leukemia)
+  - solid tumors
+  - 自體免疫疾病
+  - 某些型態 psoriasis
+- 全血球減少(pancytopenia)、肝毒性(hepatotoxicity)
+- 口腔 (嘴唇、頰黏膜、舌頭)
+  - 紅斑區(erythematous areas)
+  - 不規則潰瘍
+  - 白色假膜(whitish slough)
+
+![alt text](paste_src/口病_Hema-19.png)
+
+## Polycythemia Vera真性紅血球增多症
+- 紅血球(RBCs)總量增加
+- 種酪氨酸激酶基因(tyrosine kinase gene)—Janus kinase 2 (JAK2) 的後天突變
+- GAL 
+  - 60歲
+- 症狀
+  - 初期症狀多非特異性，包括：頭痛、虛弱、頭暈、嗜睡、視力異常、多汗、體重下降、呼吸困難、上腹痛等
+
+![alt text](paste_src/口病_Hema-18.png)
 ## Myelodysplastic syndrome(MDS，骨髓發育不良症候群)
 
 - 如果發展成 Acute leukemia &rarr; gingival hyperplasia
@@ -72,58 +155,28 @@ export_on_save:
 ![alt text](paste_src/口病_Hema-15.png)
 
 
-## Cat Scratch Disease
+## leukemia, myeloid sarcoma
+- 根據 acute/chronic、lymphoid/myeloid 分成四型： 
+  - ALL：預後最好，最常發生在小孩(其他型是成年男性居多) 
+  - AML：diffuse gingival enlargement 常見原因
+  - CLL: 最常見
+  - CML：t(9,22)BCR-ABL 
+ 
+- 臨床症狀 
+  - 造血細胞出問題&rarr;血球生成受影響&rarr;血小板最先受影響，thrombocytopenia&rarr; 凝血出問題&rarr;容易瘀血、bleeding、常有點狀瘀血(petechial hemorrhages)在硬顎後方、自發性出血
+  - 常在 gingiva 出現 Neutropenic ulcers，呈現深的、punched-out lesion 伴隨著灰白色的 necrotic base 
+  - 最常發生的是在==牙齦有廣泛性的腫脹(diffuse gingival enlargement)==(特別是AML)，因為裡面都是血液的物質，所以外觀呈現一整片藍紫色。 
+  - IHC 染色
+    - CD45 
+    - Myeloid lineage：MPO & lysozyme & C-kit & CD34 & CD15 (for granulocyte) 
+    - B cell：CD10 & CD79a   
+    - T cell：CD3 
 
-- Granulomas 但一堆 neutrophil
+![alt text](paste_src/口病_Soft.png)
 
+- 白血病細胞的腫瘤樣聚集稱為骨髓肉瘤(myeloid sarcoma)
 
-
-
-:::left
-## Kimura disease
-> eosinophils 跑到 Lymph Follicle
-
-- 亞洲年輕的成年男性 (20-30y)
-- 深層病灶，淋巴、唾液腫
-- 血管增生，型態正常
-- 抽血 eosinophils 升高
-- IgE-positive mast cell
-
-:::right
-## Epithelioid Hemangioma
-> eosinophils 跑到 Lymph Follicle
-
-
-- 男女差不多 (30-50y)
-- 淺層病灶，淋巴唾液較少腫脹
-- 血管增生，但圓胖內皮 &rarr; 墓碑
-- 抽血無 eosinophils 升高
-
-:::
-
-
-## Castleman disease 
-- Onion skin: 淋巴圍血管，一圈又一圈
-- 血管壁退化 &rarr; hyalinized walls
-- Paraneoplastic Pemphigus 可能引發
-  - HHV 8, IL6
-
-
-![alt text](paste_src/口病_Hema-16.png =40)
-
-
-## Rosai-Dorfman disease 
-
-
-- 大 Histiocytes 吃周圍 lymphocyte 
-
-![alt text](paste_src/口病_Hema-17.png =35)
-
-
-
-
-----
-> 再來是惡性
+![alt text](paste_src/口病_Hema-20.png =50)
 
 ## Lymphoma
 
@@ -294,6 +347,62 @@ punched out
 - 骨髓移植造成
 - 急性 (3 月內)
   - 移植 T cell 攻擊組織
+
+
+
+
+
+
+
+
+
+## Cat Scratch Disease
+
+- Granulomas 但一堆 neutrophil
+
+
+
+
+:::left
+## Kimura disease
+> eosinophils 跑到 Lymph Follicle
+
+- 亞洲年輕的成年男性 (20-30y)
+- 深層病灶，淋巴、唾液腫
+- 血管增生，型態正常
+- 抽血 eosinophils 升高
+- IgE-positive mast cell
+
+:::right
+## Epithelioid Hemangioma
+> eosinophils 跑到 Lymph Follicle
+
+
+- 男女差不多 (30-50y)
+- 淺層病灶，淋巴唾液較少腫脹
+- 血管增生，但圓胖內皮 &rarr; 墓碑
+- 抽血無 eosinophils 升高
+
+:::
+
+
+## Castleman disease 
+- Onion skin: 淋巴圍血管，一圈又一圈
+- 血管壁退化 &rarr; hyalinized walls
+- Paraneoplastic Pemphigus 可能引發
+  - HHV 8, IL6
+
+
+![alt text](paste_src/口病_Hema-16.png =40)
+
+
+## Rosai-Dorfman disease 
+
+
+- 大 Histiocytes 吃周圍 lymphocyte 
+
+![alt text](paste_src/口病_Hema-17.png =35)
+
 
 
 ## 整理 
