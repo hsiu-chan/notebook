@@ -148,30 +148,47 @@ img {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
-.dcl {
-  /* block 水平置中的方法 */
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-  margin-right: -1%;
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
 }
-header,
-section,
-aside,
-.in,
-footer {
-  margin: 0 1% 0.3em 0;
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 50px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
 }
-section {
-  float: left;
-  width: 49%;
-}
-footer {
-  margin-bottom: 0;
-  /* 不准其他元素出現在其左右 */
-  clear: both;
-}
-/*
+html body {
+  background-color: hsl(220, 13%, 18%);
+  /* === Markdown Preview Enhancer TOC 樣式新版 === */
+  /* 縮排*/
+  /* TOC link */
+  /* 每層 details 都要重置下一層 counter */
+  /* 第一層：h1 */
+  /* 第二層：h2 */
+  /* 第三層：h3 */
+  /* 第四層：h4 */
+  /* 縮排 
+.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
+.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
+.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
+.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
+  /* hover & active */
+  /*
   /////三线表/////
   table{
       border-top: 1.5pt solid;
@@ -203,12 +220,118 @@ footer {
       font-size:9pt;                              
   }
   */
+}
+html body .md-sidebar-toc {
+  margin: 0;
+  padding: 0.5rem 0;
+  position: absolute;
+  max-width: 768px;
+  background-color: rgba(186, 55, 55, 0.1);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+html body .md-toc-link-wrapper {
+  list-style: none!important;
+}
+html body div.md-toc-link-wrapper {
+  margin-left: 0px!important;
+}
+html body details > div > div.md-toc-link-wrapper {
+  margin-left: 24px!important;
+}
+html body .md-sidebar-toc a {
+  color: inherit;
+  text-decoration: none;
+}
+html body .md-sidebar-toc a:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc {
+  counter-reset: toc-h1;
+}
+html body .md-sidebar-toc details {
+  counter-reset: toc-h2;
+}
+html body .md-sidebar-toc details details {
+  counter-reset: toc-h3;
+}
+html body .md-sidebar-toc details details details {
+  counter-reset: toc-h4;
+}
+html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h1;
+  content: counter(toc-h1) ". ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h2;
+  content: counter(toc-h1) "." counter(toc-h2) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h3;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h4;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper.active a {
+  color: #87ffff;
+  font-weight: bold;
+}
+html body .dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+html body header,
+html body section,
+html body aside,
+html body .in,
+html body footer {
+  margin: 0 1% 0.3em 0;
+}
+html body section {
+  float: left;
+  width: 49%;
+}
+html body footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+html body .btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+html body .btn:active {
+  opacity: 0.8;
+}
 @media screen and (max-width: 400px) {
-  img {
+  html body img {
     width: 100% !important;
   }
 }
-.fbox {
+html body .fbox {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
@@ -218,7 +341,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
 }
-.fbox img {
+html body .fbox img {
   position: relative;
   left: 0;
   transform: translate(0, 0);
@@ -226,7 +349,7 @@ footer {
   background-color: rgba(0, 0, 0, 0) !important;
   object-fit: contain;
 }
-table .fbox {
+html body table .fbox {
   left: 0;
   transform: translateX(0);
 }
@@ -550,15 +673,36 @@ n["非齒源(Non-Odontogenic)"]
 </tr>
 </tbody>
 </table></div>
+<img src="paste_src/口病-13.png" alt="alt text" style=";background-color: white;padding:0">
+<p><mark>MAL2 讓 MEC 預後好</mark></p>
 <div class="admonition note">
 <p class="admonition-title">Gorlin syndrome</p>
 <ul>
-<li>SUFU 也可能造成<br>
+<li>SUFU 也可能造成</li>
+<li>多發 OKC</li>
+<li>BCC risk<br>
 <img src="paste_src/口病-3.png" alt="alt text" style=";background-color: white;padding:0"></li>
 </ul>
 </div>
-<img src="paste_src/口病-13.png" alt="alt text" style=";background-color: white;padding:0">
-<p><mark>MAL2 讓 MEC 預後好</mark></p>
+<div class="admonition note">
+<p class="admonition-title"><span style="margin:0; color:red;">Gardner Syndrome</span></p>
+<ul>
+<li>家族性腺瘤性息肉病 (Familial Adenomatous Polyposis, FAP) 的一個變異型</li>
+<li>APC基因突變，β catenin 分解不掉
+<ul>
+<li>β catenin: WNT轉錄因子</li>
+<li>導致結直腸內產生數百甚至數千個腺瘤性息肉 → 結直腸癌 (Colorectal Cancer)</li>
+<li>十二指腸癌 (Duodenal Cancer)</li>
+<li>甲狀腺癌 (Thyroid Cancer)</li>
+</ul>
+</li>
+<li>多發性 Epidermoid Cyst (Infundibular cyst)</li>
+<li>多發性骨瘤 (Osteomas)</li>
+<li>多發性多生牙</li>
+<li>女性較多</li>
+</ul>
+<img src="paste_src/口病_cyst-3.png" alt="alt text" style=";background-color: white;padding:0">
+</div>
 <h3 id="發炎型">發炎型 </h3>
 <div class="table-scroll-wrapper"><table>
 <thead>
@@ -3011,11 +3155,11 @@ nn --&gt;|否| s1[I]
 
 </tr>
 <tr>
-<td rowspan="2" colspan="2">Dyskeratosis Congenita <br> 先天性角化不良</td>
+<td rowspan="2" colspan="2"><span style="margin:0; color:Deepskyblue">Dyskeratosis Congenita <br> 先天性角化不良</span></td>
 
 <td rowspan="2"><span style="margin:0; color:Deepskyblue">X隱性</span> <br> <code>GENE</code>: DKC1</td>
 <td rowspan="2">10y ↓</td>
-<td colspan="3"><ul> <li>影響 telomerase</li> <li>再生性貧血(aplastic anemia)</li> <li>易有惡性變化</li> <li>皮膚網狀的色素過度沉澱</li> <li>指甲會有明顯的萎縮，甚至消失</li> <li>沒得醫</li> </ul> <img src="paste_src/口病_皮膚-5.png" alt="alt text" style=";background-color: white;padding:0"></td>
+<td colspan="3"><ul> <li>影響 telomerase</li> <li>再生不良貧血(aplastic anemia)</li> <li>易有惡性變化</li> <li>皮膚網狀的色素過度沉澱</li> <li>指甲會有明顯的萎縮，甚至消失</li> <li>沒得醫</li> </ul> <img src="paste_src/口病_皮膚-5.png" alt="alt text" style=";background-color: white;padding:0"></td>
 
 
 </tr>
@@ -3831,7 +3975,7 @@ type VII collagen = BP290</p>
 
 </tr>
 <tr>
-<td colspan="2"><span style="margin:0; color: Deepskyblue;"> Reactive Arthritis (RA) <br> 反應性關節炎 </span></td>
+<td colspan="2"><span style="margin:0; color: Deepskyblue;"> Reactive Arthritis  <br> 反應性關節炎 </span></td>
 
 <td>可能有免疫介導</td>
 <td>-</td>
@@ -4354,6 +4498,24 @@ type VII collagen = BP290</p>
 
 
 </tr>
+<tr>
+<td colspan="2">Scrofula</td>
+
+<td>Mycobacterium tuberculosis</td>
+<td>免疫力低下者</td>
+<td colspan="3">頸部的結核性淋巴腺炎（Cervical Tuberculous Lymphadenitis）</td>
+
+
+</tr>
+<tr>
+<td colspan="2">Scurvy</td>
+
+<td>敗血症</td>
+<td colspan="4">-</td>
+
+
+
+</tr>
 </tbody>
 </table></div>
 <h2 id="病毒">病毒 </h2>
@@ -4373,7 +4535,11 @@ type VII collagen = BP290</p>
 </ul>
 </li>
 <li>
-<p>HSV 最常用的治療藥物:Acyclovir (口服、藥膏都有,但是不能同時使用)</p>
+<p>HSV</p>
+<ul>
+<li>最常用的治療藥物:Acyclovir (口服、藥膏都有,但是不能同時使用)</li>
+<li>會造成 EM</li>
+</ul>
 </li>
 <li>
 <p>卡波西肉瘤(Kaposi1. sarcoma)</p>
@@ -4591,7 +4757,121 @@ type VII collagen = BP290</p>
 <div class="fbox">
 <img src="paste_src/口病_Hema.png" alt="alt text" style="width:45%;background-color: white;padding:0">
 <img src="paste_src/口病_Hema-1.png" alt="alt text" style="width:45%;background-color: white;padding:0"></div>
-<h2 id="myelodysplastic-syndromemds骨髓發育不良症候群">Myelodysplastic syndrome(MDS，骨髓發育不良症候群) </h2>
+<h2 id="缺鐵性貧血相關病症">缺鐵性貧血相關病症 </h2>
+<ul>
+<li>MCV/RBC
+<ul>
+<li>缺鐵性貧血: &gt;16</li>
+<li>地中海型貧血: &lt;13</li>
+</ul>
+</li>
+<li>口腔灼熱感、口角炎(angular cheilitis)</li>
+<li>廣泛性口腔黏膜萎縮(generalized oral mucosal atrophy)</li>
+<li>萎縮性舌炎(atrophic glossitis): 一片光滑</li>
+</ul>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th colspan="2">名稱</th>
+
+<th>成因</th>
+<th>GLA</th>
+<th colspan="4">特徵</th>
+
+
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Hereditary Hemorrhagic Telangiectasia (遺傳性出血性微血管擴張症，HHT，Weber syndrome)</td>
+
+<td colspan="2">體顯性，<code>GENE</code> <ul> <li>HHT1: endoglin (ENG)</li> <li>HHT2: activin receptor-like kinase (ALK1; ACVRL1)</li> <li>HHT + juvenile polyposis: MADH4</li> </ul></td>
+
+<td colspan="4"><ul> <li>流鼻血(epistaxis)而被診斷</li> <li>口鼻黏膜紅色丘疹，壓迫變白</li> <li>萎縮性舌炎</li> <li>腸道易出血 → 慢性缺鐵性貧血</li> <li>動靜脈廔(arteriovenous fistulas)</li> <li>牙周血管畸形 → 菌血 → 化膿性肺栓塞</li> <li>黏膜下纖維化症 (Submucous Fibrosis)</li> </ul></td>
+
+
+
+</tr>
+<tr>
+<td colspan="2"><span style="margin:0; color: red;"> Plummer-Vinson syndrom</span><sup>罕</sup></td>
+
+<td>-</td>
+<td>30-50y</td>
+<td colspan="4"><ul> <li>癌前變化 → SCC</li> <li>食道蹼(esophageal webs) → sideropenic dysphagia(缺鐵性吞嚥困難)</li> <li>萎縮性舌炎</li> <li>匙狀指甲(koilonychia)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-54.png" alt="alt text" style="width:55%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-18.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div></td>
+
+
+
+</tr>
+</tbody>
+</table></div>
+<h2 id="aplastic-anemia再生不良性貧血">Aplastic Anemia再生不良性貧血 </h2>
+<ul>
+<li>cytotoxic T lymphocytes 攻擊骨髓中分化中的造血細胞所致
+<ul>
+<li>暴露於特定環境毒素(如：苯benzene)</li>
+<li>使用某些藥物(尤其是抗生素氯黴素chloramphenicol)</li>
+<li>感染某些病毒(尤其是非A、非B、非C、非G型肝炎病毒)</li>
+</ul>
+</li>
+<li>Dyskeratosis Congenita 可能進展為再生不良性貧血</li>
+<li>紅血球缺乏：造成血液攜氧能力下降
+<ul>
+<li>症狀：疲倦、頭暈、心悸(tachycardia)、無力</li>
+<li>口腔黏膜可能呈蒼白</li>
+</ul>
+</li>
+<li>血小板缺乏(thrombocytopenia)：易出現瘀斑與出血
+<ul>
+<li>影響多個部位，包括視網膜及腦部出血，屬較嚴重表現</li>
+<li>牙齦出血</li>
+<li>口腔黏膜瘀點(petechiae)、紫斑(purpura)、瘀斑(ecchymoses)</li>
+</ul>
+</li>
+<li>白血球缺乏
+<ul>
+<li>最重要的併發症，易導致細菌與真菌感染，常為死亡原因</li>
+<li>牙齦感染性潰瘍</li>
+</ul>
+</li>
+</ul>
+<h2 id="methotrexate-mtx">Methotrexate (MTX) </h2>
+<ul>
+<li>葉酸拮抗劑(folic acid antimetabolite)，作為steroid-sparing agent。用於治療：
+<ul>
+<li>白血病(leukemia)</li>
+<li>solid tumors</li>
+<li>自體免疫疾病</li>
+<li>某些型態 psoriasis</li>
+</ul>
+</li>
+<li>全血球減少(pancytopenia)、肝毒性(hepatotoxicity)</li>
+<li>口腔 (嘴唇、頰黏膜、舌頭)
+<ul>
+<li>紅斑區(erythematous areas)</li>
+<li>不規則潰瘍</li>
+<li>白色假膜(whitish slough)</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/口病_Hema-19.png" alt="alt text" style=";background-color: white;padding:0">
+<h2 id="polycythemia-vera真性紅血球增多症">Polycythemia Vera真性紅血球增多症 </h2>
+<ul>
+<li>紅血球(RBCs)總量增加</li>
+<li>種酪氨酸激酶基因(tyrosine kinase gene)—Janus kinase 2 (JAK2) 的後天突變</li>
+<li>GAL
+<ul>
+<li>60歲</li>
+</ul>
+</li>
+<li>症狀
+<ul>
+<li>初期症狀多非特異性，包括：頭痛、虛弱、頭暈、嗜睡、視力異常、多汗、體重下降、呼吸困難、上腹痛等</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/口病_Hema-18.png" alt="alt text" style=";background-color: white;padding:0">
+## Myelodysplastic syndrome(MDS，骨髓發育不良症候群) {#myelodysplastic-syndromemds骨髓發育不良症候群 }
 <ul>
 <li>如果發展成 Acute leukemia → gingival hyperplasia</li>
 </ul>
@@ -4628,56 +4908,39 @@ type VII collagen = BP290</p>
 <li>Histiocytes: 結締組織macrophage，CD68, CD163</li>
 </ul>
 <img src="paste_src/口病_Hema-15.png" alt="alt text" style=";background-color: white;padding:0">
-<h2 id="cat-scratch-disease">Cat Scratch Disease </h2>
+<h2 id="leukemia-myeloid-sarcoma">leukemia, myeloid sarcoma </h2>
 <ul>
-<li>Granulomas 但一堆 neutrophil</li>
+<li>
+<p>根據 acute/chronic、lymphoid/myeloid 分成四型：</p>
+<ul>
+<li>ALL：預後最好，最常發生在小孩(其他型是成年男性居多)</li>
+<li>AML：diffuse gingival enlargement 常見原因</li>
+<li>CLL: 最常見</li>
+<li>CML：t(9,22)BCR-ABL</li>
 </ul>
-<div class="dcl">
-<section>
-<h2 id="kimura-disease">Kimura disease </h2>
-<blockquote>
-<p>eosinophils 跑到 Lymph Follicle</p>
-</blockquote>
+</li>
+<li>
+<p>臨床症狀</p>
 <ul>
-<li>亞洲年輕的成年男性 (20-30y)</li>
-<li>深層病灶，淋巴、唾液腫</li>
-<li>血管增生，型態正常</li>
-<li>抽血 eosinophils 升高</li>
-<li>IgE-positive mast cell</li>
-</ul>
-</section>
-<section>
-<h2 id="epithelioid-hemangioma">Epithelioid Hemangioma </h2>
-<blockquote>
-<p>eosinophils 跑到 Lymph Follicle</p>
-</blockquote>
+<li>造血細胞出問題→血球生成受影響→血小板最先受影響，thrombocytopenia→ 凝血出問題→容易瘀血、bleeding、常有點狀瘀血(petechial hemorrhages)在硬顎後方、自發性出血</li>
+<li>常在 gingiva 出現 Neutropenic ulcers，呈現深的、punched-out lesion 伴隨著灰白色的 necrotic base</li>
+<li>最常發生的是在<mark>牙齦有廣泛性的腫脹(diffuse gingival enlargement)</mark>(特別是AML)，因為裡面都是血液的物質，所以外觀呈現一整片藍紫色。</li>
+<li>IHC 染色
 <ul>
-<li>男女差不多 (30-50y)</li>
-<li>淺層病灶，淋巴唾液較少腫脹</li>
-<li>血管增生，但圓胖內皮 → 墓碑</li>
-<li>抽血無 eosinophils 升高</li>
-</ul>
-</section></div>
-<h2 id="castleman-disease">Castleman disease </h2>
-<ul>
-<li>Onion skin: 淋巴圍血管，一圈又一圈</li>
-<li>血管壁退化 → hyalinized walls</li>
-<li>Paraneoplastic Pemphigus 可能引發
-<ul>
-<li>HHV 8, IL6</li>
+<li>CD45</li>
+<li>Myeloid lineage：MPO &amp; lysozyme &amp; C-kit &amp; CD34 &amp; CD15 (for granulocyte)</li>
+<li>B cell：CD10 &amp; CD79a</li>
+<li>T cell：CD3</li>
 </ul>
 </li>
 </ul>
-<img src="paste_src/口病_Hema-16.png" alt="alt text" style="width:40%;background-color: white;padding:0">
-<h2 id="rosai-dorfman-disease">Rosai-Dorfman disease </h2>
-<ul>
-<li>大 Histiocytes 吃周圍 lymphocyte</li>
+</li>
 </ul>
-<img src="paste_src/口病_Hema-17.png" alt="alt text" style="width:35%;background-color: white;padding:0">
-<hr>
-<blockquote>
-<p>再來是惡性</p>
-</blockquote>
+<img src="paste_src/口病_Soft.png" alt="alt text" style=";background-color: white;padding:0">
+<ul>
+<li>白血病細胞的腫瘤樣聚集稱為骨髓肉瘤(myeloid sarcoma)</li>
+</ul>
+<img src="paste_src/口病_Hema-20.png" alt="alt text" style="width:50%;background-color: white;padding:0">
 <h2 id="lymphoma">Lymphoma </h2>
 <ul>
 <li>
@@ -4708,7 +4971,7 @@ type VII collagen = BP290</p>
 <li>快速增長，並在淋巴結及其他器官（例如肝臟、脾臟或骨髓）形成腫瘤。</li>
 <li>IHC: BCL6, CD10, MUM1</li>
 </ul>
-<h3 id="malt-lymphoma">MALT lymphoma </h3>
+<h3 id="extranodal-marginal-zone-b-cell-lymphoma-malt-lymphoma-">Extranodal Marginal Zone B-cell Lymphoma (MALT lymphoma ) </h3>
 <ul>
 <li>Sjogren syndrome 的衍生疾病。
 <ul>
@@ -4721,7 +4984,7 @@ type VII collagen = BP290</p>
 <img src="paste_src/口病_Hema-9.png" alt="alt text" style=";background-color: white;padding:0">
 <h3 id="burkitt-lymphoma">Burkitt lymphoma </h3>
 <blockquote>
-<p>B lymphocyte 的惡性腫瘤</p>
+<p>B lymphocyte 的惡性腫瘤，未分化的B細胞</p>
 </blockquote>
 <ul>
 <li>分類
@@ -4849,6 +5112,15 @@ type VII collagen = BP290</p>
 <h2 id="multiple-myeloma">multiple myeloma </h2>
 <ul>
 <li>
+<p>排除轉移性疾病，骨內腫瘤中約 50%為多發性骨髓瘤</p>
+</li>
+<li>
+<p>自單一細胞瘤</p>
+<ul>
+<li>κ chain 超多 (10:1)</li>
+</ul>
+</li>
+<li>
 <p>骨破壞</p>
 </li>
 <li>
@@ -4860,9 +5132,6 @@ type VII collagen = BP290</p>
 </li>
 <li>
 <p>Plasma cell 大小不一</p>
-</li>
-<li>
-<p>κ chain 超多 (10:1) → 來自單株</p>
 </li>
 <li>
 <p>可能表現 CD79a, CD56</p>
@@ -4878,7 +5147,10 @@ type VII collagen = BP290</p>
 </ul>
 </li>
 </ul>
+<div class="fbox"> 
+<img src="paste_src/口病_Hema-21.png" alt="alt text" style="width:40%;background-color: white;padding:0">
 <img src="paste_src/口病_Hema-14.png" alt="alt text" style="width:30%;background-color: white;padding:0">
+</div>
 <h2 id="oral-graft-versus-host-disease-gvhd">Oral Graft versus Host Disease (GVHD) </h2>
 <ul>
 <li>骨髓移植造成</li>
@@ -4888,54 +5160,57 @@ type VII collagen = BP290</p>
 </ul>
 </li>
 </ul>
-<h2 id="缺鐵性貧血相關病症">缺鐵性貧血相關病症 </h2>
+<h2 id="cat-scratch-disease">Cat Scratch Disease </h2>
 <ul>
-<li>MCV/RBC
+<li>Granulomas 但一堆 neutrophil</li>
+</ul>
+<div class="dcl">
+<section>
+<h2 id="kimura-disease">Kimura disease </h2>
+<blockquote>
+<p>eosinophils 跑到 Lymph Follicle</p>
+</blockquote>
 <ul>
-<li>缺鐵性貧血: &gt;16</li>
-<li>地中海型貧血: &lt;13</li>
+<li>亞洲年輕的成年男性 (20-30y)</li>
+<li>良性淋巴組織增生
+<ul>
+<li>深層病灶，淋巴、唾液腫</li>
+<li>唾液正常</li>
 </ul>
 </li>
-<li>口腔灼熱感、口角炎(angular cheilitis)</li>
-<li>廣泛性口腔黏膜萎縮(generalized oral mucosal atrophy)</li>
-<li>萎縮性舌炎(atrophic glossitis): 一片光滑</li>
+<li>血管增生，型態正常</li>
+<li>抽血 eosinophils 升高</li>
+<li>IgE-positive mast cell</li>
 </ul>
-<div class="table-scroll-wrapper"><table>
-<thead>
-<tr>
-<th colspan="2">名稱</th>
-
-<th>成因</th>
-<th>GLA</th>
-<th colspan="4">特徵</th>
-
-
-
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2">Hereditary Hemorrhagic Telangiectasia (遺傳性出血性微血管擴張症，HHT，Weber syndrome)</td>
-
-<td colspan="2">體顯性，<code>GENE</code> <ul> <li>HHT1: endoglin (ENG)</li> <li>HHT2: activin receptor-like kinase (ALK1; ACVRL1)</li> <li>HHT + juvenile polyposis: MADH4</li> </ul></td>
-
-<td colspan="4"><ul> <li>流鼻血(epistaxis)而被診斷</li> <li>口鼻黏膜紅色丘疹，壓迫變白</li> <li>萎縮性舌炎</li> <li>腸道易出血 → 慢性缺鐵性貧血</li> <li>動靜脈廔(arteriovenous fistulas)</li> <li>牙周血管畸形 → 菌血 → 化膿性肺栓塞</li> <li>黏膜下纖維化症 (Submucous Fibrosis)</li> </ul></td>
-
-
-
-</tr>
-<tr>
-<td colspan="2"><span style="margin:0; color: red;"> Plummer-Vinson syndrom</span><sup>罕</sup></td>
-
-<td>-</td>
-<td>30-50y</td>
-<td colspan="4"><ul> <li>癌前變化 → SCC</li> <li>食道蹼(esophageal webs) → sideropenic dysphagia(缺鐵性吞嚥困難)</li> <li>萎縮性舌炎</li> <li>匙狀指甲(koilonychia)</li> </ul> <div class="fbox"> <img src="paste_src/口病_皮膚-54.png" alt="alt text" style="width:55%;background-color: white;padding:0"> <img src="paste_src/口病_皮膚-18.png" alt="alt text" style="width:35%;background-color: white;padding:0"> </div></td>
-
-
-
-</tr>
-</tbody>
-</table></div>
+</section>
+<section>
+<h2 id="epithelioid-hemangioma">Epithelioid Hemangioma </h2>
+<blockquote>
+<p>eosinophils 跑到 Lymph Follicle</p>
+</blockquote>
+<ul>
+<li>男女差不多 (30-50y)</li>
+<li>淺層病灶，淋巴唾液較少腫脹</li>
+<li>血管增生，但圓胖內皮 → 墓碑</li>
+<li>抽血無 eosinophils 升高</li>
+</ul>
+</section></div>
+<h2 id="castleman-disease">Castleman disease </h2>
+<ul>
+<li>Onion skin: 淋巴圍血管，一圈又一圈</li>
+<li>血管壁退化 → hyalinized walls</li>
+<li>Paraneoplastic Pemphigus 可能引發
+<ul>
+<li>HHV 8, IL6</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/口病_Hema-16.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+<h2 id="rosai-dorfman-disease">Rosai-Dorfman disease </h2>
+<ul>
+<li>大 Histiocytes 吃周圍 lymphocyte</li>
+</ul>
+<img src="paste_src/口病_Hema-17.png" alt="alt text" style="width:35%;background-color: white;padding:0">
 <h2 id="整理-3">整理 </h2>
 <ul>
 <li>Lymphoma 和 EBV
@@ -5382,35 +5657,6 @@ neuroectodermal tumor of infancy、MEN2B</li>
 </tr>
 </tbody>
 </table></div>
-<h2 id="leukemia">leukemia </h2>
-<ul>
-<li>
-<p>根據 acute/chronic、lymphoid/myeloid 分成四型：</p>
-<ul>
-<li>ALL：最常發生在小孩的(其他型是成年男性居多)</li>
-<li>AML：常見 diffuse gingival enlargement</li>
-<li>CLL</li>
-<li>CML：t(9,22)BCR-ABL</li>
-</ul>
-</li>
-<li>
-<p>臨床症狀</p>
-<ul>
-<li>造血細胞出問題→血球生成受影響→血小板最先受影響，thrombocytopenia→ 凝血出問題→容易瘀血、bleeding、常有點狀瘀血(petechial hemorrhages)在硬顎後方、自發性出血</li>
-<li>常在 gingiva 出現 Neutropenic ulcers，呈現深的、punched-out lesion 伴隨著灰白色的 necrotic base</li>
-<li>最常發生的是在<mark>牙齦有廣泛性的腫脹(diffuse gingival enlargement)</mark>(特別是AML)，因為裡面都是血液的物質，所以外觀呈現一整片藍紫色。</li>
-<li>IHC 染色
-<ul>
-<li>CD45</li>
-<li>Myeloid lineage：MPO &amp; lysozyme &amp; C-kit &amp; CD34 &amp; CD15 (for granulocyte)</li>
-<li>B cell：CD10 &amp; CD79a</li>
-<li>T cell：CD3</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<img src="paste_src/口病_Soft.png" alt="alt text" style=";background-color: white;padding:0">
 <h2 id="drug-related-gingival-hyperplasia">Drug-related gingival hyperplasia </h2>
 <ul>
 <li>停藥會消退的：Cyclosporine、鈣離子阻斷劑(nifedipine)</li>
@@ -6603,6 +6849,24 @@ Bell palsy<br>
 </ul>
 </li>
 </ul>
+<h2 id="治療">治療 </h2>
+<ul>
+<li>念珠菌
+<ul>
+<li>Nystatin</li>
+</ul>
+</li>
+<li>三叉神經、舌咽神經
+<ul>
+<li>Carbamazepine</li>
+</ul>
+</li>
+<li>BMS
+<ul>
+<li>Rivotril</li>
+</ul>
+</li>
+</ul>
 <h2 id="誰有病">誰有病 </h2>
 <dl>
 <dt>Gorlin Syndrome</dt>
@@ -7022,6 +7286,22 @@ EALATOEFL10</p>
           <a href="#thalassemia-地中海海洋性貧血" class="md-toc-link">
             <p>Thalassemia 地中海/海洋性貧血</p>
 
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#缺鐵性貧血相關病症" class="md-toc-link">
+            <p>缺鐵性貧血相關病症</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#aplastic-anemia再生不良性貧血" class="md-toc-link">
+            <p>Aplastic Anemia再生不良性貧血</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#methotrexate-mtx" class="md-toc-link">
+            <p>Methotrexate (MTX)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#polycythemia-vera真性紅血球增多症" class="md-toc-link">
+            <p>Polycythemia Vera真性紅血球增多症</p>
+
           </a></div><details style="padding:0;;padding-left:24px;" open="">
         <summary class="md-toc-link-wrapper">
           <a href="#myelodysplastic-syndromemds骨髓發育不良症候群" class="md-toc-link"><p>Myelodysplastic syndrome(MDS，骨髓發育不良症候群)</p>
@@ -7040,24 +7320,8 @@ EALATOEFL10</p>
             <p>Kikuchi-Fujimoto disease</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#cat-scratch-disease" class="md-toc-link">
-            <p>Cat Scratch Disease</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#kimura-disease" class="md-toc-link">
-            <p>Kimura disease</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#epithelioid-hemangioma" class="md-toc-link">
-            <p>Epithelioid Hemangioma</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#castleman-disease" class="md-toc-link">
-            <p>Castleman disease</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#rosai-dorfman-disease" class="md-toc-link">
-            <p>Rosai-Dorfman disease</p>
+          <a href="#leukemia-myeloid-sarcoma" class="md-toc-link">
+            <p>leukemia, myeloid sarcoma</p>
 
           </a></div><details style="padding:0;;padding-left:24px;" open="">
         <summary class="md-toc-link-wrapper">
@@ -7070,8 +7334,8 @@ EALATOEFL10</p>
             <p>Diffuse Large B-cell Lymphoma (DLBCL)</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#malt-lymphoma" class="md-toc-link">
-            <p>MALT lymphoma</p>
+          <a href="#extranodal-marginal-zone-b-cell-lymphoma-malt-lymphoma-" class="md-toc-link">
+            <p>Extranodal Marginal Zone B-cell Lymphoma (MALT lymphoma )</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#burkitt-lymphoma" class="md-toc-link">
@@ -7109,8 +7373,24 @@ EALATOEFL10</p>
             <p>Oral Graft versus Host Disease (GVHD)</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#缺鐵性貧血相關病症" class="md-toc-link">
-            <p>缺鐵性貧血相關病症</p>
+          <a href="#cat-scratch-disease" class="md-toc-link">
+            <p>Cat Scratch Disease</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#kimura-disease" class="md-toc-link">
+            <p>Kimura disease</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#epithelioid-hemangioma" class="md-toc-link">
+            <p>Epithelioid Hemangioma</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#castleman-disease" class="md-toc-link">
+            <p>Castleman disease</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#rosai-dorfman-disease" class="md-toc-link">
+            <p>Rosai-Dorfman disease</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#整理-3" class="md-toc-link">
@@ -7160,10 +7440,6 @@ EALATOEFL10</p>
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#症候群-syndromes" class="md-toc-link">
             <p>症候群 (Syndromes)</p>
-
-          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#leukemia" class="md-toc-link">
-            <p>leukemia</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#drug-related-gingival-hyperplasia" class="md-toc-link">
@@ -7294,6 +7570,10 @@ EALATOEFL10</p>
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#驗血" class="md-toc-link">
             <p>驗血</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#治療" class="md-toc-link">
+            <p>治療</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#誰有病" class="md-toc-link">

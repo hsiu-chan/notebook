@@ -158,8 +158,8 @@ xanthoma
 - 遺傳性疾病
 - 多骨性纖維發育不良(Polyostotic Fibrous Dysplasia)
 
-:::info {咖啡牛奶斑}
 
+:::info {咖啡牛奶斑}
 ![alt text](paste_src/口病-68.png)
 :::
 
