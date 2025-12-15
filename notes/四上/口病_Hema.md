@@ -201,7 +201,7 @@ export_on_save:
 - 快速增長，並在淋巴結及其他器官（例如肝臟、脾臟或骨髓）形成腫瘤。
 - IHC: BCL6, CD10, MUM1
 
-### MALT lymphoma 
+### Extranodal Marginal Zone B-cell Lymphoma (MALT lymphoma )
 
 - Sjogren syndrome 的衍生疾病。
   - 好發: Parotid gland
@@ -213,7 +213,7 @@ export_on_save:
 
 
 ### Burkitt lymphoma
-> B lymphocyte 的惡性腫瘤
+> B lymphocyte 的惡性腫瘤，未分化的B細胞
 
 
 - 分類 
@@ -321,14 +321,15 @@ punched out
 
 
 ## multiple myeloma
-
+- 排除轉移性疾病，骨內腫瘤中約 50%為多發性骨髓瘤
+- 自單一細胞瘤
+  - &kappa; chain 超多 (10:1)
 - 骨破壞 
 - 蛋白尿
 - punched out
 ![alt text](paste_src/口病_Hema-12.png =60)
 
 - Plasma cell 大小不一
-- &kappa; chain 超多 (10:1) &rarr; 來自單株
 - 可能表現 CD79a, CD56
 
 ![alt text](paste_src/口病_Hema-13.png =60)
@@ -340,7 +341,12 @@ punched out
   - 眼睛 Waxy plagues 
   - 堆在 Blood vessel 周邊
 
+:::fbox 
+![alt text](paste_src/口病_Hema-21.png =40)
 ![alt text](paste_src/口病_Hema-14.png =30)
+:::
+
+
 
 ## Oral Graft versus Host Disease (GVHD)
 
@@ -368,7 +374,9 @@ punched out
 > eosinophils 跑到 Lymph Follicle
 
 - 亞洲年輕的成年男性 (20-30y)
-- 深層病灶，淋巴、唾液腫
+- 良性淋巴組織增生
+  - 深層病灶，淋巴、唾液腫
+  - 唾液正常
 - 血管增生，型態正常
 - 抽血 eosinophils 升高
 - IgE-positive mast cell

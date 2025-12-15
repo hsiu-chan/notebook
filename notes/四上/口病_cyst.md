@@ -123,11 +123,6 @@ n["非齒源(Non-Odontogenic)"]
 
 
 
-:::note {Gorlin syndrome}
-- SUFU 也可能造成
-![alt text](paste_src/口病-3.png)
-:::
-
 
 
 
@@ -136,6 +131,31 @@ n["非齒源(Non-Odontogenic)"]
 
 
 ==MAL2 讓 MEC 預後好==
+
+
+
+
+:::note {Gorlin syndrome}
+- SUFU 也可能造成
+- 多發 OKC
+- BCC risk
+![alt text](paste_src/口病-3.png)
+:::
+
+:::note {\style[color:red;]{Gardner Syndrome}}
+- 家族性腺瘤性息肉病 (Familial Adenomatous Polyposis, FAP) 的一個變異型
+- APC基因突變，β catenin 分解不掉
+  - β catenin: WNT轉錄因子
+  - 導致結直腸內產生數百甚至數千個腺瘤性息肉 &rarr; 結直腸癌 (Colorectal Cancer)
+  - 十二指腸癌 (Duodenal Cancer)
+  - 甲狀腺癌 (Thyroid Cancer)
+- 多發性 Epidermoid Cyst (Infundibular cyst)
+- 多發性骨瘤 (Osteomas)
+- 多發性多生牙
+- 女性較多
+
+![alt text](paste_src/口病_cyst-3.png)
+:::
 
 
 ### 發炎型
