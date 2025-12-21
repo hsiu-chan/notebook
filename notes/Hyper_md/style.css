@@ -204,3 +204,14 @@ footer {
   /* 不准其他元素出現在其左右 */
   clear: both;
 }
+.btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
