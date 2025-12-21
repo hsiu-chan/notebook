@@ -148,47 +148,30 @@ img {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
-html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
-  left: 0;
-  width: 100%;
-  max-width: 1000px;
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 2em;
-  transform: translateX(0);
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  padding: 50px 10px 48px 0;
-  font-size: 14px;
-  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
-  box-sizing: border-box;
-  overflow: auto;
-  background-color: inherit;
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
 }
-html body {
-  background-color: hsl(220, 13%, 18%);
-  /* === Markdown Preview Enhancer TOC 樣式新版 === */
-  /* 縮排*/
-  /* TOC link */
-  /* 每層 details 都要重置下一層 counter */
-  /* 第一層：h1 */
-  /* 第二層：h2 */
-  /* 第三層：h3 */
-  /* 第四層：h4 */
-  /* 縮排 
-.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
-.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
-.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
-.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
-  /* hover & active */
-  /*
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
   /////三线表/////
   table{
       border-top: 1.5pt solid;
@@ -220,119 +203,12 @@ html body {
       font-size:9pt;                              
   }
   */
-}
-html body .md-sidebar-toc {
-  margin: 0;
-  padding: 0.5rem 0;
-  position: absolute;
-  max-width: 768px;
-  background-color: rgba(186, 55, 55, 0.1);
-  z-index: 70;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-html body .md-toc-link-wrapper {
-  list-style: none!important;
-}
-html body div.md-toc-link-wrapper {
-  margin-left: 0px!important;
-}
-html body details > div > div.md-toc-link-wrapper {
-  margin-left: 24px!important;
-}
-html body .md-sidebar-toc a {
-  color: inherit;
-  text-decoration: none;
-}
-html body .md-sidebar-toc a:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc {
-  counter-reset: toc-h1;
-}
-html body .md-sidebar-toc details {
-  counter-reset: toc-h2;
-}
-html body .md-sidebar-toc details details {
-  counter-reset: toc-h3;
-}
-html body .md-sidebar-toc details details details {
-  counter-reset: toc-h4;
-}
-html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h1;
-  content: counter(toc-h1) ". ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h2;
-  content: counter(toc-h1) "." counter(toc-h2) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h3;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h4;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper.active a {
-  color: #87ffff;
-  font-weight: bold;
-}
-html body .dcl {
-  /* block 水平置中的方法 */
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-  margin-right: -1%;
-}
-html body header,
-html body section,
-html body aside,
-html body .in,
-html body footer {
-  margin: 0 1% 0.3em 0;
-}
-html body section {
-  float: left;
-  width: 49%;
-}
-html body footer {
-  margin-bottom: 0;
-  /* 不准其他元素出現在其左右 */
-  clear: both;
-}
-html body .btn {
-  position: fixed;
-  z-index: 99;
-  font-size: 24px;
-  color: inherit;
-  text-align: center;
-  width: 32px;
-  cursor: pointer;
-  opacity: 0.4;
-  word-wrap: break-word;
-}
-html body .btn:active {
-  opacity: 0.8;
-}
 @media screen and (max-width: 400px) {
-  html body img {
+  img {
     width: 100% !important;
   }
 }
-html body .fbox {
+.fbox {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
@@ -342,7 +218,7 @@ html body .fbox {
   left: 50%;
   transform: translateX(-50%);
 }
-html body .fbox img {
+.fbox img {
   position: relative;
   left: 0;
   transform: translate(0, 0);
@@ -350,7 +226,7 @@ html body .fbox img {
   background-color: rgba(0, 0, 0, 0) !important;
   object-fit: contain;
 }
-html body table .fbox {
+table .fbox {
   left: 0;
   transform: translateX(0);
 }
@@ -407,17 +283,29 @@ html body table .fbox {
 }
 
       </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script></head><body for="html-export">
+      <!-- The content below will be included at the end of the <head> element. --><script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+
+<script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+
+
+<script type="text/javascript">
+//載入完成後執行
+document.addEventListener("DOMContentLoaded", () => {
+  var page = document.getElementsByClassName('markdown-preview')[0]
+  page.addEventListener('click', function(event) {
+    event.stopPropagation()
+    
+    document.body.removeAttribute('html-show-sidebar-toc');
+  })
+});
+</script>
+<link rel="stylesheet" href="../Hyper_md/style.css">
+</head><body for="html-export">
     
     
       <div class="crossnote markdown-preview  ">
-      <script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
-      <script src="../Hyper_md/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="../Hyper_md/md.css">
+      
 <h1 id="repair">Repair </h1>
 <div class="table-scroll-wrapper"><table>
 <thead>
@@ -502,21 +390,110 @@ html body table .fbox {
 </ul>
 <img src="paste_src/口外-2.png" alt="alt text" style=";background-color: white;padding:0">
 <img src="paste_src/口外-3.png" alt="alt text" style=";background-color: white;padding:0">
+<h1 id="阻生齒">阻生齒 </h1>
+<h2 id="md">Md. </h2>
+<ul>
+<li>Angulation
+<ul>
+<li>難度: Mesioangular &lt; Horizontal &lt; Vertical &lt; Distoangular</li>
+<li>頻率: Mesioangular(43%) &gt; Vertical(38%)&gt; Distoangular(6%) &gt; Horizontal(3%)</li>
+</ul>
+</li>
+<li>Pell and Gregory classification
+<ul>
+<li>class 1: Crown 的MD直徑完全位於 Ramus 前緣之前，最好拔。</li>
+<li>class 2：Crown 的MD直徑約有一半被Ramus覆蓋。</li>
+<li>class 3： Crown 完全在 Ramus 內</li>
+<li>Class A：阻生牙的咬合面最高點與第2<sup>nd</sup> Molar 的咬合平面幾乎齊平</li>
+<li>Class B：阻生牙的咬合面最高點介於2<sup>nd</sup> Molar 的咬合平面和 CEJ 之間。</li>
+<li>Class C：是指阻生牙的咬合面最高點低於2<sup>nd</sup> Molar 的 CEJ。</li>
+</ul>
+</li>
+</ul>
+<div class="fbox"> 
+1<img src="paste_src/口外-5.png" alt="alt text" style="width:25%;background-color: white;padding:0">
+2<img src="paste_src/口外-6.png" alt="alt text" style="width:25%;background-color: white;padding:0">
+3<img src="paste_src/口外-7.png" alt="alt text" style="width:25%;background-color: white;padding:0">
+</div>
+<img src="paste_src/口外-4.png" alt="alt text" style="width:80%;background-color: white;padding:0">
+<img src="paste_src/口外-8.png" alt="alt text" style="width:80%;background-color: white;padding:0">
+<ul>
+<li>
+<p>牙根長度</p>
+<ul>
+<li>形成約1/3～2/3時，是最佳的拔除時機</li>
+<li>完全發育可能尖、畸形</li>
+<li>形成不到1/3，牙齒會在 follicle 內轉</li>
+</ul>
+</li>
+<li>
+<p>健保代號 (軟組織覆蓋)<br>
+<img src="paste_src/口外-9.png" alt="alt text" style="width:80%;background-color: white;padding:0"></p>
+</li>
+</ul>
+<h3 id="步驟">步驟 </h3>
+<ol>
+<li>Flap</li>
+<li>去除周邊骨頭
+<ul>
+<li>Lingual 保留</li>
+</ul>
+</li>
+<li>分割牙齒
+<ul>
+<li>Lingual 保留</li>
+</ul>
+</li>
+</ol>
+<div class="fbox"> 
+<img src="paste_src/口外-10.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/口外-11.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/口外-12.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<img src="paste_src/口外-13.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+</div>
+<h2 id="mx">Mx. </h2>
+<ul>
+<li>Angulation
+<ul>
+<li>難度：Distoangular &lt; Vertical &lt; Mesioangular</li>
+<li>頻率：Vertical(63%)&gt; Distoangular(25%) &lt; Mesioangular(12%) &gt; Others(&lt;1%)</li>
+</ul>
+</li>
+</ul>
+<h2 id="術後">術後 </h2>
+<ul>
+<li>疼痛管理
+<ul>
+<li>術前或取出紗布後給藥</li>
+<li>至少 3～4 天</li>
+<li>一般會開 Ibuprofen (NSAIDs) 7天 QID</li>
+</ul>
+</li>
+<li>腫脹
+<ul>
+<li>輕度腫脹持續約3～4天(第三天高峰)</li>
+<li>約5～7天後可完全消退</li>
+<li>第1-2天可以冰敷，冰敷並不會使腫脹消退但會減緩不適。</li>
+<li>第3天開始熱敷，促進血液循環，加速腫脹消退。</li>
+</ul>
+</li>
+<li>類固醇使用：
+<ul>
+<li>術前或術中給予 Dexamethasone 8 mg</li>
+<li>口服劑量：0.75～1.25mg，每日兩次，連續2～3天</li>
+<li>可能產生副作用，也有研究指出會增加乾槽症發生機率，非必要不建議</li>
+</ul>
+</li>
+<li>抗生素：有研究指出會降低乾槽症機率</li>
+<li>張口困難(Trismus)
+<ul>
+<li>常見於下顎阻生牙拔除後(正常現象)</li>
+<li>通常在術後7～10天隨腫脹消退恢復正常</li>
+</ul>
+</li>
+<li>症狀持續超過7天→需進一步檢查</li>
+</ul>
 <br><br>
-
-<script type="text/javascript" src="../Hyper_md/md.js"></script>
-
-<script>
-var page = document.getElementsByClassName('markdown-preview')[0]
-page.addEventListener('click', function(event) {
-  event.stopPropagation()
-  
-  document.body.removeAttribute('html-show-sidebar-toc');
- 
-})
-</script>
-
-
       </div>
       <div class="md-sidebar-toc">
 <div class="md-toc">
@@ -541,6 +518,36 @@ page.addEventListener('click', function(event) {
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#nerve-injury" class="md-toc-link">
             <p>Nerve injury</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#阻生齒" class="md-toc-link"><p>阻生齒</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#md" class="md-toc-link"><p>Md.</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#步驟" class="md-toc-link">
+            <p>步驟</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#mx" class="md-toc-link">
+            <p>Mx.</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#術後" class="md-toc-link">
+            <p>術後</p>
 
           </a></div>
         </div>

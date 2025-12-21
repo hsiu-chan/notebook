@@ -103,12 +103,17 @@ G. Beveled shoulder (與牙齒夾角約90度，但在邊緣會做成斜面)
     - 1mm (幾乎不用特別修)
 
 
+
 ## PFM 
 
 
-- 燒瓷前後都能修金屬
 - PFM支架燒瓷溫度約960°C，傳統 complete cast crown 金屬會融化
-- 熱膨脹低
+- 金屬的線性膨脹係數需要比陶瓷的多0.5x10-6 /℃，
+- 使用 Low-fusing glass frit +20%體積 Leucite
+- ISO standard 9693：利用three-point bending test偵測金屬陶瓷間的鍵結強度，強度至少要有25MPa
+
+---
+- 燒瓷前後都能修金屬
 - 磨很多（complete cast crown只咬 1mm
 - Subgingival &rarr; 牙周問題
 - 陶瓷至少要1.2mm，金屬至少0.3mm
@@ -148,56 +153,7 @@ G. Beveled shoulder (與牙齒夾角約90度，但在邊緣會做成斜面)
   - Shoulder(120&deg;): Free enamel&darr;, Marginal gap &darr;
 
 
-
-## Ceramic 
-
-- 分成 Mill, Press 
-- 不要 Bevel， 邊緣太薄車機做不出來
-- 最小厚度 
-  - Particle filled glass: 1mm
-  - Zirconia: 0.5mm
-- 都要 Rounding
-
-- 材料
-  - particle filled glasses
-  - polycrystalline ceramics
-  - ceramic-polymer compound material
-
-
-
-
-| 類別 | 組成與代表材料 | Flexural strength (MPAa) | 特色|
-|------|------------------------|----------------------------|-|
-| **Particle-filled glasses** |\oneline{
-- Feldspathic porcelain (長石瓷)
-- Leucite-reinforced ceramic
-- Lithium disilicate（二矽酸鋰）
-}| ~120–500  | \oneline{
-- 玻璃含量高 → 透明度最佳
-- 脆性高，不建議長跨距 FPD
-- ==前牙, 單顆冠、貼面、inlay/onlay==
-}
-| **Polycrystalline ceramics**<br>（多晶陶瓷） |\oneline{
-- Zirconia（3Y/4Y/5Y）
-- Alumina（氧化鋁）
-}| ~700–1200+ <br>（Zirconia）|\oneline{
-- 無玻璃相 → 結構緻密、韌性最好
-- 半透明性較差
-- 需良好拋光以避免磨耗對咬牙
-- ==長跨距 FPD、後牙耐咬==
-}
-| **Ceramic-polymer compound material**<br>（陶瓷–樹脂混合材料） | \oneline{
-- Hybrid ceramic / Resin matrix ceramic
-}| ~150–200 |\oneline{
-- 好加工、易修補 &rarr; CAD/CAM
-- 彈性，較不脆
-- 強度不足，不建議 FPD &rarr;==臨時冠、單顆冠、inlay/onlay==
-}
-
-
- 類陶瓷但帶彈性，較不脆 | 、 友善 |  | **** |
-
-
+## All Ceramic
 
 ### anterior crown monolithic
 > Particle filled glass(第一類材料)
@@ -651,3 +607,203 @@ Type II|軟|模型間接法|室溫下仍應穩定不變形
 ### 鑄造 
 
 - PFM 合金需要 Gas-Oxygen Torch
+
+## Resin-Bonded Fixed Dental Prostheses
+
+- Panavia: bis-GMA-based resin + 10-methacryloxydecyl dihydrogen phosphate(MDP)
+  - 彈性係數低
+  - 較高的 fracture toughness
+  - 隔絕氧氣、水硬化
+    - polyethylene glycol gel (Oxyguard II) 隔絕氧氣
+    - Rubber dam
+
+### 馬里蘭牙橋
+- Etching 賤金屬 Bounding 到 Enamel 
+- zirconia 能做 single wing ，易清潔
+
+- 優點
+  - 移除最少的齒質
+  - 對於 pulp 的 trauma 最少可以不需要用到麻醉劑
+  - preparation 在牙齦上方(1mm)
+  - 印模容易
+  - 可以不需要臨時假牙
+  - 減少看診時間
+  - 較低的花費
+  - Rebonding 是可行的(掉了可以輕易再黏回去)
+- 缺點(本篇重點)
+  - 贗復物的壽命較短：已經研究證實，壽命較傳統 FPD 來得短算是最大缺點
+  - 一定要對 enamel 做調整(修形)
+  - 殘留的空間不一定符合需求：使用樹脂固定式 FPD 時，缺牙區的空間很難做調整，當缺空間比自然牙尺寸大或小時，就很難用這種 FPD 達到美觀需求
+  - 牙齒本身要排列得好
+  - 對於後牙的美觀常需妥協：在後牙，由於金屬支架必須延伸到咬合面，不是很美觀
+- 禁忌症(本篇重點)
+  - 有 parafunction 習慣者 (如磨牙 )
+  - 較長的無牙區
+  - abutment 有受損或復形過 (restored)
+  - compromised enamel(如 hypoplasia)
+  - 明顯 pontic 寬度誤差
+  - deep bite
+  - 鎳過敏
+  - 美觀區有可能會透出金屬色
+
+
+# 材料 
+
+## Ceramic 
+
+- 分成 Mill, Press 
+- 不要 Bevel， 邊緣太薄車機做不出來
+- 最小厚度 
+  - Particle filled glass: 1mm
+  - Zirconia: 0.5mm
+- 都要 Rounding
+
+- 材料
+  - Glass-matrix ceramics(particle filled glasses)
+  - Polycrystalline ceramics
+  - Resin matrix ceramics (ceramic-polymer compound material)
+
+
+
+
+| 類別 | 組成與代表材料 | Flexural strength (MPAa) | 特色|
+|------|------------------------|----------------------------|-|
+| **Particle-filled glasses** |\oneline{
+- Feldspathic porcelain (長石瓷)
+- Leucite-reinforced ceramic
+- Lithium disilicate（二矽酸鋰）
+}| ~120–500  | \oneline{
+- 玻璃含量高 → 透明度最佳
+- 脆性高，不建議長跨距 FPD
+- ==前牙, 單顆冠、貼面、inlay/onlay==
+}
+| **Polycrystalline ceramics**<br>（多晶陶瓷） |\oneline{
+- Zirconia（3Y/4Y/5Y）
+- Alumina（氧化鋁）
+}| ~700–1200+ <br>（Zirconia）|\oneline{
+- 無玻璃相 → 結構緻密、韌性最好
+- 半透明性較差
+- 需良好拋光以避免磨耗對咬牙
+- ==長跨距 FPD、後牙耐咬==
+}
+| **Ceramic-polymer compound material**<br>（陶瓷–樹脂混合材料） | \oneline{
+- Hybrid ceramic / Resin matrix ceramic
+}| ~150–200 |\oneline{
+- 好加工、易修補 &rarr; CAD/CAM
+- 彈性，較不脆
+- 強度不足，不建議 FPD &rarr;==臨時冠、單顆冠、inlay/onlay==
+}|
+
+
+| 燒結溫度分類 | 燒結溫度範圍 (°C) | 臨床／材料應用 |
+|---|---|---|
+| High-fusing ceramics | >1300 | \oneline{
+- Porcelain jacket crown
+- Denture teeth
+- Fully sintered alumina zirconia core ceramics 
+}|
+| Medium-fusing ceramics | 1000-1300 | \oneline{
+- Denture teeth
+- Presintered（預燒的）zirconia
+} |
+| Low-fusing ceramics | 850-1000 | Metal-ceramic |
+| Ultra-low fusing | <850 | Titanium and its alloys
+
+### Glass-matrix (Particle filled glasses)
+
+- 玻璃相
+  - 熱膨脹低
+  - 透明
+- Devitrification(去玻璃化)：反覆燒結次數會產生結晶相
+- 添加劑
+  - Glass modifiers: 長石中的鈉和鉀
+    - 分解SiO~2~的網架結構，降低熔融溫度
+    - 增加熱膨脹係數
+  - Alumina (Al₂O₃) 
+    - 增加黏度，使燒瓷的過程中熔融的瓷粉不會很快地塌掉，比較容易塑形
+    - 增加與金屬鍵結
+    - 透明度 &darr;
+  - Li₂O
+    - 促進玻璃相流動
+
+- 燒結
+  - 網狀 Si-O 打斷重排 &rarr; SiO~2~ 含量高則燒結溫度高
+  - 陶瓷燒結後會有27-45%的收縮
+
+![alt text](paste_src/FPD-24.png)
+
+### 製作
+
+- Slip-casting technique (alumina core materials)
+   1. 泥漿（slip）: 陶瓷粉末（如 Al₂O₃、MgAl₂O₄）分散於水或有機溶劑中
+   2. 多孔模具吸走液相（水分）
+   3. 陶瓷顆粒逐漸在模具內壁緊密堆積
+   4. 初步低溫燒結，產生高孔隙率的生胚體
+   5. 玻璃滲透（Glass infiltration）: 低黏度玻璃加熱至熔融，透過毛細作用滲入多孔陶瓷骨架
+   6. 3 to 4 times stronger
+  - 商品: ==VITA In-Ceram==
+
+
+- Heat-Pressed Ceramics
+  - 瓷塊融化，壓鑄到 Wax up 的空腔
+  - 比 alumina core materials 有更好的 marginal fit
+
+
+| Base | 融融溫度 | 特質 ||
+|-|-|-|-|
+|Leucite Based (KAlSi~2~O~6~) | 1165&deg;C | \oneline{
+- 商品: ==IPS Empress (Ivoclar Vivadent)==
+}|
+|Lithium disilicate Based | 920&deg;C|\oneline{
+- strength+
+- 商品: ==IPS e.max (Ivoclar AG)==
+}|
+|Zirconia-Reinforced Lithium Silicate based | - | \oneline{
+- strength 不如 zirconia
+- 透明度不如 Lithium disilicate 
+}|
+
+
+
+
+## 合金 
+
+- 氧化層
+  - Fe: Au
+  - Sn, In: lower gold alloys 
+- 綠染色
+  - 銀原子透過diffusion進入陶瓷，綠染色可以被磨掉
+---
+### High noble metal alloys
+- Au-Pt-Pd
+  - 最早
+  - 低 yield strength, elastic modulus
+  - 密度最高
+- Au-Pd-Ag
+- Au-Pd
+  - 高 yield strength, elastic modulus
+- PFM 金屬的線性膨脹係數需要比陶瓷的多0.5x10-6 /℃，
+
+### Noble alloys 
+> 都是 Pd base，Pd熔點(1555°C)遠高於 Au(1064°C)
+
+- Pd-Ag
+  - 0-2％ Au，平價金牙
+  - 不容易在鑄造時出現孔洞
+  - In + 2% Au 會變成黃色
+- Pd-Cu-Ga
+  - Ga 降低熔點
+  - 鑄造精確度高與  High noble metal alloys 相當
+  - 高鈀合金可能會造成細胞毒性
+  - casting出來可以直接燒瓷
+- Pd-Ga
+  - 硬度低
+- Pd-Ga-Co
+  - 相較 Pd-Ga 硬度提高，但會生成的深色氧化物
+
+# 期末 
+
+## 長度
+
+- 冠外、冠內附連體: Crown 高度>4mm
+- 橫槓式、鈕釦式、磁鐵式附連體：垂直咬合高度(VDO) > 7-9mm
