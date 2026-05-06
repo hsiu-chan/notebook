@@ -28,3 +28,14 @@ Claire raised a relevant perspective, but she overlooked the fact that young stu
 ![alt text](paste_src/toefel2.png)
 
 Whether a fixed amount of practice time is the best way to improve children's skills is a complex issue. I agree with Paul´s opinion that the practice should be flexible. Although it is impossible to learning a skill without plenty of practice, cultivating motivation is the better learning stratege than forcing children to rigid practice. When i was a child, for example, I couldn´t write chinese characters well until founding the motivation for pracice. I though the repetive writing practice for characters is untolerable at the time. However, after realizing writing beautiful could help me express myself better, I began to commit in pracice. Accordingly, I don´t support that practice a certain amount of time each day is an effective approach for learning.
+
+
+# Listening 
+
+- 24-2
+
+
+- ==23-5==
+
+
+

@@ -1,0 +1,1232 @@
+<!DOCTYPE html><html><head>
+      <title>CD</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#aab1bf;background-color:#30353f!important;border:#4b5261;border-radius:3px}pre[class*=language-]{padding:1em}code[class*=language-] .token.cdata,code[class*=language-] .token.comment,code[class*=language-] .token.doctype,code[class*=language-] .token.prolog,pre[class*=language-] .token.cdata,pre[class*=language-] .token.comment,pre[class*=language-] .token.doctype,pre[class*=language-] .token.prolog{color:#5b6270}code[class*=language-] .namespace,pre[class*=language-] .namespace{opacity:.7}code[class*=language-] .token.constant,pre[class*=language-] .token.constant{color:#d19965}code[class*=language-] .token.boolean,code[class*=language-] .token.function-name,code[class*=language-] .token.number,pre[class*=language-] .token.boolean,pre[class*=language-] .token.function-name,pre[class*=language-] .token.number{color:#d19965}code[class*=language-] .token.tag,pre[class*=language-] .token.tag{color:#df6b75}code[class*=language-] .token.symbol,pre[class*=language-] .token.symbol{color:#56b5c2}code[class*=language-] .token.selector,pre[class*=language-] .token.selector{color:#c578dd}code[class*=language-] .token.attr-name,pre[class*=language-] .token.attr-name{color:#d19965}code[class*=language-] .token.string,pre[class*=language-] .token.string{color:#97c279}code[class*=language-] .token.char,pre[class*=language-] .token.char{color:#56b5c2}code[class*=language-] .token.url,pre[class*=language-] .token.url{color:#56b5c2}code[class*=language-] .token.operator,pre[class*=language-] .token.operator{color:#aab1bf}code[class*=language-] .token.atrule,code[class*=language-] .token.attr-value,code[class*=language-] .token.keyword,pre[class*=language-] .token.atrule,pre[class*=language-] .token.attr-value,pre[class*=language-] .token.keyword{color:#c578dd}code[class*=language-] .token.function,pre[class*=language-] .token.function{color:#61afef}code[class*=language-] .token.class-name,pre[class*=language-] .token.class-name{color:#e4bf7a}code[class*=language-] .token.variable,pre[class*=language-] .token.variable{color:#d19965}code[class*=language-] .token.regex,pre[class*=language-] .token.regex{color:#56b5c2}code[class*=language-] .token.important,pre[class*=language-] .token.important{color:#df6b75}code[class*=language-] .token.bold,code[class*=language-] .token.important,pre[class*=language-] .token.bold,pre[class*=language-] .token.important{font-weight:700}code[class*=language-] .token.italic,pre[class*=language-] .token.italic{font-style:italic}code[class*=language-] .token.entity,pre[class*=language-] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#aab1bf;background-color:#272b33;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#fff}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#7c869c}html body strong{color:#fff}html body del{color:#7c869c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#7c869c;background-color:#393f4a;border-left:4px solid #4b5261}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#4b5261;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#fff}html body table td,html body table th{border:1px solid #4b5261;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#fff;background-color:#393f4a;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#4b5261;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#fff;border:1px solid #4b5261;border-bottom:2px solid #3e4450;padding:2px 4px;background-color:#393f4a;border-radius:3px}@media print{html body{background-color:#272b33}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#fff;page-break-after:avoid}html body blockquote{color:#7c869c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.markdown-preview .title {
+  align-items: center;
+}
+.markdown-preview .title h1 {
+  border-bottom: 0;
+  text-align: center;
+  font-size: 2.75em;
+}
+.markdown-preview h1 {
+  padding-bottom: 0.3rem;
+  border-bottom: solid #fff;
+}
+.markdown-preview h2 {
+  font-weight: normal;
+  padding-bottom: 0.3rem;
+  border-bottom: 1pt solid #8b8b8b;
+}
+.markdown-preview h3 {
+  font-weight: bold;
+}
+.markdown-preview h4 {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+.markdown-preview hr {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1pt solid #8b8b8b;
+}
+@media screen and (max-width: 600px) {
+  .table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .table-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
+.markdown-preview table {
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+  color: #fff7f0;
+  border-collapse: collapse;
+  display: table;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .markdown-preview table {
+    table-layout: auto;
+    display: table;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+.markdown-preview table thead {
+  position: sticky;
+  background-color: hsl(220, 13%, 8%);
+  top: 0;
+  z-index: 999;
+}
+.markdown-preview table th {
+  text-align: center;
+  font-weight: bold;
+  color: #81b4f4;
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td {
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table tr {
+  border: 1.5px solid #8b8b8b;
+}
+.markdown-preview table td,
+.markdown-preview table th {
+  padding: 0;
+  position: relative;
+}
+.markdown-preview table td ol,
+.markdown-preview table th ol,
+.markdown-preview table td ul,
+.markdown-preview table th ul {
+  list-style-position: inside;
+  /* 控制項目符號的位置 */
+  text-align: left;
+  /* 文字對齊方式 */
+}
+.markdown-preview table .table-diagonal {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0) 49%, #8b8b8b 49%, #8b8b8b 51%, rgba(0, 0, 0, 0) 51%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.markdown-preview table .table-diagonal .top-left {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.markdown-preview table .table-diagonal .top-right {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.markdown-preview table .table-diagonal .bottom-right {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+.markdown-preview table .table-diagonal .bottom-left {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+img {
+  max-width: 100%;
+  width: 80%;
+  top: 0.3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  padding: 0;
+  background-color: white;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 0;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2em;
+  transform: translateX(0);
+}
+html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 50px 10px 48px 0;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: inherit;
+  z-index: 10;
+}
+html body {
+  background-color: hsl(220, 13%, 18%);
+  /* === Markdown Preview Enhancer TOC 樣式新版 === */
+  /* 縮排*/
+  /* TOC link */
+  /* 每層 details 都要重置下一層 counter */
+  /* 第一層：h1 */
+  /* 第二層：h2 */
+  /* 第三層：h3 */
+  /* 第四層：h4 */
+  /* 縮排 
+.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
+.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
+.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
+.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
+  /* hover & active */
+  /*
+  /////三线表/////
+  table{
+      border-top: 1.5pt solid;
+      border-bottom: 1.5pt solid;
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      text-align:center;                          //文字居中
+    page-break-inside:avoid;                    //禁止断页
+    width: 100%;                                //扩展表格宽度
+    overflow: auto;
+    margin-bottom: 8pt;                         //表格间距
+    border-collapse:collapse;       
+  }
+  
+  table .katex{
+    font-size: 9pt;                             //表内公式
+  }
+  table td{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              //表内文字
+  }
+  
+  table thead{
+    border-bottom: 0.75pt solid black;        //三线表中间线
+  }
+  
+  //标题行
+  table th{
+      font-family:'Latin Modern Roman 10', 'LM Roman 10',"Times New Roman",Arial,"SimHei","Source Han Serif SC",'simsun',sans-serif;
+      font-size:9pt;                              
+  }
+  */
+}
+html body .md-sidebar-toc {
+  margin: 0;
+  padding: 0.5rem 0;
+  position: absolute;
+  max-width: 768px;
+  background-color: rgba(186, 55, 55, 0.1);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+html body .md-toc-link-wrapper {
+  list-style: none!important;
+}
+html body div.md-toc-link-wrapper {
+  margin-left: 0px!important;
+}
+html body details > div > div.md-toc-link-wrapper {
+  margin-left: 24px!important;
+}
+html body .md-sidebar-toc a {
+  color: inherit;
+  text-decoration: none;
+}
+html body .md-sidebar-toc a:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc {
+  counter-reset: toc-h1;
+}
+html body .md-sidebar-toc details {
+  counter-reset: toc-h2;
+}
+html body .md-sidebar-toc details details {
+  counter-reset: toc-h3;
+}
+html body .md-sidebar-toc details details details {
+  counter-reset: toc-h4;
+}
+html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h1;
+  content: counter(toc-h1) ". ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
+html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
+  counter-increment: toc-h2;
+  content: counter(toc-h1) "." counter(toc-h2) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h3;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
+  counter-increment: toc-h4;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
+  font-size: 0.75em;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper:hover {
+  color: #87ffff;
+  font-style: italic;
+}
+html body .md-sidebar-toc .md-toc-link-wrapper.active a {
+  color: #87ffff;
+  font-weight: bold;
+}
+html body .dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
+}
+html body header,
+html body section,
+html body aside,
+html body .in,
+html body footer {
+  margin: 0 1% 0.3em 0;
+}
+html body section {
+  float: left;
+  width: 49%;
+}
+html body footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+html body .btn {
+  position: fixed;
+  z-index: 99;
+  font-size: 24px;
+  color: inherit;
+  text-align: center;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.4;
+  word-wrap: break-word;
+}
+html body .btn:active {
+  opacity: 0.8;
+}
+@media screen and (max-width: 400px) {
+  html body img {
+    width: 100% !important;
+  }
+}
+html body .fbox {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html body .fbox img {
+  position: relative;
+  left: 0;
+  transform: translate(0, 0);
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0) !important;
+  object-fit: contain;
+}
+html body table .fbox {
+  left: 0;
+  transform: translateX(0);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
+}
+/* Enlarged image inside modal */
+.modal-content {
+  display: block;
+  margin: 20px;
+  max-width: 90%;
+  max-height: 80vh;
+  animation: zoomIn 0.3s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* 初始從小尺寸開始 */
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Zoom in effect */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script src="https://kit.fontawesome.com/849ddf9236.js" crossorigin="anonymous"></script>
+
+<script src="../Hyper_md/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../Hyper_md/md.js"></script>
+
+
+<script type="text/javascript">
+//載入完成後執行
+document.addEventListener("DOMContentLoaded", () => {
+  var page = document.getElementsByClassName('markdown-preview')[0]
+  page.addEventListener('click', function(event) {
+    event.stopPropagation()
+    
+    document.body.removeAttribute('html-show-sidebar-toc');
+  })
+});
+</script>
+<link rel="stylesheet" href="../Hyper_md/style.css">
+</head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="cd">CD </h1>
+<h2 id="intro">Intro </h2>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th><div class="table-diagonal" style="position:relative; width:100%; height:3em;"><span class="top-right"></span><span class="bottom-left"></span></div></th>
+<th>自然牙</th>
+<th>CD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2">Mucosa 支持面積</td>
+<td rowspan="2">上下顎 PDL: 45 cm<sup>2</sup></td>
+<td>上顎 CD：22.96 cm<sup>2</sup></td>
+</tr>
+<tr>
+
+
+<td>下顎 CD：12.25 cm<sup>2</sup></td>
+</tr>
+<tr>
+<td>咬合力</td>
+<td>200N</td>
+<td>60-80 N (1/3)</td>
+</tr>
+<tr>
+<td>每日咬合時間</td>
+<td><ul> <li>Chewing: 9min</li> <li>swallowing (meal): 0.5min</li> <li>swallowing (Between meal): 7.9min</li> </ul></td>
+<td>Denture movement</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>全口無牙會變成 class III</li>
+<li>Articular eminence
+<ul>
+<li>舊觀念： 變平（flattening）</li>
+<li>現代觀念：remodeling
+<ul>
+<li>flatten, maintain, 局部重塑</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Condyle
+<ul>
+<li>位置可能較前上</li>
+</ul>
+</li>
+<li>disc
+<ul>
+<li>可能 thinning, position 改變</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/CD.png" alt="alt text" style=";background-color: white;padding:0">
+<ul>
+<li>在 CD 上會用最後位當 CR
+<ul>
+<li>穩定</li>
+<li>吞口水位置</li>
+</ul>
+</li>
+</ul>
+<dl>
+<dt>OVD</dt>
+<dd>Occlusal Vertical Dimension</dd>
+</dl>
+<h2 id="骨吸收與時機">骨吸收與時機 </h2>
+<ul>
+<li>拔牙後前牙 Residual ridge 吸收
+<ul>
+<li>第一年: 上顎2-3mm、下顎4-5mm</li>
+<li>之後每年下顎 0.1~0.2 mm</li>
+<li>下顎前牙區吸收速率比例是上顎的4倍</li>
+</ul>
+</li>
+<li><mark>6 個月是最佳時機</mark></li>
+<li>下顎推薦做 Implant over denture</li>
+<li>影響因子
+<ul>
+<li>下顎 &gt;上顎</li>
+<li>方臉 (咀嚼力)</li>
+<li>Alveoloplasty 會加速</li>
+<li>Healing</li>
+<li>贗復物因素</li>
+<li>Osteoporosis (骨質疏鬆症): 上顎嚴重</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/CD-1.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/CD-2.png" alt="alt text" style=";background-color: white;padding:0">
+<h2 id="mucosa">Mucosa </h2>
+<blockquote>
+<p>會影響 CD 配戴的因素</p>
+</blockquote>
+<ul>
+<li>Oral lichen planus 常見
+<ul>
+<li>下顎後牙 Buccal</li>
+</ul>
+</li>
+<li>EM (少見)</li>
+<li>pemphigoid/pemphigus</li>
+<li>SLE</li>
+<li>BMS</li>
+</ul>
+<h3 id="denture-stomatitis">Denture stomatitis </h3>
+<ul>
+<li>上顎&gt;下顎 (因為接觸面積)</li>
+<li>Newton’s classification</li>
+</ul>
+<div class="fbox"> 
+<img src="paste_src/CD-3.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/CD-4.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/CD-5.png" alt="alt text" style=";background-color: white;padding:0">
+</div>
+<h3 id="angular-cheilitis">Angular cheilitis </h3>
+<ul>
+<li>垂直高度(OVD)不足關</li>
+<li>也可能是口腔衛生差、或是念珠菌感染</li>
+</ul>
+<h3 id="綜合性症候群combination-syndrome">綜合性症候群(Combination syndrome) </h3>
+<ul>
+<li>上顎CD；下顎 Kennedy Class I RPD 患者因為咬力不平均造成</li>
+<li>上顎前牙區齒槽骨吸收、下顎前牙變長的現象</li>
+<li>因重力影響，上顎粗隆往下掉、咬合平面歪掉(Down-growth of the maxillary tuberosity)</li>
+<li>出現前庭區腫裂齦瘤(Epulis fissuratum)</li>
+<li>戽斗</li>
+<li>避免combination syndrom
+<ul>
+<li>stress break</li>
+<li>調整咬合</li>
+<li>下顎lingual plate阻止前牙長長</li>
+<li>上顎留一些殘根幫助吸收咬合力</li>
+</ul>
+</li>
+</ul>
+<h2 id="檢查和診斷">檢查和診斷 </h2>
+<ul>
+<li>
+<p>牙弓大小(Arch size)</p>
+</li>
+<li>
+<p>牙弓形狀(Arch form)</p>
+</li>
+<li>
+<p>無牙脊的形狀<br>
+<img src="paste_src/CD-6.png" alt="alt text" style=";background-color: white;padding:0"></p>
+</li>
+<li>
+<p>上下顎無牙脊的相對位置(Ridge relationship)</p>
+<ul>
+<li>：CD牙要排成 Class I</li>
+</ul>
+</li>
+<li>
+<p>上下顎的無牙脊平行度</p>
+<ul>
+<li>通常要是平行的</li>
+</ul>
+</li>
+</ul>
+<img src="paste_src/CD-7.png" alt="alt text" style=";background-color: white;padding:0">
+<h3 id="側方喉形-lateral-throat-form">側方喉形 (Lateral throat form) </h3>
+<ul>
+<li>前: mylohyoid m.</li>
+<li>側: superior pharyngeal constrictor m.</li>
+<li>後: palatoglossus m.</li>
+<li>內: 舌頭(tongue)</li>
+<li>愈難把肌肉或舌頭推開，代表側方喉形愈小，假牙難穩定</li>
+<li>Neil’s classification：由curtain後緣與retromolar pad的夾角分類
+<ul>
+<li>Class I：90度，最適合做假牙(出現比例：70%)</li>
+<li>Class II：60度(出現比例：25%)。</li>
+<li>Class III：45 度，最狹窄(出現比例：5%)</li>
+</ul>
+</li>
+</ul>
+<div class="fbox"> 
+<img src="paste_src/CD-8.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+<img src="paste_src/CD-9.png" alt="alt text" style="width:60%;background-color: white;padding:0">
+<img src="paste_src/CD-10.png" alt="alt text" style="width:75%;background-color: white;padding:0">
+</div>
+<h3 id="上方喉形-palatal-throat-form">上方喉形 (Palatal throat form) </h3>
+<ul>
+<li>做直或站立 soft palate 才掉下來可以看 PTF</li>
+<li>House’s classification
+<ul>
+<li>Class I：可以往後延伸5-13mm。(超過5mm的movable tissue可提供post dam，假牙的穩定性最好)</li>
+<li>Class II：可以往後延伸3-5mm。(1-5mm的movable tissue可提供post dam
+<ul>
+<li>大部分</li>
+</ul>
+</li>
+<li>Class III：往前延伸3-5mm。(少於1mm的movable tissue可提供post dam)可能會一直需要修，造成最後只壓在硬顎上而缺乏retention。</li>
+</ul>
+</li>
+</ul>
+<div class="fbox"> 
+<img src="paste_src/CD-11.png" alt="alt text" style="width:50%;background-color: white;padding:0"> 
+<img src="paste_src/CD-12.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+</div>
+<h2 id="border-molding">Border molding </h2>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>部位</th>
+<th>對應解剖構造</th>
+<th>臨床動作 (患者或醫師)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>唇側區 (Labial)</td>
+<td>唇繫帶、口輪匝肌</td>
+<td>醫師將上唇向下、向內牽拉；患者做噘嘴、微笑動作。</td>
+</tr>
+<tr>
+<td>頰側區 (Buccal)</td>
+<td>頰繫帶、頰肌、顴突</td>
+<td>醫師將頰部向下、向內牽拉，並前後移動；患者張大嘴。</td>
+</tr>
+<tr>
+<td>後外側 (Distobuccal)</td>
+<td>冠突 (Coronoid process)</td>
+<td>患者將下顎向左右移動（藉此決定冠突留給義齒的空間）。</td>
+</tr>
+<tr>
+<td>後緣 (Posterior)</td>
+<td>振動線、PPS</td>
+<td>患者發出「Ah」短促音；或進行吞嚥動作（Swallow）。</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>部位</th>
+<th>對應解剖構造</th>
+<th>臨床動作 (患者或醫師)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>唇側區 (Labial)</td>
+<td>唇繫帶、口輪匝肌、頦肌</td>
+<td>醫師將下唇向上、向內牽拉；患者噘嘴。</td>
+</tr>
+<tr>
+<td>頰側區 (Buccal)</td>
+<td>頰繫帶、頰肌、頰棚 (Buccal shelf)</td>
+<td>醫師將頰部向上、向內牽拉；患者張大嘴。</td>
+</tr>
+<tr>
+<td>前舌側 (Ant. Lingual)</td>
+<td>舌繫帶、下頜舌骨肌 (Mylohyoid m.)</td>
+<td>患者舌尖舔上唇、舔兩側頰部、舌頭頂前牙。</td>
+</tr>
+<tr>
+<td>後舌側 (Post. Lingual)</td>
+<td>內側翼肌 (Medial pterygoid m.)</td>
+<td>患者用力吞嚥；或舌頭用力伸出。</td>
+</tr>
+<tr>
+<td>遠心端 (Distal)</td>
+<td>後磨牙墊 (Retromolar pad)</td>
+<td>患者張大嘴（確保不干擾到翼下頜韌帶 Pterygomandibular raphe）。</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="咬合">咬合 </h2>
+<h3 id="決定咬合平面">決定咬合平面 </h3>
+<h4 id="上顎">上顎 </h4>
+<h5 id="campers-line">Camper’s Line </h5>
+<ul>
+<li>平行瞳孔間線</li>
+<li>lip中間往下 0.5~2.0mm</li>
+<li>Camper’s Line 平行 (鼻翼下緣到耳道中點)</li>
+</ul>
+<img src="paste_src/CD-15.png" alt="alt text" style="width:25%;background-color: white;padding:0">
+<h5 id="h-ip-plane">H-IP Plane </h5>
+<ul>
+<li>Hamulus-Incisive-papilla Plane: Incisive Papilla與由左、右 Hamulus Notch</li>
+<li>HIP Plane會與水平面夾約 6-14度</li>
+<li>incisive papilla 向下 8mm, hamulus notch向下 12mm，即為咬合平面</li>
+</ul>
+<img src="paste_src/CD-16.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+<h3 id="fully-balance-達成">Fully Balance 達成 </h3>
+<ul>
+<li>牙齒旋轉角度 （不旋轉會有干擾）</li>
+</ul>
+<img src="paste_src/CD-17.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/CD-18.png" alt="alt text" style=";background-color: white;padding:0">
+<ul>
+<li>面弓轉移誤差的影響
+<ul>
+<li>Protrusion 因為同時增加 CG, IG 所以對排牙相對角度沒差</li>
+<li>Lateral Movement 因為把 working side CG 當做 0° 所以會產生誤差</li>
+</ul>
+</li>
+</ul>
+<h4 id="排牙順序">排牙順序 </h4>
+<ol>
+<li>上前</li>
+<li>上後</li>
+<li>下 6 → 5 → 4 → 7</li>
+<li>下 12 （調到 Protrusion 再 edge to edge)</li>
+<li>下 3
+<ol>
+<li>推至 balancing side以及 w orking side後牙接觸最多處，將咬合器螺絲旋緊固定好 ，再 working side的犬齒放上去，讓其切端對切端</li>
+</ol>
+</li>
+</ol>
+<img src="paste_src/CD-19.png" alt="alt text" style="width:40%;background-color: white;padding:0">
+<h2 id="排牙學閥">排牙學閥 </h2>
+<img src="paste_src/CD-14.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+<h3 id="零度排牙法">零度排牙法 </h3>
+<ul>
+<li>Cusp 從 Incisor guidance 漸變到 Condylar guidance</li>
+<li>Working side condylar 不滑移 → 0°</li>
+<li>Cusp 必須 30-27-23.5-17.5-7 否則  Working Side Interference</li>
+<li>太麻煩 → 0° Cusp</li>
+<li>Christensen’s phenomenon 用 Compensating Curve, 下顎後牙斜坡補</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>B</mi><mi>a</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>c</mi><mi>e</mi><mi>d</mi><mi>O</mi><mi>c</mi><mi>c</mi><mi>l</mi><mi>u</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>=</mo><mfrac><mrow><mi>C</mi><mi>o</mi><mi>n</mi><mi>d</mi><mi>y</mi><mi>l</mi><mi>a</mi><mi>r</mi><mtext>&nbsp;</mtext><mi>G</mi><mi>u</mi><mi>i</mi><mi>d</mi><mi>a</mi><mi>n</mi><mi>c</mi><mi>e</mi><mo>×</mo><mi>I</mi><mi>n</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>a</mi><mi>l</mi><mtext>&nbsp;</mtext><mi>G</mi><mi>u</mi><mi>i</mi><mi>d</mi><mi>a</mi><mi>n</mi><mi>c</mi><mi>e</mi></mrow><mrow><mi>P</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>e</mi><mtext>&nbsp;</mtext><mi>o</mi><mi>f</mi><mtext>&nbsp;</mtext><mi>O</mi><mi>c</mi><mi>c</mi><mi>l</mi><mi>u</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>×</mo><mi>C</mi><mi>o</mi><mi>m</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>s</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>n</mi><mi>g</mi><mtext>&nbsp;</mtext><mi>C</mi><mi>u</mi><mi>r</mi><mi>v</mi><mi>e</mi><mo>×</mo><mi>C</mi><mi>u</mi><mi>s</mi><mi>p</mi><mtext>&nbsp;</mtext><mi>H</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow></mfrac><mtext>​</mtext></mrow><annotation encoding="application/x-tex">Balanced Occlusion = \frac{Condylar\ Guidance×Incisal\ Guidance}{Plane\ of\ Occlusion \times Compensating\ Curve \times Cusp\ Height}​</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">an</span><span class="mord mathnormal">ce</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal">cc</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">u</span><span class="mord mathnormal">s</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2519em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">Pl</span><span class="mord mathnormal">an</span><span class="mord mathnormal">e</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace">&nbsp;</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal">cc</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">u</span><span class="mord mathnormal">s</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">o</span><span class="mord mathnormal">m</span><span class="mord mathnormal">p</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">s</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">in</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace">&nbsp;</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">u</span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">He</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">G</span><span class="mord mathnormal">u</span><span class="mord mathnormal">i</span><span class="mord mathnormal">d</span><span class="mord mathnormal">an</span><span class="mord mathnormal">ce</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal">n</span><span class="mord mathnormal">c</span><span class="mord mathnormal">i</span><span class="mord mathnormal">s</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">G</span><span class="mord mathnormal">u</span><span class="mord mathnormal">i</span><span class="mord mathnormal">d</span><span class="mord mathnormal">an</span><span class="mord mathnormal">ce</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">​</span></span></span></span></span></p>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>1. 按照曲線排 (Balanced Monoplane)</th>
+<th>2. 按照平面排 (Neutrocentric Concept)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心理念</td>
+<td>追求平衡：即使牙齒沒牙尖，也要透過排列達成運動時的接觸。</td>
+<td>追求穩定：捨棄平衡，將力完全垂直導向齒槽嵴。</td>
+</tr>
+<tr>
+<td>平衡狀態</td>
+<td>具有 Balanced Occlusion (前伸與側向皆接觸)。</td>
+<td>無平衡 (Non-balanced)。</td>
+</tr>
+<tr>
+<td>臨床機制</td>
+<td>利用 Compensating Curve 或 Balancing Ramp。</td>
+<td>嚴格遵守 Flat Plane (水平面)，且通常不設 Overbite。</td>
+</tr>
+<tr>
+<td>代表學派</td>
+<td>傳統平衡合學派 (Gysi, Hanau)。</td>
+<td>DeVan 的中性理論 (Neutrocentric Concept)。</td>
+</tr>
+<tr>
+<td>適用對象</td>
+<td>齒槽嵴條件尚可，追求更好咀嚼效率與穩定度者。</td>
+<td>齒槽嵴嚴重萎縮、手部運動不協調、或習慣咬合不穩者。</td>
+</tr>
+</tbody>
+</table></div>
+<img src="paste_src/CD-13.png" alt="alt text" style=";background-color: white;padding:0">
+<h3 id="lingualized-occlusion">Lingualized Occlusion </h3>
+<ul>
+<li>
+<p>Danger Zone 不受力 → 尖的 Upper lingual Cusp 咬平的 Lower</p>
+</li>
+<li>
+<p>力量往下顎舌側 → 不穩</p>
+</li>
+<li>
+<p>上牙選 33度，下牙選 10-20度或 0度牙都可</p>
+</li>
+<li>
+<p><mark>調整咬合的時候要調整下顎牙齒</mark></p>
+</li>
+</ul>
+<h2 id="馬老的分類器">馬老的分類器 </h2>
+<h3 id="秀外慧中">秀外慧中 </h3>
+<ul>
+<li>圓的貝殼牙</li>
+<li>齒頸部部分修窄，切緣修圓</li>
+</ul>
+<img src="paste_src/CD-20.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/CD-21.png" alt="alt text" style="width:30%;background-color: white;padding:0">
+<h3 id="豔麗四射">豔麗四射 </h3>
+<ul>
+<li>
+<p>差別性很大(藉以吸引目光)，但又騷中帶柔：要選正中門齒與側門齒差距很大</p>
+</li>
+<li>
+<p>牙齒由兩副前牙中分別選取。</p>
+<ol>
+<li>較大、較長、唇面較圓，切緣角也較圓的正中門齒，特長的正中門齒「易於吸引別人目光」、「成為眾人目光的焦點」。</li>
+<li>較小、較短、唇面較圓，切緣角也較圓的側門齒</li>
+</ol>
+</li>
+<li>
+<p>長長的正中門齒修得「不太長」，且讓它呈現「柔柔的美感」</p>
+<ul>
+<li>把正中門齒切緣略向內</li>
+<li>光影調理</li>
+<li>減少垂直性的線條，誇張水平性的線條</li>
+<li>把進心觸面變大</li>
+</ul>
+</li>
+<li>
+<p>短短的側門齒修得看起來比較長</p>
+<ul>
+<li>並把切緣修得圓滑的匯向接觸區內</li>
+<li>增強垂直向的反射</li>
+<li>較長較平的唇面</li>
+<li>把進心觸面修成幾近接觸點</li>
+</ul>
+</li>
+</ul>
+<div class="fbox"> 
+<img src="paste_src/CD-22.png" alt="alt text" style="width:25%;background-color: white;padding:0"> 
+<img src="paste_src/CD-24.png" alt="alt text" style="width:25%;background-color: white;padding:0">
+<img src="paste_src/CD-23.png" alt="alt text" style="width:25%;background-color: white;padding:0">
+<img src="paste_src/CD-25.png" alt="alt text" style="width:35%;background-color: white;padding:0">
+</div>
+<h3 id="折衝沙場">折衝沙場 </h3>
+<ul>
+<li>選擇「唇面較平」，使光容易反彈的前牙：與溫柔嫻靜型正好極端的相反，要表現出陽剛的個性，就要讓排出的牙齒表現出激烈的反彈效果。</li>
+<li>選擇「切緣較平、切緣角較稜角分明」的前牙：為了表現以牙還牙的狠勁。
+<ul>
+<li>最好能配合患者的臉形倒影來選，這些人通常臉形都是方形，因此選擇方尖(Square Taper)或方圓型(Square O void)的前牙。</li>
+<li>排好牙後再將牙齒修得「切緣更平」、「切緣角更尖銳」。</li>
+</ul>
+</li>
+</ul>
+<div class="dcl">
+<section>
+<ul>
+<li>有衝刺力
+<ul>
+<li>前牙排列呈「參差不平」，借光學折射呈現突出而不暴出。</li>
+<li>上顎門齒切緣略向顎側，可將正中門牙遠心端排的較突出，表現出反彈效果。。</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<img src="paste_src/CD-26.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+</section></div>
+<div class="dcl">
+<section>
+<ul>
+<li>有決斷力
+<ul>
+<li>掌握「平」、「直」選牙時選切端平直、切緣角明顯的牙齒，排好後再將切緣角修飾更有稜有角</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<img src="paste_src/CD-27.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+</section></div>
+<div class="dcl">
+<section>
+<ul>
+<li>有精神
+<ul>
+<li>主要掌握在犬齒，將犬齒排得向內斜入，將犬齒平齊面朝向外方</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<img src="paste_src/CD-28.png" alt="alt text" style="width:50%;background-color: white;padding:0">
+</section></div>
+<h3 id="溫文儒雅">溫文儒雅 </h3>
+<ul>
+<li>
+<p>「圓」但「不可太柔」。</p>
+<ul>
+<li>溫和：反抗性及反彈性不強。</li>
+<li>清秀：乾乾淨淨而且順眼</li>
+</ul>
+</li>
+<li>
+<p>唇面不要太平</p>
+</li>
+<li>
+<p>不會太圓的切緣角</p>
+</li>
+</ul>
+<div class="dcl">
+<section>
+<ul>
+<li>個性溫和不挑剔
+<ul>
+<li>排出溫和、順眼，正中門牙、側門牙、犬齒是慢慢順過去的，犬齒不要太斜。</li>
+<li>選牙時選唇面不要太平、切緣、切緣角不要太圓的牙齒。</li>
+<li>排牙時排成弧形，不要有前後的扭轉差異</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+</section></div>
+<div class="dcl">
+<section>
+<ul>
+<li>個性固執脾氣硬
+<ul>
+<li>排出溫和但不順眼，側門齒的長軸比犬齒甚至正中門齒還向近心。</li>
+<li>選牙時選唇面不要太平、切緣、切緣角不要太圓的牙齒。</li>
+<li>排牙時排成弧形，可選一顆側門齒略微扭轉，但若略有微言立即調順</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+</section></div>
+<h3 id="慈祥和藹型">慈祥和藹型 </h3>
+<ul>
+<li>依據患者雙眉以下之臉型選牙</li>
+<li>女性將側門牙遠心端向內扭，男性將側門牙遠心端向外扭</li>
+<li>牙齒修整
+<ol>
+<li>Incisor edge約略作出咬耗型態</li>
+<li>Contact point變成 contact area</li>
+<li>齒頸部略微刻露出來</li>
+<li>甚至可以補銀粉使其看起來更像真牙</li>
+</ol>
+</li>
+</ul>
+<h2 id="印模材考試">印模材考試 </h2>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>分類</th>
+<th>材料</th>
+<th>彈性</th>
+<th>尺寸穩定性</th>
+<th>細節再現</th>
+<th>副產物</th>
+<th>消毒方式</th>
+<th>臨床重點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3"><strong>Nonelastic</strong></td>
+<td>Impression plaster</td>
+<td rowspan="3">❌</td>
+<td>普通</td>
+<td>高</td>
+<td>無</td>
+<td>（少用，未特別強調）</td>
+<td>mucostatic、不壓組織</td>
+</tr>
+<tr>
+
+<td><strong>ZOE paste</strong></td>
+
+<td>⭐極佳</td>
+<td>⭐高</td>
+<td>無</td>
+<td>2% alkaline glutaraldehyde</td>
+<td>final impression 常用</td>
+</tr>
+<tr>
+
+<td><strong>Impression compound</strong></td>
+
+<td>普通</td>
+<td>低</td>
+<td>無</td>
+<td>NaOCl、iodophor、phenolic glutaraldehyde</td>
+<td>border molding</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Hydrocolloid</strong></td>
+<td><strong>Agar</strong></td>
+<td rowspan="6">✅</td>
+<td>普通</td>
+<td>⭐高</td>
+<td>無</td>
+<td>NaOCl、iodophor、glutaraldehyde</td>
+<td>設備複雜、少用</td>
+</tr>
+<tr>
+
+<td><strong>Alginate</strong></td>
+
+<td>❗差</td>
+<td>中</td>
+<td>無</td>
+<td>稀釋漂白水（1:10）、iodophor、phenol</td>
+<td>⭐primary impression</td>
+</tr>
+<tr>
+<td rowspan="4"><strong>Elastomeric</strong></td>
+<td>Polysulfide</td>
+
+<td>❗差</td>
+<td>高</td>
+<td>水</td>
+<td>可浸泡各種消毒液</td>
+<td>需1hr內灌模</td>
+</tr>
+<tr>
+
+<td>Condensation silicone</td>
+
+<td>❗差</td>
+<td>高</td>
+<td>酒精</td>
+<td>可浸泡各種消毒液</td>
+<td>收縮大</td>
+</tr>
+<tr>
+
+<td><strong>Addition silicone (PVS)</strong></td>
+
+<td>⭐極佳</td>
+<td>⭐極高</td>
+<td>無（可能H₂）</td>
+<td>可浸泡各種消毒液</td>
+<td>⭐final impression</td>
+</tr>
+<tr>
+
+<td><strong>Polyether</strong></td>
+
+<td>⭐佳</td>
+<td>⭐高</td>
+<td>無</td>
+<td>❗不可浸泡&gt;10分鐘（建議噴霧+密封）</td>
+<td>親水但易變形</td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="期末">期末 </h1>
+<img src="paste_src/CD-29.png" alt="alt text" style=";background-color: white;padding:0">
+<img src="paste_src/CD-31.png" alt="alt text" style=";background-color: white;padding:0">
+<br><br>
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#cd" class="md-toc-link"><p>CD</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#intro" class="md-toc-link">
+            <p>Intro</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#骨吸收與時機" class="md-toc-link">
+            <p>骨吸收與時機</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#mucosa" class="md-toc-link"><p>Mucosa</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#denture-stomatitis" class="md-toc-link">
+            <p>Denture stomatitis</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#angular-cheilitis" class="md-toc-link">
+            <p>Angular cheilitis</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#綜合性症候群combination-syndrome" class="md-toc-link">
+            <p>綜合性症候群(Combination syndrome)</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#檢查和診斷" class="md-toc-link"><p>檢查和診斷</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#側方喉形-lateral-throat-form" class="md-toc-link">
+            <p>側方喉形 (Lateral throat form)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#上方喉形-palatal-throat-form" class="md-toc-link">
+            <p>上方喉形 (Palatal throat form)</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#border-molding" class="md-toc-link">
+            <p>Border molding</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#咬合" class="md-toc-link"><p>咬合</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#決定咬合平面" class="md-toc-link">
+            <p>決定咬合平面</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#fully-balance-達成" class="md-toc-link">
+            <p>Fully Balance 達成</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#排牙學閥" class="md-toc-link"><p>排牙學閥</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#零度排牙法" class="md-toc-link">
+            <p>零度排牙法</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#lingualized-occlusion" class="md-toc-link">
+            <p>Lingualized Occlusion</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#馬老的分類器" class="md-toc-link"><p>馬老的分類器</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#秀外慧中" class="md-toc-link">
+            <p>秀外慧中</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#豔麗四射" class="md-toc-link">
+            <p>豔麗四射</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#折衝沙場" class="md-toc-link">
+            <p>折衝沙場</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#溫文儒雅" class="md-toc-link">
+            <p>溫文儒雅</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#慈祥和藹型" class="md-toc-link">
+            <p>慈祥和藹型</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#印模材考試" class="md-toc-link">
+            <p>印模材考試</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#期末" class="md-toc-link">
+            <p>期末</p>
+
+          </a></div>
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

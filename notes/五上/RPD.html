@@ -148,47 +148,30 @@ img {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview,
-html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
-  left: 0;
-  width: 100%;
-  max-width: 1000px;
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 2em;
-  transform: translateX(0);
+.dcl {
+  /* block 水平置中的方法 */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-right: -1%;
 }
-html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  padding: 50px 10px 48px 0;
-  font-size: 14px;
-  box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
-  box-sizing: border-box;
-  overflow: auto;
-  background-color: inherit;
+header,
+section,
+aside,
+.in,
+footer {
+  margin: 0 1% 0.3em 0;
 }
-html body {
-  background-color: hsl(220, 13%, 18%);
-  /* === Markdown Preview Enhancer TOC 樣式新版 === */
-  /* 縮排*/
-  /* TOC link */
-  /* 每層 details 都要重置下一層 counter */
-  /* 第一層：h1 */
-  /* 第二層：h2 */
-  /* 第三層：h3 */
-  /* 第四層：h4 */
-  /* 縮排 
-.md-sidebar-toc .md-toc-link-wrapper { padding-left: 0.5rem; }
-.md-sidebar-toc details > div > .md-toc-link-wrapper { padding-left: 1rem; }
-.md-sidebar-toc details details > div > .md-toc-link-wrapper { padding-left: 2rem; }
-.md-sidebar-toc details details details > div > .md-toc-link-wrapper { padding-left: 3rem; }*/
-  /* hover & active */
-  /*
+section {
+  float: left;
+  width: 49%;
+}
+footer {
+  margin-bottom: 0;
+  /* 不准其他元素出現在其左右 */
+  clear: both;
+}
+/*
   /////三线表/////
   table{
       border-top: 1.5pt solid;
@@ -220,119 +203,12 @@ html body {
       font-size:9pt;                              
   }
   */
-}
-html body .md-sidebar-toc {
-  margin: 0;
-  padding: 0.5rem 0;
-  position: absolute;
-  max-width: 768px;
-  background-color: rgba(186, 55, 55, 0.1);
-  z-index: 70;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-html body .md-toc-link-wrapper {
-  list-style: none!important;
-}
-html body div.md-toc-link-wrapper {
-  margin-left: 0px!important;
-}
-html body details > div > div.md-toc-link-wrapper {
-  margin-left: 24px!important;
-}
-html body .md-sidebar-toc a {
-  color: inherit;
-  text-decoration: none;
-}
-html body .md-sidebar-toc a:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc {
-  counter-reset: toc-h1;
-}
-html body .md-sidebar-toc details {
-  counter-reset: toc-h2;
-}
-html body .md-sidebar-toc details details {
-  counter-reset: toc-h3;
-}
-html body .md-sidebar-toc details details details {
-  counter-reset: toc-h4;
-}
-html body .md-sidebar-toc > .md-toc > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc > .md-toc > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h1;
-  content: counter(toc-h1) ". ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details > div > .md-toc-link-wrapper:before,
-html body .md-sidebar-toc details > div > details > summary.md-toc-link-wrapper:before {
-  counter-increment: toc-h2;
-  content: counter(toc-h1) "." counter(toc-h2) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h3;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc details details details > div > .md-toc-link-wrapper:before {
-  counter-increment: toc-h4;
-  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) " ";
-  font-size: 0.75em;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper:hover {
-  color: #87ffff;
-  font-style: italic;
-}
-html body .md-sidebar-toc .md-toc-link-wrapper.active a {
-  color: #87ffff;
-  font-weight: bold;
-}
-html body .dcl {
-  /* block 水平置中的方法 */
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-  margin-right: -1%;
-}
-html body header,
-html body section,
-html body aside,
-html body .in,
-html body footer {
-  margin: 0 1% 0.3em 0;
-}
-html body section {
-  float: left;
-  width: 49%;
-}
-html body footer {
-  margin-bottom: 0;
-  /* 不准其他元素出現在其左右 */
-  clear: both;
-}
-html body .btn {
-  position: fixed;
-  z-index: 99;
-  font-size: 24px;
-  color: inherit;
-  text-align: center;
-  width: 32px;
-  cursor: pointer;
-  opacity: 0.4;
-  word-wrap: break-word;
-}
-html body .btn:active {
-  opacity: 0.8;
-}
 @media screen and (max-width: 400px) {
-  html body img {
+  img {
     width: 100% !important;
   }
 }
-html body .fbox {
+.fbox {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
@@ -342,7 +218,7 @@ html body .fbox {
   left: 50%;
   transform: translateX(-50%);
 }
-html body .fbox img {
+.fbox img {
   position: relative;
   left: 0;
   transform: translate(0, 0);
@@ -350,7 +226,7 @@ html body .fbox img {
   background-color: rgba(0, 0, 0, 0) !important;
   object-fit: contain;
 }
-html body table .fbox {
+table .fbox {
   left: 0;
   transform: translateX(0);
 }
@@ -1573,6 +1449,99 @@ document.addEventListener("DOMContentLoaded", () => {
 </tr>
 </tbody>
 </table></div>
+<h2 id="guidance">Guidance </h2>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>導引類型 (Guidance / Occlusion)</th>
+<th>下顎由外側方閉合 (Lateral)</th>
+<th>下顎由前方閉合 (Protrusive)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fully Balanced Occlusion</td>
+<td>工作側 + 平衡側後牙</td>
+<td>全部前牙 + 全部後牙</td>
+</tr>
+<tr>
+<td>Balanced Occlusion</td>
+<td>部分工作側 + 部分平衡側後牙</td>
+<td>前牙 + 部分後牙</td>
+</tr>
+<tr>
+<td>Bilateral Balanced Occlusion</td>
+<td>工作側 + 平衡側後牙</td>
+<td>前牙</td>
+</tr>
+<tr>
+<td>Unilateral Balanced Occlusion</td>
+<td>全部工作側</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Group Function <br> (Simultaneous working contact)</td>
+<td>工作側 3, 4, 5, 6, 7</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Partial Group Function</td>
+<td>工作側 3, 6, 7</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Anterior Group Function</td>
+<td>1, 2, 3</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Cuspid Guidance</td>
+<td>3</td>
+<td>-</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th>類別</th>
+<th>咬合設計原則</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上下 CD</td>
+<td>Fully balanced occlusion 或 Balanced occlusion</td>
+<td>為維持下顎義齒穩定，上顎常落於危險區，因此需雙側平衡咬合以抵銷側向力</td>
+</tr>
+<tr>
+<td>上顎 Single CD, Class I RPD</td>
+<td>Bilateral balanced occlusion</td>
+<td>上顎骨向內吸收，排牙易落於危險區，需平衡咬合維持穩定</td>
+</tr>
+<tr>
+<td>上顎 Class II RPD</td>
+<td>Simultaneous working contact</td>
+<td>對側有牙鉤提供穩定，只需工作側均勻接觸</td>
+</tr>
+<tr>
+<td>下顎 Single CD, Class I / II RPD</td>
+<td>Simultaneous working contact</td>
+<td>排牙可位於支點內安全區，不需平衡咬合</td>
+</tr>
+<tr>
+<td>Class III RPD</td>
+<td>依原本咬合形式</td>
+<td>缺牙數少，可依患者原有咬合重建</td>
+</tr>
+<tr>
+<td>Class IV RPD</td>
+<td>M.I. 均勻接觸；離心時 edge-to-edge</td>
+<td>前牙主導，離心運動時需避免干擾</td>
+</tr>
+</tbody>
+</table></div>
 <h2 id="reline-rebase-and-repair">Reline, Rebase and Repair </h2>
 <ul>
 <li>
@@ -1772,6 +1741,20 @@ document.addEventListener("DOMContentLoaded", () => {
 </ul>
 </li>
 </ul>
+<hr>
+<ul>
+<li>Stock tray
+<ul>
+<li>For alginate</li>
+<li>底部和牙齒之間要有5～7mm 印模材</li>
+</ul>
+</li>
+<li>Individual tray
+<ul>
+<li>底部和牙齒之間要有2～4mm 印模材</li>
+</ul>
+</li>
+</ul>
 <h2 id="簡答">簡答 </h2>
 <ul>
 <li>1.Major connector 設計的基本要求?
@@ -1803,6 +1786,41 @@ document.addEventListener("DOMContentLoaded", () => {
 </ul>
 </li>
 </ul>
+<h1 id="期末烤">期末烤 </h1>
+<div class="table-scroll-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left">年代及學者</th>
+<th style="text-align:left">CR位置簡易說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1920 McCollum</td>
+<td style="text-align:left">最後位置</td>
+</tr>
+<tr>
+<td style="text-align:left">1958 Grange</td>
+<td style="text-align:left">最後最上位置</td>
+</tr>
+<tr>
+<td style="text-align:left">1961 Lucia，Stuart</td>
+<td style="text-align:left">最後最上最中位置(RUM)</td>
+</tr>
+<tr>
+<td style="text-align:left">1973 Dawson</td>
+<td style="text-align:left">最上位置</td>
+</tr>
+<tr>
+<td style="text-align:left">1978 Celenza，Nasedkin</td>
+<td style="text-align:left">condyle-disc-complex互相頂好，向上向前頂向Articular Eminence</td>
+</tr>
+<tr>
+<td style="text-align:left">1983 Giboe</td>
+<td style="text-align:left">Condyle緊頂著disc中央最薄處(沿用至今)</td>
+</tr>
+</tbody>
+</table></div>
 <br><br>
       </div>
       <div class="md-sidebar-toc">
@@ -1939,7 +1957,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </a></div>
         </div>
       </details>
-    <details style="padding:0;;padding-left:24px;" open="">
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#guidance" class="md-toc-link">
+            <p>Guidance</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
         <summary class="md-toc-link-wrapper">
           <a href="#reline-rebase-and-repair" class="md-toc-link"><p>Reline, Rebase and Repair</p>
 </a>
@@ -2014,7 +2036,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </a></div>
         </div>
       </details>
-    
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#期末烤" class="md-toc-link">
+            <p>期末烤</p>
+
+          </a></div>
 </div>
 </div>
       <a id="sidebar-toc-btn">≡</a>

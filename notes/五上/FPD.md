@@ -190,6 +190,9 @@ G. Beveled shoulder (與牙齒夾角約90度，但在邊緣會做成斜面)
 :::
 
 
+### Bridge 
+- connectors: 4x4 mm
+
 ## Post and Core 
 - 不一定要 Post 但 Core 要有
 - Endodontically treated teeth (ETT) more brittle or fragile?
@@ -646,6 +649,11 @@ Type II|軟|模型間接法|室溫下仍應穩定不變形
   - 鎳過敏
   - 美觀區有可能會透出金屬色
 
+- Bonding Area
+  - 距離Free gingiva約1 mm
+- 厚度要求：Zirconia框架需達到 0.7 mm。
+- Light chamfer Margin
+
 
 # 材料 
 
@@ -732,38 +740,68 @@ Type II|軟|模型間接法|室溫下仍應穩定不變形
 
 ![alt text](paste_src/FPD-24.png)
 
+### Resin matrix ceramics 
+
+#### Interpenetrating Phase composites (IPCs) 
+
+- Primary phase
+  - 多孔性陶瓷骨架
+- Interpenetrating phase
+  - 可滲入孔隙的 resin/ glass
+- first IPC: In-Ceram Alumina
+  - VITA In-Ceram
+- second IPC
+  - ==VITA Enamic(160 MPa)==
+  - porcelain(135 MPa): 70％
+  - polymer/ dental monomer infiltration: <30 MPa
+  - 接近enamel ，與 lithium disilicate（≈360–400 MPa）仍有差距
+
+
+
+### Zirconia 
+
+- YO~2~: 四方晶相穩定劑
+- Flexural strength: 900–1200 MPa
+
 ### 製作
 
-- Slip-casting technique (alumina core materials)
-   1. 泥漿（slip）: 陶瓷粉末（如 Al₂O₃、MgAl₂O₄）分散於水或有機溶劑中
-   2. 多孔模具吸走液相（水分）
-   3. 陶瓷顆粒逐漸在模具內壁緊密堆積
-   4. 初步低溫燒結，產生高孔隙率的生胚體
-   5. 玻璃滲透（Glass infiltration）: 低黏度玻璃加熱至熔融，透過毛細作用滲入多孔陶瓷骨架
-   6. 3 to 4 times stronger
-  - 商品: ==VITA In-Ceram==
+#### Slip-casting technique (alumina core materials)
+ 1. 泥漿（slip）: 陶瓷粉末（如 Al₂O₃、MgAl₂O₄）分散於水或有機溶劑中
+ 2. 多孔模具吸走液相（水分）
+ 3. 陶瓷顆粒逐漸在模具內壁緊密堆積
+ 4. 初步低溫燒結，產生高孔隙率的生胚體
+ 5. 玻璃滲透（Glass infiltration）: 低黏度玻璃加熱至熔融，透過毛細作用滲入多孔陶瓷骨架
+ 6. 3 to 4 times stronger
+- 商品: ==VITA In-Ceram==
+
+| In-Ceram-? | 核心成分 | Flexural strength (MPa) | 備註 |
+|---|---|---|---|
+| **Alumina** | Al₂O₃ | 450–600 | 第一代 IPC |
+| **Spinell** | MgAl₂O₄ |  300–400 | 透光性最佳 |
+| **Zirconia** | Al₂O₃ + ZrO₂（~30%） |  600–700 | 最強、最不透光 |
+
+#### Heat-Pressed Ceramics
+- 瓷塊融化，壓鑄到 Wax up 的空腔
+- 比 alumina core materials 有更好的 marginal fit
 
 
-- Heat-Pressed Ceramics
-  - 瓷塊融化，壓鑄到 Wax up 的空腔
-  - 比 alumina core materials 有更好的 marginal fit
-
-
-| Base | 融融溫度 | 特質 ||
-|-|-|-|-|
-|Leucite Based (KAlSi~2~O~6~) | 1165&deg;C | \oneline{
+| Base | 融融溫度 |Flexural strength (MPa)| 特質 ||
+|-|-|-|-|-|
+|Leucite (KAlSi~2~O~6~) | 1165&deg;C |120–160 | \oneline{
 - 商品: ==IPS Empress (Ivoclar Vivadent)==
 }|
-|Lithium disilicate Based | 920&deg;C|\oneline{
+|Lithium disilicate | 920&deg;C|360–400|\oneline{
 - strength+
 - 商品: ==IPS e.max (Ivoclar AG)==
 }|
-|Zirconia-Reinforced Lithium Silicate based | - | \oneline{
-- strength 不如 zirconia
+|Zirconia-Reinforced Lithium Silicate (ZLS) | 860&deg;C |370–420| \oneline{
 - 透明度不如 Lithium disilicate 
 }|
 
-
+#### Machined Ceramics
+- 常用，佔8成
+- 燒結好的瓷塊/瓷片，再用機器去硨出形狀當牙冠
+- ==VITA Enamic(160 MPa)==
 
 
 ## 合金 
@@ -771,8 +809,8 @@ Type II|軟|模型間接法|室溫下仍應穩定不變形
 - 氧化層
   - Fe: Au
   - Sn, In: lower gold alloys 
-- 綠染色
-  - 銀原子透過diffusion進入陶瓷，綠染色可以被磨掉
+- 染色
+  - 銀原子透過diffusion進入陶瓷，呈現灰色或灰黃色調
 ---
 ### High noble metal alloys
 - Au-Pt-Pd
@@ -801,9 +839,42 @@ Type II|軟|模型間接法|室溫下仍應穩定不變形
 - Pd-Ga-Co
   - 相較 Pd-Ga 硬度提高，但會生成的深色氧化物
 
+
+## Solder 
+
+- 焊劑(Solder): 
+  - Group I 含Gold，Group II 不含
+  - 流動性: Ag &uarr;,  Cu &darr;, Au &darr;
+  - Ag 會染陶瓷
+  - Au &geq; 615或580金
+
+- 助熔劑(Soldering Flux)
+  - Borax glass (Na~2~B~4~O~7~, 硼砂)
+  - 污染陶瓷
+- 抗熔劑(antiflux)
+  - Graphite 石墨
+  - 氧化鐵
+
+
+## 印模 
+
+| 材料類別 | Accuracy | 優點 | 缺點 / 限制 | 操作 | 灌模 |
+|---|---|:---|:---|:---|---|
+|  PVS | 極高 (<25 μm) | 尺寸穩定性最強、抗撕裂強度高、可多次灌模 | 具疏水性、價格高、乳膠手套會抑制聚合 | 需排齦以克服疏水性；避免接觸乳膠 |  >60 min（H~2~） |
+| 縮合型矽膠 (C-Silicone) | 中（約 50 μm） | 價格較 PVS 低、操作感適中 | 副產物（酒精）揮發導致明顯收縮 | 需快速調拌，因聚合反應較快 | < 30 min | 
+| Polyether | 高 (<35 μm) | 極度親水、流動性優、適合多顆基牙 | 材質極硬、味苦、吸水會膨脹 | 僅限噴灑消毒；取出需迅速以防變形；嚴禁浸泡水中 | >30 min（應力回彈） | 
+| Polysulfide | 優（約 40 μm） | 彈性極佳、抗撕裂強、工作時間最長 | 副產物（酒精）、氣味極臭、易沾染衣物、需手工調拌 | 調拌需均勻無條紋；凝固時間 8–12 分鐘 | <60 min（水） | 
+| Agar | 高（約 25 μm） | 親水性極佳、成本低、模型表面細緻 | 需昂貴恆溫設備、操作流程繁瑣、強度低 | 噴灑消毒；需經液化(100 °C)、儲存(65 °C)、回火(45 °C)三步驟 | 立即 | 
+| Alginate | 低 (>100 μm) | 便宜、操作簡單、病患接受度高 | 尺寸穩定性差 | 僅限噴灑消毒；注意粉水比；攪拌需排除氣泡 | 立即 | 
+
+
+
+
 # 期末 
 
 ## 長度
 
 - 冠外、冠內附連體: Crown 高度>4mm
 - 橫槓式、鈕釦式、磁鐵式附連體：垂直咬合高度(VDO) > 7-9mm
+- Solder Gap Width：0.25mm
+- Pre-ceramic soldering：可以急速冷卻增加強度
