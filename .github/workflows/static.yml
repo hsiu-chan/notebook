@@ -5,8 +5,9 @@ env:
 on:
   push:
     branches: ["main"]
-    #paths:
-    #  - "notes/**"
+    # 避免 github-actions 自己 commit 的 index.html 再次觸發部署迴圈
+    paths-ignore:
+      - "index.html"
   workflow_dispatch:
 
 permissions:
@@ -16,18 +17,20 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true # 如果有新的 push，自動取消進行中的舊部署，省時間
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository
+      # 1️⃣ Checkout repository (加入淺層複製，只抓最新一筆，速度極快)
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
-      # 2️⃣ Setup Ruby + Bundler (Jekyll)
+      # 2️⃣ Setup Ruby + Bundler (已經內建快取，不需要額外 bundle install)
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -35,25 +38,22 @@ jobs:
           bundler-cache: true
           bundler: '2.4.22'
 
-      # 3️⃣ Install Jekyll dependencies
-      - name: Install Jekyll dependencies
-        run: bundle install
-
-      # 4️⃣ Setup Python
+      # 3️⃣ Setup Python (加入 pip 快取機制)
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+          cache: 'pip'
 
-      # 5️⃣ Install Python dependencies
+      # 4️⃣ Install Python dependencies
       - name: Install Python dependencies
         run: pip install PyGithub jinja2
 
-      # 6️⃣ Generate index.html in repo root
+      # 5️⃣ Generate index.html in repo root
       - name: Generate index.html
         run: python scripts/generate_index.py
 
-      # 7️⃣ Commit generated index.html back to repo only if changed
+      # 6️⃣ Commit generated index.html back to repo only if changed
       - name: Commit index.html if changed
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
@@ -62,24 +62,25 @@ jobs:
           git config user.email "actions@github.com"
           git add index.html
           if ! git diff --cached --quiet; then
-            git commit -m "Auto-generate index.html"
+            git commit -m "Auto-generate index.html [skip ci]" 
+            # 加上 [skip ci] 雙重保險，告訴 GitHub 不要再次觸發 Actions
             git push https://${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
             echo "✅ index.html committed and pushed."
           else
             echo "ℹ️ No changes in index.html. Nothing to commit."
           fi
 
-      # 8️⃣ Build Jekyll site
+      # 7️⃣ Build Jekyll site
       - name: Build Jekyll site
         run: bundle exec jekyll build --destination ./_site
 
-      # 9️⃣ Upload Pages artifact
+      # 8️⃣ Upload Pages artifact
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
-      # 🔟 Deploy to GitHub Pages
+      # 9️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4
